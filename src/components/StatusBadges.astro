@@ -1,0 +1,151 @@
+---
+/**
+ * Rende le QUATTRO dimensioni di stato come indicatori separati.
+ *
+ * Vincolo editoriale non negoziabile (piano milestone M1, §18 del brief):
+ * non esiste e non deve esistere un'unica etichetta sintetica del tipo
+ * "vigente / non riprodotto / superato". Le dimensioni sono indipendenti e
+ * vengono sempre mostrate distinte, con il letterale della fonte quando c'è.
+ * La mancata riproduzione in un atto successivo NON implica abrogazione.
+ */
+import type { ChunkStatus } from "../lib/corpus";
+import { DIMENSION_LABELS, REASON_LABELS } from "../lib/corpus";
+
+export interface Props {
+  status: ChunkStatus;
+  compact?: boolean;
+}
+
+const { status, compact = false } = Astro.props;
+
+const order = [
+  "documentaryStatus",
+  "legalStatus",
+  "presenceStatus",
+  "researchStatus",
+] as const;
+
+const dims = order
+  .map((key) => ({ key, dim: status[key] }))
+  .filter((d) => d.dim !== null);
+
+const allAbsent =
+  dims.length > 0 && dims.every((d) => d.dim!.value === null || d.dim!.value === "");
+
+// Quando nessuna delle quattro dimensioni è documentata, ripetere quattro volte
+// la stessa motivazione è rumore. La spiegazione — che proviene dal corpus, non
+// da noi — viene mostrata una sola volta sotto la griglia.
+const sharedExplanation = allAbsent
+  ? [...new Set(dims.map((d) => d.dim!.explanation).filter(Boolean))]
+  : [];
+---
+
+<dl class:list={["status-grid", compact && "status-grid--compact"]}>
+  {
+    dims.map(({ key, dim }) => {
+      const d = dim!;
+      const hasValue = d.value !== null && d.value !== "";
+      const literal = d.literal ?? d.source?.literal ?? null;
+      return (
+        <div class:list={["status-cell", hasValue ? "is-documented" : "is-null"]}>
+          <dt>{DIMENSION_LABELS[key] ?? key}</dt>
+          <dd>
+            {hasValue ? (
+              <span class="status-value">{d.value}</span>
+            ) : (
+              <span class="status-absent">
+                {REASON_LABELS[d.reason ?? ""] ?? "Non documentato"}
+              </span>
+            )}
+            {literal && (
+              <span class="status-literal">
+                Testo della fonte: <q>{literal}</q>
+              </span>
+            )}
+            {d.inheritedFrom?.provisional && (
+              <span class="status-provisional">
+                Attribuzione provvisoria — da verificare sull'originale
+              </span>
+            )}
+          </dd>
+        </div>
+      );
+    })
+  }
+</dl>
+{
+  sharedExplanation.length > 0 && (
+    <p class="status-note">
+      {sharedExplanation.join(" ")}
+    </p>
+  )
+}
+
+<style>
+  .status-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: var(--space-1);
+    margin: var(--space-2) 0 0;
+    padding: 0;
+  }
+  .status-cell {
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-text-faint);
+    padding: 0.625rem 0.75rem;
+    background: var(--color-surface);
+  }
+  .status-cell.is-documented {
+    border-left-color: var(--color-green-ink);
+  }
+  .status-cell dt {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-text-faint);
+    margin: 0 0 0.25rem;
+  }
+  .status-cell dd {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .status-value {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.35;
+  }
+  .status-absent {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+  .status-literal {
+    font-size: var(--text-caption);
+    color: var(--color-text-muted);
+    line-height: 1.45;
+  }
+  .status-literal q {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-style: normal;
+  }
+  .status-provisional {
+    font-size: var(--text-caption);
+    color: var(--color-warning);
+    font-weight: 500;
+  }
+  .status-grid--compact .status-cell {
+    padding: 0.5rem 0.625rem;
+  }
+  .status-note {
+    margin: 0.5rem 0 0;
+    font-size: var(--text-caption);
+    line-height: 1.5;
+    color: var(--color-text-muted);
+    max-width: var(--measure);
+  }
+</style>

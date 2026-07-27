@@ -1,0 +1,128 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { listActs } from "../../lib/corpus";
+
+const acts = listActs();
+const totalArticles = acts.reduce((n, a) => n + a.articleCount, 0);
+const totalChunks = acts.reduce((n, a) => n + a.chunkCount, 0);
+---
+
+<BaseLayout
+  title="Atti del corpus storico"
+  description="Tutti gli atti del Protocollo Equino del Palio di Siena censiti nel corpus storico, dal 2012 al 2026, con il numero di articoli e lo stato della provenienza."
+  activePath="/evoluzione-storica"
+>
+  <section class="section" style="padding-block: var(--space-8) var(--space-4);">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Percorso" data-pagefind-ignore>
+        <a href="/evoluzione-storica/">Evoluzione storica</a>
+        <span aria-hidden="true">/</span>
+        <span>Atti</span>
+      </nav>
+      <h1 style="font-family: var(--font-display); font-size: var(--text-title); max-width: 22ch; margin: var(--space-1) 0 0;">
+        Gli atti, dal primo all'ultimo.
+      </h1>
+      <p class="text-muted" style="max-width: var(--measure); margin-top: var(--space-2);">
+        L'elenco completo degli atti ricostruiti nel corpus storico. Ogni atto ha un permalink
+        stabile e riproduce il proprio testo articolo per articolo, con la fonte canonica in chiaro.
+      </p>
+      <p class="text-caption" style="margin-top: var(--space-2);">
+        {acts.length} atti · {totalArticles} articoli · {totalChunks} unità documentali
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-12);">
+    <div class="wrap">
+      <div class="table-scroll">
+              <table class="acts">
+        <thead>
+          <tr>
+            <th scope="col">Atto</th>
+            <th scope="col">Anno</th>
+            <th scope="col">Titolo</th>
+            <th scope="col">Articoli</th>
+            <th scope="col">Provenienza</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            acts.map((a) => (
+              <tr>
+                <th scope="row">
+                  <a href={`/atti/${a.slug}/`}>{a.registerId}</a>
+                </th>
+                <td class="num">{a.year}</td>
+                <td>{a.title}</td>
+                <td class="num">{a.articleCount || "—"}</td>
+                <td>
+                  {a.provisional ? (
+                    <span class="prov">in parte provvisoria</span>
+                  ) : (
+                    <span class="ok">corrispondenza esatta</span>
+                  )}
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+            </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .crumbs {
+    display: flex;
+    gap: 0.5rem;
+    font-size: var(--text-caption);
+    color: var(--color-text-faint);
+    margin-bottom: var(--space-2);
+  }
+  .crumbs a {
+    color: var(--color-green-ink);
+  }
+  .table-scroll {
+    /* Su schermi stretti la tabella deve scorrere dentro il proprio
+       contenitore, non allargare la pagina. */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .acts {
+    width: 100%;
+    min-width: 40rem;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+  .acts th,
+  .acts td {
+    border: 1px solid var(--color-border);
+    padding: 0.5rem 0.625rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  .acts thead th {
+    background: var(--color-bg);
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .acts tbody th {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .acts tbody th a {
+    color: var(--color-green-ink);
+  }
+  .num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+  .prov {
+    color: var(--color-warning);
+  }
+  .ok {
+    color: var(--color-text-muted);
+  }
+</style>

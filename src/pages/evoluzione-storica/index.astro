@@ -1,0 +1,183 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ChunkCard from "../../components/ChunkCard.astro";
+import { chunksByRoute, listActs, listMemoryYears, chunksByRoute as byRoute } from "../../lib/corpus";
+
+const intro = chunksByRoute("/evoluzione-storica/");
+const acts = listActs();
+const years = listMemoryYears();
+
+const actsByYear = new Map<number, typeof acts>();
+for (const a of acts) {
+  const arr = actsByYear.get(a.year) ?? [];
+  arr.push(a);
+  actsByYear.set(a.year, arr);
+}
+
+const allYears = [...new Set([...years, ...acts.map((a) => a.year)])].sort(
+  (a, b) => a - b
+);
+
+const timeline = allYears.map((year) => ({
+  year,
+  acts: actsByYear.get(year) ?? [],
+  memoryCount: byRoute(`/evoluzione-storica/${year}/`).length,
+}));
+
+const totalActs = acts.length;
+---
+
+<BaseLayout
+  title="Evoluzione storica 2012–2026"
+  description="Quindici annualità di Protocollo Equino del Palio di Siena: gli atti anno per anno, le modifiche introdotte e la memoria incrementale del corpus."
+  activePath="/evoluzione-storica"
+>
+  <section class="section" style="padding-block: var(--space-8) var(--space-4);">
+    <div class="wrap">
+      <span class="section-number">02 — Evoluzione storica</span>
+      <h1 style="font-family: var(--font-display); font-size: var(--text-title); max-width: 22ch; margin: var(--space-1) 0 0;">
+        Quindici annualità, una norma alla volta.
+      </h1>
+      <p class="text-muted" style="max-width: var(--measure); margin-top: var(--space-2);">
+        Dal 2012 al 2026 il Protocollo Equino è stato riscritto, integrato e coordinato più volte.
+        Qui ogni annualità è ricostruita a partire dagli atti che la compongono e dalla memoria
+        incrementale che ne registra le variazioni, con la fonte sempre in chiaro.
+      </p>
+      <p class="text-caption" style="margin-top: var(--space-2);">
+        {totalActs} atti · {allYears.length} annualità · 2012–2026
+      </p>
+    </div>
+  </section>
+
+  {
+    intro.length > 0 && (
+      <section class="section" style="padding-block: 0 var(--space-4);">
+        <div class="wrap">
+          <div class="corpus">
+            {intro.map((chunk) => (
+              <ChunkCard chunk={chunk} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="section" style="padding-block: var(--space-4) var(--space-12);">
+    <div class="wrap">
+      <h2 style="font-family: var(--font-display); font-size: var(--text-heading); margin: 0 0 var(--space-3);">
+        Cronologia
+      </h2>
+      <ol class="timeline">
+        {
+          timeline.map((entry) => (
+            <li class="timeline__row">
+              <div class="timeline__year">{entry.year}</div>
+              <div class="timeline__content">
+                {entry.acts.length > 0 && (
+                  <ul class="act-list">
+                    {entry.acts.map((a) => (
+                      <li>
+                        <a href={`/atti/${a.slug}/`} class="act-link">
+                          <span class="act-link__id">{a.registerId}</span>
+                          <span class="act-link__title">{a.title}</span>
+                          <span class="act-link__meta">
+                            {a.articleCount > 0
+                              ? `${a.articleCount} articoli`
+                              : `${a.chunkCount} unità`}
+                            {a.provisional && " · provenienza in parte provvisoria"}
+                          </span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {entry.memoryCount > 0 && (
+                  <p class="timeline__memory">
+                    <a href={`/evoluzione-storica/${entry.year}/`}>
+                      Memoria incrementale {entry.year}
+                    </a>
+                    <span class="text-caption"> · {entry.memoryCount} annotazioni</span>
+                  </p>
+                )}
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+
+      <p style="margin-top: var(--space-4);">
+        <a href="/evoluzione-storica/tabelle-storiche/" class="link-arrow">
+          Cornice metodologica e tabelle storiche
+        </a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .corpus {
+    border-top: 1px solid var(--color-border);
+  }
+  .timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--color-border);
+  }
+  .timeline__row {
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    gap: var(--space-2);
+    padding: var(--space-2) 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  @media (max-width: 40rem) {
+    .timeline__row {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+  }
+  .timeline__year {
+    font-family: var(--font-mono);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-green-ink);
+  }
+  .act-list {
+    list-style: none;
+    margin: 0 0 0.5rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .act-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  .act-link:hover .act-link__title {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .act-link__id {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--color-text-faint);
+  }
+  .act-link__title {
+    font-weight: 600;
+    max-width: var(--measure);
+  }
+  .act-link__meta {
+    font-size: var(--text-caption);
+    color: var(--color-text-muted);
+  }
+  .timeline__memory {
+    margin: 0;
+    font-size: 0.9375rem;
+  }
+</style>

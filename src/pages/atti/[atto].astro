@@ -1,0 +1,184 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ChunkCard from "../../components/ChunkCard.astro";
+import {
+  chunksByRoute,
+  listActs,
+  listRegistryRecords,
+  type Chunk,
+} from "../../lib/corpus";
+
+export function getStaticPaths() {
+  const acts = listActs();
+  const registry = listRegistryRecords();
+  return acts.map((act, i) => ({
+    params: { atto: act.slug },
+    props: {
+      act,
+      chunks: chunksByRoute(`/atti/${act.slug}/`),
+      prev: i > 0 ? acts[i - 1] : null,
+      next: i < acts.length - 1 ? acts[i + 1] : null,
+      registryEntry:
+        registry.find((r) => r.naturalId === act.registerId) ?? null,
+    },
+  }));
+}
+
+type Act = ReturnType<typeof listActs>[number];
+
+interface Props {
+  act: Act;
+  chunks: Chunk[];
+  prev: Act | null;
+  next: Act | null;
+  registryEntry: ReturnType<typeof listRegistryRecords>[number] | null;
+}
+
+const { act, chunks, prev, next, registryEntry } = Astro.props as Props;
+
+const provisionalCount = chunks.filter((c) => c.provisionalProvenance).length;
+const articles = chunks.filter((c) => c.articleNumber !== null);
+---
+
+<BaseLayout
+  title={`${act.registerId} — ${act.title}`}
+  description={`Il testo dell'atto ${act.registerId} (${act.year}) del Protocollo Equino del Palio di Siena, articolo per articolo, con citazione della fonte canonica.`}
+  activePath="/evoluzione-storica"
+>
+  <section class="section" style="padding-block: var(--space-6) var(--space-3);">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Percorso" data-pagefind-ignore>
+        <a href="/evoluzione-storica/">Evoluzione storica</a>
+        <span aria-hidden="true">/</span>
+        <a href={`/evoluzione-storica/${act.year}/`}>{act.year}</a>
+        <span aria-hidden="true">/</span>
+        <span>{act.registerId}</span>
+      </nav>
+      <span class="section-number">{act.registerId}</span>
+      <h1 style="font-family: var(--font-display); font-size: var(--text-title); max-width: 24ch; margin: var(--space-1) 0 0;">
+        {act.title}
+      </h1>
+      <p class="text-caption" style="margin-top: var(--space-2);">
+        Annualità {act.year}
+        {articles.length > 0 && <> · {articles.length} articoli</>}
+        · {chunks.length} unità documentali
+      </p>
+
+      <p class="related">
+        {
+          registryEntry && (
+            <>
+              <a href={`/fonti/${registryEntry.slug}/`}>
+                Scheda nel registro atti
+              </a>
+              {" · "}
+            </>
+          )
+        }
+        <a href={`/evoluzione-storica/${act.year}/`}>
+          Memoria incrementale {act.year}
+        </a>
+      </p>
+
+      {
+        provisionalCount > 0 && (
+          <p class="warn" data-pagefind-ignore>
+            {provisionalCount} unità di questo atto hanno una provenienza attribuita in via
+            provvisoria: il collegamento all'atto del registro è stato ricostruito sulla sola
+            annualità, non su una corrispondenza esatta di numero. L'attribuzione va verificata
+            sull'originale prima di essere usata come citazione puntuale.
+          </p>
+        )
+      }
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-8);">
+    <div class="wrap">
+      <div class="corpus">
+        {chunks.map((chunk) => <ChunkCard chunk={chunk} />)}
+      </div>
+
+      <nav class="pager" aria-label="Navigazione fra gli atti" data-pagefind-ignore>
+        {
+          prev ? (
+            <a href={`/atti/${prev.slug}/`} class="pager__link">
+              <span class="pager__dir">← Atto precedente</span>
+              <span class="pager__title">{prev.registerId}</span>
+            </a>
+          ) : (
+            <span />
+          )
+        }
+        {
+          next && (
+            <a href={`/atti/${next.slug}/`} class="pager__link pager__link--next">
+              <span class="pager__dir">Atto successivo →</span>
+              <span class="pager__title">{next.registerId}</span>
+            </a>
+          )
+        }
+      </nav>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: var(--text-caption);
+    color: var(--color-text-faint);
+    margin-bottom: var(--space-2);
+  }
+  .crumbs a {
+    color: var(--color-green-ink);
+  }
+  .related {
+    margin-top: var(--space-2);
+    font-size: 0.9375rem;
+  }
+  .warn {
+    margin-top: var(--space-2);
+    padding: 0.75rem 1rem;
+    border-left: 3px solid var(--color-warning);
+    background: var(--color-surface);
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+    max-width: var(--measure);
+  }
+  .corpus {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-1);
+  }
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-2);
+    margin-top: var(--space-6);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--color-border);
+  }
+  .pager__link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  .pager__link--next {
+    text-align: right;
+    margin-left: auto;
+  }
+  .pager__dir {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-green-ink);
+  }
+  .pager__title {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 1.125rem;
+  }
+</style>

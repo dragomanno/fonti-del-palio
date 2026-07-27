@@ -1,0 +1,229 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ChunkCard from "../../components/ChunkCard.astro";
+import {
+  chunksByRoute,
+  listRegistryRecords,
+  FAMILY_LABELS,
+  REASON_LABELS,
+} from "../../lib/corpus";
+
+const intro = chunksByRoute("/fonti/");
+const records = listRegistryRecords();
+
+const families = ["PE", "RP", "ATT", "LEG"] as const;
+const grouped = families
+  .map((family) => ({
+    family,
+    label: FAMILY_LABELS[family],
+    records: records.filter((r) => r.family === family),
+  }))
+  .filter((g) => g.records.length > 0);
+
+function dimensionValue(
+  record: (typeof records)[number],
+  key: "documentaryStatus" | "legalStatus" | "presenceStatus" | "researchStatus"
+): string | null {
+  return record.chunk.status[key]?.value ?? null;
+}
+
+// Un'assenza non e' l'altra: "le fonti non lo dicono" (notDocumented),
+// "non si applica" (notApplicable) e "non ancora valutato" (notYetEvaluated)
+// sono tre stati distinti del corpus. Il registro usa le etichette canoniche,
+// le stesse dei badge di dettaglio, senza appiattirle su un'unica dicitura.
+function absenceLabel(
+  record: (typeof records)[number],
+  key: "documentaryStatus" | "legalStatus" | "presenceStatus" | "researchStatus"
+): string {
+  const reason = record.chunk.status[key]?.reason;
+  return reason ? (REASON_LABELS[reason] ?? reason).toLowerCase() : "non documentato";
+}
+---
+
+<BaseLayout
+  title="Fonti e registro atti"
+  description="Il registro delle fonti del Protocollo Equino del Palio di Siena: atti censiti dal 2012 al 2026, con disponibilità documentale, ruolo giuridico e stato della ricerca dichiarati separatamente."
+  activePath="/fonti"
+>
+  <section class="section" style="padding-block: var(--space-8) var(--space-4);">
+    <div class="wrap">
+      <span class="section-number">03 — Fonti</span>
+      <h1 style="font-family: var(--font-display); font-size: var(--text-title); max-width: 22ch; margin: var(--space-1) 0 0;">
+        Il registro degli atti, con le lacune dichiarate.
+      </h1>
+      <p class="text-muted" style="max-width: var(--measure); margin-top: var(--space-2);">
+        {records.length} record censiti fra protocolli, regolamenti, atti attuativi e note di
+        ricerca. Dove un atto è stato identificato ma non ancora reperito, il registro lo dice:
+        una lacuna documentata vale più di una lacuna nascosta.
+      </p>
+      <p class="text-caption" style="margin-top: var(--space-2);">
+        {records.length} record · {grouped.length} famiglie · 2012–2026
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-6);">
+    <div class="wrap">
+      {
+        grouped.map((group) => (
+          <div class="family">
+            <h2 class="family__title">
+              {group.label}
+              <span class="family__count">{group.records.length}</span>
+            </h2>
+            <div class="table-scroll">
+              <table class="registry">
+              <thead>
+                <tr>
+                  <th scope="col">Identificativo</th>
+                  <th scope="col">Anno</th>
+                  <th scope="col">Disponibilità documentale</th>
+                  <th scope="col">Efficacia / ruolo storico</th>
+                  <th scope="col">Presenza nell'annualità successiva</th>
+                  <th scope="col">Stato della ricerca</th>
+                </tr>
+              </thead>
+              <tbody>
+                {group.records.map((r) => (
+                  <tr>
+                    <th scope="row">
+                      <a href={`/fonti/${r.slug}/`}>{r.naturalId}</a>
+                    </th>
+                    <td class="num">{r.year ?? "—"}</td>
+                    <td>
+                      {dimensionValue(r, "documentaryStatus") ?? (
+                        <span class="absent">{absenceLabel(r, "documentaryStatus")}</span>
+                      )}
+                    </td>
+                    <td>
+                      {dimensionValue(r, "legalStatus") ?? (
+                        <span class="absent">{absenceLabel(r, "legalStatus")}</span>
+                      )}
+                    </td>
+                    <td>
+                      {dimensionValue(r, "presenceStatus") ?? (
+                        <span class="absent">{absenceLabel(r, "presenceStatus")}</span>
+                      )}
+                    </td>
+                    <td>
+                      {dimensionValue(r, "researchStatus") ?? (
+                        <span class="absent">{absenceLabel(r, "researchStatus")}</span>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            </div>
+          </div>
+        ))
+      }
+
+      <aside class="note-block">
+        <h2>Tre dimensioni, mai una sola etichetta</h2>
+        <p>
+          Le colonne di questa tabella sono indipendenti fra loro e vengono lette insieme a una
+          quarta dimensione — lo stato della ricerca — visibile nella scheda di ogni record. Un atto
+          può essere reperibile ma superato, oppure ancora rilevante ma non riprodotto nell'atto
+          successivo. <strong>La mancata riproduzione non equivale all'abrogazione.</strong>
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  {
+    intro.length > 0 && (
+      <section class="section" style="padding-block: 0 var(--space-12);">
+        <div class="wrap">
+          <h2 style="font-family: var(--font-display); font-size: var(--text-heading); margin: 0 0 var(--space-2);">
+            Come è stato costruito il registro
+          </h2>
+          <div class="corpus">
+            {intro.map((chunk) => (
+              <ChunkCard chunk={chunk} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+</BaseLayout>
+
+<style>
+  .family {
+    margin-bottom: var(--space-6);
+  }
+  .family__title {
+    font-family: var(--font-display);
+    font-size: var(--text-heading);
+    margin: 0 0 var(--space-2);
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+  }
+  .family__count {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-text-faint);
+  }
+  .table-scroll {
+    /* Su schermi stretti la tabella deve scorrere dentro il proprio
+       contenitore, non allargare la pagina. */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .registry {
+    width: 100%;
+    min-width: 40rem;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+  .registry th,
+  .registry td {
+    border: 1px solid var(--color-border);
+    padding: 0.5rem 0.625rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  .registry thead th {
+    background: var(--color-bg);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .registry tbody th {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .registry tbody th a {
+    color: var(--color-green-ink);
+  }
+  .num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+  .absent {
+    color: var(--color-text-faint);
+    font-style: italic;
+  }
+  .note-block {
+    padding: var(--space-3);
+    background: var(--color-surface);
+    border-left: 3px solid var(--color-green-ink);
+  }
+  .note-block h2 {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    margin: 0 0 var(--space-1);
+  }
+  .note-block p {
+    max-width: var(--measure);
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+  .corpus {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-1);
+  }
+</style>

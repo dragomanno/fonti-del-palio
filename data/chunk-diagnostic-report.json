@@ -1,0 +1,616 @@
+{
+  "version": "3.1.3",
+  "purpose": "Diagnostica di chunking v3.1.3: release correttiva vincolata sui 6 difetti individuati nel verdetto CONDITIONAL FAIL di v3.1.2 (provenienza della mappatura KB01->KB04 persa nell'ereditarieta' dello stato, riferimenti canonici solo type-checked e non risolti semanticamente, semantica documented-null errata sui gap di ricerca, affermazioni di implementazione false nel repository, build non deterministica per generatedAt, evidenze finali con conteggi di famiglie non veritieri). Esegue i parser reali contro i 4 file KB canonici correnti. Non genera chunk di produzione.",
+  "diagnosticCandidateCount": 710,
+  "diagnosticCandidateCountByFile": {
+    "kb01": 273,
+    "kb02": 183,
+    "kb03": 170,
+    "kb04": 84
+  },
+  "estimatedSplitCount": 766,
+  "estimatedSplitCountByFile": {
+    "kb01": 297,
+    "kb02": 183,
+    "kb03": 202,
+    "kb04": 84
+  },
+  "productionChunkCount": 710,
+  "kb01": {
+    "totalOrdinaryArticles": 247,
+    "totalAmendmentPoints": 2,
+    "expectedTotal": 247
+  },
+  "perFile": {
+    "kb01": {
+      "fileName": "01_KB_Corpus_Storico_Protocollo_Equino_2012_2026.md",
+      "candidateCount": 273,
+      "coverageLedger": {
+        "totalLines": 4463,
+        "blankLines": 1258,
+        "nonBlankLines": 3205,
+        "categoryCounts": {
+          "explicitly-non-chunkable": 26,
+          "blank": 1258,
+          "candidate-content": 3060,
+          "structural-heading": 34,
+          "inherited-metadata": 85
+        },
+        "unexplainedLines": [],
+        "unexplainedLineCount": 0,
+        "substantiveLinesWithoutCandidateOrExplicitReason": 0
+      },
+      "globalOverlaps": [],
+      "registerMapping": {
+        "matched": true,
+        "unmatchedActs": [],
+        "unmatchedRegisterRecords": [],
+        "mapping": [
+          {
+            "actYear": 2012,
+            "actTitle": "Deliberazione G.C. n. 33 del 25 gennaio 2012 e Protocollo per l'erogazione di incentivi per il mantenimento e l'addestramento dei cavalli da Palio per l'anno 2012",
+            "actKind": "baseAct",
+            "registerId": "PE-2012-01",
+            "registerAtto": "G.C. n. 33",
+            "verifiedBy": "actNumberMatch"
+          },
+          {
+            "actYear": 2013,
+            "actTitle": "Protocollo per l'addestramento dei cavalli da Palio nel primo semestre 2013",
+            "actKind": "baseAct",
+            "registerId": "PE-2013-01",
+            "registerAtto": "Commissario straordinario n. 11",
+            "verifiedBy": "yearOnlyFallback",
+            "registerAttoEvidence": {
+              "present": true,
+              "value": "Commissario straordinario n. 11"
+            }
+          },
+          {
+            "actYear": 2014,
+            "actTitle": "Deliberazione G.C. n. 62 del 13 febbraio 2014 e Protocollo per l'addestramento dei cavalli da Palio per l'anno 2014",
+            "actKind": "baseAct",
+            "registerId": "PE-2014-01",
+            "registerAtto": "G.C. n. 62",
+            "verifiedBy": "actNumberMatch"
+          },
+          {
+            "actYear": 2014,
+            "actTitle": "Deliberazione G.C. n. 133 del 20 marzo 2014 - Modifica del Protocollo 2014",
+            "actKind": "amendmentAct",
+            "registerId": "PE-2014-02",
+            "registerAtto": "G.C. n. 133",
+            "verifiedBy": "actNumberMatch"
+          },
+          {
+            "actYear": 2015,
+            "actTitle": "Deliberazione G.C. n. 34 del 12 febbraio 2015 e Protocollo per l'addestramento dei cavalli da Palio per l'anno 2015",
+            "actKind": "baseAct",
+            "registerId": "PE-2015-01",
+            "registerAtto": "G.C. n. 34",
+            "verifiedBy": "actNumberMatch"
+          },
+          {
+            "actYear": 2016,
+            "actTitle": "Deliberazione G.C. n. 47 del 26 febbraio 2016 e Protocollo per l'addestramento dei cavalli da Palio per l'anno 2016",
+            "actKind": "baseAct",
+            "registerId": "PE-2016-01",
+            "registerAtto": "G.C. n. 47",
+            "verifiedBy": "actNumberMatch"
+          },
+          {
+            "actYear": 2016,
+            "actTitle": "Deliberazione G.C. n. 62 del 3 marzo 2016 - Correzione del Protocollo 2016 e testo sostitutivo allegato",
+            "actKind": "baseAct",
+            "registerId": "PE-2016-02",
+            "registerAtto": "G.C. n. 62",
+            "verifiedBy": "actNumberMatch"
+          },
+          {
+            "actYear": 2017,
+            "actTitle": "Protocollo per l'addestramento dei cavalli da Palio per l'anno 2017",
+            "actKind": "baseAct",
+            "registerId": "PE-2017-01",
+            "registerAtto": "non presente nel documento acquisito",
+            "verifiedBy": "yearOnlyFallback"
+          },
+          {
+            "actYear": 2018,
+            "actTitle": "Protocollo per l'addestramento dei cavalli da Palio per l'anno 2018",
+            "actKind": "baseAct",
+            "registerId": "PE-2018-01",
+            "registerAtto": "non presente nel documento acquisito",
+            "verifiedBy": "yearOnlyFallback"
+          },
+          {
+            "actYear": 2019,
+            "actTitle": "Deliberazione G.C. n. 78 del 14 marzo 2019 e Protocollo per l'addestramento dei cavalli da Palio per l'anno 2019",
+            "actKind": "baseAct",
+            "registerId": "PE-2019-01",
+            "registerAtto": "G.C. n. 78",
+            "verifiedBy": "actNumberMatch"
+          },
+          {
+            "actYear": 2020,
+            "actTitle": "Protocollo per l'addestramento dei cavalli da Palio per l'anno 2020, programma di addestramento, informativa privacy e modulo d'iscrizione",
+            "actKind": "baseAct",
+            "registerId": "PE-2020-01",
+            "registerAtto": "G.C. n. 51",
+            "verifiedBy": "yearOnlyFallback",
+            "registerAttoEvidence": {
+              "present": true,
+              "value": "G.C. n. 51"
+            }
+          },
+          {
+            "actYear": 2021,
+            "actTitle": "Protocollo per l'addestramento dei cavalli da Palio per l'anno 2021",
+            "actKind": "baseAct",
+            "registerId": "PE-2021-01",
+            "registerAtto": "non presente nel documento acquisito",
+            "verifiedBy": "yearOnlyFallback"
+          },
+          {
+            "actYear": 2022,
+            "actTitle": "Protocollo per l'addestramento dei cavalli da Palio per l'anno 2022",
+            "actKind": "baseAct",
+            "registerId": "PE-2022-01",
+            "registerAtto": "non presente nel documento acquisito",
+            "verifiedBy": "yearOnlyFallback"
+          },
+          {
+            "actYear": 2023,
+            "actTitle": "Protocollo per l'addestramento dei cavalli da Palio per l'anno 2023",
+            "actKind": "baseAct",
+            "registerId": "PE-2023-01",
+            "registerAtto": "non presente nel documento acquisito",
+            "verifiedBy": "yearOnlyFallback"
+          },
+          {
+            "actYear": 2024,
+            "actTitle": "Protocollo per l'addestramento dei cavalli da Palio per l'anno 2024",
+            "actKind": "baseAct",
+            "registerId": "PE-2024-01",
+            "registerAtto": "non presente nel documento acquisito",
+            "verifiedBy": "yearOnlyFallback"
+          },
+          {
+            "actYear": 2025,
+            "actTitle": "Protocollo per l'addestramento dei cavalli da Palio per l'anno 2025",
+            "actKind": "baseAct",
+            "registerId": "PE-2025-01",
+            "registerAtto": "non presente nel documento acquisito",
+            "verifiedBy": "yearOnlyFallback"
+          },
+          {
+            "actYear": 2026,
+            "actTitle": "Deliberazione G.C. n. 33 del 3 febbraio 2026 e Protocollo per l'addestramento dei cavalli da Palio per l'anno 2026",
+            "actKind": "baseAct",
+            "registerId": "PE-2026-01",
+            "registerAtto": "G.C. n. 33",
+            "verifiedBy": "actNumberMatch"
+          }
+        ]
+      },
+      "findings": []
+    },
+    "kb02": {
+      "fileName": "02_KB_Memoria_Incrementale_Protocollo_Equino_2012_2026.md",
+      "candidateCount": 183,
+      "coverageLedger": {
+        "totalLines": 601,
+        "blankLines": 181,
+        "nonBlankLines": 420,
+        "categoryCounts": {
+          "explicitly-non-chunkable": 11,
+          "blank": 181,
+          "candidate-content": 369,
+          "structural-heading": 38,
+          "excluded": 2
+        },
+        "unexplainedLines": [],
+        "unexplainedLineCount": 0,
+        "substantiveLinesWithoutCandidateOrExplicitReason": 0
+      },
+      "globalOverlaps": []
+    },
+    "kb03": {
+      "fileName": "03_KB_Disciplina_Vigente_Consolidata_2026.md",
+      "candidateCount": 170,
+      "coverageLedger": {
+        "totalLines": 4634,
+        "blankLines": 1589,
+        "nonBlankLines": 3045,
+        "categoryCounts": {
+          "explicitly-non-chunkable": 10,
+          "blank": 1589,
+          "structural-heading": 26,
+          "candidate-content": 3007,
+          "excluded": 2
+        },
+        "unexplainedLines": [],
+        "unexplainedLineCount": 0,
+        "substantiveLinesWithoutCandidateOrExplicitReason": 0
+      },
+      "globalOverlaps": []
+    },
+    "kb04": {
+      "fileName": "04_KB_Manifest_Fonti_e_Registro_Atti_2012_2026.md",
+      "candidateCount": 84,
+      "coverageLedger": {
+        "totalLines": 1100,
+        "blankLines": 223,
+        "nonBlankLines": 877,
+        "categoryCounts": {
+          "explicitly-non-chunkable": 10,
+          "blank": 223,
+          "structural-heading": 16,
+          "candidate-content": 851
+        },
+        "unexplainedLines": [],
+        "unexplainedLineCount": 0,
+        "substantiveLinesWithoutCandidateOrExplicitReason": 0
+      },
+      "globalOverlaps": []
+    }
+  },
+  "crossFileChecks": {
+    "stableIdCollisions": [],
+    "unscopedCandidates": [],
+    "containmentV312": {
+      "blockCountByFile": {
+        "kb01": 18,
+        "kb02": 26,
+        "kb03": 15,
+        "kb04": 89
+      },
+      "violationCount": 0,
+      "violationsByFile": {
+        "kb01": [],
+        "kb02": [],
+        "kb03": [],
+        "kb04": []
+      }
+    },
+    "kb03BlockContainmentViolations": [],
+    "blockContainmentViolationsByFile": {
+      "kb01": [],
+      "kb02": [],
+      "kb03": [],
+      "kb04": []
+    },
+    "totalGlobalOverlapLines": 0
+  },
+  "tableInventory": [
+    {
+      "file": "kb01",
+      "tableId": "corpus-storico-intro:tabella-indice-dei-documenti",
+      "scope": "corpus-storico-intro",
+      "startLine": 53,
+      "endLine": 71,
+      "rowCount": 17,
+      "candidateId": "corpus-storico-intro:tabella-indice-dei-documenti",
+      "atomicityResult": "atomic"
+    },
+    {
+      "file": "kb01",
+      "tableId": "atto-pe-2020-01:tabella-testo-integrale",
+      "scope": "atto-pe-2020-01",
+      "startLine": 2969,
+      "endLine": 2978,
+      "rowCount": 8,
+      "candidateId": "atto-pe-2020-01:tabella-testo-integrale",
+      "atomicityResult": "atomic"
+    },
+    {
+      "file": "kb02",
+      "tableId": "memoria-incrementale-cornice:tabella-6-1-incentivi-economici",
+      "scope": "memoria-incrementale-cornice",
+      "startLine": 398,
+      "endLine": 406,
+      "rowCount": 7,
+      "candidateId": "memoria-incrementale-cornice:tabella-6-1-incentivi-economici",
+      "atomicityResult": "atomic"
+    },
+    {
+      "file": "kb02",
+      "tableId": "memoria-incrementale-cornice:tabella-6-2-regola-sulle-attivita-esterne-prima-della-tratta",
+      "scope": "memoria-incrementale-cornice",
+      "startLine": 410,
+      "endLine": 415,
+      "rowCount": 4,
+      "candidateId": "memoria-incrementale-cornice:tabella-6-2-regola-sulle-attivita-esterne-prima-della-tratta",
+      "atomicityResult": "atomic"
+    },
+    {
+      "file": "kb02",
+      "tableId": "memoria-incrementale-cornice:tabella-6-3-prima-iscrizione-per-eta",
+      "scope": "memoria-incrementale-cornice",
+      "startLine": 419,
+      "endLine": 424,
+      "rowCount": 4,
+      "candidateId": "memoria-incrementale-cornice:tabella-6-3-prima-iscrizione-per-eta",
+      "atomicityResult": "atomic"
+    },
+    {
+      "file": "kb02",
+      "tableId": "memoria-incrementale-cornice:tabella-6-4-obbligo-minimo-di-partecipazione",
+      "scope": "memoria-incrementale-cornice",
+      "startLine": 428,
+      "endLine": 432,
+      "rowCount": 3,
+      "candidateId": "memoria-incrementale-cornice:tabella-6-4-obbligo-minimo-di-partecipazione",
+      "atomicityResult": "atomic"
+    },
+    {
+      "file": "kb02",
+      "tableId": "memoria-incrementale-cornice:tabella-6-5-continuita-pluriennale",
+      "scope": "memoria-incrementale-cornice",
+      "startLine": 436,
+      "endLine": 441,
+      "rowCount": 4,
+      "candidateId": "memoria-incrementale-cornice:tabella-6-5-continuita-pluriennale",
+      "atomicityResult": "atomic"
+    },
+    {
+      "file": "kb02",
+      "tableId": "memoria-incrementale-cornice:tabella-6-6-commissione-tecnica",
+      "scope": "memoria-incrementale-cornice",
+      "startLine": 445,
+      "endLine": 453,
+      "rowCount": 7,
+      "candidateId": "memoria-incrementale-cornice:tabella-6-6-commissione-tecnica",
+      "atomicityResult": "atomic"
+    },
+    {
+      "file": "kb03",
+      "tableId": "protocollo-2026:tabella-priorita",
+      "scope": "protocollo-2026",
+      "startLine": 312,
+      "endLine": 321,
+      "rowCount": 8,
+      "candidateId": "protocollo-2026:tabella-priorita",
+      "atomicityResult": "atomic"
+    },
+    {
+      "file": "kb03",
+      "tableId": "ordinanza-6-2026:tabella-n",
+      "scope": "ordinanza-6-2026",
+      "startLine": 579,
+      "endLine": 610,
+      "rowCount": 30,
+      "candidateId": "ordinanza-6-2026:tabella-n",
+      "atomicityResult": "atomic"
+    },
+    {
+      "file": "kb03",
+      "tableId": "stato-completezza:tabella-componente",
+      "scope": "stato-completezza",
+      "startLine": 664,
+      "endLine": 675,
+      "rowCount": 10,
+      "candidateId": "stato-completezza:tabella-componente",
+      "atomicityResult": "atomic"
+    }
+  ],
+  "kb01ToKb04Mapping": {
+    "actNumberMatch": 8,
+    "yearOnlyFallback": 9,
+    "total": 17,
+    "provisionalFallbackYears": [
+      2013,
+      2017,
+      2018,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "registerAttoEvidenceYears": [
+      2013,
+      2020
+    ],
+    "registerAttoEvidenceDetail": [
+      {
+        "year": 2013,
+        "registerAtto": "Commissario straordinario n. 11"
+      },
+      {
+        "year": 2020,
+        "registerAtto": "G.C. n. 51"
+      }
+    ],
+    "note": "actNumberMatch (8): numero di atto trovato nel titolo KB01 e confermato nel campo Atto del record KB04. yearOnlyFallback (9, PROVVISORIO): il titolo KB01 non riporta un numero di atto; l'assegnazione si basa su anno + unicita' del record nel registro KB04 e richiede verifica manuale sugli originali prima di un uso in citazioni legali o di atto esatto. Per 2 di questi 9 anni (2013, 2020) il campo Atto del record KB04 stesso riporta un numero esplicito (rispettivamente 'Commissario straordinario n. 11' e 'G.C. n. 51') che il titolo KB01 non riporta: questa evidenza e' registrata come campo supplementare registerAttoEvidence SULLA STESSA voce yearOnlyFallback (vedi registerAttoEvidenceYears/registerAttoEvidenceDetail sopra), NON come un terzo valore di verifiedBy e NON come una promozione automatica a match verificato -- quei 2 anni restano conteggiati dentro i 9 yearOnlyFallback finche' Fabrizio Gabrielli non ne conferma esplicitamente la verifica documentale sugli originali. Nessuna voce yearOnlyFallback viene mai promossa automaticamente a 'verificata'."
+  },
+  "scopeLevelStatusEvidence": {
+    "count": 11,
+    "entries": [
+      {
+        "file": "kb01",
+        "scope": "corpus-storico-intro",
+        "kind": "frontMatterStatus",
+        "line": 9,
+        "literal": "uso interno; non sostituisce i PDF originali",
+        "dimension": "documentaryStatus",
+        "documentedNull": {
+          "reason": "notYetEvaluated",
+          "explanation": "Il campo \"status\" del front-matter di kb01 riporta un letterale documentato che non coincide esattamente con alcuna voce di legenda canonica della KB 04; l'assegnazione a una dimensione classificata richiede valutazione editoriale non ancora svolta. Non esiste un candidato di granularità sufficiente a rappresentare questo letterale nel contratto a quattro dimensioni: è riportato qui come evidenza di stato a livello di documento.",
+          "literal": "uso interno; non sostituisce i PDF originali"
+        }
+      },
+      {
+        "file": "kb02",
+        "scope": "memoria-incrementale-cornice",
+        "kind": "frontMatterStatus",
+        "line": 10,
+        "literal": "ricostruzione redazionale verificata sul corpus; non sostituisce gli atti",
+        "dimension": "documentaryStatus",
+        "documentedNull": {
+          "reason": "notYetEvaluated",
+          "explanation": "Il campo \"status\" del front-matter di kb02 riporta un letterale documentato che non coincide esattamente con alcuna voce di legenda canonica della KB 04; l'assegnazione a una dimensione classificata richiede valutazione editoriale non ancora svolta. Non esiste un candidato di granularità sufficiente a rappresentare questo letterale nel contratto a quattro dimensioni: è riportato qui come evidenza di stato a livello di documento.",
+          "literal": "ricostruzione redazionale verificata sul corpus; non sostituisce gli atti"
+        }
+      },
+      {
+        "file": "kb03",
+        "scope": "non-chunkable",
+        "kind": "frontMatterStatus",
+        "line": 9,
+        "literal": "consolidato redazionale; verificare sempre eventuali atti successivi",
+        "dimension": "documentaryStatus",
+        "documentedNull": {
+          "reason": "notYetEvaluated",
+          "explanation": "Il campo \"status\" del front-matter di kb03 riporta un letterale documentato che non coincide esattamente con alcuna voce di legenda canonica della KB 04; l'assegnazione a una dimensione classificata richiede valutazione editoriale non ancora svolta. Non esiste un candidato di granularità sufficiente a rappresentare questo letterale nel contratto a quattro dimensioni: è riportato qui come evidenza di stato a livello di documento.",
+          "literal": "consolidato redazionale; verificare sempre eventuali atti successivi"
+        }
+      },
+      {
+        "file": "kb03",
+        "scope": "protocollo-2026",
+        "kind": "tableRowStatus",
+        "line": 314,
+        "literal": "acquisito; da verificare per eventuali modifiche successive",
+        "dimension": "documentaryStatus",
+        "documentedNull": {
+          "reason": "notYetEvaluated",
+          "explanation": "La riga 314 della tabella \"Atti necessari per il consolidamento completo della disciplina 2026\" (KB 03) riporta un letterale nella colonna \"Stato nel corpus attuale\" che non coincide esattamente con alcuna voce di legenda canonica della KB 04; l'assegnazione a una dimensione classificata richiede valutazione editoriale non ancora svolta. Il candidato tabellare atomico che contiene questa riga non può rappresentare individualmente ciascuna delle otto righe nel proprio contratto a quattro dimensioni: è riportato qui come evidenza di stato a livello di riga.",
+          "literal": "acquisito; da verificare per eventuali modifiche successive"
+        }
+      },
+      {
+        "file": "kb03",
+        "scope": "protocollo-2026",
+        "kind": "tableRowStatus",
+        "line": 315,
+        "literal": "analizzata e consolidata",
+        "dimension": "documentaryStatus",
+        "documentedNull": {
+          "reason": "notYetEvaluated",
+          "explanation": "La riga 315 della tabella \"Atti necessari per il consolidamento completo della disciplina 2026\" (KB 03) riporta un letterale nella colonna \"Stato nel corpus attuale\" che non coincide esattamente con alcuna voce di legenda canonica della KB 04; l'assegnazione a una dimensione classificata richiede valutazione editoriale non ancora svolta. Il candidato tabellare atomico che contiene questa riga non può rappresentare individualmente ciascuna delle otto righe nel proprio contratto a quattro dimensioni: è riportato qui come evidenza di stato a livello di riga.",
+          "literal": "analizzata e consolidata"
+        }
+      },
+      {
+        "file": "kb03",
+        "scope": "protocollo-2026",
+        "kind": "tableRowStatus",
+        "line": 316,
+        "literal": "analizzati e consolidati",
+        "dimension": "documentaryStatus",
+        "documentedNull": {
+          "reason": "notYetEvaluated",
+          "explanation": "La riga 316 della tabella \"Atti necessari per il consolidamento completo della disciplina 2026\" (KB 03) riporta un letterale nella colonna \"Stato nel corpus attuale\" che non coincide esattamente con alcuna voce di legenda canonica della KB 04; l'assegnazione a una dimensione classificata richiede valutazione editoriale non ancora svolta. Il candidato tabellare atomico che contiene questa riga non può rappresentare individualmente ciascuna delle otto righe nel proprio contratto a quattro dimensioni: è riportato qui come evidenza di stato a livello di riga.",
+          "literal": "analizzati e consolidati"
+        }
+      },
+      {
+        "file": "kb03",
+        "scope": "protocollo-2026",
+        "kind": "tableRowStatus",
+        "line": 317,
+        "literal": "non acquisito",
+        "dimension": "documentaryStatus",
+        "documentedNull": {
+          "reason": "notYetEvaluated",
+          "explanation": "La riga 317 della tabella \"Atti necessari per il consolidamento completo della disciplina 2026\" (KB 03) riporta un letterale nella colonna \"Stato nel corpus attuale\" che non coincide esattamente con alcuna voce di legenda canonica della KB 04; l'assegnazione a una dimensione classificata richiede valutazione editoriale non ancora svolta. Il candidato tabellare atomico che contiene questa riga non può rappresentare individualmente ciascuna delle otto righe nel proprio contratto a quattro dimensioni: è riportato qui come evidenza di stato a livello di riga.",
+          "literal": "non acquisito"
+        }
+      },
+      {
+        "file": "kb03",
+        "scope": "protocollo-2026",
+        "kind": "tableRowStatus",
+        "line": 318,
+        "literal": "identificata; PDF da acquisire localmente",
+        "dimension": "documentaryStatus",
+        "documentedNull": {
+          "reason": "notYetEvaluated",
+          "explanation": "La riga 318 della tabella \"Atti necessari per il consolidamento completo della disciplina 2026\" (KB 03) riporta un letterale nella colonna \"Stato nel corpus attuale\" che non coincide esattamente con alcuna voce di legenda canonica della KB 04; l'assegnazione a una dimensione classificata richiede valutazione editoriale non ancora svolta. Il candidato tabellare atomico che contiene questa riga non può rappresentare individualmente ciascuna delle otto righe nel proprio contratto a quattro dimensioni: è riportato qui come evidenza di stato a livello di riga.",
+          "literal": "identificata; PDF da acquisire localmente"
+        }
+      },
+      {
+        "file": "kb03",
+        "scope": "protocollo-2026",
+        "kind": "tableRowStatus",
+        "line": 319,
+        "literal": "non acquisito",
+        "dimension": "documentaryStatus",
+        "documentedNull": {
+          "reason": "notYetEvaluated",
+          "explanation": "La riga 319 della tabella \"Atti necessari per il consolidamento completo della disciplina 2026\" (KB 03) riporta un letterale nella colonna \"Stato nel corpus attuale\" che non coincide esattamente con alcuna voce di legenda canonica della KB 04; l'assegnazione a una dimensione classificata richiede valutazione editoriale non ancora svolta. Il candidato tabellare atomico che contiene questa riga non può rappresentare individualmente ciascuna delle otto righe nel proprio contratto a quattro dimensioni: è riportato qui come evidenza di stato a livello di riga.",
+          "literal": "non acquisito"
+        }
+      },
+      {
+        "file": "kb03",
+        "scope": "protocollo-2026",
+        "kind": "tableRowStatus",
+        "line": 320,
+        "literal": "da verificare",
+        "dimension": "documentaryStatus",
+        "documentedNull": {
+          "reason": "notYetEvaluated",
+          "explanation": "La riga 320 della tabella \"Atti necessari per il consolidamento completo della disciplina 2026\" (KB 03) riporta un letterale nella colonna \"Stato nel corpus attuale\" che non coincide esattamente con alcuna voce di legenda canonica della KB 04; l'assegnazione a una dimensione classificata richiede valutazione editoriale non ancora svolta. Il candidato tabellare atomico che contiene questa riga non può rappresentare individualmente ciascuna delle otto righe nel proprio contratto a quattro dimensioni: è riportato qui come evidenza di stato a livello di riga.",
+          "literal": "da verificare"
+        }
+      },
+      {
+        "file": "kb03",
+        "scope": "protocollo-2026",
+        "kind": "tableRowStatus",
+        "line": 321,
+        "literal": "richiamato, non incluso",
+        "dimension": "documentaryStatus",
+        "documentedNull": {
+          "reason": "notYetEvaluated",
+          "explanation": "La riga 321 della tabella \"Atti necessari per il consolidamento completo della disciplina 2026\" (KB 03) riporta un letterale nella colonna \"Stato nel corpus attuale\" che non coincide esattamente con alcuna voce di legenda canonica della KB 04; l'assegnazione a una dimensione classificata richiede valutazione editoriale non ancora svolta. Il candidato tabellare atomico che contiene questa riga non può rappresentare individualmente ciascuna delle otto righe nel proprio contratto a quattro dimensioni: è riportato qui come evidenza di stato a livello di riga.",
+          "literal": "richiamato, non incluso"
+        }
+      }
+    ],
+    "violationCount": 0,
+    "violations": []
+  },
+  "acceptanceGates": {
+    "allCandidatesHaveCanonicalStatusDimensions": true,
+    "allScopeLevelStatusEvidenceResolvesSemantically": true,
+    "kb01ArticleTotalMatchesExpected247": true,
+    "kb01NoUnmatchedActs": true,
+    "kb01NoUnmatchedRegisterRecords": true,
+    "allCandidateRangesContainedWithinBlock": true,
+    "everyCandidateFullyContainedInDeclaredScope": true,
+    "zeroGlobalCandidateOverlaps": true,
+    "coverageLedgerZeroUnexplainedAllFiles": true,
+    "zeroSubstantiveLinesWithoutCandidateOrReason": true,
+    "noStableIdCollisions": true,
+    "noUnscopedCandidates": true,
+    "kb03RegolamentoArticle1To105Present": true,
+    "kb03CoordinatedArt37And38Present": true,
+    "kb03ControlledMedicationsTableAtomic": true,
+    "allMarkdownTablesAtomic": true,
+    "kb04AllFourRecordFamiliesPresent": true,
+    "kb02IdsStableUnderInsertion": true,
+    "productionIndexMatchesCanonicalCorpus": true
+  },
+  "allAcceptanceGatesPass": true,
+  "releaseBlockingGates": [
+    "coverageLedgerZeroUnexplainedAllFiles",
+    "zeroSubstantiveLinesWithoutCandidateOrReason",
+    "kb01NoUnmatchedActs",
+    "kb01NoUnmatchedRegisterRecords",
+    "allCandidatesHaveCanonicalStatusDimensions",
+    "allScopeLevelStatusEvidenceResolvesSemantically",
+    "allCandidateRangesContainedWithinBlock",
+    "everyCandidateFullyContainedInDeclaredScope",
+    "zeroGlobalCandidateOverlaps",
+    "noStableIdCollisions",
+    "noUnscopedCandidates",
+    "productionIndexMatchesCanonicalCorpus"
+  ],
+  "releaseBlockingGatesPass": true,
+  "failedBlockingGates": [],
+  "failedAdvisoryGates": []
+}

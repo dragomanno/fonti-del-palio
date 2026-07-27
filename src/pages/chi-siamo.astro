@@ -1,0 +1,94 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import {
+  PISTAKKIO_URL,
+  PISTAKKIO_LABEL,
+  GITHUB_URL,
+  SOFTWARE_LICENSE,
+  COPYRIGHT_NOTICE,
+} from "../config/site";
+---
+<BaseLayout title="Il progetto" activePath="/chi-siamo">
+  <section class="section" style="padding-block: var(--space-12) var(--space-6);">
+    <div class="wrap">
+      <span class="section-number">Il progetto</span>
+      <h1 class="text-title" style="font-size: var(--text-title); max-width: 24ch;">
+        Un archivio pubblico, non un servizio.
+      </h1>
+      <p style="font-size: var(--text-body-lg); max-width: var(--measure); color: var(--color-text-muted);">
+        Fonti del Palio raccoglie e organizza il corpus documentale del Protocollo
+        Equino del Palio di Siena. Non interpreta al posto delle fonti: le collega.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="grid">
+        <div class="col-6">
+          <span class="section-number">01</span>
+          <h2 class="text-heading" style="font-size: var(--text-heading);">Indipendenza</h2>
+          <p class="text-muted">
+            Il progetto non è affiliato al Comune di Siena, al Magistrato delle Contrade
+            né ad alcun altro ente ufficiale legato al Palio. Non riproduce loghi, stemmi
+            o l'interfaccia di alcun sito istituzionale. Vedi il
+            <a href="/disclaimer">disclaimer completo</a>.
+          </p>
+        </div>
+        <div class="col-6">
+          <span class="section-number">02</span>
+          <h2 class="text-heading" style="font-size: var(--text-heading);">Metodo</h2>
+          <p class="text-muted">
+            Ogni pagina rimanda all'originale ufficiale quando disponibile, e segnala
+            esplicitamente quando l'atto o il collegamento diretto non sono ancora stati
+            reperiti. Le note di sintesi hanno funzione orientativa e non sostituiscono
+            la fonte. Dettagli nella pagina <a href="/metodologia">metodologia</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark" style="border-bottom: none;">
+    <div class="wrap">
+      <span class="section-number">Natura del progetto</span>
+      <h2 class="text-heading" style="font-size: var(--text-heading); color: var(--color-dark-text);">
+        Un servizio civico, non un'iniziativa commerciale
+      </h2>
+      <p style="max-width: 56ch; color: var(--color-dark-text-muted);">
+        Fonti del Palio è un progetto civico, documentario e non-profit di Fabrizio
+        Gabrielli, fondatore di <a href={PISTAKKIO_URL} rel="noopener noreferrer" target="_blank">{PISTAKKIO_LABEL}</a>,
+        nato come servizio alla Città di Siena e alla comunità interessata allo studio
+        e alla comprensione del Protocollo Equino. Nessuna metrica, nessun modulo di
+        contatto o preventivo: solo il corpus documentale, organizzato e consultabile.
+      </p>
+      <p style="max-width: 56ch; color: var(--color-dark-text-muted); margin-top: var(--space-4);">
+        La selezione e la validazione delle fonti, così come l'integrazione dei
+        contenuti nelle Knowledge Base canoniche, restano sotto la responsabilità
+        editoriale di Fabrizio Gabrielli.
+      </p>
+      <p style="max-width: 56ch; color: var(--color-dark-text-muted); margin-top: var(--space-4);">
+        <a href={PISTAKKIO_URL} rel="noopener noreferrer" target="_blank">{PISTAKKIO_LABEL}</a>
+        è accreditata come ideatrice tecnica e curatrice del progetto. È un credito
+        di contributo, non di titolarità esclusiva: non implica la proprietà del
+        corpus documentale, delle fonti originali o delle Knowledge Base canoniche,
+        né alcun ruolo di autorità istituzionale su di esse.
+      </p>
+      <p style="max-width: 56ch; color: var(--color-dark-text-muted); margin-top: var(--space-4);">
+        Il codice sorgente del sito è distribuito con licenza {SOFTWARE_LICENSE}
+        (<span class="mono">{COPYRIGHT_NOTICE}</span>). La licenza copre il software,
+        non i contenuti delle Knowledge Base canoniche né gli atti originali, che
+        restano soggetti al proprio regime giuridico.
+      </p>
+      <p style="max-width: 56ch; color: var(--color-dark-text-muted); margin-top: var(--space-4);">
+        Il codice del sito è pubblico su <a href={GITHUB_URL} rel="noopener noreferrer" target="_blank">{GITHUB_URL.replace("https://", "")}</a>.
+        Sono benvenute segnalazioni di errori, documenti mancanti e discrepanze nelle
+        fonti, oltre a proposte di integrazione. Le segnalazioni costituiscono
+        proposte di revisione: le modifiche editoriali finali e quelle al repository
+        restano sotto il controllo di Fabrizio Gabrielli. I quattro file delle
+        Knowledge Base canoniche non si modificano con una pull request: si segnalano
+        con una issue dedicata e vengono aggiornati solo con un intervento tracciato.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

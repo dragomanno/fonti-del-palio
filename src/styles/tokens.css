@@ -1,0 +1,91 @@
+/*
+  Fonti del Palio — Design tokens
+  Identità visiva: "Fonti del Palio", progetto civico e documentario indipendente.
+
+  Verde di accento civico (v3.1.1 §7: rinominato da "verde Pistakkio" /
+  "endorsement accent" a terminologia neutra -- l'uso di questo colore non
+  implica alcun ruolo di originator, curator, endorser, copyright holder,
+  project owner o public provider da parte di terzi):
+  --color-green: #b8dc16 (colore dominante scelto per il sistema visivo di
+  questo progetto).
+
+  NOTA ACCESSIBILITÀ: il verde #b8dc16 ha contrasto ~1.5:1 su bianco e ~1.46:1 su fondo
+  caldo — insufficiente per testo (WCAG AA richiede 4.5:1). Va quindi usato solo su
+  fondo scuro/nero (contrasto 11–13:1): il verde acceso vive su nero/superfici scure,
+  mai come testo su chiaro. Per testo verde su chiaro esiste una variante scurita
+  (--color-green-ink) con contrasto 5.1–5.6:1.
+*/
+
+:root {
+  /* ---- Verde di accento civico ---- */
+  --color-green: #b8dc16;        /* verde acceso originale — solo su fondo scuro, blocchi, numeri, bordi */
+  --color-green-ink: #55650a;     /* variante scurita — unica versione ammessa come testo su fondo chiaro (contrasto 5.7:1) */
+  --color-green-dim: rgba(184, 220, 22, 0.14); /* wash sottile per hover/selection su chiaro */
+
+  /* ---- Neutrali caldi (base editoriale) ---- */
+  --color-black: #14140f;
+  --color-near-black: #1a1a1a;
+  --color-white: #ffffff;
+  --color-bg: #f7f6f0;            /* fondo caldo, neutro, non commerciale */
+  --color-surface: #ffffff;
+  --color-border: #e2e0d4;
+  --color-text: #14140f;
+  --color-text-muted: #56544a;
+  --color-text-faint: #8a877a;
+
+  /* ---- Dark section (hero, footer, blocchi a contrasto) ---- */
+  --color-dark-bg: #14140f;
+  --color-dark-surface: #1e1e17;
+  --color-dark-border: #33321f;
+  --color-dark-text: #f4f3ea;
+  --color-dark-text-muted: #b8b6a8;
+
+  /* ---- Semantici (uso minimo) ---- */
+  --color-warning: #8a5a1c;
+  --color-error: #7a2323;
+
+  /* ---- Tipografia ---- */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+
+  /* ---- Scala tipografica ---- */
+  --text-hero: clamp(2.75rem, 6vw, 5.5rem);
+  --text-title: clamp(2rem, 4vw, 3rem);
+  --text-heading: clamp(1.375rem, 2.2vw, 1.75rem);
+  --text-body-lg: 1.125rem;
+  --text-body: 1rem;
+  --text-caption: 0.8125rem;
+
+  /* ---- Spaziatura (griglia modulare 8px) ---- */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-6: 3rem;
+  --space-8: 4rem;
+  --space-12: 6rem;
+  --space-16: 8rem;
+
+  /* ---- Layout ---- */
+  --max-width: 76rem;
+  --measure: 68ch;
+  --radius: 2px; /* quasi nessun rounding: linguaggio "systems", non app consumer */
+
+  /* ---- Focus ---- */
+  --focus-ring: 0 0 0 3px var(--color-green);
+}
+
+/* Focus visibile ovunque, non solo :focus-visible, per garantire accessibilità da tastiera */
+:focus-visible {
+  outline: 3px solid var(--color-green);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

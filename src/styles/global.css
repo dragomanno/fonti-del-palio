@@ -1,0 +1,263 @@
+@import './tokens.css';
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 0 0 var(--space-2) 0;
+  letter-spacing: -0.01em;
+}
+
+p { margin: 0 0 var(--space-2) 0; max-width: var(--measure); }
+
+a {
+  color: var(--color-green-ink);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+a:hover { color: var(--color-black); }
+
+/* ---------- Layout primitives ---------- */
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.section {
+  padding-block: var(--space-12);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.section--dark {
+  background: var(--color-dark-bg);
+  color: var(--color-dark-text);
+  border-bottom-color: var(--color-dark-border);
+}
+.section--dark a { color: var(--color-green); }
+.section--dark p { color: var(--color-dark-text-muted); }
+
+.grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.grid > * { grid-column: span 12; }
+
+@media (min-width: 768px) {
+  .col-6 { grid-column: span 6; }
+  .col-4 { grid-column: span 4; }
+  .col-8 { grid-column: span 8; }
+}
+
+/* ---------- Numbered sections (01, 02, 03...) ---------- */
+
+.section-number {
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  color: var(--color-green-ink);
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: var(--space-2);
+}
+.section--dark .section-number { color: var(--color-green); }
+
+.section-number::before {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1px;
+  background: currentColor;
+  margin-right: var(--space-1);
+  vertical-align: middle;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+@media (min-width: 768px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--space-2);
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--color-black);
+  text-decoration: none;
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-1);
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .brand { font-size: 1.25rem; }
+}
+.brand:hover { color: var(--color-black); }
+.brand .dot { color: var(--color-green-ink); }
+
+/* v3.1.1 §7: rinominata da .endorsement-tag a terminologia neutra (classe
+   attualmente non referenziata in alcun markup .astro). */
+.meta-tag {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  color: var(--color-text-faint);
+  text-transform: uppercase;
+}
+
+.main-nav {
+  display: flex;
+  gap: var(--space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  row-gap: var(--space-1);
+}
+.main-nav a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.main-nav a:hover { color: var(--color-green-ink); }
+.main-nav a[aria-current="page"] {
+  color: var(--color-green-ink);
+  border-bottom: 2px solid var(--color-green);
+}
+
+/* ---------- Disclaimer banner ---------- */
+
+.disclaimer-banner {
+  /* Annulla il max-width: var(--measure) applicato globalmente a <p>:
+     la fascia deve occupare l'intera larghezza della finestra. */
+  max-width: none;
+  margin: 0;
+  background: var(--color-near-black);
+  color: var(--color-dark-text);
+  font-size: 0.75rem;
+  padding: var(--space-1) var(--space-2);
+  text-align: center;
+  line-height: 1.4;
+}
+.disclaimer-banner a { color: var(--color-green); }
+
+/* ---------- Cards / modular grid blocks ---------- */
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: var(--space-4);
+}
+
+.card--accent {
+  border-left: 3px solid var(--color-green);
+}
+
+/* ---------- Buttons (no sales CTAs — used for internal navigation only) ---------- */
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-weight: 600;
+  color: var(--color-green-ink);
+  text-decoration: none;
+}
+.link-arrow::after { content: '→'; transition: transform 0.15s ease; }
+.link-arrow:hover::after { transform: translateX(3px); }
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background: var(--color-dark-bg);
+  color: var(--color-dark-text-muted);
+  padding-block: var(--space-8) var(--space-6);
+}
+.site-footer a { color: var(--color-dark-text); }
+.site-footer a:hover { color: var(--color-green); }
+
+.footer-signature {
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  color: var(--color-dark-text-muted);
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-dark-border);
+}
+.footer-signature .heart { color: var(--color-green); }
+
+.footer-credit {
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  color: var(--color-dark-text-muted);
+  margin-top: var(--space-2);
+}
+
+/* ---------- Prose (rendered Markdown: disclaimer, privacy) ---------- */
+
+.prose h1 {
+  font-size: var(--text-title);
+  margin-bottom: var(--space-3);
+}
+.prose h2 {
+  font-size: var(--text-heading);
+  margin-top: var(--space-6);
+}
+.prose ul, .prose ol {
+  padding-left: 1.25rem;
+  color: var(--color-text-muted);
+}
+.prose li { margin-bottom: var(--space-1); }
+.prose strong { color: var(--color-text); }
+.prose p { color: var(--color-text-muted); }
+
+/* ---------- Utility ---------- */
+
+.text-muted { color: var(--color-text-muted); }
+.text-caption { font-size: var(--text-caption); color: var(--color-text-faint); }
+.mono { font-family: var(--font-mono); }
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+}

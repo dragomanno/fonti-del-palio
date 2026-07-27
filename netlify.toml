@@ -1,0 +1,30 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+# La funzione /ask è l'unico endpoint server-side del progetto.
+# Il timeout per-funzione NON si configura in questo file: la sintassi
+# [[functions."ask"]] timeout non e' un meccanismo reale di Netlify.
+# Il limite di esecuzione effettivo (piano Netlify collegato) va verificato
+# nella dashboard/CLI Netlify prima del lancio in produzione (fase A3,
+# vedi data/static-site-milestone-plan.md). ASK_TIMEOUT_MS resta solo un
+# budget applicativo interno gestito con AbortController in
+# netlify/functions/ask.ts, per restituire un 503 controllato prima che
+# la piattaforma interrompa la funzione.
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[context.deploy-preview.environment]
+  AI_ENABLED = "false"
+
+[context.production.environment]
+  NODE_ENV = "production"

@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+import path from "node:path";
+import { marked } from "marked";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const privacyRaw = readFileSync(path.resolve(__dirname, "../../PRIVACY.md"), "utf-8");
+const privacyHtml = marked.parse(privacyRaw);
+---
+<BaseLayout title="Privacy" activePath="/privacy">
+  <section class="section" style="padding-block: var(--space-12) var(--space-8);">
+    <div class="wrap">
+      <span class="section-number">Privacy</span>
+      <article class="prose" style="max-width: var(--measure);" set:html={privacyHtml} />
+    </div>
+  </section>
+</BaseLayout>

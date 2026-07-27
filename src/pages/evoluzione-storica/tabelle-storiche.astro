@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ChunkCard from "../../components/ChunkCard.astro";
+import { chunksByRoute } from "../../lib/corpus";
+
+const chunks = chunksByRoute("/evoluzione-storica/tabelle-storiche/");
+const tables = chunks.filter((c) => c.candidateType.includes("tabella"));
+---
+
+<BaseLayout
+  title="Cornice metodologica e tabelle storiche"
+  description="La cornice metodologica della memoria incrementale del Protocollo Equino e le tabelle comparative fra annualità, riprodotte dal corpus canonico."
+  activePath="/evoluzione-storica"
+>
+  <section class="section" style="padding-block: var(--space-6) var(--space-3);">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Percorso" data-pagefind-ignore>
+        <a href="/evoluzione-storica/">Evoluzione storica</a>
+        <span aria-hidden="true">/</span>
+        <span>Cornice e tabelle</span>
+      </nav>
+      <h1 style="font-family: var(--font-display); font-size: var(--text-title); max-width: 22ch; margin: var(--space-1) 0 0;">
+        Cornice metodologica e tabelle storiche
+      </h1>
+      <p class="text-muted" style="max-width: var(--measure); margin-top: var(--space-2);">
+        Come è stata costruita la memoria incrementale del corpus, quali criteri sono stati adottati
+        per riconoscere una modifica e quali tabelle comparative ne derivano. Queste pagine spiegano
+        il metodo; le annualità lo applicano.
+      </p>
+      <p class="text-caption" style="margin-top: var(--space-2);">
+        {chunks.length} unità documentali
+        {tables.length > 0 && <> · {tables.length} tabelle</>}
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-8);">
+    <div class="wrap">
+      <div class="corpus">
+        {chunks.map((chunk) => <ChunkCard chunk={chunk} />)}
+      </div>
+      <p style="margin-top: var(--space-4);">
+        <a href="/evoluzione-storica/" class="link-arrow">Torna alla cronologia</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .crumbs {
+    display: flex;
+    gap: 0.5rem;
+    font-size: var(--text-caption);
+    color: var(--color-text-faint);
+    margin-bottom: var(--space-2);
+  }
+  .crumbs a {
+    color: var(--color-green-ink);
+  }
+  .corpus {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-1);
+  }
+</style>

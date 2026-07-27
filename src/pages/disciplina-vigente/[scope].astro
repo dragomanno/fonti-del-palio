@@ -1,0 +1,159 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ChunkCard from "../../components/ChunkCard.astro";
+import { DISCIPLINA_SECTIONS, chunksByScope, type Chunk } from "../../lib/corpus";
+
+export function getStaticPaths() {
+  return DISCIPLINA_SECTIONS.map((section) => {
+    const chunks = chunksByScope(section.scope);
+    return {
+      params: { scope: section.scope },
+      props: { section, chunks },
+    };
+  }).filter((entry) => entry.props.chunks.length > 0);
+}
+
+interface Props {
+  section: (typeof DISCIPLINA_SECTIONS)[number];
+  chunks: Chunk[];
+}
+
+const { section, chunks } = Astro.props as Props;
+
+const index = DISCIPLINA_SECTIONS.findIndex((s) => s.scope === section.scope);
+const prev = index > 0 ? DISCIPLINA_SECTIONS[index - 1] : null;
+const next =
+  index >= 0 && index < DISCIPLINA_SECTIONS.length - 1
+    ? DISCIPLINA_SECTIONS[index + 1]
+    : null;
+
+const articles = chunks.filter((c) => c.articleNumber !== null);
+const provisionalCount = chunks.filter((c) => c.provisionalProvenance).length;
+const sourceFile = chunks[0]?.citation.fileLabel ?? "";
+---
+
+<BaseLayout
+  title={section.title}
+  description={section.summary}
+  activePath="/disciplina-vigente"
+>
+  <section class="section" style="padding-block: var(--space-6) var(--space-3);">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Percorso" data-pagefind-ignore>
+        <a href="/disciplina-vigente/">Disciplina vigente</a>
+        <span aria-hidden="true">/</span>
+        <span>{section.title}</span>
+      </nav>
+      <span class="section-number">
+        Parte {String(section.ordinal).padStart(2, "0")}
+      </span>
+      <h1 style="font-family: var(--font-display); font-size: var(--text-title); max-width: 22ch; margin: var(--space-1) 0 0;">
+        {section.title}
+      </h1>
+      <p class="text-muted" style="max-width: var(--measure); margin-top: var(--space-2);">
+        {section.summary}
+      </p>
+      <p class="text-caption" style="margin-top: var(--space-2);">
+        {articles.length > 0 && <>{articles.length} articoli · </>}
+        {chunks.length} unità documentali · fonte: {sourceFile}
+      </p>
+      {
+        provisionalCount > 0 && (
+          <p class="warn" data-pagefind-ignore>
+            {provisionalCount} unità di questa parte hanno una provenienza attribuita in via
+            provvisoria. L'attribuzione è dichiarata sotto ciascuna unità e va verificata
+            sull'atto originale prima di essere usata come citazione puntuale.
+          </p>
+        )
+      }
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-8);">
+    <div class="wrap">
+      <div class="corpus">
+        {chunks.map((chunk) => <ChunkCard chunk={chunk} />)}
+      </div>
+
+      <nav class="pager" aria-label="Navigazione fra le parti" data-pagefind-ignore>
+        {
+          prev ? (
+            <a href={`/disciplina-vigente/${prev.scope}/`} class="pager__link">
+              <span class="pager__dir">← Parte precedente</span>
+              <span class="pager__title">{prev.title}</span>
+            </a>
+          ) : (
+            <span />
+          )
+        }
+        {
+          next && (
+            <a href={`/disciplina-vigente/${next.scope}/`} class="pager__link pager__link--next">
+              <span class="pager__dir">Parte successiva →</span>
+              <span class="pager__title">{next.title}</span>
+            </a>
+          )
+        }
+      </nav>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .crumbs {
+    display: flex;
+    gap: 0.5rem;
+    font-size: var(--text-caption);
+    color: var(--color-text-faint);
+    margin-bottom: var(--space-2);
+  }
+  .crumbs a {
+    color: var(--color-green-ink);
+  }
+  .warn {
+    margin-top: var(--space-2);
+    padding: 0.75rem 1rem;
+    border-left: 3px solid var(--color-warning);
+    background: var(--color-surface);
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+    max-width: var(--measure);
+  }
+  .corpus {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-1);
+  }
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-2);
+    margin-top: var(--space-6);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--color-border);
+  }
+  .pager__link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-decoration: none;
+    color: inherit;
+    max-width: 22rem;
+  }
+  .pager__link--next {
+    text-align: right;
+    margin-left: auto;
+  }
+  .pager__dir {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-green-ink);
+  }
+  .pager__title {
+    font-family: var(--font-display);
+    font-weight: 600;
+  }
+  .pager__link:hover .pager__title {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+</style>

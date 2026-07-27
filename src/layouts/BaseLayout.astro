@@ -1,0 +1,156 @@
+---
+import "@fontsource/fraunces/500.css";
+import "@fontsource/fraunces/600.css";
+import "@fontsource/fraunces/700.css";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/jetbrains-mono/400.css";
+import "@fontsource/jetbrains-mono/500.css";
+import "../styles/global.css";
+import { SITE_NAME, SITE_URL, PISTAKKIO_URL, PISTAKKIO_LABEL, GITHUB_URL, GITHUB_LABEL } from "../config/site";
+
+export interface Props {
+  title: string;
+  description?: string;
+  activePath?: string;
+  /** Se false, esclude la pagina sia dall'indicizzazione dei motori di ricerca
+   *  esterni (meta robots noindex) sia dall'indice di ricerca interno Pagefind
+   *  (marcatore data-pagefind-ignore="all" nel head). Usato per i documenti di
+   *  pianificazione interna, che non sono fonti documentali del Palio.
+   *  Pagefind e' integrato: l'indice viene costruito su `dist/` al termine di
+   *  `npm run build` e l'esclusione e' quindi effettiva. Default true. */
+  indexable?: boolean;
+  /** Se false, il contenuto della pagina non viene usato come corpo indicizzato
+   *  da Pagefind (utile per pagine di servizio come /ricerca). Default true. */
+  searchable?: boolean;
+}
+const {
+  title,
+  description = "Fonti del Palio — corpus documentale del Protocollo Equino del Palio di Siena.",
+  activePath = "",
+  indexable = true,
+  searchable = true,
+} = Astro.props;
+const siteName = SITE_NAME;
+
+// v0.1.0 — IDENTITA' DEL DOCUMENTO E STATO DI NAVIGAZIONE SONO VALORI DISTINTI.
+//
+// Prima di questa correzione il canonical era derivato da `activePath`, che e'
+// una proprieta' di NAVIGAZIONE: serve a evidenziare la voce di menu attiva ed
+// e' volutamente condivisa fra una sezione e le sue pagine figlie. Il risultato
+// era che tutte le 66 pagine di record dichiaravano `/fonti/` come canonical e
+// tutti i 17 atti dichiaravano `/evoluzione-storica/`: le pagine di dettaglio
+// si auto-deindicizzavano a favore della sezione madre.
+//
+// L'identita' del documento e' ora derivata esclusivamente da `Astro.url.pathname`,
+// cioe' dalla rotta effettivamente generata. `activePath` continua a governare
+// SOLO l'evidenziazione del menu e non ha piu' alcun effetto sui metadati.
+//
+// Politica trailing slash: `astro.config.mjs` usa `build.format: "directory"`,
+// quindi ogni rotta e' una directory e ogni URL canonico termina con "/"
+// (la home resta "/"). Il dominio canonico resta quello configurato in
+// PUBLIC_SITE_URL / SITE_URL: qui non viene reintrodotto alcun dominio.
+function toCanonicalPath(pathname: string): string {
+  const withoutIndex = pathname.replace(/\/index\.html?$/i, "/");
+  const trimmed = withoutIndex.replace(/\/+$/, "");
+  return trimmed === "" ? "/" : `${trimmed}/`;
+}
+const canonicalPath = toCanonicalPath(Astro.url.pathname);
+const canonicalUrl = new URL(canonicalPath, SITE_URL).toString();
+
+const navItems = [
+  { href: "/disciplina-vigente", label: "Disciplina vigente" },
+  { href: "/evoluzione-storica", label: "Evoluzione storica" },
+  { href: "/fonti", label: "Fonti" },
+  { href: "/metodologia", label: "Metodologia" },
+  { href: "/chi-siamo", label: "Progetto" },
+  { href: "/ricerca", label: "Ricerca" },
+];
+---
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} — {siteName}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" href="data:," />
+    {!indexable && <meta name="robots" content="noindex, nofollow" />}
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={`${title} — ${siteName}`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="it_IT" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={`${title} — ${siteName}`} />
+    <meta name="twitter:description" content={description} />
+    {!indexable && <meta data-pagefind-ignore="all" />}
+    <!-- Font self-hosted via @fontsource: nessuna richiesta di rete esterna a servizi Google -->
+  </head>
+  <body>
+    <p class="disclaimer-banner" data-pagefind-ignore>
+      Progetto documentale indipendente, non ufficiale e ad accesso pubblico. Non affiliato al Comune di Siena —
+      <a href="/disclaimer">leggi il disclaimer completo</a>.
+    </p>
+    <header class="site-header" data-pagefind-ignore>
+      <div class="wrap site-header__inner">
+        <a href="/" class="brand">
+          Fonti del Palio<span class="dot">.</span>
+        </a>
+        <nav aria-label="Navigazione principale">
+          <ul class="main-nav">
+            {navItems.map((item) => (
+              <li>
+                <a href={item.href} aria-current={activePath === item.href ? "page" : undefined}>
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main data-pagefind-body={indexable && searchable ? "" : undefined}>
+      <slot />
+    </main>
+    <footer class="site-footer" data-pagefind-ignore>
+      <div class="wrap">
+        <div class="grid">
+          <div class="col-6">
+            <p class="brand" style="color: var(--color-dark-text); font-size: 1.125rem;">
+              Fonti del Palio<span class="dot" style="color: var(--color-green);">.</span>
+            </p>
+            <p class="text-caption" style="color: var(--color-dark-text-muted); max-width: 32ch;">
+              Ricerca documentale del Protocollo Equino. Prima gli atti. Poi le risposte.
+            </p>
+          </div>
+          <div class="col-6">
+            <nav aria-label="Navigazione footer">
+              <ul class="main-nav" style="flex-wrap: wrap;">
+                <li><a href="/disclaimer">Disclaimer</a></li>
+                <li><a href="/privacy">Privacy</a></li>
+                <li><a href="/metodologia">Metodologia</a></li>
+                <li><a href="/chi-siamo">Progetto</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <p class="footer-signature">
+          Fonti del Palio — un progetto non-profit di Fabrizio Gabrielli.
+        </p>
+        <p class="footer-credit">
+          Made with Love 💚 by <a href={PISTAKKIO_URL} rel="noopener noreferrer" target="_blank">{PISTAKKIO_LABEL}</a>
+          {GITHUB_URL && (
+            <>
+              {" · "}
+              <a href={GITHUB_URL} rel="noopener noreferrer" target="_blank">{GITHUB_LABEL}</a>
+            </>
+          )}
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

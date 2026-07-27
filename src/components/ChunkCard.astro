@@ -1,0 +1,150 @@
+---
+/**
+ * Unità documentale resa in pagina: testo canonico + quattro stati + citazione.
+ *
+ * Il testo viene convertito da Markdown a HTML con `marked` in fase di build.
+ * L'input proviene esclusivamente dai quattro file canonici del repository,
+ * non da input utente: non c'è superficie di injection da terze parti. Il
+ * testo non viene riscritto, riassunto né normalizzato — è riprodotto verbatim.
+ */
+import { marked } from "marked";
+import type { Chunk } from "../lib/corpus";
+import StatusBadges from "./StatusBadges.astro";
+import SourceCitation from "./SourceCitation.astro";
+
+export interface Props {
+  chunk: Chunk;
+  showStatus?: boolean;
+  headingLevel?: 2 | 3;
+}
+
+const { chunk, showStatus = true, headingLevel = 3 } = Astro.props;
+
+marked.setOptions({ gfm: true, breaks: false });
+
+/**
+ * Il testo del chunk include già la propria intestazione Markdown quando il
+ * candidato è una sezione o un articolo. Per evitare un titolo duplicato,
+ * l'intestazione di apertura viene rimossa e resa dal componente come heading
+ * semantico corretto nella gerarchia della pagina.
+ */
+const lines = chunk.text.split("\n");
+let body = chunk.text;
+let ownHeading: string | null = null;
+const headingMatch = /^(#{1,6})\s+(.*)$/.exec(lines[0] ?? "");
+if (headingMatch) {
+  ownHeading = headingMatch[2].trim();
+  body = lines.slice(1).join("\n");
+}
+
+const html = marked.parse(body.trim()) as string;
+const displayTitle = ownHeading ?? chunk.title;
+const Heading = headingLevel === 2 ? "h2" : "h3";
+---
+
+<article class="chunk" id={chunk.anchor}>
+  <header class="chunk__head">
+    <Heading class="chunk__title">
+      <a href={`#${chunk.anchor}`} class="chunk__permalink" aria-label={`Collegamento permanente a ${displayTitle}`}>
+        {displayTitle}
+      </a>
+    </Heading>
+    <p class="chunk__id" data-pagefind-ignore>
+      <code>{chunk.id}</code>
+    </p>
+  </header>
+
+  {html.trim() !== "" && <div class="chunk__body prose" set:html={html} />}
+
+  {showStatus && <StatusBadges status={chunk.status} />}
+
+  <SourceCitation citation={chunk.citation} headingPath={chunk.headingPath} />
+</article>
+
+<style>
+  .chunk {
+    padding: var(--space-3) 0;
+    border-top: 1px solid var(--color-border);
+    scroll-margin-top: var(--space-4);
+  }
+  .chunk:first-of-type {
+    border-top: none;
+  }
+  .chunk__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-1);
+  }
+  .chunk__title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 0;
+    max-width: var(--measure);
+  }
+  .chunk__permalink {
+    color: inherit;
+    text-decoration: none;
+  }
+  .chunk__permalink:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--color-green-ink);
+    text-underline-offset: 3px;
+  }
+  .chunk__id {
+    margin: 0;
+    font-size: 0.6875rem;
+    /* Gli identificativi sono lunghi: su schermi stretti devono andare a capo
+       dentro la colonna flex invece di allargare la pagina. */
+    min-width: 0;
+    max-width: 100%;
+  }
+  @media (max-width: 40rem) {
+    /* Sotto i 640px il titolo occupa gia' tutta la riga: l'identificativo
+       passa alla riga successiva invece di essere compresso o troncato. */
+    .chunk__id {
+      flex: 1 1 100%;
+    }
+  }
+  .chunk__id code {
+    font-family: var(--font-mono);
+    color: var(--color-text-faint);
+    background: none;
+    padding: 0;
+    overflow-wrap: anywhere;
+  }
+  .chunk__body {
+    margin-top: var(--space-1);
+    max-width: var(--measure);
+  }
+  .chunk__body :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    margin: var(--space-2) 0;
+    display: block;
+    overflow-x: auto;
+  }
+  .chunk__body :global(th),
+  .chunk__body :global(td) {
+    border: 1px solid var(--color-border);
+    padding: 0.375rem 0.5rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  .chunk__body :global(th) {
+    background: var(--color-bg);
+    font-weight: 600;
+  }
+  .chunk__body :global(h1),
+  .chunk__body :global(h2),
+  .chunk__body :global(h3),
+  .chunk__body :global(h4) {
+    font-family: var(--font-display);
+    font-size: 1.0625rem;
+    margin: var(--space-2) 0 var(--space-1);
+  }
+</style>

@@ -1,0 +1,126 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import {
+  loadIndex,
+  listActs,
+  listRegistryRecords,
+  DISCIPLINA_SECTIONS,
+  chunksByScope,
+} from "../lib/corpus";
+
+const index = loadIndex();
+const acts = listActs();
+const records = listRegistryRecords();
+
+const disciplinaChunks = DISCIPLINA_SECTIONS.reduce(
+  (n, s) => n + chunksByScope(s.scope).length,
+  0
+);
+const articleCount = index.chunks.filter((c) => c.articleNumber !== null).length;
+// Record del registro (KB04) la cui ricerca d'archivio risulta esplicitamente
+// non ancora conclusa. E' un conteggio di dichiarazioni presenti nelle fonti,
+// non una stima: la dimensione "stato della ricerca" di questi record riporta
+// notYetEvaluated invece di un valore dedotto.
+const pendingResearch = records.filter(
+  (r) => r.chunk.status.researchStatus?.reason === "notYetEvaluated"
+).length;
+
+const sections = [
+  {
+    number: "01",
+    title: "Disciplina vigente",
+    body: `Il testo consolidato in vigore per il 2026 in ${DISCIPLINA_SECTIONS.length} parti, articolo per articolo, con la fonte canonica sotto ogni unità.`,
+    meta: `${disciplinaChunks} unità documentali`,
+    href: "/disciplina-vigente/",
+  },
+  {
+    number: "02",
+    title: "Evoluzione storica",
+    body: "Come il Protocollo è cambiato fra il 2012 e il 2026: gli atti anno per anno e la memoria incrementale che ne registra le variazioni.",
+    meta: `${acts.length} atti · 15 annualità`,
+    href: "/evoluzione-storica/",
+  },
+  {
+    number: "03",
+    title: "Fonti e registro atti",
+    body: "Il registro degli atti acquisiti, identificati e ancora da reperire, con quattro dimensioni di stato dichiarate separatamente.",
+    meta: `${records.length} record · ${pendingResearch} con ricerca non conclusa`,
+    href: "/fonti/",
+  },
+  {
+    number: "04",
+    title: "Ricerca nel corpus",
+    body: "Cerca fra articoli, atti e annotazioni. Indice statico servito dal sito stesso: nessuna query esce da qui.",
+    meta: `${index.chunkCount} unità indicizzate`,
+    href: "/ricerca/",
+  },
+];
+---
+<BaseLayout title="Home" activePath="/">
+  <section class="section section--dark" style="padding-block: var(--space-16) var(--space-12); border-bottom: none;">
+    <div class="wrap">
+      <span class="section-number">Ricerca documentale del Protocollo Equino</span>
+      <h1 class="text-hero" style="font-size: var(--text-hero); max-width: 20ch; color: var(--color-dark-text);">
+        Prima gli atti.<br />Poi le risposte.
+      </h1>
+      <p style="font-size: var(--text-body-lg); max-width: 42ch; color: var(--color-dark-text-muted); margin-top: var(--space-3);">
+        Non interpretazioni isolate. Fonti collegate. Il corpus documentale del
+        Protocollo Equino del Palio di Siena, 2012–2026, consultabile nei limiti
+        documentali dichiarati nel Manifest delle fonti.
+      </p>
+      <p class="text-caption" style="margin-top: var(--space-3); color: var(--color-dark-text-muted); font-family: var(--font-mono);">
+        {index.chunkCount} unità documentali · {articleCount} articoli · {acts.length} atti ·
+        {records.length} record nel registro
+      </p>
+      <p class="text-caption" style="margin-top: var(--space-4); color: var(--color-dark-text-muted);">
+        Progetto documentale indipendente, non ufficiale e ad accesso pubblico — non affiliato al Comune di Siena.
+        <a href="/disclaimer">Leggi il disclaimer</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="grid">
+        {sections.map((s) => (
+          <div class="col-6">
+            <a href={s.href} style="text-decoration: none; color: inherit; display: block;">
+              <div class="card card--accent" style="height: 100%;">
+                <span class="section-number">{s.number}</span>
+                <h2 class="text-heading" style="font-size: var(--text-heading);">{s.title}</h2>
+                <p class="text-muted" style="margin-bottom: var(--space-1);">{s.body}</p>
+                <p class="text-caption" style="margin-bottom: var(--space-2); font-family: var(--font-mono);">{s.meta}</p>
+                <span class="link-arrow">Consulta</span>
+              </div>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="grid">
+        <div class="col-8">
+          <span class="section-number">Un progetto civico e documentario indipendente</span>
+          <p class="text-muted" style="max-width: 56ch;">
+            Fonti del Palio è un progetto civico, documentario e indipendente, senza
+            scopo di lucro né finalità commerciali, concepito come servizio alla Città
+            di Siena e alla comunità interessata allo studio e alla comprensione del
+            Protocollo Equino. Non vende servizi, non promuove alcuna attività e non è
+            collegato a enti ufficiali del Palio di Siena.
+            <a href="/chi-siamo">Scopri il progetto</a>.
+          </p>
+          <p class="text-muted" style="max-width: 56ch; margin-top: var(--space-2);">
+            Ogni frammento pubblicato dichiara la propria origine: file canonico, intervallo di
+            righe e hash del contenuto. Dove le fonti non dicono qualcosa, il sito lo scrive invece
+            di dedurlo: per {pendingResearch} dei {records.length} record del registro la ricerca
+            d'archivio risulta dichiaratamente non conclusa, e resta scritto così.
+            <a href="/metodologia">Leggi la metodologia</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

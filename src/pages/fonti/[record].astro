@@ -1,0 +1,168 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ChunkCard from "../../components/ChunkCard.astro";
+import {
+  listRegistryRecords,
+  listActs,
+  FAMILY_LABELS,
+} from "../../lib/corpus";
+
+export function getStaticPaths() {
+  const records = listRegistryRecords();
+  const acts = listActs();
+  return records.map((record, i) => ({
+    params: { record: record.slug },
+    props: {
+      record,
+      prev: i > 0 ? records[i - 1] : null,
+      next: i < records.length - 1 ? records[i + 1] : null,
+      relatedAct: acts.find((a) => a.registerId === record.naturalId) ?? null,
+    },
+  }));
+}
+
+type Record_ = ReturnType<typeof listRegistryRecords>[number];
+
+interface Props {
+  record: Record_;
+  prev: Record_ | null;
+  next: Record_ | null;
+  relatedAct: ReturnType<typeof listActs>[number] | null;
+}
+
+const { record, prev, next, relatedAct } = Astro.props as Props;
+const chunk = record.chunk;
+const research = chunk.status.researchStatus;
+const isGap = research?.reason === "notYetEvaluated";
+---
+
+<BaseLayout
+  title={`${record.naturalId} — scheda del registro`}
+  description={`Scheda del registro fonti per ${record.naturalId}: disponibilità documentale, efficacia, presenza nell'annualità successiva e stato della ricerca, con citazione della fonte canonica.`}
+  activePath="/fonti"
+>
+  <section class="section" style="padding-block: var(--space-6) var(--space-3);">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Percorso" data-pagefind-ignore>
+        <a href="/fonti/">Fonti e registro atti</a>
+        <span aria-hidden="true">/</span>
+        <span>{record.naturalId}</span>
+      </nav>
+      <span class="section-number">{FAMILY_LABELS[record.family]}</span>
+      <h1 style="font-family: var(--font-mono); font-size: 2rem; margin: var(--space-1) 0 0;">
+        {record.naturalId}
+      </h1>
+      <p class="text-caption" style="margin-top: var(--space-1);">
+        {record.year ? `Annualità ${record.year}` : "Annualità non determinata"}
+      </p>
+
+      {
+        relatedAct && (
+          <p class="related">
+            <a href={`/atti/${relatedAct.slug}/`}>
+              Leggi il testo dell'atto ({relatedAct.chunkCount} unità documentali)
+            </a>
+          </p>
+        )
+      }
+
+      {
+        isGap && (
+          <p class="warn" data-pagefind-ignore>
+            Questo record documenta una <strong>lacuna nota</strong>: l'atto è stato identificato
+            ma la ricerca nell'Albo Pretorio e negli archivi non è ancora stata completata.
+            L'assenza di dati qui è un fatto registrato, non un'omissione.
+          </p>
+        )
+      }
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-8);">
+    <div class="wrap">
+      <div class="corpus">
+        <ChunkCard chunk={chunk} headingLevel={2} />
+      </div>
+
+      <nav class="pager" aria-label="Navigazione fra i record" data-pagefind-ignore>
+        {
+          prev ? (
+            <a href={`/fonti/${prev.slug}/`} class="pager__link">
+              <span class="pager__dir">← Record precedente</span>
+              <span class="pager__title">{prev.naturalId}</span>
+            </a>
+          ) : (
+            <span />
+          )
+        }
+        {
+          next && (
+            <a href={`/fonti/${next.slug}/`} class="pager__link pager__link--next">
+              <span class="pager__dir">Record successivo →</span>
+              <span class="pager__title">{next.naturalId}</span>
+            </a>
+          )
+        }
+      </nav>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: var(--text-caption);
+    color: var(--color-text-faint);
+    margin-bottom: var(--space-2);
+  }
+  .crumbs a {
+    color: var(--color-green-ink);
+  }
+  .related {
+    margin-top: var(--space-2);
+    font-size: 0.9375rem;
+  }
+  .warn {
+    margin-top: var(--space-2);
+    padding: 0.75rem 1rem;
+    border-left: 3px solid var(--color-warning);
+    background: var(--color-surface);
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+    max-width: var(--measure);
+  }
+  .corpus {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-1);
+  }
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-2);
+    margin-top: var(--space-6);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--color-border);
+  }
+  .pager__link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  .pager__link--next {
+    text-align: right;
+    margin-left: auto;
+  }
+  .pager__dir {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-green-ink);
+  }
+  .pager__title {
+    font-family: var(--font-mono);
+    font-weight: 600;
+  }
+</style>

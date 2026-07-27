@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="Metodologia" activePath="/metodologia">
+  <section class="section" style="padding-block: var(--space-12) var(--space-6);">
+    <div class="wrap">
+      <span class="section-number">Metodologia</span>
+      <h1 class="text-title" style="font-size: var(--text-title); max-width: 24ch;">
+        Come le fonti vengono raccolte e classificate.
+      </h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="grid">
+        <div class="col-6">
+          <span class="section-number">01</span>
+          <h2 class="text-heading" style="font-size: var(--text-heading);">Origine del corpus</h2>
+          <p class="text-muted">
+            Il corpus deriva da quattro fonti canoniche (vedi <a href="/fonti">Fonti e
+            registro degli atti</a>), organizzate secondo una gerarchia di prevalenza in
+            caso di conflitto, descritta nel documento di specifica del progetto.
+          </p>
+        </div>
+        <div class="col-6">
+          <span class="section-number">02</span>
+          <h2 class="text-heading" style="font-size: var(--text-heading);">Principio di prevalenza</h2>
+          <p class="text-muted">
+            In caso di conflitto tra fonti, prevale sempre il testo integrale degli atti
+            ufficiali citati. Le note di sintesi e classificazione hanno funzione
+            orientativa e non sostituiscono l'atto originale.
+          </p>
+        </div>
+        <div class="col-6">
+          <span class="section-number">03</span>
+          <h2 class="text-heading" style="font-size: var(--text-heading);">Stato documentale</h2>
+          <p class="text-muted">
+            Ogni disposizione è classificata secondo quattro dimensioni separate, mai
+            un'unica etichetta: <strong>disponibilità documentale</strong>
+            (<code>documentaryStatus</code> — acquisito, identificato, non ancora
+            acquisito, ricerca aperta), <strong>ruolo storico o efficacia legale</strong>
+            (<code>legalStatus</code> — vigente per l'annualità indicata, efficacia
+            annuale esaurita, testo sostitutivo efficace, superato/sostituito),
+            <strong>presenza nell'annualità successiva</strong>
+            (<code>presenceStatus</code> — riprodotto, non riprodotto, non valutato) e
+            <strong>stato della ricerca sulle fonti</strong> (<code>researchStatus</code> —
+            fonte reperita, ricerca in corso, ricerca non ancora avviata).
+          </p>
+        </div>
+        <div class="col-6">
+          <span class="section-number">04</span>
+          <h2 class="text-heading" style="font-size: var(--text-heading);">Controllo editoriale vincolante</h2>
+          <p class="text-muted">
+            <strong>La mancata riproduzione in un atto più recente non implica
+            automaticamente l'abrogazione.</strong> Questa distinzione è trattata come
+            un controllo vincolante nella redazione, non come una nota a margine.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

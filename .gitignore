@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.astro/
+.env
+.env.local
+.netlify/
+*.log
+.DS_Store
+
+# Artefatti generati pesanti: rigenerabili via `npm run index:build` /
+# `npm run embeddings:build`. Il manifest JSON (piccolo) puo' essere
+# committato per trasparenza; il binario degli embeddings resta escluso
+# di default — decidere in fase di M0/M1 se committarlo o rigenerarlo
+# sempre in CI (costo di re-embedding completo: sotto $0.01).
+data/embeddings.generated.f32

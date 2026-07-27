@@ -9,4 +9,4 @@
 - La mancata riproduzione di una disposizione in un documento più recente **non implica automaticamente** la sua abrogazione. Lo stato di vigenza indicato su questo sito ha valore informativo, non legale.
 - Il progetto non fornisce consulenza legale, veterinaria o istituzionale. Per decisioni operative relative a cavalli, addestramento o partecipazione al Palio, fare riferimento esclusivamente agli atti ufficiali e alle autorità competenti.
 
-Per segnalazioni di errori o richieste di rettifica, vedi i contatti indicati sul sito.
+Per segnalazioni di errori o richieste di rettifica, scrivere a [info@pistakkio.net](mailto:info@pistakkio.net).

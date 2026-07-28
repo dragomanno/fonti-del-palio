@@ -3,6 +3,15 @@
   publish = "dist"
   functions = "netlify/functions"
 
+# NODE_ENV=production nel contesto di produzione fa saltare a npm
+# l'installazione delle devDependencies: pagefind, richiesto dall'ultimo
+# passo di `npm run build` per generare l'indice di ricerca, risultava
+# assente e la build usciva con codice 127 (`pagefind: not found`).
+# --include=dev ripristina l'installazione degli strumenti di build senza
+# alterare NODE_ENV ne' la distinzione fra dipendenze di runtime e di sviluppo.
+[build.environment]
+  NPM_FLAGS = "--include=dev"
+
 [functions]
   node_bundler = "esbuild"
 

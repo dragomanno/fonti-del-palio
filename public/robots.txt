@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fontidelpalio.it/sitemap.xml
+Sitemap: https://www.fontidelpalio.org/sitemap.xml

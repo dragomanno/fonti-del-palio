@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { GPT_ASSISTANT_URL } from "../config/site";
 import {
   loadIndex,
   listActs,
@@ -57,25 +58,41 @@ const sections = [
 ];
 ---
 <BaseLayout title="Home" activePath="/">
-  <section class="section section--dark" style="padding-block: var(--space-16) var(--space-12); border-bottom: none;">
-    <div class="wrap">
-      <span class="section-number">Ricerca documentale del Protocollo Equino</span>
-      <h1 class="text-hero" style="font-size: var(--text-hero); max-width: 20ch; color: var(--color-dark-text);">
-        Prima gli atti.<br />Poi le risposte.
-      </h1>
-      <p style="font-size: var(--text-body-lg); max-width: 42ch; color: var(--color-dark-text-muted); margin-top: var(--space-3);">
-        Non interpretazioni isolate. Fonti collegate. Il corpus documentale del
-        Protocollo Equino del Palio di Siena, 2012–2026, consultabile nei limiti
-        documentali dichiarati nel Manifest delle fonti.
-      </p>
-      <p class="text-caption" style="margin-top: var(--space-3); color: var(--color-dark-text-muted); font-family: var(--font-mono);">
-        {index.chunkCount} unità documentali · {articleCount} articoli · {acts.length} atti ·
-        {records.length} record nel registro
-      </p>
-      <p class="text-caption" style="margin-top: var(--space-4); color: var(--color-dark-text-muted);">
-        Progetto documentale indipendente, non ufficiale e ad accesso pubblico — non affiliato al Comune di Siena.
-        <a href="/disclaimer">Leggi il disclaimer</a>.
-      </p>
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <div class="hero__lead">
+        <span class="section-number">Ricerca documentale del Protocollo Equino</span>
+        <h1 style="font-size: var(--text-hero); max-width: 18ch; margin-bottom: var(--space-3);">
+          Prima gli atti.<br />Poi le risposte.
+        </h1>
+        <p style="font-size: var(--text-body-lg); max-width: 46ch;">
+          Non interpretazioni isolate. Fonti collegate. Il corpus documentale del
+          Protocollo Equino del Palio di Siena, 2012–2026, consultabile nei limiti
+          documentali dichiarati nel Manifest delle fonti.
+        </p>
+        <p class="text-caption" style="max-width: 52ch;">
+          Progetto documentale indipendente, non ufficiale e ad accesso pubblico — non
+          affiliato al Comune di Siena. <a href="/disclaimer">Leggi il disclaimer</a>.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="/disciplina-vigente/">Consulta la disciplina vigente</a>
+          <a
+            class="btn btn--secondary"
+            href={GPT_ASSISTANT_URL}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Assistente documentario GPT
+            <span class="btn__note">ChatGPT ↗</span>
+          </a>
+        </div>
+      </div>
+      <dl class="hero__stats">
+        <div><dt>Unità documentali</dt><dd>{index.chunkCount}</dd></div>
+        <div><dt>Articoli</dt><dd>{articleCount}</dd></div>
+        <div><dt>Atti</dt><dd>{acts.length}</dd></div>
+        <div><dt>Record nel registro</dt><dd>{records.length}</dd></div>
+      </dl>
     </div>
   </section>
 
@@ -124,3 +141,64 @@ const sections = [
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  /* Hero editoriale: composizione asimmetrica, nessun blocco decorativo
+     sovradimensionato. Le sezioni utili restano raggiungibili subito. */
+  .hero {
+    padding-block: var(--space-6) var(--space-8);
+    border-bottom: 1px solid var(--color-border);
+  }
+  @media (min-width: 48rem) {
+    .hero { padding-block: var(--space-6) var(--space-8); }
+  }
+  .hero__inner {
+    display: grid;
+    gap: var(--space-6);
+    align-items: start;
+  }
+  @media (min-width: 60rem) {
+    .hero__inner {
+      grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+      gap: var(--space-8);
+    }
+  }
+  .hero__lead p { color: var(--color-text-muted); }
+
+  /* Cifre del corpus come metadati documentari, non come badge decorativi. */
+  .hero__stats {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--color-border);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  @media (min-width: 60rem) {
+    .hero__stats { grid-template-columns: 1fr; }
+  }
+  .hero__stats > div {
+    background: var(--color-surface);
+    padding: 0.875rem var(--space-2);
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.125rem;
+  }
+  .hero__stats dt {
+    font-family: var(--font-body);
+    font-size: var(--text-caption);
+    color: var(--color-text-faint);
+    line-height: 1.4;
+  }
+  .hero__stats dd {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 1.375rem;
+    font-weight: 500;
+    color: var(--color-text);
+    line-height: 1.2;
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+</style>

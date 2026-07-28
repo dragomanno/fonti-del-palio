@@ -2,6 +2,14 @@
   Fonti del Palio — Design tokens
   Identità visiva: "Fonti del Palio", progetto civico e documentario indipendente.
 
+  v0.2.0 — Trasferimento dell'identità del Media Kit approvato (28/07/2026).
+  Il sistema passa da chiaro-con-blocchi-scuri a SCURO NATIVO: fondo nero caldo,
+  superfici tonali, tipografia editoriale, accento verde usato con parsimonia.
+  I nomi dei token restano invariati per non toccare il markup esistente: sono
+  i VALORI a cambiare. I token --color-dark-* continuano a indicare le
+  superfici a contrasto (hero, footer, blocchi in evidenza), che ora sono
+  tonalmente RIALZATE rispetto al fondo invece di essere il suo opposto.
+
   Verde di accento civico (v3.1.1 §7: rinominato da "verde Pistakkio" /
   "endorsement accent" a terminologia neutra -- l'uso di questo colore non
   implica alcun ruolo di originator, curator, endorser, copyright holder,
@@ -9,40 +17,44 @@
   --color-green: #b8dc16 (colore dominante scelto per il sistema visivo di
   questo progetto).
 
-  NOTA ACCESSIBILITÀ: il verde #b8dc16 ha contrasto ~1.5:1 su bianco e ~1.46:1 su fondo
-  caldo — insufficiente per testo (WCAG AA richiede 4.5:1). Va quindi usato solo su
-  fondo scuro/nero (contrasto 11–13:1): il verde acceso vive su nero/superfici scure,
-  mai come testo su chiaro. Per testo verde su chiaro esiste una variante scurita
-  (--color-green-ink) con contrasto 5.1–5.6:1.
+  NOTA ACCESSIBILITÀ: su fondo nero caldo #14140f il verde #b8dc16 ha contrasto
+  ~11.9:1 ed è quindi ammesso anche come testo. La variante --color-green-ink
+  resta definita per eventuali superfici chiare (contrasto 5.7:1 su chiaro) e
+  NON va usata su fondo scuro, dove risulterebbe illeggibile.
 */
 
 :root {
   /* ---- Verde di accento civico ---- */
-  --color-green: #b8dc16;        /* verde acceso originale — solo su fondo scuro, blocchi, numeri, bordi */
-  --color-green-ink: #55650a;     /* variante scurita — unica versione ammessa come testo su fondo chiaro (contrasto 5.7:1) */
-  --color-green-dim: rgba(184, 220, 22, 0.14); /* wash sottile per hover/selection su chiaro */
+  --color-green: #b8dc16;        /* accento: link, stati attivi, marcatori, CTA primaria */
+  --color-green-ink: #55650a;     /* variante scurita — solo su fondo chiaro (contrasto 5.7:1) */
+  --color-green-dim: rgba(184, 220, 22, 0.12); /* wash sottile per hover e selection su scuro */
+  --color-green-deep: #14140f;    /* testo su fondo verde (CTA primaria): contrasto 11.9:1 */
 
-  /* ---- Neutrali caldi (base editoriale) ---- */
+  /* ---- Neutrali caldi (base editoriale scura) ---- */
   --color-black: #14140f;
-  --color-near-black: #1a1a1a;
-  --color-white: #ffffff;
-  --color-bg: #f7f6f0;            /* fondo caldo, neutro, non commerciale */
-  --color-surface: #ffffff;
-  --color-border: #e2e0d4;
-  --color-text: #14140f;
-  --color-text-muted: #56544a;
-  --color-text-faint: #8a877a;
+  --color-near-black: #0f0f0b;    /* fascia disclaimer: un gradino sotto il fondo */
+  --color-white: #f2f0e8;         /* nessun bianco puro nelle aree di lettura */
+  --color-bg: #14140f;            /* fondo primario, nero caldo */
+  --color-surface: #1b1b15;       /* superficie secondaria: card, box fonte */
+  --color-surface-2: #22221b;     /* superficie terziaria: intestazioni tabella, blocchi annidati */
+  --color-border: #36362d;        /* bordi e filetti sottili (decorativi) */
+  --color-border-strong: #6b6a5e; /* bordi di componenti interattivi: contrasto
+                                     3.4:1 su #14140f e 3.2:1 su #1b1b15,
+                                     conforme a WCAG 2.2 SC 1.4.11 */
+  --color-text: #f2f0e8;          /* testo principale, off-white caldo */
+  --color-text-muted: #b8b8ae;    /* testo secondario (contrasto 8.4:1) */
+  --color-text-faint: #8f8e85;    /* metadati e didascalie (contrasto 5.4:1) */
 
-  /* ---- Dark section (hero, footer, blocchi a contrasto) ---- */
-  --color-dark-bg: #14140f;
-  --color-dark-surface: #1e1e17;
-  --color-dark-border: #33321f;
-  --color-dark-text: #f4f3ea;
-  --color-dark-text-muted: #b8b6a8;
+  /* ---- Superfici a contrasto (hero, footer, blocchi in evidenza) ---- */
+  --color-dark-bg: #1b1b15;
+  --color-dark-surface: #22221b;
+  --color-dark-border: #36362d;
+  --color-dark-text: #f2f0e8;
+  --color-dark-text-muted: #b8b8ae;
 
-  /* ---- Semantici (uso minimo) ---- */
-  --color-warning: #8a5a1c;
-  --color-error: #7a2323;
+  /* ---- Semantici (uso minimo, contrasto verificato su #14140f) ---- */
+  --color-warning: #e0a54a;       /* contrasto 8.0:1 */
+  --color-error: #ef8177;         /* contrasto 6.8:1 */
 
   /* ---- Tipografia ---- */
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
@@ -50,11 +62,11 @@
   --font-mono: 'JetBrains Mono', 'Consolas', monospace;
 
   /* ---- Scala tipografica ---- */
-  --text-hero: clamp(2.75rem, 6vw, 5.5rem);
-  --text-title: clamp(2rem, 4vw, 3rem);
-  --text-heading: clamp(1.375rem, 2.2vw, 1.75rem);
-  --text-body-lg: 1.125rem;
-  --text-body: 1rem;
+  --text-hero: clamp(2.5rem, 5.2vw, 4.5rem);
+  --text-title: clamp(1.875rem, 3.6vw, 2.75rem);
+  --text-heading: clamp(1.3125rem, 2vw, 1.625rem);
+  --text-body-lg: 1.1875rem;
+  --text-body: 1rem;              /* mobile: 16px — rialzato a 17px da 48rem in su */
   --text-caption: 0.8125rem;
 
   /* ---- Spaziatura (griglia modulare 8px) ---- */
@@ -69,11 +81,19 @@
 
   /* ---- Layout ---- */
   --max-width: 76rem;
-  --measure: 68ch;
-  --radius: 2px; /* quasi nessun rounding: linguaggio "systems", non app consumer */
+  --measure: 46rem;   /* ~736px: larghezza di lettura editoriale (720–780px) */
+  --leading: 1.7;     /* interlinea editoriale generosa */
+  --radius: 8px;      /* raggio contenuto: documentario, non consumer-app */
+  --radius-sm: 6px;
 
   /* ---- Focus ---- */
   --focus-ring: 0 0 0 3px var(--color-green);
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --text-body: 1.0625rem; /* 17px da tablet in su */
+  }
 }
 
 /* Focus visibile ovunque, non solo :focus-visible, per garantire accessibilità da tastiera */
@@ -87,5 +107,6 @@
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
 }

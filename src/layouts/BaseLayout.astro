@@ -91,15 +91,14 @@ const navItems = [
     <!-- Font self-hosted via @fontsource: nessuna richiesta di rete esterna a servizi Google -->
   </head>
   <body>
+    <a class="skip-link" href="#contenuto">Salta al contenuto</a>
     <p class="disclaimer-banner" data-pagefind-ignore>
       Progetto documentale indipendente, non ufficiale e ad accesso pubblico. Non affiliato al Comune di Siena —
       <a href="/disclaimer">leggi il disclaimer completo</a>.
     </p>
     <header class="site-header" data-pagefind-ignore>
       <div class="wrap site-header__inner">
-        <a href="/" class="brand">
-          Fonti del Palio<span class="dot">.</span>
-        </a>
+        <a href="/" class="brand">font<span class="wordmark__i">i</span>delpal<span class="wordmark__i">i</span>o<span class="dot">.</span>org</a>
         <nav aria-label="Navigazione principale">
           <ul class="main-nav">
             {navItems.map((item) => (
@@ -113,18 +112,19 @@ const navItems = [
         </nav>
       </div>
     </header>
-    <main data-pagefind-body={indexable && searchable ? "" : undefined}>
+    <main id="contenuto" data-pagefind-body={indexable && searchable ? "" : undefined}>
       <slot />
     </main>
     <footer class="site-footer" data-pagefind-ignore>
       <div class="wrap">
         <div class="grid">
           <div class="col-6">
-            <p class="brand" style="color: var(--color-dark-text); font-size: 1.125rem;">
-              Fonti del Palio<span class="dot" style="color: var(--color-green);">.</span>
-            </p>
-            <p class="text-caption" style="color: var(--color-dark-text-muted); max-width: 32ch;">
+            <p class="wordmark wordmark--footer">font<span class="wordmark__i">i</span>delpal<span class="wordmark__i">i</span>o<span class="dot">.</span>org</p>
+            <p class="text-caption" style="color: var(--color-text-muted); max-width: 34ch; margin-top: var(--space-1);">
               Ricerca documentale del Protocollo Equino. Prima gli atti. Poi le risposte.
+            </p>
+            <p class="text-caption footer-contact">
+              Segnalazioni e correzioni: <a href="mailto:info@pistakkio.net">info@pistakkio.net</a>
             </p>
           </div>
           <div class="col-6">

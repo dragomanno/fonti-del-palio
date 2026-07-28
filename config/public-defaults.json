@@ -1,5 +1,5 @@
 {
   "_comment": "Default statici NON-SEGRETI del sito, committati di proposito. Servono a rendere riproducibile la verifica pulita (npm ci / npm run check / npm run build) su un'estrazione fresca priva di .env. Nessun valore qui e' un segreto: sono il nome pubblico e l'URL pubblico del sito. Le variabili d'ambiente omonime, se presenti, hanno sempre la precedenza.",
   "PUBLIC_SITE_NAME": "Fonti del Palio",
-  "PUBLIC_SITE_URL": "https://fontidelpalio.it"
+  "PUBLIC_SITE_URL": "https://www.fontidelpalio.org"
 }

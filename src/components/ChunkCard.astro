@@ -91,7 +91,7 @@ const Heading = headingLevel === 2 ? "h2" : "h3";
   }
   .chunk__permalink:hover {
     text-decoration: underline;
-    text-decoration-color: var(--color-green-ink);
+    text-decoration-color: var(--color-green);
     text-underline-offset: 3px;
   }
   .chunk__id {
@@ -131,12 +131,13 @@ const Heading = headingLevel === 2 ? "h2" : "h3";
   .chunk__body :global(th),
   .chunk__body :global(td) {
     border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
     padding: 0.375rem 0.5rem;
     text-align: left;
     vertical-align: top;
   }
   .chunk__body :global(th) {
-    background: var(--color-bg);
+    background: var(--color-surface-2);
     font-weight: 600;
   }
   .chunk__body :global(h1),

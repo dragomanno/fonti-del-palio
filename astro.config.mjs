@@ -6,7 +6,7 @@ import { defineConfig } from "astro/config";
 // del brief). L'unica parte server-side è la Netlify Function /ask,
 // deployata separatamente in netlify/functions/, fuori dal build Astro.
 export default defineConfig({
-  site: process.env.PUBLIC_SITE_URL || "https://fontidelpalio.it",
+  site: process.env.PUBLIC_SITE_URL || "https://www.fontidelpalio.org",
   output: "static",
   build: {
     format: "directory",

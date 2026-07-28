@@ -87,7 +87,7 @@ test("v3.1.2 §5: check-env riesce su un albero SENZA .env, usando i soli defaul
     assert.doesNotMatch(out, /MANCA/);
     // I due valori devono provenire esplicitamente dalla configurazione committata.
     assert.match(out, /PUBLIC_SITE_NAME: PRESENT \(Fonti del Palio\) — da config\/public-defaults\.json/);
-    assert.match(out, /PUBLIC_SITE_URL: PRESENT \(https:\/\/fontidelpalio\.it\) — da config\/public-defaults\.json/);
+    assert.match(out, /PUBLIC_SITE_URL: PRESENT \(https:\/\/www\.fontidelpalio\.org\) — da config\/public-defaults\.json/);
   } finally {
     rmSync(tmp, { recursive: true, force: true });
   }

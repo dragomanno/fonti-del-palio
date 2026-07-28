@@ -5,6 +5,9 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  background: var(--color-bg);
+  /* Il colore della barra di scorrimento segue il tema scuro nativo. */
+  color-scheme: dark;
 }
 
 body {
@@ -13,26 +16,62 @@ body {
   color: var(--color-text);
   font-family: var(--font-body);
   font-size: var(--text-body);
-  line-height: 1.6;
+  line-height: var(--leading);
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 600;
-  line-height: 1.1;
+  line-height: 1.15;
   margin: 0 0 var(--space-2) 0;
   letter-spacing: -0.01em;
+  color: var(--color-text);
+  text-wrap: balance;
 }
 
 p { margin: 0 0 var(--space-2) 0; max-width: var(--measure); }
 
+/* Link: riconoscibili anche senza colore (sottolineatura sempre presente). */
 a {
-  color: var(--color-green-ink);
+  color: var(--color-green);
+  text-decoration: underline;
   text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, var(--color-green) 55%, transparent);
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
 }
-a:hover { color: var(--color-black); }
+a:hover {
+  color: var(--color-text);
+  text-decoration-color: var(--color-text);
+}
+
+::selection {
+  background: var(--color-green);
+  color: var(--color-green-deep);
+}
+
+/* ---------- Skip link (accessibilità da tastiera) ---------- */
+
+.skip-link {
+  position: absolute;
+  left: var(--space-2);
+  top: -3rem;
+  z-index: 50;
+  background: var(--color-green);
+  color: var(--color-green-deep);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.5rem 0.875rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: var(--space-2);
+  color: var(--color-green-deep);
+}
 
 /* ---------- Layout primitives ---------- */
 
@@ -42,11 +81,20 @@ a:hover { color: var(--color-black); }
   padding: 0 var(--space-4);
 }
 
+@media (max-width: 40rem) {
+  .wrap { padding: 0 var(--space-2); }
+}
+
 .section {
-  padding-block: var(--space-12);
+  padding-block: var(--space-8);
   border-bottom: 1px solid var(--color-border);
 }
 
+@media (min-width: 48rem) {
+  .section { padding-block: var(--space-12); }
+}
+
+/* Superficie a contrasto: tonalmente rialzata rispetto al fondo, non invertita. */
 .section--dark {
   background: var(--color-dark-bg);
   color: var(--color-dark-text);
@@ -74,7 +122,7 @@ a:hover { color: var(--color-black); }
 .section-number {
   font-family: var(--font-mono);
   font-size: var(--text-caption);
-  color: var(--color-green-ink);
+  color: var(--color-green);
   letter-spacing: 0.08em;
   display: block;
   margin-bottom: var(--space-2);
@@ -95,7 +143,8 @@ a:hover { color: var(--color-black); }
 
 .site-header {
   border-bottom: 1px solid var(--color-border);
-  background: var(--color-bg);
+  background: color-mix(in srgb, var(--color-bg) 92%, transparent);
+  backdrop-filter: blur(8px);
 }
 
 @media (min-width: 768px) {
@@ -115,23 +164,62 @@ a:hover { color: var(--color-black); }
   flex-wrap: wrap;
 }
 
-.brand {
+/* ---------- Wordmark ---------- */
+/*
+  Il wordmark è testo reale — nessuna immagine, nessun canvas: resta
+  selezionabile, indicizzabile e leggibile dagli screen reader come
+  "fontidelpalio.org". I tre punti verdi (le due "i" e il punto prima di
+  "org") sono resi con pseudo-elementi decorativi in em, così scalano con la
+  dimensione del carattere senza introdurre layout shift.
+*/
+.brand,
+.wordmark {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.125rem;
-  color: var(--color-black);
+  color: var(--color-text);
   text-decoration: none;
-  display: flex;
+  display: inline-flex;
   align-items: baseline;
-  gap: var(--space-1);
   white-space: nowrap;
+  letter-spacing: -0.015em;
 }
 
 @media (min-width: 768px) {
-  .brand { font-size: 1.25rem; }
+  .brand, .wordmark { font-size: 1.25rem; }
 }
-.brand:hover { color: var(--color-black); }
-.brand .dot { color: var(--color-green-ink); }
+
+.brand:hover, .wordmark:hover { color: var(--color-text); }
+
+/* Punto prima di "org" e punto storico del logotipo precedente. */
+.brand .dot,
+.wordmark .dot {
+  color: var(--color-green);
+}
+
+/* "i" con tittle verde: il puntino originale viene coperto da un punto
+   dell'accento, perfettamente allineato all'asta. */
+.wordmark__i {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+}
+.wordmark__i::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0.44em;
+  width: 0.2em;
+  height: 0.2em;
+  border-radius: 50%;
+  background: var(--color-green);
+  pointer-events: none;
+}
+
+.wordmark--footer {
+  font-size: 1.125rem;
+}
 
 /* v3.1.1 §7: rinominata da .endorsement-tag a terminologia neutra (classe
    attualmente non referenziata in alcun markup .astro). */
@@ -153,15 +241,43 @@ a:hover { color: var(--color-black); }
   row-gap: var(--space-1);
 }
 .main-nav a {
-  color: var(--color-text);
+  color: var(--color-text-muted);
   text-decoration: none;
   font-size: 0.875rem;
   font-weight: 500;
+  /* Area di tocco ≥ 44px in altezza sui dispositivi puntatore grosso. */
+  display: inline-block;
+  padding-block: 0.375rem;
+  border-bottom: 2px solid transparent;
 }
-.main-nav a:hover { color: var(--color-green-ink); }
+.main-nav a:hover {
+  color: var(--color-text);
+  border-bottom-color: var(--color-border);
+}
 .main-nav a[aria-current="page"] {
-  color: var(--color-green-ink);
-  border-bottom: 2px solid var(--color-green);
+  color: var(--color-text);
+  border-bottom-color: var(--color-green);
+}
+
+/* Mobile: navigazione compatta su due righe. Tutte le voci restano visibili e
+   raggiungibili da tastiera, senza menu a comparsa e senza scorrimento
+   orizzontale. */
+@media (max-width: 47.99rem) {
+  .site-header__inner {
+    gap: 0.375rem;
+    padding-block: 0.75rem;
+  }
+  .main-nav {
+    column-gap: var(--space-2);
+    row-gap: 0;
+  }
+  .main-nav a {
+    font-size: 0.8125rem;
+    padding-block: 0.3125rem;
+    min-height: 1.75rem;
+  }
+  /* Occhiello di sezione: compatto su schermi stretti, resta leggibile. */
+  .section-number { font-size: 0.75rem; letter-spacing: 0.05em; }
 }
 
 /* ---------- Disclaimer banner ---------- */
@@ -172,11 +288,12 @@ a:hover { color: var(--color-black); }
   max-width: none;
   margin: 0;
   background: var(--color-near-black);
-  color: var(--color-dark-text);
+  color: var(--color-text-muted);
   font-size: 0.75rem;
-  padding: var(--space-1) var(--space-2);
+  padding: 0.4375rem var(--space-2);
   text-align: center;
-  line-height: 1.4;
+  line-height: 1.45;
+  border-bottom: 1px solid var(--color-border);
 }
 .disclaimer-banner a { color: var(--color-green); }
 
@@ -185,55 +302,190 @@ a:hover { color: var(--color-black); }
 .card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
+  border-radius: var(--radius);
   padding: var(--space-4);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
 }
 
 .card--accent {
   border-left: 3px solid var(--color-green);
 }
 
-/* ---------- Buttons (no sales CTAs — used for internal navigation only) ---------- */
+/* Contrasto tonale, non ombre: la card in hover si schiarisce di un gradino. */
+a:hover > .card,
+a:focus-visible > .card {
+  background: var(--color-surface-2);
+  border-color: color-mix(in srgb, var(--color-green) 45%, var(--color-border));
+}
+
+@media (max-width: 40rem) {
+  .card { padding: var(--space-3); }
+}
+
+/* ---------- Buttons ---------- */
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.2;
+  /* Area di tocco ≥ 44px di altezza. */
+  padding: 0.8125rem 1.25rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.btn--primary {
+  background: var(--color-green);
+  color: var(--color-green-deep);
+  border-color: var(--color-green);
+}
+.btn--primary:hover {
+  background: color-mix(in srgb, var(--color-green) 84%, #ffffff);
+  color: var(--color-green-deep);
+}
+.btn--primary:active {
+  background: color-mix(in srgb, var(--color-green) 82%, var(--color-black));
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--color-text);
+  border-color: var(--color-border-strong);
+}
+.btn--secondary:hover {
+  color: var(--color-text);
+  border-color: var(--color-green);
+  background: var(--color-green-dim);
+}
+.btn--secondary:active {
+  background: color-mix(in srgb, var(--color-green) 18%, transparent);
+}
+
+.btn__note {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--color-text-faint);
+}
+.btn--secondary:hover .btn__note { color: var(--color-text-muted); }
+
+/* ---------- Internal navigation links ---------- */
 
 .link-arrow {
   display: inline-flex;
   align-items: center;
   gap: var(--space-1);
   font-weight: 600;
-  color: var(--color-green-ink);
+  font-size: 0.9375rem;
+  color: var(--color-green);
   text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-green) 40%, transparent);
+  padding-bottom: 1px;
 }
 .link-arrow::after { content: '→'; transition: transform 0.15s ease; }
+a:hover .link-arrow::after,
 .link-arrow:hover::after { transform: translateX(3px); }
+a:hover .link-arrow,
+.link-arrow:hover { border-bottom-color: var(--color-green); }
+
+/* ---------- Tables ---------- */
+
+/* Contenitore di scorrimento accessibile: la tabella non allarga la pagina e
+   il contenitore è raggiungibile da tastiera quando eccede la larghezza. */
+.table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+.table-scroll:focus-visible { outline: 3px solid var(--color-green); }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9375rem;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.625rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+th {
+  background: var(--color-surface-2);
+  font-weight: 600;
+  color: var(--color-text);
+  font-size: 0.875rem;
+}
+tbody tr:last-child td { border-bottom: none; }
 
 /* ---------- Footer ---------- */
 
 .site-footer {
   background: var(--color-dark-bg);
-  color: var(--color-dark-text-muted);
+  color: var(--color-text-muted);
   padding-block: var(--space-8) var(--space-6);
+  border-top: 1px solid var(--color-border);
 }
-.site-footer a { color: var(--color-dark-text); }
-.site-footer a:hover { color: var(--color-green); }
+.site-footer a { color: var(--color-text); text-decoration: none; }
+.site-footer a:hover { color: var(--color-green); text-decoration: underline; }
+
+.footer-contact {
+  margin-top: var(--space-1);
+  color: var(--color-text-muted);
+}
+/* Link in linea dentro una frase: sottolineato, quindi riconoscibile anche
+   senza percepire il colore. Le voci di navigazione del footer restano senza
+   sottolineatura perche' identificabili dalla posizione nella lista. */
+.footer-contact a {
+  color: var(--color-green);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.footer-contact a:hover {
+  color: var(--color-green);
+}
 
 .footer-signature {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: var(--text-caption);
-  color: var(--color-dark-text-muted);
+  color: var(--color-text-muted);
   margin-top: var(--space-4);
   padding-top: var(--space-4);
-  border-top: 1px solid var(--color-dark-border);
+  border-top: 1px solid var(--color-border);
 }
 .footer-signature .heart { color: var(--color-green); }
 
+/* La firma tecnica non deve competere con l'identità del progetto. */
 .footer-credit {
   font-family: var(--font-mono);
-  font-size: var(--text-caption);
-  color: var(--color-dark-text-muted);
-  margin-top: var(--space-2);
+  font-size: 0.75rem;
+  color: var(--color-text-faint);
+  margin-top: var(--space-1);
 }
+.footer-credit .heart { color: var(--color-green); }
+.footer-credit a { color: var(--color-text-faint); }
+.footer-credit a:hover { color: var(--color-green); }
 
 /* ---------- Prose (rendered Markdown: disclaimer, privacy) ---------- */
 
+.prose { max-width: var(--measure); }
 .prose h1 {
   font-size: var(--text-title);
   margin-bottom: var(--space-3);
@@ -242,22 +494,68 @@ a:hover { color: var(--color-black); }
   font-size: var(--text-heading);
   margin-top: var(--space-6);
 }
+.prose h3 {
+  font-size: 1.1875rem;
+  margin-top: var(--space-4);
+}
 .prose ul, .prose ol {
   padding-left: 1.25rem;
   color: var(--color-text-muted);
 }
 .prose li { margin-bottom: var(--space-1); }
-.prose strong { color: var(--color-text); }
+.prose strong { color: var(--color-text); font-weight: 600; }
 .prose p { color: var(--color-text-muted); }
+.prose code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 0.05em 0.3em;
+}
+.prose blockquote {
+  margin: var(--space-2) 0;
+  padding-left: var(--space-2);
+  border-left: 3px solid var(--color-border);
+  color: var(--color-text-muted);
+}
 
 /* ---------- Utility ---------- */
 
 .text-muted { color: var(--color-text-muted); }
 .text-caption { font-size: var(--text-caption); color: var(--color-text-faint); }
 .mono { font-family: var(--font-mono); }
+
+/* Gli identificativi documentari sono lunghi e senza spazi: devono andare a
+   capo dentro la colonna invece di allargare la pagina su schermi stretti. */
+code, .mono {
+  overflow-wrap: anywhere;
+}
+
+/* I diagrammi ASCII delle relazioni fra atti sono preformattati: scorrono
+   dentro il proprio blocco senza allargare la pagina, e restano testo
+   selezionabile e indicizzabile. */
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+pre code {
+  overflow-wrap: normal;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--color-text-muted);
+}
 .sr-only {
   position: absolute;
   width: 1px; height: 1px;
   overflow: hidden;
   clip: rect(0,0,0,0);
+  white-space: nowrap;
 }

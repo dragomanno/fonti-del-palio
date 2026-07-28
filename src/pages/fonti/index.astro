@@ -4,40 +4,51 @@ import ChunkCard from "../../components/ChunkCard.astro";
 import {
   chunksByRoute,
   listRegistryRecords,
+  displayStatus,
+  DIMENSION_LABELS,
   FAMILY_LABELS,
-  REASON_LABELS,
 } from "../../lib/corpus";
 
 const intro = chunksByRoute("/fonti/");
 const records = listRegistryRecords();
 
 const families = ["PE", "RP", "ATT", "LEG"] as const;
+
+const DIMENSIONS = [
+  "documentaryStatus",
+  "legalStatus",
+  "presenceStatus",
+  "researchStatus",
+] as const;
+
+/**
+ * Il registro mostra in tabella le due dimensioni che orientano la
+ * consultazione — dove si trova l'atto e che efficacia ha — e conserva tutte
+ * e quattro le dimensioni nella scheda di dettaglio di ogni riga. Nessuna
+ * dimensione viene rimossa: cambia solo il livello di lettura.
+ */
+const TABLE_DIMENSIONS = ["documentaryStatus", "legalStatus"] as const;
+
+const rows = records.map((record) => {
+  const status = Object.fromEntries(
+    DIMENSIONS.map((key) => [key, displayStatus(record.chunk.status[key] ?? null)]),
+  ) as Record<(typeof DIMENSIONS)[number], ReturnType<typeof displayStatus>>;
+
+  // Rilievo tipografico per i record che il registro ha gia' normalizzato su
+  // un valore di legenda canonico. E' un rinforzo visivo: ogni stato resta
+  // comunque scritto per esteso nella propria cella.
+  const consolidated = TABLE_DIMENSIONS.some((key) => status[key]?.kind === "value");
+
+  return { record, status, consolidated };
+});
+
 const grouped = families
   .map((family) => ({
     family,
     label: FAMILY_LABELS[family],
-    records: records.filter((r) => r.family === family),
+    rows: rows.filter((r) => r.record.family === family),
   }))
-  .filter((g) => g.records.length > 0);
-
-function dimensionValue(
-  record: (typeof records)[number],
-  key: "documentaryStatus" | "legalStatus" | "presenceStatus" | "researchStatus"
-): string | null {
-  return record.chunk.status[key]?.value ?? null;
-}
-
-// Un'assenza non e' l'altra: "le fonti non lo dicono" (notDocumented),
-// "non si applica" (notApplicable) e "non ancora valutato" (notYetEvaluated)
-// sono tre stati distinti del corpus. Il registro usa le etichette canoniche,
-// le stesse dei badge di dettaglio, senza appiattirle su un'unica dicitura.
-function absenceLabel(
-  record: (typeof records)[number],
-  key: "documentaryStatus" | "legalStatus" | "presenceStatus" | "researchStatus"
-): string {
-  const reason = record.chunk.status[key]?.reason;
-  return reason ? (REASON_LABELS[reason] ?? reason).toLowerCase() : "non documentato";
-}
+  .filter((g) => g.rows.length > 0);
 ---
 
 <BaseLayout
@@ -64,68 +75,92 @@ function absenceLabel(
 
   <section class="section" style="padding-block: 0 var(--space-6);">
     <div class="wrap">
+      <p class="legend">
+        La tabella riporta l'identificativo, l'anno e le due dimensioni di orientamento. Dove il
+        registro non ha ancora ricondotto un campo a una voce di legenda, viene mostrato il
+        <strong>testo letterale del campo</strong> invece di una dicitura generica. Tutte e quattro
+        le dimensioni, con il campo di provenienza, sono in «Dettagli documentali» su ogni riga.
+      </p>
+
       {
         grouped.map((group) => (
           <div class="family">
-            <h2 class="family__title">
+            <h2 class="family__title" id={`famiglia-${group.family.toLowerCase()}`}>
               {group.label}
-              <span class="family__count">{group.records.length}</span>
+              <span class="family__count">{group.rows.length}</span>
             </h2>
-            <div class="table-scroll">
-              <table class="registry">
-              <thead>
-                <tr>
-                  <th scope="col">Identificativo</th>
-                  <th scope="col">Anno</th>
-                  <th scope="col">Disponibilità documentale</th>
-                  <th scope="col">Efficacia / ruolo storico</th>
-                  <th scope="col">Presenza nell'annualità successiva</th>
-                  <th scope="col">Stato della ricerca</th>
-                </tr>
-              </thead>
-              <tbody>
-                {group.records.map((r) => (
-                  <tr>
-                    <th scope="row">
-                      <a href={`/fonti/${r.slug}/`}>{r.naturalId}</a>
-                    </th>
-                    <td class="num">{r.year ?? "—"}</td>
-                    <td>
-                      {dimensionValue(r, "documentaryStatus") ?? (
-                        <span class="absent">{absenceLabel(r, "documentaryStatus")}</span>
-                      )}
-                    </td>
-                    <td>
-                      {dimensionValue(r, "legalStatus") ?? (
-                        <span class="absent">{absenceLabel(r, "legalStatus")}</span>
-                      )}
-                    </td>
-                    <td>
-                      {dimensionValue(r, "presenceStatus") ?? (
-                        <span class="absent">{absenceLabel(r, "presenceStatus")}</span>
-                      )}
-                    </td>
-                    <td>
-                      {dimensionValue(r, "researchStatus") ?? (
-                        <span class="absent">{absenceLabel(r, "researchStatus")}</span>
-                      )}
-                    </td>
+            <div class="doc-table-wrap">
+              <table
+                class={`doc-table doc-table--reflow doc-table--grouped${group.rows.length >= 12 ? " doc-table--sticky" : ""}`}
+                role="table"
+                aria-labelledby={`famiglia-${group.family.toLowerCase()}`}
+              >
+                <thead role="rowgroup">
+                  <tr role="row">
+                    <th scope="col">Identificativo</th>
+                    <th scope="col">Anno</th>
+                    <th scope="col">{DIMENSION_LABELS.documentaryStatus}</th>
+                    <th scope="col">{DIMENSION_LABELS.legalStatus}</th>
                   </tr>
+                </thead>
+                {group.rows.map(({ record, status, consolidated }) => (
+                  <tbody role="rowgroup" class={consolidated ? "is-notable" : undefined}>
+                    <tr role="row" class={consolidated ? "is-notable" : undefined}>
+                      <th scope="row" role="rowheader" data-label="Identificativo">
+                        <a href={`/fonti/${record.slug}/`}>{record.naturalId}</a>
+                      </th>
+                      <td role="cell" class="num" data-label="Anno">{record.year ?? "—"}</td>
+                      {TABLE_DIMENSIONS.map((key) => (
+                        <td role="cell" data-label={DIMENSION_LABELS[key]}>
+                          <span class={status[key]?.kind === "reason" ? "doc-status--reason" : undefined}>
+                            {status[key]?.text}
+                          </span>
+                        </td>
+                      ))}
+                    </tr>
+                    <tr role="row" class="detail-row">
+                      <td role="cell" colspan="4" class="doc-table__detail">
+                        <details class="doc-details">
+                          <summary aria-label={`Dettagli documentali di ${record.naturalId}`}>
+                            Dettagli documentali
+                          </summary>
+                          <dl class="doc-details__grid">
+                            {DIMENSIONS.map((key) => (
+                              <div class={status[key]?.documented ? "is-documented" : undefined}>
+                                <dt>{DIMENSION_LABELS[key]}</dt>
+                                <dd>
+                                  <span class={status[key]?.kind === "reason" ? "doc-status--reason" : undefined}>
+                                    {status[key]?.text}
+                                  </span>
+                                  {status[key]?.kind === "literal" && status[key]?.sourceField && (
+                                    <span class="doc-details__prov">
+                                      testo letterale del campo «{status[key]?.sourceField}»
+                                      {status[key]?.sourceLine ? ` · riga ${status[key]?.sourceLine}` : ""}
+                                    </span>
+                                  )}
+                                </dd>
+                              </div>
+                            ))}
+                          </dl>
+                        </details>
+                      </td>
+                    </tr>
+                  </tbody>
                 ))}
-              </tbody>
-            </table>
+              </table>
             </div>
           </div>
         ))
       }
 
       <aside class="note-block">
-        <h2>Tre dimensioni, mai una sola etichetta</h2>
+        <h2>Quattro dimensioni, mai una sola etichetta</h2>
         <p>
-          Le colonne di questa tabella sono indipendenti fra loro e vengono lette insieme a una
-          quarta dimensione — lo stato della ricerca — visibile nella scheda di ogni record. Un atto
-          può essere reperibile ma superato, oppure ancora rilevante ma non riprodotto nell'atto
-          successivo. <strong>La mancata riproduzione non equivale all'abrogazione.</strong>
+          Le quattro dimensioni di ogni record sono indipendenti fra loro: disponibilità
+          documentale, efficacia o ruolo storico, presenza nell'annualità successiva e stato della
+          ricerca. Un atto può essere reperibile ma superato, oppure ancora rilevante ma non
+          riprodotto nell'atto successivo. <strong>La mancata riproduzione di una disposizione in
+          un atto successivo non ne dimostra automaticamente l'abrogazione.</strong>
         </p>
       </aside>
     </div>
@@ -166,46 +201,23 @@ function absenceLabel(
     font-size: 0.75rem;
     color: var(--color-text-faint);
   }
-  .table-scroll {
-    /* Su schermi stretti la tabella deve scorrere dentro il proprio
-       contenitore, non allargare la pagina. */
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+  .legend {
+    max-width: var(--measure);
+    margin: 0 0 var(--space-4);
+    padding-left: 0.875rem;
+    border-left: 2px solid var(--color-border-strong);
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
   }
-  .registry {
-    width: 100%;
-    min-width: 40rem;
-    border-collapse: collapse;
-    font-size: 0.875rem;
-  }
-  .registry th,
-  .registry td {
-    border: 1px solid var(--color-border);
-    padding: 0.5rem 0.625rem;
-    text-align: left;
-    vertical-align: top;
-  }
-  .registry thead th {
-    background: var(--color-surface-2);
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-  }
-  .registry tbody th {
-    font-family: var(--font-mono);
-    font-weight: 500;
-    white-space: nowrap;
-  }
-  .registry tbody th a {
-    color: var(--color-green);
-  }
-  .num {
-    font-family: var(--font-mono);
-    font-variant-numeric: tabular-nums;
-  }
-  .absent {
-    color: var(--color-text-faint);
-    font-style: italic;
+  /* Colonne del registro: l'identificativo e l'anno restano compatti, le due
+     dimensioni documentarie si dividono lo spazio rimanente. */
+  @media (min-width: 48rem) {
+    .doc-table th:first-child { width: 14rem; }
+    .doc-table th:nth-child(2) { width: 5rem; }
+    .doc-table th:nth-child(3),
+    .doc-table th:nth-child(4) { width: auto; }
+    /* La riga di dettaglio non deve ripetere il filetto d'accento. */
+    .detail-row td { border-top: none; }
   }
   .note-block {
     padding: var(--space-3);

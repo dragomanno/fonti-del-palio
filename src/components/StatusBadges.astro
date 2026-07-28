@@ -9,7 +9,7 @@
  * La mancata riproduzione in un atto successivo NON implica abrogazione.
  */
 import type { ChunkStatus } from "../lib/corpus";
-import { DIMENSION_LABELS, REASON_LABELS } from "../lib/corpus";
+import { DIMENSION_LABELS, displayStatus, publicExplanation } from "../lib/corpus";
 
 export interface Props {
   status: ChunkStatus;
@@ -26,38 +26,50 @@ const order = [
 ] as const;
 
 const dims = order
-  .map((key) => ({ key, dim: status[key] }))
+  .map((key) => ({ key, dim: status[key], display: displayStatus(status[key] ?? null) }))
   .filter((d) => d.dim !== null);
 
-const allAbsent =
-  dims.length > 0 && dims.every((d) => d.dim!.value === null || d.dim!.value === "");
+// Una dimensione con un letterale documentato NON è un'assenza: il registro
+// riporta un testo, semplicemente non ancora ricondotto a una voce di
+// legenda. Solo l'assenza dichiarata conta come tale.
+const allAbsent = dims.length > 0 && dims.every((d) => !d.display?.documented);
 
 // Quando nessuna delle quattro dimensioni è documentata, ripetere quattro volte
 // la stessa motivazione è rumore. La spiegazione — che proviene dal corpus, non
-// da noi — viene mostrata una sola volta sotto la griglia.
+// da noi — viene mostrata una sola volta sotto la griglia, nella formulazione
+// pubblica: la terminologia interna di pipeline non compare in pagina.
 const sharedExplanation = allAbsent
-  ? [...new Set(dims.map((d) => d.dim!.explanation).filter(Boolean))]
+  ? [...new Set(dims.map((d) => publicExplanation(d.dim!.explanation)).filter(Boolean))]
   : [];
 ---
 
 <dl class:list={["status-grid", compact && "status-grid--compact"]}>
   {
-    dims.map(({ key, dim }) => {
+    dims.map(({ key, dim, display }) => {
       const d = dim!;
-      const hasValue = d.value !== null && d.value !== "";
+      const shown = display!;
+      // Il letterale viene ripetuto sotto la riga principale solo quando NON è
+      // già il valore mostrato, per non stampare due volte la stessa stringa.
       const literal = d.literal ?? d.source?.literal ?? null;
+      const repeatLiteral = literal !== null && shown.kind !== "literal";
       return (
-        <div class:list={["status-cell", hasValue ? "is-documented" : "is-null"]}>
+        <div class:list={["status-cell", shown.documented ? "is-documented" : "is-null"]}>
           <dt>{DIMENSION_LABELS[key] ?? key}</dt>
           <dd>
-            {hasValue ? (
-              <span class="status-value">{d.value}</span>
+            {shown.kind === "reason" ? (
+              <span class="status-absent">{shown.text}</span>
             ) : (
-              <span class="status-absent">
-                {REASON_LABELS[d.reason ?? ""] ?? "Non documentato"}
+              <span class:list={["status-value", shown.kind === "literal" && "status-value--literal"]}>
+                {shown.text}
               </span>
             )}
-            {literal && (
+            {shown.kind === "literal" && shown.sourceField && (
+              <span class="status-literal">
+                Testo letterale del campo «{shown.sourceField}» del registro, non ancora
+                ricondotto a una voce di legenda.
+              </span>
+            )}
+            {repeatLiteral && (
               <span class="status-literal">
                 Testo della fonte: <q>{literal}</q>
               </span>
@@ -101,7 +113,8 @@ const sharedExplanation = allAbsent
   }
   .status-cell dt {
     font-family: var(--font-mono);
-    font-size: 0.6875rem;
+    /* 12px: sotto questa soglia i metadati diventano illeggibili su mobile. */
+    font-size: 0.75rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--color-text-faint);
@@ -118,6 +131,12 @@ const sharedExplanation = allAbsent
     font-weight: 600;
     color: var(--color-text);
     line-height: 1.35;
+  }
+  /* Il letterale del registro è documentato quanto un valore normalizzato, ma
+     non è una voce di legenda: peso tipografico più leggero per non farlo
+     leggere come un valore consolidato. */
+  .status-value--literal {
+    font-weight: 500;
   }
   .status-absent {
     font-size: 0.9375rem;

@@ -7,7 +7,7 @@
  * non da input utente: non c'è superficie di injection da terze parti. Il
  * testo non viene riscritto, riassunto né normalizzato — è riprodotto verbatim.
  */
-import { marked } from "marked";
+import { renderDocumentaryMarkdown } from "../lib/markdown";
 import type { Chunk } from "../lib/corpus";
 import StatusBadges from "./StatusBadges.astro";
 import SourceCitation from "./SourceCitation.astro";
@@ -19,8 +19,6 @@ export interface Props {
 }
 
 const { chunk, showStatus = true, headingLevel = 3 } = Astro.props;
-
-marked.setOptions({ gfm: true, breaks: false });
 
 /**
  * Il testo del chunk include già la propria intestazione Markdown quando il
@@ -37,7 +35,7 @@ if (headingMatch) {
   body = lines.slice(1).join("\n");
 }
 
-const html = marked.parse(body.trim()) as string;
+const html = renderDocumentaryMarkdown(body.trim());
 const displayTitle = ownHeading ?? chunk.title;
 const Heading = headingLevel === 2 ? "h2" : "h3";
 ---
@@ -96,7 +94,7 @@ const Heading = headingLevel === 2 ? "h2" : "h3";
   }
   .chunk__id {
     margin: 0;
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
     /* Gli identificativi sono lunghi: su schermi stretti devono andare a capo
        dentro la colonna flex invece di allargare la pagina. */
     min-width: 0;
@@ -116,29 +114,26 @@ const Heading = headingLevel === 2 ? "h2" : "h3";
     padding: 0;
     overflow-wrap: anywhere;
   }
+  /* Il corpo del chunk non e' piu' limitato in blocco alla colonna di
+     lettura: il vincolo passa ai soli elementi di prosa, cosi' le tabelle
+     documentarie possono usare tutta la larghezza utile del contenitore
+     senza che il testo diventi illeggibilmente largo. */
   .chunk__body {
     margin-top: var(--space-1);
+  }
+  .chunk__body :global(p),
+  .chunk__body :global(ul),
+  .chunk__body :global(ol),
+  .chunk__body :global(dl),
+  .chunk__body :global(blockquote) {
     max-width: var(--measure);
   }
-  .chunk__body :global(table) {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.875rem;
-    margin: var(--space-2) 0;
-    display: block;
-    overflow-x: auto;
-  }
-  .chunk__body :global(th),
-  .chunk__body :global(td) {
-    border: 1px solid var(--color-border);
+  .chunk__body :global(.doc-table th),
+  .chunk__body :global(.doc-table td) {
     color: var(--color-text-muted);
-    padding: 0.375rem 0.5rem;
-    text-align: left;
-    vertical-align: top;
   }
-  .chunk__body :global(th) {
-    background: var(--color-surface-2);
-    font-weight: 600;
+  .chunk__body :global(.doc-table thead th) {
+    color: var(--color-text);
   }
   .chunk__body :global(h1),
   .chunk__body :global(h2),
@@ -147,5 +142,6 @@ const Heading = headingLevel === 2 ? "h2" : "h3";
     font-family: var(--font-display);
     font-size: 1.0625rem;
     margin: var(--space-2) 0 var(--space-1);
+    max-width: var(--measure);
   }
 </style>

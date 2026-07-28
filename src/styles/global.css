@@ -117,6 +117,19 @@ a:hover {
   .col-8 { grid-column: span 8; }
 }
 
+/* Sotto i 768px nessuna utility di colonna e' attiva e ogni figlio occupa
+   comunque tutte e 12 le tracce: mantenere dodici colonne con 11 gutter da
+   2rem imponeva pero' una larghezza minima di 352px, che su 320px e 360px
+   faceva traboccare l'intera pagina in orizzontale. A colonna singola il
+   risultato visivo e' identico e la pagina non eccede piu' il viewport. */
+@media (max-width: 47.99rem) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+  .grid > * { grid-column: auto; }
+}
+
 /* ---------- Numbered sections (01, 02, 03...) ---------- */
 
 .section-number {
@@ -225,7 +238,7 @@ a:hover {
    attualmente non referenziata in alcun markup .astro). */
 .meta-tag {
   font-family: var(--font-mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   letter-spacing: 0.06em;
   color: var(--color-text-faint);
   text-transform: uppercase;
@@ -377,7 +390,7 @@ a:focus-visible > .card {
 
 .btn__note {
   font-family: var(--font-mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 0.04em;
   color: var(--color-text-faint);
@@ -434,6 +447,327 @@ th {
   font-size: 0.875rem;
 }
 tbody tr:last-child td { border-bottom: none; }
+
+/* ---------- Documentary tables ----------
+
+   Sistema condiviso per le tabelle documentarie (registro delle fonti,
+   elenco degli atti, tabelle riprodotte dal corpus). Un solo markup
+   semantico serve sia il desktop sia il mobile: nessun secondo dataset,
+   nessuna colonna rimossa, nessun contenuto duplicato nell'albero di
+   accessibilità.
+
+   Tre modificatori, applicati solo dove servono:
+   - .doc-table--sticky  intestazione persistente sulle tabelle lunghe;
+   - .doc-table--reflow  su schermi stretti le righe diventano schede con
+                         l'etichetta di campo ripetuta accanto a ogni valore;
+   - .doc-table-wrap--scroll  ultima risorsa per contenuti non riflowabili.
+*/
+
+.doc-table-wrap {
+  /* La tabella esce dalla colonna di lettura stretta (--measure) ma resta
+     dentro il contenitore di pagina, senza traboccare in orizzontale. */
+  width: 100%;
+  max-width: 100%;
+  margin: var(--space-2) 0 var(--space-3);
+}
+
+/* Ultima risorsa documentata: usato solo se il contenuto non e' riflowabile.
+   Attenzione: un antenato con overflow disattiva il position:sticky
+   verticale, quindi questo modificatore e' incompatibile con --sticky. */
+.doc-table-wrap--scroll {
+  overflow-x: auto;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+}
+.doc-table-wrap--scroll:focus-visible { outline: 3px solid var(--color-green); }
+
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+.doc-table caption {
+  caption-side: top;
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  padding-bottom: 0.5rem;
+}
+.doc-table th,
+.doc-table td {
+  border: 1px solid var(--color-border);
+  padding: 0.5rem 0.6875rem;
+  text-align: left;
+  vertical-align: top;
+  /* Prosa italiana: a capo normale. Gli identificativi e gli URL senza spazi
+     sono trattati a parte, mai con word-break: break-all. */
+  overflow-wrap: break-word;
+}
+.doc-table thead th {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  vertical-align: bottom;
+}
+.doc-table tbody th {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  background: none;
+  /* Codici d'atto: spezzabili solo se davvero non entrano nella colonna. */
+  overflow-wrap: anywhere;
+}
+.doc-table tbody th a { color: var(--color-green); }
+.doc-table td a { overflow-wrap: anywhere; }
+.doc-table .num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Intestazione persistente. Il valore di --sticky-offset tiene conto
+   dell'altezza reale dell'header di sito, che e' sticky solo da 768px in su
+   e che fra 768px e ~860px manda la navigazione su due righe (121px misurati,
+   contro 71px alle larghezze maggiori). Valori misurati sul sito, arrotondati
+   per eccesso: un offset leggermente abbondante lascia un piccolo stacco,
+   uno insufficiente nasconde l'intestazione sotto l'header. */
+:root { --sticky-offset: 0px; }
+@media (min-width: 768px) { :root { --sticky-offset: 7.75rem; } }
+@media (min-width: 54rem) { :root { --sticky-offset: 4.625rem; } }
+
+.doc-table--sticky thead th {
+  position: sticky;
+  top: var(--sticky-offset);
+  z-index: 4;
+  /* Fondo pieno e opaco: l'intestazione non deve mai lasciare trasparire le
+     righe che le scorrono sotto. */
+  background: var(--color-surface-2);
+  /* Con border-collapse i bordi delle celle sticky vengono persi durante lo
+     scorrimento: reintrodotti come ombre interne, sempre visibili. */
+  box-shadow:
+    inset 0 1px 0 var(--color-border-strong),
+    inset 0 -1px 0 var(--color-border-strong);
+}
+
+/* Riga con un valore consolidato del registro: filetto d'accento discreto.
+   È un rinforzo visivo, non un'informazione: ogni stato resta scritto per
+   esteso nella propria cella. */
+.doc-table tbody tr.is-notable th[scope="row"] {
+  box-shadow: inset 3px 0 0 var(--color-green);
+}
+
+/* Assenza dichiarata: tono attenuato ma con contrasto sufficiente (5.4:1),
+   e sempre accompagnata dal motivo canonico scritto per esteso. */
+.doc-status--reason {
+  color: var(--color-text-faint);
+  font-style: italic;
+}
+
+@media (max-width: 47.99rem) {
+  /* Riflusso in schede: l'intestazione resta nell'albero di accessibilità
+     (clip, non display:none) così le associazioni riga/colonna reggono con
+     le tecnologie assistive, mentre visivamente ogni valore riceve la
+     propria etichetta da data-label. I ruoli ARIA espliciti nel markup
+     compensano la perdita di semantica tabellare causata da display:block. */
+  .doc-table--reflow thead,
+  .doc-table--reflow-sm thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+  .doc-table--reflow,
+  .doc-table--reflow tbody,
+  .doc-table--reflow tr,
+  .doc-table--reflow th,
+  .doc-table--reflow td,
+  .doc-table--reflow-sm,
+  .doc-table--reflow-sm tbody,
+  .doc-table--reflow-sm tr,
+  .doc-table--reflow-sm th,
+  .doc-table--reflow-sm td {
+    display: block;
+    width: auto;
+  }
+  /* La "scheda" e' la riga, salvo nelle tabelle raggruppate (un <tbody> per
+     record, con la riga di dettaglio annidata): li' la scheda e' il gruppo. */
+  .doc-table--reflow tr,
+  .doc-table--reflow-sm tr,
+  .doc-table--grouped.doc-table--reflow tbody {
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+    padding: 0.75rem 0.875rem;
+    margin-bottom: var(--space-2);
+  }
+  .doc-table--grouped.doc-table--reflow tr {
+    border: none;
+    border-radius: 0;
+    background: none;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  .doc-table--reflow tr.is-notable,
+  .doc-table--grouped.doc-table--reflow tbody.is-notable {
+    border-left: 3px solid var(--color-green);
+  }
+  .doc-table--reflow th,
+  .doc-table--reflow td,
+  .doc-table--reflow-sm th,
+  .doc-table--reflow-sm td {
+    border: none;
+    padding: 0.3125rem 0;
+  }
+  /* In modalita' scheda il filetto d'accento e' gia' sul bordo della scheda:
+     l'ombra interna della cella va spenta, altrimenti si sovrappone al testo
+     dell'etichetta. La specificita' deve superare quella della regola
+     `.doc-table tbody tr.is-notable th[scope="row"]`. */
+  .doc-table--reflow tbody tr.is-notable th[scope="row"],
+  .doc-table--reflow-sm tbody tr.is-notable th[scope="row"],
+  .doc-table--reflow tbody th[scope="row"],
+  .doc-table--reflow-sm tbody th[scope="row"] {
+    box-shadow: none;
+    font-size: 1rem;
+    padding-top: 0;
+  }
+  .doc-table--reflow td[data-label]::before,
+  .doc-table--reflow th[data-label]::before,
+  .doc-table--reflow-sm td[data-label]::before,
+  .doc-table--reflow-sm th[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-text-faint);
+    margin-bottom: 0.125rem;
+  }
+  /* La riga di dettaglio occupa tutta la scheda, senza etichetta propria. */
+  .doc-table--reflow td.doc-table__detail {
+    padding-top: 0.5rem;
+  }
+}
+
+/* Le tabelle a tre colonne entrano ancora nel viewport da 400px in su: fino a
+   768px restano tabelle vere, che si leggono meglio di una sequenza di
+   schede. Il riflusso scatta solo sotto i 400px, dove la larghezza minima del
+   contenuto supererebbe lo schermo. */
+@media (min-width: 25rem) and (max-width: 47.99rem) {
+  .doc-table--reflow-sm { display: table; }
+  .doc-table--reflow-sm thead {
+    display: table-header-group;
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+  .doc-table--reflow-sm tbody { display: table-row-group; }
+  .doc-table--reflow-sm tr {
+    display: table-row;
+    border: none;
+    border-radius: 0;
+    background: none;
+    padding: 0;
+    margin: 0;
+  }
+  .doc-table--reflow-sm th,
+  .doc-table--reflow-sm td {
+    display: table-cell;
+    border: 1px solid var(--color-border);
+    padding: 0.5rem 0.6875rem;
+  }
+  .doc-table--reflow-sm tbody th[scope="row"] { font-size: inherit; }
+  .doc-table--reflow-sm td[data-label]::before,
+  .doc-table--reflow-sm th[data-label]::before { content: none; }
+}
+
+/* ---------- Dettagli documentali per riga ---------- */
+
+/* Da desktop la riga di dettaglio non ha bordi propri: senza un delimitatore
+   il gruppo <tbody> (riga dati + riga dettaglio) si confonde con il record
+   successivo. Il filetto sotto ogni gruppo rende esplicita l'associazione. */
+@media (min-width: 48rem) {
+  .doc-table--grouped tbody {
+    border-bottom: 1px solid var(--color-border);
+  }
+  .doc-table--grouped td.doc-table__detail {
+    padding-block: 0.25rem 0.625rem;
+  }
+}
+
+.doc-details {
+  border-top: 1px dotted var(--color-border-strong);
+  padding-top: 0.375rem;
+}
+.doc-details > summary {
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  /* Area di tocco >= 44px in altezza. */
+  padding: 0.625rem 0.25rem;
+  margin: -0.375rem 0;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  color: var(--color-text-muted);
+}
+.doc-details > summary::-webkit-details-marker { display: none; }
+.doc-details > summary::before {
+  content: '+';
+  display: inline-block;
+  width: 1rem;
+  text-align: center;
+  color: var(--color-green);
+  font-weight: 700;
+}
+.doc-details[open] > summary::before { content: '–'; }
+.doc-details > summary:hover { color: var(--color-text); }
+
+.doc-details__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 0.5rem var(--space-2);
+  margin: 0.5rem 0 0.25rem;
+  padding: 0;
+}
+.doc-details__grid > div {
+  border-left: 2px solid var(--color-border);
+  padding-left: 0.625rem;
+}
+.doc-details__grid > div.is-documented { border-left-color: var(--color-green); }
+.doc-details__grid dt {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  margin: 0 0 0.125rem;
+}
+.doc-details__grid dd {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--color-text);
+  line-height: 1.45;
+}
+.doc-details__prov {
+  display: block;
+  margin-top: 0.1875rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-faint);
+}
 
 /* ---------- Footer ---------- */
 

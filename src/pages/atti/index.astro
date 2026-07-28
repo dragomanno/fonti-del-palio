@@ -34,40 +34,44 @@ const totalChunks = acts.reduce((n, a) => n + a.chunkCount, 0);
 
   <section class="section" style="padding-block: 0 var(--space-12);">
     <div class="wrap">
-      <div class="table-scroll">
-              <table class="acts">
-        <thead>
-          <tr>
-            <th scope="col">Atto</th>
-            <th scope="col">Anno</th>
-            <th scope="col">Titolo</th>
-            <th scope="col">Articoli</th>
-            <th scope="col">Provenienza</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            acts.map((a) => (
-              <tr>
-                <th scope="row">
-                  <a href={`/atti/${a.slug}/`}>{a.registerId}</a>
-                </th>
-                <td class="num">{a.year}</td>
-                <td>{a.title}</td>
-                <td class="num">{a.articleCount || "—"}</td>
-                <td>
-                  {a.provisional ? (
-                    <span class="prov">in parte provvisoria</span>
-                  ) : (
-                    <span class="ok">corrispondenza esatta</span>
-                  )}
-                </td>
-              </tr>
-            ))
-          }
-        </tbody>
-      </table>
-            </div>
+      <div class="doc-table-wrap">
+        <table
+          class="doc-table doc-table--reflow doc-table--sticky acts"
+          role="table"
+          aria-label="Atti del corpus storico"
+        >
+          <thead role="rowgroup">
+            <tr role="row">
+              <th scope="col">Atto</th>
+              <th scope="col">Anno</th>
+              <th scope="col">Titolo</th>
+              <th scope="col">Articoli</th>
+              <th scope="col">Provenienza</th>
+            </tr>
+          </thead>
+          <tbody role="rowgroup">
+            {
+              acts.map((a) => (
+                <tr role="row">
+                  <th scope="row" role="rowheader" data-label="Atto">
+                    <a href={`/atti/${a.slug}/`}>{a.registerId}</a>
+                  </th>
+                  <td role="cell" class="num" data-label="Anno">{a.year}</td>
+                  <td role="cell" class="acts__title" data-label="Titolo">{a.title}</td>
+                  <td role="cell" class="num" data-label="Articoli">{a.articleCount || "—"}</td>
+                  <td role="cell" data-label="Provenienza">
+                    {a.provisional ? (
+                      <span class="prov">in parte provvisoria</span>
+                    ) : (
+                      <span class="ok">corrispondenza esatta</span>
+                    )}
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 </BaseLayout>
@@ -83,41 +87,14 @@ const totalChunks = acts.reduce((n, a) => n + a.chunkCount, 0);
   .crumbs a {
     color: var(--color-green);
   }
-  .table-scroll {
-    /* Su schermi stretti la tabella deve scorrere dentro il proprio
-       contenitore, non allargare la pagina. */
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .acts {
-    width: 100%;
-    min-width: 40rem;
-    border-collapse: collapse;
-    font-size: 0.875rem;
-  }
-  .acts th,
-  .acts td {
-    border: 1px solid var(--color-border);
-    padding: 0.5rem 0.625rem;
-    text-align: left;
-    vertical-align: top;
-  }
-  .acts thead th {
-    background: var(--color-surface-2);
-    font-size: 0.75rem;
-    font-weight: 600;
-  }
-  .acts tbody th {
-    font-family: var(--font-mono);
-    font-weight: 500;
-    white-space: nowrap;
-  }
-  .acts tbody th a {
-    color: var(--color-green);
-  }
-  .num {
-    font-family: var(--font-mono);
-    font-variant-numeric: tabular-nums;
+  /* Il titolo dell'atto e' la colonna elastica: assorbe lo spazio residuo
+     mentre identificativo, anno e conteggio restano compatti. */
+  @media (min-width: 48rem) {
+    .acts th:first-child { width: 11rem; }
+    .acts th:nth-child(2) { width: 5rem; }
+    .acts th:nth-child(4) { width: 6rem; }
+    .acts th:nth-child(5) { width: 12rem; }
+    .acts__title { min-width: 18rem; }
   }
   .prov {
     color: var(--color-warning);

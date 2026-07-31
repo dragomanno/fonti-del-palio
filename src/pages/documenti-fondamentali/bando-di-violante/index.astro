@@ -1,0 +1,181 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import NotaDocumentaria from "../../../components/NotaDocumentaria.astro";
+import { getBando, listRegistroFonti, BANDO_PROVENIENZA } from "../../../lib/carriera";
+import { renderDocumentaryMarkdown } from "../../../lib/markdown";
+
+const bando = getBando();
+const record = listRegistroFonti().find((r) => r.id === "RIF-BANDO-CONFINI-1730")!;
+const preambolo = bando.preambolo.map((p) => ({
+  ...p,
+  html: renderDocumentaryMarkdown(p.corpo),
+}));
+---
+
+<BaseLayout
+  title="Bando di Violante sui confini delle Contrade"
+  description="La nuova divisione e riforma de' confini delle Contrade, decretata dalla Principessa Violante di Baviera il 13 settembre 1729: trascrizione integrale e confini delle diciassette Contrade."
+  activePath="/documenti-fondamentali"
+>
+  <section class="section" style="padding-block: var(--space-6) var(--space-3);">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Percorso" data-pagefind-ignore>
+        <a href="/documenti-fondamentali/">Documenti fondamentali</a>
+        <span aria-hidden="true">/</span>
+        <span>Bando di Violante</span>
+      </nav>
+      <span class="section-number">{record.id}</span>
+      <h1 style="font-family: var(--font-display); font-size: var(--text-title); max-width: 22ch; margin: var(--space-1) 0 0;">
+        Nuova divisione de' confini fra le Contrade
+      </h1>
+      <p class="occhiello">
+        Decretata dalla Principessa Violante Beatrice di Baviera il 13 settembre 1729. È il
+        documento che assegna a ciascuna delle diciassette Contrade il proprio territorio, e non è
+        mai stato sostituito da un atto di pari portata.
+      </p>
+      <p class="text-caption" style="margin-top: var(--space-2);">
+        {bando.contrade.length} Contrade · trascrizione integrale
+      </p>
+
+      <NotaDocumentaria titolo="Provenienza della trascrizione" variante="avvertenza">
+        <p>{BANDO_PROVENIENZA}</p>
+        <p>
+          Il testo riprodotto qui corrisponde alla copia acquisita da questo progetto, verificata
+          carattere per carattere. <strong>Non è stata accertata la catena archivistica di quella
+          copia:</strong> quale edizione a stampa o quale fondo la origini resta da stabilire. La
+          trascrizione è quindi affidabile come riproduzione della copia, non ancora come
+          testimone dell'originale settecentesco. Lo stato documentario registrato è
+          «{record.stato}».
+        </p>
+      </NotaDocumentaria>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-6);">
+    <div class="wrap">
+      {
+        preambolo.map((p) => (
+          <article class="preambolo" id={p.slug}>
+            <h2 class="preambolo__titolo">{p.titolo}</h2>
+            <div class="prose" set:html={p.html} />
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-6);">
+    <div class="wrap">
+      <h2 class="blocco-titolo">Le diciassette Contrade</h2>
+      <p class="text-muted" style="max-width: var(--measure);">
+        Nell'ordine in cui il Bando le enumera, che non è alfabetico e non esprime una gerarchia.
+        Ogni scheda riporta la descrizione dei confini nella formulazione del documento.
+      </p>
+      <ol class="contrade">
+        {
+          bando.contrade.map((c) => (
+            <li class="contrada">
+              <a
+                href={`/documenti-fondamentali/bando-di-violante/${c.slug}/`}
+                class="contrada__link"
+              >
+                <span class="contrada__num mono">{String(c.numero).padStart(2, "0")}</span>
+                <span class="contrada__nome">{c.nome}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-12);">
+    <div class="wrap">
+      <NotaDocumentaria titolo="Come leggere i confini" variante="provenienza">
+        <p>
+          I confini sono descritti per punti di riferimento urbani — porte, chiese, conventi, archi,
+          piagge — molti dei quali hanno cambiato nome o non esistono più.
+          <strong>La descrizione settecentesca non si sovrappone senza residui alla toponomastica
+          attuale</strong> e questa pagina non tenta la conversione: non è una mappa e non risolve
+          questioni di appartenenza territoriale.
+        </p>
+        <p>
+          Per le questioni pratiche di attribuzione delle vie esistono repertori moderni, che questo
+          sito non ripubblica perché non ne ha accertato provenienza e diritti. Le Contrade e il
+          Magistrato delle Contrade restano le sedi proprie per ogni chiarimento.
+        </p>
+        <p>
+          Consistenza della copia acquisita: {record.consistenza}. Il digest SHA-256 è nel
+          <a href="/documenti-fondamentali/#registro">registro delle fonti</a>. Segnalazioni:
+          <a href="mailto:info@pistakkio.net">info@pistakkio.net</a>.
+        </p>
+      </NotaDocumentaria>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: var(--text-caption);
+    color: var(--color-text-faint);
+    margin-bottom: var(--space-2);
+  }
+  .crumbs a {
+    color: var(--color-green);
+  }
+  .occhiello {
+    max-width: var(--measure);
+    margin-top: var(--space-2);
+    color: var(--color-text-muted);
+  }
+  .preambolo {
+    padding-top: var(--space-4);
+  }
+  .preambolo__titolo {
+    font-family: var(--font-display);
+    font-size: 1.375rem;
+    margin: 0 0 var(--space-2);
+  }
+  .blocco-titolo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin: 0 0 var(--space-2);
+  }
+  .contrade {
+    list-style: none;
+    margin: var(--space-3) 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    gap: 1px;
+    background: var(--color-border);
+    border: 1px solid var(--color-border);
+  }
+  .contrada {
+    background: var(--color-bg);
+  }
+  .contrada__link {
+    display: flex;
+    align-items: baseline;
+    gap: 0.625rem;
+    padding: 0.875rem 1rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  .contrada__link:hover,
+  .contrada__link:focus-visible {
+    background: var(--color-surface);
+  }
+  .contrada__num {
+    font-size: 0.75rem;
+    color: var(--color-green);
+  }
+  .contrada__nome {
+    font-family: var(--font-display);
+    font-size: 1.0625rem;
+    font-weight: 600;
+  }
+</style>

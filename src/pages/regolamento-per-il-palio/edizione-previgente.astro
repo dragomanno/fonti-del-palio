@@ -1,0 +1,254 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NotaDocumentaria from "../../components/NotaDocumentaria.astro";
+import {
+  listRegistroFonti,
+  getCollazione,
+  demoteHeadings,
+  REGOLAMENTO_PREVIGENTE_LABEL,
+} from "../../lib/carriera";
+import { renderDocumentaryMarkdown } from "../../lib/markdown";
+
+const previgente = listRegistroFonti().find((r) => r.id === "REG-PALIO-1949")!;
+const collazione = getCollazione();
+const anomalie = renderDocumentaryMarkdown(demoteHeadings(collazione.anomalie, 1));
+const limiti = renderDocumentaryMarkdown(demoteHeadings(collazione.limiti, 1));
+const modificati = collazione.prospetto.filter((r) => r.prospetto2019).length;
+---
+
+<BaseLayout
+  title="Regolamento per il Palio — edizione previgente e collazione"
+  description="L'edizione previgente del Regolamento per il Palio, approvata nel 1949, e la collazione articolo per articolo con l'edizione vigente: 106 unità articolo confrontate."
+  activePath="/documenti-fondamentali"
+>
+  <section class="section" style="padding-block: var(--space-6) var(--space-3);">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Percorso" data-pagefind-ignore>
+        <a href="/documenti-fondamentali/">Documenti fondamentali</a>
+        <span aria-hidden="true">/</span>
+        <a href="/regolamento-per-il-palio/">Regolamento per il Palio</a>
+        <span aria-hidden="true">/</span>
+        <span>Edizione previgente</span>
+      </nav>
+      <span class="section-number">{previgente.id}</span>
+      <h1 style="font-family: var(--font-display); font-size: var(--text-title); max-width: 24ch; margin: var(--space-1) 0 0;">
+        Edizione previgente e collazione
+      </h1>
+      <p class="occhiello">{REGOLAMENTO_PREVIGENTE_LABEL}</p>
+
+      <NotaDocumentaria titolo="Questa edizione non è in vigore" variante="avvertenza">
+        <p>
+          <strong>L'edizione descritta in questa pagina non è più vigente.</strong> È conservata
+          come riferimento storico e come termine di confronto. La disciplina applicabile è quella
+          dell'<a href="/regolamento-per-il-palio/">edizione vigente</a>, approvata nel 2019. Nessuna
+          disposizione riportata o richiamata qui può essere invocata come regola attuale.
+        </p>
+      </NotaDocumentaria>
+
+      <dl class="estremi">
+        <div class="estremi--largo"><dt>Estremi</dt><dd>{previgente.estremi}</dd></div>
+        <div><dt>Consistenza</dt><dd>{previgente.consistenza}</dd></div>
+        <div><dt>Stato</dt><dd>{previgente.stato}</dd></div>
+        <div class="estremi--largo">
+          <dt>SHA-256 del file acquisito</dt>
+          <dd class="mono estremi__digest">{previgente.sha256}</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-6);">
+    <div class="wrap">
+      <h2 class="blocco-titolo">Sintesi del confronto</h2>
+      <p class="text-muted" style="max-width: var(--measure);">
+        Entrambe le edizioni contano {collazione.totale} unità articolo, compreso l'art. 99bis
+        inserito nel 1999: la revisione del 2019 non ha rinumerato l'articolato, quindi
+        <strong>il numero di articoli non distingue le due edizioni.</strong> Il prospetto ufficiale
+        attribuisce alle due deliberazioni del 2019 interventi su {modificati} articoli, e per tutti
+        e {modificati} il confronto testuale rileva una differenza effettiva.
+      </p>
+      <div class="doc-table-wrap">
+        <table class="doc-table doc-table--reflow-sm sintesi">
+          <caption class="sr-only">Esito del confronto per numero di articoli.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Esito del confronto</th>
+              <th scope="col" class="num">Articoli</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              collazione.sintesi.map((r) => (
+                <tr>
+                  <th scope="row" data-label="Esito del confronto">{r.esito}</th>
+                  <td data-label="Articoli" class="num">
+                    {r.articoli}
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row" data-label="Esito del confronto">Totale</th>
+              <td data-label="Articoli" class="num">{collazione.totale}</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-6);">
+    <div class="wrap" id="prospetto">
+      <h2 class="blocco-titolo">Prospetto completo articolo per articolo</h2>
+      <p class="text-muted" style="max-width: var(--measure);">
+        La colonna «somiglianza» è il valore calcolato dal confronto, riportato senza
+        arrotondamento: 1.000 indica testi sostanzialmente coincidenti. La colonna «prospetto 2019»
+        segnala gli articoli che le deliberazioni n. 99 del 17.6.2019 e n. 224 del 28.11.2019
+        dichiarano modificati.
+      </p>
+      {/* Nessun wrapper a scorrimento: creerebbe un contenitore di
+          posizionamento e l'intestazione persistente smetterebbe di reggere
+          lo scorrimento verticale di 106 righe. */}
+      <div class="doc-table-wrap">
+        <table class="doc-table doc-table--sticky doc-table--reflow-sm">
+          <caption class="sr-only">
+            Prospetto articolo per articolo: numero, rubrica, esito del confronto, somiglianza
+            sostanziale e presenza nel prospetto ufficiale delle modifiche del 2019.
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col" class="num">Art.</th>
+              <th scope="col">Rubrica</th>
+              <th scope="col">Esito</th>
+              <th scope="col" class="num">Somiglianza</th>
+              <th scope="col">Prospetto 2019</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              collazione.prospetto.map((r) => (
+                <tr>
+                  <th scope="row" data-label="Art." class="num mono">
+                    {r.articolo}
+                  </th>
+                  <td data-label="Rubrica" class="rubrica">
+                    {r.rubrica}
+                  </td>
+                  <td data-label="Esito">{r.esito}</td>
+                  <td data-label="Somiglianza" class="num mono">
+                    {r.somiglianza}
+                  </td>
+                  <td data-label="Prospetto 2019">{r.prospetto2019 ? "sì" : "no"}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-6);">
+    <div class="wrap">
+      <h2 class="blocco-titolo">Anomalie da verificare sull'originale</h2>
+      <div class="prose" set:html={anomalie} />
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-12);">
+    <div class="wrap">
+      <h2 class="blocco-titolo">Che cosa questa collazione non dimostra</h2>
+      <div class="prose" set:html={limiti} />
+
+      <NotaDocumentaria titolo="Metodo e provenienza" variante="provenienza">
+        <p>
+          La collazione è un confronto testuale automatico fra i due PDF acquisiti, riletto e
+          verificato manualmente. <strong>Non è un'interpretazione giuridica e non stabilisce quale
+          norma si applichi a un caso concreto.</strong> Un esito «invariato nella sostanza» non
+          esclude che una differenza minima abbia rilievo giuridico.
+        </p>
+        <p>
+          Le anomalie riscontrate — fra cui un refuso presente nell'originale vigente — non sono
+          state corrette: la trascrizione resta fedele al documento acquisito. Segnalare una
+          divergenza rispetto all'originale: <a href="mailto:info@pistakkio.net">info@pistakkio.net</a>.
+        </p>
+      </NotaDocumentaria>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: var(--text-caption);
+    color: var(--color-text-faint);
+    margin-bottom: var(--space-2);
+  }
+  .crumbs a {
+    color: var(--color-green);
+  }
+  .occhiello {
+    max-width: var(--measure);
+    margin-top: var(--space-2);
+    color: var(--color-text-muted);
+  }
+  .estremi {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    gap: var(--space-2) var(--space-3);
+    margin: var(--space-3) 0 0;
+    padding: var(--space-2) 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .estremi--largo {
+    grid-column: 1 / -1;
+  }
+  .estremi dt {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-faint);
+    margin-bottom: 0.25rem;
+  }
+  .estremi dd {
+    margin: 0;
+    font-size: 0.9375rem;
+  }
+  .estremi__digest {
+    font-size: 0.75rem;
+    overflow-wrap: anywhere;
+    color: var(--color-text-muted);
+  }
+  .blocco-titolo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    max-width: 30ch;
+    margin: 0 0 var(--space-2);
+  }
+  .num {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .sintesi {
+    max-width: 34rem;
+  }
+  .sintesi tfoot th,
+  .sintesi tfoot td {
+    font-weight: 700;
+  }
+  .rubrica {
+    min-width: 14rem;
+  }
+  @media (max-width: 40rem) {
+    .num {
+      text-align: left;
+    }
+  }
+</style>

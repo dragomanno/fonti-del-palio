@@ -74,6 +74,31 @@ export interface Bando {
   contrade: Contrada[];
 }
 
+export interface RigaSintesiCollazione {
+  esito: string;
+  articoli: number;
+}
+
+export interface RigaProspetto {
+  /** Numero d'articolo come stampato nel prospetto: puo' essere "99bis". */
+  articolo: string;
+  rubrica: string;
+  esito: string;
+  /** Somiglianza sostanziale come calcolata, non arrotondata. */
+  somiglianza: string;
+  /** Vero se l'articolo compare fra quelli modificati dalle deliberazioni del 2019. */
+  prospetto2019: boolean;
+}
+
+export interface Collazione {
+  sintesi: RigaSintesiCollazione[];
+  totale: number;
+  prospetto: RigaProspetto[];
+  riscritture: string;
+  anomalie: string;
+  limiti: string;
+}
+
 export interface CarrieraIndex {
   schema: string;
   carriera: { slug: string; titolo: string; data: string };
@@ -83,6 +108,7 @@ export interface CarrieraIndex {
   materie: Materia[];
   guida: SezioneGuida[];
   registroFonti: RecordRegistro[];
+  collazione: Collazione;
   bando: Bando;
 }
 
@@ -133,12 +159,32 @@ export function listRegistroFonti(): RecordRegistro[] {
   return loadCarriera().registroFonti;
 }
 
+export function getCollazione(): Collazione {
+  return loadCarriera().collazione;
+}
+
 export function getBando(): Bando {
   return loadCarriera().bando;
 }
 
 export function contradaBySlug(slug: string): Contrada | undefined {
   return getBando().contrade.find((c) => c.slug === slug);
+}
+
+/**
+ * Abbassa di `livelli` le intestazioni Markdown di un blocco documentario.
+ *
+ * Le materie e le sezioni della guida sono estratte da file in cui erano
+ * intestazioni di primo o secondo livello. Reinserite in una pagina che ha gia'
+ * il proprio `h1` e i propri `h2`, quelle intestazioni produrrebbero una
+ * gerarchia scorretta e un sommario incoerente per le tecnologie assistive.
+ * Qui cambia SOLO il livello dell'intestazione: il testo non e' toccato.
+ */
+export function demoteHeadings(markdown: string, livelli = 1): string {
+  return markdown.replace(/^(#{1,5}) (?=\S)/gm, (_match, hashes: string) => {
+    const nuovo = Math.min(hashes.length + livelli, 6);
+    return `${"#".repeat(nuovo)} `;
+  });
 }
 
 /** Digest abbreviato per la resa a schermo: il valore completo resta nel titolo. */

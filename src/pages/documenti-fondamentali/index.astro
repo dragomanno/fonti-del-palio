@@ -1,0 +1,185 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NotaDocumentaria from "../../components/NotaDocumentaria.astro";
+import { listRegistroFonti, getBando, shortDigest } from "../../lib/carriera";
+
+const registro = listRegistroFonti();
+const bando = getBando();
+---
+
+<BaseLayout
+  title="Documenti fondamentali del Palio"
+  description="Il Regolamento per il Palio nelle sue due edizioni e il Bando di Violante sui confini delle Contrade: i documenti che reggono la disciplina, con provenienza e digest di integrità."
+  activePath="/documenti-fondamentali"
+>
+  <section class="section" style="padding-block: var(--space-8) var(--space-3);">
+    <div class="wrap">
+      <span class="section-number">Documenti fondamentali</span>
+      <h1 class="text-title" style="font-size: var(--text-title); max-width: 22ch;">
+        I documenti che reggono la disciplina.
+      </h1>
+      <p class="text-muted" style="max-width: var(--measure); margin-top: var(--space-2);">
+        Le ordinanze di una Carriera valgono per quella Carriera. Sotto di esse stanno documenti di
+        durata diversa: il Regolamento per il Palio, che disciplina la corsa in via generale, e il
+        Bando di Violante del 1729, che fissa i confini delle diciassette Contrade e non è mai stato
+        sostituito.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-6);">
+    <div class="wrap">
+      <div class="grid">
+        <a class="card card--accent scheda col-4" href="/regolamento-per-il-palio/">
+          <span class="scheda__eyebrow mono">REG-PALIO-2019</span>
+          <h2 class="scheda__titolo">Regolamento per il Palio</h2>
+          <p class="scheda__testo">
+            Edizione vigente: approvata nel 2019 con due deliberazioni del Consiglio Comunale e
+            presentata al pubblico nel 2021.
+          </p>
+          <span class="link-arrow">Edizione vigente</span>
+        </a>
+
+        <a class="card scheda col-4" href="/regolamento-per-il-palio/edizione-previgente/">
+          <span class="scheda__eyebrow mono">REG-PALIO-1949</span>
+          <h2 class="scheda__titolo">Edizione previgente</h2>
+          <p class="scheda__testo">
+            Approvata nel 1949 e modificata fino al 1999. Non è in vigore: serve da riferimento
+            storico e da termine di confronto.
+          </p>
+          <span class="link-arrow">Riferimento storico e collazione</span>
+        </a>
+
+        <a class="card scheda col-4" href="/documenti-fondamentali/bando-di-violante/">
+          <span class="scheda__eyebrow mono">RIF-BANDO-CONFINI-1730</span>
+          <h2 class="scheda__titolo">Bando di Violante</h2>
+          <p class="scheda__testo">
+            La nuova divisione e riforma de' confini delle Contrade, decretata il 13 settembre 1729.
+            {bando.contrade.length} Contrade, ciascuna con i propri confini.
+          </p>
+          <span class="link-arrow">Trascrizione e confini</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-6);">
+    <div class="wrap" id="registro">
+      <h2 class="blocco-titolo">Registro delle fonti normative</h2>
+      <p class="text-muted" style="max-width: var(--measure);">
+        Ogni documento è registrato con la sua consistenza materiale e con il digest SHA-256 del
+        file acquisito. Il digest non certifica l'autenticità dell'originale: certifica che la copia
+        su cui questo sito ha lavorato è quella e non un'altra.
+      </p>
+      <div class="doc-table-wrap doc-table-wrap--scroll">
+        <table class="doc-table doc-table--reflow-sm">
+          <caption class="sr-only">
+            Registro delle fonti normative con identificativo, documento, estremi, consistenza,
+            digest SHA-256 e stato documentario.
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Documento</th>
+              <th scope="col">Estremi</th>
+              <th scope="col">Consistenza</th>
+              <th scope="col" class="col-digest">SHA-256</th>
+              <th scope="col">Stato</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              registro.map((r) => (
+                <tr>
+                  <th scope="row" data-label="ID" class="mono id">
+                    {r.id}
+                  </th>
+                  <td data-label="Documento">{r.documento}</td>
+                  <td data-label="Estremi" class="estremi">
+                    {r.estremi}
+                  </td>
+                  <td data-label="Consistenza">{r.consistenza}</td>
+                  <td data-label="SHA-256" class="mono digest" title={r.sha256}>
+                    {shortDigest(r.sha256)}
+                  </td>
+                  <td data-label="Stato">{r.stato}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-12);">
+    <div class="wrap">
+      <NotaDocumentaria titolo="Che cosa il registro non dice" variante="avvertenza">
+        <p>
+          <strong>Stato «acquisito» significa che il file è stato ottenuto e verificato, non che sia
+          l'unica versione esistente né che sia autenticato dall'ente che lo ha emanato.</strong>
+          Stato «da verificare» segnala che la provenienza della copia, o il regime dei diritti, non
+          è stato accertato: quei documenti sono usati con cautela e dichiarati come tali.
+        </p>
+        <p>
+          Il repertorio <span class="mono">RIF-STRADE-CONTRADE</span> è registrato per completezza
+          documentaria ma <strong>non è ripubblicato</strong>: si tratta di un'opera editoriale
+          moderna senza attribuzione interna, per la quale non è stato accertato il regime dei
+          diritti. Resta una fonte di lavoro e di verifica interna.
+        </p>
+        <p>
+          Il registro comprende le fonti normative acquisite da questo progetto. Non è un elenco
+          delle fonti del Palio: è l'elenco di ciò su cui questo sito può rispondere.
+          <a href="/metodologia">Metodologia</a> · <a href="/fonti/">Fonti</a>.
+        </p>
+      </NotaDocumentaria>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .scheda {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  .scheda__eyebrow {
+    font-size: 0.6875rem;
+    color: var(--color-green);
+  }
+  .scheda__titolo {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    line-height: 1.25;
+    margin: 0;
+  }
+  .scheda__testo {
+    margin: 0;
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    flex: 1;
+  }
+  .blocco-titolo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin: 0 0 var(--space-2);
+  }
+  .id {
+    white-space: nowrap;
+    font-size: 0.75rem;
+  }
+  .estremi {
+    min-width: 18rem;
+    font-size: 0.875rem;
+  }
+  .col-digest {
+    white-space: nowrap;
+  }
+  .digest {
+    font-size: 0.6875rem;
+    color: var(--color-text-muted);
+    overflow-wrap: anywhere;
+  }
+</style>

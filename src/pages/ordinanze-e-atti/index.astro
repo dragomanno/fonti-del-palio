@@ -1,0 +1,176 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NotaDocumentaria from "../../components/NotaDocumentaria.astro";
+import { loadCarriera, listAtti, shortDigest } from "../../lib/carriera";
+import { renderDocumentaryMarkdown } from "../../lib/markdown";
+
+const carriera = loadCarriera();
+const atti = listAtti();
+const pubblicati = atti.filter((a) => a.ripubblicabile);
+const pagine = pubblicati.reduce((n, a) => n + a.pagine, 0);
+const richiamati = carriera.attiRichiamati.map((r) => ({
+  ...r,
+  html: renderDocumentaryMarkdown(r.scheda),
+}));
+---
+
+<BaseLayout
+  title="Ordinanze e atti per il Palio del 16 agosto 2026"
+  description="Il registro dei tredici atti acquisiti per il Palio del 16 agosto 2026, con estremi, digest di integrità e PDF originale dove ripubblicabile."
+  activePath="/ordinanze-e-atti"
+>
+  <section class="section" style="padding-block: var(--space-8) var(--space-3);">
+    <div class="wrap">
+      <span class="section-number">Registro degli atti</span>
+      <h1 class="text-title" style="font-size: var(--text-title); max-width: 22ch;">
+        Gli atti acquisiti, con la loro impronta.
+      </h1>
+      <p class="text-muted" style="max-width: var(--measure); margin-top: var(--space-2);">
+        Ogni atto è registrato con i propri estremi e con il digest SHA-256 del file acquisito, così
+        che la copia pubblicata qui sia verificabile contro l'originale. Dove il PDF non è
+        ripubblicato, la ragione è dichiarata.
+      </p>
+      <p class="text-caption" style="margin-top: var(--space-2);">
+        {atti.length} atti registrati · {pubblicati.length} PDF ripubblicati · {pagine} pagine
+        · {richiamati.length} atti richiamati e non acquisiti
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-6);">
+    <div class="wrap">
+      <ul class="atti">
+        {
+          atti.map((atto) => (
+            <li class="atto">
+              <a href={`/ordinanze-e-atti/${atto.slug}/`} class="atto__link">
+                <span class="atto__id mono">{atto.id}</span>
+                <span class="atto__titolo">{atto.titolo}</span>
+              </a>
+              <p class="atto__meta">
+                <span>{atto.data}</span>
+                <span aria-hidden="true">·</span>
+                <span>{atto.pagine} pagine</span>
+                <span aria-hidden="true">·</span>
+                <span class:list={["atto__stato", !atto.ripubblicabile && "atto__stato--riservato"]}>
+                  {atto.statoPubblico}
+                </span>
+              </p>
+              <p class="atto__digest mono" title={`SHA-256: ${atto.sha256}`}>
+                SHA-256 {shortDigest(atto.sha256)}
+              </p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-6);">
+    <div class="wrap">
+      <h2 class="blocco-titolo">Atti richiamati e non acquisiti</h2>
+      <p class="text-muted" style="max-width: var(--measure);">
+        Atti citati dai provvedimenti acquisiti, dei quali non è stato acquisito il testo. Sono
+        registrati per non far scomparire una relazione documentaria accertata: la loro assenza dal
+        sito non è un giudizio sul loro contenuto.
+      </p>
+      {
+        richiamati.map((r) => (
+          <article class="richiamato">
+            <h3 class="richiamato__id mono">{r.id}</h3>
+            <div class="prose" set:html={r.html} />
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-12);">
+    <div class="wrap">
+      <NotaDocumentaria titolo="Perimetro del registro" variante="avvertenza">
+        <p>
+          Il registro comprende il lotto di tredici PDF acquisito il 28 luglio 2026 e il documento
+          operativo del 30 luglio 2026. <strong>Non è l'elenco completo degli atti adottati dal
+          Comune di Siena per questa Carriera.</strong> Un atto assente da questa pagina non è per
+          ciò stesso inesistente: è un atto che non è stato acquisito.
+        </p>
+        <p>
+          Un atto è registrato ma non ripubblicato integralmente quando il file contiene dati
+          personali non necessari alla funzione informativa del sito. In quel caso la scheda
+          pubblica riporta esito, data, relazione e funzione dell'atto, e non il documento.
+        </p>
+        <p>
+          Fonte primaria: Albo Pretorio e pubblicazioni istituzionali del Comune di Siena. Per gli
+          effetti giuridici fa fede l'atto originale. <a href="/metodologia">Metodologia</a>.
+        </p>
+      </NotaDocumentaria>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .atti {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid var(--color-border);
+  }
+  .atto {
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .atto__link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  .atto__link:hover .atto__titolo,
+  .atto__link:focus-visible .atto__titolo {
+    color: var(--color-green);
+  }
+  .atto__id {
+    font-size: 0.75rem;
+    color: var(--color-green);
+  }
+  .atto__titolo {
+    font-family: var(--font-display);
+    font-size: 1.1875rem;
+    font-weight: 600;
+    line-height: 1.3;
+    max-width: 56ch;
+  }
+  .atto__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.5rem 0 0;
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+  }
+  .atto__stato--riservato {
+    color: var(--color-warning);
+  }
+  .atto__digest {
+    margin: 0.25rem 0 0;
+    font-size: 0.6875rem;
+    color: var(--color-text-faint);
+    overflow-wrap: anywhere;
+  }
+  .blocco-titolo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin: 0 0 var(--space-2);
+  }
+  .richiamato {
+    margin-top: var(--space-3);
+    padding-top: var(--space-2);
+    border-top: 1px solid var(--color-border);
+  }
+  .richiamato__id {
+    font-size: 0.8125rem;
+    color: var(--color-green);
+    margin: 0 0 var(--space-1);
+  }
+</style>

@@ -1,0 +1,216 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NotaDocumentaria from "../../components/NotaDocumentaria.astro";
+import { listAtti, type Atto } from "../../lib/carriera";
+import { renderDocumentaryMarkdown } from "../../lib/markdown";
+
+export function getStaticPaths() {
+  const atti = listAtti();
+  return atti.map((atto, i) => ({
+    params: { atto: atto.slug },
+    props: {
+      atto,
+      prev: i > 0 ? atti[i - 1] : null,
+      next: i < atti.length - 1 ? atti[i + 1] : null,
+    },
+  }));
+}
+
+interface Props {
+  atto: Atto;
+  prev: Atto | null;
+  next: Atto | null;
+}
+
+const { atto, prev, next } = Astro.props as Props;
+const scheda = renderDocumentaryMarkdown(atto.scheda);
+---
+
+<BaseLayout
+  title={`${atto.id} — ${atto.titolo}`}
+  description={`Scheda documentaria dell'atto ${atto.id} del ${atto.data}, acquisito per il Palio del 16 agosto 2026, con estremi, digest di integrità e provenienza.`}
+  activePath="/ordinanze-e-atti"
+>
+  <section class="section" style="padding-block: var(--space-6) var(--space-3);">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Percorso" data-pagefind-ignore>
+        <a href="/palio-16-agosto-2026/">Palio del 16 agosto 2026</a>
+        <span aria-hidden="true">/</span>
+        <a href="/ordinanze-e-atti/">Ordinanze e atti</a>
+        <span aria-hidden="true">/</span>
+        <span>{atto.id}</span>
+      </nav>
+      <span class="section-number">{atto.id}</span>
+      <h1 style="font-family: var(--font-display); font-size: var(--text-title); max-width: 26ch; margin: var(--space-1) 0 0;">
+        {atto.titolo}
+      </h1>
+
+      <dl class="estremi">
+        <div><dt>Data</dt><dd>{atto.data}</dd></div>
+        <div><dt>Consistenza</dt><dd>{atto.pagine} pagine</dd></div>
+        <div>
+          <dt>Stato pubblico</dt>
+          <dd class:list={[!atto.ripubblicabile && "estremi__riservato"]}>{atto.statoPubblico}</dd>
+        </div>
+        <div class="estremi--largo">
+          <dt>SHA-256 del file acquisito</dt>
+          <dd class="mono estremi__digest">{atto.sha256}</dd>
+        </div>
+      </dl>
+
+      {
+        atto.pdf ? (
+          <p class="azioni">
+            <a class="btn btn--primary" href={atto.pdf} download>
+              Scarica il PDF originale
+            </a>
+            <span class="azioni__nota">{atto.pagine} pagine · PDF</span>
+          </p>
+        ) : (
+          <NotaDocumentaria titolo="Perché questo atto non è ripubblicato" variante="avvertenza">
+            <p>
+              Il file acquisito contiene dati personali non necessari alla funzione informativa del
+              sito. L'atto è registrato e verificato — il digest sopra è quello del file originale —
+              ma il documento non è ripubblicato integralmente. La scheda si limita a esito, data,
+              relazione e funzione dell'atto.
+            </p>
+            <p>Il testo integrale resta consultabile presso il Comune di Siena.</p>
+          </NotaDocumentaria>
+        )
+      }
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-8);">
+    <div class="wrap">
+      <h2 class="blocco-titolo">Scheda documentaria</h2>
+      <div class="prose" set:html={scheda} />
+
+      <NotaDocumentaria titolo="Provenienza e limiti" variante="provenienza">
+        <p>
+          La scheda riproduce quanto verificato sul file acquisito. Non è una parafrasi autorizzata
+          né una interpretazione dell'atto: per il dispositivo, le eccezioni e le sanzioni fa fede
+          esclusivamente il testo originale.
+        </p>
+        <p>
+          Fonte: Comune di Siena, Albo Pretorio e pubblicazioni istituzionali. Il digest SHA-256
+          consente di verificare che la copia consultata coincida con quella acquisita da questo
+          progetto. Il progetto non è affiliato al Comune di Siena.
+        </p>
+      </NotaDocumentaria>
+
+      <nav class="pager" aria-label="Navigazione fra gli atti" data-pagefind-ignore>
+        {
+          prev ? (
+            <a href={`/ordinanze-e-atti/${prev.slug}/`} class="pager__link">
+              <span class="pager__dir">← Atto precedente</span>
+              <span class="pager__title">{prev.id}</span>
+            </a>
+          ) : (
+            <span />
+          )
+        }
+        {
+          next && (
+            <a href={`/ordinanze-e-atti/${next.slug}/`} class="pager__link pager__link--next">
+              <span class="pager__dir">Atto successivo →</span>
+              <span class="pager__title">{next.id}</span>
+            </a>
+          )
+        }
+      </nav>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: var(--text-caption);
+    color: var(--color-text-faint);
+    margin-bottom: var(--space-2);
+  }
+  .crumbs a {
+    color: var(--color-green);
+  }
+  .estremi {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    gap: var(--space-2) var(--space-3);
+    margin: var(--space-3) 0 0;
+    padding: var(--space-2) 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .estremi--largo {
+    grid-column: 1 / -1;
+  }
+  .estremi dt {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-faint);
+    margin-bottom: 0.25rem;
+  }
+  .estremi dd {
+    margin: 0;
+    font-size: 0.9375rem;
+  }
+  .estremi__riservato {
+    color: var(--color-warning);
+  }
+  .estremi__digest {
+    font-size: 0.75rem;
+    overflow-wrap: anywhere;
+    color: var(--color-text-muted);
+  }
+  .azioni {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+    margin-top: var(--space-3);
+  }
+  .azioni__nota {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-text-faint);
+  }
+  .blocco-titolo {
+    font-family: var(--font-display);
+    font-size: 1.375rem;
+    margin: 0 0 var(--space-2);
+  }
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-2);
+    margin-top: var(--space-6);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--color-border);
+  }
+  .pager__link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  .pager__link--next {
+    text-align: right;
+    margin-left: auto;
+  }
+  .pager__dir {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-green);
+  }
+  .pager__title {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 1rem;
+  }
+</style>

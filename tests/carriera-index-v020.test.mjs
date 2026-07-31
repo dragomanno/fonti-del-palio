@@ -240,3 +240,35 @@ test("l'indice del Protocollo Equino non e' toccato dalla v0.2.0", () => {
     "il generatore della Carriera non deve scrivere sull'indice del Protocollo Equino"
   );
 });
+
+test("la collazione conserva l'articolato integrale e le sue attribuzioni", () => {
+  const { collazione } = buildIndex();
+  assert.equal(collazione.prospetto.length, EXPECTED.unitaArticolo);
+  assert.equal(collazione.totale, EXPECTED.unitaArticolo);
+  // Il totale della sintesi deve coincidere con l'articolato: una sintesi che
+  // non somma e' una sintesi che ha perso una riga.
+  assert.equal(
+    collazione.sintesi.reduce((n, r) => n + r.articoli, 0),
+    EXPECTED.unitaArticolo
+  );
+  assert.equal(
+    collazione.prospetto.filter((r) => r.prospetto2019).length,
+    EXPECTED.articoliProspetto2019
+  );
+  // L'art. 99bis e' l'unita' inserita nel 1999: la sua presenza distingue un
+  // articolato completo da uno troncato alla numerazione semplice.
+  assert.ok(collazione.prospetto.some((r) => r.articolo === "99bis"));
+  for (const riga of collazione.prospetto) {
+    assert.match(riga.somiglianza, /^\d\.\d{3}$/, `somiglianza non normalizzata: ${riga.articolo}`);
+    assert.ok(riga.rubrica.length > 0, `rubrica vuota all'art. ${riga.articolo}`);
+    assert.ok(riga.esito.length > 0, `esito vuoto all'art. ${riga.articolo}`);
+  }
+});
+
+test("il registro delle fonti espone lo stato come testo, non come marcatura", () => {
+  const { registroFonti } = buildIndex();
+  for (const record of registroFonti) {
+    assert.ok(!record.stato.includes("`"), `stato ancora in code span: ${record.id}`);
+    assert.match(record.sha256, /^[0-9a-f]{64}$/, `digest non valido: ${record.id}`);
+  }
+});

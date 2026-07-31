@@ -1,0 +1,166 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NotaDocumentaria from "../../components/NotaDocumentaria.astro";
+import {
+  listRegistroFonti,
+  getCollazione,
+  demoteHeadings,
+  REGOLAMENTO_VIGENTE_LABEL,
+} from "../../lib/carriera";
+import { renderDocumentaryMarkdown } from "../../lib/markdown";
+
+const registro = listRegistroFonti();
+const vigente = registro.find((r) => r.id === "REG-PALIO-2019")!;
+const comunicato = registro.find((r) => r.id === "COM-2021-05-REGOLAMENTO-001")!;
+const collazione = getCollazione();
+const riscritture = renderDocumentaryMarkdown(demoteHeadings(collazione.riscritture, 0));
+---
+
+<BaseLayout
+  title="Regolamento per il Palio — edizione vigente"
+  description="L'edizione vigente del Regolamento per il Palio: approvata nel 2019 con due deliberazioni del Consiglio Comunale e presentata nel 2021, con provenienza e digest di integrità."
+  activePath="/documenti-fondamentali"
+>
+  <section class="section" style="padding-block: var(--space-6) var(--space-3);">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Percorso" data-pagefind-ignore>
+        <a href="/documenti-fondamentali/">Documenti fondamentali</a>
+        <span aria-hidden="true">/</span>
+        <span>Regolamento per il Palio</span>
+      </nav>
+      <span class="section-number">{vigente.id}</span>
+      <h1 style="font-family: var(--font-display); font-size: var(--text-title); max-width: 24ch; margin: var(--space-1) 0 0;">
+        Regolamento per il Palio
+      </h1>
+      <p class="occhiello">{REGOLAMENTO_VIGENTE_LABEL}</p>
+
+      <dl class="estremi">
+        <div class="estremi--largo"><dt>Estremi</dt><dd>{vigente.estremi}</dd></div>
+        <div><dt>Consistenza</dt><dd>{vigente.consistenza}</dd></div>
+        <div><dt>Stato</dt><dd>{vigente.stato}</dd></div>
+        <div class="estremi--largo">
+          <dt>SHA-256 del file acquisito</dt>
+          <dd class="mono estremi__digest">{vigente.sha256}</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-6);">
+    <div class="wrap">
+      <h2 class="blocco-titolo">Approvazione e presentazione sono due date diverse</h2>
+      <div class="prose">
+        <p>
+          L'edizione vigente è stata <strong>approvata nel 2019</strong>, con le deliberazioni del
+          Consiglio Comunale n. 99 del 17 giugno 2019 e n. 224 del 28 novembre 2019. È stata
+          <strong>presentata al pubblico nel 2021</strong>, nell'Entrone di Palazzo Comunale, venerdì
+          28 maggio 2021; il PDF diffuso dall'Ufficio Palio reca la data di generazione del 29 maggio
+          2021.
+        </p>
+        <p>
+          La distinzione non è pedanteria. Chiamare «Regolamento del 2021» un testo approvato nel
+          2019 sposta di due anni la decorrenza delle sue norme e rende inintelligibile il fatto che
+          gli articoli 37 e 38 fossero già applicati in via sperimentale a partire dal Palio di
+          luglio 2019. Qui l'edizione è identificata dalla sua approvazione; la presentazione del
+          2021 è registrata come evento distinto, documentato dal comunicato stampa
+          <span class="mono">{comunicato.id}</span>.
+        </p>
+        <p>
+          L'edizione che ha preceduto questa risale al 1949 ed è consultabile come
+          <a href="/regolamento-per-il-palio/edizione-previgente/">riferimento storico</a>, insieme
+          alla collazione articolo per articolo fra le due.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-6);">
+    <div class="wrap">
+      <h2 class="blocco-titolo">Che cosa la revisione del 2019 ha riscritto</h2>
+      <p class="text-muted" style="max-width: var(--measure);">
+        Il confronto testuale fra le due edizioni individua {collazione.totale} unità articolo, di
+        cui cinque interamente riscritte. Le altre differenze, dalla modifica puntuale alla sola
+        variazione tipografica, sono nel
+        <a href="/regolamento-per-il-palio/edizione-previgente/#prospetto">prospetto completo</a>.
+      </p>
+      <div class="prose" set:html={riscritture} />
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-12);">
+    <div class="wrap">
+      <NotaDocumentaria titolo="Provenienza e limiti" variante="provenienza">
+        <p>
+          Questa pagina descrive il documento e ne dichiara l'impronta; <strong>non ne riproduce il
+          testo integrale e non lo sostituisce.</strong> Per il testo fa fede la pubblicazione del
+          Comune di Siena. Il digest SHA-256 permette di verificare che la copia consultata coincida
+          con quella su cui questo progetto ha lavorato.
+        </p>
+        <p>
+          Il Regolamento disciplina la corsa in via generale. Le prescrizioni operative di una
+          singola Carriera stanno negli atti di quell'anno: per il 16 agosto 2026, nel
+          <a href="/ordinanze-e-atti/">registro degli atti</a>. Regolamento e ordinanze non vanno
+          confusi né sommati.
+        </p>
+        <p>
+          Il progetto non è un servizio del Comune di Siena e non ha alcun rapporto di
+          rappresentanza con l'amministrazione. <a href="/metodologia">Metodologia</a>.
+        </p>
+      </NotaDocumentaria>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: var(--text-caption);
+    color: var(--color-text-faint);
+    margin-bottom: var(--space-2);
+  }
+  .crumbs a {
+    color: var(--color-green);
+  }
+  .occhiello {
+    max-width: var(--measure);
+    margin-top: var(--space-2);
+    color: var(--color-text-muted);
+  }
+  .estremi {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    gap: var(--space-2) var(--space-3);
+    margin: var(--space-3) 0 0;
+    padding: var(--space-2) 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .estremi--largo {
+    grid-column: 1 / -1;
+  }
+  .estremi dt {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-faint);
+    margin-bottom: 0.25rem;
+  }
+  .estremi dd {
+    margin: 0;
+    font-size: 0.9375rem;
+  }
+  .estremi__digest {
+    font-size: 0.75rem;
+    overflow-wrap: anywhere;
+    color: var(--color-text-muted);
+  }
+  .blocco-titolo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    max-width: 30ch;
+    margin: 0 0 var(--space-2);
+  }
+</style>

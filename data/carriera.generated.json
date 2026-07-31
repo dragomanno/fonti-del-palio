@@ -874,7 +874,7 @@
       "estremi": "approvato con deliberazioni del Consiglio Comunale n. 99 del 17.6.2019 e n. 224 del 28.11.2019; pubblicazione dell'Ufficio Palio presentata il 28 maggio 2021",
       "consistenza": "82 pagine, 1.988.492 byte",
       "sha256": "a09afe7b863f7b1b5329f8fb069503a59dc67b92053c3a156b7d62ce9855b86d",
-      "stato": "`acquisito`"
+      "stato": "acquisito"
     },
     {
       "id": "REG-PALIO-1949",
@@ -882,7 +882,7 @@
       "estremi": "approvato con deliberazione del Consiglio Comunale n. 14 del 05.02.1949 e s.m.i.; ultima modifica registrata nel prospetto: 10.08.1999",
       "consistenza": "45 pagine, 403.343 byte",
       "sha256": "faf7238de030f7ab368160775702b23ebc28d4cc5c8090faef7145a681b1f112",
-      "stato": "`acquisito`, valore storico"
+      "stato": "acquisito, valore storico"
     },
     {
       "id": "COM-2021-05-REGOLAMENTO-001",
@@ -890,7 +890,7 @@
       "estremi": "presentazione nell'Entrone di Palazzo Comunale, venerdì 28 maggio 2021; PDF generato il 29 maggio 2021",
       "consistenza": "2 pagine, 95.391 byte",
       "sha256": "f8d4a39427b4328f7546f4a5ea712973a7a415371574f5a5e61c9dc79ab77d6a",
-      "stato": "`acquisito`"
+      "stato": "acquisito"
     },
     {
       "id": "RIF-BANDO-CONFINI-1730",
@@ -898,7 +898,7 @@
       "estremi": "decretato dalla Principessa Violante di Baviera il 13 settembre 1729; deliberazione della Balìa di venerdì 19 agosto 1729; relazione dei deputati del 27 luglio 1729",
       "consistenza": "8 paragrafi, 102.338 byte",
       "sha256": "6f9ddbaf49238aab88343c359f491a2dee3544d0af3b8ca5132ebe3226d9147b",
-      "stato": "`da_verificare` quanto alla provenienza della trascrizione"
+      "stato": "da_verificare quanto alla provenienza della trascrizione"
     },
     {
       "id": "RIF-STRADE-CONTRADE",
@@ -906,9 +906,781 @@
       "estremi": "opera editoriale moderna, senza attribuzione interna",
       "consistenza": "796 paragrafi, 121.949 byte",
       "sha256": "fab21455a27e58f9a564322668f6e83f7f87a3786c9e104f041bc53bf74a469d",
-      "stato": "`da_verificare` quanto a provenienza e diritti"
+      "stato": "da_verificare quanto a provenienza e diritti"
     }
   ],
+  "collazione": {
+    "sintesi": [
+      {
+        "esito": "riscritto",
+        "articoli": 5
+      },
+      {
+        "esito": "modificato",
+        "articoli": 18
+      },
+      {
+        "esito": "modifica puntuale",
+        "articoli": 36
+      },
+      {
+        "esito": "solo differenze tipografiche",
+        "articoli": 24
+      },
+      {
+        "esito": "invariato nella sostanza",
+        "articoli": 23
+      }
+    ],
+    "totale": 106,
+    "prospetto": [
+      {
+        "articolo": "1",
+        "rubrica": "Corse del Palio - Palii ordinari",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "2",
+        "rubrica": "Palii straordinari - Indizione",
+        "esito": "modificato",
+        "somiglianza": "0.899",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "3",
+        "rubrica": "Annunci al pubblico",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "4",
+        "rubrica": "Contrade: Stemmi e colori - Partecipazione ai Palii",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.979",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "5",
+        "rubrica": "Palii Straordinari - diritto di partecipazione",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "6",
+        "rubrica": "Palii ordinari - Rinunce",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "7",
+        "rubrica": "Soprintendenza e direzione dei Palii",
+        "esito": "modificato",
+        "somiglianza": "0.742",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "8",
+        "rubrica": "Pubblici concorsi e lotterie - Divieto",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.983",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "9",
+        "rubrica": "Contrade - Stato giuridico",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.986",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "10",
+        "rubrica": "Contrade - Nomina di Commissario",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "11",
+        "rubrica": "Contrade - Rapporti con il Comune",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "12",
+        "rubrica": "Contrade - Notifica del Seggio al Comune",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "13",
+        "rubrica": "Contrade - Legittimo rappresentante",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "14",
+        "rubrica": "Capitano - Approvazione",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "15",
+        "rubrica": "Capitano - Eleggibilità",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.964",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "16",
+        "rubrica": "Nomina del Capitano - Ricorsi",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.977",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "17",
+        "rubrica": "Fiduciari del Capitano - Approvazione",
+        "esito": "modificato",
+        "somiglianza": "0.650",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "18",
+        "rubrica": "Priori e Capitani - Impedimenti - Sostituzione nei rapporti con il Comune",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "19",
+        "rubrica": "Palco dei Priori e Palco dei Giudici - Persone ammesse",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.978",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "20",
+        "rubrica": "Sorteggio delle Contrade - Adunanza - Avviso al pubblico",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.991",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "21",
+        "rubrica": "Sorteggio delle Contrade - Operazioni preparatorie",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "22",
+        "rubrica": "Sorteggio delle Contrade - Modalità di estrazione delle Contrade che parteciperanno",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.992",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "23",
+        "rubrica": "Sorteggio delle Contrade - Modalità di estrazione delle Contrade che non",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.993",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "24",
+        "rubrica": "Sorteggio delle Contrade - Determinazione ordine delle Contrade nel Corteo Storico",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "25",
+        "rubrica": "Acquisizione del diritto di correre per rinuncia di altra Contrada - Ordine nel",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.985",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "26",
+        "rubrica": "Estrazione delle Contrade - Annuncio al pubblico - Esposizione bandiere",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.986",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "27",
+        "rubrica": "Palio Straordinario - Sorteggio delle Contrade - Modalità",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.996",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "28",
+        "rubrica": "Palio Straordinario - Sorteggio delle Contrade - Annuncio al pubblico - Esposizione",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.985",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "29",
+        "rubrica": "Sorteggio delle Contrade - Divieto di partecipazione alle Contrade che abbiano fatto",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.974",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "30",
+        "rubrica": "Sorteggio delle Contrade - Adunanza successiva con i Capitani delle dieci Contrade",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.970",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "31",
+        "rubrica": "Nomina del Mossiere - Proposte dei Capitani",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.978",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "32",
+        "rubrica": "Adunanze dei Capitani - Solo per la corsa in oggetto - Esclusi argomenti generali",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "33",
+        "rubrica": "Adunanze Capitani - Varie",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.990",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "34",
+        "rubrica": "Presentazione, scelta, assegnazione dei cavalli - Predisposizioni",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "35",
+        "rubrica": "Presentazione, scelta, assegnazione dei cavalli - Persone autorizzate ad eccedere alla",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.982",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "36",
+        "rubrica": "Presentazione, scelta, assegnazione dei cavalli - Divieto di accesso alla Corte del",
+        "esito": "modificato",
+        "somiglianza": "0.940",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "37",
+        "rubrica": "Presentazione, scelta, assegnazione dei cavalli - Modalità di presentazione dei cavalli",
+        "esito": "riscritto",
+        "somiglianza": "0.338",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "38",
+        "rubrica": "Presentazione dei cavalli - Responsabilità dei proprietari - Obblighi del proprietario",
+        "esito": "riscritto",
+        "somiglianza": "0.589",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "39",
+        "rubrica": "Presentazione dei cavalli - Annotazione da apposito elenco, contrassegnato con",
+        "esito": "modificato",
+        "somiglianza": "0.800",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "40",
+        "rubrica": "Eventuale requisizione cavalli occorrenti - Compensi",
+        "esito": "riscritto",
+        "somiglianza": "0.036",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "41",
+        "rubrica": "Scelta dei cavalli - Corse di prova",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "42",
+        "rubrica": "Scelta dei cavalli - Suddivisione in batterie",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "43",
+        "rubrica": "Corse di prova - Fantini a disposizione del Comune - Obbligo di iscrizione in",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.992",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "44",
+        "rubrica": "Corse di prova - Disposizioni - Rinvio per pioggia",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "45",
+        "rubrica": "Scelta dei cavalli - Adunanza",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "46",
+        "rubrica": "Adunanza per la scelta dei cavalli - Votazione - Procedura per eliminazione",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "47",
+        "rubrica": "Ritiro dei cavalli non prescelti",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "48",
+        "rubrica": "Assegnazione dei cavalli - Modalità",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.997",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "49",
+        "rubrica": "Assegnazione dei cavalli - Diritto d'uso delle Contrade - Responsabilità",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "50",
+        "rubrica": "Assegnazione dei cavalli - Obbligo di partecipazione alle prove - Divieto di",
+        "esito": "modificato",
+        "somiglianza": "0.873",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "51",
+        "rubrica": "Incidenti nelle operazioni - Soluzioni",
+        "esito": "modificato",
+        "somiglianza": "0.943",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "52",
+        "rubrica": "Corse di prova - Obblighi delle Contrade",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.993",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "53",
+        "rubrica": "Corse di prova - Ritardo o soppressione causa pioggia",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "54",
+        "rubrica": "Corse di prova - Obblighi delle Contrade - Assegnazione dei posti nel cortile del",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.989",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "55",
+        "rubrica": "Corte del Potestà - Persone autorizzate ad accedervi durante le prove",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.989",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "56",
+        "rubrica": "Corse di prova - Esonero dal parteciparvi",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.960",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "57",
+        "rubrica": "Finimenti del cavallo - Definizione",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "58",
+        "rubrica": "Fantino - Scelta delle Contrade - Approvazione del Comune - Soprannome",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "59",
+        "rubrica": "Fantini - Divieti alle Contrade per la monta",
+        "esito": "modificato",
+        "somiglianza": "0.734",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "60",
+        "rubrica": "Fantini - Responsabilità propria",
+        "esito": "riscritto",
+        "somiglianza": "0.467",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "61",
+        "rubrica": "Fantini - Obbligo di indossare il giubbetto",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "62",
+        "rubrica": "Chiamata delle Contrade per le prove - Ordine delle mosse",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.994",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "63",
+        "rubrica": "Fantini - Dipendenza Autorità Comunale e Mossiere",
+        "esito": "modificato",
+        "somiglianza": "0.627",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "64",
+        "rubrica": "Fantini - Obblighi per la Mossa",
+        "esito": "modificato",
+        "somiglianza": "0.890",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "65",
+        "rubrica": "Mossa - Validità",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "66",
+        "rubrica": "Fantini - Obbligo di compiere tre giri",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "67",
+        "rubrica": "Fantini - Divieti durante la corsa",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "68",
+        "rubrica": "Fantini - Obbligo di mettersi fuori giostra se doppiati",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "69",
+        "rubrica": "Fantini caduti - Soccorsi",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "70",
+        "rubrica": "Vittoria della corsa",
+        "esito": "modificato",
+        "somiglianza": "0.854",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "71",
+        "rubrica": "Vincita della prova - Privilegi o premi",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.980",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "72",
+        "rubrica": "Corteo Storico - Composizione",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "73",
+        "rubrica": "Composizione delle Comparse della Contrada",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.994",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "74",
+        "rubrica": "Abrogato",
+        "esito": "modificato",
+        "somiglianza": "0.857",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "75",
+        "rubrica": "Note delle Comparse - Approvazione",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "76",
+        "rubrica": "Contrade - Obbligo di montare il fantino sul Soprallasso",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "77",
+        "rubrica": "Contrade - Ordine di partecipazione al Corteo Storico",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.998",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "78",
+        "rubrica": "Riunione delle Comparse per il Corteo Storico",
+        "esito": "modificato",
+        "somiglianza": "0.910",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "79",
+        "rubrica": "Doveri dei Figuranti",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "80",
+        "rubrica": "Obbligo dei Figuranti di prendere posto nel palco riservato",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "81",
+        "rubrica": "Corteo Storico - Sfilamento",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "82",
+        "rubrica": "Corteo Storico - Sbandierata collettiva - Ritiro del costume del Fantino",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.992",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "83",
+        "rubrica": "Contrade - Divieto di ritiro del cavallo",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "84",
+        "rubrica": "Corsa del Palio - Obblighi e divieti per i fantini",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "85",
+        "rubrica": "Corsa del Palio - Ordine di chiamata al canape",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.955",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "86",
+        "rubrica": "Abrogato",
+        "esito": "modificato",
+        "somiglianza": "0.833",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "87",
+        "rubrica": "Corsa del Palio - Applicabilità articoli precedenti",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "88",
+        "rubrica": "Vincita del Palio - Consegna Drappellone - Esposizione bandiera alla Trifora",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "89",
+        "rubrica": "Divieto di fare partiti",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "90",
+        "rubrica": "Rinvio del Palio per pioggia",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "91",
+        "rubrica": "Diverbi sul Palco dei Giudici",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.960",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "92",
+        "rubrica": "Relazione dei Deputati della Festa",
+        "esito": "modificato",
+        "somiglianza": "0.797",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "93",
+        "rubrica": "Drappellone - Caratteristiche - Esposizioni - Proprietà",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.967",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "94",
+        "rubrica": "Drappellone - Pittura",
+        "esito": "modificato",
+        "somiglianza": "0.930",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "95",
+        "rubrica": "Premio in denaro alla Contrada vincitrice",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "96",
+        "rubrica": "Premio al proprietario del cavallo vittorioso",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.982",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "97",
+        "rubrica": "Contrade: punizioni previste",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "98",
+        "rubrica": "Punizioni alle Contrade - Modalità di Comminazione",
+        "esito": "modificato",
+        "somiglianza": "0.718",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "99",
+        "rubrica": "Punizioni ai Fantini - Modalità di comminazione",
+        "esito": "riscritto",
+        "somiglianza": "0.528",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "99bis",
+        "rubrica": "Raccolta delle sanzioni comminate",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.989",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "100",
+        "rubrica": "Punizioni a Fantini e Contrade - Provvedimenti d'urgenza",
+        "esito": "modificato",
+        "somiglianza": "0.917",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "101",
+        "rubrica": "Responsabilità oggettiva delle Contrade",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "102",
+        "rubrica": "Disposizioni o provvedimenti imprevisti",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "103",
+        "rubrica": "Precisazioni - Assessore Delegato",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.970",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "104",
+        "rubrica": "Entrata in vigore",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.975",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "105",
+        "rubrica": "Abrogazioni",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      }
+    ],
+    "riscritture": "**Art. 37 — presentazione e scelta dei cavalli.** È l'intervento più profondo, con somiglianza sostanziale 0,338. L'edizione previgente prevedeva la presentazione diretta dei cavalli alla scelta; la vigente introduce la **preiscrizione**, le cui modalità sono stabilite con apposita ordinanza per ogni Palio. Da qui discende la catena documentaria che nel 2026 porta all'elenco dei cavalli ammessi alle previsite.\n\n**Art. 38 — responsabilità e noleggio.** L'edizione previgente disciplinava l'esonero di responsabilità del Comune e l'affissione del testo nella Corte del Podestà. La vigente demanda a un dirigente incaricato, con proprio atto, le funzioni relative al noleggio dei cavalli presentati alla tratta e di quelli prescelti dai dieci Capitani.\n\n**Art. 40 — requisizione dei cavalli.** Abrogato dalla deliberazione n. 99 del 17.6.2019. L'edizione vigente ne conserva la rubrica con la sola dicitura di abrogazione. La disposizione previgente imponeva al Comune la requisizione dei cavalli occorrenti qualora i presentati fossero meno di dieci.\n\n**Art. 60 — responsabilità propria dei Fantini.** Cade il meccanismo dell'affissione del testo nella Corte del Podestà. Subentra la presa d'atto individuale mediante **firma nell'apposito elenco di cui all'art. 43** e la sottoscrizione di una liberatoria.\n\n**Art. 99 — punizioni ai Fantini.** Introdotta la **diffida** come nuova sanzione, in posizione a) della scala sanzionatoria, con conseguente scorrimento delle lettere successive. Il procedimento passa dalla proposta motivata di provvedimento alla **contestazione degli addebiti**, fondata esclusivamente sulla Relazione.",
+    "anomalie": "1. **Art. 16, edizione vigente.** L'estrazione restituisce «suffragare i motivi addotti.x La Giunta Comunale comunica...». Il carattere `x` isolato dopo il punto non ha senso testuale: può essere un richiamo di nota, un refuso di stampa o un artefatto di estrazione. Va verificato sulla pagina originale prima di qualsiasi uso citazionale.\n2. **Completezza del prospetto previgente.** Il prospetto dell'edizione previgente omette almeno l'integrazione del 1998 all'art. 39. Non può quindi essere usato come censimento affidabile delle modificazioni anteriori al 1999.\n3. **Intervallo 1999-2019.** Nessuna delle due edizioni documenta modificazioni fra il 10.8.1999 e il 17.6.2019. L'assenza di righe nel prospetto non dimostra che non ve ne siano state.",
+    "limiti": "1. Non dimostra che il testo vigente sia quello attualmente in vigore: eventuali modificazioni successive al 28 novembre 2019 non sono state verificate presso il Comune di Siena.\n2. Non sostituisce la lettura degli atti. Le classificazioni `riscritto`, `modificato` e `modifica puntuale` misurano una distanza testuale, non la portata giuridica di un intervento: una modifica di poche parole può avere effetti maggiori di una riscrittura.\n3. Non è una collazione notarile. È stata verificata per campioni sui casi più rilevanti; gli scarti minori non sono stati controllati uno per uno sull'originale a stampa.\n4. Non attribuisce a una singola deliberazione le variazioni degli articoli toccati da più atti nel tempo. Il prospetto indica quali articoli sono stati modificati e da quale atto, non quale parola sia stata cambiata da quale deliberazione."
+  },
   "bando": {
     "meta": {
       "id": "RIF-BANDO-CONFINI-1730",

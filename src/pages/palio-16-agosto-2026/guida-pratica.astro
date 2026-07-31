@@ -1,0 +1,141 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NotaDocumentaria from "../../components/NotaDocumentaria.astro";
+import { listGuida, demoteHeadings } from "../../lib/carriera";
+import { renderDocumentaryMarkdown } from "../../lib/markdown";
+
+const sezioni = listGuida().map((s) => ({
+  ...s,
+  html: renderDocumentaryMarkdown(demoteHeadings(s.corpo, 1)),
+}));
+---
+
+<BaseLayout
+  title="Guida pratica al Palio del 16 agosto 2026"
+  description="Che cosa è consentito e che cosa è vietato in Piazza del Campo per il Palio del 16 agosto 2026, in forma diretta e con il rinvio all'atto che lo stabilisce."
+  activePath="/palio-16-agosto-2026"
+>
+  <section class="section" style="padding-block: var(--space-6) var(--space-3);">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Percorso" data-pagefind-ignore>
+        <a href="/palio-16-agosto-2026/">Palio del 16 agosto 2026</a>
+        <span aria-hidden="true">/</span>
+        <span>Guida pratica</span>
+      </nav>
+      <span class="section-number">Guida pratica</span>
+      <h1 style="font-family: var(--font-display); font-size: var(--text-title); max-width: 24ch; margin: var(--space-1) 0 0;">
+        Che cosa sapere prima di andare in Piazza
+      </h1>
+      <p class="text-muted" style="max-width: var(--measure); margin-top: var(--space-2);">
+        Le stesse prescrizioni della disciplina consolidata, dette in forma diretta. Ogni risposta
+        rinvia all'atto che la stabilisce, così che la formulazione semplice non prenda il posto
+        della fonte.
+      </p>
+      <p class="text-caption" style="margin-top: var(--space-2);">{sezioni.length} sezioni</p>
+
+      <NotaDocumentaria titolo="Che valore ha questa pagina" variante="avvertenza">
+        <p>
+          È una guida di lettura, non un atto e non un servizio informativo ufficiale. Dove la
+          formulazione semplificata e il testo dell'ordinanza divergono, vale l'ordinanza. Il
+          testo integrale degli atti è nella <a href="/ordinanze-e-atti/">pagina degli atti</a>;
+          la ricostruzione per materia è in
+          <a href="/palio-16-agosto-2026/accesso-e-sicurezza/">accesso, sicurezza e servizi</a>.
+        </p>
+      </NotaDocumentaria>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-6);">
+    <div class="wrap">
+      <nav class="indice" aria-labelledby="indice-guida" data-pagefind-ignore>
+        <h2 id="indice-guida" class="indice__titolo">Sezioni</h2>
+        <ol class="indice__lista">
+          {
+            sezioni.map((s) => (
+              <li>
+                <a href={`#${s.slug}`}>{s.titolo}</a>
+              </li>
+            ))
+          }
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-12);">
+    <div class="wrap">
+      {
+        sezioni.map((s) => (
+          <article class="sezione" id={s.slug}>
+            <h2 class="sezione__titolo">{s.titolo}</h2>
+            <div class="prose" set:html={s.html} />
+          </article>
+        ))
+      }
+
+      <NotaDocumentaria titolo="In caso di variazione" variante="provenienza">
+        <p>
+          Programmi, orari e prescrizioni possono essere modificati con atti successivi, anche a
+          ridosso della Carriera. Questa pagina riflette gli atti acquisiti alla data indicata nel
+          <a href="/ordinanze-e-atti/">registro</a> e non è aggiornata in tempo reale: prima di
+          fare affidamento su un orario o su un divieto, verificare l'atto originale sui canali del
+          Comune di Siena.
+        </p>
+      </NotaDocumentaria>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: var(--text-caption);
+    color: var(--color-text-faint);
+    margin-bottom: var(--space-2);
+  }
+  .crumbs a {
+    color: var(--color-green);
+  }
+  .indice {
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-3) 0;
+  }
+  .indice__titolo {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-faint);
+    margin: 0 0 var(--space-2);
+  }
+  .indice__lista {
+    columns: 2;
+    column-gap: var(--space-4);
+    margin: 0;
+    padding-left: 1.25rem;
+    font-size: 0.9375rem;
+  }
+  .indice__lista li {
+    break-inside: avoid;
+    margin-bottom: 0.375rem;
+  }
+  @media (max-width: 40rem) {
+    .indice__lista {
+      columns: 1;
+    }
+  }
+  .sezione {
+    padding-top: var(--space-5);
+    scroll-margin-top: var(--space-3);
+  }
+  .sezione__titolo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin: 0 0 var(--space-2);
+    max-width: 30ch;
+  }
+</style>

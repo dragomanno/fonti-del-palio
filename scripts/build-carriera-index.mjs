@@ -35,6 +35,7 @@ const KB09 = "09_KB_Corpus_Ordinanze_e_Atti_Palio_Agosto_2026.md";
 const KB10 = "10_KB_Disciplina_Consolidata_Accesso_Sicurezza_e_Servizi_Agosto_2026.md";
 const KB11 = "11_KB_Guida_Pratica_Palio_16_Agosto_2026.md";
 const KB12 = "12_KB_Manifest_Generale_Fonti_del_Palio_2026.md";
+const KB14 = "14_KB_Collazione_Regolamento_Previgente_Vigente.md";
 
 /** Invarianti strutturali attese: sono il gate del checkpoint, non decorazione. */
 export const EXPECTED = {
@@ -48,6 +49,9 @@ export const EXPECTED = {
   contrade: 17,
   recordRegistro: 5,
   pagineAttiPubblicati: 35,
+  unitaArticolo: 106,
+  articoliProspetto2019: 24,
+  riscritture: 5,
 };
 
 function read(dir, name) {
@@ -221,6 +225,37 @@ function buildGuida(kb11) {
   }));
 }
 
+/**
+ * Collazione fra le due edizioni del Regolamento.
+ *
+ * Il prospetto e' riprodotto per intero perche' e' il dato: una sintesi senza
+ * l'articolato non consente di verificare l'attribuzione di una modifica a una
+ * delibera. Le percentuali di somiglianza restano come calcolate, non arrotondate.
+ */
+function buildCollazione(kb14) {
+  const sintesi = parseTable(section(kb14, "## 3. Sintesi")).body.map((row) => ({
+    esito: plain(row[0]),
+    articoli: Number(plain(row[1])),
+  }));
+  const prospetto = parseTable(section(kb14, "## 8. Prospetto completo articolo per articolo")).body.map(
+    (row) => ({
+      articolo: row[0],
+      rubrica: row[1],
+      esito: row[2],
+      somiglianza: row[3],
+      prospetto2019: row[4] === "sì",
+    })
+  );
+  return {
+    sintesi: sintesi.filter((r) => r.esito !== "totale"),
+    totale: sintesi.find((r) => r.esito === "totale")?.articoli ?? 0,
+    prospetto,
+    riscritture: section(kb14, "### 4.1 Le cinque riscritture integrali"),
+    anomalie: section(kb14, "## 6. Anomalie da verificare sull'originale"),
+    limiti: section(kb14, "## 7. Cosa questa collazione non dimostra"),
+  };
+}
+
 function buildRegistro(kb12) {
   const { body } = parseTable(section(kb12, "## 8.1 Registro"));
   return body.map((row) => ({
@@ -229,7 +264,9 @@ function buildRegistro(kb12) {
     estremi: row[2],
     consistenza: row[3],
     sha256: plain(row[4]),
-    stato: row[5],
+    // Nel registro lo stato e' scritto in code span: qui serve come testo, non
+    // come marcatura, perche' viene reso in una cella e non in un blocco prose.
+    stato: row[5].replace(/`/g, ""),
   }));
 }
 
@@ -271,6 +308,7 @@ export function buildIndex() {
   const kb10 = read(CARRIERE, KB10);
   const kb11 = read(CARRIERE, KB11);
   const kb12 = read(CARRIERE, KB12);
+  const kb14 = read(CARRIERE, KB14);
 
   const atti = buildAtti(kb09);
   const cavalli = buildCavalli(kb09);
@@ -298,6 +336,7 @@ export function buildIndex() {
     materie: buildMaterie(kb10),
     guida: buildGuida(kb11),
     registroFonti: buildRegistro(kb12),
+    collazione: buildCollazione(kb14),
     bando,
   };
 
@@ -325,6 +364,23 @@ export function verify(index) {
   eq("sezioni della guida", index.guida.length, EXPECTED.sezioniGuida);
   eq("Contrade del Bando", index.bando.contrade.length, EXPECTED.contrade);
   eq("record del registro fonti", index.registroFonti.length, EXPECTED.recordRegistro);
+  eq("unità articolo collazionate", index.collazione.prospetto.length, EXPECTED.unitaArticolo);
+  eq("totale dichiarato nella sintesi", index.collazione.totale, EXPECTED.unitaArticolo);
+  eq(
+    "articoli attribuiti al prospetto 2019",
+    index.collazione.prospetto.filter((r) => r.prospetto2019).length,
+    EXPECTED.articoliProspetto2019
+  );
+  eq(
+    "riscritture integrali",
+    index.collazione.sintesi.find((r) => r.esito === "riscritto")?.articoli ?? 0,
+    EXPECTED.riscritture
+  );
+  eq(
+    "somma della sintesi",
+    index.collazione.sintesi.reduce((n, r) => n + r.articoli, 0),
+    EXPECTED.unitaArticolo
+  );
   eq(
     "pagine complessive degli atti pubblicati",
     index.atti.filter((a) => a.ripubblicabile).reduce((n, a) => n + a.pagine, 0),
@@ -393,7 +449,8 @@ function main() {
       `(${index.atti.filter((a) => a.ripubblicabile).length} ripubblicabili), ` +
       `${index.previsite.cavalli.length} cavalli, ${index.materie.length} materie, ` +
       `${index.guida.length} sezioni di guida, ${index.bando.contrade.length} Contrade, ` +
-      `${index.registroFonti.length} record di registro.`
+      `${index.registroFonti.length} record di registro, ` +
+      `${index.collazione.prospetto.length} unità articolo collazionate.`
   );
 }
 

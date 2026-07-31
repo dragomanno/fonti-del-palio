@@ -7,10 +7,11 @@
   "scripts": {
     "dev": "astro dev",
     "check": "node scripts/check-env.mjs && tsc --noEmit",
-    "build": "node scripts/check-env.mjs && node scripts/build-content-index.mjs && astro build && node scripts/build-sitemap.mjs && pagefind --site dist",
+    "build": "node scripts/check-env.mjs && node scripts/build-content-index.mjs && node scripts/build-carriera-index.mjs && astro build && node scripts/build-sitemap.mjs && pagefind --site dist",
     "preview": "astro preview",
     "chunk:diagnostic": "node scripts/chunk-diagnostic.mjs",
     "index:build": "node scripts/build-content-index.mjs",
+    "carriera:build": "node scripts/build-carriera-index.mjs",
     "embeddings:build": "echo 'embeddings:build e riservato alla fase A2 (post-M6). Vedi data/static-site-milestone-plan.md.' && exit 1",
     "test": "node --test --test-concurrency=1 tests/*.test.mjs",
     "search:index": "pagefind --site dist",

@@ -1,0 +1,61 @@
+---
+/**
+ * Changelog della versione corrente.
+ *
+ * La pagina rende il file `CHANGELOG_v0.2.0.md` della radice del repository,
+ * con lo stesso meccanismo gia' usato per Privacy e Disclaimer: il Markdown
+ * resta la fonte, la rotta e' solo una vista. I changelog delle versioni
+ * precedenti restano nel repository e sono raggiungibili da GitHub, senza
+ * moltiplicare rotte pubbliche per materiale storico di manutenzione.
+ */
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+import path from "node:path";
+import { marked } from "marked";
+import { GITHUB_URL } from "../config/site";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const changelogRaw = readFileSync(path.resolve(__dirname, "../../CHANGELOG_v0.2.0.md"), "utf-8");
+const changelogHtml = marked.parse(changelogRaw);
+
+const precedenti = [
+  { versione: "v0.1.1", file: "CHANGELOG_v0.1.1.md", nota: "Tabelle documentarie responsive e build Netlify" },
+  { versione: "v0.1.0", file: "CHANGELOG_v0.1.0.md", nota: "Primo rilascio pubblico del corpus del Protocollo Equino" },
+];
+---
+
+<BaseLayout
+  title="Changelog"
+  description="Che cosa cambia in ciascuna versione di Fonti del Palio: contenuti aggiunti, rotte, verifiche eseguite e osservazioni documentarie ancora aperte."
+  activePath="/changelog"
+>
+  <section class="section" style="padding-block: var(--space-12) var(--space-8);">
+    <div class="wrap">
+      <span class="section-number">Changelog</span>
+      <article class="prose" style="max-width: var(--measure);" set:html={changelogHtml} />
+    </div>
+  </section>
+
+  <section class="section section--dark" style="padding-block: var(--space-8) var(--space-12);">
+    <div class="wrap">
+      <h2 class="text-heading" style="font-size: var(--text-heading);">Versioni precedenti</h2>
+      <p class="text-muted" style="max-width: var(--measure);">
+        I changelog delle versioni precedenti non hanno una rotta propria: restano nel
+        repository, dove sono versionati insieme al codice a cui si riferiscono.
+      </p>
+      <ul class="prose" style="max-width: var(--measure);">
+        {
+          precedenti.map((p) => (
+            <li>
+              <a href={`${GITHUB_URL}/blob/main/${p.file}`} rel="noopener">
+                <span class="mono">{p.versione}</span>
+              </a>{" "}
+              — {p.nota}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

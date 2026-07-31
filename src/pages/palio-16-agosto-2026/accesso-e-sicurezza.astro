@@ -1,0 +1,158 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NotaDocumentaria from "../../components/NotaDocumentaria.astro";
+import { listMaterie, demoteHeadings } from "../../lib/carriera";
+import { renderDocumentaryMarkdown } from "../../lib/markdown";
+
+const materie = listMaterie().map((m) => ({
+  ...m,
+  // Le materie erano intestazioni di primo livello nel file di origine: qui
+  // stanno sotto l'h1 della pagina e sotto il proprio h2, quindi le loro
+  // sotto-intestazioni scendono di un livello.
+  html: renderDocumentaryMarkdown(demoteHeadings(m.corpo, 1)),
+}));
+---
+
+<BaseLayout
+  title="Accesso, sicurezza e servizi — Palio del 16 agosto 2026"
+  description="La disciplina consolidata di accesso, sicurezza e servizi per il Palio del 16 agosto 2026, materia per materia, con rinvio all'ordinanza che la stabilisce."
+  activePath="/palio-16-agosto-2026"
+>
+  <section class="section" style="padding-block: var(--space-6) var(--space-3);">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Percorso" data-pagefind-ignore>
+        <a href="/palio-16-agosto-2026/">Palio del 16 agosto 2026</a>
+        <span aria-hidden="true">/</span>
+        <span>Accesso, sicurezza e servizi</span>
+      </nav>
+      <span class="section-number">Disciplina consolidata</span>
+      <h1 style="font-family: var(--font-display); font-size: var(--text-title); max-width: 24ch; margin: var(--space-1) 0 0;">
+        Accesso, sicurezza e servizi
+      </h1>
+      <p class="text-muted" style="max-width: var(--measure); margin-top: var(--space-2);">
+        Le prescrizioni degli atti acquisiti, riorganizzate per materia. Il consolidamento è una
+        lettura d'insieme, non un atto: dove due ordinanze intervengono sullo stesso oggetto, la
+        materia lo dichiara e rinvia a entrambe.
+      </p>
+      <p class="text-caption" style="margin-top: var(--space-2);">{materie.length} materie</p>
+
+      <NotaDocumentaria titolo="Prima di leggere" variante="avvertenza">
+        <p>
+          Questa pagina non sostituisce le ordinanze. Riproduce le prescrizioni verificate sugli
+          atti acquisiti e ne dichiara la fonte; per gli effetti giuridici, le sanzioni e le
+          eccezioni fa fede esclusivamente il testo originale, consultabile nella
+          <a href="/ordinanze-e-atti/">pagina degli atti</a>.
+        </p>
+        <p>
+          Le disposizioni valgono per la Carriera del 16 agosto 2026. Non vanno applicate ad altre
+          annualità né alla Carriera di luglio, che ha atti propri.
+        </p>
+      </NotaDocumentaria>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-6);">
+    <div class="wrap">
+      <nav class="indice" aria-labelledby="indice-materie" data-pagefind-ignore>
+        <h2 id="indice-materie" class="indice__titolo">Materie</h2>
+        <ol class="indice__lista">
+          {
+            materie.map((m) => (
+              <li>
+                <a href={`#${m.slug}`}>{m.titolo}</a>
+              </li>
+            ))
+          }
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-12);">
+    <div class="wrap">
+      {
+        materie.map((m) => (
+          <article class="materia" id={m.slug}>
+            <h2 class="materia__titolo">
+              <span class="materia__numero" aria-hidden="true">
+                {String(m.numero).padStart(2, "0")}
+              </span>
+              {m.titolo}
+            </h2>
+            <div class="prose" set:html={m.html} />
+          </article>
+        ))
+      }
+
+      <NotaDocumentaria titolo="Completezza" variante="provenienza">
+        <p>
+          Il consolidamento copre le materie effettivamente disciplinate dagli atti acquisiti. Una
+          materia non trattata qui non è per ciò stesso libera da vincoli: può essere disciplinata
+          da un atto non acquisito, da una norma generale o dal Regolamento per il Palio.
+        </p>
+      </NotaDocumentaria>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: var(--text-caption);
+    color: var(--color-text-faint);
+    margin-bottom: var(--space-2);
+  }
+  .crumbs a {
+    color: var(--color-green);
+  }
+  .indice {
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-3) 0;
+  }
+  .indice__titolo {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-faint);
+    margin: 0 0 var(--space-2);
+  }
+  .indice__lista {
+    columns: 2;
+    column-gap: var(--space-4);
+    margin: 0;
+    padding-left: 1.25rem;
+    font-size: 0.9375rem;
+  }
+  .indice__lista li {
+    break-inside: avoid;
+    margin-bottom: 0.375rem;
+  }
+  @media (max-width: 40rem) {
+    .indice__lista {
+      columns: 1;
+    }
+  }
+  .materia {
+    padding-top: var(--space-5);
+    scroll-margin-top: var(--space-3);
+  }
+  .materia__titolo {
+    font-family: var(--font-display);
+    font-size: 1.625rem;
+    line-height: 1.2;
+    margin: 0 0 var(--space-2);
+    max-width: 28ch;
+  }
+  .materia__numero {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--color-green);
+    margin-bottom: 0.25rem;
+  }
+</style>

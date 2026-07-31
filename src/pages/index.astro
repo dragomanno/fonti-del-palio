@@ -8,6 +8,24 @@ import {
   DISCIPLINA_SECTIONS,
   chunksByScope,
 } from "../lib/corpus";
+import {
+  listAtti,
+  listAttiPubblicati,
+  listCavalli,
+  listMaterie,
+  listRegistroFonti,
+  getCollazione,
+} from "../lib/carriera";
+
+// v0.2.0 — La Home dichiara due corpus distinti e non li fonde:
+//   - la Carriera in corso (atti a validita' circoscritta al 16 agosto 2026);
+//   - il Protocollo Equino 2012-2026 e i documenti di lunga durata.
+const atti = listAtti();
+const attiPubblicati = listAttiPubblicati();
+const cavalli = listCavalli();
+const materie = listMaterie();
+const registroFonti = listRegistroFonti();
+const collazione = getCollazione();
 
 const index = loadIndex();
 const acts = listActs();
@@ -29,33 +47,55 @@ const pendingResearch = records.filter(
 const sections = [
   {
     number: "01",
+    title: "Palio del 16 agosto 2026",
+    body: "La Carriera in corso: gli atti che la disciplinano, i cavalli ammessi alle previsite, le materie di accesso e sicurezza e la guida pratica.",
+    meta: `${atti.length} atti · ${cavalli.length} cavalli · ${materie.length} materie`,
+    href: "/palio-16-agosto-2026/",
+  },
+  {
+    number: "02",
+    title: "Ordinanze e atti",
+    body: "Le schede dei singoli atti della Carriera, ciascuna con estremi, digest del file acquisito e stato di ripubblicazione dichiarato.",
+    meta: `${atti.length} schede · ${attiPubblicati.length} PDF ripubblicati`,
+    href: "/ordinanze-e-atti/",
+  },
+  {
+    number: "03",
+    title: "Documenti fondamentali",
+    body: "I documenti di lunga durata: il Regolamento per il Palio, la sua edizione previgente con la collazione articolo per articolo, il Bando di Violante del 1729.",
+    meta: `${registroFonti.length} fonti registrate · ${collazione.prospetto.length} articoli collazionati`,
+    href: "/documenti-fondamentali/",
+  },
+  {
+    number: "04",
     title: "Disciplina vigente",
     body: `Il testo consolidato in vigore per il 2026 in ${DISCIPLINA_SECTIONS.length} parti, articolo per articolo, con la fonte canonica sotto ogni unità.`,
     meta: `${disciplinaChunks} unità documentali`,
     href: "/disciplina-vigente/",
   },
   {
-    number: "02",
+    number: "05",
     title: "Evoluzione storica",
     body: "Come il Protocollo è cambiato fra il 2012 e il 2026: gli atti anno per anno e la memoria incrementale che ne registra le variazioni.",
     meta: `${acts.length} atti · 15 annualità`,
     href: "/evoluzione-storica/",
   },
   {
-    number: "03",
+    number: "06",
     title: "Fonti e registro atti",
     body: "Il registro degli atti acquisiti, identificati e ancora da reperire, con quattro dimensioni di stato dichiarate separatamente.",
     meta: `${records.length} record · ${pendingResearch} con ricerca non conclusa`,
     href: "/fonti/",
   },
   {
-    number: "04",
+    number: "07",
     title: "Ricerca nel corpus",
-    body: "Cerca fra articoli, atti e annotazioni. Indice statico servito dal sito stesso: nessuna query esce da qui.",
+    body: "Cerca fra articoli, atti, schede documentarie e annotazioni. Indice statico servito dal sito stesso: nessuna interrogazione esce da qui.",
     meta: `${index.chunkCount} unità indicizzate`,
     href: "/ricerca/",
   },
 ];
+
 ---
 <BaseLayout title="Home" activePath="/">
   <section class="hero">
@@ -75,7 +115,8 @@ const sections = [
           affiliato al Comune di Siena. <a href="/disclaimer">Leggi il disclaimer</a>.
         </p>
         <div class="btn-row">
-          <a class="btn btn--primary" href="/disciplina-vigente/">Consulta la disciplina vigente</a>
+          <a class="btn btn--primary" href="/palio-16-agosto-2026/">Palio del 16 agosto 2026</a>
+          <a class="btn btn--secondary" href="/disciplina-vigente/">Disciplina vigente</a>
           <a
             class="btn btn--secondary"
             href={GPT_ASSISTANT_URL}
@@ -96,12 +137,32 @@ const sections = [
     </div>
   </section>
 
+  <section class="section carriera-strip">
+    <div class="wrap">
+      <span class="section-number">Carriera in corso</span>
+      <h2 class="text-heading" style="font-size: var(--text-heading);">
+        Gli atti del 16 agosto 2026 valgono per quella Carriera
+      </h2>
+      <p class="text-muted" style="max-width: 62ch;">
+        Le ordinanze e gli atti dirigenziali raccolti qui hanno validità circoscritta al Palio
+        del 16 agosto 2026: non modificano il Regolamento per il Palio né il Protocollo Equino
+        e non si applicano ad altre Carriere. Sono pubblicati con il digest del file acquisito
+        e con lo stato di ripubblicazione dichiarato caso per caso.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn--secondary" href="/palio-16-agosto-2026/previsite/">Cavalli ammessi alle previsite</a>
+        <a class="btn btn--secondary" href="/palio-16-agosto-2026/accesso-e-sicurezza/">Accesso e sicurezza</a>
+        <a class="btn btn--secondary" href="/palio-16-agosto-2026/guida-pratica/">Guida pratica</a>
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="wrap">
       <div class="grid">
         {sections.map((s) => (
-          <div class="col-6">
-            <a href={s.href} style="text-decoration: none; color: inherit; display: block;">
+          <div class="col-4">
+            <a href={s.href} style="text-decoration: none; color: inherit; display: block; height: 100%;">
               <div class="card card--accent" style="height: 100%;">
                 <span class="section-number">{s.number}</span>
                 <h2 class="text-heading" style="font-size: var(--text-heading);">{s.title}</h2>
@@ -164,6 +225,12 @@ const sections = [
     }
   }
   .hero__lead p { color: var(--color-text-muted); }
+
+  /* Fascia della Carriera in corso: distingue visivamente gli atti a validita'
+     circoscritta dal corpus di lunga durata, senza gerarchizzarli. */
+  .carriera-strip {
+    background: var(--color-surface);
+  }
 
   /* Cifre del corpus come metadati documentari, non come badge decorativi. */
   .hero__stats {

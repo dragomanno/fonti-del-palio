@@ -1,0 +1,71 @@
+---
+/**
+ * Nota documentaria riutilizzabile, v0.2.0.
+ *
+ * Esiste per una ragione precisa: la cautela documentaria non deve essere
+ * riscritta a mano su ogni pagina, perche' una riscrittura a mano si degrada.
+ * Il testo della cautela e' passato come contenuto; qui restano il contenitore,
+ * la semantica e l'esclusione dall'indice di ricerca quando la nota e' di
+ * servizio e non di contenuto.
+ *
+ * `variante` governa solo l'accento visivo:
+ *  - "avvertenza": limite di completezza o di provenienza da leggere prima del testo;
+ *  - "provenienza": origine e stato documentario di cio' che si sta leggendo;
+ *  - "neutra": raccordo o indicazione di lettura.
+ */
+export interface Props {
+  titolo?: string;
+  variante?: "avvertenza" | "provenienza" | "neutra";
+  /** Se true la nota non entra nel corpo indicizzato da Pagefind. */
+  escludiDallaRicerca?: boolean;
+}
+
+const { titolo, variante = "neutra", escludiDallaRicerca = false } = Astro.props;
+---
+
+<aside
+  class:list={["nota", `nota--${variante}`]}
+  data-pagefind-ignore={escludiDallaRicerca ? "" : undefined}
+>
+  {titolo && <h2 class="nota__titolo">{titolo}</h2>}
+  <div class="nota__corpo"><slot /></div>
+</aside>
+
+<style>
+  .nota {
+    margin-top: var(--space-3);
+    padding: var(--space-2) var(--space-3);
+    background: var(--color-surface);
+    border-left: 3px solid var(--color-border);
+    max-width: var(--measure);
+  }
+  .nota--avvertenza {
+    border-left-color: var(--color-warning);
+  }
+  .nota--provenienza {
+    border-left-color: var(--color-green);
+  }
+  .nota__titolo {
+    font-family: var(--font-display);
+    font-size: 1.0625rem;
+    margin: 0 0 var(--space-1);
+  }
+  .nota__corpo :global(p) {
+    margin: 0 0 0.75rem;
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+  .nota__corpo :global(p:last-child) {
+    margin-bottom: 0;
+  }
+  .nota__corpo :global(ul) {
+    margin: 0 0 0.75rem;
+    padding-left: 1.25rem;
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+  }
+  .nota__corpo :global(li) {
+    margin-bottom: 0.375rem;
+  }
+</style>

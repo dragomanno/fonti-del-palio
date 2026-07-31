@@ -1,0 +1,124 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NotaDocumentaria from "../../components/NotaDocumentaria.astro";
+import { loadCarriera, listCavalli } from "../../lib/carriera";
+import { renderDocumentaryMarkdown } from "../../lib/markdown";
+
+const carriera = loadCarriera();
+const cavalli = listCavalli();
+const comunicato = renderDocumentaryMarkdown(carriera.previsite.comunicato);
+const regole = renderDocumentaryMarkdown(carriera.previsite.regoleLista);
+---
+
+<BaseLayout
+  title="Cavalli ammessi alle Previsite del Palio del 16 agosto 2026"
+  description="L'elenco ufficiale dei 108 cavalli ammessi alle Previsite del Palio del 16 agosto 2026, con i proprietari indicati dal Comune di Siena."
+  activePath="/palio-16-agosto-2026"
+>
+  <section class="section" style="padding-block: var(--space-6) var(--space-3);">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Percorso" data-pagefind-ignore>
+        <a href="/palio-16-agosto-2026/">Palio del 16 agosto 2026</a>
+        <span aria-hidden="true">/</span>
+        <span>Previsite</span>
+      </nav>
+      <span class="section-number">COM-2026-08-PREVISITE-001</span>
+      <h1 style="font-family: var(--font-display); font-size: var(--text-title); max-width: 24ch; margin: var(--space-1) 0 0;">
+        I cavalli ammessi alle Previsite
+      </h1>
+      <p class="text-caption" style="margin-top: var(--space-2);">
+        {cavalli.length} cavalli · elenco ufficiale
+      </p>
+
+      <div class="prose" set:html={comunicato} />
+
+      <NotaDocumentaria titolo="Come si legge questo elenco" variante="avvertenza">
+        <div set:html={regole} />
+      </NotaDocumentaria>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-12);">
+    <div class="wrap">
+      <h2 class="elenco-titolo">Elenco ufficiale</h2>
+      <div class="doc-table-wrap">
+        <table class="doc-table doc-table--sticky doc-table--reflow-sm" role="table">
+          <caption class="sr-only">
+            Cavalli ammessi alle Previsite del Palio del 16 agosto 2026: numero d'ordine, nome del
+            cavallo e proprietario.
+          </caption>
+          <thead role="rowgroup">
+            <tr role="row">
+              <th scope="col">N.</th>
+              <th scope="col">Cavallo</th>
+              <th scope="col">Proprietario</th>
+            </tr>
+          </thead>
+          <tbody role="rowgroup">
+            {
+              cavalli.map((c) => (
+                <tr role="row">
+                  <th scope="row" data-label="N." role="rowheader" class="num">
+                    {c.numero}
+                  </th>
+                  <td data-label="Cavallo" role="cell" class="nome">
+                    {c.nome}
+                  </td>
+                  <td data-label="Proprietario" role="cell">
+                    {c.proprietario}
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <NotaDocumentaria titolo="Limiti di questo elenco" variante="provenienza">
+        <p>
+          L'ammissione alle Previsite non è un'assegnazione alle Contrade e non anticipa l'esito
+          della Tratta: è la sola ammissione alla visita veterinaria preliminare. La selezione
+          successiva segue le procedure del Regolamento e non è desumibile da questa pagina.
+        </p>
+        <p>
+          I nomi dei proprietari sono riprodotti come pubblicati dal Comune di Siena. Eventuali
+          differenze di grafia rispetto ad altre fonti non sono corrette qui: la trascrizione
+          resta fedele alla fonte. Segnalazioni di errore:
+          <a href="mailto:info@pistakkio.net">info@pistakkio.net</a>.
+        </p>
+        <p>
+          Fonte: comunicazione del Comune di Siena del 30 luglio 2026, registrata come
+          <span class="mono">COM-2026-08-PREVISITE-001</span> nel
+          <a href="/ordinanze-e-atti/">registro degli atti</a>.
+        </p>
+      </NotaDocumentaria>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: var(--text-caption);
+    color: var(--color-text-faint);
+    margin-bottom: var(--space-2);
+  }
+  .crumbs a {
+    color: var(--color-green);
+  }
+  .elenco-titolo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin: 0 0 var(--space-2);
+  }
+  .num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .nome {
+    font-weight: 500;
+  }
+</style>

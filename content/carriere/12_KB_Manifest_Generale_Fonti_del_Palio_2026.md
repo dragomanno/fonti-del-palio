@@ -1,0 +1,335 @@
+---
+title: "KB 12 — Manifest generale delle fonti di Fonti del Palio"
+document_type: "registro generale, stato documentale e relazioni"
+version: "1.3"
+last_verified: "2026-07-31"
+status: "registro di secondo livello; coordina Protocollo Equino, ordinanze e documenti operativi della singola Carriera"
+curation: "Fabrizio Gabrielli / Fonti del Palio"
+---
+
+# KB 12 — Manifest generale delle fonti di Fonti del Palio
+
+## 1. Funzione
+
+Questo Manifest amplia il perimetro di Fonti del Palio oltre il solo Protocollo Equino. Non sostituisce il registro analitico `04_KB_Manifest_Fonti_e_Registro_Atti_2012_2026.md`, che resta il riferimento del ramo equino.
+
+Coordina tre domini documentari distinti e un livello tecnico di supporto:
+
+1. **Protocollo Equino e tutela del cavallo**
+2. **Ordinanze, accesso, sicurezza e organizzazione del Palio**
+3. **Documenti operativi della singola Carriera**, comprese liste, orari, ammissioni e programmi
+4. **Acquisizione, integrità, profilo tecnico e rilascio del progetto**
+
+I domini possono richiamarsi, ma non vanno fusi. Un'ordinanza sulla sicurezza in Piazza non diventa parte del Protocollo Equino; un atto veterinario non disciplina automaticamente il pubblico; l'elenco dei cavalli ammessi alle Previsite non costituisce disciplina vigente e non anticipa l'esito delle fasi successive.
+
+## 2. Stati documentali
+
+| Stato | Significato |
+|---|---|
+| `acquisito` | il file originale o una copia ufficiale è conservato e verificato |
+| `identificato` | estremi certi, file non ancora acquisito |
+| `richiamato` | l'esistenza risulta da un altro atto, ma il documento non è acquisito |
+| `da_verificare` | estremi o relazione non ancora sufficienti |
+| `non_ripubblicato` | acquisito, ma non esposto integralmente per ragioni documentate |
+| `ricerca_aperta` | il censimento non può dichiararsi completo |
+
+Lo stato documentale non coincide con la vigenza. Un atto acquisito può avere efficacia conclusa; un atto richiamato può essere decisivo per ricostruire il quadro.
+
+## 3. Rami della Knowledge Base
+
+### Ramo A — Protocollo Equino
+
+| File | Ruolo |
+|---|---|
+| KB 01 | corpus storico integrale 2012–2026 |
+| KB 02 | memoria incrementale |
+| KB 03 | disciplina vigente consolidata 2026 |
+| KB 04 | Manifest e registro analitico del ramo equino |
+
+### Ramo B — Documentazione tecnica del progetto
+
+| File | Ruolo |
+|---|---|
+| KB 05 | profilo tecnico del progetto |
+| KB 06 | acquisizione delle fonti e provenienza |
+| KB 07 | normalizzazione del testo e integrità documentale |
+| KB 08 | gate di rilascio e risposta agli incidenti |
+
+Questi quattro file governano il trattamento tecnico delle fonti e il ciclo di rilascio. Non sostituiscono gli atti originali e non sono fonti per rispondere nel merito delle disposizioni paliesche.
+
+### Ramo C — Ordinanze e informazione pubblica
+
+| File | Ruolo |
+|---|---|
+| KB 09 | corpus degli atti di agosto 2026 |
+| KB 10 | disciplina consolidata per materia |
+| KB 11 | guida pratica per Senesi e visitatori |
+| KB 12 | Manifest generale |
+| KB 13 | router generale |
+
+# 4. Registro degli atti e dei documenti operativi di luglio 2026
+
+## 4.1 Lotto di tredici PDF acquisito il 28 luglio 2026
+
+## ATT-2026-DIR-1775
+
+- **Natura:** atto dirigenziale.
+- **Numero/data:** 1775 del 23/07/2026.
+- **Oggetto:** economie del Protocollo Equino e Palio di luglio.
+- **Stato documentale:** `acquisito`.
+- **Efficacia/ruolo:** amministrativo-contabile.
+- **Ricerca:** conclusa rispetto al PDF ricevuto.
+- **Relazioni:** ATT-2026-VIS-1775.
+
+## ATT-2026-VIS-1775
+
+- **Natura:** visto contabile.
+- **Data:** 24/07/2026.
+- **Oggetto:** esecutività e regolarità contabile dell'atto n. 1775.
+- **Stato documentale:** `acquisito`, `non_ripubblicato`.
+- **Motivo della non ripubblicazione integrale:** minimizzazione di dati personali non necessari alla funzione informativa.
+- **Relazioni:** ATT-2026-DIR-1775.
+
+## ATT-2026-ORD-051
+
+- **Natura:** ordinanza sindacale.
+- **Numero/data:** 51 del 28/07/2026.
+- **Oggetto:** accesso all'area del sorteggio dei cavalli.
+- **Stato documentale:** `acquisito`.
+- **Ambito:** Tratta del 13 agosto 2026.
+- **Destinatari principali:** pubblico e soggetti autorizzati.
+
+## ATT-2026-ORD-052
+
+- **Natura:** ordinanza sindacale.
+- **Numero/data:** 52 del 28/07/2026.
+- **Oggetto:** circolazione pedonale e animali da compagnia.
+- **Stato documentale:** `acquisito`.
+- **Ambito:** prove regolamentate, Tratta per alcune condotte, Prove, corsa, innaffiature.
+- **Destinatari principali:** pubblico.
+
+## ATT-2026-ORD-053
+
+- **Natura:** ordinanza sindacale.
+- **Numero/data:** 53 del 28/07/2026.
+- **Oggetto:** accesso al Palco dei Giudici.
+- **Stato documentale:** `acquisito`.
+- **Ambito:** Prove e corsa.
+- **Destinatari principali:** funzioni istituzionali e di servizio.
+
+## ATT-2026-ORD-054
+
+- **Natura:** ordinanza sindacale.
+- **Numero/data:** 54 del 28/07/2026.
+- **Oggetto:** commercio e somministrazione.
+- **Stato documentale:** `acquisito`.
+- **Ambito:** posa del tufo, Tratta, Prove, corsa, pioggia e deflusso.
+- **Destinatari principali:** esercizi commerciali e di somministrazione.
+- **Relazioni:** richiamata da ATT-2026-ORD-057.
+
+## ATT-2026-ORD-055
+
+- **Natura:** ordinanza sindacale.
+- **Numero/data:** 55 del 28/07/2026.
+- **Oggetto:** attività interessate dall'allestimento della Piazza.
+- **Stato documentale:** `acquisito`.
+- **Ambito:** lavori dal 4 al 22 agosto 2026.
+- **Destinatari principali:** attività commerciali ed esercizi.
+
+## ATT-2026-ORD-056
+
+- **Natura:** ordinanza sindacale.
+- **Numero/data:** 56 del 28/07/2026.
+- **Oggetto:** commercianti su area pubblica nel Campo.
+- **Stato documentale:** `acquisito`.
+- **Ambito:** celebrazioni dall'11 al 16 agosto 2026.
+- **Destinatari principali:** commercianti autorizzati.
+- **Relazioni:** richiamata da ATT-2026-ORD-057.
+
+## ATT-2026-ORD-057
+
+- **Natura:** ordinanza sindacale.
+- **Numero/data:** 57 del 28/07/2026.
+- **Oggetto:** alcol, vetro, metallo, plastica con tappo e bibite congelate.
+- **Stato documentale:** `acquisito`.
+- **Ambito:** prove regolamentate, Tratta, Prove e corsa.
+- **Destinatari principali:** chiunque.
+- **Relazioni:** richiama ATT-2026-ORD-054 e ATT-2026-ORD-056.
+
+## ATT-2026-ORD-058
+
+- **Natura:** ordinanza sindacale.
+- **Numero/data:** 58 del 28/07/2026.
+- **Oggetto:** montaggio, smontaggio e gestione dei palchi.
+- **Stato documentale:** `acquisito`.
+- **Ambito:** allestimento, esercizio e ripristino.
+- **Destinatari principali:** proprietari e responsabili, palcaioli, tecnici, esercenti, pubblico per specifici divieti.
+
+## ATT-2026-ORD-059
+
+- **Natura:** ordinanza sindacale.
+- **Numero/data:** 59 del 28/07/2026.
+- **Oggetto:** accesso alla Conchiglia dei minori di 10 anni.
+- **Stato documentale:** `acquisito`.
+- **Ambito:** 16 agosto 2026 dalle 15:00 alla conclusione.
+- **Destinatari principali:** minori, accompagnatori, pubblico.
+
+## ATT-2026-ORD-060
+
+- **Natura:** ordinanza sindacale.
+- **Numero/data:** 60 del 28/07/2026.
+- **Oggetto:** oggetti vietati e corretto svolgimento.
+- **Stato documentale:** `acquisito`.
+- **Ambito:** Piazza del Campo e area spettatori.
+- **Destinatari principali:** pubblico.
+- **Relazioni:** richiama gli atti sindacali nn. 44 e 45 del 07/07/2026.
+
+## ATT-2026-DIR-1791
+
+- **Natura:** atto dirigenziale.
+- **Numero/data:** 1791 del 28/07/2026.
+- **Oggetto:** collaborazioni gratuite.
+- **Stato documentale:** `acquisito`.
+- **Ambito:** organizzazione e sicurezza del Palio di agosto.
+- **Destinatari principali:** collaboratori e strutture organizzative.
+
+## 4.2 Documento operativo del 30 luglio 2026
+
+### COM-2026-08-PREVISITE-001
+
+- **Natura:** comunicato istituzionale e lista operativa ufficiale; non è un'ordinanza.
+- **Titolo:** “Palio 16 agosto, i cavalli ammessi alle previsite”.
+- **Pubblicazione:** Comune di Siena, 30/07/2026.
+- **Ultimo aggiornamento verificato:** 30/07/2026, ore 16:44.
+- **Oggetto:** elenco di 108 cavalli ammessi alle Previsite per il Palio del 16 agosto 2026.
+- **Previsite:** 6, 7 e 8 agosto 2026, clinica veterinaria del Ceppo a Monteresi.
+- **Fondamento richiamato:** art. 37, comma 2, del Regolamento per il Palio.
+- **Stato documentale:** `acquisito` come fonte web ufficiale.
+- **Fonte:** `https://www.comune.siena.it/novita/palio-16-agosto-i-cavalli-ammessi-alle-previsite-1`.
+- **Trascrizione completa:** KB 09, sezione 6.
+- **Limite:** l'ammissione alle Previsite non equivale a idoneità sanitaria, ammissione alle prove regolamentate, ammissione alla Tratta o partecipazione alla Carriera.
+
+# 5. Atti richiamati e non acquisiti
+
+## ATT-2026-SIND-044
+
+- **Natura:** atto sindacale.
+- **Numero/data:** 44 del 07/07/2026.
+- **Oggetto ricostruibile dal richiamo:** svolgimento delle Prove e della corsa dal 13 al 16 agosto 2026 in Piazza del Campo.
+- **Stato documentale:** `richiamato`.
+- **Fonte del richiamo:** ATT-2026-ORD-060.
+- **Azione:** acquisire il PDF originale.
+
+## ATT-2026-SIND-045
+
+- **Natura:** atto sindacale.
+- **Numero/data:** 45 del 07/07/2026.
+- **Oggetto ricostruibile dal richiamo:** prove regolamentate dei cavalli l'11 e 12 agosto 2026, dalle 06:00 alle 08:00.
+- **Stato documentale:** `richiamato`.
+- **Fonte del richiamo:** ATT-2026-ORD-060.
+- **Azione:** acquisire il PDF originale.
+
+# 6. Completezza
+
+## 6.1 Cosa può essere dichiarato
+
+- Tutti i tredici PDF ricevuti sono stati identificati e verificati.
+- Le ordinanze sindacali nn. 51–60 del 28 luglio 2026 sono acquisite.
+- Le regole pratiche pubblicate in KB 11 derivano da questo lotto.
+- Il comunicato ufficiale del 30 luglio 2026 e l'elenco dei 108 cavalli ammessi alle Previsite sono acquisiti come fonte web istituzionale.
+
+## 6.2 Cosa non può essere dichiarato
+
+- che siano stati acquisiti tutti gli atti del Palio del 16 agosto 2026;
+- che non esistano provvedimenti successivi;
+- che gli orari non possano cambiare;
+- che il quadro di pubblica sicurezza sia esaurito dalle sole ordinanze comunali;
+- che un atto richiamato sia integralmente noto senza il suo PDF.
+- che tutti i cavalli ammessi alle Previsite siano successivamente presentati, giudicati idonei, ammessi alle prove regolamentate o alla Tratta.
+
+## 6.3 Formula pubblica raccomandata
+
+> Questa sezione raccoglie e coordina le ordinanze nn. 51–60 del 28 luglio 2026, gli altri documenti ufficiali acquisiti nel lotto e i successivi documenti operativi verificati. Il quadro resta aperto a provvedimenti, liste e aggiornamenti successivi e ad atti richiamati non ancora acquisiti.
+
+# 7. Politica di aggiornamento
+
+Quando arriva un nuovo atto:
+
+1. conservarne il file originale;
+2. calcolare SHA-256;
+3. assegnare un ID stabile;
+4. registrare autorità, numero, data, oggetto e relazioni;
+5. estrarre le disposizioni senza correggere silenziosamente il testo;
+6. aggiornare KB 09;
+7. aggiornare KB 10 se cambia il quadro consolidato;
+8. aggiornare KB 11 solo se cambia l'informazione utile al pubblico;
+9. aggiornare questo Manifest e KB 13;
+10. pubblicare sul sito solo dopo verifica documentaria e tecnica.
+
+Per una nuova pagina o lista ufficiale priva di PDF:
+
+1. conservare URL canonico, titolo, data di pubblicazione e ultimo aggiornamento;
+2. acquisire il testo come snapshot datato;
+3. assegnare un ID stabile coerente con la natura del documento;
+4. non trasformare un comunicato in un atto amministrativo;
+5. registrare la fase del Palio e ciò che la lista non dimostra;
+6. conservare separatamente gli elenchi delle fasi successive senza sovrascrivere quelli precedenti.
+
+---
+
+# 8. Registro delle fonti normative e di riferimento
+
+Acquisizione del 31 luglio 2026. Questa sezione registra le fonti che non sono atti della singola Carriera e che quindi non appartengono al registro della sezione 4, ma che costituiscono il fondamento normativo o il supporto di verifica del corpus.
+
+## 8.1 Registro
+
+| ID | Documento | Estremi | Consistenza | SHA-256 | Stato |
+|---|---|---|---|---|---|
+| `REG-PALIO-2019` | Regolamento per il Palio, edizione vigente | approvato con deliberazioni del Consiglio Comunale n. 99 del 17.6.2019 e n. 224 del 28.11.2019; pubblicazione dell'Ufficio Palio presentata il 28 maggio 2021 | 82 pagine, 1.988.492 byte | `a09afe7b863f7b1b5329f8fb069503a59dc67b92053c3a156b7d62ce9855b86d` | `acquisito` |
+| `REG-PALIO-1949` | Regolamento per il Palio, edizione previgente | approvato con deliberazione del Consiglio Comunale n. 14 del 05.02.1949 e s.m.i.; ultima modifica registrata nel prospetto: 10.08.1999 | 45 pagine, 403.343 byte | `faf7238de030f7ab368160775702b23ebc28d4cc5c8090faef7145a681b1f112` | `acquisito`, valore storico |
+| `COM-2021-05-REGOLAMENTO-001` | Comunicato stampa del Comune di Siena sulla presentazione del nuovo Regolamento | presentazione nell'Entrone di Palazzo Comunale, venerdì 28 maggio 2021; PDF generato il 29 maggio 2021 | 2 pagine, 95.391 byte | `f8d4a39427b4328f7546f4a5ea712973a7a415371574f5a5e61c9dc79ab77d6a` | `acquisito` |
+| `RIF-BANDO-CONFINI-1730` | Trascrizione del Bando sopra la nuova divisione e riforma de' confini delle Contrade | decretato dalla Principessa Violante di Baviera il 13 settembre 1729; deliberazione della Balìa di venerdì 19 agosto 1729; relazione dei deputati del 27 luglio 1729 | 8 paragrafi, 102.338 byte | `6f9ddbaf49238aab88343c359f491a2dee3544d0af3b8ca5132ebe3226d9147b` | `da_verificare` quanto alla provenienza della trascrizione |
+| `RIF-STRADE-CONTRADE` | Le strade delle Contrade, repertorio dell'attribuzione delle vie | opera editoriale moderna, senza attribuzione interna | 796 paragrafi, 121.949 byte | `fab21455a27e58f9a564322668f6e83f7f87a3786c9e104f041bc53bf74a469d` | `da_verificare` quanto a provenienza e diritti |
+
+Il file `CAVALLI AMMESSI ALLE PREVISITE DEL PALIO DEL 16 AGOSTO 2026.txt`, SHA-256 `ae445d85de88d57e9454e63c96d29e0ff50d6b83e4af6c40009eb02d0d591bc7`, 4.418 byte, è lo snapshot testuale di `COM-2026-08-PREVISITE-001` già registrato alla sezione 4.2 e non costituisce una fonte autonoma.
+
+## 8.2 Correzione di denominazione
+
+I due Regolamenti erano stati acquisiti con nomi di file fuorvianti. Il file denominato «2019» non contiene alcuna occorrenza dell'anno 2019 e reca come ultima modifica il 10.08.1999: è il testo previgente, in vigore fino al 30 novembre 2019. Il file denominato «2021» è invece quello che recepisce la revisione del 2019.
+
+I file sono stati rinominati il 31 luglio 2026:
+
+| Denominazione originaria | Denominazione corrente |
+|---|---|
+| `Regolamento Palio_2021.pdf` | `Regolamento per il Palio - edizione vigente (rev. 2019, pubbl. 2021).pdf` |
+| `Regolamento per il Palio 2019.pdf` | `Regolamento per il Palio - edizione previgente (1949 e s.m.i. fino al 1999).pdf` |
+
+La rinomina non altera il contenuto: i digest SHA-256 registrati alla sezione 8.1 sono invariati e permettono di ricondurre ciascun file alla sua acquisizione originaria.
+
+## 8.3 Riscontro con la trascrizione del corpus
+
+La Parte III di KB 03 dichiara di derivare dalla pubblicazione presentata nel 2021 e ne riporta la pagina editoriale con le due deliberazioni. Il riscontro eseguito il 31 luglio 2026 su cinque sonde testuali, previa normalizzazione di sillabazione di fine riga e spaziatura, ha dato esito positivo per tutte:
+
+| Sonda | Riscontro |
+|---|---|
+| Incipit dell'art. 1, «Le tradizionali corse del Palio, con le quali il popolo senese» | presente in KB 03 e in `REG-PALIO-2019` |
+| Art. 2, «entro il termine del 31 marzo di ogni anno» | presente in KB 03 e in `REG-PALIO-2019` |
+| Art. 37, «Ogni proprietario può inoltrare richiesta per uno o più cavalli alla preiscrizione» | presente in KB 03 e in `REG-PALIO-2019` |
+| Nota sull'origine, «Con deliberazione del Consiglio Comunale n. 14 del 5.2.1949» | presente in KB 03 e in `REG-PALIO-2019` |
+| Formula di licenza, «si licenzia il nuovo Regolamento per il Palio» | presente in KB 03 e in `REG-PALIO-2019` |
+
+Entrambe le edizioni contano 105 articoli numerati: la revisione del 2019 ha modificato e integrato senza rinumerare. Il numero di articoli non è quindi un criterio di distinzione fra le due edizioni.
+
+La trascrizione del Regolamento presente nel corpus corrisponde all'edizione vigente. Il riscontro è per sonde e non equivale a una collazione integrale.
+
+## 8.4 Nesso con il lotto di agosto 2026
+
+Il comunicato `COM-2021-05-REGOLAMENTO-001` attesta che le novità della revisione del 2019 non furono applicate in Piazza a causa dell'emergenza sanitaria, con la sola eccezione degli articoli 37 e 38, approvati in via sperimentale e già operativi dal Palio di luglio 2019 per il coinvolgimento dei Capitani nella fase della previsita.
+
+Il documento `COM-2026-08-PREVISITE-001` richiama l'art. 37, comma 2, e qualifica il parere dei Capitani come «solo consultivo». La catena documentaria fra norma sperimentale del 2019, testo consolidato nella pubblicazione del 2021 e applicazione nel 2026 è quindi integralmente documentabile con fonti acquisite.
+
+## 8.5 Cosa questa sezione non dimostra
+
+1. Non dimostra che non esistano modifiche al Regolamento successive al 28 novembre 2019: la verifica presso il Comune di Siena resta aperta.
+2. Non dimostra la provenienza delle due trascrizioni `RIF-BANDO-CONFINI-1730` e `RIF-STRADE-CONTRADE`, che restano fonti di lavoro e di verifica, non fonti ripubblicabili.
+3. Non equivale a una collazione integrale fra il testo del corpus e il PDF ufficiale.

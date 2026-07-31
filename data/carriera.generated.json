@@ -1,0 +1,1817 @@
+{
+  "schema": "carriera/1",
+  "carriera": {
+    "slug": "palio-16-agosto-2026",
+    "titolo": "Palio del 16 agosto 2026",
+    "data": "2026-08-16"
+  },
+  "atti": [
+    {
+      "id": "ATT-2026-DIR-1775",
+      "slug": "atto-dirigenziale-1775-2026",
+      "titolo": "Atto dirigenziale n. 1775 — Economie Protocollo Equino e Palio di luglio",
+      "data": "23/07/2026",
+      "pagine": 4,
+      "sha256": "5f353c7f9758e4679b776264e835016511e0be50fac71feb092a2616564f29a1",
+      "statoPubblico": "ripubblicabile",
+      "ripubblicabile": true,
+      "pdf": "/atti/2026/30876_DeterminadiImpegno_Copia_1775_2026.pdf",
+      "scheda": "**Tipo:** determina di impegno.  \n**Numero e data:** atto dirigenziale n. 1775 del 23 luglio 2026.  \n**Oggetto:** “Protocollo equino e Palio luglio 2026 – Economie”.  \n**Autorità/ufficio:** Comune di Siena, Servizio Palio.  \n**Responsabile:** Dott. Luigi De Rosa.\n\nL’atto accerta economie per complessivi **€ 2.883,28** su impegni relativi al Palio e al Protocollo Equino e ne dispone il reintegro nei capitoli di bilancio interessati.\n\n**Ambito:** amministrativo-contabile; Palio di luglio 2026 e Protocollo Equino.  \n**Relazione:** collegato a `ATT-2026-VIS-1775`.  \n**Nota:** non disciplina accesso, sicurezza o svolgimento della Carriera di agosto."
+    },
+    {
+      "id": "ATT-2026-VIS-1775",
+      "slug": "visto-contabile-1775-2026",
+      "titolo": "Visto di regolarità contabile collegato all’atto n. 1775",
+      "data": "24/07/2026",
+      "pagine": 4,
+      "sha256": "ac4b1948f8bd9ccfcdfa774bca2d139be38a3f4c203e7feb85728267b0f4deae",
+      "statoPubblico": "registrato, non ripubblicato integralmente",
+      "ripubblicabile": false,
+      "pdf": null,
+      "scheda": "**Tipo:** visto di regolarità contabile.  \n**Data di esecutività:** 24 luglio 2026.  \n**Esito:** favorevole.  \n**Relazione:** rende esecutivo e completa il profilo contabile di `ATT-2026-DIR-1775`.\n\nIl PDF contiene dati anagrafici e indirizzi di fornitori non necessari alla funzione informativa del sito. È acquisito e verificato, ma non deve essere ripubblicato integralmente senza una decisione editoriale e giuridica specifica. La scheda pubblica deve limitarsi a esito, data, relazione e funzione contabile."
+    },
+    {
+      "id": "ATT-2026-ORD-051",
+      "slug": "ordinanza-51-2026",
+      "titolo": "Ordinanza sindacale n. 51 — area del sorteggio",
+      "data": "28/07/2026",
+      "pagine": 2,
+      "sha256": "55402ecd36deb27af00aaa5d4113e27e712c3a3ba8f85bbfa539cc623670d394",
+      "statoPubblico": "ripubblicabile",
+      "ripubblicabile": true,
+      "pdf": "/atti/2026/30902_OrdinanzadelSindaco_Copia_51_2026.pdf",
+      "scheda": "**Tipo:** ordinanza sindacale.  \n**Numero e data:** n. 51 del 28 luglio 2026.  \n**Oggetto:** sorteggio dei cavalli da assegnare alle Contrade; divieto di accesso nello spazio antistante il Palazzo Comunale.\n\n**Dispositivo verificato:**\n\n- il 13 agosto 2026, durante le operazioni di assegnazione dei cavalli, è vietato l’accesso all’area recintata antistante il Palazzo Comunale;\n- possono accedere Capitani, Fiduciari, Barbareschi e personale di servizio;\n- può essere rilasciato un numero limitato di permessi eccezionali a fotografi e giornalisti.\n\n**Sanzione:** da € 25,00 a € 500,00 e immediato allontanamento.  \n**Ambito:** Tratta; accesso all’area del sorteggio.  \n**Non confondere con:** disciplina veterinaria o procedura di selezione dei cavalli."
+    },
+    {
+      "id": "ATT-2026-ORD-052",
+      "slug": "ordinanza-52-2026",
+      "titolo": "Ordinanza sindacale n. 52 — circolazione pedonale e animali da compagnia",
+      "data": "28/07/2026",
+      "pagine": 3,
+      "sha256": "671465bdfb94c1a53e316b99fb9ea55448b544a093b2a80d814ade076aa4e8bd",
+      "statoPubblico": "ripubblicabile",
+      "ripubblicabile": true,
+      "pdf": "/atti/2026/30901_OrdinanzadelSindaco_Copia_52_2026.pdf",
+      "scheda": "**Tipo:** ordinanza sindacale.  \n**Numero e data:** n. 52 del 28 luglio 2026.  \n**Oggetto:** divieto di circolazione pedonale e divieto di condurre animali da compagnia nel Campo.\n\n**Dispositivo verificato:**\n\n- dopo lo sgombero sono vietati transito e permanenza dei non autorizzati sulla pista e nelle aree tecniche indicate;\n- nel giorno del Palio è vietato ai non autorizzati il transito nel Casato di Sotto fra Vicolo di Tone e Piazza del Campo, con eccezioni per abitanti, partecipanti al Corteo Storico e autorizzati;\n- è vietato condurre animali da compagnia, anche al guinzaglio, nei palchi e in Piazza del Campo;\n- è vietato attraversare la pista durante l’innaffiatura e fino alla rimozione dei divieti;\n- durante prove regolamentate, Tratta, Prove e corsa è vietato stare in piedi sui colonnini, sporgersi o protendere oggetti verso la pista.\n\n**Sanzioni principali:**\n\n- € 100,00 e allontanamento per violazioni durante prove regolamentate e Prove;\n- € 500,00 e allontanamento durante la corsa;\n- da € 25,00 a € 500,00 e allontanamento per il transito durante l’innaffiatura."
+    },
+    {
+      "id": "ATT-2026-ORD-053",
+      "slug": "ordinanza-53-2026",
+      "titolo": "Ordinanza sindacale n. 53 — Palco dei Giudici",
+      "data": "28/07/2026",
+      "pagine": 2,
+      "sha256": "bf4d66dab33eb097d133ac188af8fb98fcb80064d34b21ebbd5f84946562cc45",
+      "statoPubblico": "ripubblicabile",
+      "ripubblicabile": true,
+      "pdf": "/atti/2026/30900_OrdinanzadelSindaco_Copia_53_2026.pdf",
+      "scheda": "**Tipo:** ordinanza sindacale.  \n**Numero e data:** n. 53 del 28 luglio 2026.  \n**Oggetto:** persone autorizzate ad accedere al Palco dei Giudici.\n\nL’ordinanza elenca le funzioni autorizzate al piano superiore e i venti Fiduciari autorizzati al piano sottostante. Tutte le persone autorizzate devono possedere una tessera personale. Durante la corsa non possono sostare persone non autorizzate sulla scala.\n\n**Sanzione:** da € 25,00 a € 500,00 e immediato allontanamento.  \n**Ambito:** Prove e corsa del Palio del 16 agosto 2026."
+    },
+    {
+      "id": "ATT-2026-ORD-054",
+      "slug": "ordinanza-54-2026",
+      "titolo": "Ordinanza sindacale n. 54 — commercio e somministrazione",
+      "data": "28/07/2026",
+      "pagine": 3,
+      "sha256": "6d11ca4ae721abb6ed85b4abf3e05d264c1ea728b660ffc3ec7ef1a87460d3ce",
+      "statoPubblico": "ripubblicabile",
+      "ripubblicabile": true,
+      "pdf": "/atti/2026/30899_OrdinanzadelSindaco_Copia_54_2026.pdf",
+      "scheda": "**Tipo:** ordinanza sindacale.  \n**Numero e data:** n. 54 del 28 luglio 2026.  \n**Oggetto:** attività commerciali ed esercizi di somministrazione di alimenti e bevande.\n\n**Materie principali:**\n\n- rimozione di arredi e occupazioni durante posa del tufo, Tratta, Prove e corsa;\n- tutela della pista in caso di pioggia e durante l’innaffiatura;\n- chiusure temporanee degli esercizi;\n- passaggio dei mezzi di soccorso e deflusso del pubblico;\n- chiusura del 16 agosto dalle 13:30 per le attività comprese nell’area delimitata;\n- divieto di vendita o cessione di bevande in vetro o metallo e obbligo di contenitori privi di tappo e di sostanze congelate.\n\n**Sanzioni principali:**\n\n- da € 60,00 a € 310,00 per vendita o cessione in contenitori vietati;\n- da € 258,00 a € 2.000,00 per le altre violazioni, salvo maggiore sanzione.\n\n**Relazioni:** richiamata da `ATT-2026-ORD-057`."
+    },
+    {
+      "id": "ATT-2026-ORD-055",
+      "slug": "ordinanza-55-2026",
+      "titolo": "Ordinanza sindacale n. 55 — attività e allestimento della Piazza",
+      "data": "28/07/2026",
+      "pagine": 3,
+      "sha256": "310c0d60670ee61d7f51c1c67a53b7a283698993ec010e36e3f62d5cddcd3ab3",
+      "statoPubblico": "ripubblicabile",
+      "ripubblicabile": true,
+      "pdf": "/atti/2026/30898_OrdinanzadelSindaco_Copia_55_2026.pdf",
+      "scheda": "**Tipo:** ordinanza sindacale.  \n**Numero e data:** n. 55 del 28 luglio 2026.  \n**Oggetto:** attività commerciali ed esercizi di somministrazione interessati dall’allestimento di Piazza del Campo.\n\nL’atto stabilisce chiusure e divieti di occupazione del suolo pubblico dal **4 al 22 agosto 2026** per:\n\n- montaggio e smontaggio di cancelli e varchi;\n- Palco dei Giudici, Verrocchio e Stella;\n- Palco dei Priori e palchi del Casato;\n- materassi;\n- posa e rimozione del tufo;\n- Palco delle Comparse;\n- ripristino della Piazza.\n\nLe singole prescrizioni conservano civici, strade e fasce orarie indicati nel PDF.\n\n**Sanzione:** da € 258,00 a € 2.000,00.  \n**Uso pubblico:** la sintesi non sostituisce la consultazione integrale per esercenti e operatori interessati."
+    },
+    {
+      "id": "ATT-2026-ORD-056",
+      "slug": "ordinanza-56-2026",
+      "titolo": "Ordinanza sindacale n. 56 — commercianti su area pubblica",
+      "data": "28/07/2026",
+      "pagine": 2,
+      "sha256": "e15214f59df697a7e19c9cafbe35d47b8d71fae0632567d9e2cbd762cdc4390d",
+      "statoPubblico": "ripubblicabile",
+      "ripubblicabile": true,
+      "pdf": "/atti/2026/30907_OrdinanzadelSindaco_Copia_56_2026.pdf",
+      "scheda": "**Tipo:** ordinanza sindacale.  \n**Numero e data:** n. 56 del 28 luglio 2026.  \n**Oggetto:** commercianti su area pubblica posti nel Campo.\n\n**Dispositivo verificato:**\n\n- vendita consentita esclusivamente in contenitori di cartone o plastica privi di tappo;\n- divieto di introdurre vetro e metallo;\n- divieto di detenere o vendere bevande congelate;\n- regole per cassette, scatole, piccolo refrigeratore e occupazione massima di 3 m²;\n- un ombrellone è consentito fino alle 18:30 per le Prove e fino alle 17:00 per il Palio;\n- durante la Tratta è prevista una specifica deroga alla vendita per i concessionari.\n\n**Conseguenza indicata:** denuncia ai sensi dell’art. 650 c.p.  \n**Relazioni:** richiamata da `ATT-2026-ORD-057`."
+    },
+    {
+      "id": "ATT-2026-ORD-057",
+      "slug": "ordinanza-57-2026",
+      "titolo": "Ordinanza sindacale n. 57 — alcol e contenitori",
+      "data": "28/07/2026",
+      "pagine": 3,
+      "sha256": "0f85d3f73d9c84faa015ae937b5a84ced4c2397bc0b4343066127bcee83df695",
+      "statoPubblico": "ripubblicabile",
+      "ripubblicabile": true,
+      "pdf": "/atti/2026/30906_OrdinanzadelSindaco_Copia_57_2026.pdf",
+      "scheda": "**Tipo:** ordinanza sindacale.  \n**Numero e data:** n. 57 del 28 luglio 2026.  \n**Oggetto:** divieto di introduzione e detenzione di bevande alcoliche, contenitori di vetro, metallo, plastica con tappo e bibite congelate.\n\n**Destinatari:** chiunque.  \n**Area:** Piazza del Campo, vie e vicoli di accesso delimitati dai cancelli esterni.\n\n**Finestre di applicazione:**\n\n- prove regolamentate: intera durata;\n- Tratta: intera durata;\n- Prove mattutine: intera durata;\n- Prove serali: dalle 18:00 alla conclusione;\n- corsa del 16 agosto: dalle 14:30 al termine.\n\n**Conseguenza indicata:** denuncia ai sensi dell’art. 650 c.p.  \n**Relazioni:** richiama `ATT-2026-ORD-054` e `ATT-2026-ORD-056`."
+    },
+    {
+      "id": "ATT-2026-ORD-058",
+      "slug": "ordinanza-58-2026",
+      "titolo": "Ordinanza sindacale n. 58 — palchi",
+      "data": "28/07/2026",
+      "pagine": 5,
+      "sha256": "9e8fab2b9852c443750fa0d4049b54b645249485fcf0d16d0be0ac7993e9740b",
+      "statoPubblico": "ripubblicabile",
+      "ripubblicabile": true,
+      "pdf": "/atti/2026/30905_OrdinanzadelSindaco_Copia_58_2026.pdf",
+      "scheda": "**Tipo:** ordinanza sindacale.  \n**Numero e data:** n. 58 del 28 luglio 2026.  \n**Oggetto:** montaggio, smontaggio e gestione dei palchi.\n\nL’atto disciplina in dettaglio:\n\n- materiali e modalità di montaggio;\n- collaudi, assicurazioni e responsabilità;\n- capienza, numerazione e accessi;\n- custodia delle strutture;\n- impianti elettrici;\n- smontaggio e ripristino;\n- divieto di assistere dai tetti;\n- divieto di sovraffollamento di palchi, balconi e terrazze.\n\n**Sanzioni evidenziate:**\n\n- € 500,00 per ogni persona presente sui tetti, con immediata discesa;\n- € 500,00 al proprietario del palco in caso di sovraffollamento;\n- ulteriori intervalli sanzionatori differenziati per le altre prescrizioni.\n\n**Uso pubblico:** per proprietari, responsabili, tecnici e palcaioli prevale la lettura dell’atto integrale."
+    },
+    {
+      "id": "ATT-2026-ORD-059",
+      "slug": "ordinanza-59-2026",
+      "titolo": "Ordinanza sindacale n. 59 — minori di 10 anni",
+      "data": "28/07/2026",
+      "pagine": 2,
+      "sha256": "a8f3264ccf346f627c26ea39fc89f8efb3b18e65e6e08bec651913d20f4b3949",
+      "statoPubblico": "ripubblicabile",
+      "ripubblicabile": true,
+      "pdf": "/atti/2026/30904_OrdinanzadelSindaco_Copia_59_2026.pdf",
+      "scheda": "**Tipo:** ordinanza sindacale.  \n**Numero e data:** n. 59 del 28 luglio 2026.  \n**Oggetto:** divieto di accesso all’interno della “Conchiglia” ai minori di 10 anni.\n\n**Dispositivo verificato:**\n\n> Il 16 agosto 2026, dalle ore 15:00 fino alla conclusione della manifestazione, è interdetto l’accesso alla Conchiglia di Piazza del Campo ai minori di 10 anni, anche se accompagnati da maggiorenni.\n\nLa motivazione dell’atto esclude i palchi. Non trasformare la disposizione in un divieto generale per l’intera Piazza o per tutti i giorni delle Prove.\n\n**Conseguenza indicata:** denuncia ai sensi dell’art. 650 c.p."
+    },
+    {
+      "id": "ATT-2026-ORD-060",
+      "slug": "ordinanza-60-2026",
+      "titolo": "Ordinanza sindacale n. 60 — corretto svolgimento",
+      "data": "28/07/2026",
+      "pagine": 2,
+      "sha256": "56389d2be579d9467b73cbb9697bfe755303c23f22f6a8f5308b51c8f1af0ed4",
+      "statoPubblico": "ripubblicabile",
+      "ripubblicabile": true,
+      "pdf": "/atti/2026/30903_OrdinanzadelSindaco_Copia_60_2026.pdf",
+      "scheda": "**Tipo:** ordinanza sindacale.  \n**Numero e data:** n. 60 del 28 luglio 2026.  \n**Oggetto:** disposizioni normative per il corretto svolgimento del Palio del 16 agosto 2026.\n\n**Divieti verificati:**\n\n- spray da difesa al capsicum;\n- artifizi pirici, fuochi artificiali e petardi, salvo quanto previsto dal Regolamento per il Palio;\n- sedie, sgabelli, tavoli, panche, cassette, oggetti atti all’offesa e ombrelli nell’area spettatori;\n- carrozzine e passeggini nell’area spettatori per la sola Prova Generale e per il Palio;\n- ingresso nella pista, lancio di oggetti e ostacolo al libero e ordinato svolgimento della corsa.\n\n**Conseguenza indicata:** applicazione delle misure del Regolamento di Polizia Municipale e perseguimento ai sensi dell’art. 650 c.p.  \n**Relazioni:** richiama gli atti sindacali nn. 44 e 45 del 7 luglio 2026, non ancora acquisiti in questo lotto."
+    },
+    {
+      "id": "ATT-2026-DIR-1791",
+      "slug": "atto-dirigenziale-1791-2026",
+      "titolo": "Atto dirigenziale n. 1791 — collaborazioni gratuite",
+      "data": "28/07/2026",
+      "pagine": 4,
+      "sha256": "9695d1157cd336c53839489d2653a95109b1d812fa4145aeb5ede15188572c43",
+      "statoPubblico": "ripubblicabile",
+      "ripubblicabile": true,
+      "pdf": "/atti/2026/30908_DeterminaGenerica_Copia_1791_2026.pdf",
+      "scheda": "**Tipo:** determina generica.  \n**Numero e data:** atto dirigenziale n. 1791 del 28 luglio 2026.  \n**Oggetto:** collaborazioni a titolo gratuito per il Palio del 16 agosto 2026.\n\nL’atto registra collaborazioni volontarie e gratuite per:\n\n- eventuale trasporto dei cavalli e disponibilità di una biga;\n- visite culturali per ospiti dell’Amministrazione;\n- fotografia ad alta risoluzione del Drappellone;\n- comunicazioni di emergenza radio e supporto alle Forze dell’Ordine.\n\n**Ambito:** organizzazione e sicurezza della singola Carriera.  \n**Nota:** l’atto non modifica il Protocollo Equino né il Regolamento per il Palio."
+    }
+  ],
+  "attiRichiamati": [
+    {
+      "id": "ATT-2026-SIND-044",
+      "scheda": "- **Numero/data:** 44 del 7 luglio 2026.\n- **Richiamo:** `ATT-2026-ORD-060`.\n- **Oggetto ricostruibile dal richiamo:** svolgimento delle Prove e della corsa dal 13 al 16 agosto 2026.\n- **Stato:** `richiamato`, PDF non acquisito nel lotto."
+    },
+    {
+      "id": "ATT-2026-SIND-045",
+      "scheda": "- **Numero/data:** 45 del 7 luglio 2026.\n- **Richiamo:** `ATT-2026-ORD-060`.\n- **Oggetto ricostruibile dal richiamo:** prove regolamentate dei cavalli l’11 e 12 agosto 2026, dalle 06:00 alle 08:00.\n- **Stato:** `richiamato`, PDF non acquisito nel lotto."
+    }
+  ],
+  "previsite": {
+    "comunicato": "**Tipo:** comunicato istituzionale e lista operativa ufficiale.  \n**Titolo:** “Palio 16 agosto, i cavalli ammessi alle previsite”.  \n**Pubblicazione:** Comune di Siena, 30 luglio 2026.  \n**Ultimo aggiornamento verificato:** 30 luglio 2026, ore 16:44.  \n**Fonte:** [pagina ufficiale del Comune di Siena](https://www.comune.siena.it/novita/palio-16-agosto-i-cavalli-ammessi-alle-previsite-1).  \n**Stato documentale:** `acquisito` come fonte web ufficiale.  \n**Natura:** non è un’ordinanza; documenta l’esito della fase prevista dall’art. 37, comma 2, del Regolamento per il Palio.\n\nIl Comune comunica che:\n\n- sono **108** i cavalli ammessi alle Previsite;\n- la decisione è stata assunta dalla Commissione Tecnica comunale di concerto con la Commissione veterinaria del Palio;\n- le Previsite si svolgono **giovedì 6, venerdì 7 e sabato 8 agosto 2026**;\n- la sede è la clinica veterinaria del Ceppo, a Monteresi;\n- il parere dei Capitani in questa fase è “solo consultivo”.",
+    "regoleLista": "Risposte corrette:\n\n- “Il cavallo compare nell’elenco dei 108 ammessi alle Previsite per il Palio del 16 agosto 2026.”\n- “La pubblicazione ufficiale è del 30 luglio 2026.”\n- “Le Previsite sono previste il 6, 7 e 8 agosto al Ceppo.”\n\nNon dedurre:\n\n- che tutti i 108 cavalli saranno effettivamente presentati;\n- che abbiano già superato una visita veterinaria;\n- che siano ammessi alle prove regolamentate;\n- che siano ammessi direttamente alla Tratta;\n- che formeranno il lotto dei cavalli scelti per la Tratta;\n- che uno di essi correrà il Palio.",
+    "cavalli": [
+      {
+        "numero": 1,
+        "nome": "ANDA E BOLA",
+        "proprietario": "Harry Arthur Louis Westerman"
+      },
+      {
+        "numero": 2,
+        "nome": "ARES ELCE",
+        "proprietario": "Fabrizio Macucci"
+      },
+      {
+        "numero": 3,
+        "nome": "ARESTETULESU",
+        "proprietario": "Mark Harris Getty"
+      },
+      {
+        "numero": 4,
+        "nome": "BAGNOLO AA",
+        "proprietario": "Augusto Cerboni"
+      },
+      {
+        "numero": 5,
+        "nome": "BAILA AA",
+        "proprietario": "Alberto Manenti"
+      },
+      {
+        "numero": 6,
+        "nome": "BALDORIA AA",
+        "proprietario": "Adriano Muzzi"
+      },
+      {
+        "numero": 7,
+        "nome": "BENITO BAIO AA",
+        "proprietario": "Riccardo Bindi"
+      },
+      {
+        "numero": 8,
+        "nome": "BENITOS AA",
+        "proprietario": "Dario Colagè"
+      },
+      {
+        "numero": 9,
+        "nome": "BOLINA DA CLODIA AA",
+        "proprietario": "Alessio Bincoletto"
+      },
+      {
+        "numero": 10,
+        "nome": "BOMBOLONE AA",
+        "proprietario": "Mario Savelli"
+      },
+      {
+        "numero": 11,
+        "nome": "BONITAS AA",
+        "proprietario": "Didier Pierre Ryelandt"
+      },
+      {
+        "numero": 12,
+        "nome": "BRIVIDO SARDO AA",
+        "proprietario": "Caterina Brandini"
+      },
+      {
+        "numero": 13,
+        "nome": "CANARINU AA",
+        "proprietario": "Mark Harris Getty"
+      },
+      {
+        "numero": 14,
+        "nome": "CASSIOX AA",
+        "proprietario": "Alessandro Neri"
+      },
+      {
+        "numero": 15,
+        "nome": "CAVEAU AA",
+        "proprietario": "Barbara Toti"
+      },
+      {
+        "numero": 16,
+        "nome": "CHIOSA VINCE AA",
+        "proprietario": "Duccio Ravenni"
+      },
+      {
+        "numero": 17,
+        "nome": "CLEOFE AA",
+        "proprietario": "Leonardo Loddo"
+      },
+      {
+        "numero": 18,
+        "nome": "COBALTO DA CLODIA AA",
+        "proprietario": "Alessandro Columbu"
+      },
+      {
+        "numero": 19,
+        "nome": "COMANCIO AA",
+        "proprietario": "Federica Regnani"
+      },
+      {
+        "numero": 20,
+        "nome": "COMPILATION AA",
+        "proprietario": "Federica Saracini"
+      },
+      {
+        "numero": 21,
+        "nome": "CORINNE CLAR AA",
+        "proprietario": "Aurora Coneri"
+      },
+      {
+        "numero": 22,
+        "nome": "DADA AA",
+        "proprietario": "Sandra Rossi"
+      },
+      {
+        "numero": 23,
+        "nome": "DAREDEVIL AA",
+        "proprietario": "Marcello Roti"
+      },
+      {
+        "numero": 24,
+        "nome": "DEDALO KING AA",
+        "proprietario": "Salvatore Nieddu"
+      },
+      {
+        "numero": 25,
+        "nome": "DEMONI AA",
+        "proprietario": "Alessia Ara"
+      },
+      {
+        "numero": 26,
+        "nome": "DIAMANTE GRIGIO AA",
+        "proprietario": "Paolo Giachetti"
+      },
+      {
+        "numero": 27,
+        "nome": "DIAMANTE SAURO AA",
+        "proprietario": "Pietro Falchi"
+      },
+      {
+        "numero": 28,
+        "nome": "DIODORO AA",
+        "proprietario": "Ilaria Bisconti"
+      },
+      {
+        "numero": 29,
+        "nome": "DIOSU DE CAMPEDA AA",
+        "proprietario": "Luciano Marri"
+      },
+      {
+        "numero": 30,
+        "nome": "DOCTOR DONALD AA",
+        "proprietario": "Nicola Giorgi"
+      },
+      {
+        "numero": 31,
+        "nome": "DOLCECOMELANUTELLA AA",
+        "proprietario": "Camilla Marzi"
+      },
+      {
+        "numero": 32,
+        "nome": "DOLLARO AA",
+        "proprietario": "Andrea Sanna"
+      },
+      {
+        "numero": 33,
+        "nome": "DONRODRIGO AA",
+        "proprietario": "Michele Seazzu"
+      },
+      {
+        "numero": 34,
+        "nome": "DORINDA AA",
+        "proprietario": "Agnieszka Fiut"
+      },
+      {
+        "numero": 35,
+        "nome": "DOROTEA DIMMONIA AA",
+        "proprietario": "Mark Harris Getty"
+      },
+      {
+        "numero": 36,
+        "nome": "DOVIZIA AA",
+        "proprietario": "Andrea Viani"
+      },
+      {
+        "numero": 37,
+        "nome": "DRAPPELLONE AA",
+        "proprietario": "Rita Mereu"
+      },
+      {
+        "numero": 38,
+        "nome": "DREEHER AA",
+        "proprietario": "Andrea Pellegrini"
+      },
+      {
+        "numero": 39,
+        "nome": "DUCE AA",
+        "proprietario": "Antonio Costantino Buzzi"
+      },
+      {
+        "numero": 40,
+        "nome": "EBACIAMI AA",
+        "proprietario": "Maurizia Vitaliani"
+      },
+      {
+        "numero": 41,
+        "nome": "EBANO AA",
+        "proprietario": "Andrea Sanna"
+      },
+      {
+        "numero": 42,
+        "nome": "EBERARDO AA",
+        "proprietario": "Theodore William Thomas Westerman"
+      },
+      {
+        "numero": 43,
+        "nome": "ECCOLO AA",
+        "proprietario": "Diego Minucci"
+      },
+      {
+        "numero": 44,
+        "nome": "ELLENICO AA",
+        "proprietario": "Lorenzo Maria Vincenti"
+      },
+      {
+        "numero": 45,
+        "nome": "ELLY AA",
+        "proprietario": "Camilla Marzi"
+      },
+      {
+        "numero": 46,
+        "nome": "EMIGRANTE AA",
+        "proprietario": "Selvaggia Pianetti Lotteringhi della Stufa"
+      },
+      {
+        "numero": 47,
+        "nome": "ENNALZU AA",
+        "proprietario": "Nicolò Farnetani"
+      },
+      {
+        "numero": 48,
+        "nome": "ENTU DE ERANU AA",
+        "proprietario": "Gianfranco Bitti"
+      },
+      {
+        "numero": 49,
+        "nome": "EPIDEMICO AA",
+        "proprietario": "Samuele Sampieri"
+      },
+      {
+        "numero": 50,
+        "nome": "ERACORONA AA",
+        "proprietario": "Costanza Pasquinuzzi"
+      },
+      {
+        "numero": 51,
+        "nome": "ERAMUS AA",
+        "proprietario": "Maria Monni"
+      },
+      {
+        "numero": 52,
+        "nome": "ERITREA AA",
+        "proprietario": "Stefano Bertoncini"
+      },
+      {
+        "numero": 53,
+        "nome": "ERMESETHIESI AA",
+        "proprietario": "Federica Luchetti"
+      },
+      {
+        "numero": 54,
+        "nome": "ERMINIO BAIO AA",
+        "proprietario": "Elena Patacchiola"
+      },
+      {
+        "numero": 55,
+        "nome": "ERMOSA DE CAMPEDA AA",
+        "proprietario": "Jonatan Bartoletti"
+      },
+      {
+        "numero": 56,
+        "nome": "EROS OROTELLESE AA",
+        "proprietario": "Luciano Marri"
+      },
+      {
+        "numero": 57,
+        "nome": "ESCALUS AA",
+        "proprietario": "Selvaggia Pianetti Lotteringhi della Stufa"
+      },
+      {
+        "numero": 58,
+        "nome": "ESCHILO DE AIGHENTA AA",
+        "proprietario": "Mattia Chiavassa"
+      },
+      {
+        "numero": 59,
+        "nome": "ESMERALDA BAIA AA",
+        "proprietario": "Maicol Dei"
+      },
+      {
+        "numero": 60,
+        "nome": "ESTERINA AA",
+        "proprietario": "Enrico Bruschelli"
+      },
+      {
+        "numero": 61,
+        "nome": "ESTRELLA OLIANESA AA",
+        "proprietario": "Francesco Pisanu"
+      },
+      {
+        "numero": 62,
+        "nome": "ETOKAMURA AA",
+        "proprietario": "David Panti"
+      },
+      {
+        "numero": 63,
+        "nome": "ETRINTA AA",
+        "proprietario": "Luca Francesconi"
+      },
+      {
+        "numero": 64,
+        "nome": "EUSKALDI AA",
+        "proprietario": "Ilaria Mella"
+      },
+      {
+        "numero": 65,
+        "nome": "FABULA AA",
+        "proprietario": "Mark Harris Getty"
+      },
+      {
+        "numero": 66,
+        "nome": "FAGHE A BONU AA",
+        "proprietario": "Valentino Bussu"
+      },
+      {
+        "numero": 67,
+        "nome": "FAMELICAMU AA",
+        "proprietario": "Alessandro Frosini"
+      },
+      {
+        "numero": 68,
+        "nome": "FARAONE DE NULE AA",
+        "proprietario": "Carlo Giordano"
+      },
+      {
+        "numero": 69,
+        "nome": "FAVOLOSO ORANESU AA",
+        "proprietario": "Antonio Siri"
+      },
+      {
+        "numero": 70,
+        "nome": "FEDOR AA",
+        "proprietario": "Valter Pusceddu"
+      },
+      {
+        "numero": 71,
+        "nome": "FENOMENALE AA",
+        "proprietario": "Massimo Bonci"
+      },
+      {
+        "numero": 72,
+        "nome": "FERRO NERO AA",
+        "proprietario": "Rosanna Bonelli"
+      },
+      {
+        "numero": 73,
+        "nome": "FIGARO FIO AA",
+        "proprietario": "Mark Harris Getty"
+      },
+      {
+        "numero": 74,
+        "nome": "FIGURINO RIU AA",
+        "proprietario": "Alessandro Cersosimo"
+      },
+      {
+        "numero": 75,
+        "nome": "FILIPPO RIU AA",
+        "proprietario": "Rebecca Berni"
+      },
+      {
+        "numero": 76,
+        "nome": "FLASC BALL AA",
+        "proprietario": "Pasqualino Mula"
+      },
+      {
+        "numero": 77,
+        "nome": "FLICK AA",
+        "proprietario": "Michele Lorenzetti"
+      },
+      {
+        "numero": 78,
+        "nome": "FORTZA PARIS AA",
+        "proprietario": "Giuseppe Di Vivo"
+      },
+      {
+        "numero": 79,
+        "nome": "FRERE SOLEIL AA",
+        "proprietario": "Theodore William Thomas Westerman"
+      },
+      {
+        "numero": 80,
+        "nome": "FUORI ROTTA AA",
+        "proprietario": "Jonatan Bartoletti"
+      },
+      {
+        "numero": 81,
+        "nome": "FURIA TULESA AA",
+        "proprietario": "Alessia Soddu"
+      },
+      {
+        "numero": 82,
+        "nome": "GALUSE’ BOY AA",
+        "proprietario": "Ilaria Bisconti"
+      },
+      {
+        "numero": 83,
+        "nome": "GARDENIA AA",
+        "proprietario": "Annamaria Colosio"
+      },
+      {
+        "numero": 84,
+        "nome": "GAUDIA A TUTTI AA",
+        "proprietario": "Michela Gori"
+      },
+      {
+        "numero": 85,
+        "nome": "GHOST BOY AA",
+        "proprietario": "Francesco Scarparo"
+      },
+      {
+        "numero": 86,
+        "nome": "GIA’ FUD’ORA AA",
+        "proprietario": "Caterina Saracini"
+      },
+      {
+        "numero": 87,
+        "nome": "GIOIA PURA AA",
+        "proprietario": "Sandro Bencardino"
+      },
+      {
+        "numero": 88,
+        "nome": "GIORDANO AA",
+        "proprietario": "Ildebrando Coneri"
+      },
+      {
+        "numero": 89,
+        "nome": "GOLDEN RIU AA",
+        "proprietario": "Matteo Del Cesta"
+      },
+      {
+        "numero": 90,
+        "nome": "GRANDE AMORE AA",
+        "proprietario": "Mario Salis"
+      },
+      {
+        "numero": 91,
+        "nome": "GRINGO MENDOZA AA",
+        "proprietario": "Mario Giacomino Brinchia"
+      },
+      {
+        "numero": 92,
+        "nome": "GUIZZO AA",
+        "proprietario": "Agnieszka Fiut"
+      },
+      {
+        "numero": 93,
+        "nome": "INTREPIDUS AA",
+        "proprietario": "Luca Anselmi"
+      },
+      {
+        "numero": 94,
+        "nome": "KING RIO AA",
+        "proprietario": "Ferruccio Valacchi"
+      },
+      {
+        "numero": 95,
+        "nome": "MILADY BONDREAMER AA",
+        "proprietario": "Mattia Chiavassa"
+      },
+      {
+        "numero": 96,
+        "nome": "MORESCO AA",
+        "proprietario": "Stefano Trochei"
+      },
+      {
+        "numero": 97,
+        "nome": "OCEANO DA CLODIA AA",
+        "proprietario": "Augusto Posta"
+      },
+      {
+        "numero": 98,
+        "nome": "SIR MARK AA",
+        "proprietario": "Mattia Chiavassa"
+      },
+      {
+        "numero": 99,
+        "nome": "SUPERCHIOMA AA",
+        "proprietario": "Massimo Columbu"
+      },
+      {
+        "numero": 100,
+        "nome": "TERRENERE FOLLIA AA",
+        "proprietario": "Francesca Vallone"
+      },
+      {
+        "numero": 101,
+        "nome": "UNAMORE",
+        "proprietario": "Stefano Vanni"
+      },
+      {
+        "numero": 102,
+        "nome": "VERANU",
+        "proprietario": "Alessandro Chiti"
+      },
+      {
+        "numero": 103,
+        "nome": "VISO D’ANGELO",
+        "proprietario": "Mark Harris Getty"
+      },
+      {
+        "numero": 104,
+        "nome": "VOLCAN DE BONORVA",
+        "proprietario": "Donatella Meucci"
+      },
+      {
+        "numero": 105,
+        "nome": "VOLPINO",
+        "proprietario": "Franco Iannilli"
+      },
+      {
+        "numero": 106,
+        "nome": "ZENTILES",
+        "proprietario": "Didier Pierre Ryelandt"
+      },
+      {
+        "numero": 107,
+        "nome": "ZINIAS AA",
+        "proprietario": "Chiara Marchetti"
+      },
+      {
+        "numero": 108,
+        "nome": "ZIO FRAC",
+        "proprietario": "Enrico Bruschelli"
+      }
+    ]
+  },
+  "materie": [
+    {
+      "numero": 3,
+      "titolo": "Accesso alla Conchiglia e presenza dei minori",
+      "slug": "accesso-alla-conchiglia-e-presenza-dei-minori",
+      "corpo": "## 3.1 Minori di 10 anni\n\n- **Regola:** accesso vietato anche se accompagnati da maggiorenni.\n- **Luogo:** interno della Conchiglia di Piazza del Campo.\n- **Quando:** 16 agosto 2026 dalle 15:00 fino alla conclusione.\n- **Palchi:** esclusi dalla motivazione del divieto.\n- **Rinvio:** efficacia fino alla conclusione della manifestazione.\n- **Conseguenza indicata:** denuncia ai sensi dell'art. 650 c.p.\n- **Fonte:** ATT-2026-ORD-059.\n\nNon dedurre da questa ordinanza un divieto generale:\n\n- per l'intera Piazza;\n- per tutti i giorni delle Prove;\n- per i palchi;\n- per minori che abbiano già compiuto 10 anni.\n\n## 3.2 Passeggini e carrozzine\n\n- **Regola:** vietata l'introduzione nell'area destinata agli spettatori.\n- **Quando:** soltanto durante la Prova Generale e il Palio.\n- **Oggetti:** carrozzine e passeggini usati per il trasporto di neonati o bambini.\n- **Fonte:** ATT-2026-ORD-060.\n\nLa limitazione “per la sola Prova Generale e per il Palio” riguarda carrozzine e passeggini, non tutti gli oggetti elencati nella stessa ordinanza."
+    },
+    {
+      "numero": 4,
+      "titolo": "Oggetti vietati e condotte presso la pista",
+      "slug": "oggetti-vietati-e-condotte-presso-la-pista",
+      "corpo": "## 4.1 Oggetti nell'area spettatori\n\nATT-2026-ORD-060 vieta l'introduzione nell'area destinata agli spettatori di:\n\n- sedie;\n- sgabelli;\n- tavoli;\n- panche;\n- cassette o simili;\n- altri oggetti atti all'offesa;\n- ombrelli.\n\n## 4.2 Spray, petardi e fuochi artificiali\n\nIn Piazza del Campo sono vietati introduzione, possesso e uso di:\n\n- spray da difesa al capsicum;\n- artifizi pirici;\n- fuochi artificiali;\n- petardi, anche se normalmente consentiti.\n\nResta salva l'eccezione per quanto previsto dal Regolamento per il Palio.\n\nFonte: ATT-2026-ORD-060.\n\n## 4.3 Pista e oggetti protesi verso la corsa\n\nÈ vietato:\n\n- entrare nella pista;\n- lanciare oggetti;\n- ostacolare il libero e ordinato svolgimento della corsa;\n- assistere in piedi sui colonnini;\n- sporgersi con il corpo verso la pista;\n- protendere oggetti verso la pista.\n\nLe prime tre condotte derivano da ATT-2026-ORD-060. Le ultime tre valgono durante prove regolamentate, Tratta, Prove e corsa e derivano da ATT-2026-ORD-052."
+    },
+    {
+      "numero": 5,
+      "titolo": "Alcol, bottiglie e contenitori",
+      "slug": "alcol-bottiglie-e-contenitori",
+      "corpo": "## 5.1 Divieti rivolti a chiunque\n\nÈ vietato introdurre o detenere:\n\n- bevande alcoliche di qualsiasi gradazione;\n- bottiglie o contenitori di vetro;\n- contenitori metallici;\n- contenitori di plastica con tappo;\n- bibite congelate.\n\n## 5.2 Area\n\n- Piazza del Campo;\n- vie e vicoli di accesso;\n- porzione delimitata dai cancelli di chiusura esterni alla Piazza.\n\n## 5.3 Momenti di applicazione\n\n- prove regolamentate: per tutta la durata;\n- Tratta: per tutta la durata;\n- Prove mattutine: per tutta la durata;\n- Prove serali: dalle 18:00 fino alla conclusione;\n- corsa del 16 agosto: dalle 14:30 fino al termine.\n\n## 5.4 Conseguenza indicata\n\nDenuncia all'Autorità Giudiziaria ai sensi dell'art. 650 c.p.\n\n## 5.5 Fonte\n\nATT-2026-ORD-057.\n\n## 5.6 Distinzione fra possesso e vendita\n\nI divieti rivolti a chiunque non vanno confusi con:\n\n- le regole di vendita per esercizi fissi e somministrazione: ATT-2026-ORD-054;\n- le regole per commercianti su area pubblica: ATT-2026-ORD-056.\n\nGli esercizi interessati possono cedere bevande soltanto nei materiali e nelle condizioni consentite dai rispettivi atti. La guida pubblica deve spiegare cosa può portare il visitatore; la pagina per operatori deve spiegare cosa può vendere l'esercizio."
+    },
+    {
+      "numero": 6,
+      "titolo": "Animali da compagnia",
+      "slug": "animali-da-compagnia",
+      "corpo": "- **Regola:** è vietato condurre animali da compagnia, anche al guinzaglio.\n- **Luogo:** palchi e Piazza del Campo.\n- **Fonte:** ATT-2026-ORD-052.\n\nL'atto non fissa nella lettera c) una singola fascia oraria. La regola va comunicata nel contesto delle celebrazioni disciplinate dall'ordinanza e non trasformata in un divieto permanente ordinario per Piazza del Campo."
+    },
+    {
+      "numero": 7,
+      "titolo": "Aree riservate e transito",
+      "slug": "aree-riservate-e-transito",
+      "corpo": "## 7.1 Area del sorteggio della Tratta\n\n- **Quando:** 13 agosto 2026 durante l'assegnazione dei cavalli.\n- **Area:** spazio recintato davanti al Palazzo Comunale.\n- **Accesso:** Capitani, Fiduciari, Barbareschi e personale di servizio.\n- **Permessi eccezionali:** numero limitato per fotografi e giornalisti.\n- **Fonte:** ATT-2026-ORD-051.\n\n## 7.2 Pista e aree tecniche\n\nDopo lo sgombero effettuato da Polizia Locale e Forze dell'Ordine, durante prove regolamentate, Prove e corsa, è vietato a chi non è autorizzato transitare o trattenersi:\n\n- sulla pista;\n- intorno al Verrocchio;\n- dietro il Palco delle Comparse;\n- dietro i materassi di San Martino;\n- sotto i palchi;\n- dentro la recinzione di Fonte Gaia;\n- alla bocca del Casato.\n\nFonte: ATT-2026-ORD-052.\n\n## 7.3 Casato di Sotto\n\n- **Quando:** in occasione del Palio del 16 agosto.\n- **Tratto:** fra Vicolo di Tone e Piazza del Campo.\n- **Divieto:** transito pedonale alle persone non autorizzate.\n- **Eccezioni:** abitanti, partecipanti al Corteo Storico e autorizzati.\n- **Fonte:** ATT-2026-ORD-052.\n\n## 7.4 Innaffiatura del tufo\n\nÈ vietato ai pedoni transitare sulla pista durante l'innaffiatura e fino alla rimozione dei divieti.\n\nFonte: ATT-2026-ORD-052."
+    },
+    {
+      "numero": 8,
+      "titolo": "Palchi, balconi, terrazze e tetti",
+      "slug": "palchi-balconi-terrazze-e-tetti",
+      "corpo": "## 8.1 Tetti\n\n- **Divieto:** assistere da tetti.\n- **Fasi:** prove regolamentate, Tratta, Prove e corsa.\n- **Sanzione:** € 500,00 per ciascuna persona e immediata discesa.\n- **Fonte:** ATT-2026-ORD-058.\n\n## 8.2 Capienza\n\n- non può accedere un numero di persone superiore a quello autorizzato;\n- palchi, balconi e terrazze devono mostrare numeri d'ordine e posti;\n- i posti nei palchi devono essere numerati e assicurati mediante poltroncine metalliche;\n- il proprietario del palco è soggetto a sanzione di € 500,00 in caso di sovraffollamento, oltre ad altre eventuali violazioni.\n\nFonte: ATT-2026-ORD-058.\n\n## 8.3 Palco dei Giudici\n\nL'accesso è riservato alle funzioni elencate dall'ordinanza n. 53 e richiede tessera personale. Durante la corsa non possono sostare persone non autorizzate sulla scala.\n\nFonte: ATT-2026-ORD-053.\n\n## 8.4 Requisiti tecnici\n\nMontaggio, collaudo, assicurazione, requisiti strutturali, custodia, impianti elettrici e smontaggio sono disciplinati dettagliatamente da ATT-2026-ORD-058. Le sintesi pubbliche non devono essere usate come manuale tecnico: per proprietari, responsabili e palcaioli è obbligatorio consultare l'atto integrale."
+    },
+    {
+      "numero": 9,
+      "titolo": "Attività commerciali e somministrazione",
+      "slug": "attivita-commerciali-e-somministrazione",
+      "corpo": "## 9.1 Il giorno del Palio\n\nPer esercizi e attività interne ai cancelli:\n\n- rimozione dal suolo pubblico degli arredi;\n- chiusura dalle 13:30;\n- riapertura non prima di trenta minuti dalla conclusione della corsa e comunque dopo il deflusso.\n\nFonte: ATT-2026-ORD-054.\n\n## 9.2 Prove e Tratta\n\nL'ordinanza n. 54 regola:\n\n- sgombero degli arredi ai mortaretti;\n- chiusure durante le Prove pomeridiane;\n- regole specifiche per Via Rinaldini e Via del Porrione;\n- tutela della pista in caso di pioggia;\n- passaggio dei mezzi di soccorso;\n- vendita e cessione delle bevande.\n\n## 9.3 Lavori di allestimento\n\nL'ordinanza n. 55 stabilisce chiusure e divieti di occupazione per le attività interessate dai lavori dal 4 al 22 agosto, comprendendo:\n\n- cancelli e varchi;\n- palchi;\n- Verrocchio e Stella;\n- materassi;\n- posa e rimozione del tufo;\n- Palco delle Comparse;\n- ripristino della Piazza.\n\nPer i civici e gli orari esatti va consultato ATT-2026-ORD-055."
+    },
+    {
+      "numero": 10,
+      "titolo": "Organizzazione e assistenza",
+      "slug": "organizzazione-e-assistenza",
+      "corpo": "ATT-2026-DIR-1791 registra collaborazioni gratuite per:\n\n- eventuale trasporto dei cavalli;\n- biga di supporto;\n- accoglienza storico-artistica;\n- fotografia del Drappellone;\n- comunicazioni di emergenza radio e supporto operativo.\n\nL'atto documenta l'organizzazione, ma non crea regole di accesso per il pubblico.\n\nATT-2026-DIR-1775 e ATT-2026-VIS-1775 riguardano economie contabili del Palio di luglio e non modificano la disciplina pratica di agosto."
+    },
+    {
+      "numero": 11,
+      "titolo": "Sanzioni: quadro di cautela",
+      "slug": "sanzioni-quadro-di-cautela",
+      "corpo": "Le ordinanze usano regimi differenti:\n\n- sanzioni amministrative fisse;\n- sanzioni amministrative entro un minimo e un massimo;\n- immediato allontanamento;\n- revoca dell'agibilità;\n- denuncia all'Autorità Giudiziaria ai sensi dell'art. 650 c.p.;\n- misure previste dal Regolamento di Polizia Municipale.\n\nNon trasformare questo quadro in una tabella unica “divieto → multa” senza leggere la singola ordinanza. In particolare:\n\n- ATT-2026-ORD-052 differenzia il momento della violazione;\n- ATT-2026-ORD-054 differenzia vendita di contenitori e altre violazioni;\n- ATT-2026-ORD-058 differenzia molte categorie tecniche;\n- ATT-2026-ORD-059 e ATT-2026-ORD-060 richiamano l'art. 650 c.p."
+    },
+    {
+      "numero": 12,
+      "titolo": "Rinvio della Carriera",
+      "slug": "rinvio-della-carriera",
+      "corpo": "Le ordinanze nn. 52, 53, 54, 55, 56, 57, 58, 59 e 60 contengono formule che estendono, nei rispettivi limiti, le disposizioni fino alla conclusione della manifestazione in caso di rinvio.\n\nNon è corretto assumere che ogni orario fisso venga automaticamente traslato nello stesso modo. In caso di rinvio:\n\n1. consultare il testo dell'ordinanza;\n2. verificare le comunicazioni ufficiali del Comune;\n3. verificare eventuali ulteriori provvedimenti dell'Autorità di Pubblica Sicurezza."
+    },
+    {
+      "numero": 13,
+      "titolo": "Stato di completezza",
+      "slug": "stato-di-completezza",
+      "corpo": "Il consolidamento copre tutti i tredici PDF ricevuti. Restano da acquisire o verificare:\n\n- atti sindacali nn. 44 e 45 del 7 luglio 2026;\n- eventuali ordinanze successive;\n- eventuali modifiche temporali;\n- disposizioni autonome di pubblica sicurezza;\n- permalink ufficiali stabili dell'Albo Pretorio."
+    }
+  ],
+  "guida": [
+    {
+      "ordine": 1,
+      "titolo": "Prima di entrare in Piazza",
+      "slug": "prima-di-entrare-in-piazza",
+      "corpo": "Questa guida traduce in forma comprensibile le ordinanze sindacali nn. 51–60 del 28 luglio 2026 e coordina i documenti operativi ufficiali successivi utili al pubblico. Non sostituisce gli atti o le pubblicazioni originali e deve essere ricontrollata in caso di rinvio, pioggia o nuove disposizioni ufficiali."
+    },
+    {
+      "ordine": 2,
+      "titolo": "Previsite dei cavalli",
+      "slug": "previsite-dei-cavalli",
+      "corpo": "Il Comune di Siena ha pubblicato il 30 luglio 2026 l’elenco dei **108 cavalli ammessi alle Previsite** per il Palio del 16 agosto.\n\nLe Previsite si svolgono:\n\n- giovedì 6 agosto;\n- venerdì 7 agosto;\n- sabato 8 agosto;\n- presso la clinica veterinaria del Ceppo, a Monteresi.\n\nL’ammissione alle Previsite è una fase preliminare. Non significa che il cavallo abbia già ottenuto l’idoneità sanitaria, sia ammesso alle prove regolamentate o alla Tratta, faccia parte del lotto scelto o partecipi alla Carriera.\n\n**Fonte:** [comunicato ufficiale del Comune di Siena del 30 luglio 2026](https://www.comune.siena.it/novita/palio-16-agosto-i-cavalli-ammessi-alle-previsite-1).  \n**Elenco completo:** KB 09, `COM-2026-08-PREVISITE-001`."
+    },
+    {
+      "ordine": 3,
+      "titolo": "Minori di 10 anni",
+      "slug": "minori-di-10-anni",
+      "corpo": "Il 16 agosto 2026, dalle 15:00 fino alla conclusione della manifestazione, i minori di 10 anni non possono accedere all'interno della Conchiglia di Piazza del Campo, nemmeno se accompagnati da un maggiorenne.\n\nLa motivazione dell'ordinanza esclude i palchi. Non è quindi corretto presentare la regola come divieto assoluto per l'intera Piazza.\n\n**Fonte:** ordinanza sindacale n. 59 del 28 luglio 2026."
+    },
+    {
+      "ordine": 4,
+      "titolo": "Passeggini e carrozzine",
+      "slug": "passeggini-e-carrozzine",
+      "corpo": "Nell'area destinata agli spettatori non si possono introdurre carrozzine o passeggini per neonati e bambini durante:\n\n- Prova Generale;\n- Palio.\n\nLa limitazione specifica a questi due momenti deriva direttamente dal testo dell'ordinanza.\n\n**Fonte:** ordinanza sindacale n. 60 del 28 luglio 2026."
+    },
+    {
+      "ordine": 5,
+      "titolo": "Bottiglie, alcol e bevande",
+      "slug": "bottiglie-alcol-e-bevande",
+      "corpo": "Durante i periodi stabiliti dall'ordinanza, nell'area delimitata dai cancelli esterni non si possono introdurre o detenere:\n\n- bevande alcoliche di qualsiasi gradazione;\n- bottiglie e contenitori di vetro;\n- contenitori metallici, comprese le lattine;\n- contenitori di plastica con tappo;\n- bibite congelate.\n\nIl 16 agosto il divieto vale dalle 14:30 fino al termine della corsa.\n\nPer prove regolamentate, Tratta e Prove valgono fasce specifiche:\n\n- prove regolamentate: intera durata;\n- Tratta: intera durata;\n- Prove mattutine: intera durata;\n- Prove serali: dalle 18:00 fino alla conclusione.\n\n**Fonte:** ordinanza sindacale n. 57 del 28 luglio 2026."
+    },
+    {
+      "ordine": 6,
+      "titolo": "Ombrelli, sedie e altri oggetti",
+      "slug": "ombrelli-sedie-e-altri-oggetti",
+      "corpo": "Nell'area destinata agli spettatori non si possono introdurre:\n\n- ombrelli;\n- sedie o sgabelli;\n- tavoli;\n- panche;\n- cassette o oggetti simili;\n- oggetti atti all'offesa.\n\nIn Piazza sono inoltre vietati spray al capsicum, petardi, fuochi artificiali e altri artifizi pirici, salvo quanto previsto dal Regolamento per il Palio.\n\n**Fonte:** ordinanza sindacale n. 60 del 28 luglio 2026."
+    },
+    {
+      "ordine": 7,
+      "titolo": "Animali da compagnia",
+      "slug": "animali-da-compagnia",
+      "corpo": "Non è consentito condurre animali da compagnia, nemmeno al guinzaglio, nei palchi e in Piazza del Campo durante le celebrazioni disciplinate dall'ordinanza.\n\n**Fonte:** ordinanza sindacale n. 52 del 28 luglio 2026."
+    },
+    {
+      "ordine": 8,
+      "titolo": "Colonnini, pista e aree tecniche",
+      "slug": "colonnini-pista-e-aree-tecniche",
+      "corpo": "Durante prove regolamentate, Tratta, Prove e corsa:\n\n- non stare in piedi sui colonnini;\n- non sporgerti con il corpo verso la pista;\n- non protendere oggetti verso la pista.\n\nDopo lo sgombero, le persone non autorizzate non possono sostare o transitare sulla pista e nelle aree tecniche indicate dall'ordinanza.\n\nDurante l'innaffiatura del tufo è vietato attraversare la pista fino alla rimozione dei divieti.\n\n**Fonte:** ordinanza sindacale n. 52 del 28 luglio 2026."
+    },
+    {
+      "ordine": 9,
+      "titolo": "Casato di Sotto",
+      "slug": "casato-di-sotto",
+      "corpo": "Nel giorno del Palio il transito pedonale nel Casato di Sotto, nel tratto fra Vicolo di Tone e Piazza del Campo, è vietato alle persone non autorizzate.\n\nSono esclusi:\n\n- abitanti;\n- partecipanti al Corteo Storico;\n- persone autorizzate.\n\n**Fonte:** ordinanza sindacale n. 52 del 28 luglio 2026."
+    },
+    {
+      "ordine": 10,
+      "titolo": "Tetti, palchi, balconi e terrazze",
+      "slug": "tetti-palchi-balconi-e-terrazze",
+      "corpo": "È vietato assistere dai tetti a:\n\n- prove regolamentate;\n- Tratta;\n- Prove;\n- corsa.\n\nÈ vietato superare il numero di persone autorizzato per palchi, balconi e terrazze.\n\n**Fonte:** ordinanza sindacale n. 58 del 28 luglio 2026."
+    },
+    {
+      "ordine": 11,
+      "titolo": "Area del sorteggio dei cavalli",
+      "slug": "area-del-sorteggio-dei-cavalli",
+      "corpo": "Il 13 agosto 2026, durante l'assegnazione dei cavalli, non si può entrare nell'area recintata davanti al Palazzo Comunale senza autorizzazione.\n\nPossono accedere:\n\n- Capitani;\n- Fiduciari;\n- Barbareschi;\n- personale di servizio;\n- un numero limitato di fotografi e giornalisti con permesso eccezionale.\n\n**Fonte:** ordinanza sindacale n. 51 del 28 luglio 2026."
+    },
+    {
+      "ordine": 12,
+      "titolo": "In caso di rinvio o nuove disposizioni",
+      "slug": "in-caso-di-rinvio-o-nuove-disposizioni",
+      "corpo": "Le ordinanze prevedono in più casi il mantenimento delle misure fino alla conclusione della manifestazione. Gli orari e le modalità concrete possono però essere modificati da:\n\n- nuove ordinanze del Comune di Siena;\n- comunicazioni operative ufficiali;\n- provvedimenti dell'Autorità di Pubblica Sicurezza;\n- condizioni meteorologiche e conseguente rinvio.\n\nPrima di recarsi in Piazza, verificare sempre gli aggiornamenti ufficiali del Comune di Siena."
+    },
+    {
+      "ordine": 13,
+      "titolo": "Formula breve per la diffusione",
+      "slug": "formula-breve-per-la-diffusione",
+      "corpo": "> Palio del 16 agosto 2026: dalle 15:00 i minori di 10 anni non possono entrare nella Conchiglia, nemmeno accompagnati; dalle 14:30 sono vietati alcol, vetro, lattine, plastica con tappo e bibite congelate nell'area delimitata dai cancelli. Ombrelli, sedie e sgabelli non sono ammessi nell'area spettatori; passeggini e carrozzine sono vietati per Prova Generale e Palio. Verifica dettagli, eccezioni e fonti originali prima dell'accesso.\n\nLa formula breve non sostituisce le singole schede e non deve essere pubblicata senza collegamento alla guida completa."
+    }
+  ],
+  "registroFonti": [
+    {
+      "id": "REG-PALIO-2019",
+      "documento": "Regolamento per il Palio, edizione vigente",
+      "estremi": "approvato con deliberazioni del Consiglio Comunale n. 99 del 17.6.2019 e n. 224 del 28.11.2019; pubblicazione dell'Ufficio Palio presentata il 28 maggio 2021",
+      "consistenza": "82 pagine, 1.988.492 byte",
+      "sha256": "a09afe7b863f7b1b5329f8fb069503a59dc67b92053c3a156b7d62ce9855b86d",
+      "stato": "acquisito"
+    },
+    {
+      "id": "REG-PALIO-1949",
+      "documento": "Regolamento per il Palio, edizione previgente",
+      "estremi": "approvato con deliberazione del Consiglio Comunale n. 14 del 05.02.1949 e s.m.i.; ultima modifica registrata nel prospetto: 10.08.1999",
+      "consistenza": "45 pagine, 403.343 byte",
+      "sha256": "faf7238de030f7ab368160775702b23ebc28d4cc5c8090faef7145a681b1f112",
+      "stato": "acquisito, valore storico"
+    },
+    {
+      "id": "COM-2021-05-REGOLAMENTO-001",
+      "documento": "Comunicato stampa del Comune di Siena sulla presentazione del nuovo Regolamento",
+      "estremi": "presentazione nell'Entrone di Palazzo Comunale, venerdì 28 maggio 2021; PDF generato il 29 maggio 2021",
+      "consistenza": "2 pagine, 95.391 byte",
+      "sha256": "f8d4a39427b4328f7546f4a5ea712973a7a415371574f5a5e61c9dc79ab77d6a",
+      "stato": "acquisito"
+    },
+    {
+      "id": "RIF-BANDO-CONFINI-1730",
+      "documento": "Trascrizione del Bando sopra la nuova divisione e riforma de' confini delle Contrade",
+      "estremi": "decretato dalla Principessa Violante di Baviera il 13 settembre 1729; deliberazione della Balìa di venerdì 19 agosto 1729; relazione dei deputati del 27 luglio 1729",
+      "consistenza": "8 paragrafi, 102.338 byte",
+      "sha256": "6f9ddbaf49238aab88343c359f491a2dee3544d0af3b8ca5132ebe3226d9147b",
+      "stato": "da_verificare quanto alla provenienza della trascrizione"
+    },
+    {
+      "id": "RIF-STRADE-CONTRADE",
+      "documento": "Le strade delle Contrade, repertorio dell'attribuzione delle vie",
+      "estremi": "opera editoriale moderna, senza attribuzione interna",
+      "consistenza": "796 paragrafi, 121.949 byte",
+      "sha256": "fab21455a27e58f9a564322668f6e83f7f87a3786c9e104f041bc53bf74a469d",
+      "stato": "da_verificare quanto a provenienza e diritti"
+    }
+  ],
+  "collazione": {
+    "sintesi": [
+      {
+        "esito": "riscritto",
+        "articoli": 5
+      },
+      {
+        "esito": "modificato",
+        "articoli": 18
+      },
+      {
+        "esito": "modifica puntuale",
+        "articoli": 36
+      },
+      {
+        "esito": "solo differenze tipografiche",
+        "articoli": 24
+      },
+      {
+        "esito": "invariato nella sostanza",
+        "articoli": 23
+      }
+    ],
+    "totale": 106,
+    "prospetto": [
+      {
+        "articolo": "1",
+        "rubrica": "Corse del Palio - Palii ordinari",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "2",
+        "rubrica": "Palii straordinari - Indizione",
+        "esito": "modificato",
+        "somiglianza": "0.899",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "3",
+        "rubrica": "Annunci al pubblico",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "4",
+        "rubrica": "Contrade: Stemmi e colori - Partecipazione ai Palii",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.979",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "5",
+        "rubrica": "Palii Straordinari - diritto di partecipazione",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "6",
+        "rubrica": "Palii ordinari - Rinunce",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "7",
+        "rubrica": "Soprintendenza e direzione dei Palii",
+        "esito": "modificato",
+        "somiglianza": "0.742",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "8",
+        "rubrica": "Pubblici concorsi e lotterie - Divieto",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.983",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "9",
+        "rubrica": "Contrade - Stato giuridico",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.986",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "10",
+        "rubrica": "Contrade - Nomina di Commissario",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "11",
+        "rubrica": "Contrade - Rapporti con il Comune",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "12",
+        "rubrica": "Contrade - Notifica del Seggio al Comune",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "13",
+        "rubrica": "Contrade - Legittimo rappresentante",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "14",
+        "rubrica": "Capitano - Approvazione",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "15",
+        "rubrica": "Capitano - Eleggibilità",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.964",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "16",
+        "rubrica": "Nomina del Capitano - Ricorsi",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.977",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "17",
+        "rubrica": "Fiduciari del Capitano - Approvazione",
+        "esito": "modificato",
+        "somiglianza": "0.650",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "18",
+        "rubrica": "Priori e Capitani - Impedimenti - Sostituzione nei rapporti con il Comune",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "19",
+        "rubrica": "Palco dei Priori e Palco dei Giudici - Persone ammesse",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.978",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "20",
+        "rubrica": "Sorteggio delle Contrade - Adunanza - Avviso al pubblico",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.991",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "21",
+        "rubrica": "Sorteggio delle Contrade - Operazioni preparatorie",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "22",
+        "rubrica": "Sorteggio delle Contrade - Modalità di estrazione delle Contrade che parteciperanno",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.992",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "23",
+        "rubrica": "Sorteggio delle Contrade - Modalità di estrazione delle Contrade che non",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.993",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "24",
+        "rubrica": "Sorteggio delle Contrade - Determinazione ordine delle Contrade nel Corteo Storico",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "25",
+        "rubrica": "Acquisizione del diritto di correre per rinuncia di altra Contrada - Ordine nel",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.985",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "26",
+        "rubrica": "Estrazione delle Contrade - Annuncio al pubblico - Esposizione bandiere",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.986",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "27",
+        "rubrica": "Palio Straordinario - Sorteggio delle Contrade - Modalità",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.996",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "28",
+        "rubrica": "Palio Straordinario - Sorteggio delle Contrade - Annuncio al pubblico - Esposizione",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.985",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "29",
+        "rubrica": "Sorteggio delle Contrade - Divieto di partecipazione alle Contrade che abbiano fatto",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.974",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "30",
+        "rubrica": "Sorteggio delle Contrade - Adunanza successiva con i Capitani delle dieci Contrade",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.970",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "31",
+        "rubrica": "Nomina del Mossiere - Proposte dei Capitani",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.978",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "32",
+        "rubrica": "Adunanze dei Capitani - Solo per la corsa in oggetto - Esclusi argomenti generali",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "33",
+        "rubrica": "Adunanze Capitani - Varie",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.990",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "34",
+        "rubrica": "Presentazione, scelta, assegnazione dei cavalli - Predisposizioni",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "35",
+        "rubrica": "Presentazione, scelta, assegnazione dei cavalli - Persone autorizzate ad eccedere alla",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.982",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "36",
+        "rubrica": "Presentazione, scelta, assegnazione dei cavalli - Divieto di accesso alla Corte del",
+        "esito": "modificato",
+        "somiglianza": "0.940",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "37",
+        "rubrica": "Presentazione, scelta, assegnazione dei cavalli - Modalità di presentazione dei cavalli",
+        "esito": "riscritto",
+        "somiglianza": "0.338",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "38",
+        "rubrica": "Presentazione dei cavalli - Responsabilità dei proprietari - Obblighi del proprietario",
+        "esito": "riscritto",
+        "somiglianza": "0.589",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "39",
+        "rubrica": "Presentazione dei cavalli - Annotazione da apposito elenco, contrassegnato con",
+        "esito": "modificato",
+        "somiglianza": "0.800",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "40",
+        "rubrica": "Eventuale requisizione cavalli occorrenti - Compensi",
+        "esito": "riscritto",
+        "somiglianza": "0.036",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "41",
+        "rubrica": "Scelta dei cavalli - Corse di prova",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "42",
+        "rubrica": "Scelta dei cavalli - Suddivisione in batterie",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "43",
+        "rubrica": "Corse di prova - Fantini a disposizione del Comune - Obbligo di iscrizione in",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.992",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "44",
+        "rubrica": "Corse di prova - Disposizioni - Rinvio per pioggia",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "45",
+        "rubrica": "Scelta dei cavalli - Adunanza",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "46",
+        "rubrica": "Adunanza per la scelta dei cavalli - Votazione - Procedura per eliminazione",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "47",
+        "rubrica": "Ritiro dei cavalli non prescelti",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "48",
+        "rubrica": "Assegnazione dei cavalli - Modalità",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.997",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "49",
+        "rubrica": "Assegnazione dei cavalli - Diritto d'uso delle Contrade - Responsabilità",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "50",
+        "rubrica": "Assegnazione dei cavalli - Obbligo di partecipazione alle prove - Divieto di",
+        "esito": "modificato",
+        "somiglianza": "0.873",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "51",
+        "rubrica": "Incidenti nelle operazioni - Soluzioni",
+        "esito": "modificato",
+        "somiglianza": "0.943",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "52",
+        "rubrica": "Corse di prova - Obblighi delle Contrade",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.993",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "53",
+        "rubrica": "Corse di prova - Ritardo o soppressione causa pioggia",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "54",
+        "rubrica": "Corse di prova - Obblighi delle Contrade - Assegnazione dei posti nel cortile del",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.989",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "55",
+        "rubrica": "Corte del Potestà - Persone autorizzate ad accedervi durante le prove",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.989",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "56",
+        "rubrica": "Corse di prova - Esonero dal parteciparvi",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.960",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "57",
+        "rubrica": "Finimenti del cavallo - Definizione",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "58",
+        "rubrica": "Fantino - Scelta delle Contrade - Approvazione del Comune - Soprannome",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "59",
+        "rubrica": "Fantini - Divieti alle Contrade per la monta",
+        "esito": "modificato",
+        "somiglianza": "0.734",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "60",
+        "rubrica": "Fantini - Responsabilità propria",
+        "esito": "riscritto",
+        "somiglianza": "0.467",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "61",
+        "rubrica": "Fantini - Obbligo di indossare il giubbetto",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "62",
+        "rubrica": "Chiamata delle Contrade per le prove - Ordine delle mosse",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.994",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "63",
+        "rubrica": "Fantini - Dipendenza Autorità Comunale e Mossiere",
+        "esito": "modificato",
+        "somiglianza": "0.627",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "64",
+        "rubrica": "Fantini - Obblighi per la Mossa",
+        "esito": "modificato",
+        "somiglianza": "0.890",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "65",
+        "rubrica": "Mossa - Validità",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "66",
+        "rubrica": "Fantini - Obbligo di compiere tre giri",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "67",
+        "rubrica": "Fantini - Divieti durante la corsa",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "68",
+        "rubrica": "Fantini - Obbligo di mettersi fuori giostra se doppiati",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "69",
+        "rubrica": "Fantini caduti - Soccorsi",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "70",
+        "rubrica": "Vittoria della corsa",
+        "esito": "modificato",
+        "somiglianza": "0.854",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "71",
+        "rubrica": "Vincita della prova - Privilegi o premi",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.980",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "72",
+        "rubrica": "Corteo Storico - Composizione",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "73",
+        "rubrica": "Composizione delle Comparse della Contrada",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.994",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "74",
+        "rubrica": "Abrogato",
+        "esito": "modificato",
+        "somiglianza": "0.857",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "75",
+        "rubrica": "Note delle Comparse - Approvazione",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "76",
+        "rubrica": "Contrade - Obbligo di montare il fantino sul Soprallasso",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "77",
+        "rubrica": "Contrade - Ordine di partecipazione al Corteo Storico",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.998",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "78",
+        "rubrica": "Riunione delle Comparse per il Corteo Storico",
+        "esito": "modificato",
+        "somiglianza": "0.910",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "79",
+        "rubrica": "Doveri dei Figuranti",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "80",
+        "rubrica": "Obbligo dei Figuranti di prendere posto nel palco riservato",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "81",
+        "rubrica": "Corteo Storico - Sfilamento",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "82",
+        "rubrica": "Corteo Storico - Sbandierata collettiva - Ritiro del costume del Fantino",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.992",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "83",
+        "rubrica": "Contrade - Divieto di ritiro del cavallo",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "84",
+        "rubrica": "Corsa del Palio - Obblighi e divieti per i fantini",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "85",
+        "rubrica": "Corsa del Palio - Ordine di chiamata al canape",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.955",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "86",
+        "rubrica": "Abrogato",
+        "esito": "modificato",
+        "somiglianza": "0.833",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "87",
+        "rubrica": "Corsa del Palio - Applicabilità articoli precedenti",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "88",
+        "rubrica": "Vincita del Palio - Consegna Drappellone - Esposizione bandiera alla Trifora",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "89",
+        "rubrica": "Divieto di fare partiti",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "90",
+        "rubrica": "Rinvio del Palio per pioggia",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "91",
+        "rubrica": "Diverbi sul Palco dei Giudici",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.960",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "92",
+        "rubrica": "Relazione dei Deputati della Festa",
+        "esito": "modificato",
+        "somiglianza": "0.797",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "93",
+        "rubrica": "Drappellone - Caratteristiche - Esposizioni - Proprietà",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.967",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "94",
+        "rubrica": "Drappellone - Pittura",
+        "esito": "modificato",
+        "somiglianza": "0.930",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "95",
+        "rubrica": "Premio in denaro alla Contrada vincitrice",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "96",
+        "rubrica": "Premio al proprietario del cavallo vittorioso",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.982",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "97",
+        "rubrica": "Contrade: punizioni previste",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "98",
+        "rubrica": "Punizioni alle Contrade - Modalità di Comminazione",
+        "esito": "modificato",
+        "somiglianza": "0.718",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "99",
+        "rubrica": "Punizioni ai Fantini - Modalità di comminazione",
+        "esito": "riscritto",
+        "somiglianza": "0.528",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "99bis",
+        "rubrica": "Raccolta delle sanzioni comminate",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.989",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "100",
+        "rubrica": "Punizioni a Fantini e Contrade - Provvedimenti d'urgenza",
+        "esito": "modificato",
+        "somiglianza": "0.917",
+        "prospetto2019": true
+      },
+      {
+        "articolo": "101",
+        "rubrica": "Responsabilità oggettiva delle Contrade",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "102",
+        "rubrica": "Disposizioni o provvedimenti imprevisti",
+        "esito": "invariato nella sostanza",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "103",
+        "rubrica": "Precisazioni - Assessore Delegato",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.970",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "104",
+        "rubrica": "Entrata in vigore",
+        "esito": "modifica puntuale",
+        "somiglianza": "0.975",
+        "prospetto2019": false
+      },
+      {
+        "articolo": "105",
+        "rubrica": "Abrogazioni",
+        "esito": "solo differenze tipografiche",
+        "somiglianza": "1.000",
+        "prospetto2019": false
+      }
+    ],
+    "riscritture": "**Art. 37 — presentazione e scelta dei cavalli.** È l'intervento più profondo, con somiglianza sostanziale 0,338. L'edizione previgente prevedeva la presentazione diretta dei cavalli alla scelta; la vigente introduce la **preiscrizione**, le cui modalità sono stabilite con apposita ordinanza per ogni Palio. Da qui discende la catena documentaria che nel 2026 porta all'elenco dei cavalli ammessi alle previsite.\n\n**Art. 38 — responsabilità e noleggio.** L'edizione previgente disciplinava l'esonero di responsabilità del Comune e l'affissione del testo nella Corte del Podestà. La vigente demanda a un dirigente incaricato, con proprio atto, le funzioni relative al noleggio dei cavalli presentati alla tratta e di quelli prescelti dai dieci Capitani.\n\n**Art. 40 — requisizione dei cavalli.** Abrogato dalla deliberazione n. 99 del 17.6.2019. L'edizione vigente ne conserva la rubrica con la sola dicitura di abrogazione. La disposizione previgente imponeva al Comune la requisizione dei cavalli occorrenti qualora i presentati fossero meno di dieci.\n\n**Art. 60 — responsabilità propria dei Fantini.** Cade il meccanismo dell'affissione del testo nella Corte del Podestà. Subentra la presa d'atto individuale mediante **firma nell'apposito elenco di cui all'art. 43** e la sottoscrizione di una liberatoria.\n\n**Art. 99 — punizioni ai Fantini.** Introdotta la **diffida** come nuova sanzione, in posizione a) della scala sanzionatoria, con conseguente scorrimento delle lettere successive. Il procedimento passa dalla proposta motivata di provvedimento alla **contestazione degli addebiti**, fondata esclusivamente sulla Relazione.",
+    "anomalie": "1. **Art. 16, edizione vigente.** L'estrazione restituisce «suffragare i motivi addotti.x La Giunta Comunale comunica...». Il carattere `x` isolato dopo il punto non ha senso testuale: può essere un richiamo di nota, un refuso di stampa o un artefatto di estrazione. Va verificato sulla pagina originale prima di qualsiasi uso citazionale.\n2. **Completezza del prospetto previgente.** Il prospetto dell'edizione previgente omette almeno l'integrazione del 1998 all'art. 39. Non può quindi essere usato come censimento affidabile delle modificazioni anteriori al 1999.\n3. **Intervallo 1999-2019.** Nessuna delle due edizioni documenta modificazioni fra il 10.8.1999 e il 17.6.2019. L'assenza di righe nel prospetto non dimostra che non ve ne siano state.",
+    "limiti": "1. Non dimostra che il testo vigente sia quello attualmente in vigore: eventuali modificazioni successive al 28 novembre 2019 non sono state verificate presso il Comune di Siena.\n2. Non sostituisce la lettura degli atti. Le classificazioni `riscritto`, `modificato` e `modifica puntuale` misurano una distanza testuale, non la portata giuridica di un intervento: una modifica di poche parole può avere effetti maggiori di una riscrittura.\n3. Non è una collazione notarile. È stata verificata per campioni sui casi più rilevanti; gli scarti minori non sono stati controllati uno per uno sull'originale a stampa.\n4. Non attribuisce a una singola deliberazione le variazioni degli articoli toccati da più atti nel tempo. Il prospetto indica quali articoli sono stati modificati e da quale atto, non quale parola sia stata cambiata da quale deliberazione."
+  },
+  "bando": {
+    "meta": {
+      "id": "RIF-BANDO-CONFINI-1730",
+      "titolo": "Bando sopra la nuova divisione e riforma de' confini delle Contrade",
+      "autorita": "Violante Beatrice di Baviera, Governatrice di Siena",
+      "decretato": "13 settembre 1729",
+      "deliberazione_balia": "venerdì 19 agosto 1729",
+      "relazione_deputati": "27 luglio 1729",
+      "stato_documentale": "da_verificare",
+      "nota_provenienza": "Trascrizione verificata rispetto alla copia acquisita. La provenienza archivistica della copia resta da verificare."
+    },
+    "preambolo": [
+      {
+        "titolo": "Intestazione",
+        "slug": "intestazione",
+        "corpo": "NUOVA DIVISIONE DEI CONFINI DELLE CONTRADE,DECRETATA DALLA PRINCIPESSA VIOLANTE DI BAVIERA, GOVERNATRICE DI SIENA, IL 13 SETTEMBRE 1729."
+      },
+      {
+        "titolo": "Deliberazione del collegio di Balìa",
+        "slug": "deliberazione-del-collegio-di-balia",
+        "corpo": "*Venerdì 19 agosto 1729.*\n\nAdunati gl'illustrissimi signori ufficiali dell'illustrissimo collegio di Balìa a suono di campana ed in numero di 9 con dispensa, cioè il sig. Cotoni priore, signori cav. Palmieri, cav. Malavolti, cav. Tantucci, Perfetti, Cosati, Venturini, Tommasi e Bandinelli, si lesse la relazione delli signori deputati sopra il memoriale delle Contrade della città di Siena, supplicanti a voler stabilire una determinazione di confini fra di esse, giacché per detta causa erano fra le medesime insorte liti a cagione del questuare e del batter cassa per l'adunanze, come appresso: Illustrissimi Signori. In adempimento de comandi delle SS.VV. Ill.me, doppo aver fatte più sessioni col maestrato di Biccherna per compilare la commessaci terminazione de confini fra le Contrade di questa città a riguardo non tanto di por termine alle pericolose e dispendiose liti insorte fra gli abitanti di esse a causa del questuare e batter cassa per le loro adunanze, acciò avendo tutte un ugual numero di abitatori possano fare decorosa ed ugual comparsa nell'occasione delle pubbliche feste, le referiamo aver concordato di proporre alla prudenza delle SS.VV. Ill.me la qui annessa divisione di confini, colla quale per non pregiudicare a quelle descrizzioni che per lo passato fossero state fatte ne' pubblici documenti, le vien proposta col titolo di nuova divisione de' confini fra le Contrade, secondo la quale in avvenire debbono contenersi sì nel questuare, che nel battere la cassa, tolta la facoltà di ritrovarne o riassumere delle nuove, e reservate le facoltà agli abitatori di ciascuna Contrada per poter eleggere in loro protettori nobili anco quelli che abitassero fuori delle proprie Contrade, come anco di battere cassa e far feste in quelle strade o piazze che fan confine fra di loro. Ad effetto poi che venga osservata inviolabilmente, sarà necessario venga proposta questa per l'approvazione a Sua Altezza Reale, quando così piaccia al prudente intendimento delle Signorie Vostre Illustrissime, alle quali rimettendoci le facciamo ossequiosissima reverenza."
+      },
+      {
+        "titolo": "Relazione dei deputati",
+        "slug": "relazione-dei-deputati",
+        "corpo": "*Di casa, 27 luglio 1729.*\n\nDelle Signorie Vostre Illustrissime, devotissimi e obbligatissimi servitori e colleghi Niccolò Maria Sozzini, deputato, Angelo del Cotone, deputato.\n\nNUOVA DIVISIONE DE CONFINI FRA LE CONTRADE"
+      }
+    ],
+    "contrade": [
+      {
+        "numero": 1,
+        "nome": "Chiocciola",
+        "slug": "chiocciola",
+        "confini": "Dalla porta S.Marco comprenda le due strade fino al campanile de Padri del Carmine, siccome la via delle Monache della Madonna delle Sperandie per tutta la chiesa ed ospizio di S.Lucia fino all'arco della via de Maestri ed abbracciando le case dirimpetto al cimitero di S.Marco salga la piaggia di S.Quirico e vada sino all'arco del convento di Castelvecchio e fino a S.Quirico, prendendo detta chiesa e case fino alla svolta, lasciando la strada che cala alla Madonna del Corvo."
+      },
+      {
+        "numero": 2,
+        "nome": "Pantera",
+        "slug": "pantera",
+        "confini": "Dal campanile de Padri del Carmine prenda tutta la piazza detta il Pian de Mantellini, tutto Laterino e strada di S.Ansano fino al convento di S.Sebastiano esclusive, e per la via delle Due Porte arrivi all'imboccatura della piazza di Postierla, esclusa però detta piazza e case all'intorno, ed abbraccia la strada che dalla Madonna del Corvo va alla chiesa di S.Quirico."
+      },
+      {
+        "numero": 3,
+        "nome": "Tartuca",
+        "slug": "tartuca",
+        "confini": "Dall'ospizio di S.Lucia esclusive comprenda la strada dell'Ellera da ambe le parti, convento, chiesa e piazza di S.Agostino, convento e case de Padri della Rosa e tutta la strada fino a porta Tufi. Dall'arco di S.Agostino prenda solo a man sinistra ed occupi da ambe le parti la via de Maestri, siccome la via delle Murella fino all'arco delle monache di Castelvecchio, e scendendo per la costa in faccia alla chiesa di S.Pietro termini alla crociata di dette tre strade dette della Porta all'Arco, attenendosi in detta crociata solo a man destra."
+      },
+      {
+        "numero": 4,
+        "nome": "Aquila",
+        "slug": "aquila",
+        "confini": "Dalla colonna di Postierla e sua piazza inclusive occupi le case intorno a detta piazza, il vicolo e da ambo le parti la strada dove è il palazzo di S.A.R., la piazza tutta del Duomo e lo Spedale fino allo svoltare nella piaggetta che porta alla Compagnia di S.Girolamo, escluso però il palazzo archiepiscopale. Abbia il vicolo di casa Marsili fino al convento di Monagnesa, detto convento e Compagnia della Morte, e per quella parte scendendo in faccia di S.Desiderio per la via delle Campane nella via maestra che porta a Postierla, la quale dal chiasso del Bargello in su prenda da ambe le parti e scendendo dal chiasso del Bargello a destra solamente, entrando in piazza svolti nel Casato e tenga le case a man destra con i vicoli adiacenti fino alla Costa larga, abbracciando questa da ambe le parti salga in Postierla e di lì da ambe le parti, caminando per la via di S.Pietro termini a destra alla salita di Castelvecchio, e da sinistra comprende le case fino alla svolta del Casato."
+      },
+      {
+        "numero": 5,
+        "nome": "Selva",
+        "slug": "selva",
+        "confini": "Comprenda il palazzo archiepiscopale, la strada delle Balie e piaggetta che porta alla Compagnia di S.Girolamo, con ambe le strade di Valle Piatta, ed occupando la piazza, Pieve e compagnia di S.Giovanni Battista col palazzo del Magnifico, prenda la via che conduce alla Costarella abbracciando la chiesa di S.Desiderio e piaggia delle Campane a sinistra con tutto quel tratto di strada che porta alla Costarella, e pel chiasso del Bargello a sinistra entri in piazza e di lì a sinistra vada alla Costarella, di dove seguendo pure a sinistra vada per la strada maestra nell'arco di S.Pellegrino e prendendo le case da man sinistra, cioè dell'Accademia dei Rozzi, comprenda da quella parte la via di Diacceto e rientri nella piazza di S.Giovanni; appartenga ad essa la via della Costaccia da man destra, venendo da Fontebranda."
+      },
+      {
+        "numero": 6,
+        "nome": "Onda",
+        "slug": "onda",
+        "confini": "Dall'arco di S.Giuseppe per tutta la strada di S.Salvadore colla metà del Mercato vecchio da detta parte entri in piazza presso il palazzo dell'Eccelsa Signoria e quello comprenda fin dove abita il signor Capitano di Giustizia, salga nel Casato, prenda a man sinistra tutte le case fino alla Costa larga e da quella in sù cammini per ambe le parti, comprendendo tutti i vicoli che sono verso S.Salvadore, passi la svolta del Casato e prendendo le case a man sinistra passi pell'arco di S.Agostino, tenendo per quella parte fino a S.Giuseppe, ed appartenga ad essa la strada di Fontanella fino a porta Tufi."
+      },
+      {
+        "numero": 7,
+        "nome": "Torre",
+        "slug": "torre",
+        "confini": "Dal palazzo del signor Capitano di Giustizia inclusivo, entri in Salicotto con prendere da ambe le parti detta strada e mezzo il Mercato vecchio per quella parte, ed arrivando al fine di detta strada di Salicotto volti per la strada che porta alla chiesa di S.Martino, tenendo per quella a sinistra solamente; pervenuta alle scale di detta chiesa svolti nella via di Pantaneto, tenendo solo dalla parte del collegio Tolomei, abbracciando quel palazzo, pel Chiasso largo si porti in piazza fino alla cappella, intendendovisi comprese le strade di S.Giusto, il Realto ed altre dentro il detto recinto."
+      },
+      {
+        "numero": 8,
+        "nome": "Valdimontone",
+        "slug": "valdimontone",
+        "confini": "Dalla porta Romana tenga per la via maestra da ambe le parti fino alla colonna del ponte esclusive, di dove tenendosi a mano sinistra solamente passi pell'arco del ponte, svolti rimpetto a S.Maurizio tenendo a sinistra fino a capo Salicotto, poi occupando ambe le parti comprenda il convento di S.Girolamo, tutto il piano e convento de Serviti, la strada di sotto colla commenda di S.Leonardo."
+      },
+      {
+        "numero": 9,
+        "nome": "Nicchio",
+        "slug": "nicchio",
+        "confini": "Dalla porta S.Viene comprenda tutte le strade Pispini e San Gaetano, Fiera nuova e Fiera vecchia e strada dal Refugio col convento di S.Monaca, piazza del ponte inclusavi la colonna, prenda passando pell'arco del ponte le case a man destra fino alla chiesa di S.Giorgio inclusive, contenendo la piazza col convento di S.Spirito a Finimondo."
+      },
+      {
+        "numero": 10,
+        "nome": "Leocorno",
+        "slug": "leocorno",
+        "confini": "Dalla chiesa di S.Giorgio tenga tutta la via di Pantaneto da ambe le parti fino alla loggia del Papa, siccome da ambe le parti la strada di S.Giovannino detta della Staffa fino al vicolo sopra la casa Piccolomini, poi attenendosi solo a sinistra comprenda la chiesa di S.Vigilio e suo collegio, scendendo per quella parte la piaggia e tenendosi pure a sinistra vada alla loggia del Papa e chiesa di S.Martino, prosegua a tenere a sinistra per tutta la via di S.Martino fino alla strada che svolta alla chiesa di S.Maurizio, svolti per quella tenendola a sinistra, per la qual parte voltando pure nella via maestra tenga fino in faccia a S.Giorgio."
+      },
+      {
+        "numero": 11,
+        "nome": "Civetta",
+        "slug": "civetta",
+        "confini": "Dalla Costarella a sinistra circondi la piazza fino al Chiasso largo e seguendo dalla parte del palazzo Zondadari salga a S.Vigilio e dietro al castellare Ugurgieri sempre a sinistra volti all'arco de Rossi e sotto detto arco vada per la stessa parte per la strada maestra, abbracciando i palazzi de Signori marchesi Bichi e Palmieri, da dove svoltando per l'arco nella strada de Galli occupi per la piazza dell'Erba ambedue le parti di detta strada e piazza fino alla chiesa di S.Pellegrino inclusive, e di lì tenendo la sinistra per quell'arco entri nella strada maestra, quale tenendo pure la sinistra ritorni alla Costarella, intendendovisi comprese le strade di Banchi e Croce del Travaglio, Calzoleria, Castellare, piazza Tolomei da tutte le parti e l'altre strade entro a detto recinto."
+      },
+      {
+        "numero": 12,
+        "nome": "Giraffa",
+        "slug": "giraffa",
+        "confini": "Dalla chiesa di S.Francesco inclusive colla metà di detta piazza verso il convento passi pell'arco ed occupando solo a sinistra le case occupi tutta la strada maestra fino all'imboccatura di Refe nero e per quella scendendo pure a sinistra vada fino al vicolo del signor Maurizio Piccolomini e contenendo da ambe le parti le case entro al detto vicolo, vada alla piaggia della Madonna di Provenzano, abbracciando quella piazza e strade annesse, con tutte le piaggie verso la Madonna del Fosso e via di S.Pietro a Ovile."
+      },
+      {
+        "numero": 13,
+        "nome": "Bruco",
+        "slug": "bruco",
+        "confini": "Dalla porta Ovile a sinistra occupi quel piano fino alla chiesa di S.Biagio inclusive, ed abbracciando da tutte le parti le tre coste che portano alla fonte di San Francesco occupi mezza la piazza avanti a detta chiesa, compresa solamente la compagnia di S.Gherardo, e di lì retrocedendo si attenga pell'arco a man destra, prenda la fonte ed a man destra si porti per retta strada all'arco de Rossi, di dove per la strada di Camollìa, abbracciando solo le case a man destra salga in Dogana, e tenendo solo la parte di Depositeria col Monte Pio e Paschi scenda nella piazza dell'Abbadia, comprenda la chiesa e convento de Padri Carmelitani, via degli Orbachi e ritorni a S.Biagio."
+      },
+      {
+        "numero": 14,
+        "nome": "Lupa",
+        "slug": "lupa",
+        "confini": "Dalla porta Ovile a man destra tenga quel piano fino in faccia alla chiesa di S.Biagio e di lì per ambe le parti occupando la via di Vallerozzi si conduca nella via maestra, e di lì tenendo la via della Posta a man destra si porti in faccia al razzo o cantonata della piaggetta che porta alla Lizza; dalla parte di S.Donato occupi le case a sinistra e per la via maestra salendo in Dogana e Ruota e scendendo alla piazza della Badia comprenda a sinistra le due chiese di S.Michele e scendendo per la piaggetta abbracci la via della Stufa secca, mezza la piazza dalla parte del convento di S.Petronilla con tutta la via di S.Bastiano e del convento di S.Lorenzo e per tutta Fonte nuova ritorni al piano d'Ovile."
+      },
+      {
+        "numero": 15,
+        "nome": "Istrice",
+        "slug": "istrice",
+        "confini": "Dalla porta Camollìa per la strada maestra da ambe le parti fino alla dirittura della piaggia che porta alla Lizza e poggio Malavolti, dalla casa de signori Francesconi e di lì salga da man destra solamente alla squola di cavallerizza e non compreso il palazzo Malavolti occupi la Lizza tutta colla fortezza, siccome le case della piaggia che va a S.Petronilla, la strada tutta di Campansi e Pignattello, come quelle che portano a Fonte Giusta."
+      },
+      {
+        "numero": 16,
+        "nome": "Drago",
+        "slug": "drago",
+        "confini": "Dalla chiesa di S.Domenico in Camporeggi inclusive tenga per ambe le parti la via che porta alla Sapienza, scenda la piaggia da ambe le parti fino alla chiesa curata di S.Antonio esclusive, di dove ritorcendo nella via sopradetta della Sapienza quella tutta tenga, e svoltando e tenendo a sinistra salga il vicolo al osteria della Rosa ed a man sinistra tenendo passi sotto l'arco in faccia a Galli nella strada maestra di Camollìa, ove tenendo pure a sinistra vada fino alla svolta della Cavallerizza ed occupando tutte le case da quella parte, comprendendo il palazzo e poggio Malavolti, convento e via del Paradiso, ritorni a Camporeggi e comprenda la via del Pulcino e la strada che da Camporeggi per gli orti porta alla Lizza."
+      },
+      {
+        "numero": 17,
+        "nome": "Oca",
+        "slug": "oca",
+        "confini": "Dalla porta Fonteblanda salga per tutta la strada di S.Caterina, occupando la crociata, cioè da mano sinistra fino alla chiesa curata di S.Antonio inclusive coll'edifizio delle Tira, da mano destra poi salga a Diacceto comprendendo le case a destra fino all'osteria della Scala, ed a sinistra tenendo vada all'Arte della Lana ed esclusa la chiesa curata di S.Pellegrino occupi la via dell'Arte fino a S.Andrea Gallerani inclusive a man sinistra, e da man destra fino al vicolo che svolta all'osteria della Rosa, colla piaggia che porta alla chiesa curata di S.Antonio e ad essa appartenga la Costaccia a man sinistra in venire da porta Fonteblanda alla porta Salaria ed i vicoli tutti entro a detto recinto.Sentita detta divisione delle Contrade e fattane proposta dall'illustrissimo signor Priore, consigliò il signor cavaliere conte Orlando Malavolti, che si sottoponga al partito la nuova divisione delle Contrade fatta dall'illustrissimi signori deputati col Maestrato della General Biccherna, e riportando questa due terze parti di voti bianchi s'abbia per approvata nel modo e forma che viene saggiamente divisato nella Relazione, con che si partecipi il tutto a S.A.R. per l'approvazione, e doppo farne una nuova stampa, acciò possa sempre vedersi detta divisione e non possa esser allegata ignoranza alcuna sopra la medesima. Andarono a partito separatamente il consiglio e la detta divisione e l'uno e l'altra furono approvate per voti tutti bianchi."
+      }
+    ]
+  }
+}

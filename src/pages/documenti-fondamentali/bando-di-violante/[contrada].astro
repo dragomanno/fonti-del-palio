@@ -1,0 +1,181 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import NotaDocumentaria from "../../../components/NotaDocumentaria.astro";
+import { getBando, BANDO_PROVENIENZA, type Contrada } from "../../../lib/carriera";
+
+export function getStaticPaths() {
+  const contrade = getBando().contrade;
+  return contrade.map((contrada, i) => ({
+    params: { contrada: contrada.slug },
+    props: {
+      contrada,
+      prev: i > 0 ? contrade[i - 1] : null,
+      next: i < contrade.length - 1 ? contrade[i + 1] : null,
+      totale: contrade.length,
+    },
+  }));
+}
+
+interface Props {
+  contrada: Contrada;
+  prev: Contrada | null;
+  next: Contrada | null;
+  totale: number;
+}
+
+const { contrada, prev, next, totale } = Astro.props as Props;
+---
+
+<BaseLayout
+  title={`${contrada.nome} — confini nel Bando di Violante`}
+  description={`I confini della Contrada ${contrada.nome} nella formulazione del Bando sopra la nuova divisione de' confini delle Contrade, decretato il 13 settembre 1729.`}
+  activePath="/documenti-fondamentali"
+>
+  <section class="section" style="padding-block: var(--space-6) var(--space-3);">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Percorso" data-pagefind-ignore>
+        <a href="/documenti-fondamentali/">Documenti fondamentali</a>
+        <span aria-hidden="true">/</span>
+        <a href="/documenti-fondamentali/bando-di-violante/">Bando di Violante</a>
+        <span aria-hidden="true">/</span>
+        <span>{contrada.nome}</span>
+      </nav>
+      <span class="section-number">
+        Contrada {contrada.numero} di {totale}
+      </span>
+      <h1 style="font-family: var(--font-display); font-size: var(--text-title); margin: var(--space-1) 0 0;">
+        {contrada.nome}
+      </h1>
+      <p class="occhiello">
+        I confini come li descrive il Bando decretato dalla Principessa Violante Beatrice di Baviera
+        il 13 settembre 1729.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-6);">
+    <div class="wrap">
+      <h2 class="blocco-titolo">Descrizione dei confini</h2>
+      <blockquote class="confini" cite="/documenti-fondamentali/bando-di-violante/">
+        <p>{contrada.confini}</p>
+      </blockquote>
+      <p class="attribuzione">
+        Bando sopra la nuova divisione e riforma de' confini delle Contrade, 13 settembre 1729 —
+        <a href="/documenti-fondamentali/bando-di-violante/">trascrizione integrale</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-12);">
+    <div class="wrap">
+      <NotaDocumentaria titolo="Limiti di questa pagina" variante="avvertenza">
+        <p>
+          <strong>La descrizione è settecentesca e non è convertita nella toponomastica
+          odierna.</strong> Porte, chiese, conventi e archi citati possono avere cambiato nome,
+          funzione o non esistere più. Questa pagina riproduce il testo del Bando: non stabilisce
+          l'attribuzione attuale di una via né risolve controversie di confine.
+        </p>
+        <p>{BANDO_PROVENIENZA}</p>
+        <p>
+          Per ogni questione di appartenenza territoriale le sedi proprie sono la Contrada
+          interessata e il Magistrato delle Contrade. Segnalare un errore di trascrizione:
+          <a href="mailto:info@pistakkio.net">info@pistakkio.net</a>.
+        </p>
+      </NotaDocumentaria>
+
+      <nav class="pager" aria-label="Navigazione fra le Contrade" data-pagefind-ignore>
+        {
+          prev ? (
+            <a href={`/documenti-fondamentali/bando-di-violante/${prev.slug}/`} class="pager__link">
+              <span class="pager__dir">← Contrada precedente</span>
+              <span class="pager__title">{prev.nome}</span>
+            </a>
+          ) : (
+            <span />
+          )
+        }
+        {
+          next && (
+            <a
+              href={`/documenti-fondamentali/bando-di-violante/${next.slug}/`}
+              class="pager__link pager__link--next"
+            >
+              <span class="pager__dir">Contrada successiva →</span>
+              <span class="pager__title">{next.nome}</span>
+            </a>
+          )
+        }
+      </nav>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: var(--text-caption);
+    color: var(--color-text-faint);
+    margin-bottom: var(--space-2);
+  }
+  .crumbs a {
+    color: var(--color-green);
+  }
+  .occhiello {
+    max-width: var(--measure);
+    margin-top: var(--space-2);
+    color: var(--color-text-muted);
+  }
+  .blocco-titolo {
+    font-family: var(--font-display);
+    font-size: 1.375rem;
+    margin: 0 0 var(--space-2);
+  }
+  .confini {
+    margin: 0;
+    padding: var(--space-3);
+    border-left: 3px solid var(--color-green);
+    background: var(--color-surface);
+  }
+  .confini p {
+    margin: 0;
+    max-width: var(--measure);
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+  .attribuzione {
+    margin-top: var(--space-2);
+    font-size: 0.8125rem;
+    color: var(--color-text-faint);
+  }
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-2);
+    margin-top: var(--space-6);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--color-border);
+  }
+  .pager__link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  .pager__link--next {
+    text-align: right;
+    margin-left: auto;
+  }
+  .pager__dir {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-green);
+  }
+  .pager__title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.0625rem;
+  }
+</style>

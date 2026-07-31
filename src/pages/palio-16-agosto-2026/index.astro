@@ -1,0 +1,184 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NotaDocumentaria from "../../components/NotaDocumentaria.astro";
+import { loadCarriera, listAttiPubblicati, listAtti } from "../../lib/carriera";
+
+const carriera = loadCarriera();
+const atti = listAtti();
+const pubblicati = listAttiPubblicati();
+const pagine = pubblicati.reduce((n, a) => n + a.pagine, 0);
+
+/**
+ * La rotta e' intenzionalmente nominata sulla singola Carriera e non su un
+ * generico "Palio 2026": la Carriera del 16 agosto e' un evento distinto da
+ * quella di luglio, con atti propri. La struttura resta riutilizzabile per le
+ * Carriere successive perche' ogni contenuto proviene dall'indice generato,
+ * non dal codice della pagina.
+ */
+const sezioni = [
+  {
+    href: "/palio-16-agosto-2026/previsite/",
+    ordinale: "01",
+    titolo: "Cavalli ammessi alle Previsite",
+    sommario:
+      "L'elenco ufficiale dei cavalli ammessi, nell'ordine e con i proprietari indicati dal Comune di Siena.",
+    meta: `${carriera.previsite.cavalli.length} cavalli`,
+  },
+  {
+    href: "/palio-16-agosto-2026/accesso-e-sicurezza/",
+    ordinale: "02",
+    titolo: "Accesso, sicurezza e servizi",
+    sommario:
+      "La disciplina consolidata per materia, ricostruita dalle ordinanze e dagli atti acquisiti per questa Carriera.",
+    meta: `${carriera.materie.length} materie`,
+  },
+  {
+    href: "/palio-16-agosto-2026/guida-pratica/",
+    ordinale: "03",
+    titolo: "Guida pratica",
+    sommario:
+      "Che cosa si può e non si può fare in Piazza, in forma diretta, con il rinvio all'atto che lo stabilisce.",
+    meta: `${carriera.guida.length} sezioni`,
+  },
+  {
+    href: "/ordinanze-e-atti/",
+    ordinale: "04",
+    titolo: "Ordinanze e atti",
+    sommario:
+      "Il registro degli atti acquisiti, ciascuno con estremi, digest di integrità e, dove ripubblicabile, il PDF originale.",
+    meta: `${atti.length} atti · ${pubblicati.length} PDF`,
+  },
+];
+---
+
+<BaseLayout
+  title="Palio del 16 agosto 2026"
+  description="Ordinanze, atti, disciplina di accesso e sicurezza e guida pratica per la Carriera del 16 agosto 2026, con rinvio agli atti originali del Comune di Siena."
+  activePath="/palio-16-agosto-2026"
+>
+  <section class="section" style="padding-block: var(--space-8) var(--space-4);">
+    <div class="wrap">
+      <span class="section-number">Carriera del 16 agosto 2026</span>
+      <h1 class="text-title" style="font-size: var(--text-title); max-width: 22ch;">
+        Gli atti della Carriera, prima delle risposte.
+      </h1>
+      <p class="text-muted" style="max-width: var(--measure); margin-top: var(--space-2);">
+        Questa sezione raccoglie gli atti acquisiti per il Palio del 16 agosto 2026 e la disciplina
+        che ne deriva. Ogni affermazione rinvia all'atto che la stabilisce: dove un atto non è stato
+        acquisito, la pagina lo dichiara invece di colmare il vuoto.
+      </p>
+      <p class="text-caption" style="margin-top: var(--space-2);">
+        {atti.length} atti registrati · {pubblicati.length} PDF ripubblicati · {pagine} pagine
+        · {carriera.previsite.cavalli.length} cavalli ammessi alle Previsite
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-6);">
+    <div class="wrap">
+      <ul class="hub-list">
+        {
+          sezioni.map((s) => (
+            <li>
+              <a href={s.href} class="hub-list__item">
+                <span class="hub-list__ordinal">{s.ordinale}</span>
+                <span class="hub-list__body">
+                  <span class="hub-list__title">{s.titolo}</span>
+                  <span class="hub-list__summary">{s.sommario}</span>
+                  <span class="hub-list__meta">{s.meta}</span>
+                </span>
+                <span class="hub-list__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-12);">
+    <div class="wrap">
+      <NotaDocumentaria titolo="Che cosa copre e che cosa non copre questa sezione" variante="avvertenza">
+        <p>
+          Il registro comprende i tredici atti effettivamente acquisiti il 28 luglio 2026 e il
+          documento operativo del 30 luglio 2026. Non è l'elenco completo degli atti adottati dal
+          Comune di Siena per questa Carriera: altri atti possono esistere e non essere stati
+          acquisiti. L'assenza di un atto da questa pagina non significa che l'atto non esista.
+        </p>
+        <p>
+          Due atti sono richiamati da quelli acquisiti ma non sono stati acquisiti a loro volta:
+          sono registrati come tali nella <a href="/ordinanze-e-atti/">pagina degli atti</a>, con
+          l'indicazione esplicita che il testo non è disponibile.
+        </p>
+        <p>
+          Il Palio è un'istituzione civica, sociale e religiosa della città di Siena. Questo sito è
+          un progetto documentale indipendente: non è un servizio del Comune di Siena e non ne
+          rappresenta la posizione. Per gli effetti giuridici fa fede esclusivamente l'atto
+          originale. <a href="/metodologia">Leggi la metodologia</a>.
+        </p>
+      </NotaDocumentaria>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hub-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid var(--color-border);
+  }
+  .hub-list__item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: var(--space-2);
+    align-items: baseline;
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--color-border);
+    text-decoration: none;
+    color: inherit;
+  }
+  .hub-list__item:hover .hub-list__title,
+  .hub-list__item:focus-visible .hub-list__title {
+    color: var(--color-green);
+  }
+  .hub-list__ordinal {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--color-text-faint);
+  }
+  .hub-list__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    min-width: 0;
+  }
+  .hub-list__title {
+    font-family: var(--font-display);
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+  .hub-list__summary {
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    max-width: 58ch;
+  }
+  .hub-list__meta {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-text-faint);
+  }
+  .hub-list__arrow {
+    color: var(--color-green);
+  }
+  @media (max-width: 40rem) {
+    .hub-list__item {
+      grid-template-columns: auto 1fr;
+    }
+    .hub-list__arrow {
+      display: none;
+    }
+  }
+</style>

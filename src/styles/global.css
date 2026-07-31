@@ -158,9 +158,21 @@ a:hover {
   border-bottom: 1px solid var(--color-border);
   background: color-mix(in srgb, var(--color-bg) 92%, transparent);
   backdrop-filter: blur(8px);
+  position: relative;
 }
 
+/* Sticky: attivo sia in modalita' ampia (menu orizzontale, comportamento
+   preesistente) sia in modalita' compatta (barra logo + ricerca + hamburger).
+   Il disclaimer resta sopra l'header e scorre normalmente con la pagina: non
+   e' sticky e non e' incluso in questo posizionamento. */
 @media (min-width: 768px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+}
+@media (max-width: 71.99rem) {
   .site-header {
     position: sticky;
     top: 0;
@@ -175,6 +187,16 @@ a:hover {
   padding-block: var(--space-2);
   gap: var(--space-2);
   flex-wrap: wrap;
+}
+
+/* Modalita' compatta: una sola riga, altezza indicativa 64-72px, nessun
+   ravvolgimento della barra logo/ricerca/hamburger. */
+@media (max-width: 71.99rem) {
+  .site-header__inner {
+    flex-wrap: nowrap;
+    padding-block: 0.625rem;
+    min-height: 64px;
+  }
 }
 
 /* ---------- Wordmark ---------- */
@@ -341,9 +363,10 @@ a:hover {
   border-bottom-color: var(--color-green);
 }
 
-/* Sovrapposizione: solo con script attivo e solo dove c'e' spazio orizzontale.
-   Sotto i 768px il pannello resta nel flusso e la barra si impila. */
-@media (min-width: 48rem) {
+/* Sovrapposizione: solo con script attivo e solo dove c'e' spazio orizzontale
+   per il menu ORIZZONTALE ampio (da 72rem). Sotto 72rem la navigazione vive
+   nel drawer laterale (regole piu' sotto) e non come dropdown sovrapposto. */
+@media (min-width: 72rem) {
   .main-nav--js .nav-group__panel {
     position: absolute;
     top: calc(100% + 0.5rem);
@@ -361,42 +384,209 @@ a:hover {
   }
 }
 
-/* Mobile: navigazione compatta su due righe. Tutte le voci restano visibili e
-   raggiungibili da tastiera, senza menu a comparsa e senza scorrimento
-   orizzontale. */
+/* Occhiello di sezione: compatto su schermi stretti, resta leggibile.
+   Estraneo alla navigazione: soglia invariata a 47.99rem. */
 @media (max-width: 47.99rem) {
-  .site-header__inner {
-    gap: 0.375rem;
-    padding-block: 0.75rem;
+  .section-number { font-size: 0.75rem; letter-spacing: 0.05em; }
+}
+
+/* ------------------------------------------------------------------------ */
+/* Navigazione compatta (<= 71.99rem): logo + ricerca iconica + hamburger su */
+/* un'unica riga, navigazione principale spostata in drawer laterale.       */
+/* Navigazione ampia (>= 72rem): menu orizzontale invariato, hamburger,     */
+/* ricerca iconica compatta, drawer e backdrop nascosti e disattivati.      */
+/* ------------------------------------------------------------------------ */
+
+.nav-search-link,
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 71.99rem) {
+  .nav-search-link,
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
   }
-  .main-nav {
-    column-gap: var(--space-2);
+
+  .nav-search-link {
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    color: var(--color-text-muted);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+  }
+  .nav-search-link:hover {
+    color: var(--color-text);
+    background: var(--color-surface);
+  }
+  .nav-search-link svg { width: 20px; height: 20px; }
+
+  .nav-toggle {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: 0;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    color: var(--color-text);
+  }
+  .nav-toggle:hover {
+    background: var(--color-surface);
+  }
+
+  /* Icona hamburger: tre linee costruite con un elemento centrale e due
+     pseudo-elementi. Nessun carattere testuale usato come contenuto. */
+  .nav-toggle__icon,
+  .nav-toggle__icon::before,
+  .nav-toggle__icon::after {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 1px;
+    transition: transform 200ms ease, opacity 200ms ease;
+  }
+  .nav-toggle__icon {
+    position: relative;
+  }
+  .nav-toggle__icon::before,
+  .nav-toggle__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+  .nav-toggle__icon::before { top: -6px; }
+  .nav-toggle__icon::after { top: 6px; }
+
+  /* Stato aperto: trasformazione in "×", nessun layout shift del wordmark
+     perche' il pulsante mantiene le stesse dimensioni 44x44 in entrambi gli
+     stati. */
+  .nav-toggle[aria-expanded="true"] .nav-toggle__icon {
+    background: transparent;
+  }
+  .nav-toggle[aria-expanded="true"] .nav-toggle__icon::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  .nav-toggle[aria-expanded="true"] .nav-toggle__icon::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  /* Menu orizzontale nascosto quando JS e' attivo: la navigazione vive nel
+     drawer. Senza `.main-nav--js` (JS non eseguito) resta nel flusso, come
+     sottoelenco annidato, secondo il progressive enhancement richiesto. */
+  .main-nav--js#primary-navigation {
+    position: fixed;
+    top: var(--nav-drawer-top, 100%);
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: min(90vw, 380px);
+    margin: 0;
+    padding: var(--space-3) var(--space-3) calc(var(--space-3) + env(safe-area-inset-bottom, 0px));
+    background: var(--color-dark-bg);
+    border-left: 1px solid var(--color-border);
+    box-shadow: -12px 0 32px rgb(0 0 0 / 45%);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    transform: translateX(100%);
+    transition: transform 200ms ease;
+    z-index: 40;
+    padding-right: calc(var(--space-3) + env(safe-area-inset-right, 0px));
+  }
+  .site-header.nav-drawer-open .main-nav--js#primary-navigation {
+    transform: translateX(0);
+  }
+
+  /* Voci disposte verticalmente, aree di tocco >= 44px. */
+  .main-nav--js#primary-navigation {
     row-gap: 0;
   }
-  .main-nav a,
-  .nav-group__toggle,
-  .nav-group__panel a {
-    font-size: 0.8125rem;
-    padding-block: 0.3125rem;
-    min-height: 1.75rem;
+  .main-nav--js#primary-navigation > li {
+    flex-basis: auto;
+    width: 100%;
   }
-  /* Menu impilato: ogni gruppo occupa la riga intera e il pannello resta nel
-     flusso, rientrato, senza sovrapporsi al contenuto. */
-  .main-nav--js .nav-group {
-    flex-basis: 100%;
+  .main-nav--js#primary-navigation a,
+  .main-nav--js#primary-navigation .nav-group__toggle {
+    width: 100%;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
   }
-  .main-nav--js .nav-group__panel {
+  .main-nav--js#primary-navigation .nav-group__toggle {
+    justify-content: space-between;
+  }
+  .main-nav--js#primary-navigation .nav-group__panel {
     padding-left: var(--space-2);
     border-left: 1px solid var(--color-border);
     margin-block: 0.125rem 0.25rem;
   }
-  /* Occhiello di sezione: compatto su schermi stretti, resta leggibile. */
-  .section-number { font-size: 0.75rem; letter-spacing: 0.05em; }
+  .main-nav--js#primary-navigation .nav-group__panel a {
+    display: flex;
+  }
+}
+
+@media (min-width: 72rem) {
+  /* Modalita' ampia: drawer e backdrop completamente disattivati, nessuna
+     interferenza con il menu orizzontale esistente. */
+  .main-nav--js#primary-navigation {
+    position: static;
+    transform: none;
+    width: auto;
+    background: none;
+    border-left: 0;
+    box-shadow: none;
+    overflow: visible;
+    padding: 0;
+  }
+  .nav-backdrop {
+    display: none !important;
+  }
+}
+
+.nav-backdrop {
+  position: fixed;
+  top: var(--nav-drawer-top, 0);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgb(0 0 0 / 55%);
+  z-index: 35;
+  opacity: 0;
+  transition: opacity 200ms ease;
+  pointer-events: none;
+}
+.nav-backdrop--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-nav--js#primary-navigation {
+    transition: none;
+  }
+  .nav-backdrop {
+    transition: none;
+  }
+  .nav-toggle__icon,
+  .nav-toggle__icon::before,
+  .nav-toggle__icon::after {
+    transition: none;
+  }
 }
 
 /* Aree di tocco: sui puntatori grossi ogni bersaglio di navigazione, in testata
    e nel pie' di pagina, raggiunge i 44px di altezza. La regola segue il blocco
-   mobile compatto perche' deve prevalere su di esso a parita' di specificita'.
+   compatto perche' deve prevalere su di esso a parita' di specificita'.
    Sui puntatori di precisione la metrica compatta esistente resta invariata. */
 @media (pointer: coarse) {
   .main-nav a,

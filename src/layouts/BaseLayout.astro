@@ -159,8 +159,17 @@ function slugify(label: string): string {
     <header class="site-header" data-pagefind-ignore>
       <div class="wrap site-header__inner">
         <a href="/" class="brand">font<span class="wordmark__i">i</span>delpal<span class="wordmark__i">i</span>o<span class="dot">.</span>org</a>
+        <a href="/ricerca/" class="nav-search-link" aria-label="Cerca nel sito">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </a>
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Apri il menu">
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+        </button>
         <nav aria-label="Navigazione principale">
-          <ul class="main-nav">
+          <ul class="main-nav" id="primary-navigation">
             {navEntries.map((entry) =>
               isGroup(entry) ? (
                 <li class="nav-group" data-nav-group>
@@ -196,6 +205,7 @@ function slugify(label: string): string {
           </ul>
         </nav>
       </div>
+      <div class="nav-backdrop" id="nav-backdrop" hidden></div>
     </header>
     <main id="contenuto" data-pagefind-body={indexable && searchable ? "" : undefined}>
       <slot />
@@ -238,65 +248,283 @@ function slugify(label: string): string {
       </div>
     </footer>
     <script is:inline>
-      // v0.2.0 — Menu a divulgazione progressiva.
+      // v0.2.1 — Navigazione ibrida: barra compatta (logo + ricerca + hamburger
+      // + drawer da destra) sotto 72rem, menu orizzontale invariato da 72rem.
       //
-      // Senza JavaScript i pannelli restano visibili come sottoelenchi annidati:
-      // ogni voce resta raggiungibile. Lo script assume il controllo solo dopo
-      // aver marcato la barra con `main-nav--js`, che e' anche la condizione CSS
-      // per il posizionamento sovrapposto su desktop.
+      // Senza JavaScript i pannelli restano visibili come sottoelenchi annidati
+      // e tutte le voci sono raggiungibili: lo script assume il controllo solo
+      // dopo aver trovato ogni elemento richiesto, collegato gli event listener
+      // e inizializzato correttamente lo stato (progressive enhancement).
       //
-      // Comportamento richiesto: apertura al clic e da tastiera (elemento
-      // <button> nativo), chiusura con Escape e ripristino del fuoco sul
-      // pulsante, chiusura al clic esterno e alla perdita di fuoco. Nessuna
-      // apertura al passaggio del mouse. Su desktop tutti i gruppi partono
-      // chiusi; sul menu impilato mobile il gruppo della sezione corrente parte
-      // aperto, come divulgazione progressiva utile.
+      // Nota: `.main-nav` e' usato sia nell'header sia nel footer. La barra
+      // primaria e' individuata tramite l'id univoco `primary-navigation`
+      // (referenziato anche da `aria-controls` dell'hamburger), mai tramite
+      // un semplice `querySelector(".main-nav")`.
       (function () {
-        var bar = document.querySelector(".main-nav");
-        if (!bar) return;
-        var groups = Array.prototype.slice.call(document.querySelectorAll("[data-nav-group]"));
+        var nav = document.getElementById("primary-navigation");
+        var header = document.querySelector(".site-header");
+        var toggle = document.getElementById("nav-toggle");
+        var backdrop = document.getElementById("nav-backdrop");
+        if (!nav || !header || !toggle || !backdrop) return;
+        var groups = Array.prototype.slice.call(nav.querySelectorAll("[data-nav-group]"));
         if (!groups.length) return;
-        bar.classList.add("main-nav--js");
+
+        var navList = nav; // riferimento all'elemento ul#primary-navigation
+        navList.classList.add("main-nav--js");
+        header.classList.add("site-header--js");
+
+        var wide = window.matchMedia("(min-width: 72rem)");
+        var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+        var drawerOpen = false;
+        var scrollY = 0;
+        var lastFocused = null;
 
         function panelOf(g) { return g.querySelector(".nav-group__panel"); }
         function toggleOf(g) { return g.querySelector(".nav-group__toggle"); }
 
-        function setOpen(g, open) {
+        function setGroupOpen(g, open) {
           var panel = panelOf(g);
-          var toggle = toggleOf(g);
-          if (!panel || !toggle) return;
+          var t = toggleOf(g);
+          if (!panel || !t) return;
           panel.hidden = !open;
-          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+          t.setAttribute("aria-expanded", open ? "true" : "false");
         }
-        function closeAll(except) {
-          groups.forEach(function (g) { if (g !== except) setOpen(g, false); });
+        function closeAllGroups(except) {
+          groups.forEach(function (g) { if (g !== except) setGroupOpen(g, false); });
         }
 
-        var stacked = window.matchMedia("(max-width: 47.99rem)");
+        // ------------------------------------------------------------------
+        // Posizione reale del fondo dell'header (il disclaimer puo' essere
+        // ancora visibile sopra: non si assume mai top: 0).
+        // ------------------------------------------------------------------
+        function updateHeaderOffset() {
+          var rect = header.getBoundingClientRect();
+          var bottom = Math.max(rect.bottom, 0);
+          document.documentElement.style.setProperty("--nav-drawer-top", bottom + "px");
+        }
+
+        // ------------------------------------------------------------------
+        // Blocco/ripristino scroll pagina.
+        // ------------------------------------------------------------------
+        function lockScroll() {
+          scrollY = window.scrollY || window.pageYOffset || 0;
+          document.body.style.position = "fixed";
+          document.body.style.top = (-scrollY) + "px";
+          document.body.style.left = "0";
+          document.body.style.right = "0";
+          document.body.style.width = "100%";
+          document.body.classList.add("nav-scroll-locked");
+        }
+        function unlockScroll() {
+          var wasLocked = document.body.classList.contains("nav-scroll-locked");
+          document.body.classList.remove("nav-scroll-locked");
+          document.body.style.position = "";
+          document.body.style.top = "";
+          document.body.style.left = "";
+          document.body.style.right = "";
+          document.body.style.width = "";
+          if (wasLocked) window.scrollTo(0, scrollY);
+        }
+
+        // ------------------------------------------------------------------
+        // Focus trap: confina Tab/Shift+Tab fra pulsante di chiusura (l'hamburger
+        // stesso, che rimane visibile e cliccabile sopra il drawer) e i controlli
+        // interni al drawer.
+        // ------------------------------------------------------------------
+        function focusableInDrawer() {
+          var selector = 'a[href], button:not([disabled])';
+          return Array.prototype.slice.call(nav.querySelectorAll(selector)).filter(function (el) {
+            return el.offsetParent !== null;
+          });
+        }
+        function trapFocus(event) {
+          if (event.key !== "Tab") return;
+          var items = focusableInDrawer();
+          var boundary = [toggle].concat(items);
+          if (!boundary.length) return;
+          var first = boundary[0];
+          var last = boundary[boundary.length - 1];
+          var active = document.activeElement;
+          if (event.shiftKey) {
+            if (active === first || !nav.contains(active)) {
+              if (active !== toggle) {
+                event.preventDefault();
+                last.focus();
+              }
+            }
+          } else {
+            if (active === last) {
+              event.preventDefault();
+              toggle.focus();
+            }
+          }
+        }
+
+        // ------------------------------------------------------------------
+        // Apertura/chiusura drawer (solo in modalita' compatta).
+        // ------------------------------------------------------------------
+        function setInertState(makeInert) {
+          if (wide.matches) return;
+          if (makeInert) {
+            nav.setAttribute("aria-hidden", "true");
+            if ("inert" in nav) nav.inert = true;
+          } else {
+            nav.removeAttribute("aria-hidden");
+            if ("inert" in nav) nav.inert = false;
+          }
+        }
+
+        function openDrawer() {
+          if (drawerOpen || wide.matches) return;
+          drawerOpen = true;
+          lastFocused = document.activeElement;
+          updateHeaderOffset();
+          setInertState(false);
+          header.classList.add("nav-drawer-open");
+          backdrop.hidden = false;
+          // forza reflow per garantire la transizione d'ingresso
+          void backdrop.offsetWidth;
+          backdrop.classList.add("nav-backdrop--visible");
+          toggle.setAttribute("aria-expanded", "true");
+          toggle.setAttribute("aria-label", "Chiudi il menu");
+          lockScroll();
+          document.addEventListener("keydown", onDrawerKeydown, true);
+          var currentGroup = groups.filter(function (g) {
+            return toggleOf(g).hasAttribute("data-nav-current");
+          })[0];
+          closeAllGroups(currentGroup || null);
+          if (currentGroup) setGroupOpen(currentGroup, true);
+          var firstLink = nav.querySelector("a, .nav-group__toggle");
+          if (firstLink) firstLink.focus();
+        }
+
+        function closeDrawer(options) {
+          var restoreFocus = !options || options.restoreFocus !== false;
+          if (!drawerOpen) {
+            // chiamato anche in stato non aperto per garantire pulizia in
+            // ogni condizione (resize, breakpoint, init incompleta).
+          }
+          drawerOpen = false;
+          header.classList.remove("nav-drawer-open");
+          backdrop.classList.remove("nav-backdrop--visible");
+          backdrop.hidden = true;
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.setAttribute("aria-label", "Apri il menu");
+          setInertState(wide.matches ? false : true);
+          unlockScroll();
+          document.removeEventListener("keydown", onDrawerKeydown, true);
+          if (restoreFocus && lastFocused !== toggle) {
+            toggle.focus();
+          }
+        }
+
+        function onDrawerKeydown(event) {
+          if (event.key === "Escape") {
+            event.preventDefault();
+            closeDrawer();
+            return;
+          }
+          trapFocus(event);
+        }
+
+        toggle.addEventListener("click", function () {
+          if (drawerOpen) closeDrawer();
+          else openDrawer();
+        });
+
+        backdrop.addEventListener("click", function () {
+          closeDrawer();
+        });
+
+        nav.addEventListener("click", function (event) {
+          if (!wide.matches && drawerOpen) {
+            var link = event.target.closest ? event.target.closest("a[href]") : null;
+            if (link) closeDrawer({ restoreFocus: false });
+          }
+        });
+
+        // ------------------------------------------------------------------
+        // Gruppi accordion: comportamento condiviso fra modalita' compatta
+        // (drawer) e modalita' ampia (dropdown), come nel comportamento
+        // desktop preesistente.
+        // ------------------------------------------------------------------
         groups.forEach(function (g) {
-          var openAtLoad = stacked.matches && toggleOf(g).hasAttribute("data-nav-current");
-          setOpen(g, openAtLoad);
+          var openAtLoad = !wide.matches && toggleOf(g).hasAttribute("data-nav-current");
+          setGroupOpen(g, openAtLoad);
           toggleOf(g).addEventListener("click", function () {
             var open = toggleOf(g).getAttribute("aria-expanded") === "true";
-            closeAll(g);
-            setOpen(g, !open);
+            closeAllGroups(g);
+            setGroupOpen(g, !open);
           });
           g.addEventListener("keydown", function (event) {
             if (event.key !== "Escape") return;
             if (toggleOf(g).getAttribute("aria-expanded") !== "true") return;
-            setOpen(g, false);
+            if (!wide.matches && drawerOpen) return; // Escape gestita a livello di drawer
+            setGroupOpen(g, false);
             toggleOf(g).focus();
           });
           g.addEventListener("focusout", function (event) {
-            if (event.relatedTarget && g.contains(event.relatedTarget)) return;
-            setOpen(g, false);
+            if (wide.matches) {
+              if (event.relatedTarget && g.contains(event.relatedTarget)) return;
+              setGroupOpen(g, false);
+            }
           });
         });
 
         document.addEventListener("click", function (event) {
+          if (!wide.matches) return; // in modalita' compatta la chiusura e' governata dal drawer
           var inside = groups.some(function (g) { return g.contains(event.target); });
-          if (!inside) closeAll(null);
+          if (!inside) closeAllGroups(null);
         });
+
+        // ------------------------------------------------------------------
+        // Cambio di modalita' (compatta <-> ampia).
+        // ------------------------------------------------------------------
+        function resetToWide() {
+          closeDrawer({ restoreFocus: false });
+          nav.removeAttribute("aria-hidden");
+          if ("inert" in nav) nav.inert = false;
+          backdrop.hidden = true;
+          backdrop.classList.remove("nav-backdrop--visible");
+          header.classList.remove("nav-drawer-open");
+          unlockScroll();
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.setAttribute("aria-label", "Apri il menu");
+          closeAllGroups(null);
+        }
+        function resetToCompact() {
+          drawerOpen = false;
+          header.classList.remove("nav-drawer-open");
+          backdrop.hidden = true;
+          backdrop.classList.remove("nav-backdrop--visible");
+          unlockScroll();
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.setAttribute("aria-label", "Apri il menu");
+          setInertState(true);
+          closeAllGroups(null);
+        }
+
+        function handleModeChange(e) {
+          if (e.matches) resetToWide();
+          else resetToCompact();
+        }
+        if (typeof wide.addEventListener === "function") {
+          wide.addEventListener("change", handleModeChange);
+        } else if (typeof wide.addListener === "function") {
+          wide.addListener(handleModeChange);
+        }
+
+        // Stato iniziale coerente con la modalita' corrente.
+        if (wide.matches) {
+          setInertState(false);
+        } else {
+          setInertState(true);
+        }
+
+        window.addEventListener("resize", updateHeaderOffset);
+        window.addEventListener("orientationchange", updateHeaderOffset);
+        updateHeaderOffset();
       })();
     </script>
   </body>

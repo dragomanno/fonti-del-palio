@@ -100,6 +100,7 @@ const navEntries: NavEntry[] = [
     children: [
       { href: "/chi-siamo", label: "Il progetto" },
       { href: "/metodologia", label: "Metodologia" },
+      { href: "/changelog", label: "Changelog" },
     ],
   },
   { href: "/ricerca", label: "Ricerca" },
@@ -108,6 +109,16 @@ const navEntries: NavEntry[] = [
 function isGroup(entry: NavEntry): entry is { label: string; children: NavLink[] } {
   return "children" in entry;
 }
+/**
+ * Rotta pubblica con barra finale. Il sito e' generato con
+ * `build.format: "directory"`: la forma canonica di ogni rotta termina con `/`
+ * e i collegamenti interni devono usarla, per non far dipendere la
+ * navigazione da un redirect dell'hosting.
+ */
+function rotta(href: string): string {
+  return href === "/" || href.endsWith("/") ? href : `${href}/`;
+}
+
 function slugify(label: string): string {
   return label
     .toLowerCase()
@@ -143,7 +154,7 @@ function slugify(label: string): string {
     <a class="skip-link" href="#contenuto">Salta al contenuto</a>
     <p class="disclaimer-banner" data-pagefind-ignore>
       Progetto documentale indipendente, non ufficiale e ad accesso pubblico. Non affiliato al Comune di Siena —
-      <a href="/disclaimer">leggi il disclaimer completo</a>.
+      <a href="/disclaimer/">leggi il disclaimer completo</a>.
     </p>
     <header class="site-header" data-pagefind-ignore>
       <div class="wrap site-header__inner">
@@ -167,7 +178,7 @@ function slugify(label: string): string {
                   <ul class="nav-group__panel" id={`nav-panel-${slugify(entry.label)}`}>
                     {entry.children.map((child) => (
                       <li>
-                        <a href={child.href} aria-current={activePath === child.href ? "page" : undefined}>
+                        <a href={rotta(child.href)} aria-current={activePath === child.href ? "page" : undefined}>
                           {child.label}
                         </a>
                       </li>
@@ -176,7 +187,7 @@ function slugify(label: string): string {
                 </li>
               ) : (
                 <li>
-                  <a href={entry.href} aria-current={activePath === entry.href ? "page" : undefined}>
+                  <a href={rotta(entry.href)} aria-current={activePath === entry.href ? "page" : undefined}>
                     {entry.label}
                   </a>
                 </li>
@@ -204,10 +215,10 @@ function slugify(label: string): string {
           <div class="col-6">
             <nav aria-label="Navigazione footer">
               <ul class="main-nav" style="flex-wrap: wrap;">
-                <li><a href="/disclaimer">Disclaimer</a></li>
-                <li><a href="/privacy">Privacy</a></li>
-                <li><a href="/metodologia">Metodologia</a></li>
-                <li><a href="/chi-siamo">Progetto</a></li>
+                <li><a href="/disclaimer/">Disclaimer</a></li>
+                <li><a href="/privacy/">Privacy</a></li>
+                <li><a href="/metodologia/">Metodologia</a></li>
+                <li><a href="/chi-siamo/">Progetto</a></li>
               </ul>
             </nav>
           </div>

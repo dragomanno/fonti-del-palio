@@ -130,14 +130,79 @@ const bando = getBando();
         <p>
           Il registro comprende le fonti normative acquisite da questo progetto. Non è un elenco
           delle fonti del Palio: è l'elenco di ciò su cui questo sito può rispondere.
-          <a href="/metodologia">Metodologia</a> · <a href="/fonti/">Fonti</a>.
+          <a href="/metodologia/">Metodologia</a> · <a href="/fonti/">Fonti</a>.
         </p>
       </NotaDocumentaria>
+
+      {/* v0.2.0 — La tabella abbrevia il digest per leggibilita'. Le impronte
+          integrali devono comunque essere presenti in pagina come testo
+          copiabile: un digest troncato non e' verificabile da terzi. */}
+      <details class="digest-integrali">
+        <summary>Impronte SHA-256 integrali delle fonti registrate</summary>
+        <p class="text-caption">
+          Impronta del file su cui questo progetto ha lavorato. Attesta l'identità della copia
+          usata qui, non l'autenticità dell'originale.
+        </p>
+        <dl class="digest-list">
+          {
+            registro.map((r) => (
+              <>
+                <dt class="mono">{r.id}</dt>
+                <dd>
+                  <span class="digest-doc">{r.documento}</span>
+                  <code class="mono digest-full">{r.sha256}</code>
+                </dd>
+              </>
+            ))
+          }
+        </dl>
+      </details>
     </div>
   </section>
 </BaseLayout>
 
 <style>
+  .digest-integrali {
+    margin-top: var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: 2px;
+    padding: var(--space-3);
+    background: var(--color-surface);
+  }
+
+  .digest-integrali summary {
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .digest-list {
+    margin: var(--space-3) 0 0;
+  }
+
+  .digest-list dt {
+    font-size: var(--text-caption);
+    color: var(--color-accent);
+    margin-top: var(--space-2);
+  }
+
+  .digest-list dd {
+    margin: 0 0 var(--space-1);
+  }
+
+  .digest-doc {
+    display: block;
+    font-size: var(--text-caption);
+    color: var(--color-text-muted);
+  }
+
+  .digest-full {
+    display: block;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+  }
+
   .scheda {
     display: flex;
     flex-direction: column;

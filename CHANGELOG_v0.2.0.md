@@ -1,9 +1,7 @@
 # Changelog — v0.2.0
 
-**Branch:** `recovery/v0.2.0` · **Rilascio precedente:** `v0.1.1` · **Baseline:**
-`20f4bc65cd7d12746855f923c2aa2e9174f5dcb4` · Nessun tag e nessuna release
-sono stati creati. Il branch è una **release candidate in attesa di revisione**,
-non un rilascio.
+**Rilascio precedente:** `v0.1.1` · **Baseline:**
+`20f4bc65cd7d12746855f923c2aa2e9174f5dcb4`
 
 Versione di ampliamento documentario. Introduce tre corpus che nella `v0.1.1` non
 esistevano — gli atti di una singola Carriera, i documenti di lunga durata e il
@@ -98,7 +96,7 @@ Tutte le impronte SHA-256 delle fonti sono pubblicate nel registro in
 - **Tre locuzioni sconsigliate** ricorrono nel sito unicamente all'interno di
   citazioni letterali di atti e non sono state riscritte.
 
-## Verifiche eseguite sul branch
+## Verifiche eseguite
 
 - `npm run check`: superato.
 - `npm test`: 170/170 superati, 0 falliti.
@@ -133,15 +131,6 @@ a5ab22da9ec7ead082f523ca7c242794ac51cb744424f911acd91f25f750fc1a  03_KB_Discipli
 Nessuna citazione, identificativo di atto o disposizione consolidata preesistente è
 stata aggiunta, rimossa o riscritta.
 
-## Checkpoint del branch
-
-| Checkpoint | Commit | Contenuto |
-| --- | --- | --- |
-| 1 | `b064cf0` | Fonti, modello e generatore |
-| 2 | `650052c` | Rotte e contenuti documentari |
-| 3 | `12949ce` | Navigazione e ricerca |
-| 4 | questo commit | Release candidate |
-
 ## Elementi rinviati
 
 - Verifica della provenienza archivistica del Bando presso un fondo identificato.
@@ -155,14 +144,20 @@ stata aggiunta, rimossa o riscritta.
 
 ## Rollback
 
-Il branch non tocca `main`, la produzione, Netlify, il DNS, i tag o le release.
-Per abbandonarlo è sufficiente non integrarlo. Per annullare un singolo
-checkpoint già pubblicato:
+Il ripristino avviene con un commit di revert, senza riscrittura della storia
+e senza cancellazione di riferimenti già pubblicati. Individuato il commit da
+annullare:
 
 ```bash
-git revert <sha-del-checkpoint>
-git push origin recovery/v0.2.0
+git revert <sha-del-commit>
+git push
 ```
+
+La pubblicazione è innescata dal Git: il commit di revert riporta il sito allo
+stato precedente attraverso una nuova costruzione. Un ripristino eseguito dal
+pannello dell'hosting restituisce il servizio più in fretta, ma va riconciliato
+subito con il Git, perché altrimenti la costruzione successiva rimetterebbe in
+linea la versione difettosa.
 
 Vedi `CHANGELOG_v0.1.1.md`, `CHANGELOG_v0.1.0.md`, `DISCLAIMER.md`, `PRIVACY.md`,
 `SECURITY.md`, `ATTRIBUTION.md`, `NOTICE.md`.

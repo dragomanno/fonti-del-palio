@@ -199,13 +199,50 @@ test("la rotta del changelog e' pubblicata, indicizzabile e raggiungibile dal me
   assert.ok(home.includes('href="/changelog/"'), "il menu non rimanda al changelog");
 });
 
-test("il changelog non annuncia tag o release inesistenti", () => {
+test("il changelog e' definitivo e non conserva formule di transizione", () => {
   const testo = leggi("CHANGELOG_v0.2.0.md");
+  // Il changelog e' un documento pubblico: non deve esporre il branch di
+  // lavorazione ne' dichiararsi provvisorio.
+  assert.ok(!/recovery\/v0\.2\.0/.test(testo), "il changelog cita il branch di lavorazione");
+  assert.ok(!/release candidate/i.test(testo), "il changelog si dichiara release candidate");
   assert.ok(
-    /Nessun tag e nessuna release/.test(testo),
-    "il changelog deve dichiarare che tag e release non sono stati creati",
+    !/(nessun tag|nessuna release)/i.test(testo),
+    "il changelog dichiara l'assenza di tag o release",
   );
   assert.ok(!/^\*\*Tag:\*\*/m.test(testo), "il changelog dichiara un tag");
+  assert.ok(!/^\*\*Branch:\*\*/m.test(testo), "il changelog dichiara un branch");
+  assert.ok(!/^## Checkpoint/m.test(testo), "il changelog espone i checkpoint interni");
+  // Il rollback resta documentato, ma come procedura Git-backed.
+  assert.ok(/git revert/.test(testo), "il changelog non documenta il rollback");
+});
+
+// ---------------------------------------------------------------------------
+// Ricerca: segnali di ranking
+// ---------------------------------------------------------------------------
+
+test("la pagina del Regolamento espone i segnali di rilevanza a Pagefind", () => {
+  const html = readFileSync(join(DIST, "regolamento-per-il-palio", "index.html"), "utf8");
+  const pesi = [...html.matchAll(/data-pagefind-weight="10"/g)].length;
+  assert.ok(
+    pesi >= 4,
+    `la pagina del Regolamento espone ${pesi} segnali di peso invece di almeno 4`,
+  );
+  assert.ok(html.includes("data-pagefind-body"), "la pagina del Regolamento non e' indicizzata");
+});
+
+test("la ricerca applica i parametri di ranking calibrati", () => {
+  // Lo script della pagina viene minimizzato in fase di costruzione: i valori
+  // sono verificati nella forma effettivamente pubblicata (0.3 -> .3).
+  const html = readFileSync(join(DIST, "ricerca", "index.html"), "utf8");
+  const parametri = [
+    [/pageLength:\s*0?\.3(?![\d])/, "pageLength"],
+    [/termFrequency:\s*1(?![.\d])/, "termFrequency"],
+    [/termSaturation:\s*2(?![.\d])/, "termSaturation"],
+    [/termSimilarity:\s*9(?![.\d])/, "termSimilarity"],
+  ];
+  for (const [schema, nome] of parametri) {
+    assert.ok(schema.test(html), `parametro di ranking ${nome} assente o alterato`);
+  }
 });
 
 // ---------------------------------------------------------------------------

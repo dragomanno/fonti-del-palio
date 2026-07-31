@@ -111,6 +111,20 @@ const index = loadIndex();
       }
       new PagefindUI({
         element: "#search",
+        // v0.2.0 — Parametri di ranking Pagefind. Con i valori predefiniti le
+        // schede brevi del registro (poche decine di parole) superavano le
+        // pagine istituzionali per sola densita' lessicale: una ricerca di
+        // «Regolamento 2019» restituiva prima la scheda di registro della
+        // fonte e non la pagina del Regolamento. Si riduce il peso della
+        // brevita' della pagina, si alza la saturazione della frequenza dei
+        // termini e si privilegia la corrispondenza esatta sulla similarita'
+        // approssimata. Nessuna pagina viene esclusa o retrocessa d'autorita'.
+        ranking: {
+          pageLength: 0.3,
+          termFrequency: 1.0,
+          termSaturation: 2.0,
+          termSimilarity: 9.0,
+        },
         showSubResults: true,
         showImages: false,
         pageSize: 10,

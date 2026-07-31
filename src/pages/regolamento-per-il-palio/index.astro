@@ -29,12 +29,20 @@ const riscritture = renderDocumentaryMarkdown(demoteHeadings(collazione.riscritt
         <span>Regolamento per il Palio</span>
       </nav>
       <span class="section-number">{vigente.id}</span>
-      <h1 style="font-family: var(--font-display); font-size: var(--text-title); max-width: 24ch; margin: var(--space-1) 0 0;">
+      {/* v0.2.0 — Questa e' la pagina istituzionale del Regolamento per il Palio.
+          Le schede di registro in /fonti/ citano il Regolamento di passaggio e,
+          essendo brevi, risultavano piu' dense e la superavano nel ranking.
+          Il peso Pagefind e' alzato sul titolo e sulla dicitura identificativa,
+          che gia' contengono entrambe le date, senza aggiungere testo. */}
+      <h1
+        data-pagefind-weight="10"
+        style="font-family: var(--font-display); font-size: var(--text-title); max-width: 24ch; margin: var(--space-1) 0 0;"
+      >
         Regolamento per il Palio
       </h1>
-      <p class="occhiello">{REGOLAMENTO_VIGENTE_LABEL}</p>
+      <p class="occhiello" data-pagefind-weight="10">{REGOLAMENTO_VIGENTE_LABEL}</p>
 
-      <dl class="estremi">
+      <dl class="estremi" data-pagefind-weight="10">
         <div class="estremi--largo"><dt>Estremi</dt><dd>{vigente.estremi}</dd></div>
         <div><dt>Consistenza</dt><dd>{vigente.consistenza}</dd></div>
         <div><dt>Stato</dt><dd>{vigente.stato}</dd></div>
@@ -48,7 +56,7 @@ const riscritture = renderDocumentaryMarkdown(demoteHeadings(collazione.riscritt
 
   <section class="section" style="padding-block: 0 var(--space-6);">
     <div class="wrap">
-      <h2 class="blocco-titolo">Approvazione e presentazione sono due date diverse</h2>
+      <h2 class="blocco-titolo" data-pagefind-weight="10">Approvazione e presentazione sono due date diverse</h2>
       <div class="prose">
         <p>
           L'edizione vigente è stata <strong>approvata nel 2019</strong>, con le deliberazioni del

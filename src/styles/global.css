@@ -986,6 +986,29 @@ code, .mono {
   overflow-wrap: anywhere;
 }
 
+/* Le URL delle fonti sono riportate per esteso, perche' devono restare
+   leggibili e copiabili per intero. Non contengono spazi: prive di un punto di
+   interruzione allargavano l'intero documento sulle schede di /fonti/ e
+   /atti/. Qui vanno a capo dove necessario. Il testo non viene troncato,
+   nascosto ne' sottratto alla selezione, e le tabelle responsive gia' corrette
+   non sono toccate. */
+.prose a[href^="http"],
+.nota-documentaria a[href^="http"] {
+  overflow-wrap: anywhere;
+}
+
+/* Le trascrizioni dei moduli riproducono le righe da compilare come sequenze
+   continue di trattini bassi: per il browser sono una parola sola, piu' larga
+   dello schermo. `anywhere` interviene solo quando un token non entra
+   comunque nella riga, quindi la prosa italiana continua ad andare a capo
+   normalmente e nessun carattere della trascrizione viene perduto. Non si usa
+   `word-break: break-all`, che spezzerebbe anche le parole normali. */
+.prose p,
+.prose li,
+.prose dd {
+  overflow-wrap: anywhere;
+}
+
 /* I diagrammi ASCII delle relazioni fra atti sono preformattati: scorrono
    dentro il proprio blocco senza allargare la pagina, e restano testo
    selezionabile e indicizzabile. */

@@ -26,18 +26,23 @@ const index = loadIndex();
       <h1 style="font-family: var(--font-display); font-size: var(--text-title); max-width: 20ch; margin: var(--space-1) 0 0;">
         Cerca nel corpus.
       </h1>
-      <p class="text-muted" style="max-width: var(--measure); margin-top: var(--space-2);">
-        La ricerca copre {index.chunkCount} unità documentali estratte dai quattro file canonici
-        del corpus. Funziona interamente nel browser su un indice statico: nessuna query lascia
-        questo sito, nessun tracciamento, nessun servizio esterno.
+
+      {/* v0.2.0 — Il campo di ricerca precede la spiegazione: chi arriva qui
+          vuole cercare, non leggere come funziona l'indice. La nota tecnica
+          resta, subito sotto. */}
+      <div id="search" class="search-mount"></div>
+
+      <p class="text-muted" style="max-width: var(--measure); margin-top: var(--space-3);">
+        La ricerca copre {index.chunkCount} unità documentali del corpus del Protocollo Equino
+        e le schede documentarie della Carriera in corso, del Regolamento per il Palio e del
+        Bando di Violante. Funziona interamente nel browser su un indice statico: nessuna
+        interrogazione lascia questo sito, nessun tracciamento, nessun servizio esterno.
       </p>
     </div>
   </section>
 
   <section class="section" style="padding-block: 0 var(--space-12);">
     <div class="wrap">
-      <div id="search" class="search-mount"></div>
-
       <noscript>
         <p class="fallback">
           La ricerca richiede JavaScript. Senza JavaScript il corpus resta comunque interamente
@@ -60,8 +65,10 @@ const index = loadIndex();
         <h2>Cosa puoi cercare</h2>
         <ul>
           <li>Il numero di un articolo del Regolamento, ad esempio <code>articolo 37</code>.</li>
-          <li>L'identificativo di un atto, ad esempio <code>PE-2019-01</code> o <code>ATT-2021-ORD-005</code>.</li>
-          <li>Un tema, ad esempio <code>previsite</code>, <code>tratta</code>, <code>farmaci controllati</code>.</li>
+          <li>L'identificativo di un atto, ad esempio <code>PE-2019-01</code>, <code>ATT-2021-ORD-005</code> o <code>ATT-2026-ORD-058</code>.</li>
+          <li>Un tema, ad esempio <code>previsite</code>, <code>tratta</code>, <code>farmaci controllati</code>, <code>passeggini</code>.</li>
+          <li>Il nome di un cavallo ammesso alle previsite o del suo proprietario.</li>
+          <li>Il nome di una Contrada, per la descrizione dei confini nel Bando di Violante.</li>
           <li>Un'annualità, ad esempio <code>2016</code>.</li>
         </ul>
       </aside>

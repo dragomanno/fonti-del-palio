@@ -59,14 +59,63 @@ function toCanonicalPath(pathname: string): string {
 const canonicalPath = toCanonicalPath(Astro.url.pathname);
 const canonicalUrl = new URL(canonicalPath, SITE_URL).toString();
 
-const navItems = [
-  { href: "/disciplina-vigente", label: "Disciplina vigente" },
-  { href: "/evoluzione-storica", label: "Evoluzione storica" },
+// v0.2.0 — NAVIGAZIONE A GRUPPI.
+//
+// Con 155 rotte una barra piatta non e' piu' leggibile: le voci vengono
+// raggruppate per natura documentaria, non per frequenza d'uso.
+//
+//   Carriera in corso  -> Palio 16 agosto 2026
+//   Documenti di lunga durata -> Regolamento per il Palio, Bando di Violante
+//   Corpus storico -> Disciplina vigente, Evoluzione storica
+//   Atti della Carriera -> Ordinanze e atti
+//   Apparato -> Fonti, Progetto, Ricerca
+//
+// `activePath` continua a governare SOLO l'evidenziazione: non influisce sul
+// canonical (cfr. nota v0.1.0 sopra). Un gruppo e' evidenziato quando una
+// qualsiasi delle sue voci corrisponde ad `activePath`.
+type NavLink = { href: string; label: string };
+type NavEntry = NavLink | { label: string; children: NavLink[] };
+
+const navEntries: NavEntry[] = [
+  { href: "/palio-16-agosto-2026", label: "Palio 16 agosto 2026" },
+  {
+    label: "Documenti fondamentali",
+    children: [
+      { href: "/documenti-fondamentali", label: "Panoramica" },
+      { href: "/regolamento-per-il-palio", label: "Regolamento per il Palio" },
+      { href: "/documenti-fondamentali/bando-di-violante", label: "Bando di Violante" },
+    ],
+  },
+  {
+    label: "Protocollo Equino",
+    children: [
+      { href: "/disciplina-vigente", label: "Disciplina vigente" },
+      { href: "/evoluzione-storica", label: "Evoluzione storica" },
+    ],
+  },
+  { href: "/ordinanze-e-atti", label: "Ordinanze e atti" },
   { href: "/fonti", label: "Fonti" },
-  { href: "/metodologia", label: "Metodologia" },
-  { href: "/chi-siamo", label: "Progetto" },
+  {
+    label: "Progetto",
+    children: [
+      { href: "/chi-siamo", label: "Il progetto" },
+      { href: "/metodologia", label: "Metodologia" },
+    ],
+  },
   { href: "/ricerca", label: "Ricerca" },
 ];
+
+function isGroup(entry: NavEntry): entry is { label: string; children: NavLink[] } {
+  return "children" in entry;
+}
+function slugify(label: string): string {
+  return label
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
 ---
 <!doctype html>
 <html lang="it">
@@ -101,13 +150,38 @@ const navItems = [
         <a href="/" class="brand">font<span class="wordmark__i">i</span>delpal<span class="wordmark__i">i</span>o<span class="dot">.</span>org</a>
         <nav aria-label="Navigazione principale">
           <ul class="main-nav">
-            {navItems.map((item) => (
-              <li>
-                <a href={item.href} aria-current={activePath === item.href ? "page" : undefined}>
-                  {item.label}
-                </a>
-              </li>
-            ))}
+            {navEntries.map((entry) =>
+              isGroup(entry) ? (
+                <li class="nav-group" data-nav-group>
+                  <button
+                    type="button"
+                    class="nav-group__toggle"
+                    id={`nav-toggle-${slugify(entry.label)}`}
+                    aria-expanded="false"
+                    aria-controls={`nav-panel-${slugify(entry.label)}`}
+                    data-nav-current={entry.children.some((c) => c.href === activePath) ? "true" : undefined}
+                  >
+                    {entry.label}
+                    <span class="nav-group__chevron" aria-hidden="true"></span>
+                  </button>
+                  <ul class="nav-group__panel" id={`nav-panel-${slugify(entry.label)}`}>
+                    {entry.children.map((child) => (
+                      <li>
+                        <a href={child.href} aria-current={activePath === child.href ? "page" : undefined}>
+                          {child.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ) : (
+                <li>
+                  <a href={entry.href} aria-current={activePath === entry.href ? "page" : undefined}>
+                    {entry.label}
+                  </a>
+                </li>
+              )
+            )}
           </ul>
         </nav>
       </div>
@@ -152,5 +226,67 @@ const navItems = [
         </p>
       </div>
     </footer>
+    <script is:inline>
+      // v0.2.0 — Menu a divulgazione progressiva.
+      //
+      // Senza JavaScript i pannelli restano visibili come sottoelenchi annidati:
+      // ogni voce resta raggiungibile. Lo script assume il controllo solo dopo
+      // aver marcato la barra con `main-nav--js`, che e' anche la condizione CSS
+      // per il posizionamento sovrapposto su desktop.
+      //
+      // Comportamento richiesto: apertura al clic e da tastiera (elemento
+      // <button> nativo), chiusura con Escape e ripristino del fuoco sul
+      // pulsante, chiusura al clic esterno e alla perdita di fuoco. Nessuna
+      // apertura al passaggio del mouse. Su desktop tutti i gruppi partono
+      // chiusi; sul menu impilato mobile il gruppo della sezione corrente parte
+      // aperto, come divulgazione progressiva utile.
+      (function () {
+        var bar = document.querySelector(".main-nav");
+        if (!bar) return;
+        var groups = Array.prototype.slice.call(document.querySelectorAll("[data-nav-group]"));
+        if (!groups.length) return;
+        bar.classList.add("main-nav--js");
+
+        function panelOf(g) { return g.querySelector(".nav-group__panel"); }
+        function toggleOf(g) { return g.querySelector(".nav-group__toggle"); }
+
+        function setOpen(g, open) {
+          var panel = panelOf(g);
+          var toggle = toggleOf(g);
+          if (!panel || !toggle) return;
+          panel.hidden = !open;
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        }
+        function closeAll(except) {
+          groups.forEach(function (g) { if (g !== except) setOpen(g, false); });
+        }
+
+        var stacked = window.matchMedia("(max-width: 47.99rem)");
+        groups.forEach(function (g) {
+          var openAtLoad = stacked.matches && toggleOf(g).hasAttribute("data-nav-current");
+          setOpen(g, openAtLoad);
+          toggleOf(g).addEventListener("click", function () {
+            var open = toggleOf(g).getAttribute("aria-expanded") === "true";
+            closeAll(g);
+            setOpen(g, !open);
+          });
+          g.addEventListener("keydown", function (event) {
+            if (event.key !== "Escape") return;
+            if (toggleOf(g).getAttribute("aria-expanded") !== "true") return;
+            setOpen(g, false);
+            toggleOf(g).focus();
+          });
+          g.addEventListener("focusout", function (event) {
+            if (event.relatedTarget && g.contains(event.relatedTarget)) return;
+            setOpen(g, false);
+          });
+        });
+
+        document.addEventListener("click", function (event) {
+          var inside = groups.some(function (g) { return g.contains(event.target); });
+          if (!inside) closeAll(null);
+        });
+      })();
+    </script>
   </body>
 </html>

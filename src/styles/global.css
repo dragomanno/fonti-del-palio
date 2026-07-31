@@ -272,6 +272,95 @@ a:hover {
   border-bottom-color: var(--color-green);
 }
 
+/* ---------- Gruppi di navigazione (v0.2.0) ---------- */
+/*
+  Il pulsante di gruppo condivide la metrica delle voci semplici: la barra deve
+  leggersi come una sola riga, non come una barra mista di link e controlli.
+  Il pannello si sovrappone al contenuto SOLO quando lo script e' attivo
+  (.main-nav--js); senza script resta un sottoelenco annidato e visibile.
+*/
+.nav-group {
+  position: relative;
+}
+.nav-group__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding: 0.375rem 0;
+  margin: 0;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: inherit;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+.nav-group__toggle:hover {
+  color: var(--color-text);
+  border-bottom-color: var(--color-border);
+}
+.nav-group__toggle[aria-expanded="true"],
+.nav-group__toggle[data-nav-current] {
+  color: var(--color-text);
+}
+.nav-group__toggle[data-nav-current] {
+  border-bottom-color: var(--color-green);
+}
+.nav-group__chevron {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+}
+.nav-group__toggle[aria-expanded="true"] .nav-group__chevron {
+  transform: translateY(1px) rotate(225deg);
+}
+.nav-group__panel {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-group__panel a {
+  display: block;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.375rem 0;
+  border-bottom: 2px solid transparent;
+}
+.nav-group__panel a:hover {
+  color: var(--color-text);
+}
+.nav-group__panel a[aria-current="page"] {
+  color: var(--color-text);
+  border-bottom-color: var(--color-green);
+}
+
+/* Sovrapposizione: solo con script attivo e solo dove c'e' spazio orizzontale.
+   Sotto i 768px il pannello resta nel flusso e la barra si impila. */
+@media (min-width: 48rem) {
+  .main-nav--js .nav-group__panel {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    z-index: 30;
+    min-width: 14rem;
+    padding: var(--space-1) var(--space-2);
+    background: var(--color-surface-2);
+    border: 1px solid var(--color-border);
+    border-radius: 2px;
+    box-shadow: 0 12px 32px rgb(0 0 0 / 45%);
+  }
+  .main-nav--js .nav-group__panel a {
+    white-space: nowrap;
+  }
+}
+
 /* Mobile: navigazione compatta su due righe. Tutte le voci restano visibili e
    raggiungibili da tastiera, senza menu a comparsa e senza scorrimento
    orizzontale. */
@@ -284,13 +373,44 @@ a:hover {
     column-gap: var(--space-2);
     row-gap: 0;
   }
-  .main-nav a {
+  .main-nav a,
+  .nav-group__toggle,
+  .nav-group__panel a {
     font-size: 0.8125rem;
     padding-block: 0.3125rem;
     min-height: 1.75rem;
   }
+  /* Menu impilato: ogni gruppo occupa la riga intera e il pannello resta nel
+     flusso, rientrato, senza sovrapporsi al contenuto. */
+  .main-nav--js .nav-group {
+    flex-basis: 100%;
+  }
+  .main-nav--js .nav-group__panel {
+    padding-left: var(--space-2);
+    border-left: 1px solid var(--color-border);
+    margin-block: 0.125rem 0.25rem;
+  }
   /* Occhiello di sezione: compatto su schermi stretti, resta leggibile. */
   .section-number { font-size: 0.75rem; letter-spacing: 0.05em; }
+}
+
+/* Aree di tocco: sui puntatori grossi ogni bersaglio di navigazione, in testata
+   e nel pie' di pagina, raggiunge i 44px di altezza. La regola segue il blocco
+   mobile compatto perche' deve prevalere su di esso a parita' di specificita'.
+   Sui puntatori di precisione la metrica compatta esistente resta invariata. */
+@media (pointer: coarse) {
+  .main-nav a,
+  .nav-group__toggle,
+  .nav-group__panel a,
+  .site-footer a,
+  .disclaimer-banner a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .nav-group__panel a {
+    display: flex;
+  }
 }
 
 /* ---------- Disclaimer banner ---------- */

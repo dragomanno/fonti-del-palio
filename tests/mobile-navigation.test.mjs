@@ -181,18 +181,21 @@ test("nessuna dipendenza o script esterno introdotto dalla navigazione", () => {
 
 test("il documento e' contenuto orizzontalmente solo in modalita' compatta (<= 71.99rem)", () => {
   const compact = compactNavMediaBlock(CSS);
+  // La regola deve applicarsi sia a html sia a body: su iOS Safari e altri
+  // browser mobili overflow-x sul solo html viene spesso ignorato per lo
+  // scroll reale del viewport, mentre body resta scrollabile lateralmente.
   assert.match(
     compact,
-    /html\s*\{[^}]*overflow-x:\s*clip/,
-    "atteso overflow-x: clip su html dentro il blocco compatto",
+    /html\s*,\s*\n?\s*body\s*\{[^}]*overflow-x:\s*clip/,
+    "atteso overflow-x: clip su html E body dentro il blocco compatto",
   );
   // overflow-x: clip non deve comparire fuori dal blocco compatto (nessuna
   // regola equivalente applicata anche in modalita' ampia).
   const senzaBloccoCompatto = CSS.replace(compact, "");
   assert.doesNotMatch(
     senzaBloccoCompatto,
-    /html\s*\{[^}]*overflow-x:\s*clip/,
-    "overflow-x: clip su html non deve comparire fuori dalla modalita' compatta",
+    /overflow-x:\s*clip/,
+    "overflow-x: clip non deve comparire fuori dalla modalita' compatta",
   );
 });
 

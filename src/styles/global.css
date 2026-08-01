@@ -485,8 +485,12 @@ a:hover {
      contribuisce comunque allo scrollable overflow del documento, causando
      scroll orizzontale sia a drawer aperto sia chiuso. overflow-x: clip sul
      root non crea un nuovo contenitore di scorrimento (a differenza di
-     hidden/auto) e non altera lo scroll verticale della pagina. */
-  html {
+     hidden/auto) e non altera lo scroll verticale della pagina.
+     La regola va applicata anche a `body`: su iOS Safari e altri browser
+     mobili `overflow-x` sul solo `html` viene spesso ignorato per lo scroll
+     reale del viewport, mentre `body` resta scrollabile lateralmente. */
+  html,
+  body {
     overflow-x: clip;
   }
 

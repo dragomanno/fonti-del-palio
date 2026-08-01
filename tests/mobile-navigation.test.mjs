@@ -206,13 +206,50 @@ test("il drawer blocca il proprio overflow orizzontale mantenendo lo scroll vert
   );
   assert.ok(drawerRule, "regola .main-nav--js#primary-navigation non trovata nel blocco compatto");
   const decl = drawerRule[0];
-  assert.match(decl, /overflow-x:\s*hidden/, "atteso overflow-x: hidden sul drawer");
+  assert.match(decl, /overflow-x:\s*clip/, "atteso overflow-x: clip sul drawer");
   assert.match(decl, /overflow-y:\s*auto/, "lo scroll verticale del drawer deve restare auto");
   assert.match(decl, /max-width:\s*100vw/, "atteso max-width: 100vw sul drawer per non eccedere il viewport");
   assert.match(
     decl,
     /overscroll-behavior-x:\s*none/,
     "atteso overscroll-behavior-x: none per impedire il rimbalzo orizzontale",
+  );
+});
+
+test("il drawer e' verticale (column/nowrap) e occupa l'altezza disponibile (height: auto)", () => {
+  const compact = compactNavMediaBlock(CSS);
+  const drawerRule = compact.match(
+    /\.main-nav--js#primary-navigation\s*\{[^}]*\}/,
+  );
+  assert.ok(drawerRule, "regola .main-nav--js#primary-navigation non trovata nel blocco compatto");
+  const decl = drawerRule[0];
+  // Causa storica del bug: senza flex-wrap: nowrap esplicito e senza height
+  // risolta rispetto al viewport, le voci si affiancavano orizzontalmente
+  // invece di impilarsi, perche' il contenitore restava compresso a ~48px.
+  assert.match(decl, /flex-direction:\s*column/, "il drawer deve restare a colonna (voci impilate verticalmente)");
+  assert.match(decl, /flex-wrap:\s*nowrap/, "il drawer non deve avvolgere le voci su righe orizzontali");
+  assert.match(decl, /height:\s*auto/, "l'altezza deve risolversi da top/bottom rispetto al containing block corretto, non da un valore fisso");
+  assert.match(decl, /top:\s*var\(--nav-drawer-top/, "il top deve restare legato alla variabile calcolata dinamicamente");
+  assert.match(decl, /bottom:\s*0/, "il fondo del drawer deve coincidere col fondo del containing block (il viewport)");
+});
+
+test("backdrop-filter e' neutralizzato su .site-header in modalita' compatta (causa del containing block errato)", () => {
+  const compact = compactNavMediaBlock(CSS);
+  // Per specifica CSS, backdrop-filter sull'antenato crea un containing
+  // block per i discendenti position: fixed. .site-header e' l'antenato del
+  // drawer: senza questa neutralizzazione il drawer si dimensiona rispetto
+  // all'header (~64px) invece che rispetto al viewport.
+  const headerRule = compact.match(/\.site-header\s*\{[^}]*\}/);
+  assert.ok(headerRule, "regola .site-header non trovata nel blocco compatto");
+  assert.match(headerRule[0], /backdrop-filter:\s*none/, "backdrop-filter deve essere neutralizzato su .site-header in modalita' compatta");
+  assert.match(headerRule[0], /-webkit-backdrop-filter:\s*none/, "il prefisso -webkit- deve essere neutralizzato allo stesso modo");
+  // In modalita' ampia (>= 72rem) il drawer e' disattivato: il blur puo'
+  // restare, quindi la neutralizzazione non deve propagarsi la' fuori.
+  const wide = wideNavMediaBlock(CSS);
+  assert.doesNotMatch(
+    wide,
+    /backdrop-filter:\s*none/,
+    "la neutralizzazione del backdrop-filter non deve propagarsi alla modalita' ampia",
   );
 });
 

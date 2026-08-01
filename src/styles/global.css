@@ -494,6 +494,19 @@ a:hover {
     overflow-x: clip;
   }
 
+  /* Causa reale dell'altezza errata del drawer (48px anziche' l'altezza
+     disponibile fra header e fondo viewport): `.site-header` ha
+     `backdrop-filter`, e per specifica CSS un backdrop-filter crea un
+     containing block per i discendenti `position: fixed`. Il drawer,
+     annidato dentro l'header, si dimensionava quindi rispetto all'header
+     (~64px) invece che rispetto al viewport. La neutralizzazione qui sotto
+     e' limitata al breakpoint compatto: da 72rem in su l'header mantiene
+     l'effetto blur perche' il drawer e' disattivato e non serve fixed. */
+  .site-header {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
   /* Menu orizzontale nascosto quando JS e' attivo: la navigazione vive nel
      drawer. Senza `.main-nav--js` (JS non eseguito) resta nel flusso, come
      sottoelenco annidato, secondo il progressive enhancement richiesto. */
@@ -502,8 +515,11 @@ a:hover {
     top: var(--nav-drawer-top, 100%);
     right: 0;
     bottom: 0;
+    height: auto;
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
     gap: 0;
     width: min(90vw, 380px);
     max-width: 100vw;
@@ -512,7 +528,7 @@ a:hover {
     background: var(--color-dark-bg);
     border-left: 1px solid var(--color-border);
     box-shadow: -12px 0 32px rgb(0 0 0 / 45%);
-    overflow-x: hidden;
+    overflow-x: clip;
     overflow-y: auto;
     overscroll-behavior-y: contain;
     overscroll-behavior-x: none;

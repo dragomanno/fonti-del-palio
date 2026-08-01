@@ -216,7 +216,7 @@ test("il drawer blocca il proprio overflow orizzontale mantenendo lo scroll vert
   );
 });
 
-test("il drawer e' verticale (column/nowrap) e occupa l'altezza disponibile (height: auto)", () => {
+test("il drawer e' verticale (column/nowrap) e la sua altezza deriva dal contenuto", () => {
   const compact = compactNavMediaBlock(CSS);
   const drawerRule = compact.match(
     /\.main-nav--js#primary-navigation\s*\{[^}]*\}/,
@@ -228,9 +228,20 @@ test("il drawer e' verticale (column/nowrap) e occupa l'altezza disponibile (hei
   // invece di impilarsi, perche' il contenitore restava compresso a ~48px.
   assert.match(decl, /flex-direction:\s*column/, "il drawer deve restare a colonna (voci impilate verticalmente)");
   assert.match(decl, /flex-wrap:\s*nowrap/, "il drawer non deve avvolgere le voci su righe orizzontali");
-  assert.match(decl, /height:\s*auto/, "l'altezza deve risolversi da top/bottom rispetto al containing block corretto, non da un valore fisso");
+  assert.match(decl, /height:\s*auto/, "l'altezza deve risolversi dal contenuto, non da un valore fisso");
   assert.match(decl, /top:\s*var\(--nav-drawer-top/, "il top deve restare legato alla variabile calcolata dinamicamente");
-  assert.match(decl, /bottom:\s*0/, "il fondo del drawer deve coincidere col fondo del containing block (il viewport)");
+  // Content-driven: il drawer non deve piu' forzare bottom: 0 (che lo
+  // estendeva sempre a tutta altezza viewport indipendentemente dal
+  // contenuto). bottom: auto lascia che l'altezza segua le voci reali;
+  // max-height (legata alla stessa --nav-drawer-top usata per top) evita
+  // che il drawer superi lo spazio libero fra header e fondo viewport.
+  assert.match(decl, /bottom:\s*auto/, "il fondo del drawer deve derivare dal contenuto (bottom: auto), non essere ancorato al viewport");
+  assert.match(
+    decl,
+    /max-height:\s*calc\(100dvh\s*-\s*var\(--nav-drawer-top/,
+    "la max-height deve limitare il drawer allo spazio libero sotto l'header, basato su --nav-drawer-top",
+  );
+  assert.match(decl, /overflow-y:\s*auto/, "lo scroll interno deve attivarsi solo quando il contenuto supera la max-height");
 });
 
 test("backdrop-filter e' neutralizzato su .site-header in modalita' compatta (causa del containing block errato)", () => {

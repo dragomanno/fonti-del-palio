@@ -514,8 +514,16 @@ a:hover {
     position: fixed;
     top: var(--nav-drawer-top, 100%);
     right: 0;
-    bottom: 0;
+    /* Content-driven: il drawer termina poco sotto l'ultima voce (o sotto
+       l'ultimo sottomenu aperto) invece di occupare sempre tutta l'altezza
+       del viewport. bottom: auto lascia che l'altezza derivi dal contenuto;
+       max-height impedisce di superare lo spazio libero fra il fondo
+       dell'header (--nav-drawer-top) e il fondo del viewport, con 1rem di
+       margine. overflow-y: auto attiva lo scroll interno solo quando il
+       contenuto (sottomenu aperti) supera lo spazio disponibile. */
+    bottom: auto;
     height: auto;
+    max-height: calc(100dvh - var(--nav-drawer-top, 100%) - 1rem);
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;

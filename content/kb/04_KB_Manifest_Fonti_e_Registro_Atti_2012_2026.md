@@ -406,15 +406,19 @@ Il Manifest deve essere aggiornato ogni volta che viene acquisito un nuovo atto.
 
 - **Titolo:** Regolamento per il Palio
 - **File canonico:** `fonti_pdf/Regolamento_per_il_Palio_edizione_2021.pdf`
-- **Trascrizione:** `05_Regolamento_per_il_Palio_edizione_2021.md`
+- **Trascrizione canonica:** `03_KB_Disciplina_Vigente_Consolidata_2026.md`, sezione «Parte III — Regolamento per il Palio». Non esiste, e non è mai esistito nel corpus, un file `05_Regolamento_per_il_Palio_edizione_2021.md`: il riferimento registrato in precedenza era pendente ed è stato corretto il 2 agosto 2026.
 - **Tipologia:** regolamento comunale
 - **Atti di approvazione dichiarati nella pubblicazione:** Consiglio Comunale n. 99 del 17 giugno 2019 e n. 224 del 28 novembre 2019
 - **Pubblicazione:** Ufficio Palio, presentata nel 2021
 - **Pagine:** 82
+- **Byte:** 1.988.492
 - **SHA-256 PDF canonico:** `a09afe7b863f7b1b5329f8fb069503a59dc67b92053c3a156b7d62ce9855b86d`
 - **Stato:** acquisito; verificare eventuali modifiche successive alla pubblicazione
 - **Relazione con il Protocollo Equino:** l'art. 37 impone che l'ordinanza sulle visite segua le disposizioni dell'annuale deliberazione sul Protocollo Equino
-- **Provenienza archivistica:** file fornito dal curatore, reperito sul sito ilpalio.org
+- **Provenienza archivistica:** file fornito dal curatore, reperito sul sito ilpalio.org. Il documento è una pubblicazione dell'Ufficio Palio del Comune di Siena, ma la copia in nostro possesso proviene da un archivio specialistico di terzi, non da un canale istituzionale: nella gerarchia delle fonti del progetto vale come recupero, non come autorità istituzionale automatica. Non è stata stabilita l'identità byte a byte con una copia pubblicata dal Comune di Siena.
+- **Metadati interni del file:** prodotto con Adobe InDesign 15.0 (Macintosh); creazione 10 febbraio 2020, 13:34:29 +01:00; ultima modifica 29 luglio 2020, 11:16:53 +02:00. Il file è quindi anteriore di circa dieci mesi alla presentazione pubblica del 28 maggio 2021.
+- **Date stampate:** il testo non contiene alcuna occorrenza dell'anno 2021. La dicitura «edizione 2021» usata nei nomi di file del progetto indica l'anno di presentazione, non una data recata dal documento. L'unica datazione stampata è quella delle due deliberazioni di approvazione del 2019.
+- **Collazione integrale:** eseguita il 2 agosto 2026 fra il PDF e la trascrizione canonica. Le 106 unità articolo coincidono, previa normalizzazione meccanica di sillabazione di fine riga, spaziatura e forme tipografiche di apostrofi e virgolette. Esito positivo per 106 su 106.
 - **Nota:** la copia compressa ha contenuto testuale identico ed è conservata nella cartella `fonti_pdf/duplicati`
 
 ### RP-2021-02 — Comunicato di presentazione

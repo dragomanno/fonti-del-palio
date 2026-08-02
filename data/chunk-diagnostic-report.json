@@ -8,12 +8,12 @@
     "kb03": 170,
     "kb04": 84
   },
-  "estimatedSplitCount": 766,
+  "estimatedSplitCount": 767,
   "estimatedSplitCountByFile": {
     "kb01": 297,
     "kb02": 183,
     "kb03": 202,
-    "kb04": 84
+    "kb04": 85
   },
   "productionChunkCount": 710,
   "kb01": {
@@ -238,14 +238,14 @@
       "fileName": "04_KB_Manifest_Fonti_e_Registro_Atti_2012_2026.md",
       "candidateCount": 84,
       "coverageLedger": {
-        "totalLines": 1100,
+        "totalLines": 1104,
         "blankLines": 223,
-        "nonBlankLines": 877,
+        "nonBlankLines": 881,
         "categoryCounts": {
           "explicitly-non-chunkable": 10,
           "blank": 223,
           "structural-heading": 16,
-          "candidate-content": 851
+          "candidate-content": 855
         },
         "unexplainedLines": [],
         "unexplainedLineCount": 0,

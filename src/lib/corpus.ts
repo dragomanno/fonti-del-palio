@@ -143,13 +143,26 @@ export function chunkById(id: string): Chunk | undefined {
   return allChunks().find((c) => c.id === id);
 }
 
-/** Sezioni pubbliche della disciplina vigente, nell'ordine editoriale approvato. */
-export const DISCIPLINA_SECTIONS: Array<{
+/**
+ * Sezioni pubbliche della disciplina vigente, nell'ordine editoriale approvato.
+ *
+ * `consolidatedAt` dichiara che la resa pubblica di quella parte e' stata
+ * consolidata su una pagina canonica esterna a /disciplina-vigente/. La parte
+ * resta nel corpus e nell'indice interno dei chunk — la Parte III della KB 03
+ * non viene toccata — ma non genera piu' una propria pagina qui: l'articolato
+ * era riprodotto due volte nell'HTML indicizzabile e nell'indice di ricerca.
+ * Tutti i collegamenti interni puntano direttamente alla rotta canonica, senza
+ * attraversare il redirect.
+ */
+export interface DisciplinaSection {
   scope: string;
   title: string;
   ordinal: number;
   summary: string;
-}> = [
+  consolidatedAt?: string;
+}
+
+export const DISCIPLINA_SECTIONS: DisciplinaSection[] = [
   {
     scope: "protocollo-2026",
     title: "Protocollo Equino 2026",
@@ -189,6 +202,7 @@ export const DISCIPLINA_SECTIONS: Array<{
     title: "Regolamento per il Palio",
     ordinal: 6,
     summary: "Il Regolamento generale della corsa, dagli articoli 1 a 105.",
+    consolidatedAt: "/regolamento-per-il-palio/",
   },
   {
     scope: "coordinamento-regolamento",
@@ -422,4 +436,19 @@ export function displayStatus(dim: StatusDimension | null): StatusDisplay | null
     sourceLine,
     documented: false,
   };
+}
+
+/**
+ * Rotta pubblica di una parte della disciplina vigente.
+ *
+ * Restituisce la pagina canonica quando la parte e' stata consolidata altrove,
+ * cosi' che nessun collegamento interno passi dal redirect 301.
+ */
+export function sectionHref(section: DisciplinaSection): string {
+  return section.consolidatedAt ?? `/disciplina-vigente/${section.scope}/`;
+}
+
+/** Parti che generano una propria pagina sotto /disciplina-vigente/. */
+export function publishedDisciplinaSections(): DisciplinaSection[] {
+  return DISCIPLINA_SECTIONS.filter((s) => !s.consolidatedAt);
 }

@@ -11,6 +11,7 @@ import { renderDocumentaryMarkdown } from "../../lib/markdown";
 
 const previgente = listRegistroFonti().find((r) => r.id === "REG-PALIO-1949")!;
 const collazione = getCollazione();
+const riscritture = renderDocumentaryMarkdown(demoteHeadings(collazione.riscritture, 0));
 const anomalie = renderDocumentaryMarkdown(demoteHeadings(collazione.anomalie, 1));
 const limiti = renderDocumentaryMarkdown(demoteHeadings(collazione.limiti, 1));
 const modificati = collazione.prospetto.filter((r) => r.prospetto2019).length;
@@ -96,6 +97,20 @@ const modificati = collazione.prospetto.filter((r) => r.prospetto2019).length;
           </tfoot>
         </table>
       </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-6);">
+    <div class="wrap">
+      {/* Il blocco delle riscritture appartiene alla collazione, non al testo
+          dell'atto vigente: sta qui, accanto al prospetto che lo documenta. */}
+      <h2 class="blocco-titolo">Che cosa la revisione del 2019 ha riscritto</h2>
+      <p class="text-muted" style="max-width: var(--measure);">
+        Il confronto testuale fra le due edizioni individua {collazione.totale} unità articolo, di
+        cui cinque interamente riscritte. Le altre differenze, dalla modifica puntuale alla sola
+        variazione tipografica, sono nel <a href="#prospetto">prospetto completo</a>.
+      </p>
+      <div class="prose" set:html={riscritture} />
     </div>
   </section>
 

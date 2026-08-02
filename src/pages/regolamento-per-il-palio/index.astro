@@ -1,24 +1,38 @@
 ---
+/**
+ * Regolamento per il Palio — testo integrale dell'edizione vigente.
+ *
+ * L'articolato è reso in una sola pagina, con indice iniziale e ancora per
+ * ciascuna delle 106 unità articolo (art. 99-bis compreso). Il contenuto
+ * proviene esclusivamente da `data/carriera.generated.json`, generato dalla
+ * trascrizione canonica del PDF REG-PALIO-2019: la pagina non riscrive, non
+ * riassume e non integra il testo.
+ *
+ * Non esiste una pagina per singolo articolo: gli articoli sono ancore di
+ * questa pagina, e questa resta l'unica rotta del Regolamento vigente.
+ */
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import NotaDocumentaria from "../../components/NotaDocumentaria.astro";
+import IndiceArticoli from "../../components/IndiceArticoli.astro";
+import ArticoloRegolamentoCard from "../../components/ArticoloRegolamento.astro";
 import {
   listRegistroFonti,
-  getCollazione,
-  demoteHeadings,
+  getRegolamento,
+  articoliPerCapitolo,
   REGOLAMENTO_VIGENTE_LABEL,
 } from "../../lib/carriera";
-import { renderDocumentaryMarkdown } from "../../lib/markdown";
 
 const registro = listRegistroFonti();
 const vigente = registro.find((r) => r.id === "REG-PALIO-2019")!;
 const comunicato = registro.find((r) => r.id === "COM-2021-05-REGOLAMENTO-001")!;
-const collazione = getCollazione();
-const riscritture = renderDocumentaryMarkdown(demoteHeadings(collazione.riscritture, 0));
+const regolamento = getRegolamento();
+const gruppi = articoliPerCapitolo();
+const totale = regolamento.articoli.length;
 ---
 
 <BaseLayout
-  title="Regolamento per il Palio — edizione vigente"
-  description="L'edizione vigente del Regolamento per il Palio: approvata nel 2019 con due deliberazioni del Consiglio Comunale e presentata nel 2021, con provenienza e digest di integrità."
+  title="Regolamento per il Palio — testo integrale"
+  description="Consulta il testo integrale del Regolamento per il Palio di Siena, dall'art. 1 all'art. 105, incluso l'art. 99-bis, con indice navigabile degli articoli."
   activePath="/documenti-fondamentali"
 >
   <section class="section" style="padding-block: var(--space-6) var(--space-3);">
@@ -41,6 +55,11 @@ const riscritture = renderDocumentaryMarkdown(demoteHeadings(collazione.riscritt
         Regolamento per il Palio
       </h1>
       <p class="occhiello" data-pagefind-weight="10">{REGOLAMENTO_VIGENTE_LABEL}</p>
+      <p class="occhiello">
+        Questa pagina riproduce il <strong>testo integrale</strong> dell&rsquo;articolato:
+        {totale} unità articolo dall&rsquo;art. 1 all&rsquo;art. 105, compreso l&rsquo;art. 99-bis,
+        distribuite negli {regolamento.capitoli.length} capitoli della pubblicazione.
+      </p>
 
       <dl class="estremi" data-pagefind-weight="10">
         <div class="estremi--largo"><dt>Estremi</dt><dd>{vigente.estremi}</dd></div>
@@ -51,6 +70,23 @@ const riscritture = renderDocumentaryMarkdown(demoteHeadings(collazione.riscritt
           <dd class="mono estremi__digest">{vigente.sha256}</dd>
         </div>
       </dl>
+
+      <IndiceArticoli gruppi={gruppi} totale={totale} />
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: var(--space-4) var(--space-6);">
+    <div class="wrap">
+      {
+        gruppi.map((gruppo) => (
+          <div class="capitolo">
+            {gruppo.capitolo && <h2 class="capitolo__titolo">Capitolo {gruppo.capitolo}</h2>}
+            {gruppo.articoli.map((articolo) => (
+              <ArticoloRegolamentoCard articolo={articolo} />
+            ))}
+          </div>
+        ))
+      }
     </div>
   </section>
 
@@ -76,22 +112,9 @@ const riscritture = renderDocumentaryMarkdown(demoteHeadings(collazione.riscritt
         <p>
           L'edizione che ha preceduto questa risale al 1949 ed è consultabile come
           <a href="/regolamento-per-il-palio/edizione-previgente/">riferimento storico</a>, insieme
-          alla collazione articolo per articolo fra le due.
+          alla collazione articolo per articolo fra le due e al prospetto delle differenze.
         </p>
       </div>
-    </div>
-  </section>
-
-  <section class="section" style="padding-block: 0 var(--space-6);">
-    <div class="wrap">
-      <h2 class="blocco-titolo">Che cosa la revisione del 2019 ha riscritto</h2>
-      <p class="text-muted" style="max-width: var(--measure);">
-        Il confronto testuale fra le due edizioni individua {collazione.totale} unità articolo, di
-        cui cinque interamente riscritte. Le altre differenze, dalla modifica puntuale alla sola
-        variazione tipografica, sono nel
-        <a href="/regolamento-per-il-palio/edizione-previgente/#prospetto">prospetto completo</a>.
-      </p>
-      <div class="prose" set:html={riscritture} />
     </div>
   </section>
 
@@ -99,10 +122,35 @@ const riscritture = renderDocumentaryMarkdown(demoteHeadings(collazione.riscritt
     <div class="wrap">
       <NotaDocumentaria titolo="Provenienza e limiti" variante="provenienza">
         <p>
-          Questa pagina descrive il documento e ne dichiara l'impronta; <strong>non ne riproduce il
-          testo integrale e non lo sostituisce.</strong> Per il testo fa fede la pubblicazione del
-          Comune di Siena. Il digest SHA-256 permette di verificare che la copia consultata coincida
-          con quella su cui questo progetto ha lavorato.
+          Il testo qui riprodotto è la trascrizione dell&rsquo;articolato contenuto nella
+          pubblicazione dell&rsquo;Ufficio Palio del Comune di Siena registrata come
+          <span class="mono">{vigente.id}</span> ({vigente.consistenza}). Il digest SHA-256
+          dichiarato sopra permette di verificare che la copia consultata coincida con quella su cui
+          questo progetto ha lavorato. <strong>Per il testo fa fede la pubblicazione del Comune di
+          Siena:</strong> questa pagina la rende consultabile, non la sostituisce.
+        </p>
+        <p>
+          Dell&rsquo;edizione vigente è riprodotto <strong>il solo articolato</strong>, capitoli
+          da I a VIII, artt. 1&ndash;105 con l&rsquo;art. 99-bis. Non sono riprodotti in questa
+          pagina l&rsquo;Allegato A con l&rsquo;elenco delle diciassette Contrade,
+          l&rsquo;Allegato B con lo schema del Corteo Storico, l&rsquo;Appendice con le norme
+          interpretative, l&rsquo;indice generale e il prospetto delle modifiche del volume
+          stampato: restano nel PDF della fonte.
+        </p>
+        <p>
+          L&rsquo;art. 99-bis è composto nella stampa come <span class="mono">Art. 99bis</span>,
+          senza trattino e senza intestazione di capitolo propria: qui è reso come
+          <span class="mono">Art. 99-bis</span> per sola leggibilità, e conserva la sua posizione
+          fra l&rsquo;art. 99 e l&rsquo;art. 100. Gli articoli 40, 74 e 86 riportano la formula di
+          abrogazione così come è stampata. Nel secondo comma dell&rsquo;art. 16, dopo
+          «a suffragare i motivi addotti.», la pubblicazione reca un carattere isolato
+          <span class="mono">x</span>: è presente nell&rsquo;originale stampato ed è riprodotto
+          verbatim, senza correzione né interpretazione.
+        </p>
+        <p>
+          Gli articoli non hanno rubrica: l&rsquo;edizione vigente li numera senza titolo. Le
+          rubriche eventualmente citate altrove derivano da documenti analitici e non appartengono
+          al testo dell&rsquo;atto.
         </p>
         <p>
           Il Regolamento disciplina la corsa in via generale. Le prescrizioni operative di una
@@ -170,5 +218,17 @@ const riscritture = renderDocumentaryMarkdown(demoteHeadings(collazione.riscritt
     font-size: 1.5rem;
     max-width: 30ch;
     margin: 0 0 var(--space-2);
+  }
+  .capitolo + .capitolo {
+    margin-top: var(--space-6);
+  }
+  .capitolo__titolo {
+    font-family: var(--font-display);
+    font-size: 1.375rem;
+    max-width: var(--measure);
+    margin: 0 0 var(--space-2);
+    padding-bottom: var(--space-1);
+    border-bottom: 2px solid var(--color-green);
+    scroll-margin-top: var(--space-6);
   }
 </style>

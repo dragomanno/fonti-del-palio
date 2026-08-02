@@ -1,0 +1,101 @@
+---
+/**
+ * Indice iniziale dell'articolato: una voce per ciascuna unità articolo,
+ * raggruppata per capitolo e collegata all'ancora corrispondente nella stessa
+ * pagina. È navigazione, non contenuto documentario: resta fuori dall'indice
+ * di ricerca per non moltiplicare i riscontri sui numeri d'articolo.
+ */
+import type { ArticoloRegolamento } from "../lib/carriera";
+
+export interface Props {
+  gruppi: Array<{ capitolo: string | null; articoli: ArticoloRegolamento[] }>;
+  totale: number;
+}
+
+const { gruppi, totale } = Astro.props;
+---
+
+<nav id="indice-articoli" class="indice" aria-labelledby="indice-articoli-titolo" data-pagefind-ignore>
+  <h2 id="indice-articoli-titolo" class="indice__titolo">Indice degli articoli</h2>
+  <p class="indice__nota">
+    {totale} unità articolo, dall&rsquo;art. 1 all&rsquo;art. 105, compreso l&rsquo;art. 99-bis.
+    Ogni voce porta all&rsquo;articolo corrispondente in questa stessa pagina.
+  </p>
+  {
+    gruppi.map((gruppo) => (
+      <section class="indice__gruppo">
+        {gruppo.capitolo && <h3 class="indice__capitolo">Capitolo {gruppo.capitolo}</h3>}
+        <ul class="indice__lista">
+          {gruppo.articoli.map((articolo) => (
+            <li>
+              <a href={`#${articolo.anchor}`}>{articolo.etichetta}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</nav>
+
+<style>
+  .indice {
+    margin-top: var(--space-4);
+    padding: var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    scroll-margin-top: var(--space-6);
+  }
+  .indice__titolo {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  .indice__nota {
+    margin: var(--space-1) 0 0;
+    max-width: var(--measure);
+    font-size: var(--text-caption);
+    color: var(--color-text-faint);
+  }
+  .indice__gruppo {
+    margin-top: var(--space-3);
+  }
+  .indice__capitolo {
+    font-family: var(--font-display);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-1);
+    max-width: var(--measure);
+  }
+  /* Le voci sono corte e numerose: una griglia fluida evita sia la colonna
+     unica lunghissima sia il ridimensionamento orizzontale su schermi stretti. */
+  .indice__lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(6.25rem, 1fr));
+    gap: var(--space-1);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .indice__lista li {
+    margin: 0;
+    min-width: 0;
+  }
+  .indice__lista a {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    line-height: 1.4;
+    padding: 0.2rem 0.1rem;
+    text-decoration: none;
+    color: var(--color-text-muted);
+    overflow-wrap: anywhere;
+  }
+  .indice__lista a:hover,
+  .indice__lista a:focus-visible {
+    color: var(--color-text);
+    text-decoration: underline;
+    text-decoration-color: var(--color-green);
+    text-underline-offset: 3px;
+  }
+</style>

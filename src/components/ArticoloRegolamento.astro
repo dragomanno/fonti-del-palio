@@ -1,0 +1,99 @@
+---
+/**
+ * Una unità articolo del Regolamento per il Palio, resa verbatim.
+ *
+ * Il corpo NON passa da un renderer Markdown: è testo semplice proveniente
+ * dall'indice generato. La resa è deterministica — una riga vuota apre un
+ * capoverso, un singolo ritorno a capo resta un ritorno a capo dentro il
+ * capoverso. Così un contrassegno d'elenco o un rientro della stampa non
+ * possono trasformarsi in blocchi di codice, citazioni o tabelle.
+ */
+import type { ArticoloRegolamento } from "../lib/carriera";
+
+export interface Props {
+  articolo: ArticoloRegolamento;
+}
+
+const { articolo } = Astro.props;
+const capoversi = articolo.corpo.split("\n\n").map((c) => c.split("\n"));
+---
+
+<article class="art" id={articolo.anchor}>
+  <h3 class="art__titolo">
+    <a href={`#${articolo.anchor}`} class="art__permalink" aria-label={`Collegamento permanente a ${articolo.etichetta}`}>
+      {articolo.etichetta}
+    </a>
+    {articolo.rubrica !== "" && <span class="art__rubrica">{articolo.rubrica}</span>}
+  </h3>
+  <div class="art__corpo">
+    {
+      capoversi.map((righe) => (
+        <p>
+          {righe.map((riga, i) => (
+            <>
+              {i > 0 && <br />}
+              {riga}
+            </>
+          ))}
+        </p>
+      ))
+    }
+  </div>
+  <p class="art__ritorno" data-pagefind-ignore>
+    <a href="#indice-articoli">Torna all&rsquo;indice degli articoli</a>
+  </p>
+</article>
+
+<style>
+  .art {
+    padding-block: var(--space-3);
+    border-top: 1px solid var(--color-border);
+    /* L'intestazione fissa non deve coprire il titolo raggiunto via ancora. */
+    scroll-margin-top: var(--space-6);
+  }
+  .art:first-of-type {
+    border-top: none;
+  }
+  .art__titolo {
+    font-family: var(--font-display);
+    font-size: 1.1875rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 0;
+  }
+  .art__permalink {
+    color: inherit;
+    text-decoration: none;
+  }
+  .art__permalink:hover,
+  .art__permalink:focus-visible {
+    text-decoration: underline;
+    text-decoration-color: var(--color-green);
+    text-underline-offset: 3px;
+  }
+  .art__rubrica {
+    display: block;
+    font-family: var(--font-body, inherit);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-text-muted);
+  }
+  .art__corpo {
+    margin-top: var(--space-1);
+  }
+  .art__corpo :global(p) {
+    max-width: var(--measure);
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-2);
+  }
+  .art__corpo :global(p:last-child) {
+    margin-bottom: 0;
+  }
+  .art__ritorno {
+    margin: var(--space-2) 0 0;
+    font-size: var(--text-caption);
+  }
+  .art__ritorno a {
+    color: var(--color-text-faint);
+  }
+</style>

@@ -1681,6 +1681,900 @@
     "anomalie": "1. **Art. 16, edizione vigente.** L'estrazione restituisce «suffragare i motivi addotti.x La Giunta Comunale comunica...». Il carattere `x` isolato dopo il punto non ha senso testuale: può essere un richiamo di nota, un refuso di stampa o un artefatto di estrazione. Va verificato sulla pagina originale prima di qualsiasi uso citazionale.\n2. **Completezza del prospetto previgente.** Il prospetto dell'edizione previgente omette almeno l'integrazione del 1998 all'art. 39. Non può quindi essere usato come censimento affidabile delle modificazioni anteriori al 1999.\n3. **Intervallo 1999-2019.** Nessuna delle due edizioni documenta modificazioni fra il 10.8.1999 e il 17.6.2019. L'assenza di righe nel prospetto non dimostra che non ve ne siano state.",
     "limiti": "1. Non dimostra che il testo vigente sia quello attualmente in vigore: eventuali modificazioni successive al 28 novembre 2019 non sono state verificate presso il Comune di Siena.\n2. Non sostituisce la lettura degli atti. Le classificazioni `riscritto`, `modificato` e `modifica puntuale` misurano una distanza testuale, non la portata giuridica di un intervento: una modifica di poche parole può avere effetti maggiori di una riscrittura.\n3. Non è una collazione notarile. È stata verificata per campioni sui casi più rilevanti; gli scarti minori non sono stati controllati uno per uno sull'originale a stampa.\n4. Non attribuisce a una singola deliberazione le variazioni degli articoli toccati da più atti nel tempo. Il prospetto indica quali articoli sono stati modificati e da quale atto, non quale parola sia stata cambiata da quale deliberazione."
   },
+  "regolamento": {
+    "fonte": {
+      "id": "REG-PALIO-2019",
+      "file": "03_KB_Disciplina_Vigente_Consolidata_2026.md",
+      "sezione": "Parte III — Regolamento per il Palio",
+      "sha256": "a09afe7b863f7b1b5329f8fb069503a59dc67b92053c3a156b7d62ce9855b86d",
+      "pagine": 82,
+      "byte": 1988492
+    },
+    "capitoli": [
+      {
+        "numero": "I",
+        "titolo": "Disposizioni fondamentali"
+      },
+      {
+        "numero": "II",
+        "titolo": "Dei rapporti tra il Comune e le Contrade e del Capitano"
+      },
+      {
+        "numero": "III",
+        "titolo": "Dei sorteggi preparatori e del mossiere"
+      },
+      {
+        "numero": "IV",
+        "titolo": "Della presentazione, scelta ed assegnazione a sorte dei cavalli"
+      },
+      {
+        "numero": "V",
+        "titolo": "Delle corse di prova e dei Fantini"
+      },
+      {
+        "numero": "VI",
+        "titolo": "Del corteo storico e della corsa del Palio"
+      },
+      {
+        "numero": "VII",
+        "titolo": "Dei premi"
+      },
+      {
+        "numero": "VIII",
+        "titolo": "Penalità e disposizioni finali"
+      }
+    ],
+    "articoli": [
+      {
+        "numero": "1",
+        "etichetta": "Art. 1",
+        "anchor": "articolo-1",
+        "rubrica": "",
+        "capitolo": "I — Disposizioni fondamentali",
+        "corpo": "Le tradizionali corse del Palio, con le quali il popolo senese, avente nelle storiche sue Contrade l’espressione più pura e più caratteristica, solennizza le ricorrenze religiose della Visitazione e dell’Assunzione in cielo di Maria Vergine, Signora e Patrona della Città, si effettuano nel “Campo” il 2 luglio ed il 16 agosto di ogni anno."
+      },
+      {
+        "numero": "2",
+        "etichetta": "Art. 2",
+        "anchor": "articolo-2",
+        "rubrica": "",
+        "capitolo": "I — Disposizioni fondamentali",
+        "corpo": "Al di fuori delle ricorrenze indicate nel precedente articolo, possono essere effettuati Palii straordinari in occasione di circostanze, avvenimenti e ricorrenze di particolare rilievo e ciò solo su iniziativa del Sindaco, della Giunta Comunale o del Consiglio Comunale ovvero su richiesta del Magistrato delle Contrade, di Enti e Comitati cittadini, rivolta tempestivamente al Sindaco entro il termine del 31 marzo di ogni anno. È possibile derogare al termine del 31 marzo esclusivamente in caso di avvenimenti ed eventi straordinari ed eccezionali che siano accaduti dopo tale data.\n\nTanto l’iniziativa dell’Amministrazione Comunale, quanto le richieste suaccennate (queste ultime se ritenute dalla Giunta Comunale non manifestamente infondate) vengono, dal Sindaco, al più presto comunicate alle Contrade tramite il loro Magistrato, il quale provvederà a consultare tutte quelle che non abbiano in corso punizioni definitive di esclusione, di cui all’art. 97 lett. c) raccogliendo le adesioni, che sono volontarie, ma irretrattabili.\n\nSolo se vengono raccolte almeno dieci adesioni il Consiglio Comunale decide sulla effettuazione o meno del Palio Straordinario ed in caso affermativo il Sindaco notifica entro cinque giorni la detta decisione alle diciassette Contrade, consentendo a quelle che avevano in precedenza negato la loro adesione o che si erano astenute da qualsiasi pronunciamento in merito, di fare conoscere la loro rinuncia o adesione definitiva ed irretrattabile mediante comunicazione scritta rivolta entro dieci giorni al Sindaco ed al Magistrato delle Contrade.\n\nLe Contrade che non faranno pervenire tale decisione, nel termine di tempo sopra disposto, saranno considerate definitivamente rinunciatarie."
+      },
+      {
+        "numero": "3",
+        "etichetta": "Art. 3",
+        "anchor": "articolo-3",
+        "rubrica": "",
+        "capitolo": "I — Disposizioni fondamentali",
+        "corpo": "Spetta all’Autorità Comunale dare l’annuncio al pubblico di ogni Palio ordinario o straordinario."
+      },
+      {
+        "numero": "4",
+        "etichetta": "Art. 4",
+        "anchor": "articolo-4",
+        "rubrica": "",
+        "capitolo": "I — Disposizioni fondamentali",
+        "corpo": "Le Contrade sono diciassette e cioè: Aquila, Bruco, Chiocciola, Civetta, Drago, Giraffa, Istrice, Leocorno, Lupa, Nicchio, Oca, Onda, Pantera, Selva, Tartuca, Torre e Valdimontone.\n\nI loro stemmi e colori risultano dall’allegato A) del presente Regolamento.\n\nAd ogni Palio partecipano dieci delle diciassette Contrade. Per la determinazione di esse nei Palii ordinari, si segue la regola stabilita dal Bando del Magistrato di Biccherna del dì 21 gennaio 1720 (stile senese).\n\nHanno diritto a partecipare ad un Palio ordinario le sette Contrade che non presero parte a quello corrispondente dell’anno innanzi ed il loro numero viene completato mediante sorteggio fra le altre che vi parteciparono, tenuto conto anche delle eventuali rinunce di cui all’art. 6.\n\nPer i Palii straordinari di cui all’art. 2, le dieci Contrade che partecipano alla corsa sono sorteggiate con le modalità di cui all’art. 27."
+      },
+      {
+        "numero": "5",
+        "etichetta": "Art. 5",
+        "anchor": "articolo-5",
+        "rubrica": "",
+        "capitolo": "I — Disposizioni fondamentali",
+        "corpo": "I Palii straordinari non modificano i diritti delle Contrade per la partecipazione a quelli ordinari."
+      },
+      {
+        "numero": "6",
+        "etichetta": "Art. 6",
+        "anchor": "articolo-6",
+        "rubrica": "",
+        "capitolo": "I — Disposizioni fondamentali",
+        "corpo": "In conformità di quanto è stabilito dal citato Bando del Magistrato di Biccherna del dì 21 gennaio 1720 (stile senese) la partecipazione delle Contrade ai Palii ordinari è volontaria.\n\nÈ quindi in piena facoltà delle Contrade di rinunciare al diritto acquisito di correre, o di astenersi dall’esperimento della sorte, purché ne rendano edotta per iscritto l’Autorità Comunale almeno dieci giorni prima dell’inizio delle operazioni di cui all’art. 20 e seguenti.\n\nNon è ammessa alcuna rinuncia condizionata, o a favore di altra Contrada.\n\nSoltanto nell’eventualità che le rinunce non permettano di raggiungere il numero prescritto dal terzo e quarto comma dell’art. 4 - mentre le Contrade che non avrebbero avuto diritto di partecipare alla corsa lo acquistano senz’altro\n- si procede ad un sorteggio fra le rinuncianti, per determinare quali di esse divengano obbligate a parteciparvi al fine di completare il numero anzidetto."
+      },
+      {
+        "numero": "7",
+        "etichetta": "Art. 7",
+        "anchor": "articolo-7",
+        "rubrica": "",
+        "capitolo": "I — Disposizioni fondamentali",
+        "corpo": "La soprintendenza e la direzione dei Palii, sia ordinari che straordinari, spettano esclusivamente all’Amministrazione Comunale. La Giunta Comunale nomina una Deputazione composta di tre membri, la quale esercita le attribuzioni conferitele dal presente Regolamento ed in genere coadiuva l’Amministrazione Comunale nelle funzioni suddette.\n\nPer la nomina di tale Deputazione la Giunta Comunale si avvale della segnalazione non vincolante presentata dal Magistrato delle Contrade, individuando preferibilmente i nominativi delle Contrade non partecipanti al Palio di riferimento.\n\nNell’espletamento dei suoi compiti la Deputazione della Festa si avvale della collaborazione di tre Ispettori della Pista, nominati con le stesse modalità dei Deputati della Festa.\n\nLa Giunta Comunale con apposito atto nomina i Deputati della Festa, gli Ispettori della Pista, i Giudici della Vincita e il Maestro di Campo."
+      },
+      {
+        "numero": "8",
+        "etichetta": "Art. 8",
+        "anchor": "articolo-8",
+        "rubrica": "",
+        "capitolo": "I — Disposizioni fondamentali",
+        "corpo": "In considerazione delle finalità del Palio come celebrazione cittadina e dello spirito che lo anima, è vietato di promuovere pubblici concorsi, lotterie, od altre iniziative che possano far sorgere interessi economici aventi qualsiasi riferimento al Palio, o alle sue fasi ed alle operazioni inerenti."
+      },
+      {
+        "numero": "9",
+        "etichetta": "Art. 9",
+        "anchor": "articolo-9",
+        "rubrica": "",
+        "capitolo": "II — Dei rapporti tra il Comune e le Contrade e del Capitano",
+        "corpo": "Le Contrade sono Enti autonomi, e come tali provvedono alla loro amministrazione e svolgono la loro attività in modo indipendente, conformandosi alle norme portate dai propri Capitoli o Statuti ed ispirandosi alle antiche tradizioni.\n\nLe loro insegne, bandiere, stemmi, imprese, costumi e raffigurazioni singole o collettive non possono essere riprodotte ed esposte al pubblico, o diffuse, senza la preventiva autorizzazione della Contrada interessata e del Magistrato delle Contrade. I contravventori sono perseguiti nei modi di legge.\n\nL’alto patrocinio delle Contrade, come istituzione di cospicuo interesse cittadino, spetta al Comune di Siena.\n\nIn occasione del Palio, le Contrade sono tenute all’osservanza delle prescrizioni comunali in tutto ciò che si riferisce alla parte preparatoria ed al regolare e decoroso svolgimento della celebrazione.\n\nIn caso di inosservanza, le Contrade sono passibili di sanzioni, secondo il disposto dagli artt. 97 e seguenti."
+      },
+      {
+        "numero": "10",
+        "etichetta": "Art. 10",
+        "anchor": "articolo-10",
+        "rubrica": "",
+        "capitolo": "II — Dei rapporti tra il Comune e le Contrade e del Capitano",
+        "corpo": "Ferma restando l’autonomia delle Contrade, è ammessa, in via eccezionale, la nomina di un Commissario incaricato della ricostituzione del Seggio e della temporanea reggenza, nei soli casi seguenti:\n\na) quando venga a mancare il Seggio e agli appartenenti alla Contrada, malgrado i formali inviti scritti del Comune, da affiggersi presso la sede per tre volte di seguito e per dieci giorni ciascuno, non riesca possibile la ricostituzione, e gli appartenenti stessi invochino tale provvedimento, o con la loro inerzia lo rendano indispensabile;\n\nb) quando si verifichi da parte della Contrada una assoluta e ingiustificata inattività che si prolunghi per almeno un triennio, cosi che il Seggio in carica debba considerarsi decaduto.\n\nNei casi sopra previsti, il Magistrato delle Contrade è chiamato ad esprimere parere sulla necessità del provvedimento.\n\nLa nomina del Commissario, da scegliersi fra persone esperte di vita contradaiola, su una terna di nomi proposti dal Magistrato delle Contrade, è di esclusiva competenza della Giunta Comunale.\n\nLa gestione straordinaria non può superare la durata di tre mesi. Qualora entro tale periodo il Seggio non sia stato ricostituito e la situazione permanga invariata, si procederà alla nomina di un altro Commissario, rinnovando la procedura sopra stabilita."
+      },
+      {
+        "numero": "11",
+        "etichetta": "Art. 11",
+        "anchor": "articolo-11",
+        "rubrica": "",
+        "capitolo": "II — Dei rapporti tra il Comune e le Contrade e del Capitano",
+        "corpo": "Il Comune, in tutti quei rapporti che riguardano collettivamente le Contrade, corrisponde con esse a mezzo del loro Magistrato.\n\nPerò per questioni urgenti riguardanti lo svolgimento del Palio, l’Autorità Comunale può indire riunioni alle quali debbono partecipare, insieme, Priori e Capitani."
+      },
+      {
+        "numero": "12",
+        "etichetta": "Art. 12",
+        "anchor": "articolo-12",
+        "rubrica": "",
+        "capitolo": "II — Dei rapporti tra il Comune e le Contrade e del Capitano",
+        "corpo": "È dovere di ogni Contrada notificare con lettera ufficiale al Comune la formazione del proprio Seggio, indicando il cognome, nome e la residenza di ciascuno dei membri che lo compongono, nonché la carica rispettivamente coperta.\n\nLa comunicazione deve essere fatta volta a volta che si proceda alla ricostituzione totale, o a parziali cambiamenti, ma in ogni modo, entro il 31 maggio di ciascun anno deve essere rimesso un completo elenco, aggiornato a tale data.\n\nLa rappresentanza della Contrada nei confronti del Comune non può essere esercitata ove manchino le comunicazioni sopra prescritte."
+      },
+      {
+        "numero": "13",
+        "etichetta": "Art. 13",
+        "anchor": "articolo-13",
+        "rubrica": "",
+        "capitolo": "II — Dei rapporti tra il Comune e le Contrade e del Capitano",
+        "corpo": "L’Amministrazione Comunale riconosce nel Priore il Capo ed il legittimo rappresentante della Contrada e corrisponde quindi con esso per tutto quanto possa riguardare la Contrada medesima, salvo il disposto dell’art. 11 per gli affari di interesse collettivo. Pur tuttavia corrisponde direttamente col Capitano per ciò che concerne le operazioni tutte riferentesi allo svolgimento di ogni Palio."
+      },
+      {
+        "numero": "14",
+        "etichetta": "Art. 14",
+        "anchor": "articolo-14",
+        "rubrica": "",
+        "capitolo": "II — Dei rapporti tra il Comune e le Contrade e del Capitano",
+        "corpo": "Entro il mese di maggio di ogni anno le Contrade debbono notificare all’Autorità Comunale, con lettera ufficiale, la nomina del Capitano, per l’approvazione.\n\nDecorso tale termine senza che abbia luogo la notifica, o quando la nomina non venga approvata, le funzioni del Capitano restano attribuite al Priore.\n\nPer giustificato motivo sono ammessi cambiamenti nella persona del\n\nCapitano, o di quella che è investita di tali funzioni, purché notificati nella forma suindicata non oltre il dodicesimo giorno prima della assegnazione dei cavalli.\n\nL’Autorità Comunale, quando riscontri sussistere nella persona nominata alcuno dei casi di ineleggibilità, di cui all’art. 15, ne rende edotta, entro 15 giorni, la Contrada, specificando i ravvisati motivi di ineleggibilità e la invita a provvedere alla sostituzione.\n\nIl Capitano entra in carica solo dopo l’approvazione della Autorità Comunale.\n\nIn caso di vacazione, le funzioni di Capitano vengono assunte personalmente dal Priore o in sua assenza dal Vicario.\n\nIl Priore, pur essendo in carica il Capitano, può in ogni caso assumere le funzioni per singoli atti, operazioni, o adunanze."
+      },
+      {
+        "numero": "15",
+        "etichetta": "Art. 15",
+        "anchor": "articolo-15",
+        "rubrica": "",
+        "capitolo": "II — Dei rapporti tra il Comune e le Contrade e del Capitano",
+        "corpo": "Non sono eleggibili alla carica di Capitano:\na) coloro che non abbiano compiuto la maggiore età;\nb) gli interdetti, gli inabilitati e coloro che si trovino in stato di fallimento;\nc) coloro che abbiano riportato condanna definitiva per un delitto non colposo.\n\nQuando si verifichino i casi di ineleggibilità previsti dalla lettera b) oppure la condanna come detto alla lettera c) dopo l’elezione, il Capitano decade dalla carica."
+      },
+      {
+        "numero": "16",
+        "etichetta": "Art. 16",
+        "anchor": "articolo-16",
+        "rubrica": "",
+        "capitolo": "II — Dei rapporti tra il Comune e le Contrade e del Capitano",
+        "corpo": "Contro la nomina del Capitano da parte della Contrada è ammesso ricorso alla Giunta Comunale, entro il termine di cinque giorni dalla data della nomina stessa, tanto per le cause di ineleggibilità di cui al precedente articolo, quanto per il caso che alla votazione abbiano partecipato persone non aventi diritto al voto, o quando la nomina sia dovuta a minacce o raggiri.\n\nIl ricorso deve essere avanzato da almeno dieci appartenenti alla Contrada aventi diritto di voto e corredato di atti, documenti, o dichiarazioni che valgano a suffragare i motivi addotti.x\n\nLa Giunta Comunale comunica il ricorso alle parti interessate, assegnando un termine per le deduzioni e decide inappellabilmente."
+      },
+      {
+        "numero": "17",
+        "etichetta": "Art. 17",
+        "anchor": "articolo-17",
+        "rubrica": "",
+        "capitolo": "II — Dei rapporti tra il Comune e le Contrade e del Capitano",
+        "corpo": "Il Capitano la cui nomina sia stata debitamente approvata, non meno di 10 giorni prima dell’assegnazione dei cavalli, ha facoltà di proporre all’Autorità Comunale tre suoi Fiduciari nelle funzioni e operazioni inerenti allo svolgimento del Palio.\n\nI Fiduciari sostituiscono il Capitano, in caso di assenza o impedimento, nei termini e con le forme di cui all’art. 14.\n\nLa sostituzione deve avvenire però in modo che in rappresentanza della Contrada si abbia in ogni caso la presenza di una sola persona.\n\nLa designazione dei Fiduciari deve esser fatta per ogni Palio.\n\nIl Capitano comunica all’Amministrazione Comunale, per ogni Palio e nei termini di cui al primo comma, i nominativi del Barbaresco e del Vice-Barbaresco, soggetti all’approvazione dell’Autorità Comunale, che dovrà motivare l’eventuale diniego.\n\nIl Capitano comunica all’Autorità Comunale, per ogni anno e nei termini di cui al primo comma, il nominativo del Veterinario di fiducia, scelto nell’Albo dell’Ordine professionale.\n\nI Fiduciari, il Barbaresco, il Vice-Barbaresco ed il Veterinario non devono trovarsi in alcuno dei casi di ineleggibilità previsti dal precedente art. 15.\n\nI Fiduciari, il Barbaresco, il Vice-Barbaresco ed il Veterinario decadono di diritto in caso di cambiamento del Capitano."
+      },
+      {
+        "numero": "18",
+        "etichetta": "Art. 18",
+        "anchor": "articolo-18",
+        "rubrica": "",
+        "capitolo": "II — Dei rapporti tra il Comune e le Contrade e del Capitano",
+        "corpo": "Di regola i Priori ed i Capitani debbono, nei rapporti col Comune, esercitare personalmente il loro ufficio e sono perciò tenuti ad intervenire di persona a tutte le adunanze ed operazioni inerenti alla loro rispettiva carica.\n\nIn caso di impedimento i Priori possono essere sostituiti dal Vicario, o eccezionalmente da un membro del Seggio a ciò espressamente delegato.\n\nPure in via eccezionale, i Capitani possono farsi rappresentare da uno dei Fiduciari di cui l’Autorità Comunale abbia approvata la nomina ai sensi dell’art. 17."
+      },
+      {
+        "numero": "19",
+        "etichetta": "Art. 19",
+        "anchor": "articolo-19",
+        "rubrica": "",
+        "capitolo": "II — Dei rapporti tra il Comune e le Contrade e del Capitano",
+        "corpo": "Nell’apposito palco destinato al Magistrato delle Contrade per assistere al Palio possono prendere posto soltanto i componenti il Magistrato stesso, o coloro\n\ni quali li sostituiscono ai sensi del secondo comma dell’articolo precedente, mentre nei dieci posti messi a disposizione dei Capitani nel Palco dei Giudici, possono, in assenza dei titolari, essere ammessi soltanto i Priori, o i Vicari, o uno dei Fiduciari, approvati, del Capitano, in modo che ogni Contrada non abbia mai, in ciascuno dei detti palchi, più di un rappresentante. Nel piano inferiore del palco dei Giudici possono accedere soltanto venti tra i Fiduciari dei Capitani delle Contrade partecipanti al Palio."
+      },
+      {
+        "numero": "20",
+        "etichetta": "Art. 20",
+        "anchor": "articolo-20",
+        "rubrica": "",
+        "capitolo": "III — Dei sorteggi preparatori e del mossiere",
+        "corpo": "Per effettuare il sorteggio delle Contrade previsto, per i Palii ordinari, dal terzo comma dell’art. 4, l’Autorità Comunale, non meno di venti giorni prima del 2 luglio e del 16 agosto, di regola nel pomeriggio di un giorno festivo, convoca in una Sala del Palazzo Comunale i Capitani di tutte le Contrade, salvo le eccezioni di cui all’art. 29. Di tale adunanza viene dato avviso al pubblico. Essa è legale qualunque sia il numero delle Contrade rappresentate e viene presieduta dal Sindaco, o da un Assessore a ciò delegato, assistito dai competenti funzionari del Comune.\n\nÈ vietato a chiunque altro di assistere all’adunanza, sotto pena di nullità delle operazioni."
+      },
+      {
+        "numero": "21",
+        "etichetta": "Art. 21",
+        "anchor": "articolo-21",
+        "rubrica": "",
+        "capitolo": "III — Dei sorteggi preparatori e del mossiere",
+        "corpo": "Aperta l’adunanza, datone annuncio al pubblico con gli squilli dei Trombetti di Palazzo e verificata la legittima rappresentanza delle Contrade intervenute, il Presidente da comunicazione e fa prendere atto delle esclusioni per punizioni tuttora in corso e delle eventuali rinunce a partecipare alla corsa o all’esperimento della sorte, che siano tempestivamente pervenute. Colloca poi in apposita urna i nomi di tutte le Contrade ad eccezione di quelle rinunciatarie\n- scritti in tessere che egli chiude in altrettante custodie identiche tra loro - e quindi ne estrae tante quante debbono essere le Contrade da sorteggiarsi per completare il numero di dieci. I Capitani delle Contrade estratte si recano al banco della presidenza per cooperare all’effettuazione del sorteggio.\n\nIl Presidente sostituisce di diritto i rappresentanti delle Contrade che siano assenti, salvo che essi non intervengano, in corso di seduta, in tempo utile per esercitare le loro funzioni."
+      },
+      {
+        "numero": "22",
+        "etichetta": "Art. 22",
+        "anchor": "articolo-22",
+        "rubrica": "",
+        "capitolo": "III — Dei sorteggi preparatori e del mossiere",
+        "corpo": "Il Presidente ed i Capitani delle Contrade sorteggiate nell’estrazione di cui all’articolo precedente prendono anzitutto cognizione di quelle fra le quali deve essere effettuato il sorteggio, ivi comprese le Contrade soggette ad esclusione con punizione in corso e lo stesso Presidente ne chiude le tessere contenenti i relativi nomi in altrettante custodie identiche tra loro, ponendole in una seconda urna, in modo a tutti palese. Terminata tale operazione il Capitano della Contrada designata per prima dalla sorte estrae un nome, rimettendo al Presidente la custodia chiusa e questi l’apre e pubblica il contenuto, mostrando palesemente la tessera estratta.\n\nSuccessivamente, e con le stesse modalità, il Capitano della Contrada che la sorte ha designata per seconda, procede alla estrazione di un’altra Contrada, il cui nome viene nello stesso modo pubblicato, e si continua cosi finché non ne siano estratte tante da completare il numero di dieci necessario per il Palio.\n\nQualora venga estratta una Contrada che abbia in corso un provvedimento disciplinare di esclusione essa verrà a questo punto eliminata, scontando cosi la punizione, e si procederà all’immediato sorteggio di altra Contrada.\n\nDel sorteggio della Contrada esclusa viene data notizia al pubblico mediante esposizione della bandiera ad una finestra del secondo piano del Palazzo Comunale prima dell’esposizione delle altre bandiere delle Contrade successivamente estratte e partecipanti al Palio.\n\nNel caso di sopraggiunta impossibilità a partecipare al Palio da parte di una Contrada non si procede all’ulteriore convocazione dei Capitani, ma avranno diritto a correre le Contrade nel rispetto dell’ordine di sorteggio di cui al successivo art. 23."
+      },
+      {
+        "numero": "23",
+        "etichetta": "Art. 23",
+        "anchor": "articolo-23",
+        "rubrica": "",
+        "capitolo": "III — Dei sorteggi preparatori e del mossiere",
+        "corpo": "Completato il numero delle dieci Contrade che debbono correre il Palio, il Presidente continua l’estrazione delle Contrade rimaste nell’urna, pubblicando man mano il nome di ciascuna di esse. Queste ultime hanno diritto di partecipare al Palio corrispondente dell’anno immediatamente successivo, insieme a quelle che avessero rinunciato al diritto di correre, o al sorteggio, ai sensi dell’art. 6 e a quelle per le quali cesserà la punizione dell’esclusione."
+      },
+      {
+        "numero": "24",
+        "etichetta": "Art. 24",
+        "anchor": "articolo-24",
+        "rubrica": "",
+        "capitolo": "III — Dei sorteggi preparatori e del mossiere",
+        "corpo": "I sorteggi di cui agli artt. 22 e 23 valgono anche per determinare l’ordine delle Comparse nel Corteo Storico che precede la corsa del Palio, come specificato nell’art. 77.\n\nQuando per le rinunce di cui all’art. 6 non si debba far luogo all’estrazione a sorte per completare il numero delle dieci Contrade partecipanti alla corsa, il sorteggio tra queste viene effettuato dal Presidente, all’unico scopo di stabilire l’ordine delle rispettive Comparse del Corteo Storico."
+      },
+      {
+        "numero": "25",
+        "etichetta": "Art. 25",
+        "anchor": "articolo-25",
+        "rubrica": "",
+        "capitolo": "III — Dei sorteggi preparatori e del mossiere",
+        "corpo": "Per il sorteggio previsto dall’ultimo comma dell’art. 6 si osservano le norme contenute negli artt. 21 e 22.\n\nL’ordine nel Corteo Storico delle Comparse delle Contrade le quali hanno acquisito il diritto di correre in forza del suddetto art. 6, comma ultimo, viene determinato con apposito sorteggio, da effettuarsi subito dopo quello eseguito per completare il numero delle dieci partecipanti alla corsa."
+      },
+      {
+        "numero": "26",
+        "etichetta": "Art. 26",
+        "anchor": "articolo-26",
+        "rubrica": "",
+        "capitolo": "III — Dei sorteggi preparatori e del mossiere",
+        "corpo": "Terminate le operazioni di sorteggio, le bandiere delle Contrade estratte per partecipare alla corsa, vengono esposte nell’ordine di estrazione, alle finestre del primo piano del Palazzo Comunale, dove già, fino dal mattino, debbono trovarsi quelle delle Contrade che partecipano di diritto alla corsa stessa.\n\nNel caso di cui al comma secondo dell’art. 24, le bandiere verranno esposte solo per rendere nota la disposizione delle Comparse nel Corteo Storico.\n\nMan mano che le bandiere delle Contrade estratte vengono esposte alle finestre, sono salutate dagli squilli dei Trombetti di Palazzo.\n\nAlle finestre del secondo piano del Palazzo Comunale, salutate all’inizio ed alla fine dagli squilli dei Trombetti, vengono esposte le bandiere delle Contrade che non partecipano al Palio, in ordine di estrazione ad eccezione di quelle escluse per punizione, che dovranno comunque essere collocate, in ordine alfabetico, agli ultimi posti."
+      },
+      {
+        "numero": "27",
+        "etichetta": "Art. 27",
+        "anchor": "articolo-27",
+        "rubrica": "",
+        "capitolo": "III — Dei sorteggi preparatori e del mossiere",
+        "corpo": "Quando sia stato deliberato un Palio Straordinario il Sindaco convoca i\n\nCapitani delle Contrade che non siano ritenute rinunciatarie in base all’art. 2 non meno di dieci giorni prima della data fissata per il Palio stesso - dandone anche avviso al pubblico - per procedere al sorteggio delle dieci che debbono prendere parte alla corsa, come è prescritto nell’ultimo comma dell’art. 4.\n\nDato l’annuncio al pubblico dell’inizio della seduta con gli squilli dei Trombetti di Palazzo, il Presidente colloca nell’urna soltanto i nomi delle Contrade ad esclusione di quelle che hanno rinunciato con le modalità stabilite per i Palii ordinari.\n\nQuindi ne estrae la prima, il Capitano di questa la seconda e così di seguito, fino al completamento delle dieci occorrenti per la corsa.\n\nL’ordine di estrazione determina quello di partecipazione delle rispettive Comparse al Corteo Storico e pertanto il sorteggio deve continuare fino ad esaurimento delle Contrade.\n\nAnche in questo sorteggio il Presidente sostituisce i Capitani delle Contrade assenti, come stabilisce l’ultimo comma dell’art. 21.\n\nQualora venga estratta una Contrada che abbia in corso una punizione di esclusione questa verrà a questo punto eliminata, scontando così la punizione, e si procederà all’immediato sorteggio di altra Contrada.\n\nDel sorteggio della Contrada esclusa viene data notizia al pubblico mediante esposizione della bandiera ad una finestra del secondo piano del Palazzo Comunale in conformità a quanto previsto per i Palii ordinari."
+      },
+      {
+        "numero": "28",
+        "etichetta": "Art. 28",
+        "anchor": "articolo-28",
+        "rubrica": "",
+        "capitolo": "III — Dei sorteggi preparatori e del mossiere",
+        "corpo": "Terminate le operazioni di sorteggio, le bandiere delle dieci Contrade che debbono partecipare alla corsa vengono esposte, salutate singolarmente dagli squilli dei Trombetti di Palazzo, nell’ordine di estrazione, alle finestre del primo piano del Palazzo Comunale.\n\nAlle finestre del secondo piano del Palazzo vengono esposte le bandiere delle Contrade non partecipanti al Palio con le stesse modalità previste dall’art. 26 ultimo comma."
+      },
+      {
+        "numero": "29",
+        "etichetta": "Art. 29",
+        "anchor": "articolo-29",
+        "rubrica": "",
+        "capitolo": "III — Dei sorteggi preparatori e del mossiere",
+        "corpo": "Alle adunanze ed ai sorteggi di cui agli artt. da 20 a 27 non possono, per alcun motivo, prendere parte le Contrade che abbiano fatto rinunce di cui all’art. 6 per i Palii ordinari e all’art. 2 per i Palii straordinari, dovendo le rispettive Comparse partecipare solo al Corteo Storico nell’ordine stabilito dall’art. 77."
+      },
+      {
+        "numero": "30",
+        "etichetta": "Art. 30",
+        "anchor": "articolo-30",
+        "rubrica": "",
+        "capitolo": "III — Dei sorteggi preparatori e del mossiere",
+        "corpo": "Esaurite tutte queste formalità per un Palio ordinario o straordinario, i Capitani delle dieci Contrade partecipanti alla corsa rimangono adunati per ricevere dall’Autorità Comunale comunicazioni di quanto essa ritenga opportuno disporre, o rendere noto circa lo svolgimento della corsa stessa e per la proposta di nomina del Mossiere."
+      },
+      {
+        "numero": "31",
+        "etichetta": "Art. 31",
+        "anchor": "articolo-31",
+        "rubrica": "",
+        "capitolo": "III — Dei sorteggi preparatori e del mossiere",
+        "corpo": "La nomina del Mossiere spetta all’Amministrazione Comunale, su proposta fatta dai Capitani.\n\nOve i Capitani non facciano alcuna proposta, o se questa non venga accolta, o se manchi l’accettazione da parte della persona o persone designate, l’Amministrazione Comunale procede alla nomina d’ufficio."
+      },
+      {
+        "numero": "32",
+        "etichetta": "Art. 32",
+        "anchor": "articolo-32",
+        "rubrica": "",
+        "capitolo": "III — Dei sorteggi preparatori e del mossiere",
+        "corpo": "Nelle adunanze convocate per i Palii ordinari o straordinari, i Capitani possono fare osservazioni, raccomandazioni e proposte solo per la corsa formante oggetto della riunione, esclusa ogni questione d’indole generale."
+      },
+      {
+        "numero": "33",
+        "etichetta": "Art. 33",
+        "anchor": "articolo-33",
+        "rubrica": "",
+        "capitolo": "III — Dei sorteggi preparatori e del mossiere",
+        "corpo": "Ogni questione che possa sorgere deve venire esaminata e risolta seduta stante con votazioni a semplice maggioranza.\n\nIl Presidente è investito di pieni poteri per la disciplina dell’adunanza. In caso di disordini, può espellere chi li abbia provocati o rinviare, o sciogliere la riunione.\n\nIl processo verbale deve essere seduta stante redatto dal funzionario comunale che disimpegna le mansioni di Segretario e venire letto, approvato e firmato prima che la seduta sia tolta.\n\nLa fine della seduta viene annunciata al pubblico dagli squilli dei Trombetti di Palazzo."
+      },
+      {
+        "numero": "34",
+        "etichetta": "Art. 34",
+        "anchor": "articolo-34",
+        "rubrica": "",
+        "capitolo": "IV — Della presentazione, scelta ed assegnazione a sorte dei cavalli",
+        "corpo": "La presentazione, la scelta e l’assegnazione a sorte dei cavalli alle singole Contrade debbono venire effettuate nella mattina del terzo giorno avanti quello del Palio, tanto per le corse ordinarie, quanto per quelle straordinarie.\n\nSpetta all’Autorità Comunale di disporre quanto necessario affinché per il giorno predetto il “Campo” si trovi trasformato e attrezzato nel modo tradizionale e di promuovere dall’Autorità di P.S. le ordinanze e provvedimenti di sua competenza.\n\nCon ordinanza del Sindaco verrà stabilito l’orario massimo di presentazione dei cavalli nonché le modalità di consegna delle richieste certificazioni."
+      },
+      {
+        "numero": "35",
+        "etichetta": "Art. 35",
+        "anchor": "articolo-35",
+        "rubrica": "",
+        "capitolo": "IV — Della presentazione, scelta ed assegnazione a sorte dei cavalli",
+        "corpo": "All’ora fissata di detto giorno debbono trovarsi nella Corte del Podestà del Civico Palazzo il rappresentante dell’Autorità Comunale, assistito da un Segretario e dal Veterinario Comunale, i Deputati della Festa ed i Capitani delle dieci Contrade partecipanti alla corsa.\n\nAi Deputati della Festa ed ai Capitani viene consegnata una tessera di riconoscimento per poter accedere nella Corte del Podestà e partecipare a tutte le operazioni ed adunanze inerenti a questa fase della celebrazione cittadina.\n\nLa tessera può da ogni Capitano, in caso di impedimento, venire ceduta ad uno dei propri “Fiduciari”, purché la nomina di questi sia stata in precedenza approvata ai sensi dell’art. 17.\n\nQuando manchi il rappresentante di una o più Contrade, le operazioni procedono ugualmente anche nei loro confronti, restando esse obbligate a ricevere in consegna il cavallo loro assegnato dalla sorte."
+      },
+      {
+        "numero": "36",
+        "etichetta": "Art. 36",
+        "anchor": "articolo-36",
+        "rubrica": "",
+        "capitolo": "IV — Della presentazione, scelta ed assegnazione a sorte dei cavalli",
+        "corpo": "All’infuori delle persone specificatamente indicate nell’articolo precedente, dei proprietari e degli accompagnatori dei cavalli nonché dei Fantini formanti oggetto degli articoli successivi, nonché degli impiegati ed agenti addetti alle operazioni di scelta, o incaricati del servizio d’ordine, nessun altro può avere accesso nella Corte del Podestà durante l’intero svolgimento delle operazioni medesime."
+      },
+      {
+        "numero": "37",
+        "etichetta": "Art. 37",
+        "anchor": "articolo-37",
+        "rubrica": "",
+        "capitolo": "IV — Della presentazione, scelta ed assegnazione a sorte dei cavalli",
+        "corpo": "Ogni proprietario può inoltrare richiesta per uno o più cavalli alla pre-iscrizione, le cui modalità verranno, a cura dell’Autorità comunale, stabilite con apposita ordinanza per ogni Palio.\n\nL’Autorità Comunale, assieme ai Veterinari di cui al successivo comma, e con la partecipazione dei dieci Capitani delle Contrade partecipanti il cui parere è solo consultivo, provvederà ad escludere, con motivazione, quei cavalli che non potranno accedere alla fase della previsita.\n\nI cavalli, ritenuti adatti per partecipare alle successive fasi previste dal presente articolo, verranno sottoposti a visita da parte di apposita Commissione Veterinaria, nominata dalla Giunta Comunale e composta dal Veterinario Comunale ed altro Veterinario.\n\nLe disposizioni relative alla visita verranno impartite da apposita ordinanza emessa dall’Autorità Comunale per ogni Palio, che dovrà seguire le disposizioni contenute nell’annuale deliberazione della Giunta Comunale relativa al “Protocollo per l’addestramento dei cavalli da Palio”.\n\nI cavalli, sottoposti a visita veterinaria, che avranno ottenuto dalla Commissione Veterinaria idoneità sanitaria per le corse nel “Campo”, dovranno partecipare alle prove regolamentate con le modalità precisate da apposita ordinanza dell’Autorità Comunale per ogni Palio e dopo consultazione non vincolante con i dieci Capitani delle Contrade partecipanti.\n\nLa Commissione Veterinaria ha la facoltà di escludere dalle prove regolamentate quei cavalli che, ad insindacabile giudizio, non necessitano di approfondito esame ammettendoli direttamente alla tratta.\n\nI cavalli non presentati alle prove regolamentate non potranno accedere alla tratta.\n\nLa Commissione Veterinaria, al termine delle prove regolamentate, deve fornire all’Autorità Comunale e ai dieci Capitani delle Contrade partecipanti la nota dei cavalli ammessi alla tratta, con tutti i pareri relativi.\n\nOgni proprietario è obbligato a presentare alla tratta i cavalli ritenuti idonei dalla Commissione Veterinaria. In caso di assenza, per qualsiasi motivo, dall’iscrizione alla tratta, se non per un impedimento effettivamente verificato dalla Commissione Veterinaria, il cavallo non potrà partecipare alle operazioni\n\ndel Palio successivo. Nel caso di ripetuta assenza nei successivi tre Palii, il cavallo verrà escluso da tutte le operazioni contenute nel presente articolo per tre anni.\n\nI cavalli presentati devono avere morso e briglia, ma non sella e staffe. Dovranno essere accompagnati dal proprietario o da persona di sua fiducia.\n\nL’Autorità Comunale rilascia ad ogni proprietario, ed eventualmente ad ogni accompagnatore di cavallo, una tessera di riconoscimento per accedere alla Corte del Podestà.\n\nNel caso di pluralità di proprietari di un medesimo soggetto la tessera può essere rilasciata ad uno solo dei proprietari.\n\nNessun cavallo può essere accompagnato da altre persone oltre quelle suindicate, eccezion fatta per il Fantino che il proprietario intenda proporre per la batteria della tratta.\n\nL’Amministrazione Comunale può inoltre incaricare apposita commissione, della quale devono comunque far parte i Veterinari di cui sopra, di procurare ed assicurare la presentazione, per il giorno della tratta, di un congruo numero di cavalli, sui quali la Commissione Veterinaria, abbia espresso parere sulla idoneità sanitaria alle Corse nel “Campo”."
+      },
+      {
+        "numero": "38",
+        "etichetta": "Art. 38",
+        "anchor": "articolo-38",
+        "rubrica": "",
+        "capitolo": "IV — Della presentazione, scelta ed assegnazione a sorte dei cavalli",
+        "corpo": "L’autorità Comunale demanda al dirigente incaricato tutte le funzioni, attraverso un proprio atto, relative al compenso a titolo di noleggio dei cavalli presentati alla tratta e per quelli prescelti dai dieci Capitani.\n\nNello stesso tempo di cui al comma precedente, vengono disposti gli interventi economici e le azioni di tutela del cavallo necessari in caso di infortunio nel “Campo”.\n\nAl momento della presentazione del cavallo, ciascun proprietario, o suo rappresentante, appone la propria firma in calce ad un estratto del presente articolo, attestando di averne presa esatta conoscenza e di accettare senza riserve le condizioni in esso contenute.\n\nI cavalli, prima di partecipare alle batterie di cui all’art. 42, sono sottoposti a verifica della Commissione Veterinaria.\n\nÈ obbligo di ogni proprietario di lasciare il proprio cavallo a disposizione\n\ndell’Amministrazione Comunale dal momento della presentazione fino al termine delle operazioni della tratta e, se prescelto in uso alla Contrada fino a quando non sia stata effettuata la corsa del Palio.\n\nIl proprietario del cavallo che ha riportato la vittoria è tenuto a lasciarlo a disposizione della Contrada vincitrice anche per l’intero giorno successivo, per il consueto giro per la Città."
+      },
+      {
+        "numero": "39",
+        "etichetta": "Art. 39",
+        "anchor": "articolo-39",
+        "rubrica": "",
+        "capitolo": "IV — Della presentazione, scelta ed assegnazione a sorte dei cavalli",
+        "corpo": "Ogni cavallo presentato deve venire contrassegnato con un numero d’ordine progressivo e annotato in apposito elenco, con indicazione del nome, dei rispettivi dati segnaletici e dei segni particolari, nonché del cognome, nome e residenza del proprietario e del presentatore.\n\nI cavalli dovranno sempre essere iscritti alle previsite e alla tratta con il nome di origine."
+      },
+      {
+        "numero": "40",
+        "etichetta": "Art. 40",
+        "anchor": "articolo-40",
+        "rubrica": "",
+        "capitolo": "IV — Della presentazione, scelta ed assegnazione a sorte dei cavalli",
+        "corpo": "Abrogato con deliberazione del Consiglio Comunale n. 99 del 17.6.2019."
+      },
+      {
+        "numero": "41",
+        "etichetta": "Art. 41",
+        "anchor": "articolo-41",
+        "rubrica": "",
+        "capitolo": "IV — Della presentazione, scelta ed assegnazione a sorte dei cavalli",
+        "corpo": "Alla scelta dei cavalli presentati si procede per mezzo di corse di prova, in ciascuna delle quali ogni cavallo, montato da Fantino, deve compiere i tre giri della pista prescritti per il Palio.\n\nL’uscita dei cavalli dalla Corte del Podestà e l’arrivo al bandierino del traguardo sono segnalati dallo sparo del mortaretto.\n\nLa mossa viene data nel modo tradizionale, fra due canapi, ed i cavalli sottoposti alla prova non possono recare altro distintivo che il numero progressivo col quale sono stati contrassegnati all’atto della loro presentazione.\n\nIl Mossiere adempie il suo compito dal Verrocchio, presso il quale deve trovarsi il tamburino.\n\nDurante le operazioni della mossa, nessuno, tranne gli agenti dell’ordine, può avvicinarsi al Verrocchio, che è riservato esclusivamente al Mossiere."
+      },
+      {
+        "numero": "42",
+        "etichetta": "Art. 42",
+        "anchor": "articolo-42",
+        "rubrica": "",
+        "capitolo": "IV — Della presentazione, scelta ed assegnazione a sorte dei cavalli",
+        "corpo": "I cavalli debbono correre nudi, suddivisi in batterie formate dai Capitani delle Contrade nel modo da essi ritenuto più rispondente allo scopo.\n\nUno stesso cavallo può essere provato anche più di una volta, quando i Capitani lo giudichino necessario."
+      },
+      {
+        "numero": "43",
+        "etichetta": "Art. 43",
+        "anchor": "articolo-43",
+        "rubrica": "",
+        "capitolo": "IV — Della presentazione, scelta ed assegnazione a sorte dei cavalli",
+        "corpo": "Nelle corse di prova di cui ai precedenti articoli i cavalli debbono essere montati da Fantini a disposizione del Comune: il Comune, a tal fine, utilizza i Fantini che, direttamente o tramite i proprietari dei cavalli, abbiano richiesto l’iscrizione in apposito elenco prima dell’inizio delle corse di prova sopracitate.\n\nSono iscritti d’ufficio in tale elenco ed hanno l’obbligo di mettersi a disposizione del Comune, anche se si tratti di Palio Straordinario, i Fantini che hanno preso parte all’ultimo Palio, con comminatoria di esclusione dal Palio in corso qualora essi non ottemperino a tale obbligo.\n\nTali Fantini, che debbono aver raggiunto la maggiore età e che non debbono avere in corso punizioni riportate in Palii precedenti, non possono pretendere dal Comune alcun indennizzo per tutto quanto possa loro accadere nelle corse.\n\nEssi sono tenuti a montare i cavalli loro assegnati, indossando giubbetto bianco e berretto bianco e nero, forniti dal Comune ed a comportarsi correttamente.\n\nÈ loro vietato di servirsi di frustino, nerbo od altro mezzo consimile per incitare i cavalli durante la corsa, essendo ammesso soltanto l’uso degli speroni."
+      },
+      {
+        "numero": "44",
+        "etichetta": "Art. 44",
+        "anchor": "articolo-44",
+        "rubrica": "",
+        "capitolo": "IV — Della presentazione, scelta ed assegnazione a sorte dei cavalli",
+        "corpo": "Per l’esecuzione delle corse di prova saranno osservate anche le particolari disposizioni emanate in proposito dalle Autorità competenti, ai sensi del secondo comma dell’art. 34.\n\nIn caso di pioggia le operazioni possono essere rimandate ad ora più conveniente dello stesso giorno, od anche al giorno successivo. Ogni decisione in proposito spetta all’Autorità Comunale, udito il parere dei Deputati della Festa e dei Capitani."
+      },
+      {
+        "numero": "45",
+        "etichetta": "Art. 45",
+        "anchor": "articolo-45",
+        "rubrica": "",
+        "capitolo": "IV — Della presentazione, scelta ed assegnazione a sorte dei cavalli",
+        "corpo": "Compiute le prove dei cavalli presentati, che saranno sottoposti nuovamente a visita di controllo veterinaria, si procede alla scelta dei dieci occorrenti in una adunanza da tenersi in una sala del Palazzo Civico dai Capitani delle Contrade, sotto la presidenza del rappresentante dell’Autorità Comunale - assistito da un Segretario, dal Veterinario Comunale e dal Mossiere - e con l’intervento dei Deputati della Festa.\n\nIn tale adunanza soltanto i Capitani hanno voto deliberativo, mentre il Veterinario ed il Mossiere hanno l’unico compito di fornire informazioni e pareri tecnici.\n\nIn particolare il Veterinario Comunale ha il compito di fornire un motivato parere tecnico su ogni soggetto, prima che abbia inizio la scelta.\n\nÈ in facoltà dei Capitani di chiedere che vengano esclusi dalla adunanza quelli di loro che siano proprietari di alcuno dei cavalli da scegliere, o che ne abbiano effettuata la presentazione per incarico del proprietario. Ogni eccezione e contestazione sulla incompatibilità dei presenti per questo motivo deve essere sollevata all’inizio della riunione e venire inappellabilmente risolta dal Presidente\n- udito il parere dei Deputati della Festa - prima che si passi alla discussione per la scelta."
+      },
+      {
+        "numero": "46",
+        "etichetta": "Art. 46",
+        "anchor": "articolo-46",
+        "rubrica": "",
+        "capitolo": "IV — Della presentazione, scelta ed assegnazione a sorte dei cavalli",
+        "corpo": "Aperta l’adunanza, e risolute le eventuali eccezioni di cui al precedente articolo, i cavalli presentati e provati debbono venire singolarmente discussi, ed occorrendo posti in votazione, secondo il numero d’ordine col quale, all’atto della presentazione, essi furono contrassegnati.\n\nLe decisioni riguardanti la scelta vengono dai Capitani adottate a semplice maggioranza.\n\nQuando uno di essi lo richieda, la votazione ha luogo in forma segreta.\n\nProcedendo per eliminazione, deve essere compilata una nota comprendente i soli dieci cavalli prescelti, ai quali viene assegnato un nuovo numero d’ordine dall’1 al 10, in rapporto a quello progressivo di presentazione."
+      },
+      {
+        "numero": "47",
+        "etichetta": "Art. 47",
+        "anchor": "articolo-47",
+        "rubrica": "",
+        "capitolo": "IV — Della presentazione, scelta ed assegnazione a sorte dei cavalli",
+        "corpo": "Avvenuta la scelta, i cavalli non accettati debbono dai rispettivi proprietari\n\no presentatori venire ritirati, senza diritto ad alcun compenso, mentre i dieci prescelti, contrassegnati dal numero di cui all’ultimo comma del precedente articolo, applicato alla testiera della briglia, vengono condotti a mano dalle persone che li hanno presentati, in un recinto all’uopo predisposto dinanzi al Palazzo Comunale."
+      },
+      {
+        "numero": "48",
+        "etichetta": "Art. 48",
+        "anchor": "articolo-48",
+        "rubrica": "",
+        "capitolo": "IV — Della presentazione, scelta ed assegnazione a sorte dei cavalli",
+        "corpo": "In un palco, opportunamente decorato, eretto dal Comune presso il recinto di cui all’articolo precedente, ed elevato in modo da renderlo ben visibile al pubblico, debbono prendere posto il rappresentante dell’Autorità Comunale, assistito da un Segretario, i Deputati della Festa ed i Capitani, per procedere all’assegnazione a sorte a ciascuna Contrada del cavallo con il quale dovrà partecipare al Palio.\n\nDavanti al palco debbono trovarsi, nello stesso ordine dei rispettivi Capitani, solo i dieci Barbareschi delle Contrade partecipanti al Palio, vestiti in costume, per prendere in consegna il rispettivo cavallo dopo avvenuto il sorteggio.\n\nAll’uopo sono predisposte due urne girevoli: in una debbono venire poste, in modo a tutti palese, dieci tessere recanti i numeri progressivi da 1 a 10, quanti sono i cavalli da assegnare; nell’altra, sempre in modo palese, dieci tessere contenenti i nomi delle Contrade partecipanti al Palio.\n\nCiascuna di dette tessere, prima di essere deposta nell’urna rispettiva, deve venire chiusa dal Presidente in apposita custodia.\n\nTutte le custodie debbono essere identiche fra loro e non recare alcun segno di riconoscimento.\n\nFatte girare volta a volta le urne, il Presidente procede al sorteggio facendo estrarre da due Paggetti prima un numero dall’urna dei cavalli, poi un nome da quello delle Contrade, e cosi di seguito, sino al completo esaurimento dell’operazione.\n\nPubblicati mano a mano il numero del cavallo e il nome della Contrada cui la sorte lo ha assegnato, il Capitano della Contrada stessa, a mezzo del Barbaresco, lo prende in consegna dal proprietario, col morso e la briglia coi quali il cavallo stesso è stato provato.\n\nL’inizio e la fine delle operazioni vengono annunciati al pubblico dagli squilli dei Trombetti di Palazzo."
+      },
+      {
+        "numero": "49",
+        "etichetta": "Art. 49",
+        "anchor": "articolo-49",
+        "rubrica": "",
+        "capitolo": "IV — Della presentazione, scelta ed assegnazione a sorte dei cavalli",
+        "corpo": "Dal momento nel quale, in seguito al sorteggio di cui all’articolo precedente, il cavallo viene assegnato e consegnato alla Contrada, questa acquisisce il diritto di usarlo per i soli fini e nei modi stabiliti dal presente Regolamento e assume l’obbligo di curarne la custodia ed il mantenimento.\n\nLa Contrada resta peraltro completamente esonerata da ogni e qualsiasi responsabilità per quanto possa accadere al cavallo stesso nello svolgimento e per effetto di tutte le corse di prova e del Palio, nonché per i casi di forza maggiore che possono verificarsi mentre il cavallo è affidato alla custodia della Contrada medesima.\n\nContravvenendo, la Contrada è passibile dell’esclusione dai Palii ordinari e straordinari per un periodo da uno a tre anni ed è tenuta a risarcire il proprietario di ogni eventuale danno che il cavallo avesse sofferto."
+      },
+      {
+        "numero": "50",
+        "etichetta": "Art. 50",
+        "anchor": "articolo-50",
+        "rubrica": "",
+        "capitolo": "IV — Della presentazione, scelta ed assegnazione a sorte dei cavalli",
+        "corpo": "Le Contrade sono tenute a partecipare alle corse di prova ed al Palio col cavallo loro assegnato.\n\nNessuno può pretendere l’assegnazione di altro cavallo nel caso in cui quello avuto in sorte si venga a trovare nell’impossibilità di correre, o deceda per qualsiasi causa.\n\nIn tali eventualità, mentre resta fermo per la Contrada l’obbligo di presentarsi insieme alle altre, con la propria Comparsa, nel Corteo Storico, viene meno il diritto di prender parte al Palio, senza che possa essere invocato a compenso uno speciale trattamento nei Palii successivi, importando ciò un’alterazione sostanziale nei turni stabiliti dall’art. 4.\n\nÈ perciò assolutamente proibito alle Contrade di cambiare o sostituire, per qualsiasi motivo, il cavallo loro assegnato, sotto pena dell’esclusione per dieci anni dai Palii ordinari e straordinari e senza pregiudizio di ogni altra azione civile o penale contro i responsabili. Inoltre la Contrada che abbia cambiato o sostituito il cavallo si considera, ad ogni effetto, come non partecipante al Palio.\n\nL’impossibilità di correre il Palio per il cavallo avuto in sorte da una Contrada viene dichiarata dall’Autorità Comunale soltanto in caso di lesione gravissima o di malattia gravissima sopravvenuta, riconosciuta dalla Contrada interessata, oppure su conforme parere espresso a maggioranza da un Collegio Veterinario composto dal Veterinario Comunale, da uno nominato dal Magistrato delle\n\nContrade e da un terzo di fiducia della Contrada interessata, scelto liberamente dalla medesima nell’albo professionale, con le modalità previste dall’art. 17.\n\nIl Veterinario di fiducia del Magistrato delle Contrade viene nominato dal Magistrato stesso entro il mese di aprile di ogni anno e tale nomina, da notificarsi al Comune entro 10 giorni, ha effetto per tutte le corse dell’anno, salvo diverse indicazioni da parte del Magistrato delle Contrade da notificare al Comune almeno venti giorni prima del Palio.\n\nPer promuovere la procedura di cui sopra il Veterinario Comunale dà immediato avviso all’Autorità Comunale ogni volta constati che un cavallo ha riportato lesioni gravissime od è stato colpito da malattia talmente grave da far ritenere che possa trovarsi nell’impossibilità di correre."
+      },
+      {
+        "numero": "51",
+        "etichetta": "Art. 51",
+        "anchor": "articolo-51",
+        "rubrica": "",
+        "capitolo": "IV — Della presentazione, scelta ed assegnazione a sorte dei cavalli",
+        "corpo": "Ogni incidente che possa sorgere nelle operazioni relative alla scelta e assegnazione dei cavalli è risolto inappellabilmente dal rappresentante del Comune, uditi i Deputati della Festa."
+      },
+      {
+        "numero": "52",
+        "etichetta": "Art. 52",
+        "anchor": "articolo-52",
+        "rubrica": "",
+        "capitolo": "V — Delle corse di prova e dei Fantini",
+        "corpo": "Le Contrade hanno l’obbligo di provare collettivamente i loro cavalli nel “Campo”, nei giorni ed ore stabiliti dall’Autorità Comunale.\n\nSoltanto per circostanze eccezionali l’Autorità Comunale può autorizzare qualche Contrada a provare da sola il proprio cavallo, sempre nel “ Campo “ e nelle ore all’uopo prescritte.\n\nSecondo l’antica tradizione, le prove sono in numero di sei ed hanno luogo la mattina e la sera, a cominciare dal pomeriggio del giorno in cui è avvenuta la consegna dei cavalli, sino al mattino di quello nel quale deve effettuarsi il Palio. La prova pomeridiana del giorno che precede quello del Palio è chiamata “prova generale”.\n\nDurante le prove, nelle due ore che le precedono e nell’ora successiva, è inibito alle singole Contrade di far effettuare alla propria Comparsa, nel “Campo”, manifestazioni di qualsiasi genere."
+      },
+      {
+        "numero": "53",
+        "etichetta": "Art. 53",
+        "anchor": "articolo-53",
+        "rubrica": "",
+        "capitolo": "V — Delle corse di prova e dei Fantini",
+        "corpo": "Qualora, per pioggia, la pista sia impraticabile o pericolosa, il Sindaco, udito il parere, non vincolante, del Dirigente dell’Ufficio Tecnico Comunale e dei Deputati della Festa, può ritardare l’effettuazione della prova e, occorrendo, sopprimerla.\n\nEguale facoltà è riservata al Sindaco per eventuali altre cause di forza maggiore.\n\nDei provvedimenti assunti è data immediata comunicazione al pubblico mediante apposizione ad una delle trifore del Palazzo Comunale di una bandiera bianca in caso di ritardo e di una bandiera verde in caso di soppressione."
+      },
+      {
+        "numero": "54",
+        "etichetta": "Art. 54",
+        "anchor": "articolo-54",
+        "rubrica": "",
+        "capitolo": "V — Delle corse di prova e dei Fantini",
+        "corpo": "Per le corse di prova ogni Contrada ha l’obbligo di inviare il proprio cavallo, con la briglia munita di pennacchiera, nella Corte del Podestà del Palazzo Civico, almeno mezz’ora prima di quella che per ciascuna prova l’Autorità Comunale abbia stabilita.\n\nIl cavallo deve essere condotto dal solo Barbaresco, munito di berretto con coccarda con i colori della rispettiva Contrada, recante il costume da indossarsi dal Fantino, e fatto accedere nella Corte del Podestà entrando nel “Campo” unicamente da via Rinaldini e percorrendo il tratto di discesa tra l’imbocco di tale via ed il Palazzo del Comune.\n\nNella Corte, in attesa della prova, ciascun cavallo deve occupare il posto corrispondente al numero d’ordine che aveva al momento della sua assegnazione alla Contrada, ai termini dell’art. 48."
+      },
+      {
+        "numero": "55",
+        "etichetta": "Art. 55",
+        "anchor": "articolo-55",
+        "rubrica": "",
+        "capitolo": "V — Delle corse di prova e dei Fantini",
+        "corpo": "Nella Corte del Podestà, in occasione delle prove, possono accedere soltanto il rappresentante dell’Autorità Comunale con i funzionari, impiegati ed agenti addetti alle operazioni del Palio, od al servizio d’ordine, i Deputati della Festa, i Capitani delle Contrade partecipanti alla corsa, od uno dei loro Fiduciari, i Barbareschi che hanno condotto i cavalli ed i Fantini.\n\nNessun’altra persona sarà ammessa, per qualsiasi motivo.\n\nI Capitani o coloro che li sostituiscono sono tenuti ad esibire ad ogni richiesta la tessera di riconoscimento rilasciata dall’Autorità Comunale."
+      },
+      {
+        "numero": "56",
+        "etichetta": "Art. 56",
+        "anchor": "articolo-56",
+        "rubrica": "",
+        "capitolo": "V — Delle corse di prova e dei Fantini",
+        "corpo": "L’esonero delle Contrade dal partecipare ad ogni singola prova per impedimento sopravvenuto al cavallo, è disposto dall’Autorità Comunale in seguito a giudizio del Veterinario Comunale, previa visita da effettuarsi nella Corte del Podestà nella mezz’ora antecedente alla corsa.\n\nSolo quando il cavallo sia nell’impossibilità di raggiungere la Corte suddetta, la Contrada deve darne avviso, di norma, almeno tre ore prima della prova, all’Autorità Comunale, affinché la visita di controllo da parte del Veterinario Comunale venga effettuata nella stalla della Contrada.\n\nTrasgredendo alle disposizioni del presente articolo, la Contrada incorre nella sospensione dalla corsa del Palio."
+      },
+      {
+        "numero": "57",
+        "etichetta": "Art. 57",
+        "anchor": "articolo-57",
+        "rubrica": "",
+        "capitolo": "V — Delle corse di prova e dei Fantini",
+        "corpo": "Tanto per le prove come per il Palio, i cavalli debbono correre provvisti della briglia con la pennacchiera portante i colori della Contrada alla quale vennero rispettivamente assegnati in sorte.\n\nPer briglia deve intendersi l’insieme dei finimenti (testiera, imboccatura e redini) provvisti eventualmente di paraocchi di foggia tradizionale e di paraombre.\n\nÈ proibito praticar loro fasciature di qualsiasi genere, applicare ginocchielli, o corredarli di tutto quanto potrebbe facilitarne la cavalcatura.\n\nÈ del pari vietato somministrar loro, in qualsiasi modo, sostanze eccitanti, praticare frizioni di ogni genere od applicar “perette”.\n\nÈ ammesso soltanto che i cavalli corrano sferrati.\n\nIl Capitano di ciascuna Contrada è direttamente responsabile della stretta osservanza di tali disposizioni."
+      },
+      {
+        "numero": "58",
+        "etichetta": "Art. 58",
+        "anchor": "articolo-58",
+        "rubrica": "",
+        "capitolo": "V — Delle corse di prova e dei Fantini",
+        "corpo": "Spetta alle Contrade provvedersi a loro completo carico del Fantino per il proprio cavallo, tanto per le prove, quanto per il Palio.\n\nI Capitani devono comunicare per iscritto all’Autorità Comunale, per la necessaria approvazione, la nomina del Fantino, indicandone anche il soprannome, per il Palio, subito dopo l’ultima prova.\n\nIl soprannome imposto nel corso della segnatura del Palio cui il Fantino prende parte per la prima volta non potrà in alcun modo essere successivamente modificato.\n\nIn tale occasione i Fantini, accompagnati dai rispettivi Capitani debbono essere presentati alla rassegna dell’Autorità Comunale e dei Deputati della Festa, muniti di giubbetto del tipo tradizionale.\n\nPer nessun motivo è consentito il cambiamento del Fantino dopo la rassegna di cui sopra e nel caso in cui la Contrada si trovi priva di Fantino, non potendosi condurre tra i canapi il cavallo scosso, resta esclusa dal Palio."
+      },
+      {
+        "numero": "59",
+        "etichetta": "Art. 59",
+        "anchor": "articolo-59",
+        "rubrica": "",
+        "capitolo": "V — Delle corse di prova e dei Fantini",
+        "corpo": "È vietato alle Contrade montare, tanto per le prove quanto per il Palio, Fantini che non abbiano raggiunto la maggiore età, o si trovino nelle condizioni di cui all’art. 15 o che abbiano in corso punizioni di esclusione."
+      },
+      {
+        "numero": "60",
+        "etichetta": "Art. 60",
+        "anchor": "articolo-60",
+        "rubrica": "",
+        "capitolo": "V — Delle corse di prova e dei Fantini",
+        "corpo": "Secondo la secolare tradizione i Fantini, per quanto ingaggiati dalle Contrade, corrono a totale loro rischio e pericolo e prendono atto della presente norma apponendo la propria firma nell’apposito elenco di cui all’art. 43 nonché sottoscrivendo una apposita liberatoria."
+      },
+      {
+        "numero": "61",
+        "etichetta": "Art. 61",
+        "anchor": "articolo-61",
+        "rubrica": "",
+        "capitolo": "V — Delle corse di prova e dei Fantini",
+        "corpo": "I Fantini nelle corse di prova sono tenuti ad indossare giubbetto stemmato, pantaloni e berretto con i colori della Contrada che li ha ingaggiati, del tipo resultante dall’apposita tabella che si conserva presso il Comune.\n\nSi applicano anche alle prove le disposizioni contenute nell’art. 43 ultimo comma circa il mezzo che ai Fantini è consentito per incitare i cavalli durante la corsa."
+      },
+      {
+        "numero": "62",
+        "etichetta": "Art. 62",
+        "anchor": "articolo-62",
+        "rubrica": "",
+        "capitolo": "V — Delle corse di prova e dei Fantini",
+        "corpo": "La chiamata delle Contrade dalla Corte del Podestà alla mossa, è fatta mediante un rullo di tamburo e lo sparo di un mortaretto.\n\nI cavalli debbono essere fatti procedere al passo e sostare presso i canapi, per attendere il loro turno d’ingresso.\n\nIl giorno del Palio i cavalli dovranno essere fatti sostare di fronte al Civico Palazzo, possibilmente in linea ordinata, e i Fantini, alzando il nerbo, renderanno gli onori all’Autorità Comunale su comando del Direttore di Polizia o chi per esso.\n\nNelle corse di prova le Contrade debbono prendere posto nell’interno dei canapi nei seguenti ordini tradizionali:\n\nPrima prova - ordine nel quale le Contrade furono estratte a sorte per partecipare al Palio; Seconda prova - ordine suddetto invertito; Terza prova - ordine d’estrazione delle Contrade per l’assegnazione dei cavalli; Quarta prova - ordine suddetto invertito; Quinta prova - ordine avuto dai cavalli per procedere alla loro assegnazione; Sesta prova - ordine suddetto invertito."
+      },
+      {
+        "numero": "63",
+        "etichetta": "Art. 63",
+        "anchor": "articolo-63",
+        "rubrica": "",
+        "capitolo": "V — Delle corse di prova e dei Fantini",
+        "corpo": "I Fantini, dal momento in cui escono dalla Corte del Podestà montati sul loro cavallo per recarsi alla mossa, passano alla esclusiva dipendenza dell’Autorità Comunale e del Mossiere.\n\nÈ perciò proibito sia ai Capitani che ai loro Fiduciari dl trattenersi nella pista, o presso i canapi, per impartire ordini, disposizioni o per prendere accordi con i Fantini suddetti.\n\nNella circostanza di cui all’art. 45, l’Autorità Comunale alla presenza del Mossiere e dei Capitani impartisce le indicazioni da tenersi da parte dei Fantini in occasione della mossa, sia per le prove che per il Palio e tali indicazioni possono essere reiterate, ove si renda necessario, alla rassegna di cui all’art. 58 e dovranno far parte della relazione dei Deputati della Festa di cui all’art. 92.\n\nÈ altresì vietato ai Fantini di mutarsi gli indumenti, dopo la perquisizione di cui all’ultimo comma dell’art. 84."
+      },
+      {
+        "numero": "64",
+        "etichetta": "Art. 64",
+        "anchor": "articolo-64",
+        "rubrica": "",
+        "capitolo": "V — Delle corse di prova e dei Fantini",
+        "corpo": "È stretto dovere dei Fantini entrare prontamente tra i canapi nell’ordine di chiamata, prendere il posto che a ciascuno spetta secondo l’ordine stesso e tenersi a giusta distanza l’uno dall’altro, restando loro assolutamente vietato di cambiar posto o di collocare il proprio cavallo in modo da impedire od ostacolare la partenza degli altri Fantini.\n\nÈ pure loro vietato rimanere al canapo, o scendere da cavallo all’atto della mossa, per astenersi dalla corsa, o per far correre il cavallo scosso.\n\nI contravventori sono passibili delle sanzioni previste dall’art. 99."
+      },
+      {
+        "numero": "65",
+        "etichetta": "Art. 65",
+        "anchor": "articolo-65",
+        "rubrica": "",
+        "capitolo": "V — Delle corse di prova e dei Fantini",
+        "corpo": "La mossa ha luogo quando il Mossiere abbassa il canapo con la volontà di far partire i cavalli: la caduta del canapo è segnalata dal rullo di un tamburo.\n\nIl Mossiere è il solo giudice inappellabile del momento in cui la mossa è da darsi e della sua validità.\n\nLa mossa non valida è segnalata dallo scoppio di uno o più mortaretti, il cui congegno è comandato direttamente dal Mossiere a mezzo di un dispositivo a pulsante azionato elettricamente.\n\nQualora per cause di forza maggiore tale dispositivo non possa funzionare lo scoppio è provocato da un addetto al mortaretto al quale il Mossiere rivolge apposito invito.\n\nLo scoppio del mortaretto sospende comunque la corsa; in tal caso i Fantini debbono subito fermare i cavalli e ricondurli al passo:\n\na) al punto di partenza, se il Mossiere sia stato costretto ad abbassare il canapo, per qualunque motivo, senza peraltro voler dare la mossa;\n\nb) al Cortile del Podestà, se il Mossiere abbia avuto intenzione di dare la mossa, ma questa sia risultata, a suo giudizio, non valida ed il Mossiere stesso abbia segnalato tale circostanza, dopo lo scoppio, sventolando una bandiera verde ed issandola, poi, sul Verrocchio."
+      },
+      {
+        "numero": "66",
+        "etichetta": "Art. 66",
+        "anchor": "articolo-66",
+        "rubrica": "",
+        "capitolo": "V — Delle corse di prova e dei Fantini",
+        "corpo": "È obbligo di tutti i Fantini di far compiere ai rispettivi cavalli i tradizionali prescritti tre giri della pista, ma quando, per minor velocità del proprio cavallo, alcuno di essi rimanga distanziato, all’udire lo sparo del mortaretto segnalante l’arrivo del vincitore al bandierino del traguardo e la conseguente fine della corsa, ha il dovere di fermarsi nel più breve tempo possibile evitando, comunque, di porre in pericolo, correndo, l’incolumità del pubblico."
+      },
+      {
+        "numero": "67",
+        "etichetta": "Art. 67",
+        "anchor": "articolo-67",
+        "rubrica": "",
+        "capitolo": "V — Delle corse di prova e dei Fantini",
+        "corpo": "È vietato ai Fantini, tanto alla mossa, quanto nel percorso, tenersi tra loro, sporgere la spalla o il braccio l’uno sul petto dell’altro per costituirgli impedimento, percuotersi o comunque personalmente molestarsi.\n\nSoltanto per il Palio è ammesso l’uso del tradizionale nerbo (tendine di bue) nel modo disposto al successivo art. 84.\n\nI contravventori sono passibili delle penalità previste nell’ultimo comma dell’art. 64."
+      },
+      {
+        "numero": "68",
+        "etichetta": "Art. 68",
+        "anchor": "articolo-68",
+        "rubrica": "",
+        "capitolo": "V — Delle corse di prova e dei Fantini",
+        "corpo": "Quando, per deficienza di velocità del cavallo avuto in sorte, una o più Contrade siano raggiunte da altre, in vantaggio di un giro, si considerano e devono mettersi fuori giostra, per non arrecare alle altre, in qualsiasi modo, impedimento o molestia.\n\nI Fantini che contravvengono sono passibili delle penalità di cui nell’ultimo comma dell’art. 64."
+      },
+      {
+        "numero": "69",
+        "etichetta": "Art. 69",
+        "anchor": "articolo-69",
+        "rubrica": "",
+        "capitolo": "V — Delle corse di prova e dei Fantini",
+        "corpo": "Ai Fantini caduti da cavallo non può essere prestato aiuto per risalirvi.\n\nA sottrarli da eventuali pericoli ed a raccoglierli per i soccorsi del caso, provvedono le squadre delle Associazioni di assistenza, all’uopo disposte lungo il percorso.\n\nI Fantini caduti, che possano prontamente risalire a cavallo senza aiuti e continuare la corsa, non perdono alcuno dei diritti che loro competono nella corsa stessa, purché apparisca chiaro che la caduta fu fortuita e non simulata allo scopo di prender tempo per danneggiare, percuotere o fermare qualche avversario.\n\nVerificandosi quest’ultimo caso, i Fantini sono passibili delle penalità di cui all’ultimo comma dell’art. 64."
+      },
+      {
+        "numero": "70",
+        "etichetta": "Art. 70",
+        "anchor": "articolo-70",
+        "rubrica": "",
+        "capitolo": "V — Delle corse di prova e dei Fantini",
+        "corpo": "La vittoria è conseguita dalla Contrada il cui cavallo, data validamente la mossa, dopo aver compiuti tre giri della pista, giunga, anche scavezzato, per primo al bandierino di traguardo posto dinanzi al Palco dei Giudici, e ciò ancorché il Fantino, durante la corsa, fosse caduto.\n\nL’arrivo è segnalato da un rullo di tamburo e dallo sparo di un mortaretto.\n\nIl giudizio inappellabile della vincita è dato dai Giudici della Vincita di cui all’art. 7; i Giudici assistono alla corsa da posti assegnati nel Palco dei Giudici."
+      },
+      {
+        "numero": "71",
+        "etichetta": "Art. 71",
+        "anchor": "articolo-71",
+        "rubrica": "",
+        "capitolo": "V — Delle corse di prova e dei Fantini",
+        "corpo": "La vincita delle prove non porta alla Contrada alcun privilegio o premio, non avendo tali corse altro scopo che l’addestramento dei cavalli. Soltanto per la prova generale è dall’Amministrazione Comunale costituito un premio da assegnarsi al Fantino vincitore."
+      },
+      {
+        "numero": "72",
+        "etichetta": "Art. 72",
+        "anchor": "articolo-72",
+        "rubrica": "",
+        "capitolo": "VI — Del corteo storico e della corsa del Palio",
+        "corpo": "Secondo la tradizione, ogni corsa del Palio è preceduta dallo sfilamento di un Corteo Storico, che costituisce una rievocazione figurata degli ordinamenti, dei costumi e della grandezza della Medioevale Repubblica Senese, con particolare riguardo alle Contrade, le quali, con le loro Comparse, ne formano la parte principale.\n\nI Gruppi e le Figurazioni delle quali il Corteo si compone e l’ordine in cui deve svolgersi resultano dal prospetto schematico annesso al presente Regolamento (allegato B).\n\nA tutto il complesso del Corteo è applicabile la disposizione di cui al secondo comma dell’art. 9.\n\nPer le raffigurazioni delle parti del Corteo che non rappresentano Contrade occorre l’assenso dell’Autorità Comunale."
+      },
+      {
+        "numero": "73",
+        "etichetta": "Art. 73",
+        "anchor": "articolo-73",
+        "rubrica": "",
+        "capitolo": "VI — Del corteo storico e della corsa del Palio",
+        "corpo": "La Comparsa, che ciascuna Contrada partecipante al Palio ha obbligo di far intervenire al Corteo in sua rappresentanza, deve essere composta come segue:\n\nUn Tamburino, due Alfieri (giocatori di bandiera), il Duce fiancheggiato da due Uomini d’Arme, un Paggio porta Insegna recante la bandiera ufficiale della Contrada, due Paggi Vessilliferi, che recano le insegne delle antiche compagnie militari, il Fantino montato sul Soprallasso (cavallo di parata) condotto a mano da un palafreniere, il Barbero (cavallo da corsa) avuto in sorte dalla Contrada, condotto a mano dal Barbaresco.\n\nPer le Contrade che non corrono, la Comparsa, che anche esse sono obbligate\n\nad inviare al Corteo, manca del Barbero e del Soprallasso.\n\nTutti i Figuranti sopra indicati, eccezion fatta per il Fantino, debbono avere idonea prestanza fisica ed essere vestiti coi costumi della rispettiva Contrada, quali risultano dai bozzetti approvati dall’Autorità Comunale, senza di che la Comparsa non può essere ammessa al Corteo.\n\nQuest’ultima disposizione vale anche per le bandiere portate dai Figuranti, i bozzetti delle quali debbono essere sempre sottoposti alla preventiva approvazione del Comune."
+      },
+      {
+        "numero": "74",
+        "etichetta": "Art. 74",
+        "anchor": "articolo-74",
+        "rubrica": "",
+        "capitolo": "VI — Del corteo storico e della corsa del Palio",
+        "corpo": "Abrogato con delibera della Giunta Municipale n. 808 del 10.6.1955 ratificata dal Consiglio Comunale il 20.6.1955 n. 143."
+      },
+      {
+        "numero": "75",
+        "etichetta": "Art. 75",
+        "anchor": "articolo-75",
+        "rubrica": "",
+        "capitolo": "VI — Del corteo storico e della corsa del Palio",
+        "corpo": "La nota delle persone prescelte a figurare nella Comparsa della rispettiva Contrada deve essere prodotta al Comune almeno due giorni prima di quello del Palio, affinché sia dall’Autorità Comunale approvata.\n\nIn caso di mancata approvazione totale, o parziale degli elementi proposti, ne viene dato avviso senza motivazioni al Capitano, il quale è tenuto a provvedere all’immediata sostituzione ed a presentare al Comune una nuova nota da concordare."
+      },
+      {
+        "numero": "76",
+        "etichetta": "Art. 76",
+        "anchor": "articolo-76",
+        "rubrica": "",
+        "capitolo": "VI — Del corteo storico e della corsa del Palio",
+        "corpo": "È vietato alle Contrade di far rappresentare nella Comparsa il Fantino da altro figurante montato sul Soprallasso, nello sfilamento del Corteo, o di esimersi, sotto qualsiasi pretesto, di farvi intervenire il cavallo da corsa (Barbero).\n\nSoltanto in casi eccezionali, e cioè quando l’eccessiva irrequietezza del cavallo desse luogo ad inconvenienti o pericoli, l’Autorità Comunale, udito il parere dei Deputati della Festa, ha facoltà di disporre che venga condotto direttamente nella Corte del Podestà."
+      },
+      {
+        "numero": "77",
+        "etichetta": "Art. 77",
+        "anchor": "articolo-77",
+        "rubrica": "",
+        "capitolo": "VI — Del corteo storico e della corsa del Palio",
+        "corpo": "L’ordine col quale ciascuna Contrada deve partecipare al Corteo, si riassume come segue:\n\nI. Palii ordinari nei quali non si siano avute rinunce di cui all’art. 6. Precedono le Comparse delle sette Contrade che corrono di diritto, nell’ordine in cui furono estratte nel sorteggio effettuato per il corrispondente Palio dell’anno innanzi; seguono le altre tre partecipanti al Palio e quindi le sette rimanenti, nell’ordine nel quale furono all’uopo sorteggiate rispettivamente ai sensi degli artt. 22 e 23.\n\nII. Palii ordinari nei quali si siano avute rinunce di cui al citato art. 6.\na) quando le rinunce, per il loro numero, non abbiano dato luogo al sorteggio previsto dall’ultimo comma del detto art. 6: precedono le Comparse delle Contrade che corrono di diritto, nell’ordine di estrazione dell’anno innanzi; seguono quelle delle altre sorteggiate ai sensi dell’art. 22 per completare il numero di dieci, pure nell’ordine di estrazione dell’anno innanzi; seguono quelle delle altre che corrono di diritto nel corrispondente Palio dell’anno successivo, nell’ordine venuto a risultare dal sorteggio di cui all’art. 23 ed infine quelle delle Contrade rinunciatarie, in ordine alfabetico;\n\nb) quando le rinunce per il loro numero abbiano invece dato luogo al sorteggio previsto dall’ultimo comma del predetto art. 6: precedono le Comparse delle Contrade che corrono di diritto, nell’ordine di estrazione dell’anno innanzi; seguono quelle delle altre che hanno acquisito il diritto di correre, nell’ordine determinato dall’apposito sorteggio di cui all’art. 25; vengono quindi quelle delle Contrade eventualmente rinuncianti, ma obbligate a partecipare alla corsa, nell’ordine del sorteggio previsto dall’ultimo comma dell’art. 6 ed infine, in ordine alfabetico, quelle delle rimanenti sette Contrade rinunciatarie.\n\nIII. Palii straordinari ai quali partecipino tutte le Contrade. Precedono le Comparse delle dieci Contrade che corrono e seguono le altre sette, nel rispettivo ordine di estrazione di cui all’art. 27.\n\nIV. Palii straordinari ai quali alcune Contrade abbiano rinunciato. Precedono le Comparse delle dieci Contrade che corrono nell’ordine di estrazione; seguono quelle delle altre Contrade ammesse al sorteggio parimenti nell’ordine di estrazione, e vengono infine, in ordine alfabetico, le Comparse delle Contrade rinunciatarie.\n\nQuando si abbiano Contrade escluse dal partecipare al Palio per punizione, le relative Comparse, in tutti i casi sopra considerati, debbono essere, in ordine alfabetico, ultime del Corteo.\n\nL’ordine come sopra stabilito per ogni singolo caso non può essere modificato per alcun motivo."
+      },
+      {
+        "numero": "78",
+        "etichetta": "Art. 78",
+        "anchor": "articolo-78",
+        "rubrica": "",
+        "capitolo": "VI — Del corteo storico e della corsa del Palio",
+        "corpo": "La riunione delle Comparse, complete di tutti gli elementi che le compongono, degli altri gruppi di Figuranti e la formazione del Corteo Storico, si effettuano alle ore e nei luoghi prescritti dall’Autorità Comunale, a cura di Funzionari ed Agenti da questa a ciò delegati.\n\nPer dirigerne e disciplinarne lo sfilamento, i compiti sono attribuiti ad un Maestro di Campo, di cui all’art. 7, il quale, vestito in apposito costume, esplica le proprie funzioni, coadiuvato da alcuni Rotellini di Palazzo."
+      },
+      {
+        "numero": "79",
+        "etichetta": "Art. 79",
+        "anchor": "articolo-79",
+        "rubrica": "",
+        "capitolo": "VI — Del corteo storico e della corsa del Palio",
+        "corpo": "È dovere di tutti coloro che sono chiamati a figurare nel Corteo di tenere un contegno corretto e disciplinato, uniformandosi senza discutere agli ordini loro impartiti dal Maestro di Campo e dai Rotellini, e di cooperare, in quanto da ciascuno possa dipendere, alla migliore riuscita di questa parte della celebrazione.\n\nIn particolar modo è loro proibito, durante il percorso nel “Campo” di fumare, gridare, soffermarsi per parlare con spettatori, prendere bibite od altro, togliersi il copricapo od altra parte del costume, o portare oggetti che non facciano parte di questo.\n\nI contravventori sono punibili con la sospensione temporanea o con l’espulsione a vita da fare parte del Corteo."
+      },
+      {
+        "numero": "80",
+        "etichetta": "Art. 80",
+        "anchor": "articolo-80",
+        "rubrica": "",
+        "capitolo": "VI — Del corteo storico e della corsa del Palio",
+        "corpo": "Entrando nel “Campo”, dalla Bocca del Casato, al segnale dato con lo sparo di un mortaretto, il Corteo ha il suo svolgimento nella pista, sino al palco eretto dinanzi al Palazzo Civico, palco nel quale, dopo avere deposto le armi, le insegne e gli altri oggetti portati nel Corteo, tutti i Figuranti che non abbiano altri speciali incarichi debbono ordinatamente prender posto.\n\nNessun Figurante, sino a quando la corsa del Palio non sia terminata, può scendere, per qualsiasi motivo o pretesto, dal palco suddetto, sotto pena dell’immediato allontanamento dalla piazza e delle sanzioni previste nell’ultimo comma dell’articolo precedente.\n\nAll’infuori dei Figuranti in costume, nessun altro può accedere e prender posto nel palco delle Comparse."
+      },
+      {
+        "numero": "81",
+        "etichetta": "Art. 81",
+        "anchor": "articolo-81",
+        "rubrica": "",
+        "capitolo": "VI — Del corteo storico e della corsa del Palio",
+        "corpo": "Durante lo sfilamento del Corteo, che sarà accompagnato dal suono continuo del Campanone della Torre del Mangia, dalla Marcia del Palio eseguita dai Musici Comunali e dagli squilli dei Trombetti di Palazzo, gli Alfieri di ciascuna Comparsa delle Contrade partecipanti al Palio, dopo aver compiuto l’alzata di saluto all’ingresso nel “Campo”, al rullo del tamburo debbono eseguire soltanto quattro sbandierate, e cioè, la prima dinanzi al Palco dei Giudici, la seconda all’altezza della Fonte Gaia, la terza dinanzi al Palco dei Priori, e la quarta dinanzi alla Cappella Comunale.\n\nLe sette Contrade che non prendono parte alla corsa dovranno entrate nella pista una di seguito all’altra senza fermarsi per le, sbandierate d’obbligo di cui sopra, e dovranno eseguire una sola sbandierata a comando del Maestro di Campo, non appena saranno tutte e sette sistemate nella pista.\n\nIl Maestro di Campo si avvarrà, per ordinare la sbandierata, di un segnale fatto eseguire da due Paggetti che sosteranno uno al Palco dei Giudici ed uno al Palco delle Comparse. Le Contrade saranno sistemate nel semicerchio compreso tra il Casato e San Martino.\n\nLe medesime eseguiranno l’alzata delle bandiere all’ingresso del “Campo” (Bocca del Casato) e durante il percorso, prima e dopo la sbandierata, sventoleranno le bandiere. A sfilamento ultimato, un Alfiere per ogni Contrada ed il rispettivo Tamburino, sono tenuti a partecipare ad una sbandierata finale collettiva di fronte al Palazzo Civico, quale omaggio all’Autorità del Comune.\n\nLe sbandierate debbono venire dagli Alfieri eseguite nella maniera tradizionale, con aggraziati movimenti e giuochi, che diano risalto alla loro abilita, ma senza eccessivi virtuosismi che richiedano un tempo maggiore di quello stabilito dal Maestro di Campo, cui spetta il compito d’imporre la cessazione e di segnalare tutte le infrazioni all’Autorità Comunale, per i provvedimenti disciplinari del caso."
+      },
+      {
+        "numero": "82",
+        "etichetta": "Art. 82",
+        "anchor": "articolo-82",
+        "rubrica": "",
+        "capitolo": "VI — Del corteo storico e della corsa del Palio",
+        "corpo": "Terminato, coll’effettuazione della sbandierata collettiva, il Corteo Storico, mentre dai Valletti del Comune viene portato nel Palco dei Giudici il Palio da assegnarsi alla Contrada vincitrice, come è disposto in successivi articoli, i Barberi e i loro Fantini, riuniti nella Corte del Podestà, debbono tenersi pronti per la corsa.\n\nIn detta Corte oltre alle persone tassativamente indicate nell’art. 55, per le prove, è ammessa ad accedere per la sera del Palio, per ciascuna Contrada, soltanto una persona incaricata di recare il costume che il Fantino deve indossare per la Corsa e di ritirare quello di parata indossato dal Fantino stesso nel Corteo.\n\nIl nome di detto incaricato deve essere preventivamente reso noto all’Autorità Comunale, insieme con quelli dei componenti la Comparsa."
+      },
+      {
+        "numero": "83",
+        "etichetta": "Art. 83",
+        "anchor": "articolo-83",
+        "rubrica": "",
+        "capitolo": "VI — Del corteo storico e della corsa del Palio",
+        "corpo": "Le Contrade non possono, per alcun motivo (tranne che per assoluta impossibilità fisica preventivamente accertata, com’è prescritto all’art. 56) ritirare il proprio cavallo dal Palio, in qualunque fase della celebrazione e quali che siano gli incidenti che possano verificarsi.\n\nContravvenendo, le Contrade sono passibili dell’esclusione dai due Palii successivi, ordinari o straordinari."
+      },
+      {
+        "numero": "84",
+        "etichetta": "Art. 84",
+        "anchor": "articolo-84",
+        "rubrica": "",
+        "capitolo": "VI — Del corteo storico e della corsa del Palio",
+        "corpo": "Per la corsa del Palio, i Fantini sono tenuti ad indossare il costume della foggia prescritta dall’art. 61 per le prove, ma il berretto deve essere sostituito da uno zucchetto metallico, dipinto coi colori della Contrada, per la protezione della testa.\n\nAd ogni Fantino è poi consentito l’uso degli speroni e di un nerbo (tendine di bue) fornito a tutti dal Comune, di tipo uniforme, tanto per incitare maggiormente il cavallo proprio, quanto per battere ed ostacolare con esso i Fantini avversari ed i loro cavalli durante il percorso.\n\nI Fantini non possono però fare uso del nerbo suddetto sugli avversari e loro cavalli sino a che, data la mossa, non abbiano raggiunto il bandierino di traguardo.\n\nIl nerbo viene consegnato a ciascun Fantino da un Vigile Urbano al momento dell’uscita dalla Corte del Podestà per recarsi alla mossa.\n\nNella Corte del Podestà, prima di salire a cavallo, i Fantini debbono essere perquisiti, per accertare che non rechino seco altri mezzi d’offesa."
+      },
+      {
+        "numero": "85",
+        "etichetta": "Art. 85",
+        "anchor": "articolo-85",
+        "rubrica": "",
+        "capitolo": "VI — Del corteo storico e della corsa del Palio",
+        "corpo": "Anche per il Palio la chiamata delle Contrade dalla Corte del Podestà alla mossa si effettua nella forma stabilita per le prove dal I, II e III comma dell’art. 62. Per l’ordine d’ingresso e l’occupazione del posto al canapo, debbono osservarsi le norme seguenti:\n\n1. L’ordine di presentazione delle Contrade al canapo è indicato da un mezzo meccanico di cui di seguito si specificano le caratteristiche:\n\na) il mezzo meccanico di cui trattasi è composto di una vasca serbatoio, da un tubo a doppia camicia e da dieci sfere, dette comunemente barberi, di spessa materia (legno e plastilina) con i colori delle Contrade partecipanti alla corsa.\n\nb) la vasca serbatoio di forma ovoidale dovrà avere una cubatura sei volte superiore alla cubatura complessiva dei dieci barberi; il tubo a doppia camicia dovrà essere munito nella parte esterna di dieci fori di diametro leggermente inferiore a quello dei barberi, in modo che ogni barbero corrisponda esattamente al relativo foro e tali fori dovranno, ben marcatamente, essere numerati dal n. 1 al n. 10 ed avranno forma circolare ad eccezione dell’ultimo segnato col n. 10 che dovrà avere forma quadrata per indicare la Contrada di rincorsa;\n\nc) i barberi dovranno essere di ugual peso, forma e dimensione.\n\n2. Il dispositivo sarà tenuto in custodia dall’Amministrazione Comunale e un Funzionario dell’Amministrazione dovrà consegnare, a tempo debito ai Signori Deputati della Festa, riuniti nel Palco dei Giudici, tre esemplari del mezzo meccanico per le tre mosse, completamente separati nelle parti che lo compongono, nonché trenta barberi, onde procedere alle operazioni necessarie per l’indicazione dell’ordine delle mosse.\n\nOgnuno dei tre tubi dovrà portare ben visibile il numero che lo distingue e cioè n. 1, n. 2 e n. 3.\n\n3. L’inizio delle operazioni sotto indicate avverrà quando la quarta Contrada partecipante al Palio entra nel Campo dalla Bocca del Casato. I Signori Deputati della Festa prenderanno in consegna i tre esemplari e deporranno, con l’eventuale presenza dei Capitani o Fiduciari, i barberi nella vasca serbatoio, dieci per ogni vasca e rappresentante ciascuno una delle Contrade che corrono,\n\nindi innesteranno il tubo nella vasca, avendo cura di isolare i barberi dal tubo a mezzo della apposita serranda. Procederanno poi al rimescolamento dei barberi e, aperta la serranda, lasceranno che i barberi, liberamente defluendo, si dispongano lungo il tubo chiuso con la doppia camicia.\n\nTale operazione dovrà essere ripetuta tante volte quante occorrono per l’approntamento di tutti i tre tubi; compiuta tale operazione si applicheranno i sigilli a mezzo di apposita impiombatura, disinnestando la vasca serbatoio. I tubi sigillati verranno disposti ciascuno nella propria cassetta in attesa del segnale che indica l’uscita dei Fantini dal Cortile del Podestà.\n\n4. Quando i Fantini, montati sui rispettivi cavalli ed avviati alla mossa, raggiungeranno l’altezza della curva del Casato, si estrarrà il tubo della prima mossa, contraddistinto dal n. 1 e si toglieranno i sigilli. Facendo ruotare la camicia si porrà in evidenza l’ordine di presentazione per la 1a mossa.\n\n5. Immediatamente sarà dettato al Funzionario Comunale, incaricato di trascrivere detto ordine su tre moduli predisposti, l’ordine di presentazione delle Contrade al canapo, nel modo stesso in cui queste vengono indicate dalla numerazione impressa sul tubo, e cioè la Contrada il cui barbero andrà a porsi nel foro contraddistinto col n. 1 andrà a collocarsi al primo posto e cosi via per i rimanenti barberi fino a quello di rincorsa. Compilati i tre elenchi i detti Deputati cureranno che un esemplare, in busta chiusa, venga rimesso al Mossiere, altro al Sindaco, mentre il terzo resterà a disposizione degli stessi Deputati della Festa o dei Signori Capitani per opportuna conoscenza.\n\n6. Qualora la prima mossa non risulti valida l’operazione sarà ripetuta col tubo contraddistinto dal n. 2 e così via per la terza col tubo contraddistinto dal n. 3.\n\nOve le tre mosse non siano sufficienti e si debba procedere a successive partenze l’ordine di queste sarà quello della prima, seconda e terza mossa, ma invertito.\n\n7. Terminato il Palio il dispositivo sarà consegnato dai Signori Deputati della Festa all’Amministrazione Comunale per la custodia."
+      },
+      {
+        "numero": "86",
+        "etichetta": "Art. 86",
+        "anchor": "articolo-86",
+        "rubrica": "",
+        "capitolo": "VI — Del corteo storico e della corsa del Palio",
+        "corpo": "Abrogato con deliberazione del Consiglio Comunale n. 111 del 3.6.1952."
+      },
+      {
+        "numero": "87",
+        "etichetta": "Art. 87",
+        "anchor": "articolo-87",
+        "rubrica": "",
+        "capitolo": "VI — Del corteo storico e della corsa del Palio",
+        "corpo": "Salva ogni particolare disposizione espressamente riferentesi alla corsa del Palio, sono applicabili a tutto quanto concerne lo svolgimento della corsa stessa le norme che disciplinano l’effettuazione delle prove, norme contenute negli artt. 41, penultimo e ultimo comma, 54 ultimo comma, 57, 59, 60, 63, 64, 65, 66, 67, 68, 69 e 70."
+      },
+      {
+        "numero": "88",
+        "etichetta": "Art. 88",
+        "anchor": "articolo-88",
+        "rubrica": "",
+        "capitolo": "VI — Del corteo storico e della corsa del Palio",
+        "corpo": "Quando la mossa sia stata valida ed i Giudici della Vincita abbiano emesso il loro inappellabile verdetto sull’esito della corsa, il Palio viene subito consegnato dal Rappresentante l’Autorità Comunale e dai Deputati della Festa al Capitano della Contrada vincitrice, il quale provvede a farlo prendere da persona di sua fiducia e a farlo trasportare nella sede della Contrada stessa nella festevole forma tradizionale.\n\nLa bandiera della Contrada vincitrice, salutata dagli squilli dei Trombetti, viene subito esposta ad una finestra centrale del primo piano del Palazzo Comunale e vi rimane anche per l’intero giorno successivo."
+      },
+      {
+        "numero": "89",
+        "etichetta": "Art. 89",
+        "anchor": "articolo-89",
+        "rubrica": "",
+        "capitolo": "VI — Del corteo storico e della corsa del Palio",
+        "corpo": "È proibito qualunque partito, o accordo diretto a far vincere il Palio ad una piuttosto che ad un’altra Contrada."
+      },
+      {
+        "numero": "90",
+        "etichetta": "Art. 90",
+        "anchor": "articolo-90",
+        "rubrica": "",
+        "capitolo": "VI — Del corteo storico e della corsa del Palio",
+        "corpo": "In caso di pioggia che si verifichi durante lo sfilamento del Corteo Storico, o che, anche cadendo in precedenza, abbia resa la pista impraticabile o pericolosa, l’Autorità Comunale, udito il parere dei competenti propri uffici, dei Deputati della Festa e dei Capitani delle Contrade partecipanti alla corsa, ha facoltà di rimandare il Palio al giorno successivo e di rinviarlo ulteriormente, se ciò fosse reso necessario dal permanere delle avverse condizioni atmosferiche.\n\nAll’Autorità Comunale è pure riservata facoltà di rinviare, in accordo con l’Autorità di P.S. l’effettuazione del Palio, per motivi che interessino l’ordine pubblico."
+      },
+      {
+        "numero": "91",
+        "etichetta": "Art. 91",
+        "anchor": "articolo-91",
+        "rubrica": "",
+        "capitolo": "VI — Del corteo storico e della corsa del Palio",
+        "corpo": "Qualora nel Palco dei Giudici sorgessero, durante o dopo la corsa, contestazioni o diverbi tra coloro che sul Palco stesso prendono posto, la forza\n\npubblica potrà intervenire soltanto quando il Sindaco o uno dei Deputati della Festa lo richieda."
+      },
+      {
+        "numero": "92",
+        "etichetta": "Art. 92",
+        "anchor": "articolo-92",
+        "rubrica": "",
+        "capitolo": "VI — Del corteo storico e della corsa del Palio",
+        "corpo": "Nei sette giorni successivi a quello nel quale il Palio sia stato effettuato, i Deputati della Festa devono rimettere all’Assessore Delegato una particolareggiata relazione in merito all’organizzazione ed all’intero svolgimento del Palio stesso, segnalando ogni circostanza che meriti rilievo o che richieda provvedimenti.\n\nLa relazione dei Deputati della Festa è l’unico documento sulla base del quale l’Assessore Delegato procede alle conseguenti proposte.\n\nDella relazione debbono far parte integrante i rapporti scritti degli Ispettori della Pista e del Mossiere e tutti gli atti e/o documentazioni acquisiti entro il termine perentorio di cinque giorni successivi al Palio, termine entro il quale i Deputati possono sentire i Priori e/o i Capitani delle Contrade, il Mossiere o, su sollecitazione del Sindaco, il Comandante della Polizia Comunale, nonché i Fantini su specifici atti.\n\nNon sono acquisibili né utilizzabili per la relazione dei Deputati della Festa documenti, fotografie e filmati effettuati con ogni mezzo tecnico, che siano anonimi."
+      },
+      {
+        "numero": "93",
+        "etichetta": "Art. 93",
+        "anchor": "articolo-93",
+        "rubrica": "",
+        "capitolo": "VII — Dei premi",
+        "corpo": "Tanto per le corse ordinarie, quanto per quelle straordinarie, alla Contrada vincitrice è dal Comune assegnato in premio un Palio (Drappellone di seta dipinto) dal quale la Festa ha tratta la sua denominazione.\n\nSecondo la tradizione, esso reca in alto, per la corsa del 2 luglio, l’immagine di Maria Santissima che si venera nella Chiesa di Provenzano e per quella del 16 agosto, l’immagine di Maria Vergine Assunta in cielo. Reca poi sempre la data della corsa, lo stemma della Balzana, eventualmente insieme agli altri due del Comune, gli stemmi degli antichi Terzieri della Città e quelli del Sindaco in carica e delle dieci Contrade che corrono.\n\nQuanto alla parte allegorica, nei Palii ordinari, qualora il Comune non creda di prescriverne il soggetto, è libero il pittore di proporlo, mentre per i\n\nPalii straordinari, che possono avere anche foggia diversa, oltre la data e le figurazioni araldiche sopra indicate deve farsi in modo preminente riferimento alla circostanza, od all’avvenimento per cui la corsa è stata effettuata, affinché possa costituire un autorevole documento storico.\n\nIl Drappellone è solennemente trasportato, per il Palio del 2 luglio, nella Chiesa di S. Maria in Provenzano, e per quello del 16 agosto, in Duomo, rispettivamente prima della prova generale e prima della terza prova e vi rimane esposto fino a quando deve venire issato sul Carroccio, per il Corteo Storico.\n\nAI trasferimento prendono parte le Rappresentanze del Comune e del Magistrato delle Contrade, i Deputati della Festa, i Priori, il Tamburino e due Alfieri delle diciassette Contrade, tutti precedentemente riuniti presso il Palazzo Comunale.\n\nIl Palio rimane in proprietà della Contrada vincitrice, la quale però ha l’obbligo di restituire entro l’anno al Comune il piatto d’argento, che lo sormonta."
+      },
+      {
+        "numero": "94",
+        "etichetta": "Art. 94",
+        "anchor": "articolo-94",
+        "rubrica": "",
+        "capitolo": "VII — Dei premi",
+        "corpo": "La pittura del Palio o Drappellone di cui all’articolo precedente è commissionata dall’Amministrazione Comunale all’artista scelto dalla stessa. L’Amministrazione Comunale può indire di volta in volta, ove lo ritenga necessario, un concorso nel rispetto di termini che assicurano al concorrente almeno trenta giorni per la presentazione del bozzetto ed al vincitore del concorso almeno sessanta giorni per l’esecuzione dell’opera.\n\nIl compito di stabilire le modalità del concorso spetta alla Giunta Comunale, la quale nomina anche la Commissione preposta a giudicare i bozzetti presentati ed a designare il vincitore.\n\nLa Commissione giudicatrice sarà composta oltre che dal Sindaco, o da un Assessore da lui delegato, che la presiede, da quattro membri, di cui uno designato dal Magistrato delle Contrade.\n\nAvvenuta la scelta tutti i bozzetti ritenuti idonei saranno esposti al pubblico.\n\nPer motivi di opportunità o di urgenza la pittura del Palio può essere commissionata direttamente dalla Giunta Comunale ad un artista di fiducia."
+      },
+      {
+        "numero": "95",
+        "etichetta": "Art. 95",
+        "anchor": "articolo-95",
+        "rubrica": "",
+        "capitolo": "VII — Dei premi",
+        "corpo": "Oltre il Palio o Drappellone di seta dipinto, di cui ai precedenti articoli il Comune, secondo la tradizione; assegna a favore della Contrada vincitrice un premio consistente in:\na) n. 70 monete d’argento riproducenti monete dell’antica Repubblica Senese, per il Palio del 2 luglio;\nb) n. 50 monete d’argento riproducenti monete dell’antica Repubblica Senese, per il Palio del 16 agosto.\n\nPer le corse straordinarie l’Amministrazione Comunale stabilisce volta per volta se sia da assegnare anche il premio in denaro ed in quale misura.\n\nAlla Contrada vincitrice viene poi dal Sindaco rilasciata una attestazione ufficiale della vittoria conseguita e dell’avvenuta sua iscrizione nel registro generale, che si conserva presso l’Archivio del Comune.\n\nCertificato analogo viene rilasciato al Fantino."
+      },
+      {
+        "numero": "96",
+        "etichetta": "Art. 96",
+        "anchor": "articolo-96",
+        "rubrica": "",
+        "capitolo": "VII — Dei premi",
+        "corpo": "Al proprietario del cavallo vincitore il Comune assegna in premio, tanto per i Palii ordinari che straordinari, una bandiera di seta recante lo stemma della Città e la data della corsa e corrisponde poi anche un premio in denaro, il cui ammontare viene di volta in volta stabilito."
+      },
+      {
+        "numero": "97",
+        "etichetta": "Art. 97",
+        "anchor": "articolo-97",
+        "rubrica": "",
+        "capitolo": "VIII — Penalità e disposizioni finali",
+        "corpo": "Per le infrazioni documentate alle disposizioni contenute nel presente Regolamento, nei riguardi delle quali non sia già specificatamente stabilita la sanzione relativa e per altre mancanze che, sebbene non contemplate nel Regolamento medesimo, abbiano tuttavia recato pregiudizio, o danno, alla preparazione, allo svolgimento o al decoro del Palio, le Contrade sono passibili, a seconda della gravità dell’infrazione o della mancanza commessa delle seguenti punizioni:\na) Censura;\nb) Deplorazione;\n\nc) Esclusione dal partecipare ad uno o più Palii, ordinari e straordinari, sino ad un periodo massimo di dieci anni, fermo rimanendo l’obbligo di far intervenire la Comparsa al Corteo Storico."
+      },
+      {
+        "numero": "98",
+        "etichetta": "Art. 98",
+        "anchor": "articolo-98",
+        "rubrica": "",
+        "capitolo": "VIII — Penalità e disposizioni finali",
+        "corpo": "La punizione delle Contrade rientra nella competenza esclusiva, dell’Amministrazione Comunale.\n\nL’Assessore Delegato, basandosi esclusivamente sulla Relazione dei Deputati della Festa, notifica alle Contrade gli addebiti, motivati con apposito atto, per i comportamenti che possono avere violato il presente Regolamento. Alla contestazione degli addebiti è allegata la documentazione su cui la stessa si fonda.\n\nLe Contrade, tramite gli Onorandi Priori o i loro delegati hanno comunque diritto di consultare la Relazione dei Deputati della Festa e di estrarre copia della medesima e di tutti gli allegati ivi compresa eventuale documentazione filmata e/o fotografica, acquisita nei modi di cui all’art. 92, per tutto quanto è connesso e collegato all’addebito formulato dall’Assessore Delegato.\n\nA pena di decadenza le Contrade nei sette giorni successivi alla notifica dell’addebito hanno facoltà di far pervenire documenti e memorie a propria difesa.\n\nL’Assessore Delegato presa visione degli eventuali documenti e scritti difensivi delle Contrade valuta, con motivata decisione, se archiviare l’addebito o proporre i provvedimenti sanzionatori che ritiene opportuni.\n\nNei dieci giorni successivi alla eventuale notifica della proposta di sanzione, a pena di decadenza, le Contrade possono far pervenire alla Giunta Comunale memorie difensive con eventuali allegazioni probatorie.\n\nTutti gli scritti, i documenti, le fotografie e i filmati che le Contrade possono produrre devono avere esclusivamente natura difensiva diversamente non verranno acquisiti.\n\nLa Giunta Comunale, senza la partecipazione dell’Assessore delegato, e dopo aver preso visione delle proposte di sanzione e delle eventuali memorie difensive, delibera con contestuale motivazione da notificarsi alle Contrade interessate.\n\nAvverso le delibere della Giunta Comunale che devono essere adottate entro la chiusura dell’anno contradaiolo (30 novembre di ogni anno) non è ammesso alcun tipo di ricorso.\n\nQualora entro i cinque Palii successivi a quello in cui una Contrada è incorsa nella sanzione prevista al punto a) dell’articolo precedente la medesima Contrada incorra per altre tre volte in analoga infrazione, alla stessa verrà applicata automaticamente la sanzione della deplorazione.\n\nQualora entro i nove Palii successivi a quello in cui una Contrada è incorsa nella sanzione di cui al punto b) dell’articolo precedente, la medesima Contrada incorra per altre due volte in analoga infrazione, alla stessa verrà applicata automaticamente la sanzione dell’esclusione dalle prove e dal Palio immediatamente successivi.\n\nDi ogni punizione che sia stata inflitta ad una o più Contrade deve essere data comunicazione scritta al Magistrato delle Contrade."
+      },
+      {
+        "numero": "99",
+        "etichetta": "Art. 99",
+        "anchor": "articolo-99",
+        "rubrica": "",
+        "capitolo": "VIII — Penalità e disposizioni finali",
+        "corpo": "Per le infrazioni regolamentari o per altre mancanze commesse dai Fantini si applicano, a seconda della loro gravità, le seguenti punizioni:\na) Diffida;\nb) Ammonizione;\nc) Esclusione per un tempo determinato o a vita, dal montare cavalli di Contrade tanto per le prove quanto per il Palio.\n\nL’Assessore Delegato, basandosi esclusivamente sulla Relazione dei Deputati della Festa, notifica ai Fantini gli addebiti, motivati con apposito atto, per i comportamenti che possono avere violato il presente Regolamento. Alla contestazione degli addebiti è allegata la documentazione su cui la stessa si fonda.\n\nI Fantini, tramite gli Onorandi Priori o i loro delegati hanno comunque diritto di consultare la Relazione dei Deputati della Festa e di estrarre copia della medesima e di tutti gli allegati ivi compresa eventuale documentazione filmata e/o fotografica, acquisita nei modi di cui all’art. 92, per tutto quanto è connesso e collegato all’addebito formulato dall’Assessore Delegato.\n\nA pena di decadenza i Fantini nei sette giorni successivi alla notifica dell’addebito hanno facoltà di far pervenire documenti e memorie a propria difesa.\n\nL’Assessore Delegato presa visione degli eventuali documenti e scritti difensivi dei Fantini valuta, con motivata decisione, se archiviare l’addebito o proporre i provvedimenti sanzionatori che ritiene opportuni.\n\nNei dieci giorni successivi alla eventuale notifica della proposta di sanzione, a pena di decadenza, i Fantini possono far pervenire alla Giunta Comunale memorie difensive con eventuali allegazioni probatorie.\n\nTutti gli scritti, i documenti, le fotografie e i filmati che i Fantini possono produrre devono avere esclusivamente natura difensiva diversamente non verranno acquisiti.\n\nLa Giunta Comunale, senza la partecipazione dell’Assessore Delegato e dopo aver preso visione della proposta di punizione e delle eventuali memorie difensive, delibera con contestuale motivazione da notificarsi ai Fantini interessati.\n\nAvverso le delibere della Giunta Comunale, che debbono essere adottate entro la chiusura dell’anno contradaiolo (30 novembre di ogni anno), non è ammesso alcun tipo di ricorso.\n\nQualora entro quattro Palii effettivamente disputati e successivi a quello in cui un Fantino è incorso nella sanzione prevista alla precedente lettera a), il medesimo incorra per altre tre volte in analoga infrazione, gli verrà applicata automaticamente la sanzione dell’ammonizione. Ogni ulteriore sanzione di cui alla lettera a) irrogata allo stesso Fantino nello stesso periodo di Palii di cui sopra effettivamente disputati comporterà l’applicazione dell’ammonizione per ogni ulteriore diffida.\n\nLa sanzione prevista dalla lettera a) del presente articolo, si applica, con gli stessi richiami temporali del comma precedente, in occasione delle prove previste dal comma 4 dell’art. 38 e dal comma 3 dell’art. 52 del presente Regolamento.\n\nQualora entro tre Palii effettivamente disputati e successivi a quello in cui un Fantino sia incorso nella sanzione prevista al punto b) del presente articolo, il medesimo incorra in analoga infrazione, allo stesso verrà applicata automaticamente la sanzione dell’esclusione dalle prove e dal Palio immediatamente successivo.\n\nLe sanzioni, previste nei punti a) e b) del comma 1 del presente articolo, decadono automaticamente se il Fantino per 5 anni consecutivi, dalle sanzioni\n\nsopra richiamate, non risulta presente né per le prove, né per il Palio.\n\nDi ogni punizione che si sia inflitta ad uno o più fantini deve essere data comunicazione scritta al Magistrato delle Contrade."
+      },
+      {
+        "numero": "99bis",
+        "etichetta": "Art. 99-bis",
+        "anchor": "articolo-99-bis",
+        "rubrica": "",
+        "capitolo": "VIII — Penalità e disposizioni finali",
+        "corpo": "A cura dell’Amministrazione Comunale deve essere istituita e costantemente aggiornata una raccolta delle delibere di Giunta Comunale concernenti l’applicazione delle sanzioni. Ciò al fine di costituire un indirizzo sanzionatorio di riferimento nell’esercizio delle funzioni regolamentari, i cui scostamenti devono essere adeguatamente motivati."
+      },
+      {
+        "numero": "100",
+        "etichetta": "Art. 100",
+        "anchor": "articolo-100",
+        "rubrica": "",
+        "capitolo": "VIII — Penalità e disposizioni finali",
+        "corpo": "Quando si tratti di infrazioni per le quali sia già prevista nel presente Regolamento la penalità dell’esclusione di Fantini o di Contrade dal partecipare al Palio in corso, o di mancanze non contemplate espressamente, ma di tale gravità da rendere necessaria tale esclusione, il provvedimento viene adottato d’urgenza dall’Autorità Comunale, tanto per i Fantini, quanto per le Contrade, sentiti i Deputati della Festa o il Mossiere ed ha immediata esecuzione, sempre che il provvedimento di sospensione del Fantino sia comunicato prima della rassegna di cui all’art. 58 ultimo comma. Se comunicato successivamente la sospensione avrà effetto per il Palio o i Palii successivi."
+      },
+      {
+        "numero": "101",
+        "etichetta": "Art. 101",
+        "anchor": "articolo-101",
+        "rubrica": "",
+        "capitolo": "VIII — Penalità e disposizioni finali",
+        "corpo": "Agli effetti punitivi l’Ente Contrada è responsabile dei deliberati del proprio Seggio, nonché degli ordini impartiti dal Priore o da chi ne eserciti le funzioni e dal Capitano, o suoi coadiutori, per tutto ciò che concerne la Festa dei Palio.\n\nÈ altresì responsabile del contegno della propria Comparsa, del Fantino e dei propri contradaioli quando sia stato tale da provocare incidenti o tumulti o da turbare il regolare svolgimento delle prove o del Palio, nonché di ogni atto o fatto che sia idoneo ad arrecare pregiudizio al regolare svolgimento della celebrazione in qualunque suo momento, tenuto conto del carattere indubbio di continuità che collega le fasi preparatorie, di svolgimento e di conclusione della celebrazione del Palio.\n\nL’Assessore Delegato potrà tenere conto, ai fini della graduazione delle punizioni, del comportamento dei dirigenti che hanno la responsabilità della Contrada secondo quanto stabilito dal presente Regolamento."
+      },
+      {
+        "numero": "102",
+        "etichetta": "Art. 102",
+        "anchor": "articolo-102",
+        "rubrica": "",
+        "capitolo": "VIII — Penalità e disposizioni finali",
+        "corpo": "Ogni disposizione o provvedimento che si rendesse necessario adottare per circostanze o fatti inerenti alle operazioni preparatorie, od allo svolgimento delle prove, o del Palio, che non siano previsti nel presente Regolamento, rientra nelle competenze dell’Autorità Comunale, uditi i Deputati della Festa ed occorrendo, i Capitani delle Contrade partecipanti alla corsa.\n\nNei casi d’urgenza e ove manchi la presenza del Rappresentante l’Autorità Comunale, i Deputati della Festa sono autorizzati a provvedere, salvo riferirne al Sindaco con speciale rapporto."
+      },
+      {
+        "numero": "103",
+        "etichetta": "Art. 103",
+        "anchor": "articolo-103",
+        "rubrica": "",
+        "capitolo": "VIII — Penalità e disposizioni finali",
+        "corpo": "Per l’applicazione delle disposizioni contenute nel presente Regolamento che non abbiano specifico riferimento ai vari organi del Comune, si precisa che essa è di competenza della Giunta Comunale là dove si parla di Amministrazione Comunale, mentre rientra nelle competenze del Sindaco, di chi per legge lo sostituisce, o dei suoi delegati, tutto quanto il Regolamento stesso demanda all’Autorità Comunale.\n\nCon l’espressione “Veterinario Comunale” è indicato il medico veterinario che l’Amministrazione Comunale nomina per l’espletamento delle funzioni previste dal presente Regolamento. L’Assessore Delegato viene nominato dal Sindaco con apposito atto, e svolge il ruolo attraverso ordinanze."
+      },
+      {
+        "numero": "104",
+        "etichetta": "Art. 104",
+        "anchor": "articolo-104",
+        "rubrica": "",
+        "capitolo": "VIII — Penalità e disposizioni finali",
+        "corpo": "Il presente Regolamento entrerà in vigore dopo l’approvazione da parte del Consiglio Comunale e la sua pubblicazione all’albo pretorio per il periodo di quindici giorni.\n\nOgni modificazione rientra nelle competenze del Consiglio Comunale, udito il Magistrato delle Contrade."
+      },
+      {
+        "numero": "105",
+        "etichetta": "Art. 105",
+        "anchor": "articolo-105",
+        "rubrica": "",
+        "capitolo": "VIII — Penalità e disposizioni finali",
+        "corpo": "Dalla data di entrata in vigore del presente Regolamento restano abrogati quello approvato in data 18 ottobre 1906, con le successive modifiche, ed ogni altra disposizione contraria."
+      }
+    ]
+  },
   "bando": {
     "meta": {
       "id": "RIF-BANDO-CONFINI-1730",

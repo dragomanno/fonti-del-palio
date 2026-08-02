@@ -1024,6 +1024,26 @@ tbody tr:last-child td { border-bottom: none; }
   }
 }
 
+/* Tabella "Indice dei documenti" (KB01, /evoluzione-storica/):
+   sei colonne, N. e File sorgente sbordavano su desktop perche' la colonna
+   Documento (larghezza libera) comprimeva quelle a contenuto breve. Il
+   selettore :has() individua la tabella dalla sesta intestazione in ultima
+   posizione, cosi' la regola non tocca le altre tabelle documentarie del
+   sito. Attiva solo da 48rem, dove .doc-table--reflow torna a essere una
+   tabella vera invece della resa a schede: sotto quella soglia va gia' bene
+   com'e'. */
+@media (min-width: 48rem) {
+  .doc-table:has(> thead tr > th:nth-child(6):last-child) th:nth-child(1),
+  .doc-table:has(> thead tr > th:nth-child(6):last-child) td:nth-child(1) {
+    width: 3.25rem;
+    white-space: nowrap;
+  }
+  .doc-table:has(> thead tr > th:nth-child(6):last-child) th:nth-child(4),
+  .doc-table:has(> thead tr > th:nth-child(6):last-child) td:nth-child(4) {
+    width: 16rem;
+  }
+}
+
 /* Le tabelle a tre colonne entrano ancora nel viewport da 400px in su: fino a
    768px restano tabelle vere, che si leggono meglio di una sequenza di
    schede. Il riflusso scatta solo sotto i 400px, dove la larghezza minima del

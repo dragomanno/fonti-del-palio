@@ -24,9 +24,11 @@
 
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from "node:fs";
 import path from "node:path";
+import { buildRegolamento, verificaRegolamento } from "./build-regolamento.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const CARRIERE = path.join(ROOT, "content", "carriere");
+const KB_DIR = path.join(ROOT, "content", "kb");
 const RIFERIMENTI = path.join(ROOT, "content", "riferimenti");
 const PDF_DIR = path.join(ROOT, "public", "atti", "2026");
 const TARGET = path.join(ROOT, "data", "carriera.generated.json");
@@ -36,6 +38,7 @@ const KB10 = "10_KB_Disciplina_Consolidata_Accesso_Sicurezza_e_Servizi_Agosto_20
 const KB11 = "11_KB_Guida_Pratica_Palio_16_Agosto_2026.md";
 const KB12 = "12_KB_Manifest_Generale_Fonti_del_Palio_2026.md";
 const KB14 = "14_KB_Collazione_Regolamento_Previgente_Vigente.md";
+const KB03 = "03_KB_Disciplina_Vigente_Consolidata_2026.md";
 
 /** Invarianti strutturali attese: sono il gate del checkpoint, non decorazione. */
 export const EXPECTED = {
@@ -52,6 +55,8 @@ export const EXPECTED = {
   unitaArticolo: 106,
   articoliProspetto2019: 24,
   riscritture: 5,
+  articoliRegolamento: 106,
+  capitoliRegolamento: 8,
 };
 
 function read(dir, name) {
@@ -309,6 +314,7 @@ export function buildIndex() {
   const kb11 = read(CARRIERE, KB11);
   const kb12 = read(CARRIERE, KB12);
   const kb14 = read(CARRIERE, KB14);
+  const kb03 = read(KB_DIR, KB03);
 
   const atti = buildAtti(kb09);
   const cavalli = buildCavalli(kb09);
@@ -337,6 +343,7 @@ export function buildIndex() {
     guida: buildGuida(kb11),
     registroFonti: buildRegistro(kb12),
     collazione: buildCollazione(kb14),
+    regolamento: buildRegolamento(kb03),
     bando,
   };
 
@@ -426,6 +433,9 @@ export function verify(index) {
     if (!/^[0-9a-f]{64}$/.test(record.sha256)) problems.push(`SHA-256 malformato per ${record.id}`);
   }
 
+  // Articolato integrale del Regolamento per il Palio: gate propri.
+  problems.push(...verificaRegolamento(index.regolamento, EXPECTED));
+
   // Il repertorio `RIF-STRADE-CONTRADE` resta fonte di lavoro: puo' comparire
   // come voce del registro delle fonti, mai come contenuto indicizzato.
   const strade = index.registroFonti.filter((r) => r.id === "RIF-STRADE-CONTRADE");
@@ -450,7 +460,9 @@ function main() {
       `${index.previsite.cavalli.length} cavalli, ${index.materie.length} materie, ` +
       `${index.guida.length} sezioni di guida, ${index.bando.contrade.length} Contrade, ` +
       `${index.registroFonti.length} record di registro, ` +
-      `${index.collazione.prospetto.length} unità articolo collazionate.`
+      `${index.collazione.prospetto.length} unità articolo collazionate, ` +
+      `${index.regolamento.articoli.length} unità articolo del Regolamento ` +
+      `in ${index.regolamento.capitoli.length} capitoli.`
   );
 }
 

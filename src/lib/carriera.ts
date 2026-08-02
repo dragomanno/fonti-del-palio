@@ -99,6 +99,49 @@ export interface Collazione {
   limiti: string;
 }
 
+/**
+ * Unità articolo dell'articolato del Regolamento per il Palio, edizione vigente.
+ *
+ * `numero` è il numero come stampato, in forma compatta ("99bis"); `etichetta`
+ * è la forma di lettura ("Art. 99-bis"); `anchor` è l'ancora HTML stabile
+ * ("articolo-99-bis"). `corpo` è testo semplice: i capoversi sono separati da
+ * una riga vuota, le righe logiche interne a un capoverso da un solo `\n`.
+ * Non è Markdown e non va passato a un renderer Markdown.
+ *
+ * `rubrica` è una stringa vuota per tutti gli articoli: l'edizione vigente
+ * numera gli articoli senza titolo. Il campo esiste per non perdere la forma
+ * del dato se una futura edizione introducesse le rubriche.
+ */
+export interface ArticoloRegolamento {
+  numero: string;
+  etichetta: string;
+  anchor: string;
+  rubrica: string;
+  /** Capitolo di appartenenza, nella forma "I — Disposizioni fondamentali". */
+  capitolo: string | null;
+  corpo: string;
+}
+
+export interface CapitoloRegolamento {
+  numero: string;
+  titolo: string;
+}
+
+export interface FonteRegolamento {
+  id: string;
+  file: string;
+  sezione: string;
+  sha256: string;
+  pagine: number;
+  byte: number;
+}
+
+export interface RegolamentoVigente {
+  fonte: FonteRegolamento;
+  capitoli: CapitoloRegolamento[];
+  articoli: ArticoloRegolamento[];
+}
+
 export interface CarrieraIndex {
   schema: string;
   carriera: { slug: string; titolo: string; data: string };
@@ -109,6 +152,7 @@ export interface CarrieraIndex {
   guida: SezioneGuida[];
   registroFonti: RecordRegistro[];
   collazione: Collazione;
+  regolamento: RegolamentoVigente;
   bando: Bando;
 }
 
@@ -161,6 +205,34 @@ export function listRegistroFonti(): RecordRegistro[] {
 
 export function getCollazione(): Collazione {
   return loadCarriera().collazione;
+}
+
+/** L'articolato integrale del Regolamento vigente, nell'ordine della stampa. */
+export function getRegolamento(): RegolamentoVigente {
+  return loadCarriera().regolamento;
+}
+
+/** Le 106 unità articolo del Regolamento vigente, art. 99-bis compreso. */
+export function listArticoliRegolamento(): ArticoloRegolamento[] {
+  return getRegolamento().articoli;
+}
+
+/**
+ * Gli articoli raggruppati per capitolo, nell'ordine della stampa.
+ * Serve all'indice iniziale: il raggruppamento è di sola resa, non altera
+ * l'ordine né la numerazione delle unità.
+ */
+export function articoliPerCapitolo(): Array<{
+  capitolo: string | null;
+  articoli: ArticoloRegolamento[];
+}> {
+  const gruppi: Array<{ capitolo: string | null; articoli: ArticoloRegolamento[] }> = [];
+  for (const articolo of listArticoliRegolamento()) {
+    const ultimo = gruppi[gruppi.length - 1];
+    if (ultimo && ultimo.capitolo === articolo.capitolo) ultimo.articoli.push(articolo);
+    else gruppi.push({ capitolo: articolo.capitolo, articoli: [articolo] });
+  }
+  return gruppi;
 }
 
 export function getBando(): Bando {

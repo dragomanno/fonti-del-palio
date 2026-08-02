@@ -1,0 +1,28 @@
+{
+  "name": "Fonti del Palio",
+  "short_name": "Fonti del Palio",
+  "description": "Osservatorio paliesco indipendente. Prima gli atti. Poi le risposte.",
+  "lang": "it",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#14140f",
+  "theme_color": "#14140f",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

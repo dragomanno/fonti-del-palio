@@ -226,6 +226,38 @@ a:hover {
 
 .brand:hover, .wordmark:hover { color: var(--color-text); }
 
+/* ---------- Lockup dell'header ---------- */
+/*
+  Il lockup e' composto in HTML: simbolo (parentesi quadre + virgolette) a
+  sinistra, wordmark testuale a destra, dentro un unico collegamento verso la
+  home. Il simbolo e' un SVG in linea senza fondo, perche' l'header e'
+  semitrasparente: un riquadro pieno vi apparirebbe come un rettangolo. Le
+  aste della parentesi usano `currentColor` e seguono quindi il colore del
+  wordmark; virgolette e punto restano verdi.
+
+  L'altezza e' dichiarata in em (scala col wordmark) e l'SVG porta gli
+  attributi width/height: il rapporto d'aspetto e' noto al primo layout e non
+  c'e' spostamento di contenuto. Il valore 2.05em riproduce la proporzione fra
+  simbolo e lettering del lockup di riferimento restando entro l'altezza utile
+  della barra compatta (44px con corpo 18px), che percio' non cambia.
+*/
+.brand {
+  align-items: center;
+  gap: 0.5em;
+}
+
+.brand__symbol {
+  flex: 0 0 auto;
+  height: 2.05em;
+  width: auto;
+  color: var(--color-text);
+}
+
+.brand__wordmark {
+  display: inline-flex;
+  align-items: baseline;
+}
+
 /* Punto prima di "org" e punto storico del logotipo precedente. */
 .brand .dot,
 .wordmark .dot {

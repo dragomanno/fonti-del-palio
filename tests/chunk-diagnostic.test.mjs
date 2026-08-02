@@ -593,8 +593,15 @@ test("Anti-staleness: data/coverage-ledger.json committato coincide con l'output
 // ---------------------------------------------------------------------------
 // Regressione mirata (indagine forense 05.md): il record del candidato
 // "manifest-registro-intro:formula-pubblica-raccomandata" (KB04, righe
-// 1094-1100) deve restare identico attraverso i 5 percorsi di generazione
-// elencati nel mandato. Root cause storica del mismatch (documentata qui
+// 1098-1104) deve restare identico attraverso i 5 percorsi di generazione
+// elencati nel mandato.
+//
+// L'intervallo era 1094-1100 fino al 2 agosto 2026: la correzione della catena
+// di provenienza della scheda RP-2019-01 ha aggiunto quattro righe a monte in
+// KB 04 e ha traslato di quattro l'intervallo. Testo e contentHash del
+// candidato sono invariati: e' cambiata solo la sua posizione nel file.
+//
+// Root cause storica del mismatch (documentata qui
 // per evitare regressioni future): NON un difetto del generatore, ma due
 // bug nel test stesso — nome di campo sbagliato (coverageLedger invece di
 // ledger) e proiezione non filtrata (l'oggetto ledger completo invece della
@@ -618,8 +625,8 @@ test("Regressione KB04 (1): generazione diretta fresca produce il candidato targ
   const fresh = analyzeAll();
   const { candidate, ledgerRecords } = extractTargetRecord(fresh);
   assert.ok(candidate, "il candidato manifest-registro-intro:formula-pubblica-raccomandata deve esistere");
-  assert.equal(candidate.startLine, 1094);
-  assert.equal(candidate.endLine, 1100);
+  assert.equal(candidate.startLine, 1098);
+  assert.equal(candidate.endLine, 1104);
   assert.ok(ledgerRecords.length > 0, "il ledger KB04 deve contenere almeno una riga che referenzia il candidato target");
 });
 
@@ -638,8 +645,8 @@ test("Regressione KB04 (2): npm run chunk:diagnostic (CLI) produce lo stesso rec
     const committedCandidates = JSON.parse(readFileSync(join(tmpOut, "diagnostic-candidates.json"), "utf8"));
     const viaCli = committedCandidates.candidates.find((c) => c.id === TARGET_CANDIDATE_ID);
     assert.ok(viaCli, "il candidato deve essere presente nell'artefatto scritto dalla CLI");
-    assert.equal(viaCli.startLine, 1094);
-    assert.equal(viaCli.endLine, 1100);
+    assert.equal(viaCli.startLine, 1098);
+    assert.equal(viaCli.endLine, 1104);
   } finally {
     rmSync(tmpOut, { recursive: true, force: true });
   }

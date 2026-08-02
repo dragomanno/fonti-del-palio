@@ -320,7 +320,7 @@ La Parte III di KB 03 dichiara di derivare dalla pubblicazione presentata nel 20
 
 Entrambe le edizioni contano 105 articoli numerati: la revisione del 2019 ha modificato e integrato senza rinumerare. Il numero di articoli non è quindi un criterio di distinzione fra le due edizioni.
 
-La trascrizione del Regolamento presente nel corpus corrisponde all'edizione vigente. Il riscontro è per sonde e non equivale a una collazione integrale.
+La trascrizione del Regolamento presente nel corpus corrisponde all'edizione vigente. Il riscontro del 31 luglio 2026 era per sonde. La collazione integrale è stata eseguita successivamente ed è registrata alla sezione 8.6.
 
 ## 8.4 Nesso con il lotto di agosto 2026
 
@@ -332,4 +332,69 @@ Il documento `COM-2026-08-PREVISITE-001` richiama l'art. 37, comma 2, e qualific
 
 1. Non dimostra che non esistano modifiche al Regolamento successive al 28 novembre 2019: la verifica presso il Comune di Siena resta aperta.
 2. Non dimostra la provenienza delle due trascrizioni `RIF-BANDO-CONFINI-1730` e `RIF-STRADE-CONTRADE`, che restano fonti di lavoro e di verifica, non fonti ripubblicabili.
-3. Non equivale a una collazione integrale fra il testo del corpus e il PDF ufficiale.
+3. Il terzo limite registrato in questa sezione fino al 1º agosto 2026 — l'assenza di una collazione integrale fra il testo del corpus e il PDF — non sussiste più per il `REG-PALIO-2019`: la collazione è stata eseguita ed è registrata alla sezione 8.6. Resta valido per le altre fonti del registro.
+4. Non dimostra che la copia acquisita del `REG-PALIO-2019` provenga da un canale istituzionale: si veda la sezione 8.6.
+
+## 8.6 Collazione integrale e provenienza della copia del `REG-PALIO-2019`
+
+Verifica del 2 agosto 2026, eseguita sul PDF fornito dal curatore.
+
+### 8.6.1 Consistenza del file
+
+| Grandezza | Valore atteso da 8.1 | Valore misurato | Esito |
+|---|---|---|---|
+| Pagine | 82 | 82 | coincide |
+| Byte | 1.988.492 | 1.988.492 | coincide |
+| SHA-256 | `a09afe7b863f7b1b5329f8fb069503a59dc67b92053c3a156b7d62ce9855b86d` | identico | coincide |
+
+La copia sottoposta a verifica è quindi bit a bit la stessa già registrata alla sezione 8.1. Il digest non è stato aggiornato perché non è cambiato.
+
+### 8.6.2 Collazione integrale dell'articolato
+
+Il testo estratto dal PDF è stato collazionato con la trascrizione canonica della Parte III di KB 03, articolo per articolo, previa normalizzazione meccanica di sillabazione di fine riga, spaziatura, ritorni a capo di giustificazione e forme tipografiche di apostrofi e virgolette.
+
+| Grandezza | Esito |
+|---|---|
+| Intestazioni `Art.` presenti nel PDF | 106 |
+| Unità articolo nella trascrizione | 106 |
+| Sequenza | identica, da art. 1 a art. 105 con l'art. 99bis fra 99 e 100 |
+| Intestazioni presenti solo nel PDF | nessuna |
+| Intestazioni presenti solo nella trascrizione | nessuna |
+| Intestazioni duplicate | nessuna |
+| Corpi coincidenti dopo normalizzazione | 106 su 106 |
+
+La collazione conferma inoltre due particolari già registrati come anomalie e non corretti in via editoriale:
+
+1. nel secondo comma dell'art. 16, dopo «a suffragare i motivi addotti.», il PDF reca un carattere isolato `x`. È presente nel livello testuale della fonte e nella pagina 9 stampata: non è un artefatto di estrazione della trascrizione;
+2. l'art. 99-bis è stampato nella forma `Art. 99bis`.
+
+L'art. 105 si chiude sulla formula di abrogazione del Regolamento del 18 ottobre 1906; quanto segue nel volume appartiene agli allegati, all'appendice e all'indice generale, che non fanno parte dell'articolato.
+
+### 8.6.3 Datazione del file, che non è la datazione dell'edizione
+
+| Elemento | Valore |
+|---|---|
+| Programma di impaginazione | Adobe InDesign 15.0 (Macintosh) |
+| Creazione del file | 10 febbraio 2020, 13:34:29 +01:00 |
+| Ultima modifica del file | 29 luglio 2020, 11:16:53 +02:00 |
+| Occorrenze dell'anno 2021 nel testo stampato | nessuna |
+| Datazione stampata | le sole deliberazioni di approvazione del 2019 |
+
+Da qui derivano tre conseguenze documentarie.
+
+La prima: il file è anteriore di circa dieci mesi alla presentazione pubblica del 28 maggio 2021. La pubblicazione era dunque già impaginata nell'estate del 2020, e la presentazione del 2021 è un evento di diffusione, non di redazione.
+
+La seconda: la data del **29 maggio 2021** appartiene al PDF del comunicato stampa `COM-2021-05-REGOLAMENTO-001`, non al PDF del Regolamento. L'attribuzione della data di generazione del comunicato al volume del Regolamento, presente fino al 2 agosto 2026 nella pagina pubblica del Regolamento, era errata ed è stata corretta.
+
+La terza: «edizione 2021» resta una comodità di denominazione interna al progetto, riferita all'anno di presentazione. Non è una data recata dal documento e non deve essere usata come anno dell'edizione, che è il 2019.
+
+### 8.6.4 Provenienza della copia
+
+Il documento è una pubblicazione dell'Ufficio Palio del Comune di Siena, approvata con le deliberazioni del Consiglio Comunale n. 99 del 17 giugno 2019 e n. 224 del 28 novembre 2019. La copia in nostro possesso è stata reperita sul sito `ilpalio.org` e fornita dal curatore.
+
+Nella gerarchia delle fonti del progetto `ilpalio.org` è un archivio specialistico di terzi: vale per la scoperta e il recupero del materiale, non come autorità istituzionale automatica. Ne seguono due limiti che restano aperti:
+
+1. non è stata stabilita l'identità byte a byte fra questa copia e una copia pubblicata da un canale del Comune di Siena. Il digest registrato attesta l'integrità della copia acquisita, non la sua provenienza istituzionale;
+2. non è escluso che al Regolamento siano state apportate modifiche successive al 28 novembre 2019 non recepite in questo volume. La verifica presso il Comune di Siena resta aperta, come già dichiarato alla sezione 8.5.
+
+La collazione della sezione 8.6.2 dimostra che il testo pubblicato dal sito corrisponde a questa copia. Non dimostra che questa copia corrisponda al testo attualmente vigente.

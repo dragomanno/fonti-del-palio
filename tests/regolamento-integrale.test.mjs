@@ -208,3 +208,80 @@ test("l'articolato non è reso come blocco di codice né con residui di paginazi
   // Il corpo di ogni articolo è reso in capoversi, non in un blocco unico.
   assert.ok((corpo.match(/<p /g) ?? []).length >= 106);
 });
+
+// -------------------------------------------------- catena di provenienza
+
+/*
+ * Collazione integrale del 2 agosto 2026 fra il PDF REG-PALIO-2019 e la
+ * trascrizione canonica: 106 unita' su 106 coincidenti. Il PDF non e' versionato
+ * nel repository, quindi la collazione non e' rieseguibile in CI. Questi gate
+ * bloccano la regressione dei fatti che ne sono derivati, registrati in KB 12
+ * sezione 8.6 e in KB 04 alla scheda RP-2019-01.
+ */
+
+const KB04 = path.join(ROOT, "content", "kb", "04_KB_Manifest_Fonti_e_Registro_Atti_2012_2026.md");
+const KB12 = path.join(ROOT, "content", "carriere", "12_KB_Manifest_Generale_Fonti_del_Palio_2026.md");
+const kb04 = readFileSync(KB04, "utf-8");
+const kb12 = readFileSync(KB12, "utf-8");
+const schedaRP = kb04.slice(kb04.indexOf("### RP-2019-01"), kb04.indexOf("### RP-2021-02"));
+
+test("KB 04 rinvia alla trascrizione canonica esistente, non a un file inesistente", () => {
+  assert.match(schedaRP, /03_KB_Disciplina_Vigente_Consolidata_2026\.md/);
+  assert.match(schedaRP, /Parte III/);
+  // Il riferimento pendente non deve tornare come percorso di trascrizione.
+  assert.doesNotMatch(schedaRP, /\*\*Trascrizione:\*\*\s*`05_Regolamento/);
+  assert.ok(
+    !existsSync(path.join(ROOT, "content", "kb", "05_Regolamento_per_il_Palio_edizione_2021.md")),
+    "il file esiste: aggiornare la scheda RP-2019-01 invece di dichiararlo assente"
+  );
+});
+
+test("KB 04 registra il canale di acquisizione e i metadati interni del file", () => {
+  assert.match(schedaRP, /ilpalio\.org/);
+  assert.match(schedaRP, /InDesign 15\.0/);
+  assert.match(schedaRP, /10 febbraio 2020/);
+  assert.match(schedaRP, /29 luglio 2020/);
+  assert.match(schedaRP, /1\.988\.492/);
+  assert.ok(schedaRP.includes(SHA_REG_PALIO_2019));
+});
+
+test("KB 12 registra la collazione integrale e la provenienza della copia", () => {
+  assert.match(kb12, /^## 8\.6 Collazione integrale/m);
+  const sez = kb12.slice(kb12.indexOf("## 8.6 Collazione integrale"));
+  assert.match(sez, /106 su 106/);
+  assert.match(sez, /10 febbraio 2020/);
+  assert.match(sez, /29 luglio 2020/);
+  assert.match(sez, /ilpalio\.org/);
+  // La data del comunicato non deve tornare attribuita al volume.
+  assert.match(sez, /29 maggio 2021.*COM-2021-05-REGOLAMENTO-001/s);
+});
+
+test("KB 12 non dichiara piu' assente la collazione integrale del Regolamento", () => {
+  const limiti = kb12.slice(
+    kb12.indexOf("## 8.5 Cosa questa sezione non dimostra"),
+    kb12.indexOf("## 8.6 Collazione integrale")
+  );
+  assert.doesNotMatch(limiti, /^\d+\. Non equivale a una collazione integrale/m);
+  assert.match(limiti, /8\.6/);
+});
+
+test("la pagina non attribuisce al volume la data del comunicato", seDist, () => {
+  // Il 29 maggio 2021 e' la data di generazione del PDF del comunicato stampa.
+  // Se compare in pagina deve comparire come tale, non come data del volume.
+  const occorrenze = [...html.matchAll(/.{160}29 maggio 2021/g)].map((m) => m[0]);
+  for (const contesto of occorrenze) {
+    assert.match(
+      contesto,
+      /comunicato|COM-2021-05|attribuiva/,
+      `29 maggio 2021 attribuito al volume: ${contesto}`
+    );
+  }
+  assert.doesNotMatch(html, /PDF diffuso dall'Ufficio Palio reca la data di generazione/);
+});
+
+test("la pagina dichiara la collazione integrale e il canale di acquisizione", seDist, () => {
+  assert.match(html, /collazionato per intero/);
+  assert.match(html, /ilpalio\.org/);
+  assert.match(html, /non che il volume acquisito sia il testo\s+attualmente in vigore/);
+  assert.match(html, /10 febbraio 2020/);
+});

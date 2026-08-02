@@ -69742,13 +69742,13 @@
       ],
       "naturalId": "RP-2019-01",
       "startLine": 405,
-      "endLine": 419,
-      "contentHash": "sha256:f41bcf797bf3708bbd382b2a5825b397a18d289c08f5960304b625efb22d744e",
-      "reconstructedLineCount": 15,
+      "endLine": 423,
+      "contentHash": "sha256:c9f416e7685bb925a24923315054d82cab89aa3182c7378b1abe6b23165541c6",
+      "reconstructedLineCount": 19,
       "integrity": {
-        "contentHash": "sha256:f41bcf797bf3708bbd382b2a5825b397a18d289c08f5960304b625efb22d744e",
-        "hashComputedFrom": "kb04:405-419",
-        "reconstructedLineCount": 15
+        "contentHash": "sha256:c9f416e7685bb925a24923315054d82cab89aa3182c7378b1abe6b23165541c6",
+        "hashComputedFrom": "kb04:405-423",
+        "reconstructedLineCount": 19
       },
       "status": {
         "documentaryStatus": {
@@ -69764,7 +69764,7 @@
             "recordId": "RP-2019-01",
             "scope": "registro-fonti",
             "field": "Stato",
-            "line": 415,
+            "line": 416,
             "literal": "acquisito; verificare eventuali modifiche successive alla pubblicazione"
           },
           "inheritedFrom": null,
@@ -69783,7 +69783,7 @@
             "recordId": "RP-2019-01",
             "scope": "registro-fonti",
             "field": "Stato",
-            "line": 415,
+            "line": 416,
             "literal": "acquisito; verificare eventuali modifiche successive alla pubblicazione"
           },
           "inheritedFrom": null,
@@ -69840,13 +69840,13 @@
         "Comunicato di presentazione"
       ],
       "naturalId": "RP-2021-02",
-      "startLine": 420,
-      "endLine": 431,
+      "startLine": 424,
+      "endLine": 435,
       "contentHash": "sha256:9e41a5ff8a4aab883a9356d3ee9234d3af1a98923ec41c16a7ea308c3ac7c841",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:9e41a5ff8a4aab883a9356d3ee9234d3af1a98923ec41c16a7ea308c3ac7c841",
-        "hashComputedFrom": "kb04:420-431",
+        "hashComputedFrom": "kb04:424-435",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -69863,7 +69863,7 @@
             "recordId": "RP-2021-02",
             "scope": "registro-fonti",
             "field": "Stato",
-            "line": 430,
+            "line": 434,
             "literal": "fonte contestuale, non normativa"
           },
           "inheritedFrom": null,
@@ -69882,7 +69882,7 @@
             "recordId": "RP-2021-02",
             "scope": "registro-fonti",
             "field": "Stato",
-            "line": 430,
+            "line": 434,
             "literal": "fonte contestuale, non normativa"
           },
           "inheritedFrom": null,
@@ -69901,7 +69901,7 @@
             "recordId": "RP-2021-02",
             "scope": "registro-fonti",
             "field": null,
-            "line": 420,
+            "line": 424,
             "literal": null
           },
           "inheritedFrom": null,
@@ -69920,7 +69920,7 @@
             "recordId": "RP-2021-02",
             "scope": "registro-fonti",
             "field": null,
-            "line": 420,
+            "line": 424,
             "literal": null
           },
           "inheritedFrom": null,
@@ -69939,13 +69939,13 @@
         "atto del Presidente della Commissione"
       ],
       "naturalId": "ATT-2026-PROG-001",
-      "startLine": 473,
-      "endLine": 484,
+      "startLine": 477,
+      "endLine": 488,
       "contentHash": "sha256:41b936e3bf505ced25997df7543561967768480fa8c4ca6b51829db6e545c4f2",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:41b936e3bf505ced25997df7543561967768480fa8c4ca6b51829db6e545c4f2",
-        "hashComputedFrom": "kb04:473-484",
+        "hashComputedFrom": "kb04:477-488",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -69962,7 +69962,7 @@
             "recordId": "ATT-2026-PROG-001",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 481,
+            "line": 485,
             "literal": "metadati e calendario acquisiti dalla pagina ufficiale; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -69981,7 +69981,7 @@
             "recordId": "ATT-2026-PROG-001",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 479,
+            "line": 483,
             "literal": "programma 2026, soggetto a variazioni"
           },
           "inheritedFrom": null,
@@ -70000,7 +70000,7 @@
             "recordId": "ATT-2026-PROG-001",
             "scope": "registro-fonti",
             "field": null,
-            "line": 473,
+            "line": 477,
             "literal": null
           },
           "inheritedFrom": null,
@@ -70019,7 +70019,7 @@
             "recordId": "ATT-2026-PROG-001",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 481,
+            "line": 485,
             "literal": "metadati e calendario acquisiti dalla pagina ufficiale; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -70038,13 +70038,13 @@
         "Ordinanza sindacale n. 5"
       ],
       "naturalId": "ATT-2026-ORD-005",
-      "startLine": 485,
-      "endLine": 496,
+      "startLine": 489,
+      "endLine": 500,
       "contentHash": "sha256:697970d9f6c9ccad3f1cd8e2c3df2835a1011fdb58176ba6dbe28f59de892e9a",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:697970d9f6c9ccad3f1cd8e2c3df2835a1011fdb58176ba6dbe28f59de892e9a",
-        "hashComputedFrom": "kb04:485-496",
+        "hashComputedFrom": "kb04:489-500",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -70061,7 +70061,7 @@
             "recordId": "ATT-2026-ORD-005",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 493,
+            "line": 497,
             "literal": "scheda analitica integrale; PDF originale da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -70080,7 +70080,7 @@
             "recordId": "ATT-2026-ORD-005",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 491,
+            "line": 495,
             "literal": "vigente per la stagione 2026"
           },
           "inheritedFrom": null,
@@ -70099,7 +70099,7 @@
             "recordId": "ATT-2026-ORD-005",
             "scope": "registro-fonti",
             "field": null,
-            "line": 485,
+            "line": 489,
             "literal": null
           },
           "inheritedFrom": null,
@@ -70118,7 +70118,7 @@
             "recordId": "ATT-2026-ORD-005",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 493,
+            "line": 497,
             "literal": "scheda analitica integrale; PDF originale da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -70137,13 +70137,13 @@
         "Ordinanza sindacale n. 6"
       ],
       "naturalId": "ATT-2026-ORD-006",
-      "startLine": 497,
-      "endLine": 508,
+      "startLine": 501,
+      "endLine": 512,
       "contentHash": "sha256:56459b343f1705372f589369ea9bbeadefc2a0842bbb2bf2091c613fb97ab32f",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:56459b343f1705372f589369ea9bbeadefc2a0842bbb2bf2091c613fb97ab32f",
-        "hashComputedFrom": "kb04:497-508",
+        "hashComputedFrom": "kb04:501-512",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -70160,7 +70160,7 @@
             "recordId": "ATT-2026-ORD-006",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 505,
+            "line": 509,
             "literal": "scheda analitica e trascrizione strutturata; PDF originale da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -70179,7 +70179,7 @@
             "recordId": "ATT-2026-ORD-006",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 503,
+            "line": 507,
             "literal": "vigente per Protocollo Equino e Palii 2026"
           },
           "inheritedFrom": null,
@@ -70198,7 +70198,7 @@
             "recordId": "ATT-2026-ORD-006",
             "scope": "registro-fonti",
             "field": null,
-            "line": 497,
+            "line": 501,
             "literal": null
           },
           "inheritedFrom": null,
@@ -70217,7 +70217,7 @@
             "recordId": "ATT-2026-ORD-006",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 505,
+            "line": 509,
             "literal": "scheda analitica e trascrizione strutturata; PDF originale da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -70236,13 +70236,13 @@
         "provvedimento operativo Palio di luglio"
       ],
       "naturalId": "ATT-2026-PALIO-LUG",
-      "startLine": 509,
-      "endLine": 520,
+      "startLine": 513,
+      "endLine": 524,
       "contentHash": "sha256:c5842b380b4ca3db6dfba0cdb3089b2f36086625e39427abd56d1aed05b2825a",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:c5842b380b4ca3db6dfba0cdb3089b2f36086625e39427abd56d1aed05b2825a",
-        "hashComputedFrom": "kb04:509-520",
+        "hashComputedFrom": "kb04:513-524",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -70259,7 +70259,7 @@
             "recordId": "ATT-2026-PALIO-LUG",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 517,
+            "line": 521,
             "literal": "identificato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -70278,7 +70278,7 @@
             "recordId": "ATT-2026-PALIO-LUG",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 515,
+            "line": 519,
             "literal": "efficacia esaurita con il Palio di Provenzano 2026"
           },
           "inheritedFrom": null,
@@ -70297,7 +70297,7 @@
             "recordId": "ATT-2026-PALIO-LUG",
             "scope": "registro-fonti",
             "field": null,
-            "line": 509,
+            "line": 513,
             "literal": null
           },
           "inheritedFrom": null,
@@ -70316,7 +70316,7 @@
             "recordId": "ATT-2026-PALIO-LUG",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 517,
+            "line": 521,
             "literal": "identificato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -70335,13 +70335,13 @@
         "atto del Presidente della Commissione"
       ],
       "naturalId": "ATT-2025-PROG-001",
-      "startLine": 523,
-      "endLine": 534,
+      "startLine": 527,
+      "endLine": 538,
       "contentHash": "sha256:8344e0be79784a276e78bcc1997efc60cae26062a3a87319fa3194ace4d5b226",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:8344e0be79784a276e78bcc1997efc60cae26062a3a87319fa3194ace4d5b226",
-        "hashComputedFrom": "kb04:523-534",
+        "hashComputedFrom": "kb04:527-538",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -70358,7 +70358,7 @@
             "recordId": "ATT-2025-PROG-001",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 531,
+            "line": 535,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -70377,7 +70377,7 @@
             "recordId": "ATT-2025-PROG-001",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 529,
+            "line": 533,
             "literal": "programma annuale esaurito"
           },
           "inheritedFrom": null,
@@ -70396,7 +70396,7 @@
             "recordId": "ATT-2025-PROG-001",
             "scope": "registro-fonti",
             "field": null,
-            "line": 523,
+            "line": 527,
             "literal": null
           },
           "inheritedFrom": null,
@@ -70415,7 +70415,7 @@
             "recordId": "ATT-2025-PROG-001",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 531,
+            "line": 535,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -70434,13 +70434,13 @@
         "Ordinanza sindacale n. 2"
       ],
       "naturalId": "ATT-2025-ORD-002",
-      "startLine": 535,
-      "endLine": 546,
+      "startLine": 539,
+      "endLine": 550,
       "contentHash": "sha256:81f4e3e6ee03099c5c96e0b2d619e40c2122b29fe64f3a9cf0585d272f310564",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:81f4e3e6ee03099c5c96e0b2d619e40c2122b29fe64f3a9cf0585d272f310564",
-        "hashComputedFrom": "kb04:535-546",
+        "hashComputedFrom": "kb04:539-550",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -70457,7 +70457,7 @@
             "recordId": "ATT-2025-ORD-002",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 543,
+            "line": 547,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -70472,7 +70472,7 @@
             "recordId": "ATT-2025-ORD-002",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 541,
+            "line": 545,
             "literal": "efficacia annuale esaurita"
           },
           "inheritedFrom": null,
@@ -70491,7 +70491,7 @@
             "recordId": "ATT-2025-ORD-002",
             "scope": "registro-fonti",
             "field": null,
-            "line": 535,
+            "line": 539,
             "literal": null
           },
           "inheritedFrom": null,
@@ -70510,7 +70510,7 @@
             "recordId": "ATT-2025-ORD-002",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 543,
+            "line": 547,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -70529,13 +70529,13 @@
         "Ordinanza sindacale n. 3"
       ],
       "naturalId": "ATT-2025-ORD-003",
-      "startLine": 547,
-      "endLine": 558,
+      "startLine": 551,
+      "endLine": 562,
       "contentHash": "sha256:b8fb4e1c312bc0577a7a1c06b0758e99bd17d0739cf268ab1464002d724392cd",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:b8fb4e1c312bc0577a7a1c06b0758e99bd17d0739cf268ab1464002d724392cd",
-        "hashComputedFrom": "kb04:547-558",
+        "hashComputedFrom": "kb04:551-562",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -70552,7 +70552,7 @@
             "recordId": "ATT-2025-ORD-003",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 555,
+            "line": 559,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -70567,7 +70567,7 @@
             "recordId": "ATT-2025-ORD-003",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 553,
+            "line": 557,
             "literal": "efficacia annuale esaurita"
           },
           "inheritedFrom": null,
@@ -70586,7 +70586,7 @@
             "recordId": "ATT-2025-ORD-003",
             "scope": "registro-fonti",
             "field": null,
-            "line": 547,
+            "line": 551,
             "literal": null
           },
           "inheritedFrom": null,
@@ -70605,7 +70605,7 @@
             "recordId": "ATT-2025-ORD-003",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 555,
+            "line": 559,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -70624,13 +70624,13 @@
         "Decreto sindacale n. 2"
       ],
       "naturalId": "ATT-2025-DEC-002",
-      "startLine": 559,
-      "endLine": 570,
+      "startLine": 563,
+      "endLine": 574,
       "contentHash": "sha256:da32a174139ee1b01bbeb8bc6dc57a9f3d2aceafbdc7208f925995ab892bd909",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:da32a174139ee1b01bbeb8bc6dc57a9f3d2aceafbdc7208f925995ab892bd909",
-        "hashComputedFrom": "kb04:559-570",
+        "hashComputedFrom": "kb04:563-574",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -70647,7 +70647,7 @@
             "recordId": "ATT-2025-DEC-002",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 567,
+            "line": 571,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -70666,7 +70666,7 @@
             "recordId": "ATT-2025-DEC-002",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 565,
+            "line": 569,
             "literal": "incarico annuale esaurito"
           },
           "inheritedFrom": null,
@@ -70685,7 +70685,7 @@
             "recordId": "ATT-2025-DEC-002",
             "scope": "registro-fonti",
             "field": null,
-            "line": 559,
+            "line": 563,
             "literal": null
           },
           "inheritedFrom": null,
@@ -70704,7 +70704,7 @@
             "recordId": "ATT-2025-DEC-002",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 567,
+            "line": 571,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -70723,13 +70723,13 @@
         "Decreto sindacale n. 3"
       ],
       "naturalId": "ATT-2025-DEC-003",
-      "startLine": 571,
-      "endLine": 582,
+      "startLine": 575,
+      "endLine": 586,
       "contentHash": "sha256:4adfdab8808d8854d6032c1f3405ec83dc36d2d29de77024c57198486b5f08e1",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:4adfdab8808d8854d6032c1f3405ec83dc36d2d29de77024c57198486b5f08e1",
-        "hashComputedFrom": "kb04:571-582",
+        "hashComputedFrom": "kb04:575-586",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -70746,7 +70746,7 @@
             "recordId": "ATT-2025-DEC-003",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 579,
+            "line": 583,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -70765,7 +70765,7 @@
             "recordId": "ATT-2025-DEC-003",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 577,
+            "line": 581,
             "literal": "incarico annuale esaurito"
           },
           "inheritedFrom": null,
@@ -70784,7 +70784,7 @@
             "recordId": "ATT-2025-DEC-003",
             "scope": "registro-fonti",
             "field": null,
-            "line": 571,
+            "line": 575,
             "literal": null
           },
           "inheritedFrom": null,
@@ -70803,7 +70803,7 @@
             "recordId": "ATT-2025-DEC-003",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 579,
+            "line": 583,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -70822,13 +70822,13 @@
         "disciplinare"
       ],
       "naturalId": "ATT-2024-DISC-001",
-      "startLine": 585,
-      "endLine": 596,
+      "startLine": 589,
+      "endLine": 600,
       "contentHash": "sha256:9598b6b55db29131c033148f565aa57c3f8e7c58206167511b8f6d95afa9d417",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:9598b6b55db29131c033148f565aa57c3f8e7c58206167511b8f6d95afa9d417",
-        "hashComputedFrom": "kb04:585-596",
+        "hashComputedFrom": "kb04:589-600",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -70845,7 +70845,7 @@
             "recordId": "ATT-2024-DISC-001",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 593,
+            "line": 597,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -70864,7 +70864,7 @@
             "recordId": "ATT-2024-DISC-001",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 591,
+            "line": 595,
             "literal": "da verificare per eventuale riuso nel 2026"
           },
           "inheritedFrom": null,
@@ -70883,7 +70883,7 @@
             "recordId": "ATT-2024-DISC-001",
             "scope": "registro-fonti",
             "field": null,
-            "line": 585,
+            "line": 589,
             "literal": null
           },
           "inheritedFrom": null,
@@ -70902,7 +70902,7 @@
             "recordId": "ATT-2024-DISC-001",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 593,
+            "line": 597,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -70921,13 +70921,13 @@
         "Ordinanza sindacale n. 2"
       ],
       "naturalId": "ATT-2024-ORD-002",
-      "startLine": 597,
-      "endLine": 608,
+      "startLine": 601,
+      "endLine": 612,
       "contentHash": "sha256:a6012714198cf713d53a80180322c911340afefabdf031abfacbeb03b92b0a4f",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:a6012714198cf713d53a80180322c911340afefabdf031abfacbeb03b92b0a4f",
-        "hashComputedFrom": "kb04:597-608",
+        "hashComputedFrom": "kb04:601-612",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -70944,7 +70944,7 @@
             "recordId": "ATT-2024-ORD-002",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 605,
+            "line": 609,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -70959,7 +70959,7 @@
             "recordId": "ATT-2024-ORD-002",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 603,
+            "line": 607,
             "literal": "efficacia annuale esaurita"
           },
           "inheritedFrom": null,
@@ -70978,7 +70978,7 @@
             "recordId": "ATT-2024-ORD-002",
             "scope": "registro-fonti",
             "field": null,
-            "line": 597,
+            "line": 601,
             "literal": null
           },
           "inheritedFrom": null,
@@ -70997,7 +70997,7 @@
             "recordId": "ATT-2024-ORD-002",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 605,
+            "line": 609,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -71016,13 +71016,13 @@
         "Ordinanza sindacale n. 3"
       ],
       "naturalId": "ATT-2024-ORD-003",
-      "startLine": 609,
-      "endLine": 620,
+      "startLine": 613,
+      "endLine": 624,
       "contentHash": "sha256:89e09a9a6f505c067b548d5b13a04066e1001bd7a30cda5002762bc345f309b1",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:89e09a9a6f505c067b548d5b13a04066e1001bd7a30cda5002762bc345f309b1",
-        "hashComputedFrom": "kb04:609-620",
+        "hashComputedFrom": "kb04:613-624",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -71039,7 +71039,7 @@
             "recordId": "ATT-2024-ORD-003",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 617,
+            "line": 621,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -71054,7 +71054,7 @@
             "recordId": "ATT-2024-ORD-003",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 615,
+            "line": 619,
             "literal": "efficacia annuale esaurita"
           },
           "inheritedFrom": null,
@@ -71073,7 +71073,7 @@
             "recordId": "ATT-2024-ORD-003",
             "scope": "registro-fonti",
             "field": null,
-            "line": 609,
+            "line": 613,
             "literal": null
           },
           "inheritedFrom": null,
@@ -71092,7 +71092,7 @@
             "recordId": "ATT-2024-ORD-003",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 617,
+            "line": 621,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -71111,13 +71111,13 @@
         "prot. n. 9595"
       ],
       "naturalId": "ATT-2024-PROG-001",
-      "startLine": 621,
-      "endLine": 632,
+      "startLine": 625,
+      "endLine": 636,
       "contentHash": "sha256:2d6f87990d8b5f644ffbc3adfae13ede39747d56670863c635910ef03dd0d230",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:2d6f87990d8b5f644ffbc3adfae13ede39747d56670863c635910ef03dd0d230",
-        "hashComputedFrom": "kb04:621-632",
+        "hashComputedFrom": "kb04:625-636",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -71134,7 +71134,7 @@
             "recordId": "ATT-2024-PROG-001",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 629,
+            "line": 633,
             "literal": "testo identificato e indicizzato"
           },
           "inheritedFrom": null,
@@ -71153,7 +71153,7 @@
             "recordId": "ATT-2024-PROG-001",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 627,
+            "line": 631,
             "literal": "programma annuale esaurito"
           },
           "inheritedFrom": null,
@@ -71172,7 +71172,7 @@
             "recordId": "ATT-2024-PROG-001",
             "scope": "registro-fonti",
             "field": null,
-            "line": 621,
+            "line": 625,
             "literal": null
           },
           "inheritedFrom": null,
@@ -71191,7 +71191,7 @@
             "recordId": "ATT-2024-PROG-001",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 629,
+            "line": 633,
             "literal": "testo identificato e indicizzato"
           },
           "inheritedFrom": null,
@@ -71210,13 +71210,13 @@
         "Decreto sindacale n. 9"
       ],
       "naturalId": "ATT-2024-DEC-009",
-      "startLine": 633,
-      "endLine": 644,
+      "startLine": 637,
+      "endLine": 648,
       "contentHash": "sha256:f7178fb69e4bc00a900c61c12ca278cc3566100731f40608650b3cf38be06867",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:f7178fb69e4bc00a900c61c12ca278cc3566100731f40608650b3cf38be06867",
-        "hashComputedFrom": "kb04:633-644",
+        "hashComputedFrom": "kb04:637-648",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -71233,7 +71233,7 @@
             "recordId": "ATT-2024-DEC-009",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 641,
+            "line": 645,
             "literal": "testo identificato e indicizzato"
           },
           "inheritedFrom": null,
@@ -71252,7 +71252,7 @@
             "recordId": "ATT-2024-DEC-009",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 639,
+            "line": 643,
             "literal": "incarico annuale esaurito"
           },
           "inheritedFrom": null,
@@ -71271,7 +71271,7 @@
             "recordId": "ATT-2024-DEC-009",
             "scope": "registro-fonti",
             "field": null,
-            "line": 633,
+            "line": 637,
             "literal": null
           },
           "inheritedFrom": null,
@@ -71290,7 +71290,7 @@
             "recordId": "ATT-2024-DEC-009",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 641,
+            "line": 645,
             "literal": "testo identificato e indicizzato"
           },
           "inheritedFrom": null,
@@ -71309,13 +71309,13 @@
         "Decreto sindacale n. 10"
       ],
       "naturalId": "ATT-2024-DEC-010",
-      "startLine": 645,
-      "endLine": 656,
+      "startLine": 649,
+      "endLine": 660,
       "contentHash": "sha256:3625da95752fdb67ecbae4d9257fb4beb44c28c9e48c76f3561c28d7380ecb3e",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:3625da95752fdb67ecbae4d9257fb4beb44c28c9e48c76f3561c28d7380ecb3e",
-        "hashComputedFrom": "kb04:645-656",
+        "hashComputedFrom": "kb04:649-660",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -71332,7 +71332,7 @@
             "recordId": "ATT-2024-DEC-010",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 653,
+            "line": 657,
             "literal": "testo identificato e indicizzato"
           },
           "inheritedFrom": null,
@@ -71351,7 +71351,7 @@
             "recordId": "ATT-2024-DEC-010",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 651,
+            "line": 655,
             "literal": "incarico annuale esaurito"
           },
           "inheritedFrom": null,
@@ -71370,7 +71370,7 @@
             "recordId": "ATT-2024-DEC-010",
             "scope": "registro-fonti",
             "field": null,
-            "line": 645,
+            "line": 649,
             "literal": null
           },
           "inheritedFrom": null,
@@ -71389,7 +71389,7 @@
             "recordId": "ATT-2024-DEC-010",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 653,
+            "line": 657,
             "literal": "testo identificato e indicizzato"
           },
           "inheritedFrom": null,
@@ -71408,13 +71408,13 @@
         "Ordinanza sindacale n. 3"
       ],
       "naturalId": "ATT-2023-ORD-003",
-      "startLine": 659,
-      "endLine": 670,
+      "startLine": 663,
+      "endLine": 674,
       "contentHash": "sha256:0b09470bb6882acc5d5f40b9837e7d765a27efb669eb77a0fb1a248badd642fa",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:0b09470bb6882acc5d5f40b9837e7d765a27efb669eb77a0fb1a248badd642fa",
-        "hashComputedFrom": "kb04:659-670",
+        "hashComputedFrom": "kb04:663-674",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -71431,7 +71431,7 @@
             "recordId": "ATT-2023-ORD-003",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 667,
+            "line": 671,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -71446,7 +71446,7 @@
             "recordId": "ATT-2023-ORD-003",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 665,
+            "line": 669,
             "literal": "efficacia annuale esaurita"
           },
           "inheritedFrom": null,
@@ -71465,7 +71465,7 @@
             "recordId": "ATT-2023-ORD-003",
             "scope": "registro-fonti",
             "field": null,
-            "line": 659,
+            "line": 663,
             "literal": null
           },
           "inheritedFrom": null,
@@ -71484,7 +71484,7 @@
             "recordId": "ATT-2023-ORD-003",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 667,
+            "line": 671,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -71503,13 +71503,13 @@
         "Ordinanza sindacale n. 6"
       ],
       "naturalId": "ATT-2023-ORD-006",
-      "startLine": 671,
-      "endLine": 682,
+      "startLine": 675,
+      "endLine": 686,
       "contentHash": "sha256:d2133d07e8be8ddff7d7c59dd6a536a18860e400e8d14a918190fa553d0e4a5d",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:d2133d07e8be8ddff7d7c59dd6a536a18860e400e8d14a918190fa553d0e4a5d",
-        "hashComputedFrom": "kb04:671-682",
+        "hashComputedFrom": "kb04:675-686",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -71526,7 +71526,7 @@
             "recordId": "ATT-2023-ORD-006",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 679,
+            "line": 683,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -71541,7 +71541,7 @@
             "recordId": "ATT-2023-ORD-006",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 677,
+            "line": 681,
             "literal": "efficacia annuale esaurita"
           },
           "inheritedFrom": null,
@@ -71560,7 +71560,7 @@
             "recordId": "ATT-2023-ORD-006",
             "scope": "registro-fonti",
             "field": null,
-            "line": 671,
+            "line": 675,
             "literal": null
           },
           "inheritedFrom": null,
@@ -71579,7 +71579,7 @@
             "recordId": "ATT-2023-ORD-006",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 679,
+            "line": 683,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -71598,13 +71598,13 @@
         "Decreto sindacale n. 7"
       ],
       "naturalId": "ATT-2023-DEC-007",
-      "startLine": 683,
-      "endLine": 694,
+      "startLine": 687,
+      "endLine": 698,
       "contentHash": "sha256:dcdcfeea7213fdd305a550b02e08fe5544c8b97321954b3ad89388ae03044d1f",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:dcdcfeea7213fdd305a550b02e08fe5544c8b97321954b3ad89388ae03044d1f",
-        "hashComputedFrom": "kb04:683-694",
+        "hashComputedFrom": "kb04:687-698",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -71621,7 +71621,7 @@
             "recordId": "ATT-2023-DEC-007",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 691,
+            "line": 695,
             "literal": "titolo e metadati verificati sulla pagina ufficiale; URL diretto da recuperare"
           },
           "inheritedFrom": null,
@@ -71640,7 +71640,7 @@
             "recordId": "ATT-2023-DEC-007",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 689,
+            "line": 693,
             "literal": "incarico annuale esaurito"
           },
           "inheritedFrom": null,
@@ -71659,7 +71659,7 @@
             "recordId": "ATT-2023-DEC-007",
             "scope": "registro-fonti",
             "field": null,
-            "line": 683,
+            "line": 687,
             "literal": null
           },
           "inheritedFrom": null,
@@ -71678,7 +71678,7 @@
             "recordId": "ATT-2023-DEC-007",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 691,
+            "line": 695,
             "literal": "titolo e metadati verificati sulla pagina ufficiale; URL diretto da recuperare"
           },
           "inheritedFrom": null,
@@ -71697,13 +71697,13 @@
         "Decreto sindacale n. 8"
       ],
       "naturalId": "ATT-2023-DEC-008",
-      "startLine": 695,
-      "endLine": 706,
+      "startLine": 699,
+      "endLine": 710,
       "contentHash": "sha256:ce4327c81a7491a5be3acfa6e5f5cab883c90c5a0d312718e33c3a3251e381e3",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:ce4327c81a7491a5be3acfa6e5f5cab883c90c5a0d312718e33c3a3251e381e3",
-        "hashComputedFrom": "kb04:695-706",
+        "hashComputedFrom": "kb04:699-710",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -71720,7 +71720,7 @@
             "recordId": "ATT-2023-DEC-008",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 703,
+            "line": 707,
             "literal": "titolo e metadati verificati sulla pagina ufficiale; URL diretto da recuperare"
           },
           "inheritedFrom": null,
@@ -71739,7 +71739,7 @@
             "recordId": "ATT-2023-DEC-008",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 701,
+            "line": 705,
             "literal": "incarico annuale esaurito"
           },
           "inheritedFrom": null,
@@ -71758,7 +71758,7 @@
             "recordId": "ATT-2023-DEC-008",
             "scope": "registro-fonti",
             "field": null,
-            "line": 695,
+            "line": 699,
             "literal": null
           },
           "inheritedFrom": null,
@@ -71777,7 +71777,7 @@
             "recordId": "ATT-2023-DEC-008",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 703,
+            "line": 707,
             "literal": "titolo e metadati verificati sulla pagina ufficiale; URL diretto da recuperare"
           },
           "inheritedFrom": null,
@@ -71796,13 +71796,13 @@
         "Ordinanza sindacale n. 4"
       ],
       "naturalId": "ATT-2022-ORD-004",
-      "startLine": 709,
-      "endLine": 720,
+      "startLine": 713,
+      "endLine": 724,
       "contentHash": "sha256:cbce86748c8e7e3f809e5ed677a318373bfeb740c6c94d3bd843667d809a3d65",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:cbce86748c8e7e3f809e5ed677a318373bfeb740c6c94d3bd843667d809a3d65",
-        "hashComputedFrom": "kb04:709-720",
+        "hashComputedFrom": "kb04:713-724",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -71819,7 +71819,7 @@
             "recordId": "ATT-2022-ORD-004",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 717,
+            "line": 721,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -71834,7 +71834,7 @@
             "recordId": "ATT-2022-ORD-004",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 715,
+            "line": 719,
             "literal": "efficacia annuale esaurita"
           },
           "inheritedFrom": null,
@@ -71853,7 +71853,7 @@
             "recordId": "ATT-2022-ORD-004",
             "scope": "registro-fonti",
             "field": null,
-            "line": 709,
+            "line": 713,
             "literal": null
           },
           "inheritedFrom": null,
@@ -71872,7 +71872,7 @@
             "recordId": "ATT-2022-ORD-004",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 717,
+            "line": 721,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -71891,13 +71891,13 @@
         "Decreto sindacale n. 1"
       ],
       "naturalId": "ATT-2022-DEC-001",
-      "startLine": 721,
-      "endLine": 732,
+      "startLine": 725,
+      "endLine": 736,
       "contentHash": "sha256:4777800367e808f423ba905b8c1a8e92f0633d72f9d0777f90d2f0694169ded3",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:4777800367e808f423ba905b8c1a8e92f0633d72f9d0777f90d2f0694169ded3",
-        "hashComputedFrom": "kb04:721-732",
+        "hashComputedFrom": "kb04:725-736",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -71914,7 +71914,7 @@
             "recordId": "ATT-2022-DEC-001",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 729,
+            "line": 733,
             "literal": "titolo verificato; collegamento diretto sul portale non recuperato"
           },
           "inheritedFrom": null,
@@ -71933,7 +71933,7 @@
             "recordId": "ATT-2022-DEC-001",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 727,
+            "line": 731,
             "literal": "incarico annuale esaurito"
           },
           "inheritedFrom": null,
@@ -71952,7 +71952,7 @@
             "recordId": "ATT-2022-DEC-001",
             "scope": "registro-fonti",
             "field": null,
-            "line": 721,
+            "line": 725,
             "literal": null
           },
           "inheritedFrom": null,
@@ -71971,7 +71971,7 @@
             "recordId": "ATT-2022-DEC-001",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 729,
+            "line": 733,
             "literal": "titolo verificato; collegamento diretto sul portale non recuperato"
           },
           "inheritedFrom": null,
@@ -71990,13 +71990,13 @@
         "Decreto sindacale n. 2"
       ],
       "naturalId": "ATT-2022-DEC-002",
-      "startLine": 733,
-      "endLine": 744,
+      "startLine": 737,
+      "endLine": 748,
       "contentHash": "sha256:f20295259aa702845c0b72a0c8aa3a8f7646d3d090169cb8d9b825ed5944be68",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:f20295259aa702845c0b72a0c8aa3a8f7646d3d090169cb8d9b825ed5944be68",
-        "hashComputedFrom": "kb04:733-744",
+        "hashComputedFrom": "kb04:737-748",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -72013,7 +72013,7 @@
             "recordId": "ATT-2022-DEC-002",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 741,
+            "line": 745,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -72032,7 +72032,7 @@
             "recordId": "ATT-2022-DEC-002",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 739,
+            "line": 743,
             "literal": "incarico annuale esaurito"
           },
           "inheritedFrom": null,
@@ -72051,7 +72051,7 @@
             "recordId": "ATT-2022-DEC-002",
             "scope": "registro-fonti",
             "field": null,
-            "line": 733,
+            "line": 737,
             "literal": null
           },
           "inheritedFrom": null,
@@ -72070,7 +72070,7 @@
             "recordId": "ATT-2022-DEC-002",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 741,
+            "line": 745,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -72089,13 +72089,13 @@
         "Ordinanza sindacale n. 5"
       ],
       "naturalId": "ATT-2022-ORD-005",
-      "startLine": 745,
-      "endLine": 756,
+      "startLine": 749,
+      "endLine": 760,
       "contentHash": "sha256:778abc99de5b6d78654e6bbfc9b50f2ff704b2575052bf90a1156c269d665227",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:778abc99de5b6d78654e6bbfc9b50f2ff704b2575052bf90a1156c269d665227",
-        "hashComputedFrom": "kb04:745-756",
+        "hashComputedFrom": "kb04:749-760",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -72112,7 +72112,7 @@
             "recordId": "ATT-2022-ORD-005",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 753,
+            "line": 757,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -72127,7 +72127,7 @@
             "recordId": "ATT-2022-ORD-005",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 751,
+            "line": 755,
             "literal": "efficacia annuale esaurita"
           },
           "inheritedFrom": null,
@@ -72146,7 +72146,7 @@
             "recordId": "ATT-2022-ORD-005",
             "scope": "registro-fonti",
             "field": null,
-            "line": 745,
+            "line": 749,
             "literal": null
           },
           "inheritedFrom": null,
@@ -72165,7 +72165,7 @@
             "recordId": "ATT-2022-ORD-005",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 753,
+            "line": 757,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -72184,13 +72184,13 @@
         "Ordinanza sindacale n. 176"
       ],
       "naturalId": "ATT-2021-ORD-176",
-      "startLine": 759,
-      "endLine": 770,
+      "startLine": 763,
+      "endLine": 774,
       "contentHash": "sha256:5dbaa45f6d0e26c5fe0d34e4ada1afbb789984005b51a1ee75c789c6593fe46f",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:5dbaa45f6d0e26c5fe0d34e4ada1afbb789984005b51a1ee75c789c6593fe46f",
-        "hashComputedFrom": "kb04:759-770",
+        "hashComputedFrom": "kb04:763-774",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -72207,7 +72207,7 @@
             "recordId": "ATT-2021-ORD-176",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 767,
+            "line": 771,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -72222,7 +72222,7 @@
             "recordId": "ATT-2021-ORD-176",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 765,
+            "line": 769,
             "literal": "efficacia annuale esaurita"
           },
           "inheritedFrom": null,
@@ -72241,7 +72241,7 @@
             "recordId": "ATT-2021-ORD-176",
             "scope": "registro-fonti",
             "field": null,
-            "line": 759,
+            "line": 763,
             "literal": null
           },
           "inheritedFrom": null,
@@ -72260,7 +72260,7 @@
             "recordId": "ATT-2021-ORD-176",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 767,
+            "line": 771,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -72279,13 +72279,13 @@
         "Decreto sindacale n. 3"
       ],
       "naturalId": "ATT-2021-DEC-003",
-      "startLine": 771,
-      "endLine": 782,
+      "startLine": 775,
+      "endLine": 786,
       "contentHash": "sha256:fef37d7fa1d2f61d14893ad95b33946a9bf8cb5014c5f571dad3f0f27b86dcba",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:fef37d7fa1d2f61d14893ad95b33946a9bf8cb5014c5f571dad3f0f27b86dcba",
-        "hashComputedFrom": "kb04:771-782",
+        "hashComputedFrom": "kb04:775-786",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -72302,7 +72302,7 @@
             "recordId": "ATT-2021-DEC-003",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 779,
+            "line": 783,
             "literal": "titolo verificato; URL diretto non recuperato"
           },
           "inheritedFrom": null,
@@ -72321,7 +72321,7 @@
             "recordId": "ATT-2021-DEC-003",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 777,
+            "line": 781,
             "literal": "incarico annuale esaurito"
           },
           "inheritedFrom": null,
@@ -72340,7 +72340,7 @@
             "recordId": "ATT-2021-DEC-003",
             "scope": "registro-fonti",
             "field": null,
-            "line": 771,
+            "line": 775,
             "literal": null
           },
           "inheritedFrom": null,
@@ -72359,7 +72359,7 @@
             "recordId": "ATT-2021-DEC-003",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 779,
+            "line": 783,
             "literal": "titolo verificato; URL diretto non recuperato"
           },
           "inheritedFrom": null,
@@ -72378,13 +72378,13 @@
         "Decreto sindacale n. 4"
       ],
       "naturalId": "ATT-2021-DEC-004",
-      "startLine": 783,
-      "endLine": 794,
+      "startLine": 787,
+      "endLine": 798,
       "contentHash": "sha256:60be33379a800e7c6fce87928033fe337aca34099c9648518162d0b083014eda",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:60be33379a800e7c6fce87928033fe337aca34099c9648518162d0b083014eda",
-        "hashComputedFrom": "kb04:783-794",
+        "hashComputedFrom": "kb04:787-798",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -72401,7 +72401,7 @@
             "recordId": "ATT-2021-DEC-004",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 791,
+            "line": 795,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -72420,7 +72420,7 @@
             "recordId": "ATT-2021-DEC-004",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 789,
+            "line": 793,
             "literal": "incarico annuale esaurito"
           },
           "inheritedFrom": null,
@@ -72439,7 +72439,7 @@
             "recordId": "ATT-2021-DEC-004",
             "scope": "registro-fonti",
             "field": null,
-            "line": 783,
+            "line": 787,
             "literal": null
           },
           "inheritedFrom": null,
@@ -72458,7 +72458,7 @@
             "recordId": "ATT-2021-DEC-004",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 791,
+            "line": 795,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -72477,13 +72477,13 @@
         "Ordinanza sindacale n. 5"
       ],
       "naturalId": "ATT-2021-ORD-005",
-      "startLine": 795,
-      "endLine": 806,
+      "startLine": 799,
+      "endLine": 810,
       "contentHash": "sha256:1054b725878ed1cfcfad763f8758a6e3374abfd9b70db8ff8c31dba6c006252d",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:1054b725878ed1cfcfad763f8758a6e3374abfd9b70db8ff8c31dba6c006252d",
-        "hashComputedFrom": "kb04:795-806",
+        "hashComputedFrom": "kb04:799-810",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -72500,7 +72500,7 @@
             "recordId": "ATT-2021-ORD-005",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 803,
+            "line": 807,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -72515,7 +72515,7 @@
             "recordId": "ATT-2021-ORD-005",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 801,
+            "line": 805,
             "literal": "efficacia annuale esaurita"
           },
           "inheritedFrom": null,
@@ -72534,7 +72534,7 @@
             "recordId": "ATT-2021-ORD-005",
             "scope": "registro-fonti",
             "field": null,
-            "line": 795,
+            "line": 799,
             "literal": null
           },
           "inheritedFrom": null,
@@ -72553,7 +72553,7 @@
             "recordId": "ATT-2021-ORD-005",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 803,
+            "line": 807,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -72572,13 +72572,13 @@
         "Ordinanza sindacale n. 12"
       ],
       "naturalId": "ATT-2021-ORD-012",
-      "startLine": 807,
-      "endLine": 818,
+      "startLine": 811,
+      "endLine": 822,
       "contentHash": "sha256:266b55c6e1022b28699d2e14beb7ac4b3e70894b8b5674913e445ade8b3a39fe",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:266b55c6e1022b28699d2e14beb7ac4b3e70894b8b5674913e445ade8b3a39fe",
-        "hashComputedFrom": "kb04:807-818",
+        "hashComputedFrom": "kb04:811-822",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -72595,7 +72595,7 @@
             "recordId": "ATT-2021-ORD-012",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 815,
+            "line": 819,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -72610,7 +72610,7 @@
             "recordId": "ATT-2021-ORD-012",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 813,
+            "line": 817,
             "literal": "efficacia esaurita"
           },
           "inheritedFrom": null,
@@ -72629,7 +72629,7 @@
             "recordId": "ATT-2021-ORD-012",
             "scope": "registro-fonti",
             "field": null,
-            "line": 807,
+            "line": 811,
             "literal": null
           },
           "inheritedFrom": null,
@@ -72648,7 +72648,7 @@
             "recordId": "ATT-2021-ORD-012",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 815,
+            "line": 819,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -72667,13 +72667,13 @@
         "Ordinanza sindacale n. 13"
       ],
       "naturalId": "ATT-2021-ORD-013",
-      "startLine": 819,
-      "endLine": 830,
+      "startLine": 823,
+      "endLine": 834,
       "contentHash": "sha256:036cefd2c9251f67178c61f93cbbab4b020e473ceee6ab5b626b166300c23c91",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:036cefd2c9251f67178c61f93cbbab4b020e473ceee6ab5b626b166300c23c91",
-        "hashComputedFrom": "kb04:819-830",
+        "hashComputedFrom": "kb04:823-834",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -72690,7 +72690,7 @@
             "recordId": "ATT-2021-ORD-013",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 827,
+            "line": 831,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -72705,7 +72705,7 @@
             "recordId": "ATT-2021-ORD-013",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 825,
+            "line": 829,
             "literal": "efficacia esaurita"
           },
           "inheritedFrom": null,
@@ -72724,7 +72724,7 @@
             "recordId": "ATT-2021-ORD-013",
             "scope": "registro-fonti",
             "field": null,
-            "line": 819,
+            "line": 823,
             "literal": null
           },
           "inheritedFrom": null,
@@ -72743,7 +72743,7 @@
             "recordId": "ATT-2021-ORD-013",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 827,
+            "line": 831,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -72762,13 +72762,13 @@
         "Ordinanza sindacale n. 18"
       ],
       "naturalId": "ATT-2021-ORD-018",
-      "startLine": 831,
-      "endLine": 842,
+      "startLine": 835,
+      "endLine": 846,
       "contentHash": "sha256:09622a06a1a28e1b2a1b4977d51d91bf5b9e4f4b983fef8d63735dca2a807198",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:09622a06a1a28e1b2a1b4977d51d91bf5b9e4f4b983fef8d63735dca2a807198",
-        "hashComputedFrom": "kb04:831-842",
+        "hashComputedFrom": "kb04:835-846",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -72785,7 +72785,7 @@
             "recordId": "ATT-2021-ORD-018",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 839,
+            "line": 843,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -72800,7 +72800,7 @@
             "recordId": "ATT-2021-ORD-018",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 837,
+            "line": 841,
             "literal": "efficacia esaurita"
           },
           "inheritedFrom": null,
@@ -72819,7 +72819,7 @@
             "recordId": "ATT-2021-ORD-018",
             "scope": "registro-fonti",
             "field": null,
-            "line": 831,
+            "line": 835,
             "literal": null
           },
           "inheritedFrom": null,
@@ -72838,7 +72838,7 @@
             "recordId": "ATT-2021-ORD-018",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 839,
+            "line": 843,
             "literal": "indicizzato; PDF da acquisire localmente"
           },
           "inheritedFrom": null,
@@ -72857,13 +72857,13 @@
         "estremi da verificare"
       ],
       "naturalId": "LEG-2020-COLL-VET",
-      "startLine": 845,
-      "endLine": 856,
+      "startLine": 849,
+      "endLine": 860,
       "contentHash": "sha256:2b59eb7c91ef704b683e2b929d6ec6c4ac15cced27bbe2f55a88c0009ff08213",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:2b59eb7c91ef704b683e2b929d6ec6c4ac15cced27bbe2f55a88c0009ff08213",
-        "hashComputedFrom": "kb04:845-856",
+        "hashComputedFrom": "kb04:849-860",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -72880,7 +72880,7 @@
             "recordId": "LEG-2020-COLL-VET",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 853,
+            "line": 857,
             "literal": "URL diretto identificato; PDF non trasferito nel pacchetto"
           },
           "inheritedFrom": null,
@@ -72899,7 +72899,7 @@
             "recordId": "LEG-2020-COLL-VET",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 851,
+            "line": 855,
             "literal": "incarico storico esaurito"
           },
           "inheritedFrom": null,
@@ -72918,7 +72918,7 @@
             "recordId": "LEG-2020-COLL-VET",
             "scope": "registro-fonti",
             "field": null,
-            "line": 845,
+            "line": 849,
             "literal": null
           },
           "inheritedFrom": null,
@@ -72937,7 +72937,7 @@
             "recordId": "LEG-2020-COLL-VET",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 853,
+            "line": 857,
             "literal": "URL diretto identificato; PDF non trasferito nel pacchetto"
           },
           "inheritedFrom": null,
@@ -72956,13 +72956,13 @@
         "estremi da verificare"
       ],
       "naturalId": "LEG-2020-COMM-COLL",
-      "startLine": 857,
-      "endLine": 868,
+      "startLine": 861,
+      "endLine": 872,
       "contentHash": "sha256:6efce29236572e54ecfb109e63887d7651fb6756399f530d75b73a2f923fa712",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:6efce29236572e54ecfb109e63887d7651fb6756399f530d75b73a2f923fa712",
-        "hashComputedFrom": "kb04:857-868",
+        "hashComputedFrom": "kb04:861-872",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -72979,7 +72979,7 @@
             "recordId": "LEG-2020-COMM-COLL",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 865,
+            "line": 869,
             "literal": "URL diretto identificato; PDF non trasferito nel pacchetto"
           },
           "inheritedFrom": null,
@@ -72998,7 +72998,7 @@
             "recordId": "LEG-2020-COMM-COLL",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 863,
+            "line": 867,
             "literal": "incarico storico esaurito"
           },
           "inheritedFrom": null,
@@ -73017,7 +73017,7 @@
             "recordId": "LEG-2020-COMM-COLL",
             "scope": "registro-fonti",
             "field": null,
-            "line": 857,
+            "line": 861,
             "literal": null
           },
           "inheritedFrom": null,
@@ -73036,7 +73036,7 @@
             "recordId": "LEG-2020-COMM-COLL",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 865,
+            "line": 869,
             "literal": "URL diretto identificato; PDF non trasferito nel pacchetto"
           },
           "inheritedFrom": null,
@@ -73055,13 +73055,13 @@
         "estremi da verificare"
       ],
       "naturalId": "LEG-2020-COMM-TECH",
-      "startLine": 869,
-      "endLine": 880,
+      "startLine": 873,
+      "endLine": 884,
       "contentHash": "sha256:c536907b17698e6e6a697375ce34244c94dac4e167a078d2add103907213ae76",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:c536907b17698e6e6a697375ce34244c94dac4e167a078d2add103907213ae76",
-        "hashComputedFrom": "kb04:869-880",
+        "hashComputedFrom": "kb04:873-884",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -73078,7 +73078,7 @@
             "recordId": "LEG-2020-COMM-TECH",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 877,
+            "line": 881,
             "literal": "URL diretto identificato; PDF non trasferito nel pacchetto"
           },
           "inheritedFrom": null,
@@ -73097,7 +73097,7 @@
             "recordId": "LEG-2020-COMM-TECH",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 875,
+            "line": 879,
             "literal": "incarico storico esaurito"
           },
           "inheritedFrom": null,
@@ -73116,7 +73116,7 @@
             "recordId": "LEG-2020-COMM-TECH",
             "scope": "registro-fonti",
             "field": null,
-            "line": 869,
+            "line": 873,
             "literal": null
           },
           "inheritedFrom": null,
@@ -73135,7 +73135,7 @@
             "recordId": "LEG-2020-COMM-TECH",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 877,
+            "line": 881,
             "literal": "URL diretto identificato; PDF non trasferito nel pacchetto"
           },
           "inheritedFrom": null,
@@ -73154,13 +73154,13 @@
         "estremi da verificare"
       ],
       "naturalId": "LEG-2020-ORD-OPER",
-      "startLine": 881,
-      "endLine": 892,
+      "startLine": 885,
+      "endLine": 896,
       "contentHash": "sha256:810230be155a6adaf61cb90f2783a974652604d867730722054679e02a82c018",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:810230be155a6adaf61cb90f2783a974652604d867730722054679e02a82c018",
-        "hashComputedFrom": "kb04:881-892",
+        "hashComputedFrom": "kb04:885-896",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -73177,7 +73177,7 @@
             "recordId": "LEG-2020-ORD-OPER",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 889,
+            "line": 893,
             "literal": "esistenza verificata nell'indice annuale; numero, data e PDF diretto da recuperare"
           },
           "inheritedFrom": null,
@@ -73192,7 +73192,7 @@
             "recordId": "LEG-2020-ORD-OPER",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 887,
+            "line": 891,
             "literal": "efficacia annuale esaurita"
           },
           "inheritedFrom": null,
@@ -73211,7 +73211,7 @@
             "recordId": "LEG-2020-ORD-OPER",
             "scope": "registro-fonti",
             "field": null,
-            "line": 881,
+            "line": 885,
             "literal": null
           },
           "inheritedFrom": null,
@@ -73230,7 +73230,7 @@
             "recordId": "LEG-2020-ORD-OPER",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 889,
+            "line": 893,
             "literal": "esistenza verificata nell'indice annuale; numero, data e PDF diretto da recuperare"
           },
           "inheritedFrom": null,
@@ -73249,13 +73249,13 @@
         "estremi da verificare"
       ],
       "naturalId": "LEG-2020-ULTER-PROF",
-      "startLine": 893,
-      "endLine": 904,
+      "startLine": 897,
+      "endLine": 908,
       "contentHash": "sha256:7b758aa5cbbf914b910025f13853e0316a846ed0b052ae463e311a1ee134856d",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:7b758aa5cbbf914b910025f13853e0316a846ed0b052ae463e311a1ee134856d",
-        "hashComputedFrom": "kb04:893-904",
+        "hashComputedFrom": "kb04:897-908",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -73272,7 +73272,7 @@
             "recordId": "LEG-2020-ULTER-PROF",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 901,
+            "line": 905,
             "literal": "URL diretto identificato; PDF non trasferito nel pacchetto"
           },
           "inheritedFrom": null,
@@ -73291,7 +73291,7 @@
             "recordId": "LEG-2020-ULTER-PROF",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 899,
+            "line": 903,
             "literal": "incarico storico esaurito"
           },
           "inheritedFrom": null,
@@ -73310,7 +73310,7 @@
             "recordId": "LEG-2020-ULTER-PROF",
             "scope": "registro-fonti",
             "field": null,
-            "line": 893,
+            "line": 897,
             "literal": null
           },
           "inheritedFrom": null,
@@ -73329,7 +73329,7 @@
             "recordId": "LEG-2020-ULTER-PROF",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 901,
+            "line": 905,
             "literal": "URL diretto identificato; PDF non trasferito nel pacchetto"
           },
           "inheritedFrom": null,
@@ -73348,13 +73348,13 @@
         "estremi da verificare"
       ],
       "naturalId": "LEG-2020-VET-MUN",
-      "startLine": 905,
-      "endLine": 916,
+      "startLine": 909,
+      "endLine": 920,
       "contentHash": "sha256:6c7ba78166d76fadbce4fb33135fdb9c81125e141294f79cc400800858bb63b1",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:6c7ba78166d76fadbce4fb33135fdb9c81125e141294f79cc400800858bb63b1",
-        "hashComputedFrom": "kb04:905-916",
+        "hashComputedFrom": "kb04:909-920",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -73371,7 +73371,7 @@
             "recordId": "LEG-2020-VET-MUN",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 913,
+            "line": 917,
             "literal": "URL diretto identificato; PDF non trasferito nel pacchetto"
           },
           "inheritedFrom": null,
@@ -73390,7 +73390,7 @@
             "recordId": "LEG-2020-VET-MUN",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 911,
+            "line": 915,
             "literal": "incarico storico esaurito"
           },
           "inheritedFrom": null,
@@ -73409,7 +73409,7 @@
             "recordId": "LEG-2020-VET-MUN",
             "scope": "registro-fonti",
             "field": null,
-            "line": 905,
+            "line": 909,
             "literal": null
           },
           "inheritedFrom": null,
@@ -73428,7 +73428,7 @@
             "recordId": "LEG-2020-VET-MUN",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 913,
+            "line": 917,
             "literal": "URL diretto identificato; PDF non trasferito nel pacchetto"
           },
           "inheritedFrom": null,
@@ -73447,13 +73447,13 @@
         "estremi da verificare"
       ],
       "naturalId": "LEG-2019-ORD-OPER",
-      "startLine": 919,
-      "endLine": 930,
+      "startLine": 923,
+      "endLine": 934,
       "contentHash": "sha256:7974787ff8bd18a87793624844a1b976bd65a3e2ad67acd514b178e6386f0748",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:7974787ff8bd18a87793624844a1b976bd65a3e2ad67acd514b178e6386f0748",
-        "hashComputedFrom": "kb04:919-930",
+        "hashComputedFrom": "kb04:923-934",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -73470,7 +73470,7 @@
             "recordId": "LEG-2019-ORD-OPER",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 927,
+            "line": 931,
             "literal": "esistenza verificata nell'indice annuale; numero, data e PDF diretto da recuperare"
           },
           "inheritedFrom": null,
@@ -73485,7 +73485,7 @@
             "recordId": "LEG-2019-ORD-OPER",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 925,
+            "line": 929,
             "literal": "efficacia annuale esaurita"
           },
           "inheritedFrom": null,
@@ -73504,7 +73504,7 @@
             "recordId": "LEG-2019-ORD-OPER",
             "scope": "registro-fonti",
             "field": null,
-            "line": 919,
+            "line": 923,
             "literal": null
           },
           "inheritedFrom": null,
@@ -73523,7 +73523,7 @@
             "recordId": "LEG-2019-ORD-OPER",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 927,
+            "line": 931,
             "literal": "esistenza verificata nell'indice annuale; numero, data e PDF diretto da recuperare"
           },
           "inheritedFrom": null,
@@ -73542,13 +73542,13 @@
         "estremi da verificare"
       ],
       "naturalId": "LEG-2019-RIMB-CAV",
-      "startLine": 931,
-      "endLine": 942,
+      "startLine": 935,
+      "endLine": 946,
       "contentHash": "sha256:84992cc87493f73210f231c1bcb2fef01473897a2aa890fd9429171402e5de17",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:84992cc87493f73210f231c1bcb2fef01473897a2aa890fd9429171402e5de17",
-        "hashComputedFrom": "kb04:931-942",
+        "hashComputedFrom": "kb04:935-946",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -73565,7 +73565,7 @@
             "recordId": "LEG-2019-RIMB-CAV",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 939,
+            "line": 943,
             "literal": "URL diretto identificato; PDF non trasferito nel pacchetto"
           },
           "inheritedFrom": null,
@@ -73580,7 +73580,7 @@
             "recordId": "LEG-2019-RIMB-CAV",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 937,
+            "line": 941,
             "literal": "efficacia annuale esaurita"
           },
           "inheritedFrom": null,
@@ -73599,7 +73599,7 @@
             "recordId": "LEG-2019-RIMB-CAV",
             "scope": "registro-fonti",
             "field": null,
-            "line": 931,
+            "line": 935,
             "literal": null
           },
           "inheritedFrom": null,
@@ -73618,7 +73618,7 @@
             "recordId": "LEG-2019-RIMB-CAV",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 939,
+            "line": 943,
             "literal": "URL diretto identificato; PDF non trasferito nel pacchetto"
           },
           "inheritedFrom": null,
@@ -73637,13 +73637,13 @@
         "estremi da verificare"
       ],
       "naturalId": "LEG-2019-SPER-3738",
-      "startLine": 943,
-      "endLine": 954,
+      "startLine": 947,
+      "endLine": 958,
       "contentHash": "sha256:0fb14932274892b21f3ee0cfe8159c6e5524ca3df7a29eb8e26e4ff4d63381da",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:0fb14932274892b21f3ee0cfe8159c6e5524ca3df7a29eb8e26e4ff4d63381da",
-        "hashComputedFrom": "kb04:943-954",
+        "hashComputedFrom": "kb04:947-958",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -73660,7 +73660,7 @@
             "recordId": "LEG-2019-SPER-3738",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 951,
+            "line": 955,
             "literal": "URL diretto identificato; PDF non trasferito nel pacchetto"
           },
           "inheritedFrom": null,
@@ -73679,7 +73679,7 @@
             "recordId": "LEG-2019-SPER-3738",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 949,
+            "line": 953,
             "literal": "efficacia sperimentale storica"
           },
           "inheritedFrom": null,
@@ -73698,7 +73698,7 @@
             "recordId": "LEG-2019-SPER-3738",
             "scope": "registro-fonti",
             "field": null,
-            "line": 943,
+            "line": 947,
             "literal": null
           },
           "inheritedFrom": null,
@@ -73717,7 +73717,7 @@
             "recordId": "LEG-2019-SPER-3738",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 951,
+            "line": 955,
             "literal": "URL diretto identificato; PDF non trasferito nel pacchetto"
           },
           "inheritedFrom": null,
@@ -73736,13 +73736,13 @@
         "estremi da verificare"
       ],
       "naturalId": "LEG-2018-GAP",
-      "startLine": 957,
-      "endLine": 968,
+      "startLine": 961,
+      "endLine": 972,
       "contentHash": "sha256:2423c6f427852dfc0ca06fda7bb6b767b981fdf595f984e4546f10b6b1a1cc31",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:2423c6f427852dfc0ca06fda7bb6b767b981fdf595f984e4546f10b6b1a1cc31",
-        "hashComputedFrom": "kb04:957-968",
+        "hashComputedFrom": "kb04:961-972",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -73759,7 +73759,7 @@
             "recordId": "LEG-2018-GAP",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 965,
+            "line": 969,
             "literal": "ricerca nell'Albo Pretorio e negli archivi da completare"
           },
           "inheritedFrom": null,
@@ -73778,7 +73778,7 @@
             "recordId": "LEG-2018-GAP",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 963,
+            "line": 967,
             "literal": "efficacia storica esaurita"
           },
           "inheritedFrom": null,
@@ -73797,7 +73797,7 @@
             "recordId": "LEG-2018-GAP",
             "scope": "registro-fonti",
             "field": null,
-            "line": 957,
+            "line": 961,
             "literal": null
           },
           "inheritedFrom": null,
@@ -73816,7 +73816,7 @@
             "recordId": "LEG-2018-GAP",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 965,
+            "line": 969,
             "literal": "ricerca nell'Albo Pretorio e negli archivi da completare"
           },
           "inheritedFrom": null,
@@ -73835,13 +73835,13 @@
         "Ordinanza sindacale n. 40"
       ],
       "naturalId": "LEG-2017-ORD-040",
-      "startLine": 971,
-      "endLine": 982,
+      "startLine": 975,
+      "endLine": 986,
       "contentHash": "sha256:abd8b02930f49da46cf45456142afd0d505679be93cba056084ce7c7f41449fa",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:abd8b02930f49da46cf45456142afd0d505679be93cba056084ce7c7f41449fa",
-        "hashComputedFrom": "kb04:971-982",
+        "hashComputedFrom": "kb04:975-986",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -73858,7 +73858,7 @@
             "recordId": "LEG-2017-ORD-040",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 979,
+            "line": 983,
             "literal": "URL diretto identificato; PDF non trasferito nel pacchetto"
           },
           "inheritedFrom": null,
@@ -73877,7 +73877,7 @@
             "recordId": "LEG-2017-ORD-040",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 977,
+            "line": 981,
             "literal": "efficacia storica collegata al Palio di luglio 2017"
           },
           "inheritedFrom": null,
@@ -73896,7 +73896,7 @@
             "recordId": "LEG-2017-ORD-040",
             "scope": "registro-fonti",
             "field": null,
-            "line": 971,
+            "line": 975,
             "literal": null
           },
           "inheritedFrom": null,
@@ -73915,7 +73915,7 @@
             "recordId": "LEG-2017-ORD-040",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 979,
+            "line": 983,
             "literal": "URL diretto identificato; PDF non trasferito nel pacchetto"
           },
           "inheritedFrom": null,
@@ -73934,13 +73934,13 @@
         "Deliberazione G.C. n. 62"
       ],
       "naturalId": "LEG-2016-COR",
-      "startLine": 985,
-      "endLine": 996,
+      "startLine": 989,
+      "endLine": 1000,
       "contentHash": "sha256:efd0dc004ab35d0040785d1b6c4117e3aa57c095c2b3e3bd76558fea727190c4",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:efd0dc004ab35d0040785d1b6c4117e3aa57c095c2b3e3bd76558fea727190c4",
-        "hashComputedFrom": "kb04:985-996",
+        "hashComputedFrom": "kb04:989-1000",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -73957,7 +73957,7 @@
             "recordId": "LEG-2016-COR",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 993,
+            "line": 997,
             "literal": "PDF presente nel corpus principale"
           },
           "inheritedFrom": null,
@@ -73976,7 +73976,7 @@
             "recordId": "LEG-2016-COR",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 991,
+            "line": 995,
             "literal": "efficacia storica esaurita"
           },
           "inheritedFrom": null,
@@ -73995,7 +73995,7 @@
             "recordId": "LEG-2016-COR",
             "scope": "registro-fonti",
             "field": null,
-            "line": 985,
+            "line": 989,
             "literal": null
           },
           "inheritedFrom": null,
@@ -74014,7 +74014,7 @@
             "recordId": "LEG-2016-COR",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 993,
+            "line": 997,
             "literal": "PDF presente nel corpus principale"
           },
           "inheritedFrom": null,
@@ -74033,13 +74033,13 @@
         "estremi da verificare"
       ],
       "naturalId": "LEG-2015-GAP",
-      "startLine": 999,
-      "endLine": 1010,
+      "startLine": 1003,
+      "endLine": 1014,
       "contentHash": "sha256:ccd933ce8fddc0f31da9550f137e17443cca5650c7c01c8bbc0c7e16008eb2e6",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:ccd933ce8fddc0f31da9550f137e17443cca5650c7c01c8bbc0c7e16008eb2e6",
-        "hashComputedFrom": "kb04:999-1010",
+        "hashComputedFrom": "kb04:1003-1014",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -74056,7 +74056,7 @@
             "recordId": "LEG-2015-GAP",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 1007,
+            "line": 1011,
             "literal": "ricerca nell'Albo Pretorio e negli archivi da completare"
           },
           "inheritedFrom": null,
@@ -74075,7 +74075,7 @@
             "recordId": "LEG-2015-GAP",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 1005,
+            "line": 1009,
             "literal": "efficacia storica esaurita"
           },
           "inheritedFrom": null,
@@ -74094,7 +74094,7 @@
             "recordId": "LEG-2015-GAP",
             "scope": "registro-fonti",
             "field": null,
-            "line": 999,
+            "line": 1003,
             "literal": null
           },
           "inheritedFrom": null,
@@ -74113,7 +74113,7 @@
             "recordId": "LEG-2015-GAP",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 1007,
+            "line": 1011,
             "literal": "ricerca nell'Albo Pretorio e negli archivi da completare"
           },
           "inheritedFrom": null,
@@ -74132,13 +74132,13 @@
         "Deliberazione G.C. n. 133"
       ],
       "naturalId": "LEG-2014-MOD",
-      "startLine": 1013,
-      "endLine": 1024,
+      "startLine": 1017,
+      "endLine": 1028,
       "contentHash": "sha256:24313ef6be4168182181cb11a9231911be77322a8616bcfb50825eb34bd6ccac",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:24313ef6be4168182181cb11a9231911be77322a8616bcfb50825eb34bd6ccac",
-        "hashComputedFrom": "kb04:1013-1024",
+        "hashComputedFrom": "kb04:1017-1028",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -74155,7 +74155,7 @@
             "recordId": "LEG-2014-MOD",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 1021,
+            "line": 1025,
             "literal": "PDF presente nel corpus principale"
           },
           "inheritedFrom": null,
@@ -74174,7 +74174,7 @@
             "recordId": "LEG-2014-MOD",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 1019,
+            "line": 1023,
             "literal": "efficacia storica esaurita"
           },
           "inheritedFrom": null,
@@ -74193,7 +74193,7 @@
             "recordId": "LEG-2014-MOD",
             "scope": "registro-fonti",
             "field": null,
-            "line": 1013,
+            "line": 1017,
             "literal": null
           },
           "inheritedFrom": null,
@@ -74212,7 +74212,7 @@
             "recordId": "LEG-2014-MOD",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 1021,
+            "line": 1025,
             "literal": "PDF presente nel corpus principale"
           },
           "inheritedFrom": null,
@@ -74231,13 +74231,13 @@
         "estremi da verificare"
       ],
       "naturalId": "LEG-2013-GAP",
-      "startLine": 1027,
-      "endLine": 1038,
+      "startLine": 1031,
+      "endLine": 1042,
       "contentHash": "sha256:835c7171b1646813576f6b00aeef7288c73a2a7596885054dae41ae835207d34",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:835c7171b1646813576f6b00aeef7288c73a2a7596885054dae41ae835207d34",
-        "hashComputedFrom": "kb04:1027-1038",
+        "hashComputedFrom": "kb04:1031-1042",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -74254,7 +74254,7 @@
             "recordId": "LEG-2013-GAP",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 1035,
+            "line": 1039,
             "literal": "ricerca nell'Albo Pretorio e negli archivi da completare"
           },
           "inheritedFrom": null,
@@ -74273,7 +74273,7 @@
             "recordId": "LEG-2013-GAP",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 1033,
+            "line": 1037,
             "literal": "efficacia storica esaurita"
           },
           "inheritedFrom": null,
@@ -74292,7 +74292,7 @@
             "recordId": "LEG-2013-GAP",
             "scope": "registro-fonti",
             "field": null,
-            "line": 1027,
+            "line": 1031,
             "literal": null
           },
           "inheritedFrom": null,
@@ -74311,7 +74311,7 @@
             "recordId": "LEG-2013-GAP",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 1035,
+            "line": 1039,
             "literal": "ricerca nell'Albo Pretorio e negli archivi da completare"
           },
           "inheritedFrom": null,
@@ -74330,13 +74330,13 @@
         "estremi da verificare"
       ],
       "naturalId": "LEG-2012-GAP",
-      "startLine": 1041,
-      "endLine": 1055,
+      "startLine": 1045,
+      "endLine": 1059,
       "contentHash": "sha256:83e873a3155a9874ebd0f81da6be708cabdd50b1cf828665eb1d00784fdd899a",
       "reconstructedLineCount": 15,
       "integrity": {
         "contentHash": "sha256:83e873a3155a9874ebd0f81da6be708cabdd50b1cf828665eb1d00784fdd899a",
-        "hashComputedFrom": "kb04:1041-1055",
+        "hashComputedFrom": "kb04:1045-1059",
         "reconstructedLineCount": 15
       },
       "status": {
@@ -74353,7 +74353,7 @@
             "recordId": "LEG-2012-GAP",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 1049,
+            "line": 1053,
             "literal": "ricerca nell'Albo Pretorio e negli archivi da completare"
           },
           "inheritedFrom": null,
@@ -74372,7 +74372,7 @@
             "recordId": "LEG-2012-GAP",
             "scope": "registro-fonti",
             "field": "Vigenza",
-            "line": 1047,
+            "line": 1051,
             "literal": "efficacia storica esaurita"
           },
           "inheritedFrom": null,
@@ -74391,7 +74391,7 @@
             "recordId": "LEG-2012-GAP",
             "scope": "registro-fonti",
             "field": null,
-            "line": 1041,
+            "line": 1045,
             "literal": null
           },
           "inheritedFrom": null,
@@ -74410,7 +74410,7 @@
             "recordId": "LEG-2012-GAP",
             "scope": "registro-fonti",
             "field": "Stato locale",
-            "line": 1049,
+            "line": 1053,
             "literal": "ricerca nell'Albo Pretorio e negli archivi da completare"
           },
           "inheritedFrom": null,
@@ -75399,13 +75399,13 @@
       "headingPath": [
         "Registro delle ordinanze e degli atti attuativi"
       ],
-      "startLine": 432,
-      "endLine": 444,
+      "startLine": 436,
+      "endLine": 448,
       "contentHash": "sha256:a49a5391dcf1b07db892f2a1566ef6a5e93bac69272e98fdffe5ebd77d4dff77",
       "reconstructedLineCount": 13,
       "integrity": {
         "contentHash": "sha256:a49a5391dcf1b07db892f2a1566ef6a5e93bac69272e98fdffe5ebd77d4dff77",
-        "hashComputedFrom": "kb04:432-444",
+        "hashComputedFrom": "kb04:436-448",
         "reconstructedLineCount": 13
       },
       "status": {
@@ -75422,7 +75422,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 432,
+            "line": 436,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75441,7 +75441,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 432,
+            "line": 436,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75460,7 +75460,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 432,
+            "line": 436,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75479,7 +75479,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 432,
+            "line": 436,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75496,13 +75496,13 @@
       "headingPath": [
         "Registri aggiunti nella versione 1.3"
       ],
-      "startLine": 445,
-      "endLine": 457,
+      "startLine": 449,
+      "endLine": 461,
       "contentHash": "sha256:1c4ae404e59ec9032dfa8cc950e9688ed98d01e8d296ac80e415ad1dfcf03e51",
       "reconstructedLineCount": 13,
       "integrity": {
         "contentHash": "sha256:1c4ae404e59ec9032dfa8cc950e9688ed98d01e8d296ac80e415ad1dfcf03e51",
-        "hashComputedFrom": "kb04:445-457",
+        "hashComputedFrom": "kb04:449-461",
         "reconstructedLineCount": 13
       },
       "status": {
@@ -75519,7 +75519,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 445,
+            "line": 449,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75538,7 +75538,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 445,
+            "line": 449,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75557,7 +75557,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 445,
+            "line": 449,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75576,7 +75576,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 445,
+            "line": 449,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75593,13 +75593,13 @@
       "headingPath": [
         "Parte II — Registro completo di ordinanze e atti collegati"
       ],
-      "startLine": 458,
-      "endLine": 461,
+      "startLine": 462,
+      "endLine": 465,
       "contentHash": "sha256:a3ba523741a44953c527c2dd52b8bd89f8522a5e310ac3198c1fa748d67353dc",
       "reconstructedLineCount": 4,
       "integrity": {
         "contentHash": "sha256:a3ba523741a44953c527c2dd52b8bd89f8522a5e310ac3198c1fa748d67353dc",
-        "hashComputedFrom": "kb04:458-461",
+        "hashComputedFrom": "kb04:462-465",
         "reconstructedLineCount": 4
       },
       "status": {
@@ -75616,7 +75616,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 458,
+            "line": 462,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75635,7 +75635,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 458,
+            "line": 462,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75654,7 +75654,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 458,
+            "line": 462,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75673,7 +75673,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 458,
+            "line": 462,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75691,13 +75691,13 @@
         "Parte II — Registro completo di ordinanze e atti collegati",
         "Stati di consultazione"
       ],
-      "startLine": 462,
-      "endLine": 470,
+      "startLine": 466,
+      "endLine": 474,
       "contentHash": "sha256:a1d825d6f1bf446f879a270505d6390fceabe74b2357d07182b97bf114af4efc",
       "reconstructedLineCount": 9,
       "integrity": {
         "contentHash": "sha256:a1d825d6f1bf446f879a270505d6390fceabe74b2357d07182b97bf114af4efc",
-        "hashComputedFrom": "kb04:462-470",
+        "hashComputedFrom": "kb04:466-474",
         "reconstructedLineCount": 9
       },
       "status": {
@@ -75714,7 +75714,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 462,
+            "line": 466,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75733,7 +75733,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 462,
+            "line": 466,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75752,7 +75752,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 462,
+            "line": 466,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75771,7 +75771,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 462,
+            "line": 466,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75788,13 +75788,13 @@
       "headingPath": [
         "Parte III — Stato di completezza e lacune documentali"
       ],
-      "startLine": 1056,
-      "endLine": 1057,
+      "startLine": 1060,
+      "endLine": 1061,
       "contentHash": "sha256:ac76e192856b8e9c6bb0af15362435cf6d50ba69bc99c043cae48638e8e0c3d6",
       "reconstructedLineCount": 2,
       "integrity": {
         "contentHash": "sha256:ac76e192856b8e9c6bb0af15362435cf6d50ba69bc99c043cae48638e8e0c3d6",
-        "hashComputedFrom": "kb04:1056-1057",
+        "hashComputedFrom": "kb04:1060-1061",
         "reconstructedLineCount": 2
       },
       "status": {
@@ -75811,7 +75811,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 1056,
+            "line": 1060,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75830,7 +75830,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 1056,
+            "line": 1060,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75849,7 +75849,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 1056,
+            "line": 1060,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75868,7 +75868,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 1056,
+            "line": 1060,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75886,13 +75886,13 @@
         "Parte III — Stato di completezza e lacune documentali",
         "Annualità corrente 2026"
       ],
-      "startLine": 1058,
-      "endLine": 1077,
+      "startLine": 1062,
+      "endLine": 1081,
       "contentHash": "sha256:c008af4405a7cf30b8f914773b7b4cc2ab848bd37670ab30e73cf47a9199bc39",
       "reconstructedLineCount": 20,
       "integrity": {
         "contentHash": "sha256:c008af4405a7cf30b8f914773b7b4cc2ab848bd37670ab30e73cf47a9199bc39",
-        "hashComputedFrom": "kb04:1058-1077",
+        "hashComputedFrom": "kb04:1062-1081",
         "reconstructedLineCount": 20
       },
       "status": {
@@ -75909,7 +75909,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 1058,
+            "line": 1062,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75928,7 +75928,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 1058,
+            "line": 1062,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75947,7 +75947,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 1058,
+            "line": 1062,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75966,7 +75966,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 1058,
+            "line": 1062,
             "literal": null
           },
           "inheritedFrom": null,
@@ -75983,13 +75983,13 @@
       "headingPath": [
         "Periodo 2021–2025"
       ],
-      "startLine": 1078,
-      "endLine": 1089,
+      "startLine": 1082,
+      "endLine": 1093,
       "contentHash": "sha256:d448feb8a0b60bf6d1042650c6981547f62ca0809c8caac3630557d9c793e656",
       "reconstructedLineCount": 12,
       "integrity": {
         "contentHash": "sha256:d448feb8a0b60bf6d1042650c6981547f62ca0809c8caac3630557d9c793e656",
-        "hashComputedFrom": "kb04:1078-1089",
+        "hashComputedFrom": "kb04:1082-1093",
         "reconstructedLineCount": 12
       },
       "status": {
@@ -76006,7 +76006,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 1078,
+            "line": 1082,
             "literal": null
           },
           "inheritedFrom": null,
@@ -76025,7 +76025,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 1078,
+            "line": 1082,
             "literal": null
           },
           "inheritedFrom": null,
@@ -76044,7 +76044,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 1078,
+            "line": 1082,
             "literal": null
           },
           "inheritedFrom": null,
@@ -76063,7 +76063,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 1078,
+            "line": 1082,
             "literal": null
           },
           "inheritedFrom": null,
@@ -76080,13 +76080,13 @@
       "headingPath": [
         "Periodo 2012–2020"
       ],
-      "startLine": 1090,
-      "endLine": 1093,
+      "startLine": 1094,
+      "endLine": 1097,
       "contentHash": "sha256:71d45012eab74c1927dcd5f42687d664debceb770aa5049d0aefa2b21354f1a8",
       "reconstructedLineCount": 4,
       "integrity": {
         "contentHash": "sha256:71d45012eab74c1927dcd5f42687d664debceb770aa5049d0aefa2b21354f1a8",
-        "hashComputedFrom": "kb04:1090-1093",
+        "hashComputedFrom": "kb04:1094-1097",
         "reconstructedLineCount": 4
       },
       "status": {
@@ -76103,7 +76103,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 1090,
+            "line": 1094,
             "literal": null
           },
           "inheritedFrom": null,
@@ -76122,7 +76122,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 1090,
+            "line": 1094,
             "literal": null
           },
           "inheritedFrom": null,
@@ -76141,7 +76141,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 1090,
+            "line": 1094,
             "literal": null
           },
           "inheritedFrom": null,
@@ -76160,7 +76160,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 1090,
+            "line": 1094,
             "literal": null
           },
           "inheritedFrom": null,
@@ -76177,13 +76177,13 @@
       "headingPath": [
         "Formula pubblica raccomandata"
       ],
-      "startLine": 1094,
-      "endLine": 1100,
+      "startLine": 1098,
+      "endLine": 1104,
       "contentHash": "sha256:77c35c579cdb5ee2f23b5ecb4851ad0d5fc03e60bbc1245d7d00b977407ee1b6",
       "reconstructedLineCount": 7,
       "integrity": {
         "contentHash": "sha256:77c35c579cdb5ee2f23b5ecb4851ad0d5fc03e60bbc1245d7d00b977407ee1b6",
-        "hashComputedFrom": "kb04:1094-1100",
+        "hashComputedFrom": "kb04:1098-1104",
         "reconstructedLineCount": 7
       },
       "status": {
@@ -76200,7 +76200,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 1094,
+            "line": 1098,
             "literal": null
           },
           "inheritedFrom": null,
@@ -76219,7 +76219,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 1094,
+            "line": 1098,
             "literal": null
           },
           "inheritedFrom": null,
@@ -76238,7 +76238,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 1094,
+            "line": 1098,
             "literal": null
           },
           "inheritedFrom": null,
@@ -76257,7 +76257,7 @@
             "recordId": null,
             "scope": "manifest-registro-intro",
             "field": null,
-            "line": 1094,
+            "line": 1098,
             "literal": null
           },
           "inheritedFrom": null,

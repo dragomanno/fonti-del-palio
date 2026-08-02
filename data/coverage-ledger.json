@@ -71083,7 +71083,7 @@
       ]
     },
     "kb04": {
-      "totalLines": 1100,
+      "totalLines": 1104,
       "unexplainedLineCount": 0,
       "substantiveLinesWithoutCandidateOrExplicitReason": 0,
       "records": [
@@ -74253,38 +74253,40 @@
         },
         {
           "line": 419,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:rp-2019-01"
+          ],
           "reasonCode": null
         },
         {
           "line": 420,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:rp-2021-02"
+            "kb04:rp-2019-01"
           ],
           "reasonCode": null
         },
         {
           "line": 421,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:rp-2019-01"
+          ],
           "reasonCode": null
         },
         {
           "line": 422,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:rp-2021-02"
+            "kb04:rp-2019-01"
           ],
           "reasonCode": null
         },
         {
           "line": 423,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:rp-2021-02"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -74297,10 +74299,8 @@
         },
         {
           "line": 425,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:rp-2021-02"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -74345,29 +74345,33 @@
         },
         {
           "line": 431,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:rp-2021-02"
+          ],
           "reasonCode": null
         },
         {
           "line": 432,
           "classification": "candidate-content",
           "candidateIds": [
-            "manifest-registro-intro:registro-delle-ordinanze-e-degli-atti-attuativi"
+            "kb04:rp-2021-02"
           ],
           "reasonCode": null
         },
         {
           "line": 433,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:rp-2021-02"
+          ],
           "reasonCode": null
         },
         {
           "line": 434,
           "classification": "candidate-content",
           "candidateIds": [
-            "manifest-registro-intro:registro-delle-ordinanze-e-degli-atti-attuativi"
+            "kb04:rp-2021-02"
           ],
           "reasonCode": null
         },
@@ -74387,20 +74391,12 @@
         },
         {
           "line": 437,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "manifest-registro-intro:registro-delle-ordinanze-e-degli-atti-attuativi"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
           "line": 438,
-          "classification": "blank",
-          "candidateIds": [],
-          "reasonCode": null
-        },
-        {
-          "line": 439,
           "classification": "candidate-content",
           "candidateIds": [
             "manifest-registro-intro:registro-delle-ordinanze-e-degli-atti-attuativi"
@@ -74408,9 +74404,17 @@
           "reasonCode": null
         },
         {
-          "line": 440,
+          "line": 439,
           "classification": "blank",
           "candidateIds": [],
+          "reasonCode": null
+        },
+        {
+          "line": 440,
+          "classification": "candidate-content",
+          "candidateIds": [
+            "manifest-registro-intro:registro-delle-ordinanze-e-degli-atti-attuativi"
+          ],
           "reasonCode": null
         },
         {
@@ -74445,7 +74449,7 @@
           "line": 445,
           "classification": "candidate-content",
           "candidateIds": [
-            "manifest-registro-intro:registri-aggiunti-nella-versione-1-3"
+            "manifest-registro-intro:registro-delle-ordinanze-e-degli-atti-attuativi"
           ],
           "reasonCode": null
         },
@@ -74459,16 +74463,14 @@
           "line": 447,
           "classification": "candidate-content",
           "candidateIds": [
-            "manifest-registro-intro:registri-aggiunti-nella-versione-1-3"
+            "manifest-registro-intro:registro-delle-ordinanze-e-degli-atti-attuativi"
           ],
           "reasonCode": null
         },
         {
           "line": 448,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "manifest-registro-intro:registri-aggiunti-nella-versione-1-3"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -74481,10 +74483,8 @@
         },
         {
           "line": 450,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "manifest-registro-intro:registri-aggiunti-nella-versione-1-3"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -74497,8 +74497,10 @@
         },
         {
           "line": 452,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "manifest-registro-intro:registri-aggiunti-nella-versione-1-3"
+          ],
           "reasonCode": null
         },
         {
@@ -74511,18 +74513,6 @@
         },
         {
           "line": 454,
-          "classification": "blank",
-          "candidateIds": [],
-          "reasonCode": null
-        },
-        {
-          "line": 455,
-          "classification": "blank",
-          "candidateIds": [],
-          "reasonCode": null
-        },
-        {
-          "line": 456,
           "classification": "candidate-content",
           "candidateIds": [
             "manifest-registro-intro:registri-aggiunti-nella-versione-1-3"
@@ -74530,17 +74520,31 @@
           "reasonCode": null
         },
         {
-          "line": 457,
+          "line": 455,
+          "classification": "candidate-content",
+          "candidateIds": [
+            "manifest-registro-intro:registri-aggiunti-nella-versione-1-3"
+          ],
+          "reasonCode": null
+        },
+        {
+          "line": 456,
           "classification": "blank",
           "candidateIds": [],
           "reasonCode": null
         },
         {
-          "line": 458,
+          "line": 457,
           "classification": "candidate-content",
           "candidateIds": [
-            "manifest-registro-intro:parte-ii-registro-completo-di-ordinanze-e-atti-collegati"
+            "manifest-registro-intro:registri-aggiunti-nella-versione-1-3"
           ],
+          "reasonCode": null
+        },
+        {
+          "line": 458,
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -74553,7 +74557,7 @@
           "line": 460,
           "classification": "candidate-content",
           "candidateIds": [
-            "manifest-registro-intro:parte-ii-registro-completo-di-ordinanze-e-atti-collegati"
+            "manifest-registro-intro:registri-aggiunti-nella-versione-1-3"
           ],
           "reasonCode": null
         },
@@ -74567,7 +74571,7 @@
           "line": 462,
           "classification": "candidate-content",
           "candidateIds": [
-            "manifest-registro-intro:parte-ii-registro-completo-di-ordinanze-e-atti-collegati:stati-di-consultazione"
+            "manifest-registro-intro:parte-ii-registro-completo-di-ordinanze-e-atti-collegati"
           ],
           "reasonCode": null
         },
@@ -74581,16 +74585,14 @@
           "line": 464,
           "classification": "candidate-content",
           "candidateIds": [
-            "manifest-registro-intro:parte-ii-registro-completo-di-ordinanze-e-atti-collegati:stati-di-consultazione"
+            "manifest-registro-intro:parte-ii-registro-completo-di-ordinanze-e-atti-collegati"
           ],
           "reasonCode": null
         },
         {
           "line": 465,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "manifest-registro-intro:parte-ii-registro-completo-di-ordinanze-e-atti-collegati:stati-di-consultazione"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -74603,10 +74605,8 @@
         },
         {
           "line": 467,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "manifest-registro-intro:parte-ii-registro-completo-di-ordinanze-e-atti-collegati:stati-di-consultazione"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -74619,34 +74619,40 @@
         },
         {
           "line": 469,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "manifest-registro-intro:parte-ii-registro-completo-di-ordinanze-e-atti-collegati:stati-di-consultazione"
+          ],
           "reasonCode": null
         },
         {
           "line": 470,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "manifest-registro-intro:parte-ii-registro-completo-di-ordinanze-e-atti-collegati:stati-di-consultazione"
+          ],
           "reasonCode": null
         },
         {
           "line": 471,
-          "classification": "structural-heading",
-          "candidateIds": [],
-          "reasonCode": "heading-not-yet-a-record"
+          "classification": "candidate-content",
+          "candidateIds": [
+            "manifest-registro-intro:parte-ii-registro-completo-di-ordinanze-e-atti-collegati:stati-di-consultazione"
+          ],
+          "reasonCode": null
         },
         {
           "line": 472,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "manifest-registro-intro:parte-ii-registro-completo-di-ordinanze-e-atti-collegati:stati-di-consultazione"
+          ],
           "reasonCode": null
         },
         {
           "line": 473,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2026-prog-001"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -74657,18 +74663,14 @@
         },
         {
           "line": 475,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2026-prog-001"
-          ],
-          "reasonCode": null
+          "classification": "structural-heading",
+          "candidateIds": [],
+          "reasonCode": "heading-not-yet-a-record"
         },
         {
           "line": 476,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2026-prog-001"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -74681,10 +74683,8 @@
         },
         {
           "line": 478,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2026-prog-001"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -74729,38 +74729,40 @@
         },
         {
           "line": 484,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2026-prog-001"
+          ],
           "reasonCode": null
         },
         {
           "line": 485,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2026-ord-005"
+            "kb04:att-2026-prog-001"
           ],
           "reasonCode": null
         },
         {
           "line": 486,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2026-prog-001"
+          ],
           "reasonCode": null
         },
         {
           "line": 487,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2026-ord-005"
+            "kb04:att-2026-prog-001"
           ],
           "reasonCode": null
         },
         {
           "line": 488,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2026-ord-005"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -74773,10 +74775,8 @@
         },
         {
           "line": 490,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2026-ord-005"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -74821,38 +74821,40 @@
         },
         {
           "line": 496,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2026-ord-005"
+          ],
           "reasonCode": null
         },
         {
           "line": 497,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2026-ord-006"
+            "kb04:att-2026-ord-005"
           ],
           "reasonCode": null
         },
         {
           "line": 498,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2026-ord-005"
+          ],
           "reasonCode": null
         },
         {
           "line": 499,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2026-ord-006"
+            "kb04:att-2026-ord-005"
           ],
           "reasonCode": null
         },
         {
           "line": 500,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2026-ord-006"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -74865,10 +74867,8 @@
         },
         {
           "line": 502,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2026-ord-006"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -74913,38 +74913,40 @@
         },
         {
           "line": 508,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2026-ord-006"
+          ],
           "reasonCode": null
         },
         {
           "line": 509,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2026-palio-lug"
+            "kb04:att-2026-ord-006"
           ],
           "reasonCode": null
         },
         {
           "line": 510,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2026-ord-006"
+          ],
           "reasonCode": null
         },
         {
           "line": 511,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2026-palio-lug"
+            "kb04:att-2026-ord-006"
           ],
           "reasonCode": null
         },
         {
           "line": 512,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2026-palio-lug"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -74957,10 +74959,8 @@
         },
         {
           "line": 514,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2026-palio-lug"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -75005,27 +75005,33 @@
         },
         {
           "line": 520,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2026-palio-lug"
+          ],
           "reasonCode": null
         },
         {
           "line": 521,
-          "classification": "structural-heading",
-          "candidateIds": [],
-          "reasonCode": "heading-not-yet-a-record"
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2026-palio-lug"
+          ],
+          "reasonCode": null
         },
         {
           "line": 522,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2026-palio-lug"
+          ],
           "reasonCode": null
         },
         {
           "line": 523,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2025-prog-001"
+            "kb04:att-2026-palio-lug"
           ],
           "reasonCode": null
         },
@@ -75037,18 +75043,14 @@
         },
         {
           "line": 525,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2025-prog-001"
-          ],
-          "reasonCode": null
+          "classification": "structural-heading",
+          "candidateIds": [],
+          "reasonCode": "heading-not-yet-a-record"
         },
         {
           "line": 526,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2025-prog-001"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -75061,10 +75063,8 @@
         },
         {
           "line": 528,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2025-prog-001"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -75109,38 +75109,40 @@
         },
         {
           "line": 534,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2025-prog-001"
+          ],
           "reasonCode": null
         },
         {
           "line": 535,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2025-ord-002"
+            "kb04:att-2025-prog-001"
           ],
           "reasonCode": null
         },
         {
           "line": 536,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2025-prog-001"
+          ],
           "reasonCode": null
         },
         {
           "line": 537,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2025-ord-002"
+            "kb04:att-2025-prog-001"
           ],
           "reasonCode": null
         },
         {
           "line": 538,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2025-ord-002"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -75153,10 +75155,8 @@
         },
         {
           "line": 540,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2025-ord-002"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -75201,38 +75201,40 @@
         },
         {
           "line": 546,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2025-ord-002"
+          ],
           "reasonCode": null
         },
         {
           "line": 547,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2025-ord-003"
+            "kb04:att-2025-ord-002"
           ],
           "reasonCode": null
         },
         {
           "line": 548,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2025-ord-002"
+          ],
           "reasonCode": null
         },
         {
           "line": 549,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2025-ord-003"
+            "kb04:att-2025-ord-002"
           ],
           "reasonCode": null
         },
         {
           "line": 550,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2025-ord-003"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -75245,10 +75247,8 @@
         },
         {
           "line": 552,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2025-ord-003"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -75293,38 +75293,40 @@
         },
         {
           "line": 558,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2025-ord-003"
+          ],
           "reasonCode": null
         },
         {
           "line": 559,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2025-dec-002"
+            "kb04:att-2025-ord-003"
           ],
           "reasonCode": null
         },
         {
           "line": 560,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2025-ord-003"
+          ],
           "reasonCode": null
         },
         {
           "line": 561,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2025-dec-002"
+            "kb04:att-2025-ord-003"
           ],
           "reasonCode": null
         },
         {
           "line": 562,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2025-dec-002"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -75337,10 +75339,8 @@
         },
         {
           "line": 564,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2025-dec-002"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -75385,38 +75385,40 @@
         },
         {
           "line": 570,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2025-dec-002"
+          ],
           "reasonCode": null
         },
         {
           "line": 571,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2025-dec-003"
+            "kb04:att-2025-dec-002"
           ],
           "reasonCode": null
         },
         {
           "line": 572,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2025-dec-002"
+          ],
           "reasonCode": null
         },
         {
           "line": 573,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2025-dec-003"
+            "kb04:att-2025-dec-002"
           ],
           "reasonCode": null
         },
         {
           "line": 574,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2025-dec-003"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -75429,10 +75431,8 @@
         },
         {
           "line": 576,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2025-dec-003"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -75477,27 +75477,33 @@
         },
         {
           "line": 582,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2025-dec-003"
+          ],
           "reasonCode": null
         },
         {
           "line": 583,
-          "classification": "structural-heading",
-          "candidateIds": [],
-          "reasonCode": "heading-not-yet-a-record"
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2025-dec-003"
+          ],
+          "reasonCode": null
         },
         {
           "line": 584,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2025-dec-003"
+          ],
           "reasonCode": null
         },
         {
           "line": 585,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2024-disc-001"
+            "kb04:att-2025-dec-003"
           ],
           "reasonCode": null
         },
@@ -75509,18 +75515,14 @@
         },
         {
           "line": 587,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2024-disc-001"
-          ],
-          "reasonCode": null
+          "classification": "structural-heading",
+          "candidateIds": [],
+          "reasonCode": "heading-not-yet-a-record"
         },
         {
           "line": 588,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2024-disc-001"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -75533,10 +75535,8 @@
         },
         {
           "line": 590,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2024-disc-001"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -75581,38 +75581,40 @@
         },
         {
           "line": 596,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2024-disc-001"
+          ],
           "reasonCode": null
         },
         {
           "line": 597,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2024-ord-002"
+            "kb04:att-2024-disc-001"
           ],
           "reasonCode": null
         },
         {
           "line": 598,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2024-disc-001"
+          ],
           "reasonCode": null
         },
         {
           "line": 599,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2024-ord-002"
+            "kb04:att-2024-disc-001"
           ],
           "reasonCode": null
         },
         {
           "line": 600,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2024-ord-002"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -75625,10 +75627,8 @@
         },
         {
           "line": 602,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2024-ord-002"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -75673,38 +75673,40 @@
         },
         {
           "line": 608,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2024-ord-002"
+          ],
           "reasonCode": null
         },
         {
           "line": 609,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2024-ord-003"
+            "kb04:att-2024-ord-002"
           ],
           "reasonCode": null
         },
         {
           "line": 610,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2024-ord-002"
+          ],
           "reasonCode": null
         },
         {
           "line": 611,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2024-ord-003"
+            "kb04:att-2024-ord-002"
           ],
           "reasonCode": null
         },
         {
           "line": 612,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2024-ord-003"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -75717,10 +75719,8 @@
         },
         {
           "line": 614,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2024-ord-003"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -75765,38 +75765,40 @@
         },
         {
           "line": 620,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2024-ord-003"
+          ],
           "reasonCode": null
         },
         {
           "line": 621,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2024-prog-001"
+            "kb04:att-2024-ord-003"
           ],
           "reasonCode": null
         },
         {
           "line": 622,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2024-ord-003"
+          ],
           "reasonCode": null
         },
         {
           "line": 623,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2024-prog-001"
+            "kb04:att-2024-ord-003"
           ],
           "reasonCode": null
         },
         {
           "line": 624,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2024-prog-001"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -75809,10 +75811,8 @@
         },
         {
           "line": 626,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2024-prog-001"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -75857,38 +75857,40 @@
         },
         {
           "line": 632,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2024-prog-001"
+          ],
           "reasonCode": null
         },
         {
           "line": 633,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2024-dec-009"
+            "kb04:att-2024-prog-001"
           ],
           "reasonCode": null
         },
         {
           "line": 634,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2024-prog-001"
+          ],
           "reasonCode": null
         },
         {
           "line": 635,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2024-dec-009"
+            "kb04:att-2024-prog-001"
           ],
           "reasonCode": null
         },
         {
           "line": 636,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2024-dec-009"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -75901,10 +75903,8 @@
         },
         {
           "line": 638,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2024-dec-009"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -75949,38 +75949,40 @@
         },
         {
           "line": 644,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2024-dec-009"
+          ],
           "reasonCode": null
         },
         {
           "line": 645,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2024-dec-010"
+            "kb04:att-2024-dec-009"
           ],
           "reasonCode": null
         },
         {
           "line": 646,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2024-dec-009"
+          ],
           "reasonCode": null
         },
         {
           "line": 647,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2024-dec-010"
+            "kb04:att-2024-dec-009"
           ],
           "reasonCode": null
         },
         {
           "line": 648,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2024-dec-010"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -75993,10 +75995,8 @@
         },
         {
           "line": 650,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2024-dec-010"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -76041,27 +76041,33 @@
         },
         {
           "line": 656,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2024-dec-010"
+          ],
           "reasonCode": null
         },
         {
           "line": 657,
-          "classification": "structural-heading",
-          "candidateIds": [],
-          "reasonCode": "heading-not-yet-a-record"
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2024-dec-010"
+          ],
+          "reasonCode": null
         },
         {
           "line": 658,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2024-dec-010"
+          ],
           "reasonCode": null
         },
         {
           "line": 659,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2023-ord-003"
+            "kb04:att-2024-dec-010"
           ],
           "reasonCode": null
         },
@@ -76073,18 +76079,14 @@
         },
         {
           "line": 661,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2023-ord-003"
-          ],
-          "reasonCode": null
+          "classification": "structural-heading",
+          "candidateIds": [],
+          "reasonCode": "heading-not-yet-a-record"
         },
         {
           "line": 662,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2023-ord-003"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -76097,10 +76099,8 @@
         },
         {
           "line": 664,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2023-ord-003"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -76145,38 +76145,40 @@
         },
         {
           "line": 670,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2023-ord-003"
+          ],
           "reasonCode": null
         },
         {
           "line": 671,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2023-ord-006"
+            "kb04:att-2023-ord-003"
           ],
           "reasonCode": null
         },
         {
           "line": 672,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2023-ord-003"
+          ],
           "reasonCode": null
         },
         {
           "line": 673,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2023-ord-006"
+            "kb04:att-2023-ord-003"
           ],
           "reasonCode": null
         },
         {
           "line": 674,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2023-ord-006"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -76189,10 +76191,8 @@
         },
         {
           "line": 676,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2023-ord-006"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -76237,38 +76237,40 @@
         },
         {
           "line": 682,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2023-ord-006"
+          ],
           "reasonCode": null
         },
         {
           "line": 683,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2023-dec-007"
+            "kb04:att-2023-ord-006"
           ],
           "reasonCode": null
         },
         {
           "line": 684,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2023-ord-006"
+          ],
           "reasonCode": null
         },
         {
           "line": 685,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2023-dec-007"
+            "kb04:att-2023-ord-006"
           ],
           "reasonCode": null
         },
         {
           "line": 686,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2023-dec-007"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -76281,10 +76283,8 @@
         },
         {
           "line": 688,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2023-dec-007"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -76329,38 +76329,40 @@
         },
         {
           "line": 694,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2023-dec-007"
+          ],
           "reasonCode": null
         },
         {
           "line": 695,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2023-dec-008"
+            "kb04:att-2023-dec-007"
           ],
           "reasonCode": null
         },
         {
           "line": 696,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2023-dec-007"
+          ],
           "reasonCode": null
         },
         {
           "line": 697,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2023-dec-008"
+            "kb04:att-2023-dec-007"
           ],
           "reasonCode": null
         },
         {
           "line": 698,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2023-dec-008"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -76373,10 +76375,8 @@
         },
         {
           "line": 700,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2023-dec-008"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -76421,27 +76421,33 @@
         },
         {
           "line": 706,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2023-dec-008"
+          ],
           "reasonCode": null
         },
         {
           "line": 707,
-          "classification": "structural-heading",
-          "candidateIds": [],
-          "reasonCode": "heading-not-yet-a-record"
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2023-dec-008"
+          ],
+          "reasonCode": null
         },
         {
           "line": 708,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2023-dec-008"
+          ],
           "reasonCode": null
         },
         {
           "line": 709,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2022-ord-004"
+            "kb04:att-2023-dec-008"
           ],
           "reasonCode": null
         },
@@ -76453,18 +76459,14 @@
         },
         {
           "line": 711,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2022-ord-004"
-          ],
-          "reasonCode": null
+          "classification": "structural-heading",
+          "candidateIds": [],
+          "reasonCode": "heading-not-yet-a-record"
         },
         {
           "line": 712,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2022-ord-004"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -76477,10 +76479,8 @@
         },
         {
           "line": 714,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2022-ord-004"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -76525,38 +76525,40 @@
         },
         {
           "line": 720,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2022-ord-004"
+          ],
           "reasonCode": null
         },
         {
           "line": 721,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2022-dec-001"
+            "kb04:att-2022-ord-004"
           ],
           "reasonCode": null
         },
         {
           "line": 722,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2022-ord-004"
+          ],
           "reasonCode": null
         },
         {
           "line": 723,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2022-dec-001"
+            "kb04:att-2022-ord-004"
           ],
           "reasonCode": null
         },
         {
           "line": 724,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2022-dec-001"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -76569,10 +76571,8 @@
         },
         {
           "line": 726,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2022-dec-001"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -76617,38 +76617,40 @@
         },
         {
           "line": 732,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2022-dec-001"
+          ],
           "reasonCode": null
         },
         {
           "line": 733,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2022-dec-002"
+            "kb04:att-2022-dec-001"
           ],
           "reasonCode": null
         },
         {
           "line": 734,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2022-dec-001"
+          ],
           "reasonCode": null
         },
         {
           "line": 735,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2022-dec-002"
+            "kb04:att-2022-dec-001"
           ],
           "reasonCode": null
         },
         {
           "line": 736,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2022-dec-002"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -76661,10 +76663,8 @@
         },
         {
           "line": 738,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2022-dec-002"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -76709,38 +76709,40 @@
         },
         {
           "line": 744,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2022-dec-002"
+          ],
           "reasonCode": null
         },
         {
           "line": 745,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2022-ord-005"
+            "kb04:att-2022-dec-002"
           ],
           "reasonCode": null
         },
         {
           "line": 746,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2022-dec-002"
+          ],
           "reasonCode": null
         },
         {
           "line": 747,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2022-ord-005"
+            "kb04:att-2022-dec-002"
           ],
           "reasonCode": null
         },
         {
           "line": 748,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2022-ord-005"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -76753,10 +76755,8 @@
         },
         {
           "line": 750,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2022-ord-005"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -76801,27 +76801,33 @@
         },
         {
           "line": 756,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2022-ord-005"
+          ],
           "reasonCode": null
         },
         {
           "line": 757,
-          "classification": "structural-heading",
-          "candidateIds": [],
-          "reasonCode": "heading-not-yet-a-record"
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2022-ord-005"
+          ],
+          "reasonCode": null
         },
         {
           "line": 758,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2022-ord-005"
+          ],
           "reasonCode": null
         },
         {
           "line": 759,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2021-ord-176"
+            "kb04:att-2022-ord-005"
           ],
           "reasonCode": null
         },
@@ -76833,18 +76839,14 @@
         },
         {
           "line": 761,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2021-ord-176"
-          ],
-          "reasonCode": null
+          "classification": "structural-heading",
+          "candidateIds": [],
+          "reasonCode": "heading-not-yet-a-record"
         },
         {
           "line": 762,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2021-ord-176"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -76857,10 +76859,8 @@
         },
         {
           "line": 764,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2021-ord-176"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -76905,38 +76905,40 @@
         },
         {
           "line": 770,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2021-ord-176"
+          ],
           "reasonCode": null
         },
         {
           "line": 771,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2021-dec-003"
+            "kb04:att-2021-ord-176"
           ],
           "reasonCode": null
         },
         {
           "line": 772,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2021-ord-176"
+          ],
           "reasonCode": null
         },
         {
           "line": 773,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2021-dec-003"
+            "kb04:att-2021-ord-176"
           ],
           "reasonCode": null
         },
         {
           "line": 774,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2021-dec-003"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -76949,10 +76951,8 @@
         },
         {
           "line": 776,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2021-dec-003"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -76997,38 +76997,40 @@
         },
         {
           "line": 782,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2021-dec-003"
+          ],
           "reasonCode": null
         },
         {
           "line": 783,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2021-dec-004"
+            "kb04:att-2021-dec-003"
           ],
           "reasonCode": null
         },
         {
           "line": 784,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2021-dec-003"
+          ],
           "reasonCode": null
         },
         {
           "line": 785,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2021-dec-004"
+            "kb04:att-2021-dec-003"
           ],
           "reasonCode": null
         },
         {
           "line": 786,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2021-dec-004"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -77041,10 +77043,8 @@
         },
         {
           "line": 788,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2021-dec-004"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -77089,38 +77089,40 @@
         },
         {
           "line": 794,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2021-dec-004"
+          ],
           "reasonCode": null
         },
         {
           "line": 795,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2021-ord-005"
+            "kb04:att-2021-dec-004"
           ],
           "reasonCode": null
         },
         {
           "line": 796,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2021-dec-004"
+          ],
           "reasonCode": null
         },
         {
           "line": 797,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2021-ord-005"
+            "kb04:att-2021-dec-004"
           ],
           "reasonCode": null
         },
         {
           "line": 798,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2021-ord-005"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -77133,10 +77135,8 @@
         },
         {
           "line": 800,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2021-ord-005"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -77181,38 +77181,40 @@
         },
         {
           "line": 806,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2021-ord-005"
+          ],
           "reasonCode": null
         },
         {
           "line": 807,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2021-ord-012"
+            "kb04:att-2021-ord-005"
           ],
           "reasonCode": null
         },
         {
           "line": 808,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2021-ord-005"
+          ],
           "reasonCode": null
         },
         {
           "line": 809,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2021-ord-012"
+            "kb04:att-2021-ord-005"
           ],
           "reasonCode": null
         },
         {
           "line": 810,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2021-ord-012"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -77225,10 +77227,8 @@
         },
         {
           "line": 812,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2021-ord-012"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -77273,38 +77273,40 @@
         },
         {
           "line": 818,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2021-ord-012"
+          ],
           "reasonCode": null
         },
         {
           "line": 819,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2021-ord-013"
+            "kb04:att-2021-ord-012"
           ],
           "reasonCode": null
         },
         {
           "line": 820,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2021-ord-012"
+          ],
           "reasonCode": null
         },
         {
           "line": 821,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2021-ord-013"
+            "kb04:att-2021-ord-012"
           ],
           "reasonCode": null
         },
         {
           "line": 822,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2021-ord-013"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -77317,10 +77319,8 @@
         },
         {
           "line": 824,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2021-ord-013"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -77365,38 +77365,40 @@
         },
         {
           "line": 830,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2021-ord-013"
+          ],
           "reasonCode": null
         },
         {
           "line": 831,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2021-ord-018"
+            "kb04:att-2021-ord-013"
           ],
           "reasonCode": null
         },
         {
           "line": 832,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2021-ord-013"
+          ],
           "reasonCode": null
         },
         {
           "line": 833,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:att-2021-ord-018"
+            "kb04:att-2021-ord-013"
           ],
           "reasonCode": null
         },
         {
           "line": 834,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2021-ord-018"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -77409,10 +77411,8 @@
         },
         {
           "line": 836,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:att-2021-ord-018"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -77457,27 +77457,33 @@
         },
         {
           "line": 842,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2021-ord-018"
+          ],
           "reasonCode": null
         },
         {
           "line": 843,
-          "classification": "structural-heading",
-          "candidateIds": [],
-          "reasonCode": "heading-not-yet-a-record"
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2021-ord-018"
+          ],
+          "reasonCode": null
         },
         {
           "line": 844,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:att-2021-ord-018"
+          ],
           "reasonCode": null
         },
         {
           "line": 845,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2020-coll-vet"
+            "kb04:att-2021-ord-018"
           ],
           "reasonCode": null
         },
@@ -77489,18 +77495,14 @@
         },
         {
           "line": 847,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2020-coll-vet"
-          ],
-          "reasonCode": null
+          "classification": "structural-heading",
+          "candidateIds": [],
+          "reasonCode": "heading-not-yet-a-record"
         },
         {
           "line": 848,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2020-coll-vet"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -77513,10 +77515,8 @@
         },
         {
           "line": 850,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2020-coll-vet"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -77561,38 +77561,40 @@
         },
         {
           "line": 856,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2020-coll-vet"
+          ],
           "reasonCode": null
         },
         {
           "line": 857,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2020-comm-coll"
+            "kb04:leg-2020-coll-vet"
           ],
           "reasonCode": null
         },
         {
           "line": 858,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2020-coll-vet"
+          ],
           "reasonCode": null
         },
         {
           "line": 859,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2020-comm-coll"
+            "kb04:leg-2020-coll-vet"
           ],
           "reasonCode": null
         },
         {
           "line": 860,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2020-comm-coll"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -77605,10 +77607,8 @@
         },
         {
           "line": 862,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2020-comm-coll"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -77653,38 +77653,40 @@
         },
         {
           "line": 868,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2020-comm-coll"
+          ],
           "reasonCode": null
         },
         {
           "line": 869,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2020-comm-tech"
+            "kb04:leg-2020-comm-coll"
           ],
           "reasonCode": null
         },
         {
           "line": 870,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2020-comm-coll"
+          ],
           "reasonCode": null
         },
         {
           "line": 871,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2020-comm-tech"
+            "kb04:leg-2020-comm-coll"
           ],
           "reasonCode": null
         },
         {
           "line": 872,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2020-comm-tech"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -77697,10 +77699,8 @@
         },
         {
           "line": 874,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2020-comm-tech"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -77745,38 +77745,40 @@
         },
         {
           "line": 880,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2020-comm-tech"
+          ],
           "reasonCode": null
         },
         {
           "line": 881,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2020-ord-oper"
+            "kb04:leg-2020-comm-tech"
           ],
           "reasonCode": null
         },
         {
           "line": 882,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2020-comm-tech"
+          ],
           "reasonCode": null
         },
         {
           "line": 883,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2020-ord-oper"
+            "kb04:leg-2020-comm-tech"
           ],
           "reasonCode": null
         },
         {
           "line": 884,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2020-ord-oper"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -77789,10 +77791,8 @@
         },
         {
           "line": 886,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2020-ord-oper"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -77837,38 +77837,40 @@
         },
         {
           "line": 892,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2020-ord-oper"
+          ],
           "reasonCode": null
         },
         {
           "line": 893,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2020-ulter-prof"
+            "kb04:leg-2020-ord-oper"
           ],
           "reasonCode": null
         },
         {
           "line": 894,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2020-ord-oper"
+          ],
           "reasonCode": null
         },
         {
           "line": 895,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2020-ulter-prof"
+            "kb04:leg-2020-ord-oper"
           ],
           "reasonCode": null
         },
         {
           "line": 896,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2020-ulter-prof"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -77881,10 +77883,8 @@
         },
         {
           "line": 898,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2020-ulter-prof"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -77929,38 +77929,40 @@
         },
         {
           "line": 904,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2020-ulter-prof"
+          ],
           "reasonCode": null
         },
         {
           "line": 905,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2020-vet-mun"
+            "kb04:leg-2020-ulter-prof"
           ],
           "reasonCode": null
         },
         {
           "line": 906,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2020-ulter-prof"
+          ],
           "reasonCode": null
         },
         {
           "line": 907,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2020-vet-mun"
+            "kb04:leg-2020-ulter-prof"
           ],
           "reasonCode": null
         },
         {
           "line": 908,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2020-vet-mun"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -77973,10 +77975,8 @@
         },
         {
           "line": 910,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2020-vet-mun"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -78021,27 +78021,33 @@
         },
         {
           "line": 916,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2020-vet-mun"
+          ],
           "reasonCode": null
         },
         {
           "line": 917,
-          "classification": "structural-heading",
-          "candidateIds": [],
-          "reasonCode": "heading-not-yet-a-record"
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2020-vet-mun"
+          ],
+          "reasonCode": null
         },
         {
           "line": 918,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2020-vet-mun"
+          ],
           "reasonCode": null
         },
         {
           "line": 919,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2019-ord-oper"
+            "kb04:leg-2020-vet-mun"
           ],
           "reasonCode": null
         },
@@ -78053,18 +78059,14 @@
         },
         {
           "line": 921,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2019-ord-oper"
-          ],
-          "reasonCode": null
+          "classification": "structural-heading",
+          "candidateIds": [],
+          "reasonCode": "heading-not-yet-a-record"
         },
         {
           "line": 922,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2019-ord-oper"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -78077,10 +78079,8 @@
         },
         {
           "line": 924,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2019-ord-oper"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -78125,38 +78125,40 @@
         },
         {
           "line": 930,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2019-ord-oper"
+          ],
           "reasonCode": null
         },
         {
           "line": 931,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2019-rimb-cav"
+            "kb04:leg-2019-ord-oper"
           ],
           "reasonCode": null
         },
         {
           "line": 932,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2019-ord-oper"
+          ],
           "reasonCode": null
         },
         {
           "line": 933,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2019-rimb-cav"
+            "kb04:leg-2019-ord-oper"
           ],
           "reasonCode": null
         },
         {
           "line": 934,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2019-rimb-cav"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -78169,10 +78171,8 @@
         },
         {
           "line": 936,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2019-rimb-cav"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -78217,38 +78217,40 @@
         },
         {
           "line": 942,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2019-rimb-cav"
+          ],
           "reasonCode": null
         },
         {
           "line": 943,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2019-sper-3738"
+            "kb04:leg-2019-rimb-cav"
           ],
           "reasonCode": null
         },
         {
           "line": 944,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2019-rimb-cav"
+          ],
           "reasonCode": null
         },
         {
           "line": 945,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2019-sper-3738"
+            "kb04:leg-2019-rimb-cav"
           ],
           "reasonCode": null
         },
         {
           "line": 946,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2019-sper-3738"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -78261,10 +78263,8 @@
         },
         {
           "line": 948,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2019-sper-3738"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -78309,27 +78309,33 @@
         },
         {
           "line": 954,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2019-sper-3738"
+          ],
           "reasonCode": null
         },
         {
           "line": 955,
-          "classification": "structural-heading",
-          "candidateIds": [],
-          "reasonCode": "heading-not-yet-a-record"
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2019-sper-3738"
+          ],
+          "reasonCode": null
         },
         {
           "line": 956,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2019-sper-3738"
+          ],
           "reasonCode": null
         },
         {
           "line": 957,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2018-gap"
+            "kb04:leg-2019-sper-3738"
           ],
           "reasonCode": null
         },
@@ -78341,18 +78347,14 @@
         },
         {
           "line": 959,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2018-gap"
-          ],
-          "reasonCode": null
+          "classification": "structural-heading",
+          "candidateIds": [],
+          "reasonCode": "heading-not-yet-a-record"
         },
         {
           "line": 960,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2018-gap"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -78365,10 +78367,8 @@
         },
         {
           "line": 962,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2018-gap"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -78413,27 +78413,33 @@
         },
         {
           "line": 968,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2018-gap"
+          ],
           "reasonCode": null
         },
         {
           "line": 969,
-          "classification": "structural-heading",
-          "candidateIds": [],
-          "reasonCode": "heading-not-yet-a-record"
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2018-gap"
+          ],
+          "reasonCode": null
         },
         {
           "line": 970,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2018-gap"
+          ],
           "reasonCode": null
         },
         {
           "line": 971,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2017-ord-040"
+            "kb04:leg-2018-gap"
           ],
           "reasonCode": null
         },
@@ -78445,18 +78451,14 @@
         },
         {
           "line": 973,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2017-ord-040"
-          ],
-          "reasonCode": null
+          "classification": "structural-heading",
+          "candidateIds": [],
+          "reasonCode": "heading-not-yet-a-record"
         },
         {
           "line": 974,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2017-ord-040"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -78469,10 +78471,8 @@
         },
         {
           "line": 976,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2017-ord-040"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -78517,27 +78517,33 @@
         },
         {
           "line": 982,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2017-ord-040"
+          ],
           "reasonCode": null
         },
         {
           "line": 983,
-          "classification": "structural-heading",
-          "candidateIds": [],
-          "reasonCode": "heading-not-yet-a-record"
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2017-ord-040"
+          ],
+          "reasonCode": null
         },
         {
           "line": 984,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2017-ord-040"
+          ],
           "reasonCode": null
         },
         {
           "line": 985,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2016-cor"
+            "kb04:leg-2017-ord-040"
           ],
           "reasonCode": null
         },
@@ -78549,18 +78555,14 @@
         },
         {
           "line": 987,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2016-cor"
-          ],
-          "reasonCode": null
+          "classification": "structural-heading",
+          "candidateIds": [],
+          "reasonCode": "heading-not-yet-a-record"
         },
         {
           "line": 988,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2016-cor"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -78573,10 +78575,8 @@
         },
         {
           "line": 990,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2016-cor"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -78621,27 +78621,33 @@
         },
         {
           "line": 996,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2016-cor"
+          ],
           "reasonCode": null
         },
         {
           "line": 997,
-          "classification": "structural-heading",
-          "candidateIds": [],
-          "reasonCode": "heading-not-yet-a-record"
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2016-cor"
+          ],
+          "reasonCode": null
         },
         {
           "line": 998,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2016-cor"
+          ],
           "reasonCode": null
         },
         {
           "line": 999,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2015-gap"
+            "kb04:leg-2016-cor"
           ],
           "reasonCode": null
         },
@@ -78653,18 +78659,14 @@
         },
         {
           "line": 1001,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2015-gap"
-          ],
-          "reasonCode": null
+          "classification": "structural-heading",
+          "candidateIds": [],
+          "reasonCode": "heading-not-yet-a-record"
         },
         {
           "line": 1002,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2015-gap"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -78677,10 +78679,8 @@
         },
         {
           "line": 1004,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2015-gap"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -78725,27 +78725,33 @@
         },
         {
           "line": 1010,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2015-gap"
+          ],
           "reasonCode": null
         },
         {
           "line": 1011,
-          "classification": "structural-heading",
-          "candidateIds": [],
-          "reasonCode": "heading-not-yet-a-record"
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2015-gap"
+          ],
+          "reasonCode": null
         },
         {
           "line": 1012,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2015-gap"
+          ],
           "reasonCode": null
         },
         {
           "line": 1013,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2014-mod"
+            "kb04:leg-2015-gap"
           ],
           "reasonCode": null
         },
@@ -78757,18 +78763,14 @@
         },
         {
           "line": 1015,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2014-mod"
-          ],
-          "reasonCode": null
+          "classification": "structural-heading",
+          "candidateIds": [],
+          "reasonCode": "heading-not-yet-a-record"
         },
         {
           "line": 1016,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2014-mod"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -78781,10 +78783,8 @@
         },
         {
           "line": 1018,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2014-mod"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -78829,27 +78829,33 @@
         },
         {
           "line": 1024,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2014-mod"
+          ],
           "reasonCode": null
         },
         {
           "line": 1025,
-          "classification": "structural-heading",
-          "candidateIds": [],
-          "reasonCode": "heading-not-yet-a-record"
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2014-mod"
+          ],
+          "reasonCode": null
         },
         {
           "line": 1026,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2014-mod"
+          ],
           "reasonCode": null
         },
         {
           "line": 1027,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2013-gap"
+            "kb04:leg-2014-mod"
           ],
           "reasonCode": null
         },
@@ -78861,18 +78867,14 @@
         },
         {
           "line": 1029,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2013-gap"
-          ],
-          "reasonCode": null
+          "classification": "structural-heading",
+          "candidateIds": [],
+          "reasonCode": "heading-not-yet-a-record"
         },
         {
           "line": 1030,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2013-gap"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -78885,10 +78887,8 @@
         },
         {
           "line": 1032,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2013-gap"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -78933,27 +78933,33 @@
         },
         {
           "line": 1038,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2013-gap"
+          ],
           "reasonCode": null
         },
         {
           "line": 1039,
-          "classification": "structural-heading",
-          "candidateIds": [],
-          "reasonCode": "heading-not-yet-a-record"
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2013-gap"
+          ],
+          "reasonCode": null
         },
         {
           "line": 1040,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2013-gap"
+          ],
           "reasonCode": null
         },
         {
           "line": 1041,
           "classification": "candidate-content",
           "candidateIds": [
-            "kb04:leg-2012-gap"
+            "kb04:leg-2013-gap"
           ],
           "reasonCode": null
         },
@@ -78965,18 +78971,14 @@
         },
         {
           "line": 1043,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2012-gap"
-          ],
-          "reasonCode": null
+          "classification": "structural-heading",
+          "candidateIds": [],
+          "reasonCode": "heading-not-yet-a-record"
         },
         {
           "line": 1044,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2012-gap"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -78989,10 +78991,8 @@
         },
         {
           "line": 1046,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "kb04:leg-2012-gap"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -79037,14 +79037,18 @@
         },
         {
           "line": 1052,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2012-gap"
+          ],
           "reasonCode": null
         },
         {
           "line": 1053,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2012-gap"
+          ],
           "reasonCode": null
         },
         {
@@ -79057,16 +79061,16 @@
         },
         {
           "line": 1055,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "kb04:leg-2012-gap"
+          ],
           "reasonCode": null
         },
         {
           "line": 1056,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "manifest-registro-intro:parte-iii-stato-di-completezza-e-lacune-documentali"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -79079,7 +79083,7 @@
           "line": 1058,
           "classification": "candidate-content",
           "candidateIds": [
-            "manifest-registro-intro:parte-iii-stato-di-completezza-e-lacune-documentali:annualita-corrente-2026"
+            "kb04:leg-2012-gap"
           ],
           "reasonCode": null
         },
@@ -79093,7 +79097,7 @@
           "line": 1060,
           "classification": "candidate-content",
           "candidateIds": [
-            "manifest-registro-intro:parte-iii-stato-di-completezza-e-lacune-documentali:annualita-corrente-2026"
+            "manifest-registro-intro:parte-iii-stato-di-completezza-e-lacune-documentali"
           ],
           "reasonCode": null
         },
@@ -79113,10 +79117,8 @@
         },
         {
           "line": 1063,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "manifest-registro-intro:parte-iii-stato-di-completezza-e-lacune-documentali:annualita-corrente-2026"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -79129,10 +79131,8 @@
         },
         {
           "line": 1065,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "manifest-registro-intro:parte-iii-stato-di-completezza-e-lacune-documentali:annualita-corrente-2026"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -79161,8 +79161,10 @@
         },
         {
           "line": 1069,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "manifest-registro-intro:parte-iii-stato-di-completezza-e-lacune-documentali:annualita-corrente-2026"
+          ],
           "reasonCode": null
         },
         {
@@ -79175,8 +79177,10 @@
         },
         {
           "line": 1071,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "manifest-registro-intro:parte-iii-stato-di-completezza-e-lacune-documentali:annualita-corrente-2026"
+          ],
           "reasonCode": null
         },
         {
@@ -79189,10 +79193,8 @@
         },
         {
           "line": 1073,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "manifest-registro-intro:parte-iii-stato-di-completezza-e-lacune-documentali:annualita-corrente-2026"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -79205,10 +79207,8 @@
         },
         {
           "line": 1075,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "manifest-registro-intro:parte-iii-stato-di-completezza-e-lacune-documentali:annualita-corrente-2026"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -79221,29 +79221,33 @@
         },
         {
           "line": 1077,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "manifest-registro-intro:parte-iii-stato-di-completezza-e-lacune-documentali:annualita-corrente-2026"
+          ],
           "reasonCode": null
         },
         {
           "line": 1078,
           "classification": "candidate-content",
           "candidateIds": [
-            "manifest-registro-intro:periodo-2021-2025"
+            "manifest-registro-intro:parte-iii-stato-di-completezza-e-lacune-documentali:annualita-corrente-2026"
           ],
           "reasonCode": null
         },
         {
           "line": 1079,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "manifest-registro-intro:parte-iii-stato-di-completezza-e-lacune-documentali:annualita-corrente-2026"
+          ],
           "reasonCode": null
         },
         {
           "line": 1080,
           "classification": "candidate-content",
           "candidateIds": [
-            "manifest-registro-intro:periodo-2021-2025"
+            "manifest-registro-intro:parte-iii-stato-di-completezza-e-lacune-documentali:annualita-corrente-2026"
           ],
           "reasonCode": null
         },
@@ -79263,10 +79267,8 @@
         },
         {
           "line": 1083,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "manifest-registro-intro:periodo-2021-2025"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -79279,10 +79281,8 @@
         },
         {
           "line": 1085,
-          "classification": "candidate-content",
-          "candidateIds": [
-            "manifest-registro-intro:periodo-2021-2025"
-          ],
+          "classification": "blank",
+          "candidateIds": [],
           "reasonCode": null
         },
         {
@@ -79295,8 +79295,10 @@
         },
         {
           "line": 1087,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "manifest-registro-intro:periodo-2021-2025"
+          ],
           "reasonCode": null
         },
         {
@@ -79309,15 +79311,17 @@
         },
         {
           "line": 1089,
-          "classification": "blank",
-          "candidateIds": [],
+          "classification": "candidate-content",
+          "candidateIds": [
+            "manifest-registro-intro:periodo-2021-2025"
+          ],
           "reasonCode": null
         },
         {
           "line": 1090,
           "classification": "candidate-content",
           "candidateIds": [
-            "manifest-registro-intro:periodo-2012-2020"
+            "manifest-registro-intro:periodo-2021-2025"
           ],
           "reasonCode": null
         },
@@ -79331,7 +79335,7 @@
           "line": 1092,
           "classification": "candidate-content",
           "candidateIds": [
-            "manifest-registro-intro:periodo-2012-2020"
+            "manifest-registro-intro:periodo-2021-2025"
           ],
           "reasonCode": null
         },
@@ -79345,7 +79349,7 @@
           "line": 1094,
           "classification": "candidate-content",
           "candidateIds": [
-            "manifest-registro-intro:formula-pubblica-raccomandata"
+            "manifest-registro-intro:periodo-2012-2020"
           ],
           "reasonCode": null
         },
@@ -79359,7 +79363,7 @@
           "line": 1096,
           "classification": "candidate-content",
           "candidateIds": [
-            "manifest-registro-intro:formula-pubblica-raccomandata"
+            "manifest-registro-intro:periodo-2012-2020"
           ],
           "reasonCode": null
         },
@@ -79385,6 +79389,34 @@
         },
         {
           "line": 1100,
+          "classification": "candidate-content",
+          "candidateIds": [
+            "manifest-registro-intro:formula-pubblica-raccomandata"
+          ],
+          "reasonCode": null
+        },
+        {
+          "line": 1101,
+          "classification": "blank",
+          "candidateIds": [],
+          "reasonCode": null
+        },
+        {
+          "line": 1102,
+          "classification": "candidate-content",
+          "candidateIds": [
+            "manifest-registro-intro:formula-pubblica-raccomandata"
+          ],
+          "reasonCode": null
+        },
+        {
+          "line": 1103,
+          "classification": "blank",
+          "candidateIds": [],
+          "reasonCode": null
+        },
+        {
+          "line": 1104,
           "classification": "blank",
           "candidateIds": [],
           "reasonCode": null

@@ -1,10 +1,20 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ChunkCard from "../../components/ChunkCard.astro";
-import { DISCIPLINA_SECTIONS, chunksByScope, type Chunk } from "../../lib/corpus";
+import {
+  DISCIPLINA_SECTIONS,
+  publishedDisciplinaSections,
+  sectionHref,
+  chunksByScope,
+  type Chunk,
+} from "../../lib/corpus";
 
+// Le parti consolidate su una pagina canonica esterna non generano una pagina
+// qui: la loro vecchia rotta e' servita da un redirect 301 dichiarato in
+// netlify.toml. Senza questo filtro l'articolato del Regolamento risulterebbe
+// pubblicato due volte nell'HTML indicizzabile e nell'indice Pagefind.
 export function getStaticPaths() {
-  return DISCIPLINA_SECTIONS.map((section) => {
+  return publishedDisciplinaSections().map((section) => {
     const chunks = chunksByScope(section.scope);
     return {
       params: { scope: section.scope },
@@ -78,7 +88,7 @@ const sourceFile = chunks[0]?.citation.fileLabel ?? "";
       <nav class="pager" aria-label="Navigazione fra le parti" data-pagefind-ignore>
         {
           prev ? (
-            <a href={`/disciplina-vigente/${prev.scope}/`} class="pager__link">
+            <a href={sectionHref(prev)} class="pager__link">
               <span class="pager__dir">← Parte precedente</span>
               <span class="pager__title">{prev.title}</span>
             </a>
@@ -88,7 +98,7 @@ const sourceFile = chunks[0]?.citation.fileLabel ?? "";
         }
         {
           next && (
-            <a href={`/disciplina-vigente/${next.scope}/`} class="pager__link pager__link--next">
+            <a href={sectionHref(next)} class="pager__link pager__link--next">
               <span class="pager__dir">Parte successiva →</span>
               <span class="pager__title">{next.title}</span>
             </a>

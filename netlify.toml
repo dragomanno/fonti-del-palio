@@ -25,6 +25,27 @@
 # netlify/functions/ask.ts, per restituire un 503 controllato prima che
 # la piattaforma interrompa la funzione.
 
+# Consolidamento del Regolamento per il Palio sulla pagina canonica.
+#
+# Fino al 2 agosto 2026 l'articolato dei 106 articoli era pubblicato due volte:
+# su /regolamento-per-il-palio/ e come Parte 06 della disciplina vigente. La
+# seconda resa non viene piu' generata come pagina HTML e la sua vecchia URL
+# risponde con un 301 permanente. La Parte III della KB 03 resta invariata come
+# fonte consolidata interna: qui cambia solo la resa pubblica.
+#
+# Sono dichiarate entrambe le forme del percorso perche' il sito e' costruito
+# con build.format = "directory" e la rotta storica era indicizzata con lo
+# slash finale.
+[[redirects]]
+  from = "/disciplina-vigente/regolamento-palio/"
+  to = "/regolamento-per-il-palio/"
+  status = 301
+
+[[redirects]]
+  from = "/disciplina-vigente/regolamento-palio"
+  to = "/regolamento-per-il-palio/"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]

@@ -45,11 +45,56 @@ const SITEMAP = [...leggi("dist/sitemap.xml").matchAll(/<loc>([^<]+)<\/loc>/g)].
 // Perimetro delle rotte
 // ---------------------------------------------------------------------------
 
-test("nessuna rotta della v0.1.1 e' stata perduta", () => {
+/**
+ * Redirect permanenti dichiarati in netlify.toml, letti dal file reale.
+ *
+ * Il parsing e' volutamente minimale: il file e' scritto a mano nel repository
+ * e la sua forma e' verificata dal test dedicato in
+ * tests/deduplica-regolamento.test.mjs. Qui serve solo a distinguere una rotta
+ * consolidata da una rotta scomparsa.
+ */
+function redirectPermanenti() {
+  const toml = leggi("netlify.toml");
+  const mappa = new Map();
+  for (const blocco of toml.split(/\[\[redirects\]\]/).slice(1)) {
+    const testa = blocco.split(/\n\[/)[0];
+    const from = /^\s*from\s*=\s*"([^"]+)"/m.exec(testa);
+    const to = /^\s*to\s*=\s*"([^"]+)"/m.exec(testa);
+    const status = /^\s*status\s*=\s*(\d+)/m.exec(testa);
+    if (from && to && status && status[1] === "301") mappa.set(from[1], to[1]);
+  }
+  return mappa;
+}
+
+test("nessuna rotta della v0.1.1 e' stata perduta senza un 301 verso una pagina esistente", () => {
+  // La garanzia originale era "nessuna rotta scompare". Dal 2 agosto 2026 il
+  // perimetro ammette una seconda possibilita', piu' debole solo in apparenza:
+  // una rotta storica puo' cessare di essere una pagina HTML soltanto se e'
+  // servita da un redirect 301 permanente verso una rotta che esiste davvero.
+  // Una rotta che sparisce senza redirect resta un errore bloccante, e un
+  // redirect verso il vuoto pure.
   const baseline = json("tests/fixtures/rotte-v0.1.1.json");
   assert.equal(baseline.length, 116, "la baseline v0.1.1 deve contare 116 rotte");
-  const perse = baseline.filter((r) => !ROTTE.has(r));
+  const redirect = redirectPermanenti();
+  const perse = [];
+  const consolidate = [];
+  for (const r of baseline) {
+    if (ROTTE.has(r)) continue;
+    const destinazione = redirect.get(r);
+    if (!destinazione) {
+      perse.push(r);
+    } else if (!ROTTE.has(destinazione)) {
+      perse.push(`${r} -> ${destinazione} (destinazione inesistente)`);
+    } else {
+      consolidate.push(`${r} -> ${destinazione}`);
+    }
+  }
   assert.deepEqual(perse, [], `rotte preesistenti scomparse:\n${perse.join("\n")}`);
+  assert.deepEqual(
+    consolidate,
+    ["/disciplina-vigente/regolamento-palio/ -> /regolamento-per-il-palio/"],
+    "l'elenco delle rotte consolidate via 301 deve restare esattamente quello approvato",
+  );
 });
 
 test("tutte le rotte nuove della v0.2.0 sono presenti", () => {

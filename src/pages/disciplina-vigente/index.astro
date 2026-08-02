@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { DISCIPLINA_SECTIONS, chunksByScope } from "../../lib/corpus";
+import { DISCIPLINA_SECTIONS, sectionHref, chunksByScope } from "../../lib/corpus";
 
 const sections = DISCIPLINA_SECTIONS.map((s) => {
   const chunks = chunksByScope(s.scope);
@@ -44,7 +44,7 @@ const totalArticles = sections.reduce((n, s) => n + s.articleCount, 0);
         {
           sections.map((s) => (
             <li>
-              <a href={`/disciplina-vigente/${s.scope}/`} class="section-list__item">
+              <a href={sectionHref(s)} class="section-list__item">
                 <span class="section-list__ordinal">
                   {String(s.ordinal).padStart(2, "0")}
                 </span>

@@ -1,8 +1,8 @@
 ---
 title: "KB 12 — Manifest generale delle fonti di Fonti del Palio"
 document_type: "registro generale, stato documentale e relazioni"
-version: "1.3"
-last_verified: "2026-07-31"
+version: "1.4"
+last_verified: "2026-08-05"
 status: "registro di secondo livello; coordina Protocollo Equino, ordinanze e documenti operativi della singola Carriera"
 curation: "Fabrizio Gabrielli / Fonti del Palio"
 ---
@@ -67,7 +67,7 @@ Questi quattro file governano il trattamento tecnico delle fonti e il ciclo di r
 | KB 12 | Manifest generale |
 | KB 13 | router generale |
 
-# 4. Registro degli atti e dei documenti operativi di luglio 2026
+# 4. Registro degli atti, dei documenti operativi e dei manifesti della Carriera del 16 agosto 2026
 
 ## 4.1 Lotto di tredici PDF acquisito il 28 luglio 2026
 
@@ -209,6 +209,17 @@ Questi quattro file governano il trattamento tecnico delle fonti e il ciclo di r
 - **Trascrizione completa:** KB 09, sezione 6.
 - **Limite:** l'ammissione alle Previsite non equivale a idoneità sanitaria, ammissione alle prove regolamentate, ammissione alla Tratta o partecipazione alla Carriera.
 
+## 4.3 Lotto dei manifesti a stampa acquisito il 4 agosto 2026
+
+- **Natura:** cinque manifesti a stampa del Comune di Siena per il Palio del 16 agosto 2026, destinati all’affissione e alla diffusione al pubblico. Non sono copie conformi di atti protocollati.
+- **Identificativi:** `MAN-2026-08-001`, `MAN-2026-08-002`, `MAN-2026-08-003`, `MAN-2026-08-004`, `MAN-2026-08-005`.
+- **Consistenza:** una pagina ciascuno, cinque pagine complessive.
+- **Provenienza:** Albo Pretorio online del Comune di Siena, `https://servizi.comune.siena.it/openweb/albo/albo_pretorio.php`, copie acquisite il 4 agosto 2026. L’URL diretto del singolo allegato non è stato conservato.
+- **Stato documentale:** `acquisito`; tutti e cinque ripubblicati, ciascuno con il proprio SHA-256 verificato in fase di generazione dell’indice.
+- **Registro e schede complete:** KB 09, sezioni 9 e 10.
+- **Limiti dichiarati:** nessuno dei cinque porta un numero di protocollo, e il numero non è stato dedotto; `MAN-2026-08-002` e `MAN-2026-08-003` non nominano la Carriera del 16 agosto 2026; `MAN-2026-08-005` è privo di data e sottoscrizione nella parte visibile e il suo livello testuale contiene uno strato residuo della Carriera del 2 luglio 2026 che non deve essere trascritto.
+- **Relazione con `ATT-2026-SIND-044` e `ATT-2026-SIND-045`:** `MAN-2026-08-001` è datato 7 luglio 2026 come i due atti richiamati, ma ha oggetto diverso da entrambi. La coincidenza non è stabilita e i due atti restano nello stato `richiamato`.
+
 # 5. Atti richiamati e non acquisiti
 
 ## ATT-2026-SIND-044
@@ -237,6 +248,7 @@ Questi quattro file governano il trattamento tecnico delle fonti e il ciclo di r
 - Le ordinanze sindacali nn. 51–60 del 28 luglio 2026 sono acquisite.
 - Le regole pratiche pubblicate in KB 11 derivano da questo lotto.
 - Il comunicato ufficiale del 30 luglio 2026 e l'elenco dei 108 cavalli ammessi alle Previsite sono acquisiti come fonte web istituzionale.
+- I cinque manifesti a stampa acquisiti il 4 agosto 2026 sono identificati, verificati per digest e ripubblicati.
 
 ## 6.2 Cosa non può essere dichiarato
 
@@ -244,12 +256,14 @@ Questi quattro file governano il trattamento tecnico delle fonti e il ciclo di r
 - che non esistano provvedimenti successivi;
 - che gli orari non possano cambiare;
 - che il quadro di pubblica sicurezza sia esaurito dalle sole ordinanze comunali;
-- che un atto richiamato sia integralmente noto senza il suo PDF.
-- che tutti i cavalli ammessi alle Previsite siano successivamente presentati, giudicati idonei, ammessi alle prove regolamentate o alla Tratta.
+- che un atto richiamato sia integralmente noto senza il suo PDF;
+- che tutti i cavalli ammessi alle Previsite siano successivamente presentati, giudicati idonei, ammessi alle prove regolamentate o alla Tratta;
+- che un manifesto a stampa corrisponda a un determinato atto protocollato, in assenza del numero;
+- che i manifesti acquisiti esauriscano quelli affissi per questa Carriera.
 
 ## 6.3 Formula pubblica raccomandata
 
-> Questa sezione raccoglie e coordina le ordinanze nn. 51–60 del 28 luglio 2026, gli altri documenti ufficiali acquisiti nel lotto e i successivi documenti operativi verificati. Il quadro resta aperto a provvedimenti, liste e aggiornamenti successivi e ad atti richiamati non ancora acquisiti.
+> Questa sezione raccoglie e coordina le ordinanze nn. 51–60 del 28 luglio 2026, gli altri documenti ufficiali acquisiti nel lotto, i cinque manifesti a stampa acquisiti il 4 agosto 2026 e i successivi documenti operativi verificati. Il quadro resta aperto a provvedimenti, liste e aggiornamenti successivi e ad atti richiamati non ancora acquisiti.
 
 # 7. Politica di aggiornamento
 

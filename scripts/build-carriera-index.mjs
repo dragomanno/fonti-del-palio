@@ -23,6 +23,7 @@
  */
 
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from "node:fs";
+import { createHash } from "node:crypto";
 import path from "node:path";
 import { buildRegolamento, verificaRegolamento } from "./build-regolamento.mjs";
 
@@ -31,6 +32,7 @@ const CARRIERE = path.join(ROOT, "content", "carriere");
 const KB_DIR = path.join(ROOT, "content", "kb");
 const RIFERIMENTI = path.join(ROOT, "content", "riferimenti");
 const PDF_DIR = path.join(ROOT, "public", "atti", "2026");
+const MANIFESTI_DIR = path.join(PDF_DIR, "manifesti");
 const TARGET = path.join(ROOT, "data", "carriera.generated.json");
 
 const KB09 = "09_KB_Corpus_Ordinanze_e_Atti_Palio_Agosto_2026.md";
@@ -57,6 +59,9 @@ export const EXPECTED = {
   riscritture: 5,
   articoliRegolamento: 106,
   capitoliRegolamento: 8,
+  manifesti: 5,
+  manifestiRipubblicabili: 5,
+  pagineManifesti: 5,
 };
 
 function read(dir, name) {
@@ -135,6 +140,19 @@ export function attoSlug(id) {
   return `${tipo}-${Number(m[3])}-${m[1]}`;
 }
 
+/**
+ * Slug pubblico stabile di un manifesto: derivato dall'ID di registro.
+ *
+ * I manifesti non hanno numero di protocollo: l'unico identificativo stabile e'
+ * quello assegnato dal registro, e lo slug non deve mai suggerire un numero
+ * d'atto che il documento non porta.
+ */
+export function manifestoSlug(id) {
+  const m = id.match(/^MAN-(\d{4})-(\d{2})-(\d{3})$/);
+  if (!m) throw new Error(`ID manifesto non riconosciuto: ${id}`);
+  return `manifesto-${Number(m[3])}-${m[1]}-${m[2]}`;
+}
+
 /** Mappa ID di registro -> file PDF pubblicato, derivata dai file effettivamente presenti. */
 export function mapPdfFiles(files) {
   const byNumber = new Map();
@@ -188,6 +206,71 @@ function buildAtti(kb09) {
   );
   if (orfani.length) throw new Error(`PDF non collegati ad alcun atto: ${orfani.join(", ")}`);
   return atti;
+}
+
+/**
+ * Secondo lotto: i manifesti a stampa acquisiti il 4 agosto 2026.
+ *
+ * Sono tenuti separati dagli atti perche' non sono atti protocollati: nessuno
+ * porta un numero, e il registro non deve dedurne uno. Il nome del file
+ * acquisito e' un dato del registro, non una convenzione del generatore: viene
+ * letto dalla tabella e confrontato con i file effettivamente presenti, insieme
+ * al digest SHA-256, cosi' che un file sostituito faccia fallire la
+ * generazione invece di essere pubblicato in silenzio.
+ */
+function buildManifesti(kb09) {
+  const registro = parseTable(
+    section(kb09, "## 9. Registro dei manifesti ufficiali acquisiti il 4 agosto 2026")
+  );
+  const schede = new Map(
+    blocks(section(kb09, "## 10. Schede dei manifesti"), 3).map((b) => [b.title, b.body])
+  );
+
+  const presenti = new Set(
+    existsSync(MANIFESTI_DIR) ? readdirSync(MANIFESTI_DIR).filter((f) => f.endsWith(".pdf")) : []
+  );
+
+  const manifesti = registro.body.map((row) => {
+    const [idCell, documento, data, pagine, shaCell, stato, fileCell] = row;
+    const id = plain(idCell);
+    const file = plain(fileCell);
+    const ripubblicabile = stato === "ripubblicabile";
+    if (ripubblicabile && !presenti.has(file)) {
+      throw new Error(`file mancante per il manifesto ripubblicabile ${id}: ${file}`);
+    }
+    const sha256 = plain(shaCell);
+    if (ripubblicabile) {
+      const digest = createHash("sha256")
+        .update(readFileSync(path.join(MANIFESTI_DIR, file)))
+        .digest("hex");
+      if (digest !== sha256) {
+        throw new Error(
+          `digest non corrispondente per ${id}: registrato ${sha256}, calcolato ${digest}`
+        );
+      }
+    }
+    const scheda = schede.get(id);
+    if (!scheda) throw new Error(`scheda documentaria mancante per ${id}`);
+    return {
+      id,
+      slug: manifestoSlug(id),
+      titolo: documento,
+      data,
+      pagine: Number(pagine),
+      sha256,
+      statoPubblico: stato,
+      ripubblicabile,
+      pdf: ripubblicabile ? `/atti/2026/manifesti/${file}` : null,
+      scheda,
+    };
+  });
+
+  const registrati = new Set(manifesti.filter((m) => m.pdf).map((m) => path.basename(m.pdf)));
+  const orfani = [...presenti].filter((f) => !registrati.has(f)).sort();
+  if (orfani.length) {
+    throw new Error(`manifesti non collegati ad alcun record: ${orfani.join(", ")}`);
+  }
+  return manifesti;
 }
 
 function buildCavalli(kb09) {
@@ -333,6 +416,7 @@ export function buildIndex() {
       data: "2026-08-16",
     },
     atti,
+    manifesti: buildManifesti(kb09),
     attiRichiamati: buildRichiamati(kb09),
     previsite: {
       comunicato: comunicatoPrevisite,
@@ -366,6 +450,17 @@ export function verify(index) {
     EXPECTED.attiNonRipubblicati
   );
   eq("atti richiamati", index.attiRichiamati.length, EXPECTED.attiRichiamati);
+  eq("manifesti registrati", index.manifesti.length, EXPECTED.manifesti);
+  eq(
+    "manifesti ripubblicabili",
+    index.manifesti.filter((m) => m.ripubblicabile).length,
+    EXPECTED.manifestiRipubblicabili
+  );
+  eq(
+    "pagine complessive dei manifesti pubblicati",
+    index.manifesti.filter((m) => m.ripubblicabile).reduce((n, m) => n + m.pagine, 0),
+    EXPECTED.pagineManifesti
+  );
   eq("cavalli ammessi alle Previsite", index.previsite.cavalli.length, EXPECTED.cavalli);
   eq("materie consolidate", index.materie.length, EXPECTED.materie);
   eq("sezioni della guida", index.guida.length, EXPECTED.sezioniGuida);
@@ -416,7 +511,11 @@ export function verify(index) {
   // Nessun identificativo o slug duplicato.
   for (const [label, values] of [
     ["ID degli atti", index.atti.map((a) => a.id)],
-    ["slug degli atti", index.atti.map((a) => a.slug)],
+    [
+      "slug del registro pubblico",
+      [...index.atti, ...index.manifesti].map((a) => a.slug),
+    ],
+    ["ID dei manifesti", index.manifesti.map((m) => m.id)],
     ["slug delle materie", index.materie.map((m) => m.slug)],
     ["slug delle sezioni della guida", index.guida.map((g) => g.slug)],
     ["slug delle Contrade", index.bando.contrade.map((c) => c.slug)],
@@ -426,7 +525,7 @@ export function verify(index) {
   }
 
   // Ogni SHA-256 registrato deve essere un digest esadecimale completo.
-  for (const atto of index.atti) {
+  for (const atto of [...index.atti, ...index.manifesti]) {
     if (!/^[0-9a-f]{64}$/.test(atto.sha256)) problems.push(`SHA-256 malformato per ${atto.id}`);
   }
   for (const record of index.registroFonti) {
@@ -457,6 +556,7 @@ function main() {
   console.log(
     `carriera.generated.json scritto: ${index.atti.length} atti ` +
       `(${index.atti.filter((a) => a.ripubblicabile).length} ripubblicabili), ` +
+      `${index.manifesti.length} manifesti, ` +
       `${index.previsite.cavalli.length} cavalli, ${index.materie.length} materie, ` +
       `${index.guida.length} sezioni di guida, ${index.bando.contrade.length} Contrade, ` +
       `${index.registroFonti.length} record di registro, ` +

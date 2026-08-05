@@ -27,6 +27,15 @@ export interface Atto {
   scheda: string;
 }
 
+/**
+ * Un manifesto a stampa condivide la forma di record dell'atto, non la sua
+ * natura: e' un documento di pubblicita' e diffusione, privo di numero di
+ * protocollo. Il tipo e' lo stesso perche' i campi registrati sono gli stessi;
+ * la distinzione resta nell'array di appartenenza e nelle pagine, che non
+ * devono mai chiamarlo "atto".
+ */
+export type Manifesto = Atto;
+
 export interface AttoRichiamato {
   id: string;
   scheda: string;
@@ -146,6 +155,7 @@ export interface CarrieraIndex {
   schema: string;
   carriera: { slug: string; titolo: string; data: string };
   atti: Atto[];
+  manifesti: Manifesto[];
   attiRichiamati: AttoRichiamato[];
   previsite: { comunicato: string; regoleLista: string; cavalli: Cavallo[] };
   materie: Materia[];
@@ -179,8 +189,27 @@ export function listAttiPubblicati(): Atto[] {
   return listAtti().filter((a) => a.ripubblicabile);
 }
 
+/** I manifesti a stampa nell'ordine del registro. */
+export function listManifesti(): Manifesto[] {
+  return loadCarriera().manifesti;
+}
+
+/**
+ * Il registro pubblico completo: prima gli atti, poi i manifesti.
+ * L'ordine e' quello della pagina di registro e governa anche la navigazione
+ * fra le schede.
+ */
+export function listRegistroPubblico(): Atto[] {
+  return [...listAtti(), ...listManifesti()];
+}
+
 export function attoBySlug(slug: string): Atto | undefined {
-  return listAtti().find((a) => a.slug === slug);
+  return listRegistroPubblico().find((a) => a.slug === slug);
+}
+
+/** Vero se lo slug appartiene al lotto dei manifesti a stampa. */
+export function isManifesto(slug: string): boolean {
+  return listManifesti().some((m) => m.slug === slug);
 }
 
 export function listMaterie(): Materia[] {

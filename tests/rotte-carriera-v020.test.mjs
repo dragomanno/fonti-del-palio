@@ -44,11 +44,12 @@ const ROTTE_ATTESE = [
   "/regolamento-per-il-palio/edizione-previgente/",
   "/documenti-fondamentali/bando-di-violante/",
   ...index.atti.map((a) => `/ordinanze-e-atti/${a.slug}/`),
+  ...index.manifesti.map((m) => `/ordinanze-e-atti/${m.slug}/`),
   ...index.bando.contrade.map((c) => `/documenti-fondamentali/bando-di-violante/${c.slug}/`),
 ];
 
 test("tutte le rotte della carriera sono state costruite", () => {
-  assert.equal(ROTTE_ATTESE.length, 39, "il conteggio delle rotte attese è cambiato");
+  assert.equal(ROTTE_ATTESE.length, 44, "il conteggio delle rotte attese è cambiato");
   for (const rotta of ROTTE_ATTESE) html(rotta);
 });
 

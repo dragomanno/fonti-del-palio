@@ -1,12 +1,13 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import NotaDocumentaria from "../../components/NotaDocumentaria.astro";
-import { loadCarriera, listAttiPubblicati, listAtti } from "../../lib/carriera";
+import { loadCarriera, listAttiPubblicati, listAtti, listManifesti } from "../../lib/carriera";
 
 const carriera = loadCarriera();
 const atti = listAtti();
 const pubblicati = listAttiPubblicati();
 const pagine = pubblicati.reduce((n, a) => n + a.pagine, 0);
+const manifesti = listManifesti();
 
 /**
  * La rotta e' intenzionalmente nominata sulla singola Carriera e non su un
@@ -45,8 +46,8 @@ const sezioni = [
     ordinale: "04",
     titolo: "Ordinanze e atti",
     sommario:
-      "Il registro degli atti acquisiti, ciascuno con estremi, digest di integrità e, dove ripubblicabile, il PDF originale.",
-    meta: `${atti.length} atti · ${pubblicati.length} PDF`,
+      "Il registro degli atti e dei manifesti a stampa acquisiti, ciascuno con estremi, digest di integrità e, dove ripubblicabile, il PDF originale.",
+    meta: `${atti.length} atti · ${manifesti.length} manifesti · ${pubblicati.length + manifesti.filter((m) => m.ripubblicabile).length} PDF`,
   },
 ];
 ---
@@ -69,6 +70,7 @@ const sezioni = [
       </p>
       <p class="text-caption" style="margin-top: var(--space-2);">
         {atti.length} atti registrati · {pubblicati.length} PDF ripubblicati · {pagine} pagine
+        · {manifesti.length} manifesti a stampa
         · {carriera.previsite.cavalli.length} cavalli ammessi alle Previsite
       </p>
     </div>
@@ -100,10 +102,11 @@ const sezioni = [
     <div class="wrap">
       <NotaDocumentaria titolo="Che cosa copre e che cosa non copre questa sezione" variante="avvertenza">
         <p>
-          Il registro comprende i tredici atti effettivamente acquisiti il 28 luglio 2026 e il
-          documento operativo del 30 luglio 2026. Non è l'elenco completo degli atti adottati dal
-          Comune di Siena per questa Carriera: altri atti possono esistere e non essere stati
-          acquisiti. L'assenza di un atto da questa pagina non significa che l'atto non esista.
+          Il registro comprende i tredici atti effettivamente acquisiti il 28 luglio 2026, il
+          documento operativo del 30 luglio 2026 e i cinque manifesti a stampa acquisiti il 4 agosto
+          2026. Non è l'elenco completo degli atti adottati dal Comune di Siena per questa Carriera:
+          altri atti possono esistere e non essere stati acquisiti. L'assenza di un atto da questa
+          pagina non significa che l'atto non esista.
         </p>
         <p>
           Due atti sono richiamati da quelli acquisiti ma non sono stati acquisiti a loro volta:

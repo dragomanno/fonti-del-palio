@@ -1,12 +1,12 @@
 ---
 title: "KB 09 — Corpus delle ordinanze e degli atti per il Palio di agosto 2026"
 document_type: "corpus documentario strutturato e registro operativo"
-version: "1.2"
-last_verified: "2026-07-31"
+version: "1.3"
+last_verified: "2026-08-05"
 coverage: "Palio del 16 agosto 2026"
 curation: "Fabrizio Gabrielli / Fonti del Palio"
 priority: "prima fonte KB per ordinanze, atti e documenti operativi della singola Carriera"
-status: "13 PDF acquisiti e verificati; comunicato ufficiale del 30 luglio 2026 acquisito come fonte web; ricerca aperta"
+status: "13 PDF acquisiti e verificati; 5 manifesti a stampa acquisiti il 4 agosto 2026; comunicato ufficiale del 30 luglio 2026 acquisito come fonte web; ricerca aperta"
 ---
 
 # KB 09 — Corpus delle ordinanze e degli atti per il Palio di agosto 2026
@@ -20,7 +20,8 @@ Questa Knowledge Base registra e rende interrogabili:
 - gli atti dirigenziali nn. 1775 e 1791;
 - il visto contabile collegato all’atto n. 1775;
 - i documenti operativi successivi relativi alla singola Carriera;
-- il comunicato ufficiale del 30 luglio 2026 con i 108 cavalli ammessi alle Previsite.
+- il comunicato ufficiale del 30 luglio 2026 con i 108 cavalli ammessi alle Previsite;
+- i cinque manifesti a stampa acquisiti il 4 agosto 2026, registrati come lotto distinto.
 
 Il file è il primo livello KB per domande su uno specifico atto di agosto 2026. Per la disciplina coordinata su accesso, sicurezza e servizi consultare **KB 10**. Per una formulazione destinata al pubblico consultare **KB 11**. Per stato documentale, relazioni e completezza consultare **KB 12**.
 
@@ -31,7 +32,8 @@ Il file è il primo livello KB per domande su uno specifico atto di agosto 2026.
 - Un comunicato istituzionale è una fonte ufficiale di informazione, ma non diventa per questo un’ordinanza o un atto amministrativo autonomo.
 - Le disposizioni hanno efficacia soltanto nei luoghi, nei giorni, negli orari e verso i destinatari indicati dall’atto.
 - La lista dei cavalli ammessi alle Previsite non prova la successiva presentazione del cavallo, l’idoneità sanitaria, l’ammissione alle prove regolamentate o alla Tratta, né la partecipazione alla Carriera.
-- Il corpus è completo rispetto ai tredici PDF ricevuti, non rispetto a tutti i documenti eventualmente prodotti per il Palio del 16 agosto 2026.
+- Un manifesto a stampa è uno strumento di pubblicità e di diffusione: non equivale a una copia conforme dell’atto protocollato e, in caso di divergenza, cede davanti all’atto originale e al Regolamento per il Palio.
+- Il corpus è completo rispetto ai tredici PDF ricevuti e ai cinque manifesti acquisiti il 4 agosto 2026, non rispetto a tutti i documenti eventualmente prodotti per il Palio del 16 agosto 2026.
 
 ## 3. Metodo di acquisizione
 
@@ -470,3 +472,134 @@ Il corpus deve essere aggiornato quando vengono pubblicati:
 - rinvii o modifiche operative.
 
 Ogni nuova lista deve essere conservata come snapshot autonomo. Non sovrascrivere retroattivamente la lista dei 108 ammessi alle Previsite con gli elenchi delle fasi successive.
+
+
+## 9. Registro dei manifesti ufficiali acquisiti il 4 agosto 2026
+
+Il 4 agosto 2026 è stato acquisito un secondo lotto, distinto e autonomo rispetto ai tredici PDF del 28 luglio 2026. Si tratta di **manifesti a stampa** del Comune di Siena relativi al Palio del 16 agosto 2026: documenti destinati all’affissione e alla diffusione al pubblico, non copie conformi di atti protocollati.
+
+**Provenienza dichiarata:** Albo Pretorio online del Comune di Siena, `https://servizi.comune.siena.it/openweb/albo/albo_pretorio.php`, copie acquisite il 4 agosto 2026. L’URL diretto del singolo allegato non è stato conservato al momento dell’acquisizione: la provenienza è quindi verificabile a livello di fonte, non a livello di singolo collegamento. I nomi di file sono conservati esattamente come ricevuti.
+
+**Limiti specifici di questo lotto:**
+
+- nessuno dei cinque documenti riporta un numero di protocollo o di repertorio: non è possibile collegarli con certezza a un numero d’atto, e tale numero non deve essere dedotto;
+- la data di creazione registrata nei metadati PDF precede in più casi la data di sottoscrizione stampata sul documento: i metadati riflettono la preparazione tipografica, non la data dell’atto, e non vanno usati come data documentaria;
+- due manifesti (`MAN-2026-08-002` e `MAN-2026-08-003`) non nominano la Carriera del 16 agosto 2026: la loro riferibilità a questa Carriera discende dalla data e dal lotto di acquisizione, non da una dichiarazione contenuta nel testo;
+- un manifesto (`MAN-2026-08-005`) è privo di data e di sottoscrizione nella parte visibile.
+
+| ID | Documento | Data | Pagine | SHA-256 | Stato pubblico | File acquisito |
+|---|---|---:|---:|---|---|---|
+| `MAN-2026-08-001` | Ordinanza sindacale a stampa — presentazione, prova, scelta e assegnazione dei cavalli | 07/07/2026 | 1 | `5b54e7d067ce6d8b326f545840241670ae97bc7839cb4f1385ffe39cd1fcdef2` | ripubblicabile | `allegato1785846374-4.pdf` |
+| `MAN-2026-08-002` | Manifesto-ordinanza «Corse del Palio» — prescrizioni su mossa, corsa e vittoria | 21/07/2026 | 1 | `8188e8d414fab4c6f7c87b33b1991f7e4b8d91c868e24124c3e4d3a7cbf5a3b5` | ripubblicabile | `allegato1785846326-3.pdf` |
+| `MAN-2026-08-003` | Manifesto «Estratto dal Regolamento per il Palio» — artt. 43, 59, 60, 63, 64, 67, 68, 69 | 21/07/2026 | 1 | `669c1f922b85546defbddc7d936a416d0f14b40761520e5759370997af8f8eb3` | ripubblicabile | `allegato1785846277-2.pdf` |
+| `MAN-2026-08-004` | Manifesto «Il Sindaco rende noto» — prezzi dei Palchi del Campo | 21/07/2026 | 1 | `ac5e37f23151804e641ad62f7fcb133f78153a61e5e0a4aaf141833632638614` | ripubblicabile | `allegato1785846511.pdf` |
+| `MAN-2026-08-005` | Manifesto «Palio del 16 agosto 2026» — orari, prescrizioni al pubblico e planimetria di emergenza | non indicata | 1 | `27562f9b3508cf46a84dabd6dcaae0f458cdc15cea16e66f58823795fc1d008f` | ripubblicabile | `allegato1785846472-5.pdf` |
+
+## 10. Schede dei manifesti
+
+### MAN-2026-08-001
+
+**Tipo:** ordinanza sindacale a stampa (manifesto).  
+**Numero e data:** numero non indicato; Siena, 7 luglio 2026.  
+**Oggetto:** presentazione, prova, scelta e assegnazione dei cavalli per il Palio del 16 agosto 2026.  
+**Riferimenti richiamati:** artt. 34 e seguenti e art. 37 del Regolamento per il Palio; art. 50 del T.U.E.L.
+
+**Dispositivo verificato:**
+
+- per essere presentati, i cavalli devono essere stati sottoposti a visita veterinaria della Commissione Veterinaria nei giorni immediatamente precedenti la Tratta;
+- la presentazione avviene nella Corte del Podestà del Civico Palazzo il 13 agosto 2026, dalle ore 6:30 al termine perentorio delle ore 7:30, a pena di inammissibilità alle fasi successive;
+- oltre al proprietario può accedere una seconda persona (accompagnatore); dopo le prove dei cavalli, all’atto della riunione dei Capitani per la Tratta, non può trattenersi nella Corte più di una delle due;
+- dopo la segnatura il cavallo non può più essere ritirato;
+- nella stessa mattinata del 13 agosto 2026 si svolgono le corse di prova, la scelta e l’assegnazione dei cavalli alle Contrade.
+
+**Sanzioni:** denuncia ai sensi dell’art. 650 c.p. per i punti 1) e 4); sanzione amministrativa da € 25,00 a € 500,00 per il punto 3).  
+**Ricorsi:** T.A.R. entro 60 giorni; ricorso straordinario al Presidente della Repubblica entro 120 giorni.  
+**Ambito:** Tratta e operazioni preliminari del 13 agosto 2026.  
+**Relazione con `ATT-2026-SIND-044` e `ATT-2026-SIND-045`:** entrambi datati 7 luglio 2026, ma con oggetto ricostruibile diverso (svolgimento di Prove e corsa dal 13 al 16 agosto; prove regolamentate dell’11 e 12 agosto). La coincidenza con l’uno o con l’altro **non è stabilita** e il numero di questo manifesto resta ignoto.  
+**Non confondere con:** `ATT-2026-ORD-051`, che disciplina l’accesso all’area del sorteggio, non la procedura di presentazione.
+
+### MAN-2026-08-002
+
+**Tipo:** manifesto-ordinanza («IL SINDACO ricorda» / «ordina»).  
+**Numero e data:** numero non indicato; Siena, 21 luglio 2026.  
+**Oggetto:** prescrizioni generali sulle corse del Palio: mossa, condotta di gara, uso del nerbo, vittoria e comportamento del pubblico.
+
+**Premessa («RICORDA»):** la soprintendenza e la direzione dei Palii spettano esclusivamente all’Amministrazione Comunale, con la collaborazione dei Deputati della Festa, i quali esercitano le attribuzioni loro conferite dal Regolamento.
+
+**Dispositivo verificato («ORDINA»), diciotto punti numerati:**
+
+- prova dei cavalli da parte di fantini ingaggiati dal Comune (punto 1);
+- approvazione comunale della nomina del fantino e maggiore età dei fantini (punto 2);
+- costumi delle comparse conformi ai bozzetti approvati e nota delle persone prescelte almeno due giorni prima del Palio (punti 3 e 4);
+- direzione del Corteo Storico da parte del Maestro di Campo e obblighi dei figuranti sul palco dinanzi al Civico Palazzo (punti 5 e 6);
+- divieto di somministrare ai cavalli sostanze eccitanti, frizioni o «perette», sotto la responsabilità personale del Capitano (punto 7);
+- passaggio dei fantini alla dipendenza esclusiva dell’Autorità Comunale e del Mossiere all’uscita dalla Corte del Podestà (punto 8);
+- disciplina dell’avvicinamento alla mossa (punto 9) e dell’entrata fra i canapi nell’ordine di chiamata (punto 10);
+- disciplina della mossa, della mossa non valida segnalata dal mortaretto e del rientro al punto di partenza o al Cortile del Podestà (punto 11);
+- obbligo dei tre giri e obbligo di fermarsi allo sparo del mortaretto d’arrivo (punto 12);
+- divieto di molestia fra fantini e ammissibilità del nerbo soltanto per il Palio, non prima del raggiungimento del bandierino di traguardo dopo la mossa (punto 13);
+- obbligo di mettersi fuori giostra per le Contrade doppiate (punto 14);
+- divieto di prestare aiuto ai fantini caduti per risalire a cavallo (punto 15);
+- definizione della vittoria, anche con cavallo scosso, e giudizio inappellabile della Commissione di tre membri nominata dalla Giunta Comunale (punto 16);
+- consegna del Palio al Capitano della Contrada vincitrice (punto 17);
+- competenza dell’Autorità Comunale, uditi i Deputati della Festa, per ogni provvedimento non previsto dal Regolamento (punto 18).
+
+**Sanzioni:** «Le trasgressioni alla presente ordinanza saranno punite secondo quanto stabilito dal Regolamento per il Palio.»
+
+**Limite documentario:** il manifesto **non nomina la Carriera del 16 agosto 2026**. La sua riferibilità a questa Carriera discende dalla data e dal lotto di acquisizione. Il testo è una riproduzione amministrativa di prescrizioni regolamentari e non introduce disciplina autonoma: in caso di divergenza prevale il **Regolamento per il Palio** nella sua versione vigente.  
+**Non confondere con:** il Regolamento per il Palio integrale, pubblicato separatamente su questo sito.
+
+### MAN-2026-08-003
+
+**Tipo:** manifesto di riproduzione documentaria («Estratto dal Regolamento per il Palio»).  
+**Numero e data:** numero non indicato; dalla Residenza Municipale, 21 luglio 2026.  
+**Oggetto:** riproduzione a stampa di articoli scelti del Regolamento per il Palio: artt. 43, 59, 60, 63, 64, 67, 68 e 69, separati da indicazioni di «Omissis».
+
+**Natura dell’estratto:**
+
+- si tratta di un **estratto parziale e non continuo**: le indicazioni di «Omissis» segnalano articoli e commi non riprodotti;
+- l’estratto non modifica, non abroga e non integra il Regolamento;
+- la versione integrale e vigente del Regolamento resta la fonte prevalente;
+- gli articoli riprodotti riguardano i fantini nelle corse di prova (art. 43), i requisiti dei fantini ingaggiati dalle Contrade (art. 59), il rischio personale del fantino (art. 60), la dipendenza dall’Autorità Comunale e dal Mossiere (art. 63), l’entrata fra i canapi (art. 64), il divieto di molestia e l’uso del nerbo (art. 67), le Contrade doppiate (art. 68) e i fantini caduti da cavallo (art. 69).
+
+**Limite documentario:** il manifesto non nomina la Carriera del 16 agosto 2026. Non deve essere citato come fonte del testo regolamentare quando è disponibile il Regolamento integrale.
+
+### MAN-2026-08-004
+
+**Tipo:** manifesto informativo («IL SINDACO rende noto»).  
+**Numero e data:** numero non indicato; Siena, 21 luglio 2026.  
+**Oggetto:** prezzi dei Palchi del Campo comunicati all’Amministrazione Comunale dai proprietari dei palchi in occasione del Palio del 16 agosto 2026.
+
+**Contenuto verificato:**
+
+- il manifesto riporta una tabella di prezzi per palco, con importi fissi e con fasce «da … fino a …», compresi fra € 130,00 e € 390,00;
+- i palchi indicati come **non disponibili al pubblico** sono i nn. 1, 2, 3, 4, 6, 26, 29, 32, 39, 40 e 46;
+- una planimetria della Piazza individua la collocazione dei palchi e le uscite;
+- in caso di rinvio della Carriera l’acquirente ha diritto al rimborso del 25% sul prezzo del biglietto qualora non intenda avvalersene per il giorno al quale il Palio è rimandato; in tal caso il biglietto deve essere restituito al proprietario del palco entro le ore 12 del giorno della sua validità.
+
+**Natura dell’atto:** il Comune **rende noti** prezzi comunicati da soggetti privati. Il manifesto non è un’ordinanza, non fissa i prezzi e non li approva.  
+**Nota di trascrizione:** il testo a stampa riporta «propretari» [sic]; la forma è conservata nella riproduzione originale e normalizzata soltanto in questa scheda.  
+**Riferimento tipografico:** «TIPOGRAFIA SENESE srl»; numero di pagina stampato «32», indice di appartenenza a una raccolta a stampa più ampia.  
+**Non confondere con:** `ATT-2026-ORD-058`, che disciplina i palchi sotto il profilo dell’ordinanza sindacale.
+
+### MAN-2026-08-005
+
+**Tipo:** manifesto di pubblica informazione con planimetria di emergenza.  
+**Numero e data:** numero non indicato; **il documento è privo di data e di sottoscrizione nella parte visibile**.  
+**Oggetto:** orari della giornata del Palio del 16 agosto 2026, prescrizioni al pubblico in Piazza del Campo, calendario delle Prove e planimetria di emergenza.
+
+**Contenuto verificato:**
+
+- ore 15.40: ritrovo delle comparse nel cortile del Palazzo del Governo, in Piazza Duomo, in via del Capitano, in via San Pietro e nel Casato;
+- ore 16.50: ingresso del Corteo Storico in Piazza del Campo;
+- ore 19.00: uscita dei cavalli dal Cortile del Podestà;
+- ore 16.10: sgombero della pista;
+- ore 16.30: termine ultimo per raggiungere palchi e tribune;
+- accesso alla Piazza da via Duprè consentito dalle ore 16.00 e comunque non oltre le ore 18.00;
+- divieti al pubblico: accesso ai minori di dieci anni nel Campo, animali da compagnia, sedie e sgabelli, contenitori di vetro e metallo, bevande alcoliche, contenitori con tappo e prodotti congelati, sostare in piedi sui colonnini, transitare nelle aree tecniche indicate (intorno al Verrocchio, dietro il palco delle comparse, dietro i materassi di San Martino, sotto i palchi, lungo la recinzione di Fonte Gaia e allo sbocco del Casato);
+- **Prove del mattino** del 14, 15 e 16 agosto (l’ultima denominata «Provaccia»): sgombero della pista alle 8.40, uscita dei cavalli alle 9.00;
+- **Prove del pomeriggio** del 13, 14 e 15 agosto (l’ultima denominata «Prova Generale»): sgombero della pista alle 18.45, uscita dei cavalli alle 19.15;
+- planimetria della Piazza con vie di fuga, presidi di soccorso e numero unico di emergenza 112.
+
+**Anomalia di estrazione — avvertenza documentaria vincolante:** l’estrazione automatica del livello testuale di questo PDF restituisce **due strati sovrapposti**: quello visibile, relativo al Palio del 16 agosto 2026, e uno strato residuo non visibile, riferito al Palio del 2 luglio 2026, con orari e date delle Prove diversi. Il controllo visivo della pagina conferma che **è stampato e leggibile soltanto il contenuto di agosto**. Lo strato residuo è un artefatto di composizione tipografica e **non deve mai essere trascritto, citato o indicizzato come contenuto del documento**.  
+**Non confondere con:** l’omologo manifesto della Carriera del 2 luglio 2026.

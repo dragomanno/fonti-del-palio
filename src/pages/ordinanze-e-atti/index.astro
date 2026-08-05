@@ -1,13 +1,16 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import NotaDocumentaria from "../../components/NotaDocumentaria.astro";
-import { loadCarriera, listAtti, shortDigest } from "../../lib/carriera";
+import { loadCarriera, listAtti, listManifesti, shortDigest } from "../../lib/carriera";
 import { renderDocumentaryMarkdown } from "../../lib/markdown";
 
 const carriera = loadCarriera();
 const atti = listAtti();
 const pubblicati = atti.filter((a) => a.ripubblicabile);
 const pagine = pubblicati.reduce((n, a) => n + a.pagine, 0);
+const manifesti = listManifesti();
+const manifestiPubblicati = manifesti.filter((m) => m.ripubblicabile);
+const pagineManifesti = manifestiPubblicati.reduce((n, m) => n + m.pagine, 0);
 const richiamati = carriera.attiRichiamati.map((r) => ({
   ...r,
   html: renderDocumentaryMarkdown(r.scheda),
@@ -16,7 +19,7 @@ const richiamati = carriera.attiRichiamati.map((r) => ({
 
 <BaseLayout
   title="Ordinanze e atti per il Palio del 16 agosto 2026"
-  description="Il registro dei tredici atti acquisiti per il Palio del 16 agosto 2026, con estremi, digest di integrità e PDF originale dove ripubblicabile."
+  description="Il registro degli atti e dei manifesti a stampa acquisiti per il Palio del 16 agosto 2026, con estremi, digest di integrità e PDF originale dove ripubblicabile."
   activePath="/ordinanze-e-atti"
 >
   <section class="section" style="padding-block: var(--space-8) var(--space-3);">
@@ -32,6 +35,7 @@ const richiamati = carriera.attiRichiamati.map((r) => ({
       </p>
       <p class="text-caption" style="margin-top: var(--space-2);">
         {atti.length} atti registrati · {pubblicati.length} PDF ripubblicati · {pagine} pagine
+        · {manifesti.length} manifesti a stampa · {pagineManifesti} pagine
         · {richiamati.length} atti richiamati e non acquisiti
       </p>
     </div>
@@ -39,7 +43,8 @@ const richiamati = carriera.attiRichiamati.map((r) => ({
 
   <section class="section" style="padding-block: 0 var(--space-6);">
     <div class="wrap">
-      <ul class="atti">
+      <h2 class="blocco-titolo">Atti acquisiti</h2>
+      <ul class="atti" style="margin-top: var(--space-2);">
         {
           atti.map((atto) => (
             <li class="atto">
@@ -58,6 +63,40 @@ const richiamati = carriera.attiRichiamati.map((r) => ({
               </p>
               <p class="atto__digest mono" title={`SHA-256: ${atto.sha256}`}>
                 SHA-256 {shortDigest(atto.sha256)}
+              </p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-6);">
+    <div class="wrap">
+      <h2 class="blocco-titolo">Manifesti a stampa</h2>
+      <p class="text-muted" style="max-width: var(--measure);">
+        Manifesti del Comune di Siena destinati all'affissione e alla diffusione al pubblico,
+        acquisiti il 4 agosto 2026 come lotto distinto. Non sono copie conformi di atti
+        protocollati: nessuno di essi porta un numero di protocollo, e quel numero non è stato
+        dedotto. In caso di divergenza fa fede l'atto originale.
+      </p>
+      <ul class="atti" style="margin-top: var(--space-3);">
+        {
+          manifesti.map((manifesto) => (
+            <li class="atto">
+              <a href={`/ordinanze-e-atti/${manifesto.slug}/`} class="atto__link">
+                <span class="atto__id mono">{manifesto.id}</span>
+                <span class="atto__titolo">{manifesto.titolo}</span>
+              </a>
+              <p class="atto__meta">
+                <span>{manifesto.data}</span>
+                <span aria-hidden="true">·</span>
+                <span>{manifesto.pagine} pagina</span>
+                <span aria-hidden="true">·</span>
+                <span class="atto__stato">{manifesto.statoPubblico}</span>
+              </p>
+              <p class="atto__digest mono" title={`SHA-256: ${manifesto.sha256}`}>
+                SHA-256 {shortDigest(manifesto.sha256)}
               </p>
             </li>
           ))
@@ -89,10 +128,11 @@ const richiamati = carriera.attiRichiamati.map((r) => ({
     <div class="wrap">
       <NotaDocumentaria titolo="Perimetro del registro" variante="avvertenza">
         <p>
-          Il registro comprende il lotto di tredici PDF acquisito il 28 luglio 2026 e il documento
-          operativo del 30 luglio 2026. <strong>Non è l'elenco completo degli atti adottati dal
-          Comune di Siena per questa Carriera.</strong> Un atto assente da questa pagina non è per
-          ciò stesso inesistente: è un atto che non è stato acquisito.
+          Il registro comprende il lotto di tredici PDF acquisito il 28 luglio 2026, il documento
+          operativo del 30 luglio 2026 e i cinque manifesti a stampa acquisiti il 4 agosto 2026.
+          <strong>Non è l'elenco completo degli atti adottati dal Comune di Siena per questa
+          Carriera.</strong> Un atto assente da questa pagina non è per ciò stesso inesistente: è un
+          atto che non è stato acquisito.
         </p>
         <p>
           Un atto è registrato ma non ripubblicato integralmente quando il file contiene dati

@@ -1,34 +1,41 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import NotaDocumentaria from "../../components/NotaDocumentaria.astro";
-import { listAtti, type Atto } from "../../lib/carriera";
+import { listRegistroPubblico, listManifesti, type Atto } from "../../lib/carriera";
 import { renderDocumentaryMarkdown } from "../../lib/markdown";
 
 export function getStaticPaths() {
-  const atti = listAtti();
-  return atti.map((atto, i) => ({
+  const registro = listRegistroPubblico();
+  const slugManifesti = new Set(listManifesti().map((m) => m.slug));
+  return registro.map((atto, i) => ({
     params: { atto: atto.slug },
     props: {
       atto,
-      prev: i > 0 ? atti[i - 1] : null,
-      next: i < atti.length - 1 ? atti[i + 1] : null,
+      manifesto: slugManifesti.has(atto.slug),
+      prev: i > 0 ? registro[i - 1] : null,
+      next: i < registro.length - 1 ? registro[i + 1] : null,
     },
   }));
 }
 
 interface Props {
   atto: Atto;
+  manifesto: boolean;
   prev: Atto | null;
   next: Atto | null;
 }
 
-const { atto, prev, next } = Astro.props as Props;
+const { atto, manifesto, prev, next } = Astro.props as Props;
 const scheda = renderDocumentaryMarkdown(atto.scheda);
+// Un manifesto a stampa non e' un atto protocollato: la pagina non deve
+// chiamarlo cosi' e non deve suggerire estremi che il documento non porta.
+const genere = manifesto ? "manifesto" : "atto";
+const consistenza = atto.pagine === 1 ? "1 pagina" : `${atto.pagine} pagine`;
 ---
 
 <BaseLayout
   title={`${atto.id} — ${atto.titolo}`}
-  description={`Scheda documentaria dell'atto ${atto.id} del ${atto.data}, acquisito per il Palio del 16 agosto 2026, con estremi, digest di integrità e provenienza.`}
+  description={`Scheda documentaria del ${genere} ${atto.id}, acquisito per il Palio del 16 agosto 2026, con estremi, digest di integrità e provenienza.`}
   activePath="/ordinanze-e-atti"
 >
   <section class="section" style="padding-block: var(--space-6) var(--space-3);">
@@ -47,7 +54,7 @@ const scheda = renderDocumentaryMarkdown(atto.scheda);
 
       <dl class="estremi">
         <div><dt>Data</dt><dd>{atto.data}</dd></div>
-        <div><dt>Consistenza</dt><dd>{atto.pagine} pagine</dd></div>
+        <div><dt>Consistenza</dt><dd>{consistenza}</dd></div>
         <div>
           <dt>Stato pubblico</dt>
           <dd class:list={[!atto.ripubblicabile && "estremi__riservato"]}>{atto.statoPubblico}</dd>
@@ -64,7 +71,7 @@ const scheda = renderDocumentaryMarkdown(atto.scheda);
             <a class="btn btn--primary" href={atto.pdf} download>
               Scarica il PDF originale
             </a>
-            <span class="azioni__nota">{atto.pagine} pagine · PDF</span>
+            <span class="azioni__nota">{consistenza} · PDF</span>
           </p>
         ) : (
           <NotaDocumentaria titolo="Perché questo atto non è ripubblicato" variante="avvertenza">
@@ -86,11 +93,31 @@ const scheda = renderDocumentaryMarkdown(atto.scheda);
       <h2 class="blocco-titolo">Scheda documentaria</h2>
       <div class="prose" set:html={scheda} />
 
+      {
+        manifesto && (
+          <NotaDocumentaria titolo="Natura di questo documento" variante="avvertenza">
+            <p>
+              Questo è un <strong>manifesto a stampa</strong> del Comune di Siena, destinato
+              all'affissione e alla diffusione al pubblico. Non è una copia conforme di un atto
+              protocollato: <strong>non porta un numero di protocollo</strong>, e quel numero non
+              è stato dedotto. In caso di divergenza prevalgono l'atto originale e il Regolamento
+              per il Palio.
+            </p>
+            <p>
+              Copia acquisita il 4 agosto 2026 dall'Albo Pretorio online del Comune di Siena. L'URL
+              diretto del singolo allegato non è stato conservato al momento dell'acquisizione: la
+              provenienza è verificabile a livello di fonte, non a livello di singolo collegamento.
+              Il nome del file è conservato come ricevuto.
+            </p>
+          </NotaDocumentaria>
+        )
+      }
+
       <NotaDocumentaria titolo="Provenienza e limiti" variante="provenienza">
         <p>
           La scheda riproduce quanto verificato sul file acquisito. Non è una parafrasi autorizzata
-          né una interpretazione dell'atto: per il dispositivo, le eccezioni e le sanzioni fa fede
-          esclusivamente il testo originale.
+          né una interpretazione del documento: per il dispositivo, le eccezioni e le sanzioni fa
+          fede esclusivamente il testo originale.
         </p>
         <p>
           Fonte: Comune di Siena, Albo Pretorio e pubblicazioni istituzionali. Il digest SHA-256
@@ -99,11 +126,11 @@ const scheda = renderDocumentaryMarkdown(atto.scheda);
         </p>
       </NotaDocumentaria>
 
-      <nav class="pager" aria-label="Navigazione fra gli atti" data-pagefind-ignore>
+      <nav class="pager" aria-label="Navigazione fra i documenti del registro" data-pagefind-ignore>
         {
           prev ? (
             <a href={`/ordinanze-e-atti/${prev.slug}/`} class="pager__link">
-              <span class="pager__dir">← Atto precedente</span>
+              <span class="pager__dir">← Documento precedente</span>
               <span class="pager__title">{prev.id}</span>
             </a>
           ) : (
@@ -113,7 +140,7 @@ const scheda = renderDocumentaryMarkdown(atto.scheda);
         {
           next && (
             <a href={`/ordinanze-e-atti/${next.slug}/`} class="pager__link pager__link--next">
-              <span class="pager__dir">Atto successivo →</span>
+              <span class="pager__dir">Documento successivo →</span>
               <span class="pager__title">{next.id}</span>
             </a>
           )

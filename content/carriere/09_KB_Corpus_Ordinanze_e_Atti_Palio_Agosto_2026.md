@@ -1,7 +1,7 @@
 ---
 title: "KB 09 — Corpus delle ordinanze e degli atti per il Palio di agosto 2026"
 document_type: "corpus documentario strutturato e registro operativo"
-version: "1.4"
+version: "1.5"
 last_verified: "2026-08-10"
 coverage: "Palio del 16 agosto 2026"
 curation: "Fabrizio Gabrielli / Fonti del Palio"
@@ -611,12 +611,12 @@ Il 4 agosto 2026 è stato acquisito un secondo lotto, distinto e autonomo rispet
 
 Il 10 agosto 2026 è stato acquisito un terzo lotto, costituito da un solo documento e distinto sia dai tredici PDF del 28 luglio 2026 sia dai cinque manifesti a stampa del 4 agosto 2026. Si tratta dell’elenco dei **cavalli ammessi alle prove regolamentate dell’11 e 12 agosto 2026** e dei **cavalli ammessi direttamente alla Tratta del 13 agosto 2026**, esito della Commissione veterinaria del Palio dopo le Previsite del 6, 7 e 8 agosto 2026.
 
-**Provenienza dichiarata:** comunicazione ufficiale del Comune di Siena «Palio 16 agosto, l’elenco dei cavalli ammessi alle prove regolamentate e alla Tratta», pubblicata il 10 agosto 2026 e verificata all’ultimo aggiornamento del 10 agosto 2026, ore 11:11, all’indirizzo `https://www.comune.siena.it/novita/palio-16-agosto-lelenco-dei-cavalli-ammessi-alle-prove-regolamentate-e-alla-tratta-1`. Le due liste pubblicate in quella pagina coincidono, per consistenza e per contenuto, con il PDF acquisito e registrato in questa sezione.
+**Provenienza dichiarata:** comunicazione ufficiale del Comune di Siena «Palio 16 agosto, l’elenco dei cavalli ammessi alle prove regolamentate e alla Tratta», pubblicata il 10 agosto 2026 e verificata all’ultimo aggiornamento del 10 agosto 2026, ore 11:11, all’indirizzo `https://www.comune.siena.it/novita/palio-16-agosto-lelenco-dei-cavalli-ammessi-alle-prove-regolamentate-e-alla-tratta-1`. Le due liste pubblicate in quella pagina coincidono, per consistenza e per contenuto, con il PDF acquisito e registrato in questa sezione. Il PDF è stato diffuso il 10 agosto 2026 alle ore 11:13:05 UTC come allegato del post `https://t.me/ProtocolloEquino/500` sul canale Telegram `ProtocolloEquino`, indicato come canale di diffusione ufficiale dal Comune di Siena nella pagina «Protocollo Equino 2026» del portale del Palio (`https://palio.comune.siena.it/node/5935`).
 
 **Limiti specifici di questo lotto:**
 
 - il PDF acquisito non riporta numero di protocollo o di repertorio, non è sottoscritto e non è un’ordinanza: è un documento operativo che rende noto l’esito di una fase, e tale numero non deve essere dedotto;
-- l’URL diretto del PDF sul portale istituzionale non è stato verificato: alla data di acquisizione l’elenco risulta pubblicato in forma di testo HTML nella pagina di comunicazione sopra indicata, e il PDF corrispondente non è stato reperito fra gli allegati della pagina «Previsite e prove regolamentate» del portale del Palio. La provenienza è quindi verificabile a livello di fonte, non a livello di singolo collegamento al file;
+- la pagina di comunicazione del Comune pubblica le due liste in forma di testo HTML e non espone un allegato PDF; il PDF corrispondente non è stato reperito neppure fra gli allegati della pagina «Previsite e prove regolamentate» del portale del Palio. Il file conservato proviene dal canale Telegram `ProtocolloEquino`, dove è pubblicato come allegato del post `https://t.me/ProtocolloEquino/500` con nome `Elenco_cavalli_ammessi_alle_prove_regolamentate_e_direttamente_alla.pdf` e dimensione dichiarata 121,9 KB. La corrispondenza con la copia conservata è accertata sul nome del file ed è coerente con la dimensione dichiarata, arrotondata dalla piattaforma; **Telegram non espone un indirizzo di download stabile per i documenti, quindi il digest del file diffuso non è stato ricalcolato alla fonte** e il digest registrato di seguito è calcolato sulla copia acquisita. Il canale è un vettore di diffusione designato, non la pubblicazione istitutiva dell’atto;
 - i metadati del PDF registrano la creazione il 10 agosto 2026 alle 10:36 UTC: riflettono la preparazione del file, non un atto formale, e non vanno usati come data documentaria;
 - il documento non nomina la Commissione veterinaria né il fondamento regolamentare: entrambi risultano dalla comunicazione ufficiale, non dal PDF;
 - il nome del file è conservato esattamente come ricevuto.
@@ -633,6 +633,7 @@ Il 10 agosto 2026 è stato acquisito un terzo lotto, costituito da un solo docum
 - **Numero e data:** numero non indicato; pubblicazione del 10 agosto 2026.
 - **Ultimo aggiornamento verificato della fonte:** 10 agosto 2026, ore 11:11.
 - **Fonte:** [comunicazione ufficiale del Comune di Siena](https://www.comune.siena.it/novita/palio-16-agosto-lelenco-dei-cavalli-ammessi-alle-prove-regolamentate-e-alla-tratta-1).
+- **Diffusione del file:** allegato del post [`t.me/ProtocolloEquino/500`](https://t.me/ProtocolloEquino/500) del 10 agosto 2026, ore 11:13:05 UTC, sul canale Telegram `ProtocolloEquino`, indicato come canale di diffusione ufficiale dal Comune di Siena nella pagina [Protocollo Equino 2026](https://palio.comune.siena.it/node/5935) del portale del Palio.
 - **Consistenza:** 2 pagine, 124.859 byte, livello testuale nativo, non da riconoscimento ottico.
 - **Stato documentale:** `acquisito`; PDF ripubblicato con digest verificato in fase di generazione dell’indice.
 - **Fase del Palio:** esito delle Previsite del 6, 7 e 8 agosto 2026; ammissione alle prove regolamentate dell’11 e 12 agosto 2026 e ammissione diretta alla Tratta del 13 agosto 2026.

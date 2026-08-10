@@ -1,7 +1,7 @@
 ---
 title: "KB 12 — Manifest generale delle fonti di Fonti del Palio"
 document_type: "registro generale, stato documentale e relazioni"
-version: "1.5"
+version: "1.6"
 last_verified: "2026-08-10"
 status: "registro di secondo livello; coordina Protocollo Equino, ordinanze e documenti operativi della singola Carriera"
 curation: "Fabrizio Gabrielli / Fonti del Palio"
@@ -235,8 +235,9 @@ Questi quattro file governano il trattamento tecnico delle fonti e il ciclo di r
 - **SHA-256:** `7ccab4c5ec29170df7cab0cea4487669586a4db82c43a4e8279fef876d3f83cf`.
 - **Stato documentale:** `acquisito`; PDF ripubblicato con digest verificato in fase di generazione dell’indice.
 - **Fonte:** `https://www.comune.siena.it/novita/palio-16-agosto-lelenco-dei-cavalli-ammessi-alle-prove-regolamentate-e-alla-tratta-1`.
+- **Diffusione del file:** allegato del post `https://t.me/ProtocolloEquino/500` del 10/08/2026, ore 11:13:05 UTC, sul canale Telegram `ProtocolloEquino`, indicato come canale di diffusione ufficiale dal Comune di Siena nella pagina «Protocollo Equino 2026» del portale del Palio (`https://palio.comune.siena.it/node/5935`).
 - **Trascrizione completa:** KB 09, sezione 11.
-- **Limiti dichiarati:** il documento non porta numero di protocollo, non è sottoscritto e non è un’ordinanza; l’URL diretto del PDF sul portale istituzionale non è stato verificato e la provenienza è quindi accertata a livello di fonte, non di singolo collegamento; i metadati di creazione del file (10/08/2026, ore 10:36 UTC) non sono una data documentaria.
+- **Limiti dichiarati:** il documento non porta numero di protocollo, non è sottoscritto e non è un’ordinanza; la pagina di comunicazione del Comune pubblica le liste in forma di testo HTML e non espone un allegato PDF, per cui il file conservato proviene dal canale Telegram designato; Telegram non espone un indirizzo di download stabile per i documenti, quindi la corrispondenza è accertata sul nome del file (`Elenco_cavalli_ammessi_alle_prove_regolamentate_e_direttamente_alla.pdf`) ed è coerente con la dimensione dichiarata (121,9 KB, arrotondata dalla piattaforma), mentre il digest è calcolato sulla copia acquisita; i metadati di creazione del file (10/08/2026, ore 10:36 UTC) non sono una data documentaria.
 - **Relazione con `ATT-2026-SIND-045`:** stessa fase (prove regolamentate dell’11 e 12 agosto 2026), ma il documento non cita l’atto e non ne è la copia. Il nesso è di materia, non di derivazione accertata, e l’atto resta nello stato `richiamato`.
 - **Limite interpretativo:** i due elenchi sommano 85 cavalli sui 108 ammessi alle Previsite. La differenza non è spiegata dal documento e non va interpretata.
 

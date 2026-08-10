@@ -142,8 +142,20 @@ test("la pagina pubblica dichiara i limiti documentari senza dedurre nulla", () 
     "la pagina non dichiara l'assenza del numero di protocollo",
   );
   assert.ok(
-    pagina.includes("a livello di fonte"),
-    "la pagina non dichiara il limite di provenienza",
+    pagina.includes("https://t.me/ProtocolloEquino/500"),
+    "la pagina non collega il post di diffusione del file",
+  );
+  assert.ok(
+    pagina.includes("https://palio.comune.siena.it/node/5935"),
+    "la pagina non collega la designazione istituzionale del canale di diffusione",
+  );
+  assert.ok(
+    pagina.includes("indirizzo di download stabile"),
+    "la pagina non dichiara il limite residuo sulla verifica del file alla fonte",
+  );
+  assert.ok(
+    !/fonte\s+ufficiale\s+del\s+Comune/i.test(pagina),
+    "la pagina qualifica il canale Telegram come pubblicazione istitutiva",
   );
   assert.ok(
     /108/.test(pagina),

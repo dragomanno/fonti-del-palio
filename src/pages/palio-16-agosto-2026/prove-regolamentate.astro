@@ -1,0 +1,196 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NotaDocumentaria from "../../components/NotaDocumentaria.astro";
+import {
+  getProveRegolamentate,
+  listCavalliProveRegolamentate,
+  listCavalliTrattaDiretta,
+} from "../../lib/carriera";
+import { renderDocumentaryMarkdown } from "../../lib/markdown";
+
+const blocco = getProveRegolamentate();
+const documento = blocco.documento;
+const prove = listCavalliProveRegolamentate();
+const tratta = listCavalliTrattaDiretta();
+const scheda = renderDocumentaryMarkdown(documento.scheda);
+const regole = renderDocumentaryMarkdown(blocco.regoleLista);
+const fonte =
+  "https://www.comune.siena.it/novita/palio-16-agosto-lelenco-dei-cavalli-ammessi-alle-prove-regolamentate-e-alla-tratta-1";
+---
+
+<BaseLayout
+  title="Cavalli ammessi alle prove regolamentate e alla Tratta del Palio del 16 agosto 2026"
+  description="L'elenco dei 77 cavalli ammessi alle prove regolamentate dell'11 e 12 agosto 2026 e degli 8 cavalli ammessi direttamente alla Tratta del 13 agosto, come pubblicato dal Comune di Siena."
+  activePath="/palio-16-agosto-2026"
+>
+  <section class="section" style="padding-block: var(--space-6) var(--space-3);">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Percorso" data-pagefind-ignore>
+        <a href="/palio-16-agosto-2026/">Palio del 16 agosto 2026</a>
+        <span aria-hidden="true">/</span>
+        <span>Prove regolamentate e Tratta</span>
+      </nav>
+      <span class="section-number">{documento.id}</span>
+      <h1 style="font-family: var(--font-display); font-size: var(--text-title); max-width: 26ch; margin: var(--space-1) 0 0;">
+        I cavalli ammessi alle prove regolamentate e alla Tratta
+      </h1>
+      <p class="text-caption" style="margin-top: var(--space-2);">
+        {prove.length} cavalli alle prove regolamentate · {tratta.length} cavalli direttamente alla
+        Tratta · pubblicazione del {documento.data}
+      </p>
+
+      <div class="prose" set:html={scheda} />
+
+      {
+        documento.pdf && (
+          <p class="text-caption" style="margin-top: var(--space-2);">
+            <a href={documento.pdf}>Documento acquisito in formato PDF</a> ·
+            {documento.pagine} pagine
+          </p>
+        )
+      }
+
+      <NotaDocumentaria titolo="Come si leggono questi elenchi" variante="avvertenza">
+        <div set:html={regole} />
+      </NotaDocumentaria>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-6);">
+    <div class="wrap">
+      <h2 class="elenco-titolo">
+        Cavalli ammessi alle prove regolamentate dell'11 e 12 agosto
+      </h2>
+      <div class="doc-table-wrap">
+        <table class="doc-table doc-table--sticky doc-table--reflow-sm" role="table">
+          <caption class="sr-only">
+            Cavalli ammessi alle prove regolamentate dell'11 e 12 agosto 2026: numero d'ordine, nome
+            del cavallo e proprietario.
+          </caption>
+          <thead role="rowgroup">
+            <tr role="row">
+              <th scope="col">N.</th>
+              <th scope="col">Cavallo</th>
+              <th scope="col">Proprietario</th>
+            </tr>
+          </thead>
+          <tbody role="rowgroup">
+            {
+              prove.map((c) => (
+                <tr role="row">
+                  <th scope="row" data-label="N." role="rowheader" class="num">
+                    {c.numero}
+                  </th>
+                  <td data-label="Cavallo" role="cell" class="nome">
+                    {c.nome}
+                  </td>
+                  <td data-label="Proprietario" role="cell">
+                    {c.proprietario}
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-12);">
+    <div class="wrap">
+      <h2 class="elenco-titolo">Cavalli ammessi direttamente alla Tratta del 13 agosto</h2>
+      <div class="doc-table-wrap">
+        <table class="doc-table doc-table--sticky doc-table--reflow-sm" role="table">
+          <caption class="sr-only">
+            Cavalli ammessi direttamente alla Tratta del 13 agosto 2026: numero d'ordine, nome del
+            cavallo e proprietario.
+          </caption>
+          <thead role="rowgroup">
+            <tr role="row">
+              <th scope="col">N.</th>
+              <th scope="col">Cavallo</th>
+              <th scope="col">Proprietario</th>
+            </tr>
+          </thead>
+          <tbody role="rowgroup">
+            {
+              tratta.map((c) => (
+                <tr role="row">
+                  <th scope="row" data-label="N." role="rowheader" class="num">
+                    {c.numero}
+                  </th>
+                  <td data-label="Cavallo" role="cell" class="nome">
+                    {c.nome}
+                  </td>
+                  <td data-label="Proprietario" role="cell">
+                    {c.proprietario}
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <NotaDocumentaria titolo="Limiti di questi elenchi" variante="provenienza">
+        <p>
+          Il documento non porta numero di protocollo, non è sottoscritto e non è un'ordinanza: è un
+          documento operativo che rende noto l'esito di una fase. Il numero non è stato dedotto.
+        </p>
+        <p>
+          L'indirizzo diretto del file sul portale istituzionale non è stato verificato: alla data di
+          acquisizione l'elenco risulta pubblicato in forma di testo nella comunicazione ufficiale
+          citata di seguito. La provenienza è quindi verificabile a livello di fonte, non a livello
+          di singolo collegamento al file.
+        </p>
+        <p>
+          I due elenchi sommano {prove.length + tratta.length} cavalli, contro i 108 ammessi alle
+          <a href="/palio-16-agosto-2026/previsite/">Previsite</a>. La differenza non è spiegata dal
+          documento e non viene interpretata qui.
+        </p>
+        <p>
+          I nomi dei proprietari sono riprodotti come pubblicati dal Comune di Siena. Eventuali
+          differenze di grafia rispetto ad altre fonti non sono corrette qui: la trascrizione resta
+          fedele alla fonte. Segnalazioni di errore:
+          <a href="mailto:info@pistakkio.net">info@pistakkio.net</a>.
+        </p>
+        <p>
+          Fonte: <a href={fonte} rel="nofollow noopener">comunicazione del Comune di Siena del 10
+          agosto 2026</a>, registrata come <span class="mono">{documento.id}</span>. Digest SHA-256
+          del documento acquisito:
+          <span class="mono digest">{documento.sha256}</span>.
+        </p>
+      </NotaDocumentaria>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: var(--text-caption);
+    color: var(--color-text-faint);
+    margin-bottom: var(--space-2);
+  }
+  .crumbs a {
+    color: var(--color-green);
+  }
+  .elenco-titolo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin: 0 0 var(--space-2);
+  }
+  .num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .nome {
+    font-weight: 500;
+  }
+  .digest {
+    word-break: break-all;
+  }
+</style>

@@ -36,6 +36,7 @@ function allHtmlFiles(dir = DIST, out = []) {
 const ROTTE_ATTESE = [
   "/palio-16-agosto-2026/",
   "/palio-16-agosto-2026/previsite/",
+  "/palio-16-agosto-2026/prove-regolamentate/",
   "/palio-16-agosto-2026/accesso-e-sicurezza/",
   "/palio-16-agosto-2026/guida-pratica/",
   "/ordinanze-e-atti/",
@@ -49,7 +50,7 @@ const ROTTE_ATTESE = [
 ];
 
 test("tutte le rotte della carriera sono state costruite", () => {
-  assert.equal(ROTTE_ATTESE.length, 44, "il conteggio delle rotte attese è cambiato");
+  assert.equal(ROTTE_ATTESE.length, 45, "il conteggio delle rotte attese è cambiato");
   for (const rotta of ROTTE_ATTESE) html(rotta);
 });
 

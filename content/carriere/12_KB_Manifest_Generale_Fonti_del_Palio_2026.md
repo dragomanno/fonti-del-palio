@@ -1,8 +1,8 @@
 ---
 title: "KB 12 — Manifest generale delle fonti di Fonti del Palio"
 document_type: "registro generale, stato documentale e relazioni"
-version: "1.4"
-last_verified: "2026-08-05"
+version: "1.5"
+last_verified: "2026-08-10"
 status: "registro di secondo livello; coordina Protocollo Equino, ordinanze e documenti operativi della singola Carriera"
 curation: "Fabrizio Gabrielli / Fonti del Palio"
 ---
@@ -220,6 +220,26 @@ Questi quattro file governano il trattamento tecnico delle fonti e il ciclo di r
 - **Limiti dichiarati:** nessuno dei cinque porta un numero di protocollo, e il numero non è stato dedotto; `MAN-2026-08-002` e `MAN-2026-08-003` non nominano la Carriera del 16 agosto 2026; `MAN-2026-08-005` è privo di data e sottoscrizione nella parte visibile e il suo livello testuale contiene uno strato residuo della Carriera del 2 luglio 2026 che non deve essere trascritto.
 - **Relazione con `ATT-2026-SIND-044` e `ATT-2026-SIND-045`:** `MAN-2026-08-001` è datato 7 luglio 2026 come i due atti richiamati, ma ha oggetto diverso da entrambi. La coincidenza non è stabilita e i due atti restano nello stato `richiamato`.
 
+## 4.4 Documento operativo del 10 agosto 2026
+
+### COM-2026-08-PROVEREG-001
+
+- **Natura:** documento operativo ufficiale e lista di esito; non è un’ordinanza e non è un atto protocollato.
+- **Titolo recato dal documento:** «PALIO 16 AGOSTO 2026 — CAVALLI AMMESSI ALLE PROVE REGOLAMENTATE DEL 11 E 12 AGOSTO», con secondo titolo interno «CAVALLI AMMESSI DIRETTAMENTE ALLA TRATTA DEL 13 AGOSTO».
+- **Pubblicazione:** Comune di Siena, 10/08/2026.
+- **Ultimo aggiornamento verificato:** 10/08/2026, ore 11:11.
+- **Oggetto:** 77 cavalli ammessi alle prove regolamentate dell’11 e 12 agosto 2026 e 8 cavalli ammessi direttamente alla Tratta del 13 agosto 2026.
+- **Fase:** esito delle Previsite del 6, 7 e 8 agosto 2026 alla clinica veterinaria del Ceppo a Monteresi.
+- **Decisione:** Commissione veterinaria del Palio, sentita in modo non vincolante la consultazione con i Capitani delle Contrade.
+- **Consistenza:** 2 pagine, 124.859 byte, livello testuale nativo.
+- **SHA-256:** `7ccab4c5ec29170df7cab0cea4487669586a4db82c43a4e8279fef876d3f83cf`.
+- **Stato documentale:** `acquisito`; PDF ripubblicato con digest verificato in fase di generazione dell’indice.
+- **Fonte:** `https://www.comune.siena.it/novita/palio-16-agosto-lelenco-dei-cavalli-ammessi-alle-prove-regolamentate-e-alla-tratta-1`.
+- **Trascrizione completa:** KB 09, sezione 11.
+- **Limiti dichiarati:** il documento non porta numero di protocollo, non è sottoscritto e non è un’ordinanza; l’URL diretto del PDF sul portale istituzionale non è stato verificato e la provenienza è quindi accertata a livello di fonte, non di singolo collegamento; i metadati di creazione del file (10/08/2026, ore 10:36 UTC) non sono una data documentaria.
+- **Relazione con `ATT-2026-SIND-045`:** stessa fase (prove regolamentate dell’11 e 12 agosto 2026), ma il documento non cita l’atto e non ne è la copia. Il nesso è di materia, non di derivazione accertata, e l’atto resta nello stato `richiamato`.
+- **Limite interpretativo:** i due elenchi sommano 85 cavalli sui 108 ammessi alle Previsite. La differenza non è spiegata dal documento e non va interpretata.
+
 # 5. Atti richiamati e non acquisiti
 
 ## ATT-2026-SIND-044
@@ -249,6 +269,7 @@ Questi quattro file governano il trattamento tecnico delle fonti e il ciclo di r
 - Le regole pratiche pubblicate in KB 11 derivano da questo lotto.
 - Il comunicato ufficiale del 30 luglio 2026 e l'elenco dei 108 cavalli ammessi alle Previsite sono acquisiti come fonte web istituzionale.
 - I cinque manifesti a stampa acquisiti il 4 agosto 2026 sono identificati, verificati per digest e ripubblicati.
+- Il documento operativo del 10 agosto 2026 con i 77 cavalli ammessi alle prove regolamentate e gli 8 ammessi direttamente alla Tratta è acquisito, verificato per digest e ripubblicato.
 
 ## 6.2 Cosa non può essere dichiarato
 
@@ -259,11 +280,13 @@ Questi quattro file governano il trattamento tecnico delle fonti e il ciclo di r
 - che un atto richiamato sia integralmente noto senza il suo PDF;
 - che tutti i cavalli ammessi alle Previsite siano successivamente presentati, giudicati idonei, ammessi alle prove regolamentate o alla Tratta;
 - che un manifesto a stampa corrisponda a un determinato atto protocollato, in assenza del numero;
+- che l’ammissione alle prove regolamentate o l’ammissione diretta alla Tratta equivalgano a scelta per il lotto della Tratta, ad assegnazione a una Contrada o a partecipazione alla Carriera;
+- che i cavalli ammessi alle Previsite e non presenti negli elenchi del 10 agosto 2026 siano stati giudicati non idonei;
 - che i manifesti acquisiti esauriscano quelli affissi per questa Carriera.
 
 ## 6.3 Formula pubblica raccomandata
 
-> Questa sezione raccoglie e coordina le ordinanze nn. 51–60 del 28 luglio 2026, gli altri documenti ufficiali acquisiti nel lotto, i cinque manifesti a stampa acquisiti il 4 agosto 2026 e i successivi documenti operativi verificati. Il quadro resta aperto a provvedimenti, liste e aggiornamenti successivi e ad atti richiamati non ancora acquisiti.
+> Questa sezione raccoglie e coordina le ordinanze nn. 51–60 del 28 luglio 2026, gli altri documenti ufficiali acquisiti nel lotto, i cinque manifesti a stampa acquisiti il 4 agosto 2026, il documento operativo del 10 agosto 2026 sui cavalli ammessi alle prove regolamentate e alla Tratta e i successivi documenti operativi verificati. Il quadro resta aperto a provvedimenti, liste e aggiornamenti successivi e ad atti richiamati non ancora acquisiti.
 
 # 7. Politica di aggiornamento
 

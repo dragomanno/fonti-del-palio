@@ -33,6 +33,7 @@ const KB_DIR = path.join(ROOT, "content", "kb");
 const RIFERIMENTI = path.join(ROOT, "content", "riferimenti");
 const PDF_DIR = path.join(ROOT, "public", "atti", "2026");
 const MANIFESTI_DIR = path.join(PDF_DIR, "manifesti");
+const PROVEREG_DIR = path.join(PDF_DIR, "prove-regolamentate");
 const TARGET = path.join(ROOT, "data", "carriera.generated.json");
 
 const KB09 = "09_KB_Corpus_Ordinanze_e_Atti_Palio_Agosto_2026.md";
@@ -62,6 +63,9 @@ export const EXPECTED = {
   manifesti: 5,
   manifestiRipubblicabili: 5,
   pagineManifesti: 5,
+  cavalliProveRegolamentate: 77,
+  cavalliTrattaDiretta: 8,
+  pagineProveRegolamentate: 2,
 };
 
 function read(dir, name) {
@@ -273,6 +277,82 @@ function buildManifesti(kb09) {
   return manifesti;
 }
 
+/**
+ * Terzo lotto: il documento operativo del 10 agosto 2026 con i cavalli ammessi
+ * alle prove regolamentate e quelli ammessi direttamente alla Tratta.
+ *
+ * E' tenuto separato dagli atti e dai manifesti per la stessa ragione per cui
+ * lo e' il comunicato delle Previsite: non e' un atto protocollato, non porta
+ * numero e non deve entrare nel registro degli atti. Le due liste restano due
+ * array distinti perche' l'ammissione alle prove regolamentate e l'ammissione
+ * diretta alla Tratta sono fasi diverse: una loro fusione perderebbe la
+ * distinzione documentaria. Il digest registrato viene confrontato con il file
+ * effettivamente presente, cosi' che una sostituzione faccia fallire la
+ * generazione invece di essere pubblicata in silenzio.
+ */
+function buildProveRegolamentate(kb09) {
+  const sezione = section(kb09, "## 11. Registro del documento operativo acquisito il 10 agosto 2026");
+  // Il registro e' la sola tabella che precede le sottosezioni: le liste
+  // nominative di 11.1 e 11.2 vanno escluse dalla lettura del registro.
+  const intro = sezione.split(/\n### /)[0];
+  const registro = parseTable(intro);
+  if (registro.body.length !== 1) {
+    throw new Error(
+      `il registro del 10 agosto 2026 deve contenere un solo record, trovati ${registro.body.length}`
+    );
+  }
+  const [idCell, titolo, data, pagine, shaCell, stato, fileCell] = registro.body[0];
+  const id = plain(idCell);
+  const file = plain(fileCell);
+  const sha256 = plain(shaCell);
+  const ripubblicabile = stato === "ripubblicabile";
+
+  const presenti = new Set(
+    existsSync(PROVEREG_DIR) ? readdirSync(PROVEREG_DIR).filter((f) => f.endsWith(".pdf")) : []
+  );
+  if (ripubblicabile) {
+    if (!presenti.has(file)) throw new Error(`file mancante per ${id}: ${file}`);
+    const digest = createHash("sha256")
+      .update(readFileSync(path.join(PROVEREG_DIR, file)))
+      .digest("hex");
+    if (digest !== sha256) {
+      throw new Error(
+        `digest non corrispondente per ${id}: registrato ${sha256}, calcolato ${digest}`
+      );
+    }
+  }
+  const orfani = [...presenti].filter((f) => f !== file).sort();
+  if (orfani.length) {
+    throw new Error(`file non collegati ad alcun record: ${orfani.join(", ")}`);
+  }
+
+  const scheda = section(sezione, `### ${id}`);
+
+  const righe = (heading) =>
+    parseTable(section(kb09, heading)).body.map((row) => ({
+      numero: Number(row[0]),
+      nome: row[1],
+      proprietario: row[2],
+    }));
+
+  return {
+    documento: {
+      id,
+      titolo,
+      data,
+      pagine: Number(pagine),
+      sha256,
+      statoPubblico: stato,
+      ripubblicabile,
+      pdf: ripubblicabile ? `/atti/2026/prove-regolamentate/${file}` : null,
+      scheda,
+    },
+    proveRegolamentate: righe("### 11.1 Cavalli ammessi alle prove regolamentate dell\u201911 e 12 agosto"),
+    trattaDiretta: righe("### 11.2 Cavalli ammessi direttamente alla Tratta del 13 agosto"),
+    regoleLista: section(kb09, "### 11.3 Regole di interpretazione delle liste"),
+  };
+}
+
 function buildCavalli(kb09) {
   const { body } = parseTable(section(kb09, "### 6.1 Elenco ufficiale"));
   return body.map((row) => ({
@@ -423,6 +503,7 @@ export function buildIndex() {
       regoleLista,
       cavalli,
     },
+    proveRegolamentate: buildProveRegolamentate(kb09),
     materie: buildMaterie(kb10),
     guida: buildGuida(kb11),
     registroFonti: buildRegistro(kb12),
@@ -462,6 +543,21 @@ export function verify(index) {
     EXPECTED.pagineManifesti
   );
   eq("cavalli ammessi alle Previsite", index.previsite.cavalli.length, EXPECTED.cavalli);
+  eq(
+    "cavalli ammessi alle prove regolamentate",
+    index.proveRegolamentate.proveRegolamentate.length,
+    EXPECTED.cavalliProveRegolamentate
+  );
+  eq(
+    "cavalli ammessi direttamente alla Tratta",
+    index.proveRegolamentate.trattaDiretta.length,
+    EXPECTED.cavalliTrattaDiretta
+  );
+  eq(
+    "pagine del documento operativo del 10 agosto 2026",
+    index.proveRegolamentate.documento.pagine,
+    EXPECTED.pagineProveRegolamentate
+  );
   eq("materie consolidate", index.materie.length, EXPECTED.materie);
   eq("sezioni della guida", index.guida.length, EXPECTED.sezioniGuida);
   eq("Contrade del Bando", index.bando.contrade.length, EXPECTED.contrade);
@@ -500,6 +596,23 @@ export function verify(index) {
   const attesi = numeri.map((_, i) => i + 1);
   if (JSON.stringify(numeri) !== JSON.stringify(attesi)) {
     problems.push("numerazione dei cavalli non continua da 1");
+  }
+
+  // Numerazione continua e senza salti nelle due liste del 10 agosto 2026, e
+  // digest esadecimale completo per il documento registrato.
+  for (const [label, lista] of [
+    ["prove regolamentate", index.proveRegolamentate.proveRegolamentate],
+    ["Tratta diretta", index.proveRegolamentate.trattaDiretta],
+  ]) {
+    const n = lista.map((c) => c.numero);
+    if (JSON.stringify(n) !== JSON.stringify(n.map((_, i) => i + 1))) {
+      problems.push(`numerazione non continua da 1 nella lista ${label}`);
+    }
+    const vuoti = lista.filter((c) => !c.nome.trim() || !c.proprietario.trim());
+    if (vuoti.length) problems.push(`celle vuote nella lista ${label}`);
+  }
+  if (!/^[0-9a-f]{64}$/.test(index.proveRegolamentate.documento.sha256)) {
+    problems.push(`SHA-256 malformato per ${index.proveRegolamentate.documento.id}`);
   }
 
   // Ordine registrato delle Contrade nel Bando.

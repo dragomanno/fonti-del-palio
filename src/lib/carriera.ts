@@ -47,6 +47,35 @@ export interface Cavallo {
   proprietario: string;
 }
 
+/**
+ * Un documento operativo non e' un atto: non porta numero di protocollo, non e'
+ * sottoscritto e non ha una scheda nel registro degli atti. Ha percio' un tipo
+ * proprio, privo di `slug` e di `numero`, per impedire che finisca per
+ * distrazione negli elenchi degli atti o dei manifesti.
+ */
+export interface DocumentoOperativo {
+  id: string;
+  titolo: string;
+  data: string;
+  pagine: number;
+  sha256: string;
+  statoPubblico: string;
+  ripubblicabile: boolean;
+  pdf: string | null;
+  scheda: string;
+}
+
+/**
+ * Le due liste del 10 agosto 2026 restano separate perche' l'ammissione alle
+ * prove regolamentate e l'ammissione diretta alla Tratta sono fasi distinte.
+ */
+export interface ProveRegolamentate {
+  documento: DocumentoOperativo;
+  proveRegolamentate: Cavallo[];
+  trattaDiretta: Cavallo[];
+  regoleLista: string;
+}
+
 export interface Materia {
   numero: number;
   titolo: string;
@@ -158,6 +187,7 @@ export interface CarrieraIndex {
   manifesti: Manifesto[];
   attiRichiamati: AttoRichiamato[];
   previsite: { comunicato: string; regoleLista: string; cavalli: Cavallo[] };
+  proveRegolamentate: ProveRegolamentate;
   materie: Materia[];
   guida: SezioneGuida[];
   registroFonti: RecordRegistro[];
@@ -226,6 +256,21 @@ export function listGuida(): SezioneGuida[] {
 
 export function listCavalli(): Cavallo[] {
   return loadCarriera().previsite.cavalli;
+}
+
+/** Il blocco documentario del 10 agosto 2026, liste e scheda comprese. */
+export function getProveRegolamentate(): ProveRegolamentate {
+  return loadCarriera().proveRegolamentate;
+}
+
+/** I cavalli ammessi alle prove regolamentate dell'11 e 12 agosto 2026. */
+export function listCavalliProveRegolamentate(): Cavallo[] {
+  return getProveRegolamentate().proveRegolamentate;
+}
+
+/** I cavalli ammessi direttamente alla Tratta del 13 agosto 2026. */
+export function listCavalliTrattaDiretta(): Cavallo[] {
+  return getProveRegolamentate().trattaDiretta;
 }
 
 export function listRegistroFonti(): RecordRegistro[] {

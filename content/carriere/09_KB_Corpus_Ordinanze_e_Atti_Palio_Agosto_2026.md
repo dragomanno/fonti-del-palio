@@ -1,12 +1,12 @@
 ---
 title: "KB 09 — Corpus delle ordinanze e degli atti per il Palio di agosto 2026"
 document_type: "corpus documentario strutturato e registro operativo"
-version: "1.3"
-last_verified: "2026-08-05"
+version: "1.4"
+last_verified: "2026-08-10"
 coverage: "Palio del 16 agosto 2026"
 curation: "Fabrizio Gabrielli / Fonti del Palio"
 priority: "prima fonte KB per ordinanze, atti e documenti operativi della singola Carriera"
-status: "13 PDF acquisiti e verificati; 5 manifesti a stampa acquisiti il 4 agosto 2026; comunicato ufficiale del 30 luglio 2026 acquisito come fonte web; ricerca aperta"
+status: "13 PDF acquisiti e verificati; 5 manifesti a stampa acquisiti il 4 agosto 2026; comunicato ufficiale del 30 luglio 2026 acquisito come fonte web; documento operativo del 10 agosto 2026 sui cavalli ammessi alle prove regolamentate e alla Tratta acquisito e verificato; ricerca aperta"
 ---
 
 # KB 09 — Corpus delle ordinanze e degli atti per il Palio di agosto 2026
@@ -21,7 +21,8 @@ Questa Knowledge Base registra e rende interrogabili:
 - il visto contabile collegato all’atto n. 1775;
 - i documenti operativi successivi relativi alla singola Carriera;
 - il comunicato ufficiale del 30 luglio 2026 con i 108 cavalli ammessi alle Previsite;
-- i cinque manifesti a stampa acquisiti il 4 agosto 2026, registrati come lotto distinto.
+- i cinque manifesti a stampa acquisiti il 4 agosto 2026, registrati come lotto distinto;
+- il documento operativo del 10 agosto 2026 con i 77 cavalli ammessi alle prove regolamentate e gli 8 ammessi direttamente alla Tratta, registrato come lotto distinto.
 
 Il file è il primo livello KB per domande su uno specifico atto di agosto 2026. Per la disciplina coordinata su accesso, sicurezza e servizi consultare **KB 10**. Per una formulazione destinata al pubblico consultare **KB 11**. Per stato documentale, relazioni e completezza consultare **KB 12**.
 
@@ -32,8 +33,9 @@ Il file è il primo livello KB per domande su uno specifico atto di agosto 2026.
 - Un comunicato istituzionale è una fonte ufficiale di informazione, ma non diventa per questo un’ordinanza o un atto amministrativo autonomo.
 - Le disposizioni hanno efficacia soltanto nei luoghi, nei giorni, negli orari e verso i destinatari indicati dall’atto.
 - La lista dei cavalli ammessi alle Previsite non prova la successiva presentazione del cavallo, l’idoneità sanitaria, l’ammissione alle prove regolamentate o alla Tratta, né la partecipazione alla Carriera.
+- L’ammissione alle prove regolamentate, l’ammissione diretta alla Tratta, la scelta per il lotto della Tratta e la partecipazione alla Carriera sono fasi distinte: l’una non implica l’altra e le rispettive liste non vanno fuse.
 - Un manifesto a stampa è uno strumento di pubblicità e di diffusione: non equivale a una copia conforme dell’atto protocollato e, in caso di divergenza, cede davanti all’atto originale e al Regolamento per il Palio.
-- Il corpus è completo rispetto ai tredici PDF ricevuti e ai cinque manifesti acquisiti il 4 agosto 2026, non rispetto a tutti i documenti eventualmente prodotti per il Palio del 16 agosto 2026.
+- Il corpus è completo rispetto ai tredici PDF ricevuti, ai cinque manifesti acquisiti il 4 agosto 2026 e al documento operativo acquisito il 10 agosto 2026, non rispetto a tutti i documenti eventualmente prodotti per il Palio del 16 agosto 2026.
 
 ## 3. Metodo di acquisizione
 
@@ -465,13 +467,14 @@ Il corpus deve essere aggiornato quando vengono pubblicati:
 - orari individuali delle Previsite;
 - esito delle Previsite;
 - batterie delle prove regolamentate;
-- cavalli ammessi alle prove regolamentate o direttamente alla Tratta;
-- cavalli ammessi alla Tratta;
+- cavalli ammessi alla Tratta e cavalli scelti per il lotto;
 - eventuali rettifiche o variazioni della lista;
 - nuove ordinanze, atti o comunicazioni ufficiali;
 - rinvii o modifiche operative.
 
-Ogni nuova lista deve essere conservata come snapshot autonomo. Non sovrascrivere retroattivamente la lista dei 108 ammessi alle Previsite con gli elenchi delle fasi successive.
+L’aggiornamento relativo ai cavalli ammessi alle prove regolamentate e direttamente alla Tratta è stato eseguito il 10 agosto 2026 e risulta alla sezione 11.
+
+Ogni nuova lista deve essere conservata come snapshot autonomo. Non sovrascrivere retroattivamente la lista dei 108 ammessi alle Previsite, né quella del 10 agosto 2026, con gli elenchi delle fasi successive.
 
 
 ## 9. Registro dei manifesti ufficiali acquisiti il 4 agosto 2026
@@ -603,3 +606,164 @@ Il 4 agosto 2026 è stato acquisito un secondo lotto, distinto e autonomo rispet
 
 **Anomalia di estrazione — avvertenza documentaria vincolante:** l’estrazione automatica del livello testuale di questo PDF restituisce **due strati sovrapposti**: quello visibile, relativo al Palio del 16 agosto 2026, e uno strato residuo non visibile, riferito al Palio del 2 luglio 2026, con orari e date delle Prove diversi. Il controllo visivo della pagina conferma che **è stampato e leggibile soltanto il contenuto di agosto**. Lo strato residuo è un artefatto di composizione tipografica e **non deve mai essere trascritto, citato o indicizzato come contenuto del documento**.  
 **Non confondere con:** l’omologo manifesto della Carriera del 2 luglio 2026.
+
+## 11. Registro del documento operativo acquisito il 10 agosto 2026
+
+Il 10 agosto 2026 è stato acquisito un terzo lotto, costituito da un solo documento e distinto sia dai tredici PDF del 28 luglio 2026 sia dai cinque manifesti a stampa del 4 agosto 2026. Si tratta dell’elenco dei **cavalli ammessi alle prove regolamentate dell’11 e 12 agosto 2026** e dei **cavalli ammessi direttamente alla Tratta del 13 agosto 2026**, esito della Commissione veterinaria del Palio dopo le Previsite del 6, 7 e 8 agosto 2026.
+
+**Provenienza dichiarata:** comunicazione ufficiale del Comune di Siena «Palio 16 agosto, l’elenco dei cavalli ammessi alle prove regolamentate e alla Tratta», pubblicata il 10 agosto 2026 e verificata all’ultimo aggiornamento del 10 agosto 2026, ore 11:11, all’indirizzo `https://www.comune.siena.it/novita/palio-16-agosto-lelenco-dei-cavalli-ammessi-alle-prove-regolamentate-e-alla-tratta-1`. Le due liste pubblicate in quella pagina coincidono, per consistenza e per contenuto, con il PDF acquisito e registrato in questa sezione.
+
+**Limiti specifici di questo lotto:**
+
+- il PDF acquisito non riporta numero di protocollo o di repertorio, non è sottoscritto e non è un’ordinanza: è un documento operativo che rende noto l’esito di una fase, e tale numero non deve essere dedotto;
+- l’URL diretto del PDF sul portale istituzionale non è stato verificato: alla data di acquisizione l’elenco risulta pubblicato in forma di testo HTML nella pagina di comunicazione sopra indicata, e il PDF corrispondente non è stato reperito fra gli allegati della pagina «Previsite e prove regolamentate» del portale del Palio. La provenienza è quindi verificabile a livello di fonte, non a livello di singolo collegamento al file;
+- i metadati del PDF registrano la creazione il 10 agosto 2026 alle 10:36 UTC: riflettono la preparazione del file, non un atto formale, e non vanno usati come data documentaria;
+- il documento non nomina la Commissione veterinaria né il fondamento regolamentare: entrambi risultano dalla comunicazione ufficiale, non dal PDF;
+- il nome del file è conservato esattamente come ricevuto.
+
+| ID | Documento | Data | Pagine | SHA-256 | Stato pubblico | File acquisito |
+|---|---|---:|---:|---|---|---|
+| `COM-2026-08-PROVEREG-001` | Elenco dei cavalli ammessi alle prove regolamentate dell’11 e 12 agosto e dei cavalli ammessi direttamente alla Tratta del 13 agosto | 10/08/2026 | 2 | `7ccab4c5ec29170df7cab0cea4487669586a4db82c43a4e8279fef876d3f83cf` | ripubblicabile | `Elenco_cavalli_ammessi_alle_prove_regolamentate_e_direttamente_alla-6.pdf` |
+
+### COM-2026-08-PROVEREG-001
+
+- **Tipo:** documento operativo ufficiale e lista di esito; non è un’ordinanza e non è un atto protocollato.
+- **Titolo recato dal documento:** «PALIO 16 AGOSTO 2026 — CAVALLI AMMESSI ALLE PROVE REGOLAMENTATE DEL 11 E 12 AGOSTO»; secondo titolo interno: «CAVALLI AMMESSI DIRETTAMENTE ALLA TRATTA DEL 13 AGOSTO».
+- **Autorità:** Comune di Siena; l’intestazione grafica del documento reca il solo stemma «COMUNE DI SIENA».
+- **Numero e data:** numero non indicato; pubblicazione del 10 agosto 2026.
+- **Ultimo aggiornamento verificato della fonte:** 10 agosto 2026, ore 11:11.
+- **Fonte:** [comunicazione ufficiale del Comune di Siena](https://www.comune.siena.it/novita/palio-16-agosto-lelenco-dei-cavalli-ammessi-alle-prove-regolamentate-e-alla-tratta-1).
+- **Consistenza:** 2 pagine, 124.859 byte, livello testuale nativo, non da riconoscimento ottico.
+- **Stato documentale:** `acquisito`; PDF ripubblicato con digest verificato in fase di generazione dell’indice.
+- **Fase del Palio:** esito delle Previsite del 6, 7 e 8 agosto 2026; ammissione alle prove regolamentate dell’11 e 12 agosto 2026 e ammissione diretta alla Tratta del 13 agosto 2026.
+
+La comunicazione ufficiale del Comune di Siena riferisce che:
+
+- sono **77** i cavalli ammessi alle prove regolamentate di martedì 11 e mercoledì 12 agosto 2026;
+- sono **8** i cavalli ammessi direttamente alla Tratta di giovedì 13 agosto 2026;
+- la decisione è della **Commissione veterinaria del Palio**, dopo le tre giornate di visite alla clinica del Ceppo a Monteresi;
+- la consultazione con i Capitani delle Contrade è avvenuta e **non è vincolante**, come previsto dal Regolamento per il Palio;
+- le prove regolamentate iniziano alle ore 6.
+
+I due elenchi sommano **85** cavalli. La differenza rispetto ai 108 ammessi alle Previsite registrati in `COM-2026-08-PREVISITE-001` non è spiegata dal documento e non deve essere interpretata: il documento dichiara chi è ammesso, non perché altri non lo siano.
+
+**Relazione con `ATT-2026-SIND-045`:** l’atto sindacale n. 45 del 7 luglio 2026, nello stato `richiamato`, ha per oggetto ricostruibile lo svolgimento delle prove regolamentate dell’11 e 12 agosto 2026. Questo documento riguarda la stessa fase, ma non lo cita e non ne è la copia: il nesso è di materia, non di derivazione documentaria accertata.
+
+**Non confondere con:** `COM-2026-08-PREVISITE-001`, che registra i 108 cavalli ammessi alle Previsite ed è uno snapshot autonomo, conservato e non sovrascritto da questa lista.
+
+### 11.1 Cavalli ammessi alle prove regolamentate dell’11 e 12 agosto
+
+| N. | Cavallo | Proprietario |
+|---:|---|---|
+| 1 | ARES ELCE | Fabrizio Macucci |
+| 2 | ARESTETULESU | Mark Harris Getty |
+| 3 | BAGNOLO AA | Augusto Cerboni |
+| 4 | BAILA AA | Alberto Manenti |
+| 5 | BENITO BAIO AA | Riccardo Bindi |
+| 6 | BOLINA DA CLODIA AA | Alessio Bincoletto |
+| 7 | BONITAS AA | Didier Pierre Ryelandt |
+| 8 | CASSIOX AA | Alessandro Neri |
+| 9 | CHIOSA VINCE AA | Duccio Ravenni |
+| 10 | COBALTO DA CLODIA AA | Alessandro Columbu |
+| 11 | COMANCIO AA | Federica Regnani |
+| 12 | COMPILATION AA | Federica Saracini |
+| 13 | CORINNE CLAR AA | Aurora Coneri |
+| 14 | DADA AA | Sandra Rossi |
+| 15 | DAREDEVIL AA | Marcello Roti |
+| 16 | DEDALO KING AA | Salvatore Nieddu |
+| 17 | DEMONI AA | Alessia Ara |
+| 18 | DIAMANTE SAURO AA | Pietro Falchi |
+| 19 | DOCTOR DONALD AA | Nicola Giorgi |
+| 20 | DOLCECOMELANUTELLA AA | Camilla Marzi |
+| 21 | DOLLARO AA | Andrea Sanna |
+| 22 | DORINDA AA | Agnieszka Fiut |
+| 23 | DOVIZIA AA | Andrea Viani |
+| 24 | DUCE AA | Antonio Costantino Buzzi |
+| 25 | EBACIAMI AA | Maurizia Vitaliani |
+| 26 | EBANO AA | Andrea Sanna |
+| 27 | ECCOLO AA | Diego Minucci |
+| 28 | ELLENICO AA | Lorenzo Maria Vincenti |
+| 29 | ELLY AA | Camilla Marzi |
+| 30 | EMIGRANTE AA | Selvaggia Pianetti Lotteringhi della Stufa |
+| 31 | ENNALZU AA | Nicolò Farnetani |
+| 32 | ERMESETHIESI AA | Federica Luchetti |
+| 33 | ERMINIO BAIO AA | Elena Patacchiola |
+| 34 | ERMOSA DE CAMPEDA AA | Jonatan Bartoletti |
+| 35 | EROS OROTELLESE AA | Luciano Marri |
+| 36 | ESCALUS AA | Selvaggia Pianetti Lotteringhi della Stufa |
+| 37 | ESCHILO DE AIGHENTA AA | Mattia Chiavassa |
+| 38 | ESTERINA AA | Enrico Bruschelli |
+| 39 | ESTRELLA OLIANESA AA | Francesco Pisanu |
+| 40 | ETRINTA AA | Luca Francesconi |
+| 41 | EUSKALDI AA | Ilaria Mella |
+| 42 | FABULA AA | Mark Harris Getty |
+| 43 | FAGHE A BONU AA | Valentino Bussu |
+| 44 | FAMELICAMU AA | Alessandro Frosini |
+| 45 | FARAONE DE NULE AA | Carlo Giordano |
+| 46 | FAVOLOSO ORANESU AA | Antonio Siri |
+| 47 | FEDOR AA | Valter Pusceddu |
+| 48 | FENOMENALE AA | Massimo Bonci |
+| 49 | FERRO NERO AA | Rosanna Bonelli |
+| 50 | FIGARO FIO AA | Mark Harris Getty |
+| 51 | FIGURINO RIU AA | Alessandro Cersosimo |
+| 52 | FILIPPO RIU AA | Rebecca Berni |
+| 53 | FLASC BALL AA | Pasqualino Mula |
+| 54 | FLICK AA | Michele Lorenzetti |
+| 55 | FORTZA PARIS AA | Giuseppe Di Vivo |
+| 56 | FRERE SOLEIL AA | Theodore William Thomas Westerman |
+| 57 | FUORI ROTTA AA | Jonatan Bartoletti |
+| 58 | FURIA TULESA AA | Alessia Soddu |
+| 59 | GALUSE’ BOY AA | Ilaria Bisconti |
+| 60 | GARDENIA AA | Annamaria Colosio |
+| 61 | GAUDIA A TUTTI AA | Michela Gori |
+| 62 | GHOST BOY AA | Francesco Scarparo |
+| 63 | GIA’ FUD’ORA AA | Caterina Saracini |
+| 64 | GIOIA PURA AA | Sandro Bencardino |
+| 65 | GIORDANO AA | Ildebrando Coneri |
+| 66 | GOLDEN RIU AA | Matteo Del Cesta |
+| 67 | GRANDE AMORE AA | Mario Salis |
+| 68 | GRINGO MENDOZA AA | Mario Giacomino Brinchia |
+| 69 | GUIZZO AA | Agnieszka Fiut |
+| 70 | KING RIO AA | Ferruccio Valacchi |
+| 71 | MILADY BONDREAMER AA | Mattia Chiavassa |
+| 72 | MORESCO AA | Stefano Trochei |
+| 73 | SIR MARK AA | Mattia Chiavassa |
+| 74 | SUPERCHIOMA AA | Massimo Columbu |
+| 75 | TERRENERE FOLLIA AA | Francesca Vallone |
+| 76 | ZENTILES | Didier Pierre Ryelandt |
+| 77 | ZIO FRAC | Enrico Bruschelli |
+
+### 11.2 Cavalli ammessi direttamente alla Tratta del 13 agosto
+
+| N. | Cavallo | Proprietario |
+|---:|---|---|
+| 1 | ANDA E BOLA | Harry Arthur Louis Westerman |
+| 2 | BENITOS AA | Dario Colagè |
+| 3 | CANARINU AA | Mark Harris Getty |
+| 4 | DIODORO AA | Ilaria Bisconti |
+| 5 | DONRODRIGO AA | Michele Seazzu |
+| 6 | EBERARDO AA | Theodore William Thomas Westerman |
+| 7 | VISO D’ANGELO | Mark Harris Getty |
+| 8 | VOLPINO | Franco Iannilli |
+
+### 11.3 Regole di interpretazione delle liste
+
+Risposte corrette:
+
+- «Il cavallo compare fra i 77 ammessi alle prove regolamentate dell’11 e 12 agosto 2026.»
+- «Il cavallo compare fra gli 8 ammessi direttamente alla Tratta del 13 agosto 2026.»
+- «La pubblicazione ufficiale è del 10 agosto 2026.»
+- «Le prove regolamentate si svolgono l’11 e il 12 agosto 2026, a partire dalle ore 6.»
+- «La Tratta è prevista giovedì 13 agosto 2026.»
+
+Non dedurre:
+
+- che l’ammissione alle prove regolamentate equivalga a idoneità sanitaria definitiva;
+- che i cavalli ammessi alle prove regolamentate siano per questo ammessi alla Tratta;
+- che gli 8 cavalli ammessi direttamente alla Tratta siano avvantaggiati o già scelti;
+- che i cavalli elencati siano quelli che formeranno il lotto dei cavalli scelti per la Tratta;
+- che uno di essi sarà assegnato a una Contrada o correrà il Palio;
+- che i 23 cavalli dei 108 ammessi alle Previsite che non compaiono in queste liste siano stati giudicati non idonei: il documento non lo dichiara;
+- che le liste non possano essere rettificate o variate.
+
+L’elenco è uno snapshot autonomo alla data del 10 agosto 2026. Una eventuale rettifica successiva va conservata come snapshot distinto, senza sovrascrivere questo.

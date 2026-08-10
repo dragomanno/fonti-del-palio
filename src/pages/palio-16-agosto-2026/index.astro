@@ -26,8 +26,16 @@ const sezioni = [
     meta: `${carriera.previsite.cavalli.length} cavalli`,
   },
   {
-    href: "/palio-16-agosto-2026/accesso-e-sicurezza/",
+    href: "/palio-16-agosto-2026/prove-regolamentate/",
     ordinale: "02",
+    titolo: "Cavalli ammessi alle prove regolamentate e alla Tratta",
+    sommario:
+      "Le due liste pubblicate il 10 agosto 2026 dopo le Previsite: ammessi alle prove regolamentate dell'11 e 12 agosto e ammessi direttamente alla Tratta del 13 agosto.",
+    meta: `${carriera.proveRegolamentate.proveRegolamentate.length} + ${carriera.proveRegolamentate.trattaDiretta.length} cavalli`,
+  },
+  {
+    href: "/palio-16-agosto-2026/accesso-e-sicurezza/",
+    ordinale: "03",
     titolo: "Accesso, sicurezza e servizi",
     sommario:
       "La disciplina consolidata per materia, ricostruita dalle ordinanze e dagli atti acquisiti per questa Carriera.",
@@ -35,7 +43,7 @@ const sezioni = [
   },
   {
     href: "/palio-16-agosto-2026/guida-pratica/",
-    ordinale: "03",
+    ordinale: "04",
     titolo: "Guida pratica",
     sommario:
       "Che cosa si può e non si può fare in Piazza, in forma diretta, con il rinvio all'atto che lo stabilisce.",
@@ -43,7 +51,7 @@ const sezioni = [
   },
   {
     href: "/ordinanze-e-atti/",
-    ordinale: "04",
+    ordinale: "05",
     titolo: "Ordinanze e atti",
     sommario:
       "Il registro degli atti e dei manifesti a stampa acquisiti, ciascuno con estremi, digest di integrità e, dove ripubblicabile, il PDF originale.",
@@ -72,6 +80,8 @@ const sezioni = [
         {atti.length} atti registrati · {pubblicati.length} PDF ripubblicati · {pagine} pagine
         · {manifesti.length} manifesti a stampa
         · {carriera.previsite.cavalli.length} cavalli ammessi alle Previsite
+        · {carriera.proveRegolamentate.proveRegolamentate.length} ammessi alle prove regolamentate
+        · {carriera.proveRegolamentate.trattaDiretta.length} ammessi direttamente alla Tratta
       </p>
     </div>
   </section>
@@ -103,8 +113,9 @@ const sezioni = [
       <NotaDocumentaria titolo="Che cosa copre e che cosa non copre questa sezione" variante="avvertenza">
         <p>
           Il registro comprende i tredici atti effettivamente acquisiti il 28 luglio 2026, il
-          documento operativo del 30 luglio 2026 e i cinque manifesti a stampa acquisiti il 4 agosto
-          2026. Non è l'elenco completo degli atti adottati dal Comune di Siena per questa Carriera:
+          documento operativo del 30 luglio 2026, i cinque manifesti a stampa acquisiti il 4 agosto
+          2026 e il documento operativo del 10 agosto 2026 sui cavalli ammessi alle prove
+          regolamentate e alla Tratta. Non è l'elenco completo degli atti adottati dal Comune di Siena per questa Carriera:
           altri atti possono esistere e non essere stati acquisiti. L'assenza di un atto da questa
           pagina non significa che l'atto non esista.
         </p>

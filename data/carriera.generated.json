@@ -781,6 +781,449 @@
       }
     ]
   },
+  "proveRegolamentate": {
+    "documento": {
+      "id": "COM-2026-08-PROVEREG-001",
+      "titolo": "Elenco dei cavalli ammessi alle prove regolamentate dell’11 e 12 agosto e dei cavalli ammessi direttamente alla Tratta del 13 agosto",
+      "data": "10/08/2026",
+      "pagine": 2,
+      "sha256": "7ccab4c5ec29170df7cab0cea4487669586a4db82c43a4e8279fef876d3f83cf",
+      "statoPubblico": "ripubblicabile",
+      "ripubblicabile": true,
+      "pdf": "/atti/2026/prove-regolamentate/Elenco_cavalli_ammessi_alle_prove_regolamentate_e_direttamente_alla-6.pdf",
+      "scheda": "- **Tipo:** documento operativo ufficiale e lista di esito; non è un’ordinanza e non è un atto protocollato.\n- **Titolo recato dal documento:** «PALIO 16 AGOSTO 2026 — CAVALLI AMMESSI ALLE PROVE REGOLAMENTATE DEL 11 E 12 AGOSTO»; secondo titolo interno: «CAVALLI AMMESSI DIRETTAMENTE ALLA TRATTA DEL 13 AGOSTO».\n- **Autorità:** Comune di Siena; l’intestazione grafica del documento reca il solo stemma «COMUNE DI SIENA».\n- **Numero e data:** numero non indicato; pubblicazione del 10 agosto 2026.\n- **Ultimo aggiornamento verificato della fonte:** 10 agosto 2026, ore 11:11.\n- **Fonte:** [comunicazione ufficiale del Comune di Siena](https://www.comune.siena.it/novita/palio-16-agosto-lelenco-dei-cavalli-ammessi-alle-prove-regolamentate-e-alla-tratta-1).\n- **Consistenza:** 2 pagine, 124.859 byte, livello testuale nativo, non da riconoscimento ottico.\n- **Stato documentale:** `acquisito`; PDF ripubblicato con digest verificato in fase di generazione dell’indice.\n- **Fase del Palio:** esito delle Previsite del 6, 7 e 8 agosto 2026; ammissione alle prove regolamentate dell’11 e 12 agosto 2026 e ammissione diretta alla Tratta del 13 agosto 2026.\n\nLa comunicazione ufficiale del Comune di Siena riferisce che:\n\n- sono **77** i cavalli ammessi alle prove regolamentate di martedì 11 e mercoledì 12 agosto 2026;\n- sono **8** i cavalli ammessi direttamente alla Tratta di giovedì 13 agosto 2026;\n- la decisione è della **Commissione veterinaria del Palio**, dopo le tre giornate di visite alla clinica del Ceppo a Monteresi;\n- la consultazione con i Capitani delle Contrade è avvenuta e **non è vincolante**, come previsto dal Regolamento per il Palio;\n- le prove regolamentate iniziano alle ore 6.\n\nI due elenchi sommano **85** cavalli. La differenza rispetto ai 108 ammessi alle Previsite registrati in `COM-2026-08-PREVISITE-001` non è spiegata dal documento e non deve essere interpretata: il documento dichiara chi è ammesso, non perché altri non lo siano.\n\n**Relazione con `ATT-2026-SIND-045`:** l’atto sindacale n. 45 del 7 luglio 2026, nello stato `richiamato`, ha per oggetto ricostruibile lo svolgimento delle prove regolamentate dell’11 e 12 agosto 2026. Questo documento riguarda la stessa fase, ma non lo cita e non ne è la copia: il nesso è di materia, non di derivazione documentaria accertata.\n\n**Non confondere con:** `COM-2026-08-PREVISITE-001`, che registra i 108 cavalli ammessi alle Previsite ed è uno snapshot autonomo, conservato e non sovrascritto da questa lista."
+    },
+    "proveRegolamentate": [
+      {
+        "numero": 1,
+        "nome": "ARES ELCE",
+        "proprietario": "Fabrizio Macucci"
+      },
+      {
+        "numero": 2,
+        "nome": "ARESTETULESU",
+        "proprietario": "Mark Harris Getty"
+      },
+      {
+        "numero": 3,
+        "nome": "BAGNOLO AA",
+        "proprietario": "Augusto Cerboni"
+      },
+      {
+        "numero": 4,
+        "nome": "BAILA AA",
+        "proprietario": "Alberto Manenti"
+      },
+      {
+        "numero": 5,
+        "nome": "BENITO BAIO AA",
+        "proprietario": "Riccardo Bindi"
+      },
+      {
+        "numero": 6,
+        "nome": "BOLINA DA CLODIA AA",
+        "proprietario": "Alessio Bincoletto"
+      },
+      {
+        "numero": 7,
+        "nome": "BONITAS AA",
+        "proprietario": "Didier Pierre Ryelandt"
+      },
+      {
+        "numero": 8,
+        "nome": "CASSIOX AA",
+        "proprietario": "Alessandro Neri"
+      },
+      {
+        "numero": 9,
+        "nome": "CHIOSA VINCE AA",
+        "proprietario": "Duccio Ravenni"
+      },
+      {
+        "numero": 10,
+        "nome": "COBALTO DA CLODIA AA",
+        "proprietario": "Alessandro Columbu"
+      },
+      {
+        "numero": 11,
+        "nome": "COMANCIO AA",
+        "proprietario": "Federica Regnani"
+      },
+      {
+        "numero": 12,
+        "nome": "COMPILATION AA",
+        "proprietario": "Federica Saracini"
+      },
+      {
+        "numero": 13,
+        "nome": "CORINNE CLAR AA",
+        "proprietario": "Aurora Coneri"
+      },
+      {
+        "numero": 14,
+        "nome": "DADA AA",
+        "proprietario": "Sandra Rossi"
+      },
+      {
+        "numero": 15,
+        "nome": "DAREDEVIL AA",
+        "proprietario": "Marcello Roti"
+      },
+      {
+        "numero": 16,
+        "nome": "DEDALO KING AA",
+        "proprietario": "Salvatore Nieddu"
+      },
+      {
+        "numero": 17,
+        "nome": "DEMONI AA",
+        "proprietario": "Alessia Ara"
+      },
+      {
+        "numero": 18,
+        "nome": "DIAMANTE SAURO AA",
+        "proprietario": "Pietro Falchi"
+      },
+      {
+        "numero": 19,
+        "nome": "DOCTOR DONALD AA",
+        "proprietario": "Nicola Giorgi"
+      },
+      {
+        "numero": 20,
+        "nome": "DOLCECOMELANUTELLA AA",
+        "proprietario": "Camilla Marzi"
+      },
+      {
+        "numero": 21,
+        "nome": "DOLLARO AA",
+        "proprietario": "Andrea Sanna"
+      },
+      {
+        "numero": 22,
+        "nome": "DORINDA AA",
+        "proprietario": "Agnieszka Fiut"
+      },
+      {
+        "numero": 23,
+        "nome": "DOVIZIA AA",
+        "proprietario": "Andrea Viani"
+      },
+      {
+        "numero": 24,
+        "nome": "DUCE AA",
+        "proprietario": "Antonio Costantino Buzzi"
+      },
+      {
+        "numero": 25,
+        "nome": "EBACIAMI AA",
+        "proprietario": "Maurizia Vitaliani"
+      },
+      {
+        "numero": 26,
+        "nome": "EBANO AA",
+        "proprietario": "Andrea Sanna"
+      },
+      {
+        "numero": 27,
+        "nome": "ECCOLO AA",
+        "proprietario": "Diego Minucci"
+      },
+      {
+        "numero": 28,
+        "nome": "ELLENICO AA",
+        "proprietario": "Lorenzo Maria Vincenti"
+      },
+      {
+        "numero": 29,
+        "nome": "ELLY AA",
+        "proprietario": "Camilla Marzi"
+      },
+      {
+        "numero": 30,
+        "nome": "EMIGRANTE AA",
+        "proprietario": "Selvaggia Pianetti Lotteringhi della Stufa"
+      },
+      {
+        "numero": 31,
+        "nome": "ENNALZU AA",
+        "proprietario": "Nicolò Farnetani"
+      },
+      {
+        "numero": 32,
+        "nome": "ERMESETHIESI AA",
+        "proprietario": "Federica Luchetti"
+      },
+      {
+        "numero": 33,
+        "nome": "ERMINIO BAIO AA",
+        "proprietario": "Elena Patacchiola"
+      },
+      {
+        "numero": 34,
+        "nome": "ERMOSA DE CAMPEDA AA",
+        "proprietario": "Jonatan Bartoletti"
+      },
+      {
+        "numero": 35,
+        "nome": "EROS OROTELLESE AA",
+        "proprietario": "Luciano Marri"
+      },
+      {
+        "numero": 36,
+        "nome": "ESCALUS AA",
+        "proprietario": "Selvaggia Pianetti Lotteringhi della Stufa"
+      },
+      {
+        "numero": 37,
+        "nome": "ESCHILO DE AIGHENTA AA",
+        "proprietario": "Mattia Chiavassa"
+      },
+      {
+        "numero": 38,
+        "nome": "ESTERINA AA",
+        "proprietario": "Enrico Bruschelli"
+      },
+      {
+        "numero": 39,
+        "nome": "ESTRELLA OLIANESA AA",
+        "proprietario": "Francesco Pisanu"
+      },
+      {
+        "numero": 40,
+        "nome": "ETRINTA AA",
+        "proprietario": "Luca Francesconi"
+      },
+      {
+        "numero": 41,
+        "nome": "EUSKALDI AA",
+        "proprietario": "Ilaria Mella"
+      },
+      {
+        "numero": 42,
+        "nome": "FABULA AA",
+        "proprietario": "Mark Harris Getty"
+      },
+      {
+        "numero": 43,
+        "nome": "FAGHE A BONU AA",
+        "proprietario": "Valentino Bussu"
+      },
+      {
+        "numero": 44,
+        "nome": "FAMELICAMU AA",
+        "proprietario": "Alessandro Frosini"
+      },
+      {
+        "numero": 45,
+        "nome": "FARAONE DE NULE AA",
+        "proprietario": "Carlo Giordano"
+      },
+      {
+        "numero": 46,
+        "nome": "FAVOLOSO ORANESU AA",
+        "proprietario": "Antonio Siri"
+      },
+      {
+        "numero": 47,
+        "nome": "FEDOR AA",
+        "proprietario": "Valter Pusceddu"
+      },
+      {
+        "numero": 48,
+        "nome": "FENOMENALE AA",
+        "proprietario": "Massimo Bonci"
+      },
+      {
+        "numero": 49,
+        "nome": "FERRO NERO AA",
+        "proprietario": "Rosanna Bonelli"
+      },
+      {
+        "numero": 50,
+        "nome": "FIGARO FIO AA",
+        "proprietario": "Mark Harris Getty"
+      },
+      {
+        "numero": 51,
+        "nome": "FIGURINO RIU AA",
+        "proprietario": "Alessandro Cersosimo"
+      },
+      {
+        "numero": 52,
+        "nome": "FILIPPO RIU AA",
+        "proprietario": "Rebecca Berni"
+      },
+      {
+        "numero": 53,
+        "nome": "FLASC BALL AA",
+        "proprietario": "Pasqualino Mula"
+      },
+      {
+        "numero": 54,
+        "nome": "FLICK AA",
+        "proprietario": "Michele Lorenzetti"
+      },
+      {
+        "numero": 55,
+        "nome": "FORTZA PARIS AA",
+        "proprietario": "Giuseppe Di Vivo"
+      },
+      {
+        "numero": 56,
+        "nome": "FRERE SOLEIL AA",
+        "proprietario": "Theodore William Thomas Westerman"
+      },
+      {
+        "numero": 57,
+        "nome": "FUORI ROTTA AA",
+        "proprietario": "Jonatan Bartoletti"
+      },
+      {
+        "numero": 58,
+        "nome": "FURIA TULESA AA",
+        "proprietario": "Alessia Soddu"
+      },
+      {
+        "numero": 59,
+        "nome": "GALUSE’ BOY AA",
+        "proprietario": "Ilaria Bisconti"
+      },
+      {
+        "numero": 60,
+        "nome": "GARDENIA AA",
+        "proprietario": "Annamaria Colosio"
+      },
+      {
+        "numero": 61,
+        "nome": "GAUDIA A TUTTI AA",
+        "proprietario": "Michela Gori"
+      },
+      {
+        "numero": 62,
+        "nome": "GHOST BOY AA",
+        "proprietario": "Francesco Scarparo"
+      },
+      {
+        "numero": 63,
+        "nome": "GIA’ FUD’ORA AA",
+        "proprietario": "Caterina Saracini"
+      },
+      {
+        "numero": 64,
+        "nome": "GIOIA PURA AA",
+        "proprietario": "Sandro Bencardino"
+      },
+      {
+        "numero": 65,
+        "nome": "GIORDANO AA",
+        "proprietario": "Ildebrando Coneri"
+      },
+      {
+        "numero": 66,
+        "nome": "GOLDEN RIU AA",
+        "proprietario": "Matteo Del Cesta"
+      },
+      {
+        "numero": 67,
+        "nome": "GRANDE AMORE AA",
+        "proprietario": "Mario Salis"
+      },
+      {
+        "numero": 68,
+        "nome": "GRINGO MENDOZA AA",
+        "proprietario": "Mario Giacomino Brinchia"
+      },
+      {
+        "numero": 69,
+        "nome": "GUIZZO AA",
+        "proprietario": "Agnieszka Fiut"
+      },
+      {
+        "numero": 70,
+        "nome": "KING RIO AA",
+        "proprietario": "Ferruccio Valacchi"
+      },
+      {
+        "numero": 71,
+        "nome": "MILADY BONDREAMER AA",
+        "proprietario": "Mattia Chiavassa"
+      },
+      {
+        "numero": 72,
+        "nome": "MORESCO AA",
+        "proprietario": "Stefano Trochei"
+      },
+      {
+        "numero": 73,
+        "nome": "SIR MARK AA",
+        "proprietario": "Mattia Chiavassa"
+      },
+      {
+        "numero": 74,
+        "nome": "SUPERCHIOMA AA",
+        "proprietario": "Massimo Columbu"
+      },
+      {
+        "numero": 75,
+        "nome": "TERRENERE FOLLIA AA",
+        "proprietario": "Francesca Vallone"
+      },
+      {
+        "numero": 76,
+        "nome": "ZENTILES",
+        "proprietario": "Didier Pierre Ryelandt"
+      },
+      {
+        "numero": 77,
+        "nome": "ZIO FRAC",
+        "proprietario": "Enrico Bruschelli"
+      }
+    ],
+    "trattaDiretta": [
+      {
+        "numero": 1,
+        "nome": "ANDA E BOLA",
+        "proprietario": "Harry Arthur Louis Westerman"
+      },
+      {
+        "numero": 2,
+        "nome": "BENITOS AA",
+        "proprietario": "Dario Colagè"
+      },
+      {
+        "numero": 3,
+        "nome": "CANARINU AA",
+        "proprietario": "Mark Harris Getty"
+      },
+      {
+        "numero": 4,
+        "nome": "DIODORO AA",
+        "proprietario": "Ilaria Bisconti"
+      },
+      {
+        "numero": 5,
+        "nome": "DONRODRIGO AA",
+        "proprietario": "Michele Seazzu"
+      },
+      {
+        "numero": 6,
+        "nome": "EBERARDO AA",
+        "proprietario": "Theodore William Thomas Westerman"
+      },
+      {
+        "numero": 7,
+        "nome": "VISO D’ANGELO",
+        "proprietario": "Mark Harris Getty"
+      },
+      {
+        "numero": 8,
+        "nome": "VOLPINO",
+        "proprietario": "Franco Iannilli"
+      }
+    ],
+    "regoleLista": "Risposte corrette:\n\n- «Il cavallo compare fra i 77 ammessi alle prove regolamentate dell’11 e 12 agosto 2026.»\n- «Il cavallo compare fra gli 8 ammessi direttamente alla Tratta del 13 agosto 2026.»\n- «La pubblicazione ufficiale è del 10 agosto 2026.»\n- «Le prove regolamentate si svolgono l’11 e il 12 agosto 2026, a partire dalle ore 6.»\n- «La Tratta è prevista giovedì 13 agosto 2026.»\n\nNon dedurre:\n\n- che l’ammissione alle prove regolamentate equivalga a idoneità sanitaria definitiva;\n- che i cavalli ammessi alle prove regolamentate siano per questo ammessi alla Tratta;\n- che gli 8 cavalli ammessi direttamente alla Tratta siano avvantaggiati o già scelti;\n- che i cavalli elencati siano quelli che formeranno il lotto dei cavalli scelti per la Tratta;\n- che uno di essi sarà assegnato a una Contrada o correrà il Palio;\n- che i 23 cavalli dei 108 ammessi alle Previsite che non compaiono in queste liste siano stati giudicati non idonei: il documento non lo dichiara;\n- che le liste non possano essere rettificate o variate.\n\nL’elenco è uno snapshot autonomo alla data del 10 agosto 2026. Una eventuale rettifica successiva va conservata come snapshot distinto, senza sovrascrivere questo."
+  },
   "materie": [
     {
       "numero": 3,

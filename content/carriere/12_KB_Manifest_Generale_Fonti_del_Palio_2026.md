@@ -251,7 +251,7 @@ Questi quattro file governano il trattamento tecnico delle fonti e il ciclo di r
 - **Ultimo aggiornamento verificato:** 10/08/2026.
 - **Oggetto:** calendario operativo di tutte le fasi della Carriera del 16 agosto 2026, dalla stesura del tufo del 9 agosto alla mossa del Palio del 16 agosto, articolato in sette giornate.
 - **Consistenza:** istantanea HTML, 147.958 byte.
-- **SHA-256:** `3286a71cc5bc79aa08dc7232f40103b38d7d9c7077ee51b5412d242af8930797`.
+- **SHA-256:** `3286a71cc5bc79aa08dc7232f40103b38d7d9c7077ee51b5412d242af8930797` (147.958 byte) — checksum canonico dell'artefatto acquisito e conservato nel repository; non coincide necessariamente con il digest calcolabile sulla risposta HTTP servita in produzione, che può essere alterata da post-processing della piattaforma di hosting senza che il documento archiviato ne sia toccato (dettagli nella KB tecnica di progetto "Source acquisition and provenance", sezione 4bis).
 - **Stato documentale:** `acquisito`; nessun PDF ripubblicato — la pagina sorgente è nativamente HTML e non espone un allegato scaricabile.
 - **Fonte:** `https://www.comune.siena.it/novita/palio-16-agosto-tutti-gli-orari-1`.
 - **Trascrizione completa:** KB 09, sezione 12.

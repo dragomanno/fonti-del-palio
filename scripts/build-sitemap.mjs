@@ -35,6 +35,22 @@ const EXCLUDED_DIRS = new Set(["pagefind", "_astro", "_worker.js", ".netlify"]);
 /** Rotte escluse dalla sitemap anche se generate come HTML. */
 const EXCLUDED_ROUTES = new Set(["/404/", "/500/"]);
 
+/**
+ * Prefissi di rotta esclusi dalla sitemap e dai controlli di pagina anche se
+ * generati come .html. Sotto "/atti/" possono comparire istantanee HTML di
+ * documenti acquisiti da fonti esterne (es. una pagina del Comune di Siena
+ * salvata perche' priva di un allegato PDF): sono asset statici copiati da
+ * public/, non pagine Astro del sito, e non condividono navbar, canonical
+ * o meta robots con le pagine generate. Vengono esclusi per prefisso invece
+ * di richiedere un meta noindex, perche' modificare l'istantanea acquisita
+ * altererebbe l'integrita' del documento originale.
+ */
+const EXCLUDED_PREFIXES = ["/atti/2026/orari/"];
+
+function isExcludedPrefix(route) {
+  return EXCLUDED_PREFIXES.some((prefix) => route.startsWith(prefix));
+}
+
 function collectHtmlFiles(dir, base = dir, out = []) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     if (entry.isDirectory()) {
@@ -71,7 +87,7 @@ export function collectIndexableRoutes(distDir = DIST) {
   const skipped = { noindex: [], excluded: [] };
   for (const file of collectHtmlFiles(distDir)) {
     const route = fileToRoute(file, distDir);
-    if (EXCLUDED_ROUTES.has(route)) {
+    if (EXCLUDED_ROUTES.has(route) || isExcludedPrefix(route)) {
       skipped.excluded.push(route);
       continue;
     }

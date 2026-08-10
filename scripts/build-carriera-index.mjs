@@ -34,6 +34,7 @@ const RIFERIMENTI = path.join(ROOT, "content", "riferimenti");
 const PDF_DIR = path.join(ROOT, "public", "atti", "2026");
 const MANIFESTI_DIR = path.join(PDF_DIR, "manifesti");
 const PROVEREG_DIR = path.join(PDF_DIR, "prove-regolamentate");
+const ORARI_DIR = path.join(PDF_DIR, "orari");
 const TARGET = path.join(ROOT, "data", "carriera.generated.json");
 
 const KB09 = "09_KB_Corpus_Ordinanze_e_Atti_Palio_Agosto_2026.md";
@@ -51,7 +52,7 @@ export const EXPECTED = {
   attiRichiamati: 2,
   cavalli: 108,
   materie: 11,
-  sezioniGuida: 13,
+  sezioniGuida: 14,
   contrade: 17,
   recordRegistro: 5,
   pagineAttiPubblicati: 35,
@@ -66,6 +67,7 @@ export const EXPECTED = {
   cavalliProveRegolamentate: 77,
   cavalliTrattaDiretta: 8,
   pagineProveRegolamentate: 2,
+  giorniOrari: 7,
 };
 
 function read(dir, name) {
@@ -353,6 +355,104 @@ function buildProveRegolamentate(kb09) {
   };
 }
 
+/**
+ * Quarto lotto: il calendario operativo degli orari della Carriera del 16
+ * agosto 2026, acquisito il 10 agosto 2026 come istantanea HTML.
+ *
+ * Il documento non e' un atto, non e' un manifesto e non e' il documento
+ * operativo delle prove regolamentate (sezione 11): resta un quarto blocco
+ * distinto. Non esiste un PDF ripubblicabile perche' la fonte e' nativamente
+ * HTML: il digest e' calcolato sull'istantanea acquisita e verificato contro
+ * il file effettivamente presente, cosi' come per gli altri lotti.
+ *
+ * Ogni giorno e' pubblicato come una tabella "Orario | Fase" propria
+ * (sottosezioni 12.1-12.7): la struttura e' letta dalla tabella, non dedotta
+ * dalla prosa introduttiva, cosi' come per le liste nominative della sezione
+ * 11. La sottosezione 12.8 ("Limiti interpretativi") non e' un giorno e resta
+ * fuori dall'array `giorni`.
+ */
+function buildOrari(kb09) {
+  const sezione = section(
+    kb09,
+    "## 12. Registro del documento operativo acquisito il 10 agosto 2026 (calendario orari)"
+  );
+  const intro = sezione.split(/\n### /)[0];
+  const registro = parseTable(intro);
+  if (registro.body.length !== 1) {
+    throw new Error(
+      `il registro del calendario orari deve contenere un solo record, trovati ${registro.body.length}`
+    );
+  }
+  const [idCell, titolo, data, pagineCell, shaCell, stato, fileCell] = registro.body[0];
+  const id = plain(idCell);
+  const file = plain(fileCell);
+  const sha256 = plain(shaCell);
+  const pagineRaw = plain(pagineCell);
+  const pagine = pagineRaw === "\u2014" || pagineRaw === "-" ? null : Number(pagineRaw);
+
+  const presenti = new Set(
+    existsSync(ORARI_DIR) ? readdirSync(ORARI_DIR).filter((f) => f.endsWith(".html")) : []
+  );
+  if (!presenti.has(file)) throw new Error(`file mancante per ${id}: ${file}`);
+  const digest = createHash("sha256")
+    .update(readFileSync(path.join(ORARI_DIR, file)))
+    .digest("hex");
+  if (digest !== sha256) {
+    throw new Error(
+      `digest non corrispondente per ${id}: registrato ${sha256}, calcolato ${digest}`
+    );
+  }
+  const orfani = [...presenti].filter((f) => f !== file).sort();
+  if (orfani.length) {
+    throw new Error(`file non collegati ad alcun record: ${orfani.join(", ")}`);
+  }
+
+  const scheda = section(sezione, `### ${id}`);
+
+  const sottosezioni = blocks(sezione, 3).filter((b) => /^12\.\d+ /.test(b.title));
+  const giornoBlocchi = sottosezioni.filter((b) => !/^12\.8 /.test(b.title));
+  if (giornoBlocchi.length === 0) {
+    throw new Error(`nessuna sottosezione giornaliera trovata per ${id}`);
+  }
+
+  const giorni = giornoBlocchi.map((b) => {
+    const titoloGiorno = b.title.replace(/^12\.\d+\s+/, "").trim();
+    const { body } = parseTable(b.body);
+    if (body.length === 0) {
+      throw new Error(`tabella vuota nella sottosezione "${b.title}"`);
+    }
+    const fasi = body.map((row) => {
+      const orarioRaw = plain(row[0] ?? "");
+      const fase = plain(row[1] ?? "");
+      if (!fase) throw new Error(`fase vuota nella sottosezione "${b.title}"`);
+      return { orario: orarioRaw, fase };
+    });
+    const orari = fasi
+      .map((f) => f.orario)
+      .filter((o) => /^\d{1,2}:\d{2}$/.test(o));
+    return { titolo: titoloGiorno, fasi, orari };
+  });
+
+  const limiti = sottosezioni.find((b) => /^12\.8 /.test(b.title));
+
+  return {
+    documento: {
+      id,
+      titolo,
+      data,
+      pagine,
+      sha256,
+      statoPubblico: stato,
+      ripubblicabile: false,
+      pdf: null,
+      html: `/atti/2026/orari/${file}`,
+      scheda,
+    },
+    giorni,
+    limitiInterpretativi: limiti ? limiti.body : "",
+  };
+}
+
 function buildCavalli(kb09) {
   const { body } = parseTable(section(kb09, "### 6.1 Elenco ufficiale"));
   return body.map((row) => ({
@@ -504,6 +604,7 @@ export function buildIndex() {
       cavalli,
     },
     proveRegolamentate: buildProveRegolamentate(kb09),
+    orari: buildOrari(kb09),
     materie: buildMaterie(kb10),
     guida: buildGuida(kb11),
     registroFonti: buildRegistro(kb12),
@@ -558,6 +659,7 @@ export function verify(index) {
     index.proveRegolamentate.documento.pagine,
     EXPECTED.pagineProveRegolamentate
   );
+  eq("giorni del calendario orari", index.orari.giorni.length, EXPECTED.giorniOrari);
   eq("materie consolidate", index.materie.length, EXPECTED.materie);
   eq("sezioni della guida", index.guida.length, EXPECTED.sezioniGuida);
   eq("Contrade del Bando", index.bando.contrade.length, EXPECTED.contrade);
@@ -613,6 +715,34 @@ export function verify(index) {
   }
   if (!/^[0-9a-f]{64}$/.test(index.proveRegolamentate.documento.sha256)) {
     problems.push(`SHA-256 malformato per ${index.proveRegolamentate.documento.id}`);
+  }
+
+  // Il calendario orari e' un quarto lotto: non e' un atto, non e' un
+  // manifesto e non coincide col documento delle prove regolamentate.
+  if (!/^[0-9a-f]{64}$/.test(index.orari.documento.sha256)) {
+    problems.push(`SHA-256 malformato per ${index.orari.documento.id}`);
+  }
+  if (index.atti.some((a) => a.id === index.orari.documento.id)) {
+    problems.push(`${index.orari.documento.id} compare fra gli atti`);
+  }
+  if (index.manifesti.some((m) => m.id === index.orari.documento.id)) {
+    problems.push(`${index.orari.documento.id} compare fra i manifesti`);
+  }
+  if (index.orari.documento.id === index.proveRegolamentate.documento.id) {
+    problems.push("il documento del calendario orari coincide con quello delle prove regolamentate");
+  }
+  for (const giorno of index.orari.giorni) {
+    if (!giorno.titolo.trim()) {
+      problems.push("giorno del calendario orari con titolo vuoto");
+    }
+    if (!Array.isArray(giorno.fasi) || giorno.fasi.length === 0) {
+      problems.push(`giorno del calendario orari senza fasi: ${giorno.titolo}`);
+    }
+    for (const f of giorno.fasi ?? []) {
+      if (!f.orario.trim() || !f.fase.trim()) {
+        problems.push(`fase con orario o testo vuoto nel giorno: ${giorno.titolo}`);
+      }
+    }
   }
 
   // Ordine registrato delle Contrade nel Bando.

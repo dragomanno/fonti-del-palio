@@ -241,6 +241,24 @@ Questi quattro file governano il trattamento tecnico delle fonti e il ciclo di r
 - **Relazione con `ATT-2026-SIND-045`:** stessa fase (prove regolamentate dell’11 e 12 agosto 2026), ma il documento non cita l’atto e non ne è la copia. Il nesso è di materia, non di derivazione accertata, e l’atto resta nello stato `richiamato`.
 - **Limite interpretativo:** i due elenchi sommano 85 cavalli sui 108 ammessi alle Previsite. La differenza non è spiegata dal documento e non va interpretata.
 
+## 4.5 Documento operativo del 10 agosto 2026 (calendario orari)
+
+### COM-2026-08-ORARI-001
+
+- **Natura:** comunicato istituzionale e calendario operativo; non è un’ordinanza e non è un atto protocollato.
+- **Titolo recato dal documento:** «Palio 16 agosto, tutti gli orari».
+- **Pubblicazione:** Comune di Siena, 09/08/2026.
+- **Ultimo aggiornamento verificato:** 10/08/2026.
+- **Oggetto:** calendario operativo di tutte le fasi della Carriera del 16 agosto 2026, dalla stesura del tufo del 9 agosto alla mossa del Palio del 16 agosto, articolato in sette giornate.
+- **Consistenza:** istantanea HTML, 147.958 byte.
+- **SHA-256:** `3286a71cc5bc79aa08dc7232f40103b38d7d9c7077ee51b5412d242af8930797`.
+- **Stato documentale:** `acquisito`; nessun PDF ripubblicato — la pagina sorgente è nativamente HTML e non espone un allegato scaricabile.
+- **Fonte:** `https://www.comune.siena.it/novita/palio-16-agosto-tutti-gli-orari-1`.
+- **Trascrizione completa:** KB 09, sezione 12.
+- **Limiti dichiarati:** il documento non porta numero di protocollo, non è sottoscritto e non è un’ordinanza; non anticipa l’esito di alcuna fase (Tratta, assegnazione dei cavalli, Prova Generale, Palio); le regole di condotta e i divieti per il pubblico durante le fasi qui calendarizzate restano stabilite dalle ordinanze `ATT-2026-ORD-051` a `060`, non da questo documento; «Prova», «Prova Generale» e «Provaccia» sono fasi distinte e non interscambiabili; il corteo ecclesiale del 14 agosto e la premiazione del Mangia del 15 agosto sono eventi collegati alla Carriera ma non sono, in senso stretto, eventi palieschi; gli orari pubblicati possono essere modificati in qualsiasi momento dalle autorità cittadine.
+- **Relazione con `COM-2026-08-PROVEREG-001`:** collegamento di materia (le prove regolamentate dell’11 e 12 agosto sono calendarizzate anche in questo documento), ma i due documenti restano distinti e non vanno fusi.
+- **Relazione con `ATT-2026-ORD-051`–`060`:** il calendario è collegato per materia a queste ordinanze, che stabiliscono la disciplina delle fasi qui calendarizzate; il calendario non le sostituisce e non ne anticipa il contenuto.
+
 # 5. Atti richiamati e non acquisiti
 
 ## ATT-2026-SIND-044

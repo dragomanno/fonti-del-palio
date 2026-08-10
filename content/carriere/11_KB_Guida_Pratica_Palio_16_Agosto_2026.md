@@ -29,6 +29,15 @@ L’ammissione alle Previsite è una fase preliminare. Non significa che il cava
 **Fonte:** [comunicato ufficiale del Comune di Siena del 30 luglio 2026](https://www.comune.siena.it/novita/palio-16-agosto-i-cavalli-ammessi-alle-previsite-1).  
 **Elenco completo:** KB 09, `COM-2026-08-PREVISITE-001`.
 
+## Il calendario degli orari
+
+Il Comune di Siena ha pubblicato il 9 agosto 2026 il **calendario operativo di tutti gli orari** della Carriera del 16 agosto, dalla stesura del tufo del 9 agosto alla mossa del Palio del 16 agosto, articolato in sette giornate.
+
+Questo calendario non è un'ordinanza: le regole di condotta e i divieti per il pubblico durante le fasi qui elencate restano stabiliti dalle ordinanze sindacali nn. 51–60. «Prova», «Prova Generale» e «Provaccia» sono fasi distinte e non interscambiabili; il documento non anticipa l'esito di alcuna fase. Gli orari pubblicati possono essere modificati in qualsiasi momento dalle autorità cittadine.
+
+**Fonte:** [comunicazione ufficiale del Comune di Siena del 9 agosto 2026](https://www.comune.siena.it/novita/palio-16-agosto-tutti-gli-orari-1).  
+**Calendario completo, giorno per giorno:** KB 09, `COM-2026-08-ORARI-001`; versione pubblica con tabelle: [Tutti gli orari del Palio del 16 agosto 2026](/palio-16-agosto-2026/orari/).
+
 ## Minori di 10 anni
 
 Il 16 agosto 2026, dalle 15:00 fino alla conclusione della manifestazione, i minori di 10 anni non possono accedere all'interno della Conchiglia di Piazza del Campo, nemmeno se accompagnati da un maggiorenne.

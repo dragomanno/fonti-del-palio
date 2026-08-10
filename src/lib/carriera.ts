@@ -76,6 +76,57 @@ export interface ProveRegolamentate {
   regoleLista: string;
 }
 
+/**
+ * Il documento del calendario orari e' un quarto lotto, distinto da
+ * `DocumentoOperativo`: non ha un PDF ripubblicabile perche' la fonte e'
+ * nativamente HTML, ma esiste un percorso pubblico verso l'istantanea
+ * acquisita (`html`). `pagine` e' `null` quando la fonte non dichiara un
+ * numero di pagine, come per una pagina web.
+ */
+export interface DocumentoOrari {
+  id: string;
+  titolo: string;
+  data: string;
+  pagine: number | null;
+  sha256: string;
+  statoPubblico: string;
+  ripubblicabile: boolean;
+  pdf: string | null;
+  html: string | null;
+  scheda: string;
+}
+
+/**
+ * Una fase del calendario operativo con l'orario dichiarato dalla fonte.
+ * `orario` e' trascritto come pubblicato: puo' essere "HH:MM", un trattino
+ * ("—") quando la fonte non indica un orario puntuale, o testo descrittivo
+ * ("dopo le batterie") quando la fonte lega la fase a un evento invece che a
+ * un'ora fissa.
+ */
+export interface FaseOrario {
+  orario: string;
+  fase: string;
+}
+
+/**
+ * Un giorno del calendario operativo della Carriera, con la tabella
+ * "Orario | Fase" pubblicata dal Comune per quel giorno. `titolo` include la
+ * data e la denominazione della giornata cosi' come pubblicata (es. "Giovedì
+ * 13 agosto 2026 — Tratta e prima Prova").
+ */
+export interface GiornoOrario {
+  titolo: string;
+  fasi: FaseOrario[];
+  /** I soli orari in forma "HH:MM", nell'ordine di tabella. */
+  orari: string[];
+}
+
+export interface Orari {
+  documento: DocumentoOrari;
+  giorni: GiornoOrario[];
+  limitiInterpretativi: string;
+}
+
 export interface Materia {
   numero: number;
   titolo: string;
@@ -188,6 +239,7 @@ export interface CarrieraIndex {
   attiRichiamati: AttoRichiamato[];
   previsite: { comunicato: string; regoleLista: string; cavalli: Cavallo[] };
   proveRegolamentate: ProveRegolamentate;
+  orari: Orari;
   materie: Materia[];
   guida: SezioneGuida[];
   registroFonti: RecordRegistro[];
@@ -271,6 +323,16 @@ export function listCavalliProveRegolamentate(): Cavallo[] {
 /** I cavalli ammessi direttamente alla Tratta del 13 agosto 2026. */
 export function listCavalliTrattaDiretta(): Cavallo[] {
   return getProveRegolamentate().trattaDiretta;
+}
+
+/** Il calendario operativo degli orari della Carriera, dal 9 al 16 agosto 2026. */
+export function getOrari(): Orari {
+  return loadCarriera().orari;
+}
+
+/** I giorni del calendario operativo, nell'ordine di pubblicazione. */
+export function listGiorniOrari(): GiornoOrario[] {
+  return getOrari().giorni;
 }
 
 export function listRegistroFonti(): RecordRegistro[] {

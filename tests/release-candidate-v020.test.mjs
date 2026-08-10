@@ -21,10 +21,19 @@ const VERSIONE = "0.2.0";
 const leggi = (p) => readFileSync(join(ROOT, p), "utf8");
 const json = (p) => JSON.parse(leggi(p));
 
+// Sotto "/atti/2026/orari/" puo' comparire un'istantanea HTML di un
+// documento acquisito da fonte esterna (senza allegato PDF): e' un asset
+// statico copiato da public/, non una pagina Astro, e non condivide
+// canonical/og:url con le pagine generate del sito. Va escluso dalla
+// scansione esattamente come dal generatore della sitemap
+// (scripts/build-sitemap.mjs) e dal test di navigazione.
+const PREFISSI_ESCLUSI = [join(DIST, "atti", "2026", "orari")];
+
 function paginaHtml(dir = DIST, acc = []) {
   for (const voce of readdirSync(dir)) {
     if (voce === "pagefind" || voce === "_astro") continue;
     const percorso = join(dir, voce);
+    if (PREFISSI_ESCLUSI.some((p) => percorso === p || percorso.startsWith(p + sep))) continue;
     if (statSync(percorso).isDirectory()) paginaHtml(percorso, acc);
     else if (voce.endsWith(".html")) acc.push(percorso);
   }

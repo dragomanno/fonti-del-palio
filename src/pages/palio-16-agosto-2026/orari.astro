@@ -1,0 +1,154 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NotaDocumentaria from "../../components/NotaDocumentaria.astro";
+import { getOrari } from "../../lib/carriera";
+import { renderDocumentaryMarkdown } from "../../lib/markdown";
+
+const blocco = getOrari();
+const documento = blocco.documento;
+const giorni = blocco.giorni;
+const scheda = renderDocumentaryMarkdown(documento.scheda);
+const limiti = renderDocumentaryMarkdown(blocco.limitiInterpretativi);
+const fonte = "https://www.comune.siena.it/novita/palio-16-agosto-tutti-gli-orari-1";
+const totaleFasi = giorni.reduce((n, g) => n + g.fasi.length, 0);
+---
+
+<BaseLayout
+  title="Tutti gli orari del Palio del 16 agosto 2026"
+  description="Il calendario operativo della Carriera del 16 agosto 2026, dalla stesura del tufo del 9 agosto alla mossa del Palio, come pubblicato dal Comune di Siena."
+  activePath="/palio-16-agosto-2026"
+>
+  <section class="section" style="padding-block: var(--space-6) var(--space-3);">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Percorso" data-pagefind-ignore>
+        <a href="/palio-16-agosto-2026/">Palio del 16 agosto 2026</a>
+        <span aria-hidden="true">/</span>
+        <span>Tutti gli orari</span>
+      </nav>
+      <span class="section-number">{documento.id}</span>
+      <h1 style="font-family: var(--font-display); font-size: var(--text-title); max-width: 26ch; margin: var(--space-1) 0 0;">
+        Tutti gli orari del Palio del 16 agosto 2026
+      </h1>
+      <p class="text-caption" style="margin-top: var(--space-2);">
+        {giorni.length} giornate calendarizzate · {totaleFasi} fasi orarie · pubblicazione del {documento.data}
+      </p>
+
+      <div class="prose" set:html={scheda} />
+
+      {
+        documento.html && (
+          <p class="text-caption" style="margin-top: var(--space-2);">
+            <a href={documento.html} rel="nofollow noopener">Istantanea HTML acquisita</a> ·
+            digest <span class="mono">{documento.sha256}</span>
+          </p>
+        )
+      }
+
+      <NotaDocumentaria titolo="Che cosa documenta questo calendario" variante="avvertenza">
+        <p>
+          Il documento non è un'ordinanza né un atto amministrativo protocollato: non porta numero
+          di protocollo, non è sottoscritto e non modifica né sostituisce le ordinanze già
+          registrate per questa Carriera. Documenta esclusivamente il calendario operativo delle
+          giornate paliesche pubblicato dal Comune di Siena.
+        </p>
+      </NotaDocumentaria>
+    </div>
+  </section>
+
+  {
+    giorni.map((giorno) => (
+      <section class="section" style="padding-block: 0 var(--space-6);">
+        <div class="wrap">
+          <h2 class="elenco-titolo">{giorno.titolo}</h2>
+          <div class="doc-table-wrap">
+            <table class="doc-table doc-table--sticky doc-table--reflow-sm" role="table">
+              <caption class="sr-only">
+                {giorno.titolo}: orario e fase, come pubblicato dal Comune di Siena.
+              </caption>
+              <thead role="rowgroup">
+                <tr role="row">
+                  <th scope="col">Orario</th>
+                  <th scope="col">Fase</th>
+                </tr>
+              </thead>
+              <tbody role="rowgroup">
+                {giorno.fasi.map((f) => (
+                  <tr role="row">
+                    <th scope="row" data-label="Orario" role="rowheader" class="num">
+                      {f.orario}
+                    </th>
+                    <td data-label="Fase" role="cell">
+                      {f.fase}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    ))
+  }
+
+  <section class="section" style="padding-block: 0 var(--space-12);">
+    <div class="wrap">
+      <NotaDocumentaria titolo="Limiti interpretativi" variante="avvertenza">
+        <div set:html={limiti} />
+      </NotaDocumentaria>
+
+      <NotaDocumentaria titolo="Provenienza e limiti del documento" variante="provenienza">
+        <p>
+          Il documento non porta numero di protocollo, non è sottoscritto e non è un'ordinanza: è
+          un comunicato istituzionale di calendario operativo. La pagina di comunicazione del
+          Comune di Siena è stata acquisita come istantanea HTML il 10 agosto 2026, perché non
+          espone un allegato PDF: il file conservato qui è quella stessa istantanea, non una sua
+          trascrizione.
+        </p>
+        <p>
+          Le regole di condotta e i divieti per il pubblico durante le fasi qui calendarizzate
+          restano stabilite dalle ordinanze del Comune di Siena già registrate per questa
+          Carriera, non da questo documento. Per l'elenco dei cavalli ammessi alle prove
+          regolamentate e alla Tratta: <a href="/palio-16-agosto-2026/prove-regolamentate/">pagina
+          dedicata</a>.
+        </p>
+        <p>
+          I nomi delle fasi e gli orari sono riprodotti come pubblicati dal Comune di Siena.
+          Segnalazioni di errore: <a href="mailto:info@pistakkio.net">info@pistakkio.net</a>.
+        </p>
+        <p>
+          Fonte: <a href={fonte} rel="nofollow noopener">comunicazione del Comune di Siena del 9
+          agosto 2026</a>, registrata come <span class="mono">{documento.id}</span>. Digest
+          SHA-256 dell'istantanea acquisita:
+          <span class="mono digest">{documento.sha256}</span>.
+        </p>
+      </NotaDocumentaria>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: var(--text-caption);
+    color: var(--color-text-faint);
+    margin-bottom: var(--space-2);
+  }
+  .crumbs a {
+    color: var(--color-green);
+  }
+  .elenco-titolo {
+    font-family: var(--font-display);
+    font-size: 1.375rem;
+    margin: 0 0 var(--space-2);
+  }
+  .num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .digest {
+    word-break: break-all;
+  }
+</style>

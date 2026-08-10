@@ -8,6 +8,7 @@ const atti = listAtti();
 const pubblicati = listAttiPubblicati();
 const pagine = pubblicati.reduce((n, a) => n + a.pagine, 0);
 const manifesti = listManifesti();
+const totaleFasiOrari = carriera.orari.giorni.reduce((n, g) => n + g.fasi.length, 0);
 
 /**
  * La rotta e' intenzionalmente nominata sulla singola Carriera e non su un
@@ -34,8 +35,16 @@ const sezioni = [
     meta: `${carriera.proveRegolamentate.proveRegolamentate.length} + ${carriera.proveRegolamentate.trattaDiretta.length} cavalli`,
   },
   {
-    href: "/palio-16-agosto-2026/accesso-e-sicurezza/",
+    href: "/palio-16-agosto-2026/orari/",
     ordinale: "03",
+    titolo: "Tutti gli orari della Carriera",
+    sommario:
+      "Il calendario operativo pubblicato dal Comune di Siena il 9 agosto 2026, dalla stesura del tufo del 9 agosto alla mossa del Palio del 16 agosto.",
+    meta: `${carriera.orari.giorni.length} giornate · ${totaleFasiOrari} fasi orarie`,
+  },
+  {
+    href: "/palio-16-agosto-2026/accesso-e-sicurezza/",
+    ordinale: "04",
     titolo: "Accesso, sicurezza e servizi",
     sommario:
       "La disciplina consolidata per materia, ricostruita dalle ordinanze e dagli atti acquisiti per questa Carriera.",
@@ -43,7 +52,7 @@ const sezioni = [
   },
   {
     href: "/palio-16-agosto-2026/guida-pratica/",
-    ordinale: "04",
+    ordinale: "05",
     titolo: "Guida pratica",
     sommario:
       "Che cosa si può e non si può fare in Piazza, in forma diretta, con il rinvio all'atto che lo stabilisce.",
@@ -51,7 +60,7 @@ const sezioni = [
   },
   {
     href: "/ordinanze-e-atti/",
-    ordinale: "05",
+    ordinale: "06",
     titolo: "Ordinanze e atti",
     sommario:
       "Il registro degli atti e dei manifesti a stampa acquisiti, ciascuno con estremi, digest di integrità e, dove ripubblicabile, il PDF originale.",
@@ -82,6 +91,7 @@ const sezioni = [
         · {carriera.previsite.cavalli.length} cavalli ammessi alle Previsite
         · {carriera.proveRegolamentate.proveRegolamentate.length} ammessi alle prove regolamentate
         · {carriera.proveRegolamentate.trattaDiretta.length} ammessi direttamente alla Tratta
+        · {carriera.orari.giorni.length} giornate del calendario orari
       </p>
     </div>
   </section>
@@ -114,8 +124,9 @@ const sezioni = [
         <p>
           Il registro comprende i tredici atti effettivamente acquisiti il 28 luglio 2026, il
           documento operativo del 30 luglio 2026, i cinque manifesti a stampa acquisiti il 4 agosto
-          2026 e il documento operativo del 10 agosto 2026 sui cavalli ammessi alle prove
-          regolamentate e alla Tratta. Non è l'elenco completo degli atti adottati dal Comune di Siena per questa Carriera:
+          2026, il documento operativo del 10 agosto 2026 sui cavalli ammessi alle prove
+          regolamentate e alla Tratta e il calendario operativo degli orari acquisito il 10 agosto
+          2026. Non è l'elenco completo degli atti adottati dal Comune di Siena per questa Carriera:
           altri atti possono esistere e non essere stati acquisiti. L'assenza di un atto da questa
           pagina non significa che l'atto non esista.
         </p>

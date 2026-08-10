@@ -768,3 +768,134 @@ Non dedurre:
 - che le liste non possano essere rettificate o variate.
 
 L’elenco è uno snapshot autonomo alla data del 10 agosto 2026. Una eventuale rettifica successiva va conservata come snapshot distinto, senza sovrascrivere questo.
+
+## 12. Registro del documento operativo acquisito il 10 agosto 2026 (calendario orari)
+
+Il 10 agosto 2026 è stato acquisito un quarto lotto, distinto dai tredici PDF del 28 luglio 2026, dai cinque manifesti a stampa del 4 agosto 2026 e dal documento operativo sui cavalli ammessi alle prove regolamentate e alla Tratta registrato nella sezione 11. Si tratta del **calendario operativo di tutti gli orari della Carriera del 16 agosto 2026**, dalla stesura del tufo del 9 agosto alla mossa del Palio del 16 agosto.
+
+**Provenienza dichiarata:** comunicazione ufficiale del Comune di Siena «Palio 16 agosto, tutti gli orari», pubblicata il 9 agosto 2026 e verificata all'ultimo aggiornamento del 10 agosto 2026, all'indirizzo `https://www.comune.siena.it/novita/palio-16-agosto-tutti-gli-orari-1`. La pagina è stata acquisita come istantanea HTML — non esiste un allegato PDF — con nome file `palio-16-agosto-tutti-gli-orari-1.html`, dimensione 147.958 byte e digest SHA-256 `3286a71cc5bc79aa08dc7232f40103b38d7d9c7077ee51b5412d242af8930797`, calcolato sulla copia acquisita il 10 agosto 2026.
+
+**Limiti specifici di questo lotto:**
+
+- il documento non è un'ordinanza né un atto amministrativo protocollato: non porta numero di protocollo, non è sottoscritto e non modifica né sostituisce le ordinanze già registrate (`ATT-2026-ORD-051` e seguenti fino a `ATT-2026-ORD-060`); documenta il calendario operativo delle giornate paliesche pubblicato dal Comune;
+- il documento non anticipa l'esito di alcuna fase (Tratta, assegnazione dei cavalli, Prova Generale, Palio): riporta esclusivamente orari e fasi, non risultati;
+- le fasi denominate Messa del Fantino, Provaccia, segnatura dei fantini, preavvisi del mortaretto, sgombero della pista e Corteo Storico sono qui documentate solo come fasi del calendario: la disciplina di comportamento pubblico durante ciascuna fase resta stabilita dalle ordinanze `ATT-2026-ORD-051` a `060`, non da questo documento;
+- «Prova», «Prova Generale» e «Provaccia» sono fasi distinte del calendario paliesco e non sono interscambiabili: il documento le mantiene distinte e questa distinzione va preservata in ogni riuso;
+- il corteo ecclesiale del 14 agosto e la premiazione del Mangia del 15 agosto sono eventi collegati alla Carriera ma non sono, in senso stretto, eventi palieschi: il documento li registra nel calendario operativo senza equipararli alle prove o al Palio;
+- il documento è collegato per materia a `COM-2026-08-PROVEREG-001` (sezione 11), che riguarda l'ammissione dei cavalli alle prove regolamentate dell'11 e 12 agosto qui anche calendarizzate, ma i due documenti restano distinti e non vanno fusi;
+- gli orari sono trascritti nella grafia della fonte (es. «08.40»); nella tabella riepilogativa di questo registro sono normalizzati in forma `HH:MM` per uniformità di consultazione, senza alterare il valore orario.
+
+| ID | Documento | Data | Pagine | SHA-256 | Stato pubblico | File acquisito |
+|---|---|---:|---:|---|---|---|
+| `COM-2026-08-ORARI-001` | Palio 16 agosto, tutti gli orari — calendario operativo della Carriera dal 9 al 16 agosto 2026 | 09/08/2026 | — | `3286a71cc5bc79aa08dc7232f40103b38d7d9c7077ee51b5412d242af8930797` | acquisito (istantanea HTML, non ripubblicata come file scaricabile) | `palio-16-agosto-tutti-gli-orari-1.html` |
+
+### COM-2026-08-ORARI-001
+
+- **Tipo:** comunicato istituzionale e calendario operativo; non è un'ordinanza e non è un atto protocollato.
+- **Titolo recato dal documento:** «Palio 16 agosto, tutti gli orari».
+- **Autorità:** Comune di Siena.
+- **Numero e data:** numero non indicato; pubblicazione del 9 agosto 2026.
+- **Ultimo aggiornamento verificato della fonte:** 10 agosto 2026.
+- **Fonte:** [comunicazione ufficiale del Comune di Siena](https://www.comune.siena.it/novita/palio-16-agosto-tutti-gli-orari-1).
+- **Consistenza:** istantanea HTML di 147.958 byte, digest `3286a71cc5bc79aa08dc7232f40103b38d7d9c7077ee51b5412d242af8930797`, acquisita il 10 agosto 2026.
+- **Stato documentale:** `acquisito`; nessun PDF ripubblicato — la pagina sorgente è nativamente HTML e non espone un allegato scaricabile.
+- **Fase del Palio:** copre l'intero arco della Carriera del 16 agosto 2026, dalla stesura del tufo (9 agosto) alla mossa del Palio (16 agosto).
+
+**Relazione con gli atti già registrati:** il calendario è collegato, per materia, alle ordinanze `ATT-2026-ORD-051` a `060` già registrate in questa sezione: quelle ordinanze stabiliscono la disciplina di accesso, sicurezza e comportamento per le fasi che questo documento si limita a calendarizzare. Il calendario non sostituisce e non anticipa il contenuto di alcuna ordinanza.
+
+**Non confondere con:** `COM-2026-08-PROVEREG-001` (sezione 11), che registra l'esito dell'ammissione dei cavalli alle prove regolamentate e alla Tratta, non gli orari delle fasi.
+
+### 12.1 Domenica 9 agosto 2026 — Stesura del tufo
+
+| Orario | Fase |
+|---|---|
+| prime ore del mattino | inizio stesura del tufo in Piazza del Campo |
+
+### 12.2 Lunedì 10 agosto 2026 — Presentazione del Drappellone
+
+| Orario | Fase |
+|---|---|
+| — | presentazione del Drappellone nel Cortile del Podestà |
+
+### 12.3 Martedì 11 e mercoledì 12 agosto 2026 — Prove regolamentate
+
+| Orario | Fase |
+|---|---|
+| 06:00 | inizio delle prove regolamentate |
+
+Per l'elenco nominativo dei cavalli e la composizione delle batterie: vedi `COM-2026-08-PROVEREG-001` (sezione 11).
+
+### 12.4 Giovedì 13 agosto 2026 — Tratta e prima Prova
+
+| Orario | Fase |
+|---|---|
+| 08:40 | sgombero della pista |
+| 09:00 | uscita dei primi cavalli dall'Entrone (mortaretto), inizio batterie |
+| dopo le batterie | riunione dei Capitani, scelta dei dieci cavalli, assegnazione alle Contrade |
+| 18:15 | preavviso del mortaretto (prima Prova) |
+| 18:45 | sgombero della pista (prima Prova) |
+| 19:15 | uscita dei cavalli dal Cortile del Podestà (prima Prova) |
+
+### 12.5 Venerdì 14 agosto 2026 — Prove del giorno
+
+| Orario | Fase |
+|---|---|
+| 08:20 | preavviso (prova mattutina) |
+| 08:40 | sgombero della pista (prova mattutina) |
+| 09:00 | uscita dei cavalli dal Cortile del Podestà (prova mattutina) |
+| 16:00 | partenza corteo ecclesiale «Ceri e censi» dalla chiesa di San Giorgio |
+| 16:30 | riunione delle rappresentanze civiche presso il Palazzo Pubblico |
+| 18:15 | preavviso (prova serale) |
+| 18:45 | sgombero della pista (prova serale) |
+| 19:15 | uscita dei cavalli dal Cortile del Podestà (prova serale) |
+
+### 12.6 Sabato 15 agosto 2026 — Prova Generale e Premio Mangia
+
+| Orario | Fase |
+|---|---|
+| 08:20 | preavviso (prova mattutina) |
+| 08:40 | sgombero della pista (prova mattutina) |
+| 09:00 | uscita dei cavalli dal Cortile del Podestà (prova mattutina) |
+| 10:00 | Messa Solenne in Duomo |
+| 11:30 | Teatro dei Rinnovati: consegna Premio Mangia e Medaglie di Civica Riconoscenza |
+| 18:15 | preavviso (Prova Generale) |
+| 18:45 | sgombero della pista (Prova Generale) |
+| 19:15 | uscita dei cavalli dal Cortile del Podestà (Prova Generale) |
+
+### 12.7 Domenica 16 agosto 2026 — Giorno del Palio
+
+| Orario | Fase |
+|---|---|
+| 07:45 | Messa del Fantino (Cappella esterna di Palazzo Pubblico, Card. Lojudice) |
+| 08:20 | preavviso (Provaccia) |
+| 08:40 | sgombero della pista (Provaccia) |
+| 09:00 | uscita dei cavalli dal Cortile del Podestà (Provaccia) |
+| 10:30 | Palazzo Pubblico: segnatura dei fantini |
+| 14:50 | primo preavviso (mortaretto) |
+| 15:20 | secondo preavviso (mortaretto) |
+| 16:10 | inizio sgombero della pista |
+| 16:45 | sfilata del drappello dei Carabinieri a cavallo |
+| 16:50 | ingresso del Corteo Storico in Piazza del Campo |
+| 17:45 | chiusura dell'ultimo accesso a Piazza del Campo da via Dupré |
+| 19:00 | uscita dei cavalli dal Cortile del Podestà per il Palio |
+
+Le disposizioni delle autorità cittadine possono modificare in qualsiasi momento accessi e orari.
+
+### 12.8 Limiti interpretativi
+
+Risposte corrette:
+
+- «Le prove regolamentate iniziano alle 06:00 dell'11 e 12 agosto 2026.»
+- «La Tratta si svolge giovedì 13 agosto 2026.»
+- «Il Corteo Storico entra in Piazza del Campo alle 16:50 del 16 agosto 2026.»
+- «L'uscita dei cavalli per il Palio è prevista alle 19:00 del 16 agosto 2026.»
+
+Non dedurre:
+
+- che il documento anticipi l'esito, l'idoneità o la partecipazione dei singoli cavalli alle fasi successive;
+- che le regole di condotta e i divieti per il pubblico durante Messa del Fantino, Provaccia, segnatura dei fantini, preavvisi, sgombero e Corteo Storico siano stabilite da questo documento: restano quelle delle ordinanze `ATT-2026-ORD-051` a `060`;
+- che «Prova» (mattutina/serale), «Prova Generale» e «Provaccia» siano fasi interscambiabili: sono fasi distinte del ciclo delle sei Prove;
+- che il corteo ecclesiale del 14 agosto e la premiazione del Mangia del 15 agosto siano eventi paliesche in senso stretto: sono manifestazioni collegate alla Carriera, non parte del Protocollo Equino;
+- che gli orari pubblicati siano immutabili: le disposizioni delle autorità cittadine possono modificarli in qualsiasi momento.
+
+Il calendario è uno snapshot autonomo alla data del 10 agosto 2026. Una eventuale rettifica successiva va conservata come snapshot distinto, senza sovrascrivere questo.

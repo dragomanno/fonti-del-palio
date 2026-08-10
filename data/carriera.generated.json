@@ -1224,6 +1224,252 @@
     ],
     "regoleLista": "Risposte corrette:\n\n- «Il cavallo compare fra i 77 ammessi alle prove regolamentate dell’11 e 12 agosto 2026.»\n- «Il cavallo compare fra gli 8 ammessi direttamente alla Tratta del 13 agosto 2026.»\n- «La pubblicazione ufficiale è del 10 agosto 2026.»\n- «Le prove regolamentate si svolgono l’11 e il 12 agosto 2026, a partire dalle ore 6.»\n- «La Tratta è prevista giovedì 13 agosto 2026.»\n\nNon dedurre:\n\n- che l’ammissione alle prove regolamentate equivalga a idoneità sanitaria definitiva;\n- che i cavalli ammessi alle prove regolamentate siano per questo ammessi alla Tratta;\n- che gli 8 cavalli ammessi direttamente alla Tratta siano avvantaggiati o già scelti;\n- che i cavalli elencati siano quelli che formeranno il lotto dei cavalli scelti per la Tratta;\n- che uno di essi sarà assegnato a una Contrada o correrà il Palio;\n- che i 23 cavalli dei 108 ammessi alle Previsite che non compaiono in queste liste siano stati giudicati non idonei: il documento non lo dichiara;\n- che le liste non possano essere rettificate o variate.\n\nL’elenco è uno snapshot autonomo alla data del 10 agosto 2026. Una eventuale rettifica successiva va conservata come snapshot distinto, senza sovrascrivere questo."
   },
+  "orari": {
+    "documento": {
+      "id": "COM-2026-08-ORARI-001",
+      "titolo": "Palio 16 agosto, tutti gli orari — calendario operativo della Carriera dal 9 al 16 agosto 2026",
+      "data": "09/08/2026",
+      "pagine": null,
+      "sha256": "3286a71cc5bc79aa08dc7232f40103b38d7d9c7077ee51b5412d242af8930797",
+      "statoPubblico": "acquisito (istantanea HTML, non ripubblicata come file scaricabile)",
+      "ripubblicabile": false,
+      "pdf": null,
+      "html": "/atti/2026/orari/palio-16-agosto-tutti-gli-orari-1.html",
+      "scheda": "- **Tipo:** comunicato istituzionale e calendario operativo; non è un'ordinanza e non è un atto protocollato.\n- **Titolo recato dal documento:** «Palio 16 agosto, tutti gli orari».\n- **Autorità:** Comune di Siena.\n- **Numero e data:** numero non indicato; pubblicazione del 9 agosto 2026.\n- **Ultimo aggiornamento verificato della fonte:** 10 agosto 2026.\n- **Fonte:** [comunicazione ufficiale del Comune di Siena](https://www.comune.siena.it/novita/palio-16-agosto-tutti-gli-orari-1).\n- **Consistenza:** istantanea HTML di 147.958 byte, digest `3286a71cc5bc79aa08dc7232f40103b38d7d9c7077ee51b5412d242af8930797`, acquisita il 10 agosto 2026.\n- **Stato documentale:** `acquisito`; nessun PDF ripubblicato — la pagina sorgente è nativamente HTML e non espone un allegato scaricabile.\n- **Fase del Palio:** copre l'intero arco della Carriera del 16 agosto 2026, dalla stesura del tufo (9 agosto) alla mossa del Palio (16 agosto).\n\n**Relazione con gli atti già registrati:** il calendario è collegato, per materia, alle ordinanze `ATT-2026-ORD-051` a `060` già registrate in questa sezione: quelle ordinanze stabiliscono la disciplina di accesso, sicurezza e comportamento per le fasi che questo documento si limita a calendarizzare. Il calendario non sostituisce e non anticipa il contenuto di alcuna ordinanza.\n\n**Non confondere con:** `COM-2026-08-PROVEREG-001` (sezione 11), che registra l'esito dell'ammissione dei cavalli alle prove regolamentate e alla Tratta, non gli orari delle fasi."
+    },
+    "giorni": [
+      {
+        "titolo": "Domenica 9 agosto 2026 — Stesura del tufo",
+        "fasi": [
+          {
+            "orario": "prime ore del mattino",
+            "fase": "inizio stesura del tufo in Piazza del Campo"
+          }
+        ],
+        "orari": []
+      },
+      {
+        "titolo": "Lunedì 10 agosto 2026 — Presentazione del Drappellone",
+        "fasi": [
+          {
+            "orario": "—",
+            "fase": "presentazione del Drappellone nel Cortile del Podestà"
+          }
+        ],
+        "orari": []
+      },
+      {
+        "titolo": "Martedì 11 e mercoledì 12 agosto 2026 — Prove regolamentate",
+        "fasi": [
+          {
+            "orario": "06:00",
+            "fase": "inizio delle prove regolamentate"
+          }
+        ],
+        "orari": [
+          "06:00"
+        ]
+      },
+      {
+        "titolo": "Giovedì 13 agosto 2026 — Tratta e prima Prova",
+        "fasi": [
+          {
+            "orario": "08:40",
+            "fase": "sgombero della pista"
+          },
+          {
+            "orario": "09:00",
+            "fase": "uscita dei primi cavalli dall'Entrone (mortaretto), inizio batterie"
+          },
+          {
+            "orario": "dopo le batterie",
+            "fase": "riunione dei Capitani, scelta dei dieci cavalli, assegnazione alle Contrade"
+          },
+          {
+            "orario": "18:15",
+            "fase": "preavviso del mortaretto (prima Prova)"
+          },
+          {
+            "orario": "18:45",
+            "fase": "sgombero della pista (prima Prova)"
+          },
+          {
+            "orario": "19:15",
+            "fase": "uscita dei cavalli dal Cortile del Podestà (prima Prova)"
+          }
+        ],
+        "orari": [
+          "08:40",
+          "09:00",
+          "18:15",
+          "18:45",
+          "19:15"
+        ]
+      },
+      {
+        "titolo": "Venerdì 14 agosto 2026 — Prove del giorno",
+        "fasi": [
+          {
+            "orario": "08:20",
+            "fase": "preavviso (prova mattutina)"
+          },
+          {
+            "orario": "08:40",
+            "fase": "sgombero della pista (prova mattutina)"
+          },
+          {
+            "orario": "09:00",
+            "fase": "uscita dei cavalli dal Cortile del Podestà (prova mattutina)"
+          },
+          {
+            "orario": "16:00",
+            "fase": "partenza corteo ecclesiale «Ceri e censi» dalla chiesa di San Giorgio"
+          },
+          {
+            "orario": "16:30",
+            "fase": "riunione delle rappresentanze civiche presso il Palazzo Pubblico"
+          },
+          {
+            "orario": "18:15",
+            "fase": "preavviso (prova serale)"
+          },
+          {
+            "orario": "18:45",
+            "fase": "sgombero della pista (prova serale)"
+          },
+          {
+            "orario": "19:15",
+            "fase": "uscita dei cavalli dal Cortile del Podestà (prova serale)"
+          }
+        ],
+        "orari": [
+          "08:20",
+          "08:40",
+          "09:00",
+          "16:00",
+          "16:30",
+          "18:15",
+          "18:45",
+          "19:15"
+        ]
+      },
+      {
+        "titolo": "Sabato 15 agosto 2026 — Prova Generale e Premio Mangia",
+        "fasi": [
+          {
+            "orario": "08:20",
+            "fase": "preavviso (prova mattutina)"
+          },
+          {
+            "orario": "08:40",
+            "fase": "sgombero della pista (prova mattutina)"
+          },
+          {
+            "orario": "09:00",
+            "fase": "uscita dei cavalli dal Cortile del Podestà (prova mattutina)"
+          },
+          {
+            "orario": "10:00",
+            "fase": "Messa Solenne in Duomo"
+          },
+          {
+            "orario": "11:30",
+            "fase": "Teatro dei Rinnovati: consegna Premio Mangia e Medaglie di Civica Riconoscenza"
+          },
+          {
+            "orario": "18:15",
+            "fase": "preavviso (Prova Generale)"
+          },
+          {
+            "orario": "18:45",
+            "fase": "sgombero della pista (Prova Generale)"
+          },
+          {
+            "orario": "19:15",
+            "fase": "uscita dei cavalli dal Cortile del Podestà (Prova Generale)"
+          }
+        ],
+        "orari": [
+          "08:20",
+          "08:40",
+          "09:00",
+          "10:00",
+          "11:30",
+          "18:15",
+          "18:45",
+          "19:15"
+        ]
+      },
+      {
+        "titolo": "Domenica 16 agosto 2026 — Giorno del Palio",
+        "fasi": [
+          {
+            "orario": "07:45",
+            "fase": "Messa del Fantino (Cappella esterna di Palazzo Pubblico, Card. Lojudice)"
+          },
+          {
+            "orario": "08:20",
+            "fase": "preavviso (Provaccia)"
+          },
+          {
+            "orario": "08:40",
+            "fase": "sgombero della pista (Provaccia)"
+          },
+          {
+            "orario": "09:00",
+            "fase": "uscita dei cavalli dal Cortile del Podestà (Provaccia)"
+          },
+          {
+            "orario": "10:30",
+            "fase": "Palazzo Pubblico: segnatura dei fantini"
+          },
+          {
+            "orario": "14:50",
+            "fase": "primo preavviso (mortaretto)"
+          },
+          {
+            "orario": "15:20",
+            "fase": "secondo preavviso (mortaretto)"
+          },
+          {
+            "orario": "16:10",
+            "fase": "inizio sgombero della pista"
+          },
+          {
+            "orario": "16:45",
+            "fase": "sfilata del drappello dei Carabinieri a cavallo"
+          },
+          {
+            "orario": "16:50",
+            "fase": "ingresso del Corteo Storico in Piazza del Campo"
+          },
+          {
+            "orario": "17:45",
+            "fase": "chiusura dell'ultimo accesso a Piazza del Campo da via Dupré"
+          },
+          {
+            "orario": "19:00",
+            "fase": "uscita dei cavalli dal Cortile del Podestà per il Palio"
+          }
+        ],
+        "orari": [
+          "07:45",
+          "08:20",
+          "08:40",
+          "09:00",
+          "10:30",
+          "14:50",
+          "15:20",
+          "16:10",
+          "16:45",
+          "16:50",
+          "17:45",
+          "19:00"
+        ]
+      }
+    ],
+    "limitiInterpretativi": "Risposte corrette:\n\n- «Le prove regolamentate iniziano alle 06:00 dell'11 e 12 agosto 2026.»\n- «La Tratta si svolge giovedì 13 agosto 2026.»\n- «Il Corteo Storico entra in Piazza del Campo alle 16:50 del 16 agosto 2026.»\n- «L'uscita dei cavalli per il Palio è prevista alle 19:00 del 16 agosto 2026.»\n\nNon dedurre:\n\n- che il documento anticipi l'esito, l'idoneità o la partecipazione dei singoli cavalli alle fasi successive;\n- che le regole di condotta e i divieti per il pubblico durante Messa del Fantino, Provaccia, segnatura dei fantini, preavvisi, sgombero e Corteo Storico siano stabilite da questo documento: restano quelle delle ordinanze `ATT-2026-ORD-051` a `060`;\n- che «Prova» (mattutina/serale), «Prova Generale» e «Provaccia» siano fasi interscambiabili: sono fasi distinte del ciclo delle sei Prove;\n- che il corteo ecclesiale del 14 agosto e la premiazione del Mangia del 15 agosto siano eventi paliesche in senso stretto: sono manifestazioni collegate alla Carriera, non parte del Protocollo Equino;\n- che gli orari pubblicati siano immutabili: le disposizioni delle autorità cittadine possono modificarli in qualsiasi momento.\n\nIl calendario è uno snapshot autonomo alla data del 10 agosto 2026. Una eventuale rettifica successiva va conservata come snapshot distinto, senza sovrascrivere questo."
+  },
   "materie": [
     {
       "numero": 3,
@@ -1307,66 +1553,72 @@
     },
     {
       "ordine": 3,
+      "titolo": "Il calendario degli orari",
+      "slug": "il-calendario-degli-orari",
+      "corpo": "Il Comune di Siena ha pubblicato il 9 agosto 2026 il **calendario operativo di tutti gli orari** della Carriera del 16 agosto, dalla stesura del tufo del 9 agosto alla mossa del Palio del 16 agosto, articolato in sette giornate.\n\nQuesto calendario non è un'ordinanza: le regole di condotta e i divieti per il pubblico durante le fasi qui elencate restano stabiliti dalle ordinanze sindacali nn. 51–60. «Prova», «Prova Generale» e «Provaccia» sono fasi distinte e non interscambiabili; il documento non anticipa l'esito di alcuna fase. Gli orari pubblicati possono essere modificati in qualsiasi momento dalle autorità cittadine.\n\n**Fonte:** [comunicazione ufficiale del Comune di Siena del 9 agosto 2026](https://www.comune.siena.it/novita/palio-16-agosto-tutti-gli-orari-1).  \n**Calendario completo, giorno per giorno:** KB 09, `COM-2026-08-ORARI-001`; versione pubblica con tabelle: [Tutti gli orari del Palio del 16 agosto 2026](/palio-16-agosto-2026/orari/)."
+    },
+    {
+      "ordine": 4,
       "titolo": "Minori di 10 anni",
       "slug": "minori-di-10-anni",
       "corpo": "Il 16 agosto 2026, dalle 15:00 fino alla conclusione della manifestazione, i minori di 10 anni non possono accedere all'interno della Conchiglia di Piazza del Campo, nemmeno se accompagnati da un maggiorenne.\n\nLa motivazione dell'ordinanza esclude i palchi. Non è quindi corretto presentare la regola come divieto assoluto per l'intera Piazza.\n\n**Fonte:** ordinanza sindacale n. 59 del 28 luglio 2026."
     },
     {
-      "ordine": 4,
+      "ordine": 5,
       "titolo": "Passeggini e carrozzine",
       "slug": "passeggini-e-carrozzine",
       "corpo": "Nell'area destinata agli spettatori non si possono introdurre carrozzine o passeggini per neonati e bambini durante:\n\n- Prova Generale;\n- Palio.\n\nLa limitazione specifica a questi due momenti deriva direttamente dal testo dell'ordinanza.\n\n**Fonte:** ordinanza sindacale n. 60 del 28 luglio 2026."
     },
     {
-      "ordine": 5,
+      "ordine": 6,
       "titolo": "Bottiglie, alcol e bevande",
       "slug": "bottiglie-alcol-e-bevande",
       "corpo": "Durante i periodi stabiliti dall'ordinanza, nell'area delimitata dai cancelli esterni non si possono introdurre o detenere:\n\n- bevande alcoliche di qualsiasi gradazione;\n- bottiglie e contenitori di vetro;\n- contenitori metallici, comprese le lattine;\n- contenitori di plastica con tappo;\n- bibite congelate.\n\nIl 16 agosto il divieto vale dalle 14:30 fino al termine della corsa.\n\nPer prove regolamentate, Tratta e Prove valgono fasce specifiche:\n\n- prove regolamentate: intera durata;\n- Tratta: intera durata;\n- Prove mattutine: intera durata;\n- Prove serali: dalle 18:00 fino alla conclusione.\n\n**Fonte:** ordinanza sindacale n. 57 del 28 luglio 2026."
     },
     {
-      "ordine": 6,
+      "ordine": 7,
       "titolo": "Ombrelli, sedie e altri oggetti",
       "slug": "ombrelli-sedie-e-altri-oggetti",
       "corpo": "Nell'area destinata agli spettatori non si possono introdurre:\n\n- ombrelli;\n- sedie o sgabelli;\n- tavoli;\n- panche;\n- cassette o oggetti simili;\n- oggetti atti all'offesa.\n\nIn Piazza sono inoltre vietati spray al capsicum, petardi, fuochi artificiali e altri artifizi pirici, salvo quanto previsto dal Regolamento per il Palio.\n\n**Fonte:** ordinanza sindacale n. 60 del 28 luglio 2026."
     },
     {
-      "ordine": 7,
+      "ordine": 8,
       "titolo": "Animali da compagnia",
       "slug": "animali-da-compagnia",
       "corpo": "Non è consentito condurre animali da compagnia, nemmeno al guinzaglio, nei palchi e in Piazza del Campo durante le celebrazioni disciplinate dall'ordinanza.\n\n**Fonte:** ordinanza sindacale n. 52 del 28 luglio 2026."
     },
     {
-      "ordine": 8,
+      "ordine": 9,
       "titolo": "Colonnini, pista e aree tecniche",
       "slug": "colonnini-pista-e-aree-tecniche",
       "corpo": "Durante prove regolamentate, Tratta, Prove e corsa:\n\n- non stare in piedi sui colonnini;\n- non sporgerti con il corpo verso la pista;\n- non protendere oggetti verso la pista.\n\nDopo lo sgombero, le persone non autorizzate non possono sostare o transitare sulla pista e nelle aree tecniche indicate dall'ordinanza.\n\nDurante l'innaffiatura del tufo è vietato attraversare la pista fino alla rimozione dei divieti.\n\n**Fonte:** ordinanza sindacale n. 52 del 28 luglio 2026."
     },
     {
-      "ordine": 9,
+      "ordine": 10,
       "titolo": "Casato di Sotto",
       "slug": "casato-di-sotto",
       "corpo": "Nel giorno del Palio il transito pedonale nel Casato di Sotto, nel tratto fra Vicolo di Tone e Piazza del Campo, è vietato alle persone non autorizzate.\n\nSono esclusi:\n\n- abitanti;\n- partecipanti al Corteo Storico;\n- persone autorizzate.\n\n**Fonte:** ordinanza sindacale n. 52 del 28 luglio 2026."
     },
     {
-      "ordine": 10,
+      "ordine": 11,
       "titolo": "Tetti, palchi, balconi e terrazze",
       "slug": "tetti-palchi-balconi-e-terrazze",
       "corpo": "È vietato assistere dai tetti a:\n\n- prove regolamentate;\n- Tratta;\n- Prove;\n- corsa.\n\nÈ vietato superare il numero di persone autorizzato per palchi, balconi e terrazze.\n\n**Fonte:** ordinanza sindacale n. 58 del 28 luglio 2026."
     },
     {
-      "ordine": 11,
+      "ordine": 12,
       "titolo": "Area del sorteggio dei cavalli",
       "slug": "area-del-sorteggio-dei-cavalli",
       "corpo": "Il 13 agosto 2026, durante l'assegnazione dei cavalli, non si può entrare nell'area recintata davanti al Palazzo Comunale senza autorizzazione.\n\nPossono accedere:\n\n- Capitani;\n- Fiduciari;\n- Barbareschi;\n- personale di servizio;\n- un numero limitato di fotografi e giornalisti con permesso eccezionale.\n\n**Fonte:** ordinanza sindacale n. 51 del 28 luglio 2026."
     },
     {
-      "ordine": 12,
+      "ordine": 13,
       "titolo": "In caso di rinvio o nuove disposizioni",
       "slug": "in-caso-di-rinvio-o-nuove-disposizioni",
       "corpo": "Le ordinanze prevedono in più casi il mantenimento delle misure fino alla conclusione della manifestazione. Gli orari e le modalità concrete possono però essere modificati da:\n\n- nuove ordinanze del Comune di Siena;\n- comunicazioni operative ufficiali;\n- provvedimenti dell'Autorità di Pubblica Sicurezza;\n- condizioni meteorologiche e conseguente rinvio.\n\nPrima di recarsi in Piazza, verificare sempre gli aggiornamenti ufficiali del Comune di Siena."
     },
     {
-      "ordine": 13,
+      "ordine": 14,
       "titolo": "Formula breve per la diffusione",
       "slug": "formula-breve-per-la-diffusione",
       "corpo": "> Palio del 16 agosto 2026: dalle 15:00 i minori di 10 anni non possono entrare nella Conchiglia, nemmeno accompagnati; dalle 14:30 sono vietati alcol, vetro, lattine, plastica con tappo e bibite congelate nell'area delimitata dai cancelli. Ombrelli, sedie e sgabelli non sono ammessi nell'area spettatori; passeggini e carrozzine sono vietati per Prova Generale e Palio. Verifica dettagli, eccezioni e fonti originali prima dell'accesso.\n\nLa formula breve non sostituisce le singole schede e non deve essere pubblicata senza collegamento alla guida completa."

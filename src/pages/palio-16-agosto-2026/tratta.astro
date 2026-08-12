@@ -1,0 +1,162 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NotaDocumentaria from "../../components/NotaDocumentaria.astro";
+import { getTratta, listCavalliTratta, listCavalliTrattaDiretta } from "../../lib/carriera";
+import { renderDocumentaryMarkdown } from "../../lib/markdown";
+
+const blocco = getTratta();
+const documento = blocco.documento;
+const cavalli = listCavalliTratta();
+const trattaDiretta = listCavalliTrattaDiretta();
+const scheda = renderDocumentaryMarkdown(documento.scheda);
+const regole = renderDocumentaryMarkdown(blocco.regoleLista);
+---
+
+<BaseLayout
+  title="Cavalli ammessi alla Tratta del Palio del 16 agosto 2026"
+  description="L'elenco finale dei 35 cavalli ammessi alla Tratta del 13 agosto 2026, con i proprietari indicati, acquisito il 12 agosto 2026."
+  activePath="/palio-16-agosto-2026"
+>
+  <section class="section" style="padding-block: var(--space-6) var(--space-3);">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Percorso" data-pagefind-ignore>
+        <a href="/palio-16-agosto-2026/">Palio del 16 agosto 2026</a>
+        <span aria-hidden="true">/</span>
+        <span>Cavalli ammessi alla Tratta</span>
+      </nav>
+      <span class="section-number">{documento.id}</span>
+      <h1 style="font-family: var(--font-display); font-size: var(--text-title); max-width: 26ch; margin: var(--space-1) 0 0;">
+        Cavalli ammessi alla Tratta
+      </h1>
+      <p class="text-caption" style="margin-top: var(--space-2);">
+        {cavalli.length} cavalli ammessi alla Tratta del 13 agosto 2026 · elenco finale acquisito il 12 agosto 2026
+      </p>
+
+      <div class="prose" set:html={scheda} />
+
+      {
+        documento.pdf && (
+          <p class="text-caption" style="margin-top: var(--space-2);">
+            <a href={documento.pdf}>Documento acquisito in formato PDF</a> ·
+            {documento.pagine} pagina
+          </p>
+        )
+      }
+
+      <NotaDocumentaria titolo="Come si legge questo elenco" variante="avvertenza">
+        <div set:html={regole} />
+      </NotaDocumentaria>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-12);">
+    <div class="wrap">
+      <h2 class="elenco-titolo">Cavalli ammessi alla Tratta del 13 agosto (elenco finale)</h2>
+      <div class="doc-table-wrap">
+        <table class="doc-table doc-table--sticky doc-table--reflow-sm" role="table">
+          <caption class="sr-only">
+            Cavalli ammessi alla Tratta del 13 agosto 2026, elenco finale: numero d'ordine, nome del
+            cavallo e proprietario.
+          </caption>
+          <thead role="rowgroup">
+            <tr role="row">
+              <th scope="col">N.</th>
+              <th scope="col">Cavallo</th>
+              <th scope="col">Proprietario</th>
+            </tr>
+          </thead>
+          <tbody role="rowgroup">
+            {
+              cavalli.map((c) => (
+                <tr role="row">
+                  <th scope="row" data-label="N." role="rowheader" class="num">
+                    {c.numero}
+                  </th>
+                  <td data-label="Cavallo" role="cell" class="nome">
+                    {c.nome}
+                  </td>
+                  <td data-label="Proprietario" role="cell">
+                    {c.proprietario}
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <NotaDocumentaria titolo="Limiti di questo elenco" variante="provenienza">
+        <p>
+          Il documento non porta numero di protocollo, non è sottoscritto e non è un'ordinanza: è un
+          documento operativo che rende noto l'esito finale della fase. Il numero non è stato
+          dedotto.
+        </p>
+        <p>
+          Il file è stato fornito direttamente dal curatore, Fabrizio Gabrielli, che ne ha
+          dichiarato l'acquisizione il 12 agosto 2026 alle ore 09:32 locali dal canale Telegram
+          <span class="mono">ProtocolloEquino</span>, indicato come canale di diffusione ufficiale
+          dal Comune di Siena nella pagina <a
+            href="https://palio.comune.siena.it/node/5935"
+            rel="nofollow noopener">Protocollo Equino 2026</a> del portale del Palio. Il documento non
+          riporta un numero di post Telegram né un URL del Comune di Siena: nessuno dei due è stato
+          dedotto.
+        </p>
+        <p>
+          Questo elenco è <strong>distinto e successivo</strong> rispetto agli 8 cavalli ammessi
+          direttamente alla Tratta pubblicati il 10 agosto 2026 (
+          <a href="/palio-16-agosto-2026/prove-regolamentate/">Cavalli ammessi alle prove
+          regolamentate e alla Tratta</a>, {trattaDiretta.length} cavalli). Il documento non
+          dichiara come i {cavalli.length} nominativi di questo elenco finale si compongano rispetto
+          a quella lista o rispetto ai 77 ammessi alle prove regolamentate: la relazione numerica
+          non è dedotta qui.
+        </p>
+        <p>
+          Questo elenco non assegna alcun cavallo a una Contrada, non anticipa l'abbinamento
+          cavallo-fantino e non riporta alcuna notizia di Carriera successiva alla Tratta.
+        </p>
+        <p>
+          I nomi dei proprietari sono riprodotti come pubblicati nel documento acquisito. Eventuali
+          differenze di grafia rispetto ad altre fonti non sono corrette qui: la trascrizione resta
+          fedele alla fonte. Segnalazioni di errore:
+          <a href="mailto:info@pistakkio.net">info@pistakkio.net</a>.
+        </p>
+        <p>
+          Provenienza: acquisizione HITL fidata dichiarata dal curatore il 12 agosto 2026, dal
+          canale Telegram <span class="mono">ProtocolloEquino</span>, registrata come <span class="mono">{documento.id}</span>.
+          Digest SHA-256 del documento acquisito:
+          <span class="mono digest">{documento.sha256}</span>.
+        </p>
+      </NotaDocumentaria>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: var(--text-caption);
+    color: var(--color-text-faint);
+    margin-bottom: var(--space-2);
+  }
+  .crumbs a {
+    color: var(--color-green);
+  }
+  .elenco-titolo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin: 0 0 var(--space-2);
+  }
+  .num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .nome {
+    font-weight: 500;
+  }
+  .digest {
+    word-break: break-all;
+  }
+</style>

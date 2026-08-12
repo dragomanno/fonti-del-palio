@@ -1224,6 +1224,197 @@
     ],
     "regoleLista": "Risposte corrette:\n\n- «Il cavallo compare fra i 77 ammessi alle prove regolamentate dell’11 e 12 agosto 2026.»\n- «Il cavallo compare fra gli 8 ammessi direttamente alla Tratta del 13 agosto 2026.»\n- «La pubblicazione ufficiale è del 10 agosto 2026.»\n- «Le prove regolamentate si svolgono l’11 e il 12 agosto 2026, a partire dalle ore 6.»\n- «La Tratta è prevista giovedì 13 agosto 2026.»\n\nNon dedurre:\n\n- che l’ammissione alle prove regolamentate equivalga a idoneità sanitaria definitiva;\n- che i cavalli ammessi alle prove regolamentate siano per questo ammessi alla Tratta;\n- che gli 8 cavalli ammessi direttamente alla Tratta siano avvantaggiati o già scelti;\n- che i cavalli elencati siano quelli che formeranno il lotto dei cavalli scelti per la Tratta;\n- che uno di essi sarà assegnato a una Contrada o correrà il Palio;\n- che i 23 cavalli dei 108 ammessi alle Previsite che non compaiono in queste liste siano stati giudicati non idonei: il documento non lo dichiara;\n- che le liste non possano essere rettificate o variate.\n\nL’elenco è uno snapshot autonomo alla data del 10 agosto 2026. Una eventuale rettifica successiva va conservata come snapshot distinto, senza sovrascrivere questo."
   },
+  "tratta": {
+    "documento": {
+      "id": "COM-2026-08-TRATTA-001",
+      "titolo": "Elenco finale dei cavalli ammessi alla Tratta del 13 agosto",
+      "data": "12/08/2026",
+      "pagine": 1,
+      "sha256": "71edc865af400adaaf15d14c81b7bfb3fee83879ec4d1c4d18bf22352724ceb7",
+      "statoPubblico": "ripubblicabile",
+      "ripubblicabile": true,
+      "pdf": "/atti/2026/tratta/Elenco_cavalli_ammessi_alla_Tratta-4.pdf",
+      "scheda": "- **Tipo:** documento operativo ufficiale e lista di esito finale; non è un’ordinanza e non è un atto protocollato.\n- **Titolo recato dal documento:** «PALIO 16 AGOSTO 2026 — CAVALLI AMMESSI ALLA TRATTA DEL 13 AGOSTO».\n- **Autorità:** Comune di Siena; l’intestazione grafica del documento reca il solo stemma «COMUNE DI SIENA».\n- **Numero e data:** numero non indicato; il documento non porta una data di pubblicazione propria oltre al riferimento alla Tratta del 13 agosto. La data di acquisizione, dichiarata dal curatore, è il 12 agosto 2026.\n- **Provenienza:** fornito direttamente dal curatore Fabrizio Gabrielli, che ne ha dichiarato l’acquisizione il 12 agosto 2026 alle ore 09:32 locali dal canale Telegram `ProtocolloEquino`.\n- **Consistenza:** 1 pagina, 97.474 byte, livello testuale nativo, non da riconoscimento ottico.\n- **Stato documentale:** `acquisito`; PDF ripubblicato con digest verificato in fase di generazione dell’indice.\n- **Fase del Palio:** esito finale dopo le prove regolamentate dell’11 e 12 agosto 2026; ammissione alla Tratta di giovedì 13 agosto 2026.\n\nIl documento riporta l’elenco nominativo di **35** cavalli ammessi alla Tratta del 13 agosto 2026, ciascuno con il proprietario indicato.\n\n**Relazione con `COM-2026-08-PROVEREG-001`:** quest’ultimo registra, alla data del 10 agosto 2026, 77 cavalli ammessi alle prove regolamentate e 8 cavalli ammessi direttamente alla Tratta. L’elenco qui registrato è successivo e rappresenta l’esito finale della fase, dopo lo svolgimento delle prove regolamentate dell’11 e 12 agosto. Il documento non dichiara come i 35 nominativi si compongano rispetto alle due liste precedenti: la relazione numerica non è dedotta qui.\n\n**Non confondere con:** `COM-2026-08-PREVISITE-001` (108 cavalli ammessi alle Previsite), la lista delle prove regolamentate alla sezione 11.1 (77 cavalli) e la lista dei cavalli ammessi direttamente alla Tratta alla sezione 11.2 (8 cavalli). Tutti restano snapshot autonomi e nessuno è sovrascritto da questo."
+    },
+    "cavalli": [
+      {
+        "numero": 1,
+        "nome": "ANDA E BOLA",
+        "proprietario": "Harry Arthur Louis Westerman"
+      },
+      {
+        "numero": 2,
+        "nome": "ARES ELCE",
+        "proprietario": "Fabrizio Macucci"
+      },
+      {
+        "numero": 3,
+        "nome": "ARESTETULESU",
+        "proprietario": "Mark Harris Getty"
+      },
+      {
+        "numero": 4,
+        "nome": "BAILA AA",
+        "proprietario": "Alberto Manenti"
+      },
+      {
+        "numero": 5,
+        "nome": "BENITOS AA",
+        "proprietario": "Dario Colagè"
+      },
+      {
+        "numero": 6,
+        "nome": "BONITAS AA",
+        "proprietario": "Didier Pierre Ryelandt"
+      },
+      {
+        "numero": 7,
+        "nome": "CANARINU AA",
+        "proprietario": "Mark Harris Getty"
+      },
+      {
+        "numero": 8,
+        "nome": "CASSIOX AA",
+        "proprietario": "Alessandro Neri"
+      },
+      {
+        "numero": 9,
+        "nome": "CHIOSA VINCE AA",
+        "proprietario": "Duccio Ravenni"
+      },
+      {
+        "numero": 10,
+        "nome": "COBALTO DA CLODIA AA",
+        "proprietario": "Alessandro Columbu"
+      },
+      {
+        "numero": 11,
+        "nome": "COMANCIO AA",
+        "proprietario": "Federica Regnani"
+      },
+      {
+        "numero": 12,
+        "nome": "COMPILATION AA",
+        "proprietario": "Federica Saracini"
+      },
+      {
+        "numero": 13,
+        "nome": "DAREDEVIL AA",
+        "proprietario": "Marcello Roti"
+      },
+      {
+        "numero": 14,
+        "nome": "DEDALO KING AA",
+        "proprietario": "Salvatore Nieddu"
+      },
+      {
+        "numero": 15,
+        "nome": "DIAMANTE SAURO AA",
+        "proprietario": "Pietro Falchi"
+      },
+      {
+        "numero": 16,
+        "nome": "DIODORO AA",
+        "proprietario": "Ilaria Bisconti"
+      },
+      {
+        "numero": 17,
+        "nome": "DOCTOR DONALD AA",
+        "proprietario": "Nicola Giorgi"
+      },
+      {
+        "numero": 18,
+        "nome": "DOLLARO AA",
+        "proprietario": "Andrea Sanna"
+      },
+      {
+        "numero": 19,
+        "nome": "DONRODRIGO AA",
+        "proprietario": "Michele Seazzu"
+      },
+      {
+        "numero": 20,
+        "nome": "EBERARDO AA",
+        "proprietario": "Theodore William Thomas Westerman"
+      },
+      {
+        "numero": 21,
+        "nome": "ECCOLO AA",
+        "proprietario": "Diego Minucci"
+      },
+      {
+        "numero": 22,
+        "nome": "ELLENICO AA",
+        "proprietario": "Lorenzo Maria Vincenti"
+      },
+      {
+        "numero": 23,
+        "nome": "ENNALZU AA",
+        "proprietario": "Nicolò Farnetani"
+      },
+      {
+        "numero": 24,
+        "nome": "ERMINIO BAIO AA",
+        "proprietario": "Elena Patacchiola"
+      },
+      {
+        "numero": 25,
+        "nome": "EROS OROTELLESE AA",
+        "proprietario": "Luciano Marri"
+      },
+      {
+        "numero": 26,
+        "nome": "ESCHILO DE AIGHENTA AA",
+        "proprietario": "Mattia Chiavassa"
+      },
+      {
+        "numero": 27,
+        "nome": "ESTRELLA OLIANESA AA",
+        "proprietario": "Francesco Pisanu"
+      },
+      {
+        "numero": 28,
+        "nome": "ETRINTA AA",
+        "proprietario": "Luca Francesconi"
+      },
+      {
+        "numero": 29,
+        "nome": "EUSKALDI AA",
+        "proprietario": "Ilaria Mella"
+      },
+      {
+        "numero": 30,
+        "nome": "FENOMENALE AA",
+        "proprietario": "Massimo Bonci"
+      },
+      {
+        "numero": 31,
+        "nome": "GIOIA PURA AA",
+        "proprietario": "Sandro Bencardino"
+      },
+      {
+        "numero": 32,
+        "nome": "MILADY BONDREAMER AA",
+        "proprietario": "Mattia Chiavassa"
+      },
+      {
+        "numero": 33,
+        "nome": "VISO D’ANGELO",
+        "proprietario": "Mark Harris Getty"
+      },
+      {
+        "numero": 34,
+        "nome": "VOLPINO",
+        "proprietario": "Franco Iannilli"
+      },
+      {
+        "numero": 35,
+        "nome": "ZENTILES",
+        "proprietario": "Didier Pierre Ryelandt"
+      }
+    ],
+    "regoleLista": "Risposte corrette:\n\n- «Il cavallo compare fra i 35 ammessi alla Tratta del 13 agosto 2026, secondo l’elenco finale acquisito il 12 agosto 2026.»\n- «La Tratta è prevista giovedì 13 agosto 2026.»\n- «Questo elenco è successivo e distinto da quello degli 8 cavalli ammessi direttamente alla Tratta pubblicato il 10 agosto 2026.»\n\nNon dedurre:\n\n- l’assegnazione di alcun cavallo a una Contrada;\n- l’esito della Tratta stessa o l’abbinamento cavallo-fantino;\n- alcuna notizia di Carriera successiva alla Tratta;\n- che l’elenco corregga, annulli o sostituisca le liste delle sezioni 11.1 e 11.2: resta uno snapshot autonomo e distinto.\n\nL’elenco è uno snapshot autonomo alla data di acquisizione del 12 agosto 2026. Una eventuale rettifica successiva va conservata come snapshot distinto, senza sovrascrivere questo."
+  },
   "orari": {
     "documento": {
       "id": "COM-2026-08-ORARI-001",

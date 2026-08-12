@@ -259,6 +259,21 @@ Questi quattro file governano il trattamento tecnico delle fonti e il ciclo di r
 - **Relazione con `COM-2026-08-PROVEREG-001`:** collegamento di materia (le prove regolamentate dell’11 e 12 agosto sono calendarizzate anche in questo documento), ma i due documenti restano distinti e non vanno fusi.
 - **Relazione con `ATT-2026-ORD-051`–`060`:** il calendario è collegato per materia a queste ordinanze, che stabiliscono la disciplina delle fasi qui calendarizzate; il calendario non le sostituisce e non ne anticipa il contenuto.
 
+## 4.6 Documento operativo del 12 agosto 2026 (elenco finale ammessi alla Tratta)
+
+### COM-2026-08-TRATTA-001
+
+- **Natura:** documento operativo ufficiale e lista di esito finale; non è un’ordinanza e non è un atto protocollato.
+- **Titolo recato dal documento:** «PALIO 16 AGOSTO 2026 — CAVALLI AMMESSI ALLA TRATTA DEL 13 AGOSTO».
+- **Acquisizione:** fornito direttamente dal curatore Fabrizio Gabrielli, che ne ha dichiarato l’acquisizione il 12/08/2026 alle ore 09:32 locali dal canale Telegram `ProtocolloEquino` — acquisizione HITL fidata secondo la KB 06 di progetto.
+- **Oggetto:** elenco finale dei 35 cavalli ammessi alla Tratta del 13 agosto 2026, esito delle prove regolamentate dell’11 e 12 agosto 2026.
+- **Consistenza:** 1 pagina, 97.474 byte, livello testuale nativo.
+- **SHA-256:** `71edc865af400adaaf15d14c81b7bfb3fee83879ec4d1c4d18bf22352724ceb7`.
+- **Stato documentale:** `acquisito`; PDF ripubblicato con digest verificato in fase di generazione dell’indice.
+- **Trascrizione completa:** KB 09, sezione 11bis.
+- **Limiti dichiarati:** il documento non porta numero di protocollo, non è sottoscritto e non è un’ordinanza; non riporta un numero di post Telegram né un URL del Comune di Siena, e nessuno dei due è stato dedotto.
+- **Relazione con `COM-2026-08-PROVEREG-001`:** documento successivo e distinto; registra l’esito finale della fase, non sovrascrive le liste dell’11.1 (77 cavalli) e dell’11.2 (8 cavalli), né il documento delle Previsite (108 cavalli).
+
 # 5. Atti richiamati e non acquisiti
 
 ## ATT-2026-SIND-044

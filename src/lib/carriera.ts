@@ -77,6 +77,18 @@ export interface ProveRegolamentate {
 }
 
 /**
+ * L'elenco finale dei cavalli ammessi alla Tratta del 13 agosto 2026, acquisito
+ * il 12 agosto 2026 come acquisizione HITL fidata direttamente dal curatore.
+ * E' un lotto distinto da `ProveRegolamentate`: successivo, non sovrapponibile
+ * e non fuso con le liste dell'11.1 e dell'11.2.
+ */
+export interface Tratta {
+  documento: DocumentoOperativo;
+  cavalli: Cavallo[];
+  regoleLista: string;
+}
+
+/**
  * Il documento del calendario orari e' un quarto lotto, distinto da
  * `DocumentoOperativo`: non ha un PDF ripubblicabile perche' la fonte e'
  * nativamente HTML, ma esiste un percorso pubblico verso l'istantanea
@@ -239,6 +251,7 @@ export interface CarrieraIndex {
   attiRichiamati: AttoRichiamato[];
   previsite: { comunicato: string; regoleLista: string; cavalli: Cavallo[] };
   proveRegolamentate: ProveRegolamentate;
+  tratta: Tratta;
   orari: Orari;
   materie: Materia[];
   guida: SezioneGuida[];
@@ -323,6 +336,16 @@ export function listCavalliProveRegolamentate(): Cavallo[] {
 /** I cavalli ammessi direttamente alla Tratta del 13 agosto 2026. */
 export function listCavalliTrattaDiretta(): Cavallo[] {
   return getProveRegolamentate().trattaDiretta;
+}
+
+/** Il blocco documentario dell'elenco finale della Tratta, acquisito il 12 agosto 2026. */
+export function getTratta(): Tratta {
+  return loadCarriera().tratta;
+}
+
+/** I 35 cavalli ammessi alla Tratta del 13 agosto 2026, nell'elenco finale. */
+export function listCavalliTratta(): Cavallo[] {
+  return getTratta().cavalli;
 }
 
 /** Il calendario operativo degli orari della Carriera, dal 9 al 16 agosto 2026. */

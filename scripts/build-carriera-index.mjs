@@ -34,6 +34,7 @@ const RIFERIMENTI = path.join(ROOT, "content", "riferimenti");
 const PDF_DIR = path.join(ROOT, "public", "atti", "2026");
 const MANIFESTI_DIR = path.join(PDF_DIR, "manifesti");
 const PROVEREG_DIR = path.join(PDF_DIR, "prove-regolamentate");
+const TRATTA_DIR = path.join(PDF_DIR, "tratta");
 const ORARI_DIR = path.join(PDF_DIR, "orari");
 const TARGET = path.join(ROOT, "data", "carriera.generated.json");
 
@@ -67,6 +68,8 @@ export const EXPECTED = {
   cavalliProveRegolamentate: 77,
   cavalliTrattaDiretta: 8,
   pagineProveRegolamentate: 2,
+  cavalliTratta: 35,
+  pagineTratta: 1,
   giorniOrari: 7,
 };
 
@@ -356,6 +359,79 @@ function buildProveRegolamentate(kb09) {
 }
 
 /**
+ * Lotto successivo: l'elenco finale dei cavalli ammessi alla Tratta del 13
+ * agosto 2026, acquisito il 12 agosto 2026 come acquisizione HITL fidata
+ * fornita direttamente dal curatore. E' un lotto distinto da
+ * `buildProveRegolamentate`: successivo, non sovrapponibile e non fuso con le
+ * liste dell'11.1 e dell'11.2. Segue lo stesso schema di verifica del digest
+ * sul file effettivamente presente.
+ */
+function buildTratta(kb09) {
+  const sezione = section(
+    kb09,
+    "## 11bis. Registro del documento operativo acquisito il 12 agosto 2026 (elenco finale ammessi alla Tratta)"
+  );
+  const intro = sezione.split(/\n### /)[0];
+  const registro = parseTable(intro);
+  if (registro.body.length !== 1) {
+    throw new Error(
+      `il registro dell'elenco finale della Tratta deve contenere un solo record, trovati ${registro.body.length}`
+    );
+  }
+  const [idCell, titolo, data, pagine, shaCell, stato, fileCell] = registro.body[0];
+  const id = plain(idCell);
+  const file = plain(fileCell);
+  const sha256 = plain(shaCell);
+  const ripubblicabile = stato === "ripubblicabile";
+
+  const presenti = new Set(
+    existsSync(TRATTA_DIR) ? readdirSync(TRATTA_DIR).filter((f) => f.endsWith(".pdf")) : []
+  );
+  if (ripubblicabile) {
+    if (!presenti.has(file)) throw new Error(`file mancante per ${id}: ${file}`);
+    const digest = createHash("sha256")
+      .update(readFileSync(path.join(TRATTA_DIR, file)))
+      .digest("hex");
+    if (digest !== sha256) {
+      throw new Error(
+        `digest non corrispondente per ${id}: registrato ${sha256}, calcolato ${digest}`
+      );
+    }
+  }
+  const orfani = [...presenti].filter((f) => f !== file).sort();
+  if (orfani.length) {
+    throw new Error(`file non collegati ad alcun record: ${orfani.join(", ")}`);
+  }
+
+  const scheda = section(sezione, `### ${id}`);
+
+  const { body } = parseTable(
+    section(kb09, "### 11bis.1 Cavalli ammessi alla Tratta del 13 agosto (elenco finale)")
+  );
+  const cavalli = body.map((row) => ({
+    numero: Number(row[0]),
+    nome: row[1],
+    proprietario: row[2],
+  }));
+
+  return {
+    documento: {
+      id,
+      titolo,
+      data,
+      pagine: Number(pagine),
+      sha256,
+      statoPubblico: stato,
+      ripubblicabile,
+      pdf: ripubblicabile ? `/atti/2026/tratta/${file}` : null,
+      scheda,
+    },
+    cavalli,
+    regoleLista: section(kb09, "### 11bis.2 Regole di interpretazione della lista"),
+  };
+}
+
+/**
  * Quarto lotto: il calendario operativo degli orari della Carriera del 16
  * agosto 2026, acquisito il 10 agosto 2026 come istantanea HTML.
  *
@@ -604,6 +680,7 @@ export function buildIndex() {
       cavalli,
     },
     proveRegolamentate: buildProveRegolamentate(kb09),
+    tratta: buildTratta(kb09),
     orari: buildOrari(kb09),
     materie: buildMaterie(kb10),
     guida: buildGuida(kb11),
@@ -659,6 +736,12 @@ export function verify(index) {
     index.proveRegolamentate.documento.pagine,
     EXPECTED.pagineProveRegolamentate
   );
+  eq("cavalli ammessi alla Tratta (elenco finale)", index.tratta.cavalli.length, EXPECTED.cavalliTratta);
+  eq(
+    "pagine del documento operativo del 12 agosto 2026",
+    index.tratta.documento.pagine,
+    EXPECTED.pagineTratta
+  );
   eq("giorni del calendario orari", index.orari.giorni.length, EXPECTED.giorniOrari);
   eq("materie consolidate", index.materie.length, EXPECTED.materie);
   eq("sezioni della guida", index.guida.length, EXPECTED.sezioniGuida);
@@ -705,6 +788,7 @@ export function verify(index) {
   for (const [label, lista] of [
     ["prove regolamentate", index.proveRegolamentate.proveRegolamentate],
     ["Tratta diretta", index.proveRegolamentate.trattaDiretta],
+    ["Tratta (elenco finale)", index.tratta.cavalli],
   ]) {
     const n = lista.map((c) => c.numero);
     if (JSON.stringify(n) !== JSON.stringify(n.map((_, i) => i + 1))) {
@@ -715,6 +799,18 @@ export function verify(index) {
   }
   if (!/^[0-9a-f]{64}$/.test(index.proveRegolamentate.documento.sha256)) {
     problems.push(`SHA-256 malformato per ${index.proveRegolamentate.documento.id}`);
+  }
+  if (!/^[0-9a-f]{64}$/.test(index.tratta.documento.sha256)) {
+    problems.push(`SHA-256 malformato per ${index.tratta.documento.id}`);
+  }
+  if (index.atti.some((a) => a.id === index.tratta.documento.id)) {
+    problems.push(`${index.tratta.documento.id} compare fra gli atti`);
+  }
+  if (index.manifesti.some((m) => m.id === index.tratta.documento.id)) {
+    problems.push(`${index.tratta.documento.id} compare fra i manifesti`);
+  }
+  if (index.tratta.documento.id === index.proveRegolamentate.documento.id) {
+    problems.push("il documento dell'elenco finale della Tratta coincide con quello delle prove regolamentate");
   }
 
   // Il calendario orari e' un quarto lotto: non e' un atto, non e' un
@@ -805,7 +901,8 @@ function main() {
       `${index.registroFonti.length} record di registro, ` +
       `${index.collazione.prospetto.length} unità articolo collazionate, ` +
       `${index.regolamento.articoli.length} unità articolo del Regolamento ` +
-      `in ${index.regolamento.capitoli.length} capitoli.`
+      `in ${index.regolamento.capitoli.length} capitoli, ` +
+      `${index.tratta.cavalli.length} cavalli ammessi alla Tratta (elenco finale).`
   );
 }
 

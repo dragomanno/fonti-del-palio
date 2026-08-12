@@ -769,6 +769,97 @@ Non dedurre:
 
 L’elenco è uno snapshot autonomo alla data del 10 agosto 2026. Una eventuale rettifica successiva va conservata come snapshot distinto, senza sovrascrivere questo.
 
+## 11bis. Registro del documento operativo acquisito il 12 agosto 2026 (elenco finale ammessi alla Tratta)
+
+Il 12 agosto 2026 è stato acquisito un lotto distinto, costituito da un solo documento, successivo e non sovrapponibile al documento operativo del 10 agosto 2026 registrato nella sezione 11. Si tratta dell’**elenco finale dei cavalli ammessi alla Tratta del 13 agosto 2026**, esito delle prove regolamentate dell’11 e 12 agosto 2026.
+
+**Provenienza dichiarata:** il documento è stato fornito direttamente dal curatore, Fabrizio Gabrielli, che ne ha dichiarato l’acquisizione il 12 agosto 2026 alle ore 09:32 locali dal canale Telegram `ProtocolloEquino`, indicato come canale di diffusione ufficiale dal Comune di Siena nella pagina «Protocollo Equino 2026» del portale del Palio (`https://palio.comune.siena.it/node/5935`). Trattandosi di un’acquisizione HITL fidata secondo la KB 06 di progetto, non è stata ripetuta la ricerca di fonte per reperire un duplicato: il PDF fornito resta l’unica fonte registrata per questo lotto. Il documento non riporta un numero di post Telegram né un URL del Comune di Siena: nessuno dei due è stato dedotto.
+
+**Limiti specifici di questo lotto:**
+
+- il PDF acquisito non riporta numero di protocollo o di repertorio, non è sottoscritto e non è un’ordinanza: è un documento operativo che rende noto l’esito finale di una fase, e tale numero non deve essere dedotto;
+- il documento non nomina la Commissione veterinaria né il fondamento regolamentare;
+- il nome del file è conservato come ricevuto, con normalizzazione dei soli caratteri non ammessi dal filesystem del progetto;
+- questa lista è distinta e non sostituisce né gli 8 cavalli ammessi direttamente alla Tratta registrati alla sezione 11.2, né i 77 ammessi alle prove regolamentate alla sezione 11.1, né i 108 ammessi alle Previsite registrati in `COM-2026-08-PREVISITE-001`: sono quattro istantanee documentarie distinte, nessuna delle quali sovrascrive le altre.
+
+| ID | Documento | Data | Pagine | SHA-256 | Stato pubblico | File acquisito |
+|---|---|---:|---:|---|---|---|
+| `COM-2026-08-TRATTA-001` | Elenco finale dei cavalli ammessi alla Tratta del 13 agosto | 12/08/2026 | 1 | `71edc865af400adaaf15d14c81b7bfb3fee83879ec4d1c4d18bf22352724ceb7` | ripubblicabile | `Elenco_cavalli_ammessi_alla_Tratta-4.pdf` |
+
+### COM-2026-08-TRATTA-001
+
+- **Tipo:** documento operativo ufficiale e lista di esito finale; non è un’ordinanza e non è un atto protocollato.
+- **Titolo recato dal documento:** «PALIO 16 AGOSTO 2026 — CAVALLI AMMESSI ALLA TRATTA DEL 13 AGOSTO».
+- **Autorità:** Comune di Siena; l’intestazione grafica del documento reca il solo stemma «COMUNE DI SIENA».
+- **Numero e data:** numero non indicato; il documento non porta una data di pubblicazione propria oltre al riferimento alla Tratta del 13 agosto. La data di acquisizione, dichiarata dal curatore, è il 12 agosto 2026.
+- **Provenienza:** fornito direttamente dal curatore Fabrizio Gabrielli, che ne ha dichiarato l’acquisizione il 12 agosto 2026 alle ore 09:32 locali dal canale Telegram `ProtocolloEquino`.
+- **Consistenza:** 1 pagina, 97.474 byte, livello testuale nativo, non da riconoscimento ottico.
+- **Stato documentale:** `acquisito`; PDF ripubblicato con digest verificato in fase di generazione dell’indice.
+- **Fase del Palio:** esito finale dopo le prove regolamentate dell’11 e 12 agosto 2026; ammissione alla Tratta di giovedì 13 agosto 2026.
+
+Il documento riporta l’elenco nominativo di **35** cavalli ammessi alla Tratta del 13 agosto 2026, ciascuno con il proprietario indicato.
+
+**Relazione con `COM-2026-08-PROVEREG-001`:** quest’ultimo registra, alla data del 10 agosto 2026, 77 cavalli ammessi alle prove regolamentate e 8 cavalli ammessi direttamente alla Tratta. L’elenco qui registrato è successivo e rappresenta l’esito finale della fase, dopo lo svolgimento delle prove regolamentate dell’11 e 12 agosto. Il documento non dichiara come i 35 nominativi si compongano rispetto alle due liste precedenti: la relazione numerica non è dedotta qui.
+
+**Non confondere con:** `COM-2026-08-PREVISITE-001` (108 cavalli ammessi alle Previsite), la lista delle prove regolamentate alla sezione 11.1 (77 cavalli) e la lista dei cavalli ammessi direttamente alla Tratta alla sezione 11.2 (8 cavalli). Tutti restano snapshot autonomi e nessuno è sovrascritto da questo.
+
+### 11bis.1 Cavalli ammessi alla Tratta del 13 agosto (elenco finale)
+
+| N. | Cavallo | Proprietario |
+|---:|---|---|
+| 1 | ANDA E BOLA | Harry Arthur Louis Westerman |
+| 2 | ARES ELCE | Fabrizio Macucci |
+| 3 | ARESTETULESU | Mark Harris Getty |
+| 4 | BAILA AA | Alberto Manenti |
+| 5 | BENITOS AA | Dario Colagè |
+| 6 | BONITAS AA | Didier Pierre Ryelandt |
+| 7 | CANARINU AA | Mark Harris Getty |
+| 8 | CASSIOX AA | Alessandro Neri |
+| 9 | CHIOSA VINCE AA | Duccio Ravenni |
+| 10 | COBALTO DA CLODIA AA | Alessandro Columbu |
+| 11 | COMANCIO AA | Federica Regnani |
+| 12 | COMPILATION AA | Federica Saracini |
+| 13 | DAREDEVIL AA | Marcello Roti |
+| 14 | DEDALO KING AA | Salvatore Nieddu |
+| 15 | DIAMANTE SAURO AA | Pietro Falchi |
+| 16 | DIODORO AA | Ilaria Bisconti |
+| 17 | DOCTOR DONALD AA | Nicola Giorgi |
+| 18 | DOLLARO AA | Andrea Sanna |
+| 19 | DONRODRIGO AA | Michele Seazzu |
+| 20 | EBERARDO AA | Theodore William Thomas Westerman |
+| 21 | ECCOLO AA | Diego Minucci |
+| 22 | ELLENICO AA | Lorenzo Maria Vincenti |
+| 23 | ENNALZU AA | Nicolò Farnetani |
+| 24 | ERMINIO BAIO AA | Elena Patacchiola |
+| 25 | EROS OROTELLESE AA | Luciano Marri |
+| 26 | ESCHILO DE AIGHENTA AA | Mattia Chiavassa |
+| 27 | ESTRELLA OLIANESA AA | Francesco Pisanu |
+| 28 | ETRINTA AA | Luca Francesconi |
+| 29 | EUSKALDI AA | Ilaria Mella |
+| 30 | FENOMENALE AA | Massimo Bonci |
+| 31 | GIOIA PURA AA | Sandro Bencardino |
+| 32 | MILADY BONDREAMER AA | Mattia Chiavassa |
+| 33 | VISO D’ANGELO | Mark Harris Getty |
+| 34 | VOLPINO | Franco Iannilli |
+| 35 | ZENTILES | Didier Pierre Ryelandt |
+
+### 11bis.2 Regole di interpretazione della lista
+
+Risposte corrette:
+
+- «Il cavallo compare fra i 35 ammessi alla Tratta del 13 agosto 2026, secondo l’elenco finale acquisito il 12 agosto 2026.»
+- «La Tratta è prevista giovedì 13 agosto 2026.»
+- «Questo elenco è successivo e distinto da quello degli 8 cavalli ammessi direttamente alla Tratta pubblicato il 10 agosto 2026.»
+
+Non dedurre:
+
+- l’assegnazione di alcun cavallo a una Contrada;
+- l’esito della Tratta stessa o l’abbinamento cavallo-fantino;
+- alcuna notizia di Carriera successiva alla Tratta;
+- che l’elenco corregga, annulli o sostituisca le liste delle sezioni 11.1 e 11.2: resta uno snapshot autonomo e distinto.
+
+L’elenco è uno snapshot autonomo alla data di acquisizione del 12 agosto 2026. Una eventuale rettifica successiva va conservata come snapshot distinto, senza sovrascrivere questo.
+
 ## 12. Registro del documento operativo acquisito il 10 agosto 2026 (calendario orari)
 
 Il 10 agosto 2026 è stato acquisito un quarto lotto, distinto dai tredici PDF del 28 luglio 2026, dai cinque manifesti a stampa del 4 agosto 2026 e dal documento operativo sui cavalli ammessi alle prove regolamentate e alla Tratta registrato nella sezione 11. Si tratta del **calendario operativo di tutti gli orari della Carriera del 16 agosto 2026**, dalla stesura del tufo del 9 agosto alla mossa del Palio del 16 agosto.

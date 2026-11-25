@@ -15,6 +15,8 @@ import {
   listMaterie,
   listRegistroFonti,
   getCollazione,
+  getGiustizia,
+  delibereByCarriera,
 } from "../lib/carriera";
 
 // v0.2.0 — La Home dichiara due corpus distinti e non li fonde:
@@ -27,6 +29,14 @@ const cavalli = listCavalli();
 const materie = listMaterie();
 const registroFonti = listRegistroFonti();
 const collazione = getCollazione();
+
+// Giustizia paliesca 2026: ultimo aggiornamento del corpus prima dell'inverno
+// paliesco. I conteggi provengono dall'indice generato (KB 15), non dal codice.
+const delibere = getGiustizia().delibere.filter((d) => d.data.endsWith("/2026"));
+const sanzioni = delibere.filter((d) => d.esito !== "archiviazione").length;
+const archiviazioni = delibere.length - sanzioni;
+const delibereLuglio = delibereByCarriera("palio-3-luglio-2026");
+const delibereAgosto = delibereByCarriera("palio-18-agosto-2026");
 
 const index = loadIndex();
 const acts = listActs();
@@ -124,7 +134,8 @@ const sections = [
           affiliato al Comune di Siena. <a href="/disclaimer">Leggi il disclaimer</a>.
         </p>
         <div class="btn-row">
-          <a class="btn btn--primary" href="/palio-16-agosto-2026/">Palio del 18 agosto 2026</a>
+          <a class="btn btn--primary" href="/giustizia-paliesca/2026/">Giustizia paliesca 2026</a>
+          <a class="btn btn--secondary" href="/palio-16-agosto-2026/">Palio del 18 agosto 2026</a>
           <a class="btn btn--secondary" href="/documenti-fondamentali/">Documenti fondamentali</a>
           <a
             class="btn btn--secondary"
@@ -142,6 +153,34 @@ const sections = [
         <div><dt>Articoli</dt><dd>{articleCount}</dd></div>
         <div><dt>Atti</dt><dd>{acts.length}</dd></div>
         <div><dt>Record nel registro</dt><dd>{records.length}</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section aggiornamento" aria-labelledby="aggiornamento-titolo">
+    <div class="wrap aggiornamento__inner">
+      <div>
+        <span class="section-number">Ultimo aggiornamento del corpus · 25 novembre 2026</span>
+        <h2 id="aggiornamento-titolo" class="text-heading" style="font-size: var(--text-heading);">
+          Giustizia paliesca 2026: le sanzioni per le due Carriere
+        </h2>
+        <p class="text-muted" style="max-width: 60ch;">
+          Il 24 novembre 2026 la Giunta comunale di Siena ha deliberato sui procedimenti
+          disciplinari delle Carriere del 3 luglio e del 18 agosto 2026. Le {delibere.length}
+          deliberazioni sono pubblicate come fonti primarie: copia conforme ripresa dall'Albo
+          Pretorio, digest di integrità e scheda documentaria per ciascuna, con il testo del
+          Regolamento su censura, deplorazione, diffida e ammonizione.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn--secondary" href="/giustizia-paliesca/2026/palio-3-luglio-2026/">Palio del 3 luglio 2026</a>
+          <a class="btn btn--secondary" href="/giustizia-paliesca/2026/palio-18-agosto-2026/">Palio del 18 agosto 2026</a>
+        </div>
+      </div>
+      <dl class="aggiornamento__stats">
+        <div><dt>Delibere</dt><dd>{delibere.length}</dd></div>
+        <div><dt>Sanzioni</dt><dd>{sanzioni}</dd></div>
+        <div><dt>Archiviazioni</dt><dd>{archiviazioni}</dd></div>
+        <div><dt>3 luglio · 18 agosto</dt><dd>{delibereLuglio.length} · {delibereAgosto.length}</dd></div>
       </dl>
     </div>
   </section>
@@ -254,6 +293,41 @@ const sections = [
      circoscritta dal corpus di lunga durata, senza gerarchizzarli. */
   .carriera-strip {
     background: var(--color-surface);
+  }
+
+  /* Ultimo aggiornamento del corpus: resta in evidenza durante l'inverno
+     paliesco, finche' il corpus non cambia. Bordo d'accento, nessun badge. */
+  .aggiornamento {
+    border-left: 3px solid var(--color-green);
+  }
+  .aggiornamento__inner {
+    display: grid;
+    gap: var(--space-4);
+    align-items: start;
+  }
+  @media (min-width: 60rem) {
+    .aggiornamento__inner {
+      grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+      gap: var(--space-8);
+    }
+  }
+  .aggiornamento__stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-2) var(--space-3);
+    margin: 0;
+  }
+  .aggiornamento__stats dt {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-faint);
+  }
+  .aggiornamento__stats dd {
+    margin: 0.25rem 0 0;
+    font-family: var(--font-display);
+    font-size: 1.75rem;
   }
 
   /* Cifre del corpus come metadati documentari, non come badge decorativi. */

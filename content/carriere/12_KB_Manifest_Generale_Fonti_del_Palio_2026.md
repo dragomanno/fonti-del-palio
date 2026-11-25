@@ -1,7 +1,7 @@
 ---
 title: "KB 12 — Manifest generale delle fonti di Fonti del Palio"
 document_type: "registro generale, stato documentale e relazioni"
-version: "1.7"
+version: "1.8"
 last_verified: "2026-11-25"
 status: "registro di secondo livello; coordina Protocollo Equino, ordinanze e documenti operativi della singola Carriera"
 curation: "Fabrizio Gabrielli / Fonti del Palio"
@@ -66,6 +66,14 @@ Questi quattro file governano il trattamento tecnico delle fonti e il ciclo di r
 | KB 11 | guida pratica per Senesi e visitatori |
 | KB 12 | Manifest generale |
 | KB 13 | router generale |
+
+### Ramo D — Giustizia paliesca
+
+| File | Ruolo |
+|---|---|
+| KB 15 | deliberazioni della Giunta comunale sulle sanzioni delle Carriere 2026: registro, digest, schede, atti richiamati e non acquisiti |
+
+Il ramo D registra atti adottati dopo le Carriere. Le pagine pubbliche sono ordinate per anno sotto `/giustizia-paliesca/`, ad esempio `/giustizia-paliesca/2026/`, e indicano le Carriere con la data effettiva.
 
 # 4. Registro degli atti, dei documenti operativi e dei manifesti della Carriera del 16 agosto 2026
 
@@ -488,4 +496,4 @@ Regola editoriale, decisa dal curatore il 25 novembre 2026: nei titoli, nelle et
 
 Questa sezione non attribuisce agli atti adottati per il 16 agosto alcun effetto giuridico sulle giornate del 17 e del 18 agosto: registra soltanto la data in cui la Carriera si è corsa.
 
-La Carriera di luglio è stata a sua volta rinviata per maltempo dal 2 al 3 luglio 2026 (comunicazione del Comune di Siena «Rinviato il Palio del 2 luglio 2026», 02/07/2026, `https://www.comune.siena.it/index.php/novita/rinviato-il-palio-del-2-luglio-2026`). Il sito non ospita atti organizzativi propri di quella Carriera.
+La Carriera di luglio è stata a sua volta rinviata per maltempo dal 2 al 3 luglio 2026 (comunicazione del Comune di Siena «Rinviato il Palio del 2 luglio 2026», 02/07/2026, `https://www.comune.siena.it/index.php/novita/rinviato-il-palio-del-2-luglio-2026`). Il sito non ospita atti organizzativi propri di quella Carriera; ospita le deliberazioni della Giunta comunale sulle sanzioni, registrate in KB 15.

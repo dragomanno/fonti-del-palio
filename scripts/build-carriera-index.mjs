@@ -36,6 +36,7 @@ const MANIFESTI_DIR = path.join(PDF_DIR, "manifesti");
 const PROVEREG_DIR = path.join(PDF_DIR, "prove-regolamentate");
 const TRATTA_DIR = path.join(PDF_DIR, "tratta");
 const ORARI_DIR = path.join(PDF_DIR, "orari");
+const GIUSTIZIA_DIR = path.join(PDF_DIR, "giustizia-paliesca");
 const TARGET = path.join(ROOT, "data", "carriera.generated.json");
 
 const KB09 = "09_KB_Corpus_Ordinanze_e_Atti_Palio_Agosto_2026.md";
@@ -43,6 +44,7 @@ const KB10 = "10_KB_Disciplina_Consolidata_Accesso_Sicurezza_e_Servizi_Agosto_20
 const KB11 = "11_KB_Guida_Pratica_Palio_16_Agosto_2026.md";
 const KB12 = "12_KB_Manifest_Generale_Fonti_del_Palio_2026.md";
 const KB14 = "14_KB_Collazione_Regolamento_Previgente_Vigente.md";
+const KB15 = "15_KB_Giustizia_Paliesca_Carriere_2026.md";
 const KB03 = "03_KB_Disciplina_Vigente_Consolidata_2026.md";
 
 /** Invarianti strutturali attese: sono il gate del checkpoint, non decorazione. */
@@ -71,6 +73,12 @@ export const EXPECTED = {
   cavalliTratta: 35,
   pagineTratta: 1,
   giorniOrari: 7,
+  delibereGiustizia: 15,
+  sanzioniGiustizia: 14,
+  archiviazioniGiustizia: 1,
+  pagineGiustizia: 63,
+  delibereLuglio: 6,
+  delibereAgosto: 9,
 };
 
 function read(dir, name) {
@@ -614,6 +622,121 @@ function buildRegistro(kb12) {
   }));
 }
 
+/**
+ * Giustizia paliesca: le deliberazioni della Giunta comunale sulle sanzioni.
+ *
+ * Il registro, il prospetto del dispositivo, gli atti richiamati e le schede
+ * provengono da KB 15. Ogni deliberazione e' un PDF ripubblicato byte per byte
+ * in `public/atti/2026/giustizia-paliesca/`: il digest registrato e' confrontato
+ * con il file presente, e un PDF non collegato ad alcun record fa fallire la
+ * generazione. La proposta sanzionatoria e la delibera restano atti distinti:
+ * qui la proposta compare solo come atto richiamato, con numero e protocollo
+ * dichiarati dalla delibera.
+ */
+export const CARRIERE_GIUSTIZIA = [
+  { slug: "palio-3-luglio-2026", titolo: "Palio del 3 luglio 2026", data: "2026-07-03", etichetta: "3 luglio 2026" },
+  { slug: "palio-18-agosto-2026", titolo: "Palio del 18 agosto 2026", data: "2026-08-18", etichetta: "18 agosto 2026" },
+];
+
+export const ESITI_GIUSTIZIA = {
+  Contrada: ["censura", "deplorazione", "archiviazione"],
+  fantino: ["diffida", "ammonizione"],
+};
+
+export function deliberaSlug(id) {
+  const m = id.match(/^DEL-(\d{4})-GC-(\d+)$/);
+  if (!m) throw new Error(`ID delibera non riconosciuto: ${id}`);
+  return `delibera-${Number(m[2])}-${m[1]}`;
+}
+
+function buildGiustizia(kb15) {
+  const registro = parseTable(section(kb15, "## 3. Registro delle deliberazioni"));
+  const prospetto = new Map(
+    parseTable(section(kb15, "## 4. Prospetto del dispositivo")).body.map((r) => [plain(r[0]), r])
+  );
+  const richiamati = new Map(
+    parseTable(section(kb15, "## 5. Atti richiamati e non acquisiti")).body.map((r) => [plain(r[0]), r])
+  );
+  const schede = new Map(
+    blocks(section(kb15, "## 6. Schede documentarie"), 3).map((b) => [b.title, b.body])
+  );
+  const presenti = new Set(
+    existsSync(GIUSTIZIA_DIR) ? readdirSync(GIUSTIZIA_DIR).filter((f) => f.endsWith(".pdf")) : []
+  );
+
+  const delibere = registro.body.map((row) => {
+    const [idCell, numeroCell, data, carrieraCell, destinatario, natura, esito, pagine, byte, shaCell, alboCell, fileCell] = row;
+    const id = plain(idCell);
+    const file = plain(fileCell);
+    const sha256 = plain(shaCell);
+    if (!presenti.has(file)) throw new Error(`file mancante per la delibera ${id}: ${file}`);
+    const contenuto = readFileSync(path.join(GIUSTIZIA_DIR, file));
+    const digest = createHash("sha256").update(contenuto).digest("hex");
+    if (digest !== sha256) {
+      throw new Error(`digest non corrispondente per ${id}: registrato ${sha256}, calcolato ${digest}`);
+    }
+    if (contenuto.length !== Number(byte)) {
+      throw new Error(`dimensione non corrispondente per ${id}: registrati ${byte} byte, presenti ${contenuto.length}`);
+    }
+    const numero = Number(numeroCell.replace(/^n\. /, ""));
+    if (!file.includes(`_Copia_${numero}_2026.pdf`)) {
+      throw new Error(`numero della delibera ${id} non coerente con il nome del file ${file}`);
+    }
+    const carriera = CARRIERE_GIUSTIZIA.find((c) => c.etichetta === carrieraCell);
+    if (!carriera) throw new Error(`Carriera non riconosciuta per ${id}: ${carrieraCell}`);
+    const albo = alboCell.match(/^n\. (\d{4}\/\d{7}), dal (\d{2}\/\d{2}\/\d{4}) al (\d{2}\/\d{2}\/\d{4})$/);
+    if (!albo) throw new Error(`estremi dell'Albo Pretorio non riconosciuti per ${id}: ${alboCell}`);
+    const disp = prospetto.get(id);
+    if (!disp) throw new Error(`riga del prospetto del dispositivo mancante per ${id}`);
+    if (disp[1] !== esito) throw new Error(`esito discordante fra registro e prospetto per ${id}`);
+    const rich = richiamati.get(id);
+    if (!rich) throw new Error(`atti richiamati mancanti per ${id}`);
+    const scheda = schede.get(id);
+    if (!scheda) throw new Error(`scheda documentaria mancante per ${id}`);
+    const oggetto = scheda.match(/^- \*\*Oggetto:\*\* «(.+)»$/m);
+    if (!oggetto) throw new Error(`oggetto mancante nella scheda di ${id}`);
+    return {
+      id,
+      slug: deliberaSlug(id),
+      numero,
+      data,
+      organo: "Giunta comunale",
+      carriera: carriera.slug,
+      destinatario,
+      natura,
+      esito,
+      oggetto: oggetto[1],
+      fondamento: disp[2],
+      normaRichiamata: disp[3],
+      responsabilitaContrada: disp[4],
+      contestazione: rich[1],
+      proposta: rich[2],
+      pagine: Number(pagine),
+      byte: Number(byte),
+      sha256,
+      albo: { numero: albo[1], dal: albo[2], al: albo[3] },
+      pdf: `/atti/2026/giustizia-paliesca/${file}`,
+      scheda,
+    };
+  });
+
+  const registrati = new Set(delibere.map((d) => path.basename(d.pdf)));
+  const orfani = [...presenti].filter((f) => !registrati.has(f)).sort();
+  if (orfani.length) throw new Error(`delibere non collegate ad alcun record: ${orfani.join(", ")}`);
+  for (const id of [...prospetto.keys(), ...richiamati.keys(), ...schede.keys()]) {
+    if (!delibere.some((d) => d.id === id)) throw new Error(`record senza delibera in registro: ${id}`);
+  }
+
+  return {
+    perimetro: section(kb15, "## 1. Funzione e perimetro"),
+    provenienza: section(kb15, "## 2. Provenienza"),
+    lacune: section(kb15, "## 5. Atti richiamati e non acquisiti").split("\n\n").filter((p) => p.startsWith("**")).join("\n\n"),
+    nonDimostra: section(kb15, "## 7. Che cosa questo file non dimostra"),
+    carriere: CARRIERE_GIUSTIZIA.map(({ slug, titolo, data }) => ({ slug, titolo, data })),
+    delibere,
+  };
+}
+
 function buildBando() {
   const source = readFileSync(path.join(RIFERIMENTI, "bando-violante-1729.md"), "utf-8");
   const fmMatch = source.match(/^---\n([\s\S]*?)\n---\n/);
@@ -653,6 +776,7 @@ export function buildIndex() {
   const kb11 = read(CARRIERE, KB11);
   const kb12 = read(CARRIERE, KB12);
   const kb14 = read(CARRIERE, KB14);
+  const kb15 = read(CARRIERE, KB15);
   const kb03 = read(KB_DIR, KB03);
 
   const atti = buildAtti(kb09);
@@ -688,6 +812,7 @@ export function buildIndex() {
     collazione: buildCollazione(kb14),
     regolamento: buildRegolamento(kb03),
     bando,
+    giustizia: buildGiustizia(kb15),
   };
 
   verify(index);
@@ -871,6 +996,31 @@ export function verify(index) {
     if (!/^[0-9a-f]{64}$/.test(record.sha256)) problems.push(`SHA-256 malformato per ${record.id}`);
   }
 
+  // Giustizia paliesca: conteggi, esiti coerenti con la natura del destinatario,
+  // numeri di delibera e di Albo univoci.
+  const delibere = index.giustizia.delibere;
+  eq("delibere della Giunta sulla giustizia paliesca", delibere.length, EXPECTED.delibereGiustizia);
+  eq("sanzioni deliberate", delibere.filter((d) => d.esito !== "archiviazione").length, EXPECTED.sanzioniGiustizia);
+  eq("archiviazioni deliberate", delibere.filter((d) => d.esito === "archiviazione").length, EXPECTED.archiviazioniGiustizia);
+  eq("pagine delle delibere", delibere.reduce((n, d) => n + d.pagine, 0), EXPECTED.pagineGiustizia);
+  eq("delibere sulla Carriera del 3 luglio 2026", delibere.filter((d) => d.carriera === "palio-3-luglio-2026").length, EXPECTED.delibereLuglio);
+  eq("delibere sulla Carriera del 18 agosto 2026", delibere.filter((d) => d.carriera === "palio-18-agosto-2026").length, EXPECTED.delibereAgosto);
+  for (const d of delibere) {
+    if (!/^[0-9a-f]{64}$/.test(d.sha256)) problems.push(`SHA-256 malformato per ${d.id}`);
+    const ammessi = ESITI_GIUSTIZIA[d.natura];
+    if (!ammessi) problems.push(`natura del destinatario non riconosciuta per ${d.id}: ${d.natura}`);
+    else if (!ammessi.includes(d.esito)) problems.push(`esito ${d.esito} non ammesso per un ${d.natura} (${d.id})`);
+    if (d.data !== "24/11/2026") problems.push(`data della delibera inattesa per ${d.id}: ${d.data}`);
+  }
+  for (const [label, values] of [
+    ["numeri delle delibere", delibere.map((d) => d.numero)],
+    ["numeri dell'Albo Pretorio", delibere.map((d) => d.albo.numero)],
+    ["slug delle delibere", delibere.map((d) => d.slug)],
+  ]) {
+    const dupes = values.filter((v, i) => values.indexOf(v) !== i);
+    if (dupes.length) problems.push(`${label}: duplicati ${[...new Set(dupes)].join(", ")}`);
+  }
+
   // Articolato integrale del Regolamento per il Palio: gate propri.
   problems.push(...verificaRegolamento(index.regolamento, EXPECTED));
 
@@ -902,7 +1052,8 @@ function main() {
       `${index.collazione.prospetto.length} unità articolo collazionate, ` +
       `${index.regolamento.articoli.length} unità articolo del Regolamento ` +
       `in ${index.regolamento.capitoli.length} capitoli, ` +
-      `${index.tratta.cavalli.length} cavalli ammessi alla Tratta (elenco finale).`
+      `${index.tratta.cavalli.length} cavalli ammessi alla Tratta (elenco finale), ` +
+      `${index.giustizia.delibere.length} delibere di giustizia paliesca.`
   );
 }
 

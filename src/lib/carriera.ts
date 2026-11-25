@@ -243,6 +243,46 @@ export interface RegolamentoVigente {
   articoli: ArticoloRegolamento[];
 }
 
+/** Una deliberazione della Giunta comunale in materia di giustizia paliesca (KB 15). */
+export interface Delibera {
+  id: string;
+  slug: string;
+  numero: number;
+  data: string;
+  organo: string;
+  carriera: string;
+  destinatario: string;
+  natura: "Contrada" | "fantino";
+  esito: "censura" | "deplorazione" | "archiviazione" | "diffida" | "ammonizione";
+  oggetto: string;
+  fondamento: string;
+  normaRichiamata: string;
+  responsabilitaContrada: string;
+  contestazione: string;
+  proposta: string;
+  pagine: number;
+  byte: number;
+  sha256: string;
+  albo: { numero: string; dal: string; al: string };
+  pdf: string;
+  scheda: string;
+}
+
+export interface CarrieraGiustizia {
+  slug: string;
+  titolo: string;
+  data: string;
+}
+
+export interface Giustizia {
+  perimetro: string;
+  provenienza: string;
+  lacune: string;
+  nonDimostra: string;
+  carriere: CarrieraGiustizia[];
+  delibere: Delibera[];
+}
+
 export interface CarrieraIndex {
   schema: string;
   carriera: { slug: string; titolo: string; data: string };
@@ -259,6 +299,7 @@ export interface CarrieraIndex {
   collazione: Collazione;
   regolamento: RegolamentoVigente;
   bando: Bando;
+  giustizia: Giustizia;
 }
 
 let cached: CarrieraIndex | null = null;
@@ -393,6 +434,35 @@ export function articoliPerCapitolo(): Array<{
   }
   return gruppi;
 }
+
+/** Il ramo della giustizia paliesca: deliberazioni, Carriere e lacune dichiarate. */
+export function getGiustizia(): Giustizia {
+  return loadCarriera().giustizia;
+}
+
+/** Le deliberazioni nell'ordine del registro di KB 15. */
+export function listDelibere(): Delibera[] {
+  return getGiustizia().delibere;
+}
+
+/** Le deliberazioni relative a una Carriera, nell'ordine del registro. */
+export function delibereByCarriera(slug: string): Delibera[] {
+  return listDelibere().filter((d) => d.carriera === slug);
+}
+
+/** URL pubblico della scheda di una deliberazione, ordinato per anno. */
+export function deliberaHref(d: Delibera): string {
+  return `/giustizia-paliesca/${d.data.slice(-4)}/${d.slug}/`;
+}
+
+/** URL pubblico della pagina di una Carriera nella giustizia paliesca. */
+export function carrieraGiustiziaHref(c: CarrieraGiustizia): string {
+  return `/giustizia-paliesca/${c.data.slice(0, 4)}/${c.slug}/`;
+}
+
+/** Etichetta della copia ripubblicata, uguale in ogni pagina. */
+export const DELIBERA_COPIA_LABEL =
+  "Copia conforme all’originale per uso amministrativo, ripresa dall’Albo Pretorio del Comune di Siena";
 
 export function getBando(): Bando {
   return loadCarriera().bando;

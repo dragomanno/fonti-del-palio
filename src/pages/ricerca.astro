@@ -10,8 +10,14 @@
  */
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { loadIndex } from "../lib/corpus";
+import { getGiustizia } from "../lib/carriera";
 
 const index = loadIndex();
+// Le unità documentali sono i frammenti del corpus del Protocollo Equino
+// (indice di contenuto), non le pagine indicizzate da Pagefind: le schede
+// delle Carriere e della giustizia paliesca si aggiungono a parte. Il totale
+// delle pagine indicizzate si legge dall'indice Pagefind generato in build.
+const delibere = getGiustizia().delibere.length;
 ---
 
 <BaseLayout
@@ -33,9 +39,11 @@ const index = loadIndex();
       <div id="search" class="search-mount"></div>
 
       <p class="text-muted" style="max-width: var(--measure); margin-top: var(--space-3);">
-        La ricerca copre {index.chunkCount} unità documentali del corpus del Protocollo Equino
-        e le schede documentarie delle Carriere del 2026, della giustizia paliesca, del Regolamento
-        per il Palio e del Bando di Violante. Funziona interamente nel browser su un indice statico: nessuna
+        La ricerca copre le {index.chunkCount} unità documentali del corpus del Protocollo Equino
+        e le schede documentarie delle Carriere del 2026, della giustizia paliesca ({delibere} delibere),
+        del Regolamento per il Palio e del Bando di Violante.<span id="indice-pagine" hidden>
+        In tutto, l'indice comprende <strong data-pagine></strong> pagine del sito.</span>
+        Funziona interamente nel browser su un indice statico: nessuna
         interrogazione lascia questo sito, nessun tracciamento, nessun servizio esterno.
       </p>
     </div>
@@ -80,6 +88,33 @@ const index = loadIndex();
   // Pagefind pubblica la propria UI fra gli asset statici generati sopra dist/.
   // In dev quell'indice non esiste: in quel caso mostriamo il fallback
   // navigabile invece di lasciare la pagina muta.
+  // Totale delle pagine indicizzate, letto dal manifesto generato da Pagefind
+  // (pagefind-entry.json): cresce con il corpus senza essere scritto a mano.
+  // Se il manifesto manca (modalità sviluppo) la frase resta nascosta.
+  async function showPageCount() {
+    const box = document.querySelector<HTMLElement>("#indice-pagine");
+    const slot = box?.querySelector<HTMLElement>("[data-pagine]");
+    if (!box || !slot) return;
+    try {
+      const res = await fetch("/pagefind/pagefind-entry.json");
+      if (!res.ok) return;
+      const entry = (await res.json()) as {
+        languages?: Record<string, { page_count?: number }>;
+      };
+      const total = Object.values(entry.languages ?? {}).reduce(
+        (n, l) => n + (l.page_count ?? 0),
+        0
+      );
+      if (total > 0) {
+        slot.textContent = String(total);
+        box.hidden = false;
+      }
+    } catch {
+      /* manifesto non disponibile: nessun numero mostrato */
+    }
+  }
+  showPageCount();
+
   async function mountSearch() {
     const mount = document.querySelector("#search");
     const fallback = document.querySelector("#search-fallback");

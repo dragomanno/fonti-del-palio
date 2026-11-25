@@ -47,7 +47,7 @@ const ROTTE = new Set(PAGINE.map(rottaDi));
 // ---------------------------------------------------------------------------
 
 const VOCI_PRIMO_LIVELLO = [
-  "Palio 16 agosto 2026",
+  "Palio 18 agosto 2026",
   "Documenti fondamentali",
   "Protocollo Equino",
   "Ordinanze e atti",
@@ -179,11 +179,17 @@ test("l'indice di ricerca e' stato generato e copre le rotte nuove", () => {
 // Home
 // ---------------------------------------------------------------------------
 
-test("la Home distingue la Carriera in corso dal corpus di lunga durata", () => {
+test("la Home distingue la Carriera dell'agosto 2026 dal corpus di lunga durata", () => {
+  // Dal 25 novembre 2026 la Carriera non e' piu' "in corso": la fascia la
+  // indica con la data effettiva, ma l'avvertenza sulla validita' circoscritta
+  // degli atti di Carriera resta obbligatoria.
   const html = readFileSync(join(DIST, "index.html"), "utf8");
-  assert.ok(html.includes("Carriera in corso"), "manca la fascia della Carriera in corso");
   assert.ok(
-    html.includes("validità circoscritta al Palio"),
+    html.includes("Carriera dell'agosto 2026</span>"),
+    "manca la fascia della Carriera dell'agosto 2026",
+  );
+  assert.ok(
+    /validità circoscritta alla\s+Carriera dell'agosto 2026/.test(html),
     "manca l'avvertenza sulla validità circoscritta degli atti di Carriera",
   );
   for (const href of [

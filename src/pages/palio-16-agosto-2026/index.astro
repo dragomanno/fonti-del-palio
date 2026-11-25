@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import NotaDocumentaria from "../../components/NotaDocumentaria.astro";
+import NotaRinvioAgosto2026 from "../../components/NotaRinvioAgosto2026.astro";
 import { loadCarriera, listAttiPubblicati, listAtti, listManifesti } from "../../lib/carriera";
 
 const carriera = loadCarriera();
@@ -12,7 +13,7 @@ const totaleFasiOrari = carriera.orari.giorni.reduce((n, g) => n + g.fasi.length
 
 /**
  * La rotta e' intenzionalmente nominata sulla singola Carriera e non su un
- * generico "Palio 2026": la Carriera del 16 agosto e' un evento distinto da
+ * generico "Palio 2026": la Carriera di agosto e' un evento distinto da
  * quella di luglio, con atti propri. La struttura resta riutilizzabile per le
  * Carriere successive perche' ogni contenuto proviene dall'indice generato,
  * non dal codice della pagina.
@@ -47,7 +48,7 @@ const sezioni = [
     ordinale: "04",
     titolo: "Tutti gli orari della Carriera",
     sommario:
-      "Il calendario operativo pubblicato dal Comune di Siena il 9 agosto 2026, dalla stesura del tufo del 9 agosto alla mossa del Palio del 16 agosto.",
+      "Il calendario operativo pubblicato dal Comune di Siena il 9 agosto 2026, dalla stesura del tufo del 9 agosto al giorno del Palio, allora previsto per il 16 agosto.",
     meta: `${carriera.orari.giorni.length} giornate · ${totaleFasiOrari} fasi orarie`,
   },
   {
@@ -78,18 +79,18 @@ const sezioni = [
 ---
 
 <BaseLayout
-  title="Palio del 16 agosto 2026"
-  description="Ordinanze, atti, disciplina di accesso e sicurezza e guida pratica per la Carriera del 16 agosto 2026, con rinvio agli atti originali del Comune di Siena."
+  title="Palio del 18 agosto 2026"
+  description="Ordinanze, atti, disciplina di accesso e sicurezza e guida pratica per la Carriera del 18 agosto 2026, con rinvio agli atti originali del Comune di Siena."
   activePath="/palio-16-agosto-2026"
 >
   <section class="section" style="padding-block: var(--space-8) var(--space-4);">
     <div class="wrap">
-      <span class="section-number">Carriera del 16 agosto 2026</span>
+      <span class="section-number">Carriera del 18 agosto 2026</span>
       <h1 class="text-title" style="font-size: var(--text-title); max-width: 22ch;">
         Gli atti della Carriera, prima delle risposte.
       </h1>
       <p class="text-muted" style="max-width: var(--measure); margin-top: var(--space-2);">
-        Questa sezione raccoglie gli atti acquisiti per il Palio del 16 agosto 2026 e la disciplina
+        Questa sezione raccoglie gli atti acquisiti per il Palio del 18 agosto 2026 e la disciplina
         che ne deriva. Ogni affermazione rinvia all'atto che la stabilisce: dove un atto non è stato
         acquisito, la pagina lo dichiara invece di colmare il vuoto.
       </p>
@@ -102,6 +103,7 @@ const sezioni = [
         · {carriera.tratta.cavalli.length} ammessi alla Tratta (elenco finale)
         · {carriera.orari.giorni.length} giornate del calendario orari
       </p>
+      <NotaRinvioAgosto2026 />
     </div>
   </section>
 

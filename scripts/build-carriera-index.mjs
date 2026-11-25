@@ -668,8 +668,8 @@ export function buildIndex() {
     schema: "carriera/1",
     carriera: {
       slug: "palio-16-agosto-2026",
-      titolo: "Palio del 16 agosto 2026",
-      data: "2026-08-16",
+      titolo: "Palio del 18 agosto 2026",
+      data: "2026-08-18",
     },
     atti,
     manifesti: buildManifesti(kb09),

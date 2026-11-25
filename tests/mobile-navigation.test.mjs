@@ -140,7 +140,7 @@ test("l'header resta escluso dall'indice Pagefind", () => {
 test("i gruppi e i link originari della navigazione sono ancora presenti", () => {
   const header = headerOf(HOME);
   for (const voce of [
-    "Palio 16 agosto 2026",
+    "Palio 18 agosto 2026",
     "Documenti fondamentali",
     "Protocollo Equino",
     "Ordinanze e atti",

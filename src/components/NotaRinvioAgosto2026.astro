@@ -1,0 +1,41 @@
+---
+/**
+ * Nota sulla data effettiva della Carriera dell'agosto 2026.
+ *
+ * Il Regolamento per il Palio (art. 1) fissa la Carriera ordinaria al 16
+ * agosto. Nel 2026 la corsa e' stata rinviata due volte per maltempo ed e'
+ * stata corsa martedi' 18 agosto. Il sito usa la data effettiva nei titoli e
+ * nelle etichette editoriali; gli atti, i manifesti e i documenti operativi
+ * adottati prima della corsa restano trascritti come pubblicati e continuano
+ * percio' a riportare il 16 agosto. La rotta storica `/palio-16-agosto-2026/`
+ * non cambia, per non spezzare i collegamenti gia' pubblicati.
+ *
+ * Le fonti sono le comunicazioni del Comune di Siena: collegamenti
+ * `rel="nofollow"` per regola del progetto.
+ */
+import NotaDocumentaria from "./NotaDocumentaria.astro";
+
+const FONTI = {
+  primoRinvio: "https://www.comune.siena.it/novita/rimandato-il-palio-del-16-agosto-2026",
+  secondoRinvio:
+    "https://www.comune.siena.it/novita/ancora-maltempo-rimandato-di-nuovo-il-palio-del-16-agosto-2026",
+  esito: "https://www.comune.siena.it/index.php/novita/palio-18-agosto-2026-vince-il-nicchio",
+};
+---
+
+<NotaDocumentaria titolo="Data della Carriera: 18 agosto 2026" variante="avvertenza">
+  <p>
+    La Carriera ordinaria dell'agosto si corre il 16 agosto (<a
+      href="/regolamento-per-il-palio/#articolo-1">art. 1 del Regolamento per il Palio</a
+    >). Nel 2026 la pioggia l'ha fatta slittare due volte: il Comune di Siena ha comunicato il
+    <a href={FONTI.primoRinvio} rel="nofollow noopener">primo rinvio domenica 16 agosto</a> e il
+    <a href={FONTI.secondoRinvio} rel="nofollow noopener">secondo rinvio lunedì 17 agosto</a>. La
+    Carriera <a href={FONTI.esito} rel="nofollow noopener">si è svolta martedì 18 agosto 2026</a>.
+  </p>
+  <p>
+    Per questo il sito indica la Carriera con la data effettiva, il 18 agosto 2026. Gli atti, i
+    manifesti e i documenti operativi adottati prima della corsa restano trascritti come pubblicati
+    e riportano il 16 agosto: è la data prevista al momento della loro adozione, non un errore di
+    trascrizione. L'indirizzo storico di questa sezione resta invariato.
+  </p>
+</NotaDocumentaria>

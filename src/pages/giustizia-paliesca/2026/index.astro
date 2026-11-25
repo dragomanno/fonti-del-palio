@@ -1,0 +1,202 @@
+---
+/**
+ * Giustizia paliesca 2026: pagina d'anno.
+ *
+ * Raccoglie le Carriere dell'anno e spiega le sanzioni con il solo testo del
+ * Regolamento vigente (artt. 97, 98, 99 e 101). Il Regolamento elenca le
+ * sanzioni in ordine di gravita' e ne disciplina la recidiva, ma non ne
+ * definisce il contenuto: la pagina non aggiunge definizioni proprie.
+ */
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import NotaDocumentaria from "../../../components/NotaDocumentaria.astro";
+import {
+  getGiustizia,
+  delibereByCarriera,
+  carrieraGiustiziaHref,
+} from "../../../lib/carriera";
+import { renderDocumentaryMarkdown } from "../../../lib/markdown";
+import "../../../styles/giustizia.css";
+
+const giustizia = getGiustizia();
+const delibere = giustizia.delibere.filter((d) => d.data.endsWith("/2026"));
+const sanzioni = delibere.filter((d) => d.esito !== "archiviazione");
+const archiviazioni = delibere.filter((d) => d.esito === "archiviazione");
+const pagine = delibere.reduce((n, d) => n + d.pagine, 0);
+const lacune = renderDocumentaryMarkdown(giustizia.lacune);
+const COMUNICATO = "https://www.comune.siena.it/novita/palio-deliberate-le-sanzioni-le-carriere-2026";
+
+const carriere = giustizia.carriere
+  .filter((c) => c.data.startsWith("2026"))
+  .map((c, i) => {
+    const elenco = delibereByCarriera(c.slug);
+    const s = elenco.filter((d) => d.esito !== "archiviazione").length;
+    const a = elenco.length - s;
+    return {
+      href: carrieraGiustiziaHref(c),
+      ordinale: String(i + 1).padStart(2, "0"),
+      titolo: c.titolo,
+      sommario: [...new Set(elenco.map((d) => d.destinatario))].join(" · "),
+      meta: `${elenco.length} delibere · ${s} sanzioni${a ? ` · ${a} archiviazione` : ""}`,
+    };
+  });
+---
+
+<BaseLayout
+  title="Giustizia paliesca 2026"
+  description="Le deliberazioni della Giunta comunale di Siena del 24 novembre 2026 sulle sanzioni per le Carriere del 3 luglio e del 18 agosto 2026, con il testo del Regolamento su censura, deplorazione, diffida e ammonizione."
+  activePath="/giustizia-paliesca/2026"
+>
+  <section class="section" style="padding-block: var(--space-8) var(--space-4);">
+    <div class="wrap">
+      <nav class="gp-crumbs" aria-label="Percorso" data-pagefind-ignore>
+        <a href="/giustizia-paliesca/">Giustizia paliesca</a>
+        <span aria-hidden="true">/</span>
+        <span>2026</span>
+      </nav>
+      <span class="section-number">Giustizia paliesca</span>
+      <h1 class="gp-h1">Le sanzioni per le Carriere del 2026</h1>
+      <p class="text-muted gp-lead">
+        Il 24 novembre 2026 la Giunta comunale di Siena ha deliberato sui procedimenti disciplinari
+        relativi alle due Carriere dell'anno. Qui sono raccolte le quindici deliberazioni, ciascuna
+        con il PDF in copia conforme ripreso dall'Albo Pretorio, il digest di integrità e una scheda
+        documentaria.
+      </p>
+      <p class="text-caption" style="margin-top: var(--space-2);">
+        {delibere.length} delibere · {sanzioni.length} sanzioni · {archiviazioni.length} archiviazione
+        · {pagine} pagine · Albo Pretorio dal 25/11/2026 al 10/12/2026
+      </p>
+
+      <ul class="gp-list">
+        {
+          carriere.map((c) => (
+            <li>
+              <a href={c.href} class="gp-list__item">
+                <span class="gp-list__ordinal">{c.ordinale}</span>
+                <span class="gp-list__body">
+                  <span class="gp-list__title">{c.titolo}</span>
+                  <span class="gp-list__summary">{c.sommario}</span>
+                  <span class="gp-list__meta">{c.meta}</span>
+                </span>
+                <span class="gp-list__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-6);">
+    <div class="wrap">
+      <h2 class="gp-h2" id="sanzioni-nel-regolamento">Le sanzioni nel Regolamento per il Palio</h2>
+      <p style="max-width: var(--measure);">
+        Il Regolamento elenca le punizioni in due scale, una per le Contrade e una per i fantini,
+        applicate a seconda della gravità dell'infrazione. Non ne definisce il contenuto: ne fissa l'ordine, la
+        procedura e gli effetti della recidiva. Le citazioni che seguono sono tratte dal <a
+          href="/regolamento-per-il-palio/">testo vigente</a
+        >.
+      </p>
+
+      <div class="gp-scala">
+        <div class="gp-scala__box">
+          <h3 class="gp-h3">Contrade · <a href="/regolamento-per-il-palio/#articolo-97">art. 97</a></h3>
+          <ol type="a">
+            <li><strong>Censura</strong></li>
+            <li><strong>Deplorazione</strong></li>
+            <li>
+              Esclusione dal partecipare ad uno o più Palii, ordinari e straordinari, sino ad un
+              periodo massimo di dieci anni, fermo rimanendo l’obbligo di far intervenire la
+              Comparsa al Corteo Storico
+            </li>
+          </ol>
+          <p class="text-caption" style="margin-top: var(--space-2);">
+            Recidiva (<a href="/regolamento-per-il-palio/#articolo-98">art. 98</a>): tre ulteriori
+            censure entro i cinque Palii successivi comportano «automaticamente la sanzione della
+            deplorazione»; due ulteriori deplorazioni entro i nove Palii successivi comportano
+            «automaticamente la sanzione dell’esclusione dalle prove e dal Palio immediatamente
+            successivi».
+          </p>
+        </div>
+        <div class="gp-scala__box">
+          <h3 class="gp-h3">Fantini · <a href="/regolamento-per-il-palio/#articolo-99">art. 99</a></h3>
+          <ol type="a">
+            <li><strong>Diffida</strong></li>
+            <li><strong>Ammonizione</strong></li>
+            <li>
+              Esclusione per un tempo determinato o a vita, dal montare cavalli di Contrade tanto per
+              le prove quanto per il Palio
+            </li>
+          </ol>
+          <p class="text-caption" style="margin-top: var(--space-2);">
+            Recidiva (art. 99): tre ulteriori diffide entro quattro Palii effettivamente disputati
+            comportano «automaticamente la sanzione dell’ammonizione», e nello stesso periodo ogni
+            ulteriore diffida comporta un'ammonizione; una nuova analoga infrazione
+            entro tre Palii dall'ammonizione comporta «automaticamente la sanzione dell’esclusione
+            dalle prove e dal Palio immediatamente successivo». Diffida e ammonizione «decadono
+            automaticamente» se il fantino per cinque anni consecutivi non risulta presente né per
+            le prove, né per il Palio.
+          </p>
+        </div>
+      </div>
+
+      <h3 class="gp-h3">La responsabilità della Contrada</h3>
+      <p style="max-width: var(--measure);">
+        Molte delibere sanzionano insieme il fantino e la Contrada per la stessa condotta. Il
+        fondamento è l'<a href="/regolamento-per-il-palio/#articolo-101">art. 101, comma 2</a>,
+        riferito alla Contrada: «È altresì responsabile del contegno della propria Comparsa, del Fantino e dei
+        propri contradaioli quando sia stato tale da provocare incidenti o tumulti o da turbare il
+        regolare svolgimento delle prove o del Palio».
+      </p>
+
+      <h3 class="gp-h3">La procedura</h3>
+      <ol style="max-width: var(--measure);">
+        <li>
+          L'Assessore Delegato, «basandosi esclusivamente sulla Relazione dei Deputati della Festa»,
+          notifica gli addebiti con atto motivato. Nel 2026 le contestazioni sono datate 19 ottobre.
+        </li>
+        <li>Entro sette giorni Contrade e fantini possono presentare documenti e memorie difensive.</li>
+        <li>
+          L'Assessore Delegato valuta «se archiviare l’addebito o proporre i provvedimenti
+          sanzionatori». Nel 2026 le proposte sono datate 5 novembre.
+        </li>
+        <li>Entro dieci giorni dalla proposta si possono inviare memorie alla Giunta comunale.</li>
+        <li>
+          La Giunta delibera «senza la partecipazione dell’Assessore delegato», con motivazione da
+          notificare agli interessati. Nel 2026 la seduta è del 24 novembre.
+        </li>
+      </ol>
+      <p style="max-width: var(--measure);">
+        Sul ricorso il Regolamento è esplicito: «Avverso le delibere della Giunta Comunale che
+        devono essere adottate entro la chiusura dell’anno contradaiolo (30 novembre di ogni anno)
+        non è ammesso alcun tipo di ricorso» (<a href="/regolamento-per-il-palio/#articolo-98"
+          >art. 98</a
+        >; formula analoga all'art. 99 per i fantini). Di ogni punizione è data comunicazione scritta
+        al Magistrato delle Contrade.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-12);">
+    <div class="wrap">
+      <NotaDocumentaria titolo="Comunicato del Comune e atti non acquisiti" variante="avvertenza">
+        <p>
+          Il Comune di Siena ha dato notizia delle sanzioni con il comunicato <a
+            href={COMUNICATO}
+            rel="nofollow noopener">«Palio, deliberate le sanzioni per le Carriere 2026»</a
+          > del 25 novembre 2026. Il riscontro destinatario per destinatario con i PDF non ha rilevato
+          divergenze; in caso di divergenza prevarrebbe il PDF.
+        </p>
+        <div set:html={lacune} />
+      </NotaDocumentaria>
+
+      <NotaDocumentaria titolo="Natura di questa sezione" variante="provenienza">
+        <p>
+          Il Palio è un'istituzione civica, sociale e religiosa della città di Siena. Questo sito è
+          un progetto documentale indipendente: non è un servizio del Comune di Siena e non ne
+          rappresenta la posizione. Per gli effetti giuridici fa fede esclusivamente l'atto
+          originale. <a href="/metodologia">Leggi la metodologia</a>.
+        </p>
+      </NotaDocumentaria>
+    </div>
+  </section>
+</BaseLayout>

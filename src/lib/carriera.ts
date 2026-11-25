@@ -258,6 +258,10 @@ export interface Delibera {
   fondamento: string;
   normaRichiamata: string;
   responsabilitaContrada: string;
+  /** Estratto testuale del dispositivo, in Markdown (blockquote) come in KB 15. */
+  dispositivo: string;
+  /** Estratto testuale della parte motiva, solo se la scheda lo riporta. */
+  motivazione: string | null;
   contestazione: string;
   proposta: string;
   pagine: number;
@@ -458,6 +462,29 @@ export function deliberaHref(d: Delibera): string {
 /** URL pubblico della pagina di una Carriera nella giustizia paliesca. */
 export function carrieraGiustiziaHref(c: CarrieraGiustizia): string {
   return `/giustizia-paliesca/${c.data.slice(0, 4)}/${c.slug}/`;
+}
+
+/**
+ * Rende un riferimento normativo del registro (es. «art. 101, c. 2») come HTML,
+ * con il numero d'articolo collegato all'articolo del Regolamento vigente.
+ * Il testo resta invariato: cambia solo il markup.
+ */
+export function linkArticoli(testo: string): string {
+  const escaped = testo
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+  return escaped.replace(
+    /art\. (\d+)/g,
+    (m, n) => `<a href="/regolamento-per-il-palio/#articolo-${n}">${m}</a>`,
+  );
+}
+
+/** Data della delibera in forma estesa, dalla forma gg/mm/aaaa del registro. */
+export function dataEstesa(data: string): string {
+  const mesi = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"];
+  const [g, m, a] = data.split("/").map(Number);
+  return `${g} ${mesi[m - 1]} ${a}`;
 }
 
 /** Etichetta della copia ripubblicata, uguale in ogni pagina. */

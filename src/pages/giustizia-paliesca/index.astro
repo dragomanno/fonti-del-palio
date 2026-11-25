@@ -1,0 +1,74 @@
+---
+/**
+ * Giustizia paliesca: indice per anno.
+ *
+ * Ogni anno ha una propria pagina (`/giustizia-paliesca/AAAA/`) con le
+ * Carriere e le deliberazioni. Gli anni sono derivati dall'indice generato.
+ */
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NotaDocumentaria from "../../components/NotaDocumentaria.astro";
+import { getGiustizia } from "../../lib/carriera";
+import "../../styles/giustizia.css";
+
+const giustizia = getGiustizia();
+const anni = [...new Set(giustizia.carriere.map((c) => c.data.slice(0, 4)))]
+  .sort()
+  .reverse()
+  .map((anno) => {
+    const delibere = giustizia.delibere.filter((d) => d.data.endsWith(`/${anno}`));
+    const sanzioni = delibere.filter((d) => d.esito !== "archiviazione").length;
+    const archiviazioni = delibere.length - sanzioni;
+    const carriere = giustizia.carriere.filter((c) => c.data.startsWith(anno)).map((c) => c.titolo);
+    return {
+      anno,
+      sommario: carriere.join(" · "),
+      meta: `${delibere.length} delibere · ${sanzioni} sanzioni${archiviazioni ? ` · ${archiviazioni} archiviazione` : ""}`,
+    };
+  });
+---
+
+<BaseLayout
+  title="Giustizia paliesca"
+  description="Le deliberazioni della Giunta comunale di Siena sulle sanzioni a Contrade e fantini dopo ogni Carriera, ordinate per anno, con PDF in copia conforme e digest di integrità."
+  activePath="/giustizia-paliesca"
+>
+  <section class="section" style="padding-block: var(--space-8) var(--space-6);">
+    <div class="wrap">
+      <span class="section-number">Giustizia paliesca</span>
+      <h1 class="gp-h1">Le sanzioni dopo la Carriera</h1>
+      <p class="text-muted gp-lead">
+        Dopo ogni Carriera l'Assessore Delegato può contestare addebiti a Contrade e fantini e
+        proporre sanzioni; la Giunta comunale delibera entro la chiusura dell'anno contradaiolo, il 30
+        novembre (<a href="/regolamento-per-il-palio/#articolo-98">artt. 98</a> e <a
+          href="/regolamento-per-il-palio/#articolo-99">99 del Regolamento</a
+        >). Questa sezione raccoglie le deliberazioni, anno per anno, come fonti primarie.
+      </p>
+
+      <ul class="gp-list">
+        {
+          anni.map((a) => (
+            <li>
+              <a href={`/giustizia-paliesca/${a.anno}/`} class="gp-list__item">
+                <span class="gp-list__ordinal">{a.anno}</span>
+                <span class="gp-list__body">
+                  <span class="gp-list__title">Giustizia paliesca {a.anno}</span>
+                  <span class="gp-list__summary">{a.sommario}</span>
+                  <span class="gp-list__meta">{a.meta}</span>
+                </span>
+                <span class="gp-list__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+
+      <NotaDocumentaria titolo="Perimetro" variante="avvertenza">
+        <p>
+          La sezione comprende le deliberazioni effettivamente acquisite. Gli anni precedenti al
+          2026 non sono ancora nel corpus: la loro assenza non significa che non vi siano state
+          sanzioni.
+        </p>
+      </NotaDocumentaria>
+    </div>
+  </section>
+</BaseLayout>

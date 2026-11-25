@@ -643,6 +643,24 @@ export const ESITI_GIUSTIZIA = {
   fantino: ["diffida", "ammonizione"],
 };
 
+/**
+ * Il blockquote che segue un'etichetta in grassetto della scheda, come testo
+ * Markdown invariato. Serve alle pagine di Carriera per riportare il dispositivo
+ * e la motivazione senza riscriverli.
+ */
+export function citazioneDopo(scheda, etichetta) {
+  const start = scheda.indexOf(`**${etichetta}**`);
+  if (start === -1) return null;
+  const righe = scheda.slice(start).split("\n").slice(1);
+  const out = [];
+  for (const riga of righe) {
+    if (riga.startsWith(">")) out.push(riga);
+    else if (riga.trim() === "" && out.length === 0) continue;
+    else break;
+  }
+  return out.length ? out.join("\n") : null;
+}
+
 export function deliberaSlug(id) {
   const m = id.match(/^DEL-(\d{4})-GC-(\d+)$/);
   if (!m) throw new Error(`ID delibera non riconosciuto: ${id}`);
@@ -695,6 +713,9 @@ function buildGiustizia(kb15) {
     if (!scheda) throw new Error(`scheda documentaria mancante per ${id}`);
     const oggetto = scheda.match(/^- \*\*Oggetto:\*\* «(.+)»$/m);
     if (!oggetto) throw new Error(`oggetto mancante nella scheda di ${id}`);
+    const dispositivo = citazioneDopo(scheda, "Dispositivo (estratto testuale):");
+    if (!dispositivo) throw new Error(`estratto del dispositivo mancante nella scheda di ${id}`);
+    const motivazione = citazioneDopo(scheda, "Motivazione (estratto testuale dalla parte motiva):");
     return {
       id,
       slug: deliberaSlug(id),
@@ -709,6 +730,8 @@ function buildGiustizia(kb15) {
       fondamento: disp[2],
       normaRichiamata: disp[3],
       responsabilitaContrada: disp[4],
+      dispositivo,
+      motivazione,
       contestazione: rich[1],
       proposta: rich[2],
       pagine: Number(pagine),

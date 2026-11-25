@@ -1,0 +1,137 @@
+---
+/**
+ * Scheda documentaria di una deliberazione della Giunta comunale (KB 15).
+ *
+ * Gli estremi provengono dal registro; la scheda e' resa dal Markdown di KB 15
+ * senza riscritture. Il PDF e' la copia conforme ripresa dall'Albo Pretorio,
+ * ripubblicata byte per byte: il digest mostrato e' quello del file servito.
+ */
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import NotaDocumentaria from "../../../components/NotaDocumentaria.astro";
+import {
+  listDelibere,
+  getGiustizia,
+  carrieraGiustiziaHref,
+  deliberaHref,
+  dataEstesa,
+  DELIBERA_COPIA_LABEL,
+  type Delibera,
+  type CarrieraGiustizia,
+} from "../../../lib/carriera";
+import { renderDocumentaryMarkdown } from "../../../lib/markdown";
+import "../../../styles/giustizia.css";
+
+export function getStaticPaths() {
+  const delibere = listDelibere().filter((d) => d.data.endsWith("/2026"));
+  const carriere = getGiustizia().carriere;
+  return delibere.map((d, i) => ({
+    params: { delibera: d.slug },
+    props: {
+      d,
+      carriera: carriere.find((c) => c.slug === d.carriera),
+      prev: i > 0 ? delibere[i - 1] : null,
+      next: i < delibere.length - 1 ? delibere[i + 1] : null,
+    },
+  }));
+}
+
+interface Props {
+  d: Delibera;
+  carriera: CarrieraGiustizia;
+  prev: Delibera | null;
+  next: Delibera | null;
+}
+
+const { d, carriera, prev, next } = Astro.props as Props;
+const scheda = renderDocumentaryMarkdown(d.scheda);
+const consistenza = `${d.pagine} pagine · ${d.byte.toLocaleString("it-IT")} byte`;
+---
+
+<BaseLayout
+  title={`Delibera n. ${d.numero}/2026 — ${d.destinatario}, ${d.esito}`}
+  description={`Delibera della Giunta comunale di Siena n. ${d.numero} del ${dataEstesa(d.data)}: ${d.esito} per ${d.destinatario}, ${carriera.titolo}. Estremi, Albo Pretorio, digest e PDF in copia conforme.`}
+  activePath="/giustizia-paliesca/2026"
+>
+  <section class="section" style="padding-block: var(--space-6) var(--space-3);">
+    <div class="wrap">
+      <nav class="gp-crumbs" aria-label="Percorso" data-pagefind-ignore>
+        <a href="/giustizia-paliesca/">Giustizia paliesca</a>
+        <span aria-hidden="true">/</span>
+        <a href="/giustizia-paliesca/2026/">2026</a>
+        <span aria-hidden="true">/</span>
+        <a href={carrieraGiustiziaHref(carriera)}>{carriera.titolo}</a>
+        <span aria-hidden="true">/</span>
+        <span>Delibera n. {d.numero}</span>
+      </nav>
+      <span class="section-number mono">{d.id}</span>
+      <h1 class="gp-h1">Delibera n. {d.numero} del {dataEstesa(d.data)}</h1>
+      <p class="text-muted gp-lead">«{d.oggetto}»</p>
+
+      <dl class="gp-estremi">
+        <div><dt>Organo</dt><dd>{d.organo} di Siena</dd></div>
+        <div><dt>Data</dt><dd>{d.data}</dd></div>
+        <div><dt>Carriera</dt><dd>{carriera.titolo}</dd></div>
+        <div><dt>Destinatario</dt><dd>{d.destinatario} ({d.natura})</dd></div>
+        <div><dt>Esito</dt><dd class="gp-esito">{d.esito}</dd></div>
+        <div>
+          <dt>Albo Pretorio</dt>
+          <dd>n. {d.albo.numero}, dal {d.albo.dal} al {d.albo.al}</dd>
+        </div>
+        <div><dt>Consistenza</dt><dd>{consistenza}</dd></div>
+        <div class="gp-estremi--largo">
+          <dt>SHA-256 del file pubblicato</dt>
+          <dd class="mono gp-digest">{d.sha256}</dd>
+        </div>
+      </dl>
+
+      <p class="gp-azioni">
+        <a class="btn btn--primary" href={d.pdf} download>Scarica il PDF</a>
+        <span class="gp-azioni__nota">{DELIBERA_COPIA_LABEL}. {d.pagine} pagine · PDF</span>
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block: 0 var(--space-8);">
+    <div class="wrap">
+      <h2 class="gp-h2" style="margin-top: 0;">Scheda documentaria</h2>
+      <div class="prose" set:html={scheda} />
+
+      <NotaDocumentaria titolo="Provenienza e limiti" variante="provenienza">
+        <p>
+          Copia fornita dal curatore, Fabrizio Gabrielli, il 25 novembre 2026, ripresa dall'Albo
+          Pretorio online del Comune di Siena. Il documento reca la dicitura «copia conforme
+          all’originale per uso amministrativo» ed è ripubblicato senza modifiche: il digest
+          SHA-256 consente di verificare che la copia consultata coincida con quella acquisita.
+        </p>
+        <p>
+          La scheda riproduce quanto verificato sul file. Non è una parafrasi autorizzata né
+          un'interpretazione: per gli effetti giuridici fa fede esclusivamente l'atto originale. Il
+          progetto non è affiliato al Comune di Siena. Per le sanzioni e la procedura vedi <a
+            href="/giustizia-paliesca/2026/#sanzioni-nel-regolamento">le sanzioni nel Regolamento</a
+          >.
+        </p>
+      </NotaDocumentaria>
+
+      <nav class="gp-pager" aria-label="Navigazione fra le delibere" data-pagefind-ignore>
+        {
+          prev ? (
+            <a href={deliberaHref(prev)}>
+              <span class="gp-pager__dir">← Delibera precedente</span>
+              <span class="gp-pager__title">n. {prev.numero}/2026</span>
+            </a>
+          ) : (
+            <span />
+          )
+        }
+        {
+          next && (
+            <a href={deliberaHref(next)} class="gp-pager__next">
+              <span class="gp-pager__dir">Delibera successiva →</span>
+              <span class="gp-pager__title">n. {next.numero}/2026</span>
+            </a>
+          )
+        }
+      </nav>
+    </div>
+  </section>
+</BaseLayout>

@@ -2,13 +2,14 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import NotaDocumentaria from "../../components/NotaDocumentaria.astro";
 import NotaRinvioAgosto2026 from "../../components/NotaRinvioAgosto2026.astro";
-import { loadCarriera, listAttiPubblicati, listAtti, listManifesti } from "../../lib/carriera";
+import { loadCarriera, listAttiPubblicati, listAtti, listManifesti, delibereByCarriera } from "../../lib/carriera";
 
 const carriera = loadCarriera();
 const atti = listAtti();
 const pubblicati = listAttiPubblicati();
 const pagine = pubblicati.reduce((n, a) => n + a.pagine, 0);
 const manifesti = listManifesti();
+const delibereAgosto = delibereByCarriera("palio-18-agosto-2026");
 const totaleFasiOrari = carriera.orari.giorni.reduce((n, g) => n + g.fasi.length, 0);
 
 /**
@@ -74,6 +75,14 @@ const sezioni = [
     sommario:
       "Il registro degli atti e dei manifesti a stampa acquisiti, ciascuno con estremi, digest di integrità e, dove ripubblicabile, il PDF originale.",
     meta: `${atti.length} atti · ${manifesti.length} manifesti · ${pubblicati.length + manifesti.filter((m) => m.ripubblicabile).length} PDF`,
+  },
+  {
+    href: "/giustizia-paliesca/2026/palio-18-agosto-2026/",
+    ordinale: "08",
+    titolo: "Giustizia paliesca",
+    sommario:
+      "Le sanzioni deliberate dalla Giunta comunale il 24 novembre 2026 per questa Carriera, con le delibere in copia conforme ripresa dall'Albo Pretorio.",
+    meta: `${delibereAgosto.length} delibere · ${delibereAgosto.filter((d) => d.esito !== "archiviazione").length} sanzioni`,
   },
 ];
 ---

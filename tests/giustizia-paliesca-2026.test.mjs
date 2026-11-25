@@ -224,3 +224,29 @@ test("le pagine non espongono i nomi dei componenti della Giunta", () => {
     for (const n of nomi) assert.ok(!corpo.includes(n), `${r}: compare «${n}»`);
   }
 });
+
+test("la pagina di ricerca dichiara le delibere e il totale delle pagine indicizzate", () => {
+  const pagina = html("ricerca");
+  assert.match(pagina, /della giustizia paliesca \(15 delibere\)/);
+  assert.match(pagina, /id="indice-pagine" hidden/);
+  assert.ok(pagina.includes("/pagefind/pagefind-entry.json"), "lettura del manifesto Pagefind assente");
+  // Il totale mostrato coincide con le pagine marcate come indicizzabili.
+  const entry = JSON.parse(readFileSync(join(DIST, "pagefind", "pagefind-entry.json"), "utf8"));
+  const totale = Object.values(entry.languages).reduce((n, l) => n + l.page_count, 0);
+  const pagine = [];
+  const visita = (dir) => {
+    for (const voce of readdirSync(dir, { withFileTypes: true })) {
+      const p = join(dir, voce.name);
+      if (voce.isDirectory()) visita(p);
+      else if (voce.name === "index.html" && readFileSync(p, "utf8").includes("data-pagefind-body")) pagine.push(p);
+    }
+  };
+  visita(DIST);
+  assert.equal(totale, pagine.length);
+});
+
+test("la card Ricerca della Home non presenta le unità documentali come pagine indicizzate", () => {
+  const pagina = html("");
+  assert.ok(!pagina.includes("unità indicizzate"));
+  assert.match(pagina, /\d+ unità documentali · \d+ atti · 15 delibere/);
+});

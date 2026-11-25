@@ -183,12 +183,26 @@ const sections = [
           <a class="btn btn--secondary" href="/giustizia-paliesca/2026/palio-18-agosto-2026/">Palio del 18 agosto 2026</a>
         </div>
       </div>
-      <dl class="aggiornamento__stats">
-        <div><dt>Delibere</dt><dd>{delibere.length}</dd></div>
-        <div><dt>Sanzioni</dt><dd>{sanzioni}</dd></div>
-        <div><dt>Archiviazioni</dt><dd>{archiviazioni}</dd></div>
-        <div><dt>3 luglio · 18 agosto</dt><dd>{delibereLuglio.length} · {delibereAgosto.length}</dd></div>
-      </dl>
+      <div class="aggiornamento__aside">
+        <dl class="aggiornamento__stats">
+          <div><dt>Delibere</dt><dd>{delibere.length}</dd></div>
+          <div><dt>Sanzioni</dt><dd>{sanzioni}</dd></div>
+          <div><dt>Archiviazioni</dt><dd>{archiviazioni}</dd></div>
+          <div><dt>3 luglio · 18 agosto</dt><dd>{delibereLuglio.length} · {delibereAgosto.length}</dd></div>
+        </dl>
+        <a href="/giustizia-paliesca/" class="aggiornamento__card" data-home-card="giustizia-fascia">
+          <div class="card card--accent">
+            <span class="section-number">Sezione</span>
+            <h3 class="text-heading">Giustizia paliesca</h3>
+            <p class="text-muted">
+              Le deliberazioni della Giunta comunale sulle sanzioni per le Carriere,
+              raccolte anno per anno.
+            </p>
+            <p class="text-caption aggiornamento__meta">2026 · {delibere.length} delibere</p>
+            <span class="link-arrow">Consulta</span>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -317,6 +331,26 @@ const sections = [
       grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
       gap: var(--space-8);
     }
+  }
+  .aggiornamento__aside {
+    display: grid;
+    gap: var(--space-3);
+    min-width: 0;
+  }
+  .aggiornamento__card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  .aggiornamento__card .text-heading {
+    font-size: var(--text-heading);
+  }
+  .aggiornamento__card .text-muted {
+    margin-bottom: var(--space-1);
+  }
+  .aggiornamento__meta {
+    margin-bottom: var(--space-2);
+    font-family: var(--font-mono);
   }
   .aggiornamento__stats {
     display: grid;

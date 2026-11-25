@@ -198,10 +198,20 @@ test("la Home mette in evidenza la giustizia paliesca 2026", () => {
 
 test("la griglia delle sezioni della Home ha la card Giustizia paliesca", () => {
   const pagina = html("");
-  const card = pagina.match(/<a href="\/giustizia-paliesca\/"[^>]*>\s*<div class="card card--accent"[\s\S]*?<\/a>/);
+  const card = pagina.match(/<a href="\/giustizia-paliesca\/" style=[^>]*>\s*<div class="card card--accent"[\s\S]*?<\/a>/);
   assert.ok(card, "card Giustizia paliesca assente dalla griglia");
   assert.match(card[0], /Giustizia paliesca/);
   assert.match(card[0], /15 delibere · 14 sanzioni · 1 archiviazione/);
+});
+
+test("la fascia d'aggiornamento della Home ha la card Giustizia paliesca", () => {
+  const pagina = html("");
+  const fascia = pagina.match(/<section class="section aggiornamento"[\s\S]*?<\/section>/);
+  assert.ok(fascia, "fascia d'aggiornamento assente");
+  const card = fascia[0].match(/<a href="\/giustizia-paliesca\/"[^>]*data-home-card="giustizia-fascia"[^>]*>[\s\S]*?<\/a>/);
+  assert.ok(card, "card Giustizia paliesca assente dalla fascia");
+  assert.match(card[0], /Giustizia paliesca/);
+  assert.match(card[0], /2026 · 15 delibere/);
 });
 
 test("le pagine non espongono i nomi dei componenti della Giunta", () => {

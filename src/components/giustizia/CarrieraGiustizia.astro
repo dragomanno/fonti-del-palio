@@ -1,0 +1,161 @@
+---
+/**
+ * Pagina di Carriera della giustizia paliesca.
+ *
+ * Tabella delle deliberazioni e, sotto, il dispositivo e la motivazione
+ * come estratti testuali di KB 15. Le colonne della tabella provengono dal
+ * registro e dal prospetto del dispositivo: la pagina non riformula l'esito
+ * e non deduce la Contrada di un fantino quando la delibera non la indica.
+ * Lo slot accoglie la nota sulla data effettiva della Carriera.
+ */
+import NotaDocumentaria from "../NotaDocumentaria.astro";
+import {
+  getGiustizia,
+  delibereByCarriera,
+  deliberaHref,
+  linkArticoli,
+} from "../../lib/carriera";
+import { renderDocumentaryMarkdown } from "../../lib/markdown";
+import "../../styles/giustizia.css";
+
+interface Props {
+  slug: string;
+}
+
+const { slug } = Astro.props as Props;
+const carriera = getGiustizia().carriere.find((c) => c.slug === slug);
+if (!carriera) throw new Error(`Carriera non presente in KB 15: ${slug}`);
+const delibere = delibereByCarriera(slug);
+const sanzioni = delibere.filter((d) => d.esito !== "archiviazione");
+const archiviazioni = delibere.filter((d) => d.esito === "archiviazione");
+const pagine = delibere.reduce((n, d) => n + d.pagine, 0);
+const anno = carriera.data.slice(0, 4);
+const motivi = delibere.map((d) => ({
+  d,
+  dispositivo: renderDocumentaryMarkdown(d.dispositivo),
+  motivazione: d.motivazione ? renderDocumentaryMarkdown(d.motivazione) : null,
+}));
+---
+
+<section class="section" style="padding-block: var(--space-6) var(--space-3);">
+  <div class="wrap">
+    <nav class="gp-crumbs" aria-label="Percorso" data-pagefind-ignore>
+      <a href="/giustizia-paliesca/">Giustizia paliesca</a>
+      <span aria-hidden="true">/</span>
+      <a href={`/giustizia-paliesca/${anno}/`}>{anno}</a>
+      <span aria-hidden="true">/</span>
+      <span>{carriera.titolo}</span>
+    </nav>
+    <span class="section-number">Giustizia paliesca {anno}</span>
+    <h1 class="gp-h1">Le sanzioni per il {carriera.titolo}</h1>
+    <p class="text-muted gp-lead">
+      Le deliberazioni adottate dalla Giunta comunale di Siena il 24 novembre 2026 sui procedimenti
+      disciplinari di questa Carriera, ciascuna con il PDF in copia conforme ripreso dall'Albo
+      Pretorio. Per il significato delle sanzioni e per la procedura vedi <a
+        href={`/giustizia-paliesca/${anno}/#sanzioni-nel-regolamento`}>le sanzioni nel Regolamento</a
+      >.
+    </p>
+    <p class="text-caption" style="margin-top: var(--space-2);">
+      {delibere.length} delibere · {sanzioni.length} sanzioni
+      {archiviazioni.length > 0 && ` · ${archiviazioni.length} archiviazione`}
+      · {pagine} pagine · Albo Pretorio dal 25/11/2026 al 10/12/2026
+    </p>
+    <slot />
+  </div>
+</section>
+
+<section class="section" style="padding-block: 0 var(--space-6);">
+  <div class="wrap">
+    <h2 class="gp-h2" style="margin-top: 0;">Le deliberazioni</h2>
+    <div class="doc-table-wrap">
+      <table class="doc-table doc-table--reflow-sm" role="table">
+        <caption class="sr-only">
+          Deliberazioni della Giunta comunale del 24 novembre 2026 sul {carriera.titolo}: numero,
+          destinatario, esito, norme richiamate e responsabilità della Contrada.
+        </caption>
+        <thead role="rowgroup">
+          <tr role="row">
+            <th scope="col">Delibera</th>
+            <th scope="col">Destinatario</th>
+            <th scope="col">Esito</th>
+            <th scope="col">Fondamento dell'esito</th>
+            <th scope="col">Norma richiamata nel dispositivo</th>
+            <th scope="col">Responsabilità della Contrada (art. 101, c. 2)</th>
+          </tr>
+        </thead>
+        <tbody role="rowgroup">
+          {
+            delibere.map((d) => (
+              <tr role="row">
+                <th scope="row" data-label="Delibera" role="rowheader">
+                  <a href={deliberaHref(d)}>n. {d.numero}/2026</a>
+                </th>
+                <td data-label="Destinatario" role="cell">
+                  {d.destinatario} <span class="gp-faint">({d.natura})</span>
+                </td>
+                <td data-label="Esito" role="cell" class="gp-esito">{d.esito}</td>
+                <td data-label="Fondamento dell'esito" role="cell" set:html={linkArticoli(d.fondamento)} />
+                <td data-label="Norma richiamata nel dispositivo" role="cell" set:html={linkArticoli(d.normaRichiamata)} />
+                <td data-label="Responsabilità della Contrada (art. 101, c. 2)" role="cell">
+                  {d.responsabilitaContrada}
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="text-caption">
+      «Non indicata» significa che la deliberazione non indica la Contrada né una sua
+      responsabilità: il dato non è stato dedotto.
+    </p>
+  </div>
+</section>
+
+<section class="section" style="padding-block: 0 var(--space-6);">
+  <div class="wrap">
+    <h2 class="gp-h2">Le ragioni, come scritte nelle delibere</h2>
+    <p class="text-muted" style="max-width: var(--measure);">
+      Per ogni deliberazione è riportato il dispositivo come estratto testuale; dove la scheda lo
+      registra, anche il passo della parte motiva. Il testo non è riassunto né corretto: refusi e
+      grafie sono quelli del documento.
+    </p>
+    {
+      motivi.map(({ d, dispositivo, motivazione }) => (
+        <article class="gp-motivo" id={d.slug}>
+          <div class="gp-motivo__testa">
+            <a href={deliberaHref(d)}>Delibera n. {d.numero}/2026</a>
+            <span>{d.destinatario}</span>
+            <span class="gp-esito">{d.esito}</span>
+          </div>
+          <p class="gp-motivo__etichetta">Dispositivo</p>
+          <div class="prose" set:html={dispositivo} />
+          {motivazione && (
+            <>
+              <p class="gp-motivo__etichetta">Parte motiva</p>
+              <div class="prose" set:html={motivazione} />
+            </>
+          )}
+        </article>
+      ))
+    }
+  </div>
+</section>
+
+<section class="section" style="padding-block: 0 var(--space-12);">
+  <div class="wrap">
+    <NotaDocumentaria titolo="Provenienza e limiti" variante="provenienza">
+      <p>
+        I PDF sono stati forniti dal curatore, Fabrizio Gabrielli, il 25 novembre 2026, ripresi
+        dall'Albo Pretorio online del Comune di Siena. Ogni file reca la dicitura «copia conforme all’originale per uso
+        amministrativo» ed è ripubblicato senza modifiche; il digest SHA-256 di ogni copia è nella scheda della delibera.
+      </p>
+      <p>
+        Le contestazioni di addebito del 19 ottobre 2026 e le proposte sanzionatorie
+        dell'Assessore Delegato del 5 novembre 2026 sono richiamate dalle delibere ma non sono state
+        acquisite: per questo il sito non confronta proposta e delibera. Per gli effetti giuridici fa
+        fede esclusivamente l'atto originale. Il progetto non è affiliato al Comune di Siena.
+      </p>
+    </NotaDocumentaria>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import NotaDocumentaria from "../../../components/NotaDocumentaria.astro";
+import CarrieraGiustizia from "../../../components/giustizia/CarrieraGiustizia.astro";
+
+const RINVIO = "https://www.comune.siena.it/index.php/novita/rinviato-il-palio-del-2-luglio-2026";
+---
+
+<BaseLayout
+  title="Giustizia paliesca: le sanzioni per il Palio del 3 luglio 2026"
+  description="Le sei deliberazioni della Giunta comunale di Siena del 24 novembre 2026 sul Palio del 3 luglio 2026: cinque sanzioni e un'archiviazione, con PDF in copia conforme e digest."
+  activePath="/giustizia-paliesca/2026"
+>
+  <CarrieraGiustizia slug="palio-3-luglio-2026">
+    <NotaDocumentaria titolo="Data della Carriera: 3 luglio 2026" variante="avvertenza">
+      <p>
+        La Carriera ordinaria di luglio si corre il 2 luglio (<a
+          href="/regolamento-per-il-palio/#articolo-1">art. 1 del Regolamento per il Palio</a
+        >). Nel 2026 il Comune di Siena ne ha comunicato il <a href={RINVIO} rel="nofollow noopener"
+          >rinvio per maltempo al 3 luglio</a
+        >. Le deliberazioni indicano a loro volta la Carriera come «PALIO 3 LUGLIO 2026».
+      </p>
+    </NotaDocumentaria>
+  </CarrieraGiustizia>
+</BaseLayout>

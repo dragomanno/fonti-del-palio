@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import NotaDocumentaria from "../../components/NotaDocumentaria.astro";
+import NotaRinvioAgosto2026 from "../../components/NotaRinvioAgosto2026.astro";
 import { listGuida, demoteHeadings } from "../../lib/carriera";
 import { renderDocumentaryMarkdown } from "../../lib/markdown";
 
@@ -11,14 +12,14 @@ const sezioni = listGuida().map((s) => ({
 ---
 
 <BaseLayout
-  title="Guida pratica al Palio del 16 agosto 2026"
-  description="Che cosa è consentito e che cosa è vietato in Piazza del Campo per il Palio del 16 agosto 2026, in forma diretta e con il rinvio all'atto che lo stabilisce."
+  title="Guida pratica al Palio del 18 agosto 2026"
+  description="Che cosa è consentito e che cosa è vietato in Piazza del Campo per il Palio del 18 agosto 2026, in forma diretta e con il rinvio all'atto che lo stabilisce."
   activePath="/palio-16-agosto-2026"
 >
   <section class="section" style="padding-block: var(--space-6) var(--space-3);">
     <div class="wrap">
       <nav class="crumbs" aria-label="Percorso" data-pagefind-ignore>
-        <a href="/palio-16-agosto-2026/">Palio del 16 agosto 2026</a>
+        <a href="/palio-16-agosto-2026/">Palio del 18 agosto 2026</a>
         <span aria-hidden="true">/</span>
         <span>Guida pratica</span>
       </nav>
@@ -42,6 +43,8 @@ const sezioni = listGuida().map((s) => ({
           <a href="/palio-16-agosto-2026/accesso-e-sicurezza/">accesso, sicurezza e servizi</a>.
         </p>
       </NotaDocumentaria>
+
+      <NotaRinvioAgosto2026 />
     </div>
   </section>
 

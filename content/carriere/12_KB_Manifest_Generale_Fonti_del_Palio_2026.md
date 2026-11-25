@@ -1,8 +1,8 @@
 ---
 title: "KB 12 — Manifest generale delle fonti di Fonti del Palio"
 document_type: "registro generale, stato documentale e relazioni"
-version: "1.6"
-last_verified: "2026-08-10"
+version: "1.8"
+last_verified: "2026-11-25"
 status: "registro di secondo livello; coordina Protocollo Equino, ordinanze e documenti operativi della singola Carriera"
 curation: "Fabrizio Gabrielli / Fonti del Palio"
 ---
@@ -66,6 +66,14 @@ Questi quattro file governano il trattamento tecnico delle fonti e il ciclo di r
 | KB 11 | guida pratica per Senesi e visitatori |
 | KB 12 | Manifest generale |
 | KB 13 | router generale |
+
+### Ramo D — Giustizia paliesca
+
+| File | Ruolo |
+|---|---|
+| KB 15 | deliberazioni della Giunta comunale sulle sanzioni delle Carriere 2026: registro, digest, schede, atti richiamati e non acquisiti |
+
+Il ramo D registra atti adottati dopo le Carriere. Le pagine pubbliche sono ordinate per anno sotto `/giustizia-paliesca/`, ad esempio `/giustizia-paliesca/2026/`, e indicano le Carriere con la data effettiva.
 
 # 4. Registro degli atti, dei documenti operativi e dei manifesti della Carriera del 16 agosto 2026
 
@@ -469,3 +477,23 @@ Nella gerarchia delle fonti del progetto `ilpalio.org` è un archivio specialist
 2. non è escluso che al Regolamento siano state apportate modifiche successive al 28 novembre 2019 non recepite in questo volume. La verifica presso il Comune di Siena resta aperta, come già dichiarato alla sezione 8.5.
 
 La collazione della sezione 8.6.2 dimostra che il testo pubblicato dal sito corrisponde a questa copia. Non dimostra che questa copia corrisponda al testo attualmente vigente.
+
+# 9. Data effettiva della Carriera dell'agosto 2026
+
+L'art. 1 del Regolamento per il Palio fissa la Carriera ordinaria di agosto al 16 agosto. Nel 2026 la corsa è stata rinviata due volte per maltempo e si è svolta **martedì 18 agosto 2026**. Le fonti sono tre comunicazioni del Comune di Siena:
+
+| Data | Comunicazione del Comune di Siena | Contenuto pertinente |
+|---|---|---|
+| 16/08/2026 | «Rimandato il Palio del 16 agosto 2026» — `https://www.comune.siena.it/novita/rimandato-il-palio-del-16-agosto-2026` | bandiera verde, Corteo Storico e Carriera rinviati, meteo permettendo, a lunedì 17 agosto |
+| 17/08/2026 (data di pubblicazione non indicata nella pagina) | «Ancora maltempo, rimandato di nuovo il Palio del 16 agosto 2026» — `https://www.comune.siena.it/novita/ancora-maltempo-rimandato-di-nuovo-il-palio-del-16-agosto-2026` | secondo rinvio, a martedì 18 agosto |
+| 18/08/2026 | «Palio 18 agosto 2026, vince il Nicchio» — `https://www.comune.siena.it/index.php/novita/palio-18-agosto-2026-vince-il-nicchio` | «Dopo i due rinvii per il maltempo, che hanno fatto slittare la corsa del 16 agosto, la Carriera si è svolta questa sera, martedì 18 agosto» |
+
+Regola editoriale, decisa dal curatore il 25 novembre 2026: nei titoli, nelle etichette e nei testi editoriali del sito la Carriera si indica con la data effettiva, «Palio del 18 agosto 2026». Restano invariati:
+
+1. le trascrizioni, le citazioni, i titoli recati dai documenti e le schede di questo ramo che descrivono atti, manifesti e documenti operativi adottati prima della corsa: riportano il 16 agosto perché era la data prevista al momento della loro adozione, e quella data non va corretta;
+2. gli identificativi di registro e i nomi dei file, compreso `11_KB_Guida_Pratica_Palio_16_Agosto_2026.md`;
+3. la rotta pubblica `/palio-16-agosto-2026/` e le sue sottorotte, per non spezzare i collegamenti già pubblicati.
+
+Questa sezione non attribuisce agli atti adottati per il 16 agosto alcun effetto giuridico sulle giornate del 17 e del 18 agosto: registra soltanto la data in cui la Carriera si è corsa.
+
+La Carriera di luglio è stata a sua volta rinviata per maltempo dal 2 al 3 luglio 2026 (comunicazione del Comune di Siena «Rinviato il Palio del 2 luglio 2026», 02/07/2026, `https://www.comune.siena.it/index.php/novita/rinviato-il-palio-del-2-luglio-2026`). Il sito non ospita atti organizzativi propri di quella Carriera; ospita le deliberazioni della Giunta comunale sulle sanzioni, registrate in KB 15.

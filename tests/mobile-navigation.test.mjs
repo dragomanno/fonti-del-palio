@@ -141,6 +141,7 @@ test("i gruppi e i link originari della navigazione sono ancora presenti", () =>
   const header = headerOf(HOME);
   for (const voce of [
     "Palio 18 agosto 2026",
+    "Giustizia Paliesca",
     "Documenti fondamentali",
     "Protocollo Equino",
     "Ordinanze e atti",
@@ -151,7 +152,7 @@ test("i gruppi e i link originari della navigazione sono ancora presenti", () =>
     assert.ok(header.includes(voce), `voce di navigazione mancante: «${voce}»`);
   }
   const gruppi = [...header.matchAll(/class="nav-group__toggle"/g)];
-  assert.equal(gruppi.length, 3, "attesi tre gruppi accordion nel markup");
+  assert.equal(gruppi.length, 4, "attesi quattro gruppi accordion nel markup");
 });
 
 test("i collegamenti interni della navigazione terminano con la barra finale", () => {

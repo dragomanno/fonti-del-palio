@@ -48,6 +48,7 @@ const ROTTE = new Set(PAGINE.map(rottaDi));
 
 const VOCI_PRIMO_LIVELLO = [
   "Palio 18 agosto 2026",
+  "Giustizia Paliesca",
   "Documenti fondamentali",
   "Protocollo Equino",
   "Ordinanze e atti",
@@ -56,7 +57,7 @@ const VOCI_PRIMO_LIVELLO = [
   "Ricerca",
 ];
 
-test("la barra di navigazione espone le stesse sette voci su ogni rotta", () => {
+test("la barra di navigazione espone le stesse otto voci su ogni rotta", () => {
   assert.ok(PAGINE.length > 100, `attese oltre 100 pagine, trovate ${PAGINE.length}`);
   for (const file of PAGINE) {
     const html = readFileSync(file, "utf8");
@@ -70,7 +71,7 @@ test("la barra di navigazione espone le stesse sette voci su ogni rotta", () => 
 test("ogni gruppo di menu parte chiuso e dichiara il pannello che controlla", () => {
   const html = readFileSync(join(DIST, "index.html"), "utf8");
   const toggle = [...html.matchAll(/<button[^>]*class="nav-group__toggle"[^>]*>/g)].map((m) => m[0]);
-  assert.equal(toggle.length, 3, "attesi tre gruppi di menu nel markup servito");
+  assert.equal(toggle.length, 4, "attesi quattro gruppi di menu nel markup servito");
   for (const t of toggle) {
     assert.match(t, /aria-expanded="false"/, `gruppo aperto nel markup servito: ${t}`);
     const controlla = /aria-controls="([^"]+)"/.exec(t);
@@ -85,7 +86,7 @@ test("ogni gruppo di menu parte chiuso e dichiara il pannello che controlla", ()
 test("i gruppi non contengono voci senza destinazione", () => {
   const html = readFileSync(join(DIST, "index.html"), "utf8");
   const pannelli = [...html.matchAll(/<ul class="nav-group__panel"[^>]*>([\s\S]*?)<\/ul>/g)];
-  assert.equal(pannelli.length, 3);
+  assert.equal(pannelli.length, 4);
   for (const [, corpo] of pannelli) {
     const link = [...corpo.matchAll(/href="([^"]+)"/g)].map((m) => m[1]);
     assert.ok(link.length >= 2, "un gruppo di menu ha meno di due voci");

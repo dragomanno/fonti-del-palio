@@ -99,6 +99,13 @@ type NavEntry = NavLink | { label: string; children: NavLink[] };
 const navEntries: NavEntry[] = [
   { href: "/palio-16-agosto-2026", label: "Palio 18 agosto 2026" },
   {
+    label: "Giustizia Paliesca",
+    children: [
+      { href: "/giustizia-paliesca", label: "Panoramica" },
+      { href: "/giustizia-paliesca/2026", label: "2026" },
+    ],
+  },
+  {
     label: "Documenti fondamentali",
     children: [
       { href: "/documenti-fondamentali", label: "Panoramica" },
